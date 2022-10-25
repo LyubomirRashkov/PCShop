@@ -17,5 +17,7 @@ namespace PCShop.DataGenerator.InitialClasses
         public string DisplayCoverage { get; set; } = null!;
 
         public string DisplayTechnology { get; set; } = null!;
+
+        public string Resolution { get; set; } = null!;
     }
 }
