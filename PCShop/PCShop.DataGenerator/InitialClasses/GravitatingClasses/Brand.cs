@@ -12,16 +12,16 @@
             this.MicrophoneBrands = new List<string>();
         }
 
-        public IEnumerable<string> LaptopBrands { get; set; }
+        public IList<string> LaptopBrands { get; set; }
 
-        public IEnumerable<string> MonitorBrands { get; set; }
+        public IList<string> MonitorBrands { get; set; }
 
-        public IEnumerable<string> KeyboardBrands { get; set; }
+        public IList<string> KeyboardBrands { get; set; }
 
-        public IEnumerable<string> MouseBrands { get; set; }
+        public IList<string> MouseBrands { get; set; }
 
-        public IEnumerable<string> HeadphoneBrands { get; set; }
+        public IList<string> HeadphoneBrands { get; set; }
 
-        public IEnumerable<string> MicrophoneBrands { get; set; }
+        public IList<string> MicrophoneBrands { get; set; }
     }
 }

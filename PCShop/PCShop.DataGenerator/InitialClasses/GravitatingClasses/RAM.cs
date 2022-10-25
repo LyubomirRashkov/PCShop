@@ -7,6 +7,6 @@
             this.LaptopRAMs = new List<int>();
         }
 
-        public IEnumerable<int> LaptopRAMs { get; set; }
+        public IList<int> LaptopRAMs { get; set; }
     }
 }

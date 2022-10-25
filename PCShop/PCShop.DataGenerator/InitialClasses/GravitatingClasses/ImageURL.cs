@@ -12,11 +12,16 @@
             this.MicrophoneImageURLs = new List<string>();
         }
 
-        public IEnumerable<string> LaptopImageURLs { get; set; }
-        public IEnumerable<string> MonitorImageURLs { get; set; }
-        public IEnumerable<string> KeyboardImageURLs { get; set; }
-        public IEnumerable<string> MouseImageURLs { get; set; }
-        public IEnumerable<string> HeadphoneImageURLs { get; set; }
-        public IEnumerable<string> MicrophoneImageURLs { get; set; }
+        public IList<string> LaptopImageURLs { get; set; }
+
+        public IList<string> MonitorImageURLs { get; set; }
+
+        public IList<string> KeyboardImageURLs { get; set; }
+
+        public IList<string> MouseImageURLs { get; set; }
+
+        public IList<string> HeadphoneImageURLs { get; set; }
+
+        public IList<string> MicrophoneImageURLs { get; set; }
     }
 }

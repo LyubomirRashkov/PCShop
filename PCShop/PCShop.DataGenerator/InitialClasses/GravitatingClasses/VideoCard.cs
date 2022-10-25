@@ -7,6 +7,6 @@
             this.LaptopVideoCards = new List<string>();
         }
 
-        public IEnumerable<string> LaptopVideoCards { get; set; }
+        public IList<string> LaptopVideoCards { get; set; }
     }
 }

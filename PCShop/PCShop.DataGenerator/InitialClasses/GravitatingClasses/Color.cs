@@ -12,16 +12,16 @@
             this.MicrophoneColors = new List<string>();
         }
 
-        public IEnumerable<string> LaptopColors { get; set; }
+        public IList<string> LaptopColors { get; set; }
 
-        public IEnumerable<string> MonitorColors { get; set; }
+        public IList<string> MonitorColors { get; set; }
 
-        public IEnumerable<string> KeyboardColors { get; set; }
+        public IList<string> KeyboardColors { get; set; }
 
-        public IEnumerable<string> MouseColors { get; set; }
+        public IList<string> MouseColors { get; set; }
 
-        public IEnumerable<string> HeadphoneColors { get; set; }
+        public IList<string> HeadphoneColors { get; set; }
 
-        public IEnumerable<string> MicrophoneColors { get; set; }
+        public IList<string> MicrophoneColors { get; set; }
     }
 }

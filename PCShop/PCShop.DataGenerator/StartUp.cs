@@ -1,1 +1,1 @@
-﻿Console.WriteLine("Gravitating classes added");
+﻿Console.WriteLine("Refactoring: IEnumerable -> IList");

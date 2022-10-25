@@ -7,6 +7,6 @@
             this.KeyboardFormats = new List<string>();
         }
 
-        public IEnumerable<string> KeyboardFormats { get; set; }
+        public IList<string> KeyboardFormats { get; set; }
     }
 }

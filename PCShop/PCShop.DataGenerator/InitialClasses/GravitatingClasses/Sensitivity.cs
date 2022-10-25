@@ -7,6 +7,6 @@
             this.MouseSensitivities = new List<string>();
         }
 
-        public IEnumerable<string> MouseSensitivities { get; set; }
+        public IList<string> MouseSensitivities { get; set; }
     }
 }

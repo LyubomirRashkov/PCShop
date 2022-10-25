@@ -7,6 +7,6 @@
             this.LaptopSSDCapacities = new List<int>();
         }
 
-        public IEnumerable<int> LaptopSSDCapacities { get; set; }
+        public IList<int> LaptopSSDCapacities { get; set; }
     }
 }

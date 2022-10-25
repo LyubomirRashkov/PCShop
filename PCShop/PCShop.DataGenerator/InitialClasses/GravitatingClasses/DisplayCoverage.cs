@@ -7,6 +7,6 @@
             this.DisplayCoverages = new List<string>();
         }
 
-        public IEnumerable<string> DisplayCoverages { get; set; }
+        public IList<string> DisplayCoverages { get; set; }
     }
 }

@@ -4,12 +4,12 @@
     {
         public DisplaySize()
         {
-            this.LaptopDisplaySizes = new List<int>();
-            this.MonitorDisplaySizes = new List<int>();
+            this.LaptopDisplaySizes = new List<double>();
+            this.MonitorDisplaySizes = new List<double>();
         }
 
-        public IEnumerable<int> LaptopDisplaySizes { get; set; }
+        public IList<double> LaptopDisplaySizes { get; set; }
 
-        public IEnumerable<int> MonitorDisplaySizes { get; set; }
+        public IList<double> MonitorDisplaySizes { get; set; }
     }
 }

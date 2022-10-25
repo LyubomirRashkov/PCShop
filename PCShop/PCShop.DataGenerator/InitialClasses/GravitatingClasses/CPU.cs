@@ -7,6 +7,6 @@
             this.LaptopCPUs = new List<string>();
         }
 
-        public IEnumerable<string> LaptopCPUs { get; set; }
+        public IList<string> LaptopCPUs { get; set; }
     }
 }

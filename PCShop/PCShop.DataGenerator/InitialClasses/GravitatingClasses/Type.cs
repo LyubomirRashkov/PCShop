@@ -11,14 +11,14 @@
             this.HeadphoneTypes = new List<string>();
         }
 
-        public IEnumerable<string> LaptopTypes { get; set; }
+        public IList<string> LaptopTypes { get; set; }
 
-        public IEnumerable<string> MonitorTypes { get; set; }
+        public IList<string> MonitorTypes { get; set; }
 
-        public IEnumerable<string> KeyboardTypes { get; set; }
+        public IList<string> KeyboardTypes { get; set; }
         
-        public IEnumerable<string> MouseTypes { get; set; }
+        public IList<string> MouseTypes { get; set; }
         
-        public IEnumerable<string> HeadphoneTypes { get; set; }
+        public IList<string> HeadphoneTypes { get; set; }
     }
 }

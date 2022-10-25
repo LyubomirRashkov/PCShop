@@ -8,8 +8,8 @@
             this.MonitorResolutions = new List<string>();
         }
 
-        public IEnumerable<string> LaptopResolutions { get; set; }
+        public IList<string> LaptopResolutions { get; set; }
 
-        public IEnumerable<string> MonitorResolutions { get; set; }
+        public IList<string> MonitorResolutions { get; set; }
     }
 }

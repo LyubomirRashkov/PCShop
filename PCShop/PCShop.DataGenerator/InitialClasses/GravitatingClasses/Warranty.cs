@@ -7,6 +7,6 @@
             this.Warranties = new List<int>();
         }
 
-        public IEnumerable<int> Warranties { get; set; }
+        public IList<int> Warranties { get; set; }
     }
 }

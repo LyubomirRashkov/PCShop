@@ -7,6 +7,6 @@
             this.DisplayTechnologies = new List<string>();
         }
 
-        public IEnumerable<string> DisplayTechnologies { get; set; }
+        public IList<string> DisplayTechnologies { get; set; }
     }
 }

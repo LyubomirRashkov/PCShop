@@ -7,6 +7,6 @@
             this.RefreshRates = new List<int>();
         }
 
-        public IEnumerable<int> RefreshRates { get; set; }
+        public IList<int> RefreshRates { get; set; }
     }
 }
