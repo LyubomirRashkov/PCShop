@@ -1,4 +1,4 @@
-﻿namespace PCShop.DataGenerator.InitialClasses.BaseClass
+﻿namespace PCShop.DataGenerator.Classes.BaseClass
 {
     public class Product
     {

@@ -1,6 +1,6 @@
-﻿using PCShop.DataGenerator.InitialClasses.BaseClass;
+﻿using PCShop.DataGenerator.Classes.BaseClass;
 
-namespace PCShop.DataGenerator.InitialClasses
+namespace PCShop.DataGenerator.Classes
 {
     public class Keyboard : Product
     {

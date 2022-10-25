@@ -1,9 +1,9 @@
 ﻿using Newtonsoft.Json;
-using PCShop.DataGenerator.InitialClasses.GravitatingClasses;
-using Type = PCShop.DataGenerator.InitialClasses.GravitatingClasses.Type;
-using PCShop.DataGenerator.InitialClasses;
+using PCShop.DataGenerator.Classes.GravitatingClasses;
+using Type = PCShop.DataGenerator.Classes.GravitatingClasses.Type;
+using PCShop.DataGenerator.Classes;
 using static PCShop.DataGenerator.Constants;
-using Monitor = PCShop.DataGenerator.InitialClasses.Monitor;
+using Monitor = PCShop.DataGenerator.Classes.Monitor;
 
 namespace PCShop.DataGenerator
 {

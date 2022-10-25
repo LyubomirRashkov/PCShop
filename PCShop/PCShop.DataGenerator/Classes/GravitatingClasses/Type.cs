@@ -1,4 +1,4 @@
-﻿namespace PCShop.DataGenerator.InitialClasses.GravitatingClasses
+﻿namespace PCShop.DataGenerator.Classes.GravitatingClasses
 {
     public class Type
     {
