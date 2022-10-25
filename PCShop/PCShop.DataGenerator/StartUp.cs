@@ -1,1 +1,1 @@
-﻿Console.WriteLine("warranties.json file added");
+﻿Console.WriteLine("Initial classes added");
