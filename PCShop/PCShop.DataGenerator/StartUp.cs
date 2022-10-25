@@ -1,1 +1,1 @@
-﻿
+﻿Console.WriteLine("Initial source files added");

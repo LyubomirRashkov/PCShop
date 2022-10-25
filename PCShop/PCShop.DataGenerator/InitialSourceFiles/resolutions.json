@@ -1,0 +1,18 @@
+{
+  "LaptopResolutions": [
+    "1920x1080 Full HD",
+    "2560x1440 Quad HD",
+    "2560x1600",
+    "2560x1664",
+    "3024x1964",
+    "3456x2234"
+  ],
+  "MonitorResolutions": [
+    "1920x1080 Full HD",
+    "1920x1200",
+    "2560x1440 Quad HD",
+    "3440x1440",
+    "3840x1600",
+    "3840x2160 4K Ultra HD"
+  ]
+}

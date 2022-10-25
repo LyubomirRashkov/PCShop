@@ -1,0 +1,28 @@
+{
+  "LaptopCPUs": [
+    "Intel Core i9 (16 cores)",
+    "Intel Core i9 (14 cores)",
+    "Intel Core i9 (16 cores)",
+    "Intel Core i7 (16 cores)",
+    "Intel Core i7 (14 cores)",
+    "Intel Core i7 (12 cores)",
+    "Intel Core i7 (10 cores)",
+    "Intel Core i7 (8 cores)",
+    "Intel Core i7 (6 cores)",
+    "Intel Core i7 (4 cores)",
+    "Intel Core i5 (12 cores)",
+    "Intel Core i5 (10 cores)",
+    "Intel Core i5 (8 cores)",
+    "Intel Core i5 (6 cores)",
+    "Intel Core i5 (4 cores)",
+    "Intel Core i3 (6 cores)",
+    "Intel Core i3 (4 cores)",
+    "Intel Core i3 (2 cores)",
+    "AMD (8 cores)",
+    "AMD (6 cores)",
+    "AMD (4 cores)",
+    "AMD (2 cores)",
+    "Apple (10 cores)",
+    "Apple (8 cores)"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "LaptopTypes": [
+    "Gaming",
+    "Notebook",
+    "Ultrabook",
+    "Workstation"
+  ],
+  "MonitorTypes": [
+    "For graphic design",
+    "Gaming",
+    "Portable",
+    "Universal"
+  ],
+  "KeyboardTypes": [
+    "Compatible with Apple",
+    "Gaming",
+    "Universal"
+  ],
+  "MouseTypes": [
+    "Bluetooth",
+    "Compatible with Apple",
+    "Gaming",
+    "Laser",
+    "Optic"
+  ],
+  "HeadphoneTypes": [
+    "Gaming",
+    "In-ear",
+    "On-ear",
+    "Over-ear"
+  ]
+}

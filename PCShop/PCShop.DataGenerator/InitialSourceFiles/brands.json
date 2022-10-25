@@ -1,0 +1,65 @@
+{
+  "LaptopBrands": [
+    "Acer",
+    "Apple",
+    "Asus",
+    "Dell",
+    "Fujitsu",
+    "HP",
+    "Huawei",
+    "Lenovo",
+    "MSI",
+    "Samsung",
+    "Toshiba"
+  ],
+  "MonitorBrands": [
+    "Acer",
+    "Apple",
+    "Asus",
+    "BenQ",
+    "Dell",
+    "Fujitsu",
+    "HP",
+    "Lenovo",
+    "LG",
+    "MSI",
+    "Philips",
+    "Samsung"
+  ],
+  "KeyboardBrands": [
+    "Apple",
+    "Asus",
+    "Canyon",
+    "Dell",
+    "Hama",
+    "HP",
+    "Logitech",
+    "Microsoft"
+  ],
+  "MouseBrands": [
+    "Apple",
+    "Asus",
+    "Canyon",
+    "Corsair",
+    "Hama",
+    "HP",
+    "Lenovo",
+    "Logitech",
+    "Microsoft"
+  ],
+  "HeadphoneBrands": [
+    "Apple",
+    "Canyon",
+    "Corsair",
+    "Hama",
+    "JBL",
+    "Logitech",
+    "Philips",
+    "Sony"
+  ],
+  "MicrophoneBrands": [
+    "Audio-Technica",
+    "Hama",
+    "JBL"
+  ]
+}

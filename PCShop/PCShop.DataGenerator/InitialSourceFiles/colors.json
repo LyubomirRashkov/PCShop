@@ -1,0 +1,57 @@
+{
+  "LaptopColors": [
+    "Black",
+    "Brown",
+    "Gold",
+    "Grey",
+    "Red",
+    "Silver",
+    "White"
+  ],
+  "MonitorColors": [
+    "Beige",
+    "Black",
+    "Blue",
+    "Brown",
+    "Grey",
+    "Silver",
+    "White"
+  ],
+  "KeyboardColors": [
+    "Black",
+    "Blue",
+    "Brown",
+    "Green",
+    "Grey",
+    "Red",
+    "White"
+  ],
+  "MouseColors": [
+    "Beige",
+    "Black",
+    "Blue",
+    "Green",
+    "Grey",
+    "Pink",
+    "Red",
+    "White",
+    "Yellow"
+  ],
+  "HeadphoneColors": [
+    "Black",
+    "Blue",
+    "Green",
+    "Grey",
+    "Pink",
+    "Red",
+    "Silver",
+    "White"
+  ],
+  "MicrophoneColors": [
+    "Black",
+    "Blue",
+    "Grey",
+    "Red",
+    "White"
+  ]
+}
