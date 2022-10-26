@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace PCShop.Core.Migrations
+namespace PCShop.Infrastructure.Migrations
 {
     public partial class InitialMigration : Migration
     {

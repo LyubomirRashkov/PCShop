@@ -1,7 +1,7 @@
-﻿using PCShop.DataGenerator;
+﻿//using PCShop.DataGenerator;
 
-var engine = new Engine();
+//var engine = new Engine();
 
-engine.Run();
+//engine.Run();
 
 Console.WriteLine("Datasets created successfully");
