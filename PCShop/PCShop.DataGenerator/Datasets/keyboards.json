@@ -1,86 +1,30 @@
 [
   {
     "Format": "Tenkeyless (TKL)",
-    "Type": "Compatible with Apple",
-    "Brand": "Hama",
-    "Color": "Blue",
-    "ImageUrl": "https://laptop.bg/system/images/362703/double/HAMA182680.png",
-    "Warranty": 18
-  },
-  {
-    "Format": "Compact",
-    "Type": "Universal",
-    "Brand": "Apple",
-    "Color": "Red",
-    "ImageUrl": "https://laptop.bg/system/images/283917/double/23796.png",
-    "Warranty": 6
-  },
-  {
-    "Format": "Tenkeyless (TKL)",
     "Type": "Universal",
     "Brand": "Dell",
     "Color": "Red",
-    "ImageUrl": "https://laptop.bg/system/images/283917/double/23796.png",
-    "Warranty": 24
+    "ImageUrl": "https://laptop.bg/system/images/295571/double/a4tech_kr92.jpg",
+    "Warranty": 6
   },
   {
     "Format": "Compact",
-    "Type": "Compatible with Apple",
-    "Brand": "Canyon",
-    "Color": "Grey",
-    "ImageUrl": "https://laptop.bg/system/images/295571/double/a4tech_kr92.jpg",
-    "Warranty": 24
+    "Type": "Universal",
+    "Brand": "Logitech",
+    "Color": "Red",
+    "ImageUrl": "https://laptop.bg/system/images/283917/double/23796.png",
+    "Warranty": 36
   },
   {
-    "Format": "Tenkeyless (TKL)",
+    "Format": "Compact",
     "Type": "Gaming",
-    "Brand": "Asus",
-    "Color": "Black",
-    "ImageUrl": "https://laptop.bg/system/images/295571/double/a4tech_kr92.jpg",
-    "Warranty": 30
-  },
-  {
-    "Format": "Full size",
-    "Type": "Compatible with Apple",
     "Brand": "Dell",
     "Color": "Green",
-    "ImageUrl": "https://laptop.bg/system/images/323067/double/K503ARGBBK_VZ.jpg",
-    "Warranty": 12
-  },
-  {
-    "Format": "Full size",
-    "Type": "Universal",
-    "Brand": "Canyon",
-    "Color": "Blue",
     "ImageUrl": "https://laptop.bg/system/images/207339/double/58018366.jpg",
     "Warranty": 24
   },
   {
     "Format": "Compact",
-    "Type": "Universal",
-    "Brand": "Microsoft",
-    "Color": "Green",
-    "ImageUrl": "https://laptop.bg/system/images/295571/double/a4tech_kr92.jpg",
-    "Warranty": 6
-  },
-  {
-    "Format": "Full size",
-    "Type": "Universal",
-    "Brand": "Dell",
-    "Color": "White",
-    "ImageUrl": "https://laptop.bg/system/images/207339/double/58018366.jpg",
-    "Warranty": 12
-  },
-  {
-    "Format": "Full size",
-    "Type": "Universal",
-    "Brand": "Hama",
-    "Color": "White",
-    "ImageUrl": "https://laptop.bg/system/images/207339/double/58018366.jpg",
-    "Warranty": 6
-  },
-  {
-    "Format": "Tenkeyless (TKL)",
     "Type": "Universal",
     "Brand": "Apple",
     "Color": "Black",
@@ -88,89 +32,161 @@
     "Warranty": 30
   },
   {
-    "Format": "Tenkeyless (TKL)",
-    "Type": "Compatible with Apple",
-    "Brand": "Dell",
-    "Color": "Green",
+    "Format": "Compact",
+    "Type": "Gaming",
+    "Brand": "Hama",
+    "Color": "Brown",
     "ImageUrl": "https://laptop.bg/system/images/207339/double/58018366.jpg",
-    "Warranty": 24
+    "Warranty": 6
   },
   {
     "Format": "Compact",
     "Type": "Universal",
-    "Brand": "Logitech",
+    "Brand": "Asus",
     "Color": "White",
+    "ImageUrl": "https://laptop.bg/system/images/295571/double/a4tech_kr92.jpg",
+    "Warranty": 30
+  },
+  {
+    "Format": "Compact",
+    "Type": "Universal",
+    "Brand": "Microsoft",
+    "Color": "Green",
     "ImageUrl": "https://laptop.bg/system/images/323067/double/K503ARGBBK_VZ.jpg",
+    "Warranty": 12
+  },
+  {
+    "Format": "Compact",
+    "Type": "Universal",
+    "Brand": "Canyon",
+    "Color": "Brown",
+    "ImageUrl": "https://laptop.bg/system/images/323067/double/K503ARGBBK_VZ.jpg",
+    "Warranty": 30
+  },
+  {
+    "Format": "Full size",
+    "Type": "Compatible with Apple",
+    "Brand": "Dell",
+    "Color": "Green",
+    "ImageUrl": "https://laptop.bg/system/images/295571/double/a4tech_kr92.jpg",
+    "Warranty": 12
+  },
+  {
+    "Format": "Tenkeyless (TKL)",
+    "Type": "Compatible with Apple",
+    "Brand": "Dell",
+    "Color": "Grey",
+    "ImageUrl": "https://laptop.bg/system/images/207339/double/58018366.jpg",
+    "Warranty": 12
+  },
+  {
+    "Format": "Full size",
+    "Type": "Gaming",
+    "Brand": "Apple",
+    "Color": "Black",
+    "ImageUrl": "https://laptop.bg/system/images/295571/double/a4tech_kr92.jpg",
+    "Warranty": 12
+  },
+  {
+    "Format": "Compact",
+    "Type": "Compatible with Apple",
+    "Brand": "Dell",
+    "Color": "White",
+    "ImageUrl": "https://laptop.bg/system/images/295571/double/a4tech_kr92.jpg",
+    "Warranty": 36
+  },
+  {
+    "Format": "Full size",
+    "Type": "Gaming",
+    "Brand": "Logitech",
+    "Color": "Brown",
+    "ImageUrl": "https://laptop.bg/system/images/362703/double/HAMA182680.png",
+    "Warranty": 18
+  },
+  {
+    "Format": "Compact",
+    "Type": "Gaming",
+    "Brand": "Asus",
+    "Color": "Red",
+    "ImageUrl": "https://laptop.bg/system/images/283917/double/23796.png",
+    "Warranty": 12
+  },
+  {
+    "Format": "Full size",
+    "Type": "Gaming",
+    "Brand": "Hama",
+    "Color": "Green",
+    "ImageUrl": "https://laptop.bg/system/images/207339/double/58018366.jpg",
+    "Warranty": 6
+  },
+  {
+    "Format": "Full size",
+    "Type": "Compatible with Apple",
+    "Brand": "Microsoft",
+    "Color": "Blue",
+    "ImageUrl": "https://laptop.bg/system/images/323067/double/K503ARGBBK_VZ.jpg",
+    "Warranty": 24
+  },
+  {
+    "Format": "Compact",
+    "Type": "Compatible with Apple",
+    "Brand": "Hama",
+    "Color": "Black",
+    "ImageUrl": "https://laptop.bg/system/images/295571/double/a4tech_kr92.jpg",
     "Warranty": 6
   },
   {
     "Format": "Tenkeyless (TKL)",
+    "Type": "Compatible with Apple",
+    "Brand": "Apple",
+    "Color": "Black",
+    "ImageUrl": "https://laptop.bg/system/images/283917/double/23796.png",
+    "Warranty": 30
+  },
+  {
+    "Format": "Tenkeyless (TKL)",
+    "Type": "Universal",
+    "Brand": "Canyon",
+    "Color": "Green",
+    "ImageUrl": "https://laptop.bg/system/images/295571/double/a4tech_kr92.jpg",
+    "Warranty": 36
+  },
+  {
+    "Format": "Full size",
+    "Type": "Gaming",
+    "Brand": "HP",
+    "Color": "Green",
+    "ImageUrl": "https://laptop.bg/system/images/283917/double/23796.png",
+    "Warranty": 18
+  },
+  {
+    "Format": "Full size",
     "Type": "Gaming",
     "Brand": "Apple",
-    "Color": "Brown",
+    "Color": "Green",
     "ImageUrl": "https://laptop.bg/system/images/207339/double/58018366.jpg",
     "Warranty": 36
   },
   {
     "Format": "Compact",
     "Type": "Compatible with Apple",
-    "Brand": "Apple",
-    "Color": "Black",
-    "ImageUrl": "https://laptop.bg/system/images/283917/double/23796.png",
-    "Warranty": 12
-  },
-  {
-    "Format": "Full size",
-    "Type": "Compatible with Apple",
-    "Brand": "Canyon",
-    "Color": "White",
-    "ImageUrl": "https://laptop.bg/system/images/207339/double/58018366.jpg",
-    "Warranty": 18
-  },
-  {
-    "Format": "Compact",
-    "Type": "Compatible with Apple",
-    "Brand": "Microsoft",
-    "Color": "Brown",
-    "ImageUrl": "https://laptop.bg/system/images/362703/double/HAMA182680.png",
-    "Warranty": 6
-  },
-  {
-    "Format": "Full size",
-    "Type": "Gaming",
-    "Brand": "Apple",
-    "Color": "Red",
-    "ImageUrl": "https://laptop.bg/system/images/295571/double/a4tech_kr92.jpg",
-    "Warranty": 24
-  },
-  {
-    "Format": "Full size",
-    "Type": "Universal",
-    "Brand": "Hama",
-    "Color": "Red",
-    "ImageUrl": "https://laptop.bg/system/images/207339/double/58018366.jpg",
-    "Warranty": 24
-  },
-  {
-    "Format": "Compact",
-    "Type": "Universal",
     "Brand": "Asus",
     "Color": "Black",
     "ImageUrl": "https://laptop.bg/system/images/362703/double/HAMA182680.png",
     "Warranty": 24
   },
   {
-    "Format": "Compact",
-    "Type": "Compatible with Apple",
-    "Brand": "Microsoft",
-    "Color": "Black",
+    "Format": "Tenkeyless (TKL)",
+    "Type": "Universal",
+    "Brand": "Asus",
+    "Color": "White",
     "ImageUrl": "https://laptop.bg/system/images/207339/double/58018366.jpg",
-    "Warranty": 6
+    "Warranty": 24
   },
   {
     "Format": "Full size",
-    "Type": "Compatible with Apple",
-    "Brand": "Logitech",
+    "Type": "Universal",
+    "Brand": "Asus",
     "Color": "Red",
     "ImageUrl": "https://laptop.bg/system/images/283917/double/23796.png",
     "Warranty": 12
@@ -178,210 +194,122 @@
   {
     "Format": "Full size",
     "Type": "Compatible with Apple",
-    "Brand": "Apple",
-    "Color": "Grey",
-    "ImageUrl": "https://laptop.bg/system/images/207339/double/58018366.jpg",
-    "Warranty": 18
+    "Brand": "Asus",
+    "Color": "White",
+    "ImageUrl": "https://laptop.bg/system/images/323067/double/K503ARGBBK_VZ.jpg",
+    "Warranty": 36
+  },
+  {
+    "Format": "Full size",
+    "Type": "Universal",
+    "Brand": "Asus",
+    "Color": "Red",
+    "ImageUrl": "https://laptop.bg/system/images/295571/double/a4tech_kr92.jpg",
+    "Warranty": 24
   },
   {
     "Format": "Tenkeyless (TKL)",
     "Type": "Compatible with Apple",
     "Brand": "Asus",
-    "Color": "Blue",
-    "ImageUrl": "https://laptop.bg/system/images/283917/double/23796.png",
-    "Warranty": 6
-  },
-  {
-    "Format": "Full size",
-    "Type": "Gaming",
-    "Brand": "HP",
-    "Color": "Red",
-    "ImageUrl": "https://laptop.bg/system/images/283917/double/23796.png",
+    "Color": "Green",
+    "ImageUrl": "https://laptop.bg/system/images/207339/double/58018366.jpg",
     "Warranty": 30
   },
   {
-    "Format": "Full size",
+    "Format": "Compact",
     "Type": "Gaming",
-    "Brand": "Apple",
-    "Color": "Brown",
-    "ImageUrl": "https://laptop.bg/system/images/362703/double/HAMA182680.png",
-    "Warranty": 18
-  },
-  {
-    "Format": "Full size",
-    "Type": "Compatible with Apple",
-    "Brand": "Hama",
+    "Brand": "HP",
     "Color": "White",
     "ImageUrl": "https://laptop.bg/system/images/295571/double/a4tech_kr92.jpg",
-    "Warranty": 36
-  },
-  {
-    "Format": "Tenkeyless (TKL)",
-    "Type": "Gaming",
-    "Brand": "Logitech",
-    "Color": "Grey",
-    "ImageUrl": "https://laptop.bg/system/images/207339/double/58018366.jpg",
-    "Warranty": 18
+    "Warranty": 30
   },
   {
     "Format": "Compact",
-    "Type": "Compatible with Apple",
-    "Brand": "Microsoft",
-    "Color": "Brown",
-    "ImageUrl": "https://laptop.bg/system/images/283917/double/23796.png",
-    "Warranty": 12
-  },
-  {
-    "Format": "Tenkeyless (TKL)",
-    "Type": "Compatible with Apple",
-    "Brand": "HP",
-    "Color": "Blue",
-    "ImageUrl": "https://laptop.bg/system/images/362703/double/HAMA182680.png",
-    "Warranty": 36
-  },
-  {
-    "Format": "Tenkeyless (TKL)",
-    "Type": "Compatible with Apple",
-    "Brand": "Apple",
-    "Color": "Brown",
-    "ImageUrl": "https://laptop.bg/system/images/323067/double/K503ARGBBK_VZ.jpg",
-    "Warranty": 18
-  },
-  {
-    "Format": "Compact",
-    "Type": "Compatible with Apple",
+    "Type": "Universal",
     "Brand": "Apple",
     "Color": "Black",
     "ImageUrl": "https://laptop.bg/system/images/323067/double/K503ARGBBK_VZ.jpg",
-    "Warranty": 30
+    "Warranty": 12
   },
   {
-    "Format": "Full size",
+    "Format": "Tenkeyless (TKL)",
     "Type": "Compatible with Apple",
-    "Brand": "Hama",
-    "Color": "White",
-    "ImageUrl": "https://laptop.bg/system/images/323067/double/K503ARGBBK_VZ.jpg",
-    "Warranty": 24
-  },
-  {
-    "Format": "Full size",
-    "Type": "Gaming",
-    "Brand": "Microsoft",
-    "Color": "White",
-    "ImageUrl": "https://laptop.bg/system/images/283917/double/23796.png",
-    "Warranty": 30
-  },
-  {
-    "Format": "Full size",
-    "Type": "Universal",
-    "Brand": "Canyon",
-    "Color": "Green",
-    "ImageUrl": "https://laptop.bg/system/images/295571/double/a4tech_kr92.jpg",
-    "Warranty": 6
-  },
-  {
-    "Format": "Full size",
-    "Type": "Gaming",
-    "Brand": "Microsoft",
-    "Color": "Red",
-    "ImageUrl": "https://laptop.bg/system/images/295571/double/a4tech_kr92.jpg",
-    "Warranty": 6
-  },
-  {
-    "Format": "Full size",
-    "Type": "Universal",
     "Brand": "Apple",
-    "Color": "Grey",
-    "ImageUrl": "https://laptop.bg/system/images/283917/double/23796.png",
-    "Warranty": 30
-  },
-  {
-    "Format": "Full size",
-    "Type": "Gaming",
-    "Brand": "Dell",
-    "Color": "Red",
-    "ImageUrl": "https://laptop.bg/system/images/207339/double/58018366.jpg",
+    "Color": "Blue",
+    "ImageUrl": "https://laptop.bg/system/images/295571/double/a4tech_kr92.jpg",
     "Warranty": 12
   },
   {
     "Format": "Full size",
-    "Type": "Compatible with Apple",
+    "Type": "Gaming",
     "Brand": "Logitech",
-    "Color": "Blue",
-    "ImageUrl": "https://laptop.bg/system/images/295571/double/a4tech_kr92.jpg",
+    "Color": "Brown",
+    "ImageUrl": "https://laptop.bg/system/images/283917/double/23796.png",
     "Warranty": 6
   },
   {
     "Format": "Full size",
     "Type": "Gaming",
-    "Brand": "Microsoft",
-    "Color": "White",
-    "ImageUrl": "https://laptop.bg/system/images/207339/double/58018366.jpg",
-    "Warranty": 30
+    "Brand": "Hama",
+    "Color": "Black",
+    "ImageUrl": "https://laptop.bg/system/images/283917/double/23796.png",
+    "Warranty": 18
   },
   {
-    "Format": "Full size",
-    "Type": "Universal",
-    "Brand": "Microsoft",
-    "Color": "Brown",
-    "ImageUrl": "https://laptop.bg/system/images/207339/double/58018366.jpg",
-    "Warranty": 24
+    "Format": "Tenkeyless (TKL)",
+    "Type": "Compatible with Apple",
+    "Brand": "Canyon",
+    "Color": "Grey",
+    "ImageUrl": "https://laptop.bg/system/images/323067/double/K503ARGBBK_VZ.jpg",
+    "Warranty": 30
   },
   {
     "Format": "Tenkeyless (TKL)",
     "Type": "Gaming",
-    "Brand": "Logitech",
-    "Color": "Red",
+    "Brand": "Canyon",
+    "Color": "Grey",
     "ImageUrl": "https://laptop.bg/system/images/295571/double/a4tech_kr92.jpg",
-    "Warranty": 12
+    "Warranty": 18
+  },
+  {
+    "Format": "Compact",
+    "Type": "Universal",
+    "Brand": "Hama",
+    "Color": "Grey",
+    "ImageUrl": "https://laptop.bg/system/images/362703/double/HAMA182680.png",
+    "Warranty": 18
+  },
+  {
+    "Format": "Tenkeyless (TKL)",
+    "Type": "Universal",
+    "Brand": "Canyon",
+    "Color": "Brown",
+    "ImageUrl": "https://laptop.bg/system/images/207339/double/58018366.jpg",
+    "Warranty": 6
   },
   {
     "Format": "Compact",
     "Type": "Gaming",
-    "Brand": "Apple",
+    "Brand": "Asus",
     "Color": "Grey",
-    "ImageUrl": "https://laptop.bg/system/images/283917/double/23796.png",
-    "Warranty": 24
-  },
-  {
-    "Format": "Tenkeyless (TKL)",
-    "Type": "Compatible with Apple",
-    "Brand": "Hama",
-    "Color": "Grey",
-    "ImageUrl": "https://laptop.bg/system/images/362703/double/HAMA182680.png",
-    "Warranty": 36
-  },
-  {
-    "Format": "Full size",
-    "Type": "Compatible with Apple",
-    "Brand": "Hama",
-    "Color": "Red",
     "ImageUrl": "https://laptop.bg/system/images/295571/double/a4tech_kr92.jpg",
-    "Warranty": 24
-  },
-  {
-    "Format": "Tenkeyless (TKL)",
-    "Type": "Compatible with Apple",
-    "Brand": "Apple",
-    "Color": "Blue",
-    "ImageUrl": "https://laptop.bg/system/images/207339/double/58018366.jpg",
-    "Warranty": 36
-  },
-  {
-    "Format": "Full size",
-    "Type": "Compatible with Apple",
-    "Brand": "Microsoft",
-    "Color": "Blue",
-    "ImageUrl": "https://laptop.bg/system/images/295571/double/a4tech_kr92.jpg",
-    "Warranty": 6
-  },
-  {
-    "Format": "Tenkeyless (TKL)",
-    "Type": "Universal",
-    "Brand": "Hama",
-    "Color": "Blue",
-    "ImageUrl": "https://laptop.bg/system/images/283917/double/23796.png",
     "Warranty": 18
+  },
+  {
+    "Format": "Compact",
+    "Type": "Universal",
+    "Brand": "Logitech",
+    "Color": "Brown",
+    "ImageUrl": "https://laptop.bg/system/images/283917/double/23796.png",
+    "Warranty": 12
+  },
+  {
+    "Format": "Compact",
+    "Type": "Universal",
+    "Brand": "Microsoft",
+    "Color": "Black",
+    "ImageUrl": "https://laptop.bg/system/images/323067/double/K503ARGBBK_VZ.jpg",
+    "Warranty": 30
   },
   {
     "Format": "Tenkeyless (TKL)",
@@ -389,229 +317,101 @@
     "Brand": "Dell",
     "Color": "Green",
     "ImageUrl": "https://laptop.bg/system/images/295571/double/a4tech_kr92.jpg",
-    "Warranty": 6
+    "Warranty": 36
   },
   {
     "Format": "Compact",
-    "Type": "Universal",
-    "Brand": "HP",
-    "Color": "Blue",
-    "ImageUrl": "https://laptop.bg/system/images/207339/double/58018366.jpg",
-    "Warranty": 6
-  },
-  {
-    "Format": "Tenkeyless (TKL)",
-    "Type": "Compatible with Apple",
-    "Brand": "Hama",
-    "Color": "Grey",
-    "ImageUrl": "https://laptop.bg/system/images/283917/double/23796.png",
-    "Warranty": 30
-  },
-  {
-    "Format": "Full size",
     "Type": "Gaming",
-    "Brand": "HP",
+    "Brand": "Logitech",
     "Color": "White",
-    "ImageUrl": "https://laptop.bg/system/images/207339/double/58018366.jpg",
-    "Warranty": 12
+    "ImageUrl": "https://laptop.bg/system/images/362703/double/HAMA182680.png",
+    "Warranty": 36
   },
   {
-    "Format": "Full size",
-    "Type": "Gaming",
-    "Brand": "Apple",
-    "Color": "Green",
-    "ImageUrl": "https://laptop.bg/system/images/295571/double/a4tech_kr92.jpg",
-    "Warranty": 18
-  },
-  {
-    "Format": "Tenkeyless (TKL)",
-    "Type": "Universal",
-    "Brand": "Asus",
-    "Color": "Brown",
-    "ImageUrl": "https://laptop.bg/system/images/207339/double/58018366.jpg",
-    "Warranty": 30
-  },
-  {
-    "Format": "Tenkeyless (TKL)",
+    "Format": "Compact",
     "Type": "Compatible with Apple",
-    "Brand": "Microsoft",
+    "Brand": "Apple",
     "Color": "Black",
     "ImageUrl": "https://laptop.bg/system/images/362703/double/HAMA182680.png",
-    "Warranty": 18
+    "Warranty": 6
   },
   {
     "Format": "Full size",
-    "Type": "Gaming",
-    "Brand": "Apple",
-    "Color": "Green",
-    "ImageUrl": "https://laptop.bg/system/images/207339/double/58018366.jpg",
-    "Warranty": 24
-  },
-  {
-    "Format": "Compact",
-    "Type": "Gaming",
-    "Brand": "HP",
-    "Color": "Brown",
-    "ImageUrl": "https://laptop.bg/system/images/283917/double/23796.png",
-    "Warranty": 24
-  },
-  {
-    "Format": "Tenkeyless (TKL)",
     "Type": "Universal",
-    "Brand": "Logitech",
-    "Color": "White",
-    "ImageUrl": "https://laptop.bg/system/images/207339/double/58018366.jpg",
-    "Warranty": 24
+    "Brand": "Hama",
+    "Color": "Black",
+    "ImageUrl": "https://laptop.bg/system/images/295571/double/a4tech_kr92.jpg",
+    "Warranty": 18
   },
   {
     "Format": "Tenkeyless (TKL)",
     "Type": "Compatible with Apple",
     "Brand": "Dell",
-    "Color": "Red",
-    "ImageUrl": "https://laptop.bg/system/images/295571/double/a4tech_kr92.jpg",
-    "Warranty": 18
-  },
-  {
-    "Format": "Compact",
-    "Type": "Compatible with Apple",
-    "Brand": "Hama",
-    "Color": "Red",
+    "Color": "Black",
     "ImageUrl": "https://laptop.bg/system/images/207339/double/58018366.jpg",
-    "Warranty": 36
-  },
-  {
-    "Format": "Tenkeyless (TKL)",
-    "Type": "Universal",
-    "Brand": "Canyon",
-    "Color": "Brown",
-    "ImageUrl": "https://laptop.bg/system/images/295571/double/a4tech_kr92.jpg",
-    "Warranty": 24
-  },
-  {
-    "Format": "Tenkeyless (TKL)",
-    "Type": "Compatible with Apple",
-    "Brand": "HP",
-    "Color": "Grey",
-    "ImageUrl": "https://laptop.bg/system/images/323067/double/K503ARGBBK_VZ.jpg",
-    "Warranty": 24
-  },
-  {
-    "Format": "Tenkeyless (TKL)",
-    "Type": "Gaming",
-    "Brand": "Hama",
-    "Color": "White",
-    "ImageUrl": "https://laptop.bg/system/images/283917/double/23796.png",
     "Warranty": 6
   },
   {
-    "Format": "Full size",
+    "Format": "Compact",
     "Type": "Gaming",
     "Brand": "Logitech",
-    "Color": "Brown",
-    "ImageUrl": "https://laptop.bg/system/images/362703/double/HAMA182680.png",
-    "Warranty": 36
+    "Color": "Blue",
+    "ImageUrl": "https://laptop.bg/system/images/323067/double/K503ARGBBK_VZ.jpg",
+    "Warranty": 6
   },
   {
     "Format": "Compact",
-    "Type": "Universal",
-    "Brand": "Asus",
-    "Color": "Green",
-    "ImageUrl": "https://laptop.bg/system/images/323067/double/K503ARGBBK_VZ.jpg",
+    "Type": "Gaming",
+    "Brand": "Canyon",
+    "Color": "Red",
+    "ImageUrl": "https://laptop.bg/system/images/362703/double/HAMA182680.png",
     "Warranty": 12
   },
   {
-    "Format": "Full size",
-    "Type": "Universal",
-    "Brand": "HP",
-    "Color": "Blue",
-    "ImageUrl": "https://laptop.bg/system/images/207339/double/58018366.jpg",
-    "Warranty": 24
-  },
-  {
-    "Format": "Compact",
+    "Format": "Tenkeyless (TKL)",
     "Type": "Compatible with Apple",
-    "Brand": "Microsoft",
-    "Color": "Blue",
-    "ImageUrl": "https://laptop.bg/system/images/283917/double/23796.png",
+    "Brand": "Logitech",
+    "Color": "Black",
+    "ImageUrl": "https://laptop.bg/system/images/207339/double/58018366.jpg",
     "Warranty": 36
   },
   {
     "Format": "Full size",
+    "Type": "Gaming",
+    "Brand": "Canyon",
+    "Color": "Brown",
+    "ImageUrl": "https://laptop.bg/system/images/283917/double/23796.png",
+    "Warranty": 18
+  },
+  {
+    "Format": "Full size",
     "Type": "Compatible with Apple",
-    "Brand": "HP",
-    "Color": "White",
+    "Brand": "Microsoft",
+    "Color": "Green",
+    "ImageUrl": "https://laptop.bg/system/images/295571/double/a4tech_kr92.jpg",
+    "Warranty": 30
+  },
+  {
+    "Format": "Full size",
+    "Type": "Universal",
+    "Brand": "Canyon",
+    "Color": "Black",
     "ImageUrl": "https://laptop.bg/system/images/295571/double/a4tech_kr92.jpg",
     "Warranty": 6
   },
   {
-    "Format": "Full size",
-    "Type": "Universal",
-    "Brand": "Canyon",
-    "Color": "Green",
-    "ImageUrl": "https://laptop.bg/system/images/283917/double/23796.png",
-    "Warranty": 24
-  },
-  {
-    "Format": "Full size",
-    "Type": "Gaming",
-    "Brand": "Apple",
-    "Color": "Brown",
-    "ImageUrl": "https://laptop.bg/system/images/295571/double/a4tech_kr92.jpg",
-    "Warranty": 18
-  },
-  {
-    "Format": "Tenkeyless (TKL)",
-    "Type": "Compatible with Apple",
-    "Brand": "Hama",
-    "Color": "Blue",
-    "ImageUrl": "https://laptop.bg/system/images/207339/double/58018366.jpg",
-    "Warranty": 30
-  },
-  {
-    "Format": "Full size",
-    "Type": "Universal",
-    "Brand": "Canyon",
-    "Color": "Blue",
-    "ImageUrl": "https://laptop.bg/system/images/362703/double/HAMA182680.png",
-    "Warranty": 30
-  },
-  {
-    "Format": "Compact",
-    "Type": "Compatible with Apple",
-    "Brand": "Asus",
-    "Color": "Brown",
-    "ImageUrl": "https://laptop.bg/system/images/362703/double/HAMA182680.png",
-    "Warranty": 24
-  },
-  {
     "Format": "Tenkeyless (TKL)",
     "Type": "Gaming",
-    "Brand": "Dell",
-    "Color": "Blue",
-    "ImageUrl": "https://laptop.bg/system/images/207339/double/58018366.jpg",
-    "Warranty": 36
-  },
-  {
-    "Format": "Full size",
-    "Type": "Universal",
-    "Brand": "Hama",
-    "Color": "Green",
-    "ImageUrl": "https://laptop.bg/system/images/362703/double/HAMA182680.png",
-    "Warranty": 30
-  },
-  {
-    "Format": "Tenkeyless (TKL)",
-    "Type": "Gaming",
-    "Brand": "Asus",
-    "Color": "Blue",
-    "ImageUrl": "https://laptop.bg/system/images/323067/double/K503ARGBBK_VZ.jpg",
-    "Warranty": 30
-  },
-  {
-    "Format": "Compact",
-    "Type": "Compatible with Apple",
     "Brand": "Microsoft",
-    "Color": "White",
+    "Color": "Green",
+    "ImageUrl": "https://laptop.bg/system/images/362703/double/HAMA182680.png",
+    "Warranty": 30
+  },
+  {
+    "Format": "Tenkeyless (TKL)",
+    "Type": "Universal",
+    "Brand": "Apple",
+    "Color": "Black",
     "ImageUrl": "https://laptop.bg/system/images/283917/double/23796.png",
     "Warranty": 24
   },
@@ -619,361 +419,313 @@
     "Format": "Tenkeyless (TKL)",
     "Type": "Universal",
     "Brand": "HP",
-    "Color": "Grey",
-    "ImageUrl": "https://laptop.bg/system/images/362703/double/HAMA182680.png",
-    "Warranty": 30
-  },
-  {
-    "Format": "Full size",
-    "Type": "Universal",
-    "Brand": "Dell",
-    "Color": "Red",
-    "ImageUrl": "https://laptop.bg/system/images/323067/double/K503ARGBBK_VZ.jpg",
-    "Warranty": 24
-  },
-  {
-    "Format": "Full size",
-    "Type": "Compatible with Apple",
-    "Brand": "Dell",
-    "Color": "Grey",
+    "Color": "Brown",
     "ImageUrl": "https://laptop.bg/system/images/283917/double/23796.png",
-    "Warranty": 36
-  },
-  {
-    "Format": "Compact",
-    "Type": "Compatible with Apple",
-    "Brand": "Logitech",
-    "Color": "Blue",
-    "ImageUrl": "https://laptop.bg/system/images/283917/double/23796.png",
-    "Warranty": 6
-  },
-  {
-    "Format": "Tenkeyless (TKL)",
-    "Type": "Universal",
-    "Brand": "Dell",
-    "Color": "White",
-    "ImageUrl": "https://laptop.bg/system/images/283917/double/23796.png",
-    "Warranty": 36
-  },
-  {
-    "Format": "Tenkeyless (TKL)",
-    "Type": "Compatible with Apple",
-    "Brand": "Microsoft",
-    "Color": "Red",
-    "ImageUrl": "https://laptop.bg/system/images/207339/double/58018366.jpg",
-    "Warranty": 24
-  },
-  {
-    "Format": "Tenkeyless (TKL)",
-    "Type": "Gaming",
-    "Brand": "Dell",
-    "Color": "Grey",
-    "ImageUrl": "https://laptop.bg/system/images/362703/double/HAMA182680.png",
-    "Warranty": 30
-  },
-  {
-    "Format": "Compact",
-    "Type": "Gaming",
-    "Brand": "Canyon",
-    "Color": "White",
-    "ImageUrl": "https://laptop.bg/system/images/283917/double/23796.png",
-    "Warranty": 24
-  },
-  {
-    "Format": "Compact",
-    "Type": "Universal",
-    "Brand": "Dell",
-    "Color": "Red",
-    "ImageUrl": "https://laptop.bg/system/images/207339/double/58018366.jpg",
-    "Warranty": 12
-  },
-  {
-    "Format": "Compact",
-    "Type": "Compatible with Apple",
-    "Brand": "Microsoft",
-    "Color": "Red",
-    "ImageUrl": "https://laptop.bg/system/images/323067/double/K503ARGBBK_VZ.jpg",
-    "Warranty": 6
-  },
-  {
-    "Format": "Compact",
-    "Type": "Compatible with Apple",
-    "Brand": "Canyon",
-    "Color": "Grey",
-    "ImageUrl": "https://laptop.bg/system/images/323067/double/K503ARGBBK_VZ.jpg",
-    "Warranty": 30
-  },
-  {
-    "Format": "Full size",
-    "Type": "Gaming",
-    "Brand": "Logitech",
-    "Color": "Black",
-    "ImageUrl": "https://laptop.bg/system/images/323067/double/K503ARGBBK_VZ.jpg",
     "Warranty": 18
   },
   {
-    "Format": "Tenkeyless (TKL)",
-    "Type": "Universal",
-    "Brand": "Logitech",
-    "Color": "Green",
-    "ImageUrl": "https://laptop.bg/system/images/283917/double/23796.png",
-    "Warranty": 24
-  },
-  {
-    "Format": "Compact",
-    "Type": "Compatible with Apple",
-    "Brand": "Hama",
-    "Color": "Brown",
-    "ImageUrl": "https://laptop.bg/system/images/283917/double/23796.png",
-    "Warranty": 24
-  },
-  {
-    "Format": "Full size",
-    "Type": "Gaming",
-    "Brand": "Canyon",
-    "Color": "Blue",
-    "ImageUrl": "https://laptop.bg/system/images/283917/double/23796.png",
-    "Warranty": 6
-  },
-  {
     "Format": "Full size",
     "Type": "Universal",
-    "Brand": "Canyon",
-    "Color": "Black",
-    "ImageUrl": "https://laptop.bg/system/images/207339/double/58018366.jpg",
-    "Warranty": 30
-  },
-  {
-    "Format": "Tenkeyless (TKL)",
-    "Type": "Gaming",
-    "Brand": "Asus",
-    "Color": "Blue",
-    "ImageUrl": "https://laptop.bg/system/images/295571/double/a4tech_kr92.jpg",
-    "Warranty": 12
-  },
-  {
-    "Format": "Tenkeyless (TKL)",
-    "Type": "Universal",
-    "Brand": "Canyon",
-    "Color": "Green",
-    "ImageUrl": "https://laptop.bg/system/images/207339/double/58018366.jpg",
-    "Warranty": 24
-  },
-  {
-    "Format": "Compact",
-    "Type": "Universal",
-    "Brand": "Apple",
-    "Color": "Grey",
-    "ImageUrl": "https://laptop.bg/system/images/323067/double/K503ARGBBK_VZ.jpg",
-    "Warranty": 6
-  },
-  {
-    "Format": "Full size",
-    "Type": "Compatible with Apple",
-    "Brand": "Asus",
-    "Color": "Black",
-    "ImageUrl": "https://laptop.bg/system/images/283917/double/23796.png",
-    "Warranty": 6
-  },
-  {
-    "Format": "Tenkeyless (TKL)",
-    "Type": "Compatible with Apple",
-    "Brand": "Apple",
-    "Color": "Brown",
-    "ImageUrl": "https://laptop.bg/system/images/323067/double/K503ARGBBK_VZ.jpg",
-    "Warranty": 24
-  },
-  {
-    "Format": "Tenkeyless (TKL)",
-    "Type": "Gaming",
-    "Brand": "Apple",
-    "Color": "Grey",
-    "ImageUrl": "https://laptop.bg/system/images/295571/double/a4tech_kr92.jpg",
-    "Warranty": 36
-  },
-  {
-    "Format": "Tenkeyless (TKL)",
-    "Type": "Compatible with Apple",
-    "Brand": "Apple",
-    "Color": "Red",
-    "ImageUrl": "https://laptop.bg/system/images/323067/double/K503ARGBBK_VZ.jpg",
-    "Warranty": 12
-  },
-  {
-    "Format": "Compact",
-    "Type": "Compatible with Apple",
-    "Brand": "Canyon",
-    "Color": "Brown",
-    "ImageUrl": "https://laptop.bg/system/images/295571/double/a4tech_kr92.jpg",
-    "Warranty": 18
-  },
-  {
-    "Format": "Tenkeyless (TKL)",
-    "Type": "Gaming",
-    "Brand": "Apple",
-    "Color": "Green",
-    "ImageUrl": "https://laptop.bg/system/images/283917/double/23796.png",
-    "Warranty": 6
-  },
-  {
-    "Format": "Tenkeyless (TKL)",
-    "Type": "Compatible with Apple",
-    "Brand": "Asus",
-    "Color": "Blue",
-    "ImageUrl": "https://laptop.bg/system/images/362703/double/HAMA182680.png",
-    "Warranty": 36
-  },
-  {
-    "Format": "Full size",
-    "Type": "Universal",
-    "Brand": "Apple",
-    "Color": "White",
-    "ImageUrl": "https://laptop.bg/system/images/283917/double/23796.png",
-    "Warranty": 12
-  },
-  {
-    "Format": "Compact",
-    "Type": "Gaming",
     "Brand": "Microsoft",
-    "Color": "Brown",
-    "ImageUrl": "https://laptop.bg/system/images/323067/double/K503ARGBBK_VZ.jpg",
-    "Warranty": 6
-  },
-  {
-    "Format": "Tenkeyless (TKL)",
-    "Type": "Gaming",
-    "Brand": "Asus",
-    "Color": "Black",
-    "ImageUrl": "https://laptop.bg/system/images/362703/double/HAMA182680.png",
-    "Warranty": 6
-  },
-  {
-    "Format": "Compact",
-    "Type": "Gaming",
-    "Brand": "Dell",
-    "Color": "Grey",
-    "ImageUrl": "https://laptop.bg/system/images/207339/double/58018366.jpg",
-    "Warranty": 6
+    "Color": "Red",
+    "ImageUrl": "https://laptop.bg/system/images/295571/double/a4tech_kr92.jpg",
+    "Warranty": 24
   },
   {
     "Format": "Full size",
-    "Type": "Gaming",
+    "Type": "Universal",
     "Brand": "Hama",
     "Color": "Green",
-    "ImageUrl": "https://laptop.bg/system/images/323067/double/K503ARGBBK_VZ.jpg",
-    "Warranty": 24
-  },
-  {
-    "Format": "Full size",
-    "Type": "Gaming",
-    "Brand": "Logitech",
-    "Color": "Green",
-    "ImageUrl": "https://laptop.bg/system/images/323067/double/K503ARGBBK_VZ.jpg",
+    "ImageUrl": "https://laptop.bg/system/images/283917/double/23796.png",
     "Warranty": 12
   },
   {
     "Format": "Full size",
-    "Type": "Compatible with Apple",
-    "Brand": "Dell",
-    "Color": "Green",
+    "Type": "Gaming",
+    "Brand": "Canyon",
+    "Color": "Grey",
+    "ImageUrl": "https://laptop.bg/system/images/207339/double/58018366.jpg",
+    "Warranty": 24
+  },
+  {
+    "Format": "Tenkeyless (TKL)",
+    "Type": "Universal",
+    "Brand": "HP",
+    "Color": "White",
+    "ImageUrl": "https://laptop.bg/system/images/295571/double/a4tech_kr92.jpg",
+    "Warranty": 18
+  },
+  {
+    "Format": "Tenkeyless (TKL)",
+    "Type": "Universal",
+    "Brand": "Logitech",
+    "Color": "Red",
     "ImageUrl": "https://laptop.bg/system/images/207339/double/58018366.jpg",
     "Warranty": 30
   },
   {
     "Format": "Compact",
     "Type": "Compatible with Apple",
-    "Brand": "Asus",
-    "Color": "Grey",
-    "ImageUrl": "https://laptop.bg/system/images/295571/double/a4tech_kr92.jpg",
-    "Warranty": 36
-  },
-  {
-    "Format": "Compact",
-    "Type": "Compatible with Apple",
-    "Brand": "Logitech",
+    "Brand": "HP",
     "Color": "Black",
-    "ImageUrl": "https://laptop.bg/system/images/323067/double/K503ARGBBK_VZ.jpg",
-    "Warranty": 36
-  },
-  {
-    "Format": "Compact",
-    "Type": "Compatible with Apple",
-    "Brand": "Logitech",
-    "Color": "White",
     "ImageUrl": "https://laptop.bg/system/images/283917/double/23796.png",
-    "Warranty": 36
+    "Warranty": 6
   },
   {
     "Format": "Compact",
     "Type": "Universal",
-    "Brand": "Canyon",
-    "Color": "Brown",
+    "Brand": "Microsoft",
+    "Color": "Blue",
     "ImageUrl": "https://laptop.bg/system/images/295571/double/a4tech_kr92.jpg",
-    "Warranty": 24
+    "Warranty": 18
   },
   {
     "Format": "Full size",
-    "Type": "Gaming",
-    "Brand": "Apple",
-    "Color": "Grey",
-    "ImageUrl": "https://laptop.bg/system/images/295571/double/a4tech_kr92.jpg",
-    "Warranty": 36
-  },
-  {
-    "Format": "Tenkeyless (TKL)",
-    "Type": "Gaming",
-    "Brand": "Canyon",
-    "Color": "Grey",
-    "ImageUrl": "https://laptop.bg/system/images/323067/double/K503ARGBBK_VZ.jpg",
-    "Warranty": 36
-  },
-  {
-    "Format": "Compact",
     "Type": "Compatible with Apple",
     "Brand": "Apple",
-    "Color": "Blue",
+    "Color": "Black",
     "ImageUrl": "https://laptop.bg/system/images/283917/double/23796.png",
     "Warranty": 30
   },
   {
-    "Format": "Full size",
-    "Type": "Universal",
-    "Brand": "Apple",
-    "Color": "Brown",
-    "ImageUrl": "https://laptop.bg/system/images/283917/double/23796.png",
-    "Warranty": 24
-  },
-  {
     "Format": "Compact",
-    "Type": "Gaming",
-    "Brand": "Apple",
-    "Color": "Red",
+    "Type": "Universal",
+    "Brand": "Microsoft",
+    "Color": "White",
     "ImageUrl": "https://laptop.bg/system/images/295571/double/a4tech_kr92.jpg",
     "Warranty": 12
   },
   {
     "Format": "Tenkeyless (TKL)",
-    "Type": "Compatible with Apple",
-    "Brand": "Microsoft",
+    "Type": "Gaming",
+    "Brand": "Hama",
+    "Color": "Grey",
+    "ImageUrl": "https://laptop.bg/system/images/207339/double/58018366.jpg",
+    "Warranty": 30
+  },
+  {
+    "Format": "Compact",
+    "Type": "Universal",
+    "Brand": "Logitech",
+    "Color": "Red",
+    "ImageUrl": "https://laptop.bg/system/images/207339/double/58018366.jpg",
+    "Warranty": 6
+  },
+  {
+    "Format": "Full size",
+    "Type": "Universal",
+    "Brand": "Logitech",
+    "Color": "White",
+    "ImageUrl": "https://laptop.bg/system/images/362703/double/HAMA182680.png",
+    "Warranty": 12
+  },
+  {
+    "Format": "Compact",
+    "Type": "Universal",
+    "Brand": "Canyon",
+    "Color": "White",
+    "ImageUrl": "https://laptop.bg/system/images/362703/double/HAMA182680.png",
+    "Warranty": 36
+  },
+  {
+    "Format": "Full size",
+    "Type": "Universal",
+    "Brand": "Asus",
     "Color": "Black",
+    "ImageUrl": "https://laptop.bg/system/images/207339/double/58018366.jpg",
+    "Warranty": 24
+  },
+  {
+    "Format": "Full size",
+    "Type": "Universal",
+    "Brand": "Dell",
+    "Color": "White",
+    "ImageUrl": "https://laptop.bg/system/images/283917/double/23796.png",
+    "Warranty": 36
+  },
+  {
+    "Format": "Full size",
+    "Type": "Compatible with Apple",
+    "Brand": "Dell",
+    "Color": "Black",
+    "ImageUrl": "https://laptop.bg/system/images/283917/double/23796.png",
+    "Warranty": 36
+  },
+  {
+    "Format": "Compact",
+    "Type": "Gaming",
+    "Brand": "Hama",
+    "Color": "Red",
+    "ImageUrl": "https://laptop.bg/system/images/323067/double/K503ARGBBK_VZ.jpg",
+    "Warranty": 36
+  },
+  {
+    "Format": "Full size",
+    "Type": "Compatible with Apple",
+    "Brand": "Dell",
+    "Color": "White",
+    "ImageUrl": "https://laptop.bg/system/images/207339/double/58018366.jpg",
+    "Warranty": 30
+  },
+  {
+    "Format": "Compact",
+    "Type": "Compatible with Apple",
+    "Brand": "HP",
+    "Color": "Black",
+    "ImageUrl": "https://laptop.bg/system/images/207339/double/58018366.jpg",
+    "Warranty": 12
+  },
+  {
+    "Format": "Full size",
+    "Type": "Gaming",
+    "Brand": "Canyon",
+    "Color": "Grey",
     "ImageUrl": "https://laptop.bg/system/images/323067/double/K503ARGBBK_VZ.jpg",
     "Warranty": 24
+  },
+  {
+    "Format": "Tenkeyless (TKL)",
+    "Type": "Universal",
+    "Brand": "HP",
+    "Color": "Grey",
+    "ImageUrl": "https://laptop.bg/system/images/295571/double/a4tech_kr92.jpg",
+    "Warranty": 18
+  },
+  {
+    "Format": "Tenkeyless (TKL)",
+    "Type": "Gaming",
+    "Brand": "Dell",
+    "Color": "Black",
+    "ImageUrl": "https://laptop.bg/system/images/295571/double/a4tech_kr92.jpg",
+    "Warranty": 30
   },
   {
     "Format": "Full size",
     "Type": "Universal",
     "Brand": "Logitech",
     "Color": "Grey",
+    "ImageUrl": "https://laptop.bg/system/images/283917/double/23796.png",
+    "Warranty": 6
+  },
+  {
+    "Format": "Compact",
+    "Type": "Universal",
+    "Brand": "HP",
+    "Color": "White",
+    "ImageUrl": "https://laptop.bg/system/images/283917/double/23796.png",
+    "Warranty": 12
+  },
+  {
+    "Format": "Full size",
+    "Type": "Gaming",
+    "Brand": "Asus",
+    "Color": "Green",
+    "ImageUrl": "https://laptop.bg/system/images/323067/double/K503ARGBBK_VZ.jpg",
+    "Warranty": 6
+  },
+  {
+    "Format": "Full size",
+    "Type": "Universal",
+    "Brand": "Logitech",
+    "Color": "Black",
     "ImageUrl": "https://laptop.bg/system/images/295571/double/a4tech_kr92.jpg",
-    "Warranty": 30
+    "Warranty": 12
+  },
+  {
+    "Format": "Tenkeyless (TKL)",
+    "Type": "Universal",
+    "Brand": "Microsoft",
+    "Color": "Blue",
+    "ImageUrl": "https://laptop.bg/system/images/295571/double/a4tech_kr92.jpg",
+    "Warranty": 36
+  },
+  {
+    "Format": "Full size",
+    "Type": "Gaming",
+    "Brand": "Microsoft",
+    "Color": "Red",
+    "ImageUrl": "https://laptop.bg/system/images/283917/double/23796.png",
+    "Warranty": 12
+  },
+  {
+    "Format": "Compact",
+    "Type": "Universal",
+    "Brand": "HP",
+    "Color": "Blue",
+    "ImageUrl": "https://laptop.bg/system/images/283917/double/23796.png",
+    "Warranty": 6
+  },
+  {
+    "Format": "Full size",
+    "Type": "Universal",
+    "Brand": "Microsoft",
+    "Color": "Green",
+    "ImageUrl": "https://laptop.bg/system/images/283917/double/23796.png",
+    "Warranty": 12
   },
   {
     "Format": "Compact",
     "Type": "Gaming",
-    "Brand": "Apple",
-    "Color": "White",
-    "ImageUrl": "https://laptop.bg/system/images/362703/double/HAMA182680.png",
+    "Brand": "Microsoft",
+    "Color": "Brown",
+    "ImageUrl": "https://laptop.bg/system/images/323067/double/K503ARGBBK_VZ.jpg",
+    "Warranty": 36
+  },
+  {
+    "Format": "Tenkeyless (TKL)",
+    "Type": "Compatible with Apple",
+    "Brand": "Dell",
+    "Color": "Green",
+    "ImageUrl": "https://laptop.bg/system/images/207339/double/58018366.jpg",
+    "Warranty": 24
+  },
+  {
+    "Format": "Tenkeyless (TKL)",
+    "Type": "Universal",
+    "Brand": "Hama",
+    "Color": "Red",
+    "ImageUrl": "https://laptop.bg/system/images/295571/double/a4tech_kr92.jpg",
     "Warranty": 18
+  },
+  {
+    "Format": "Tenkeyless (TKL)",
+    "Type": "Gaming",
+    "Brand": "Apple",
+    "Color": "Blue",
+    "ImageUrl": "https://laptop.bg/system/images/283917/double/23796.png",
+    "Warranty": 18
+  },
+  {
+    "Format": "Tenkeyless (TKL)",
+    "Type": "Universal",
+    "Brand": "Apple",
+    "Color": "Green",
+    "ImageUrl": "https://laptop.bg/system/images/283917/double/23796.png",
+    "Warranty": 12
+  },
+  {
+    "Format": "Tenkeyless (TKL)",
+    "Type": "Gaming",
+    "Brand": "Hama",
+    "Color": "Green",
+    "ImageUrl": "https://laptop.bg/system/images/283917/double/23796.png",
+    "Warranty": 18
+  },
+  {
+    "Format": "Tenkeyless (TKL)",
+    "Type": "Gaming",
+    "Brand": "Asus",
+    "Color": "Black",
+    "ImageUrl": "https://laptop.bg/system/images/362703/double/HAMA182680.png",
+    "Warranty": 36
+  },
+  {
+    "Format": "Compact",
+    "Type": "Universal",
+    "Brand": "Microsoft",
+    "Color": "Grey",
+    "ImageUrl": "https://laptop.bg/system/images/207339/double/58018366.jpg",
+    "Warranty": 12
   },
   {
     "Format": "Tenkeyless (TKL)",
@@ -981,222 +733,470 @@
     "Brand": "HP",
     "Color": "Blue",
     "ImageUrl": "https://laptop.bg/system/images/295571/double/a4tech_kr92.jpg",
-    "Warranty": 36
-  },
-  {
-    "Format": "Tenkeyless (TKL)",
-    "Type": "Compatible with Apple",
-    "Brand": "Dell",
-    "Color": "White",
-    "ImageUrl": "https://laptop.bg/system/images/207339/double/58018366.jpg",
-    "Warranty": 18
-  },
-  {
-    "Format": "Compact",
-    "Type": "Universal",
-    "Brand": "Hama",
-    "Color": "Grey",
-    "ImageUrl": "https://laptop.bg/system/images/283917/double/23796.png",
-    "Warranty": 24
-  },
-  {
-    "Format": "Full size",
-    "Type": "Gaming",
-    "Brand": "Canyon",
-    "Color": "Brown",
-    "ImageUrl": "https://laptop.bg/system/images/323067/double/K503ARGBBK_VZ.jpg",
-    "Warranty": 12
-  },
-  {
-    "Format": "Tenkeyless (TKL)",
-    "Type": "Universal",
-    "Brand": "Dell",
-    "Color": "Red",
-    "ImageUrl": "https://laptop.bg/system/images/207339/double/58018366.jpg",
-    "Warranty": 30
-  },
-  {
-    "Format": "Full size",
-    "Type": "Universal",
-    "Brand": "Microsoft",
-    "Color": "Grey",
-    "ImageUrl": "https://laptop.bg/system/images/207339/double/58018366.jpg",
-    "Warranty": 24
-  },
-  {
-    "Format": "Compact",
-    "Type": "Gaming",
-    "Brand": "HP",
-    "Color": "Brown",
-    "ImageUrl": "https://laptop.bg/system/images/295571/double/a4tech_kr92.jpg",
-    "Warranty": 18
-  },
-  {
-    "Format": "Full size",
-    "Type": "Universal",
-    "Brand": "Dell",
-    "Color": "Black",
-    "ImageUrl": "https://laptop.bg/system/images/283917/double/23796.png",
-    "Warranty": 6
-  },
-  {
-    "Format": "Full size",
-    "Type": "Universal",
-    "Brand": "Hama",
-    "Color": "Grey",
-    "ImageUrl": "https://laptop.bg/system/images/362703/double/HAMA182680.png",
-    "Warranty": 36
-  },
-  {
-    "Format": "Full size",
-    "Type": "Universal",
-    "Brand": "Hama",
-    "Color": "Green",
-    "ImageUrl": "https://laptop.bg/system/images/207339/double/58018366.jpg",
-    "Warranty": 30
-  },
-  {
-    "Format": "Tenkeyless (TKL)",
-    "Type": "Universal",
-    "Brand": "Asus",
-    "Color": "Black",
-    "ImageUrl": "https://laptop.bg/system/images/283917/double/23796.png",
-    "Warranty": 36
-  },
-  {
-    "Format": "Tenkeyless (TKL)",
-    "Type": "Universal",
-    "Brand": "Logitech",
-    "Color": "Green",
-    "ImageUrl": "https://laptop.bg/system/images/295571/double/a4tech_kr92.jpg",
-    "Warranty": 6
-  },
-  {
-    "Format": "Full size",
-    "Type": "Gaming",
-    "Brand": "Hama",
-    "Color": "Black",
-    "ImageUrl": "https://laptop.bg/system/images/295571/double/a4tech_kr92.jpg",
-    "Warranty": 6
-  },
-  {
-    "Format": "Compact",
-    "Type": "Gaming",
-    "Brand": "Microsoft",
-    "Color": "Grey",
-    "ImageUrl": "https://laptop.bg/system/images/283917/double/23796.png",
-    "Warranty": 12
-  },
-  {
-    "Format": "Full size",
-    "Type": "Gaming",
-    "Brand": "Apple",
-    "Color": "Brown",
-    "ImageUrl": "https://laptop.bg/system/images/362703/double/HAMA182680.png",
-    "Warranty": 18
-  },
-  {
-    "Format": "Full size",
-    "Type": "Universal",
-    "Brand": "Asus",
-    "Color": "Grey",
-    "ImageUrl": "https://laptop.bg/system/images/283917/double/23796.png",
-    "Warranty": 24
-  },
-  {
-    "Format": "Full size",
-    "Type": "Gaming",
-    "Brand": "Hama",
-    "Color": "Black",
-    "ImageUrl": "https://laptop.bg/system/images/283917/double/23796.png",
-    "Warranty": 6
-  },
-  {
-    "Format": "Compact",
-    "Type": "Compatible with Apple",
-    "Brand": "Hama",
-    "Color": "White",
-    "ImageUrl": "https://laptop.bg/system/images/207339/double/58018366.jpg",
     "Warranty": 30
   },
   {
     "Format": "Compact",
-    "Type": "Gaming",
-    "Brand": "Asus",
-    "Color": "Green",
-    "ImageUrl": "https://laptop.bg/system/images/323067/double/K503ARGBBK_VZ.jpg",
-    "Warranty": 6
-  },
-  {
-    "Format": "Compact",
-    "Type": "Universal",
-    "Brand": "Logitech",
-    "Color": "Red",
-    "ImageUrl": "https://laptop.bg/system/images/207339/double/58018366.jpg",
-    "Warranty": 12
-  },
-  {
-    "Format": "Compact",
-    "Type": "Universal",
-    "Brand": "Dell",
-    "Color": "Brown",
-    "ImageUrl": "https://laptop.bg/system/images/295571/double/a4tech_kr92.jpg",
-    "Warranty": 30
-  },
-  {
-    "Format": "Full size",
     "Type": "Gaming",
     "Brand": "Microsoft",
     "Color": "Blue",
-    "ImageUrl": "https://laptop.bg/system/images/362703/double/HAMA182680.png",
+    "ImageUrl": "https://laptop.bg/system/images/295571/double/a4tech_kr92.jpg",
+    "Warranty": 12
+  },
+  {
+    "Format": "Tenkeyless (TKL)",
+    "Type": "Gaming",
+    "Brand": "Apple",
+    "Color": "Red",
+    "ImageUrl": "https://laptop.bg/system/images/295571/double/a4tech_kr92.jpg",
     "Warranty": 30
   },
   {
     "Format": "Tenkeyless (TKL)",
     "Type": "Compatible with Apple",
+    "Brand": "Dell",
+    "Color": "Red",
+    "ImageUrl": "https://laptop.bg/system/images/207339/double/58018366.jpg",
+    "Warranty": 6
+  },
+  {
+    "Format": "Full size",
+    "Type": "Universal",
+    "Brand": "Asus",
+    "Color": "Brown",
+    "ImageUrl": "https://laptop.bg/system/images/362703/double/HAMA182680.png",
+    "Warranty": 30
+  },
+  {
+    "Format": "Tenkeyless (TKL)",
+    "Type": "Universal",
+    "Brand": "Asus",
+    "Color": "Green",
+    "ImageUrl": "https://laptop.bg/system/images/207339/double/58018366.jpg",
+    "Warranty": 18
+  },
+  {
+    "Format": "Full size",
+    "Type": "Universal",
+    "Brand": "Microsoft",
+    "Color": "Red",
+    "ImageUrl": "https://laptop.bg/system/images/295571/double/a4tech_kr92.jpg",
+    "Warranty": 36
+  },
+  {
+    "Format": "Compact",
+    "Type": "Compatible with Apple",
     "Brand": "Apple",
+    "Color": "Blue",
+    "ImageUrl": "https://laptop.bg/system/images/295571/double/a4tech_kr92.jpg",
+    "Warranty": 36
+  },
+  {
+    "Format": "Full size",
+    "Type": "Compatible with Apple",
+    "Brand": "Asus",
+    "Color": "Green",
+    "ImageUrl": "https://laptop.bg/system/images/283917/double/23796.png",
+    "Warranty": 18
+  },
+  {
+    "Format": "Full size",
+    "Type": "Universal",
+    "Brand": "Logitech",
+    "Color": "White",
+    "ImageUrl": "https://laptop.bg/system/images/323067/double/K503ARGBBK_VZ.jpg",
+    "Warranty": 24
+  },
+  {
+    "Format": "Tenkeyless (TKL)",
+    "Type": "Universal",
+    "Brand": "Hama",
+    "Color": "Blue",
+    "ImageUrl": "https://laptop.bg/system/images/323067/double/K503ARGBBK_VZ.jpg",
+    "Warranty": 18
+  },
+  {
+    "Format": "Compact",
+    "Type": "Gaming",
+    "Brand": "Apple",
+    "Color": "Blue",
+    "ImageUrl": "https://laptop.bg/system/images/207339/double/58018366.jpg",
+    "Warranty": 18
+  },
+  {
+    "Format": "Compact",
+    "Type": "Compatible with Apple",
+    "Brand": "Asus",
+    "Color": "Grey",
+    "ImageUrl": "https://laptop.bg/system/images/283917/double/23796.png",
+    "Warranty": 36
+  },
+  {
+    "Format": "Tenkeyless (TKL)",
+    "Type": "Compatible with Apple",
+    "Brand": "Microsoft",
+    "Color": "Black",
+    "ImageUrl": "https://laptop.bg/system/images/362703/double/HAMA182680.png",
+    "Warranty": 6
+  },
+  {
+    "Format": "Compact",
+    "Type": "Compatible with Apple",
+    "Brand": "Canyon",
+    "Color": "Green",
+    "ImageUrl": "https://laptop.bg/system/images/207339/double/58018366.jpg",
+    "Warranty": 24
+  },
+  {
+    "Format": "Tenkeyless (TKL)",
+    "Type": "Universal",
+    "Brand": "Hama",
+    "Color": "Brown",
+    "ImageUrl": "https://laptop.bg/system/images/323067/double/K503ARGBBK_VZ.jpg",
+    "Warranty": 18
+  },
+  {
+    "Format": "Tenkeyless (TKL)",
+    "Type": "Universal",
+    "Brand": "Apple",
+    "Color": "Grey",
+    "ImageUrl": "https://laptop.bg/system/images/207339/double/58018366.jpg",
+    "Warranty": 30
+  },
+  {
+    "Format": "Compact",
+    "Type": "Gaming",
+    "Brand": "Logitech",
+    "Color": "Green",
+    "ImageUrl": "https://laptop.bg/system/images/295571/double/a4tech_kr92.jpg",
+    "Warranty": 18
+  },
+  {
+    "Format": "Tenkeyless (TKL)",
+    "Type": "Universal",
+    "Brand": "Microsoft",
+    "Color": "Green",
+    "ImageUrl": "https://laptop.bg/system/images/295571/double/a4tech_kr92.jpg",
+    "Warranty": 36
+  },
+  {
+    "Format": "Full size",
+    "Type": "Compatible with Apple",
+    "Brand": "HP",
+    "Color": "Grey",
+    "ImageUrl": "https://laptop.bg/system/images/323067/double/K503ARGBBK_VZ.jpg",
+    "Warranty": 18
+  },
+  {
+    "Format": "Tenkeyless (TKL)",
+    "Type": "Gaming",
+    "Brand": "HP",
+    "Color": "Brown",
+    "ImageUrl": "https://laptop.bg/system/images/207339/double/58018366.jpg",
+    "Warranty": 6
+  },
+  {
+    "Format": "Full size",
+    "Type": "Universal",
+    "Brand": "Canyon",
+    "Color": "White",
+    "ImageUrl": "https://laptop.bg/system/images/295571/double/a4tech_kr92.jpg",
+    "Warranty": 24
+  },
+  {
+    "Format": "Tenkeyless (TKL)",
+    "Type": "Compatible with Apple",
+    "Brand": "Hama",
+    "Color": "Blue",
+    "ImageUrl": "https://laptop.bg/system/images/323067/double/K503ARGBBK_VZ.jpg",
+    "Warranty": 30
+  },
+  {
+    "Format": "Compact",
+    "Type": "Compatible with Apple",
+    "Brand": "Asus",
+    "Color": "Green",
+    "ImageUrl": "https://laptop.bg/system/images/323067/double/K503ARGBBK_VZ.jpg",
+    "Warranty": 12
+  },
+  {
+    "Format": "Full size",
+    "Type": "Compatible with Apple",
+    "Brand": "Microsoft",
+    "Color": "White",
+    "ImageUrl": "https://laptop.bg/system/images/362703/double/HAMA182680.png",
+    "Warranty": 18
+  },
+  {
+    "Format": "Tenkeyless (TKL)",
+    "Type": "Compatible with Apple",
+    "Brand": "Dell",
+    "Color": "Black",
+    "ImageUrl": "https://laptop.bg/system/images/323067/double/K503ARGBBK_VZ.jpg",
+    "Warranty": 18
+  },
+  {
+    "Format": "Compact",
+    "Type": "Universal",
+    "Brand": "Canyon",
+    "Color": "Black",
+    "ImageUrl": "https://laptop.bg/system/images/283917/double/23796.png",
+    "Warranty": 6
+  },
+  {
+    "Format": "Full size",
+    "Type": "Gaming",
+    "Brand": "Logitech",
+    "Color": "Brown",
+    "ImageUrl": "https://laptop.bg/system/images/323067/double/K503ARGBBK_VZ.jpg",
+    "Warranty": 6
+  },
+  {
+    "Format": "Tenkeyless (TKL)",
+    "Type": "Compatible with Apple",
+    "Brand": "Dell",
+    "Color": "Grey",
+    "ImageUrl": "https://laptop.bg/system/images/362703/double/HAMA182680.png",
+    "Warranty": 6
+  },
+  {
+    "Format": "Full size",
+    "Type": "Universal",
+    "Brand": "Asus",
+    "Color": "Red",
+    "ImageUrl": "https://laptop.bg/system/images/362703/double/HAMA182680.png",
+    "Warranty": 12
+  },
+  {
+    "Format": "Tenkeyless (TKL)",
+    "Type": "Universal",
+    "Brand": "Asus",
+    "Color": "Green",
+    "ImageUrl": "https://laptop.bg/system/images/283917/double/23796.png",
+    "Warranty": 6
+  },
+  {
+    "Format": "Compact",
+    "Type": "Gaming",
+    "Brand": "Microsoft",
+    "Color": "Blue",
+    "ImageUrl": "https://laptop.bg/system/images/283917/double/23796.png",
+    "Warranty": 6
+  },
+  {
+    "Format": "Full size",
+    "Type": "Gaming",
+    "Brand": "Dell",
+    "Color": "Grey",
+    "ImageUrl": "https://laptop.bg/system/images/207339/double/58018366.jpg",
+    "Warranty": 24
+  },
+  {
+    "Format": "Compact",
+    "Type": "Gaming",
+    "Brand": "Dell",
+    "Color": "Brown",
+    "ImageUrl": "https://laptop.bg/system/images/207339/double/58018366.jpg",
+    "Warranty": 30
+  },
+  {
+    "Format": "Tenkeyless (TKL)",
+    "Type": "Gaming",
+    "Brand": "Asus",
+    "Color": "Red",
+    "ImageUrl": "https://laptop.bg/system/images/283917/double/23796.png",
+    "Warranty": 30
+  },
+  {
+    "Format": "Tenkeyless (TKL)",
+    "Type": "Universal",
+    "Brand": "Canyon",
+    "Color": "Brown",
+    "ImageUrl": "https://laptop.bg/system/images/207339/double/58018366.jpg",
+    "Warranty": 36
+  },
+  {
+    "Format": "Compact",
+    "Type": "Universal",
+    "Brand": "Logitech",
+    "Color": "Red",
+    "ImageUrl": "https://laptop.bg/system/images/207339/double/58018366.jpg",
+    "Warranty": 18
+  },
+  {
+    "Format": "Full size",
+    "Type": "Gaming",
+    "Brand": "Dell",
+    "Color": "Black",
+    "ImageUrl": "https://laptop.bg/system/images/323067/double/K503ARGBBK_VZ.jpg",
+    "Warranty": 36
+  },
+  {
+    "Format": "Tenkeyless (TKL)",
+    "Type": "Compatible with Apple",
+    "Brand": "Apple",
+    "Color": "Grey",
+    "ImageUrl": "https://laptop.bg/system/images/323067/double/K503ARGBBK_VZ.jpg",
+    "Warranty": 36
+  },
+  {
+    "Format": "Compact",
+    "Type": "Universal",
+    "Brand": "Apple",
+    "Color": "White",
+    "ImageUrl": "https://laptop.bg/system/images/323067/double/K503ARGBBK_VZ.jpg",
+    "Warranty": 12
+  },
+  {
+    "Format": "Tenkeyless (TKL)",
+    "Type": "Gaming",
+    "Brand": "Hama",
+    "Color": "Brown",
+    "ImageUrl": "https://laptop.bg/system/images/283917/double/23796.png",
+    "Warranty": 36
+  },
+  {
+    "Format": "Compact",
+    "Type": "Universal",
+    "Brand": "Dell",
+    "Color": "Brown",
+    "ImageUrl": "https://laptop.bg/system/images/362703/double/HAMA182680.png",
+    "Warranty": 30
+  },
+  {
+    "Format": "Full size",
+    "Type": "Universal",
+    "Brand": "Dell",
+    "Color": "Red",
+    "ImageUrl": "https://laptop.bg/system/images/295571/double/a4tech_kr92.jpg",
+    "Warranty": 12
+  },
+  {
+    "Format": "Compact",
+    "Type": "Universal",
+    "Brand": "Asus",
+    "Color": "Black",
+    "ImageUrl": "https://laptop.bg/system/images/362703/double/HAMA182680.png",
+    "Warranty": 6
+  },
+  {
+    "Format": "Compact",
+    "Type": "Compatible with Apple",
+    "Brand": "Canyon",
+    "Color": "Blue",
+    "ImageUrl": "https://laptop.bg/system/images/323067/double/K503ARGBBK_VZ.jpg",
+    "Warranty": 24
+  },
+  {
+    "Format": "Full size",
+    "Type": "Compatible with Apple",
+    "Brand": "Canyon",
+    "Color": "White",
+    "ImageUrl": "https://laptop.bg/system/images/207339/double/58018366.jpg",
+    "Warranty": 24
+  },
+  {
+    "Format": "Full size",
+    "Type": "Compatible with Apple",
+    "Brand": "Microsoft",
     "Color": "Brown",
     "ImageUrl": "https://laptop.bg/system/images/283917/double/23796.png",
     "Warranty": 30
   },
   {
     "Format": "Compact",
+    "Type": "Gaming",
+    "Brand": "Microsoft",
+    "Color": "White",
+    "ImageUrl": "https://laptop.bg/system/images/323067/double/K503ARGBBK_VZ.jpg",
+    "Warranty": 18
+  },
+  {
+    "Format": "Tenkeyless (TKL)",
     "Type": "Compatible with Apple",
+    "Brand": "Canyon",
+    "Color": "Black",
+    "ImageUrl": "https://laptop.bg/system/images/323067/double/K503ARGBBK_VZ.jpg",
+    "Warranty": 24
+  },
+  {
+    "Format": "Tenkeyless (TKL)",
+    "Type": "Universal",
     "Brand": "Logitech",
     "Color": "Black",
+    "ImageUrl": "https://laptop.bg/system/images/362703/double/HAMA182680.png",
+    "Warranty": 6
+  },
+  {
+    "Format": "Full size",
+    "Type": "Universal",
+    "Brand": "HP",
+    "Color": "Blue",
+    "ImageUrl": "https://laptop.bg/system/images/283917/double/23796.png",
+    "Warranty": 24
+  },
+  {
+    "Format": "Tenkeyless (TKL)",
+    "Type": "Gaming",
+    "Brand": "Dell",
+    "Color": "Green",
     "ImageUrl": "https://laptop.bg/system/images/283917/double/23796.png",
     "Warranty": 24
   },
   {
     "Format": "Full size",
-    "Type": "Compatible with Apple",
+    "Type": "Gaming",
+    "Brand": "Canyon",
+    "Color": "Brown",
+    "ImageUrl": "https://laptop.bg/system/images/323067/double/K503ARGBBK_VZ.jpg",
+    "Warranty": 6
+  },
+  {
+    "Format": "Tenkeyless (TKL)",
+    "Type": "Universal",
     "Brand": "Dell",
-    "Color": "Red",
+    "Color": "Blue",
     "ImageUrl": "https://laptop.bg/system/images/323067/double/K503ARGBBK_VZ.jpg",
     "Warranty": 30
   },
   {
     "Format": "Compact",
-    "Type": "Gaming",
-    "Brand": "Apple",
-    "Color": "Grey",
+    "Type": "Universal",
+    "Brand": "Dell",
+    "Color": "Blue",
     "ImageUrl": "https://laptop.bg/system/images/283917/double/23796.png",
-    "Warranty": 36
+    "Warranty": 24
   },
   {
-    "Format": "Full size",
-    "Type": "Gaming",
-    "Brand": "Canyon",
+    "Format": "Compact",
+    "Type": "Universal",
+    "Brand": "Dell",
     "Color": "White",
-    "ImageUrl": "https://laptop.bg/system/images/283917/double/23796.png",
+    "ImageUrl": "https://laptop.bg/system/images/323067/double/K503ARGBBK_VZ.jpg",
+    "Warranty": 6
+  },
+  {
+    "Format": "Compact",
+    "Type": "Gaming",
+    "Brand": "Microsoft",
+    "Color": "Brown",
+    "ImageUrl": "https://laptop.bg/system/images/362703/double/HAMA182680.png",
     "Warranty": 30
   },
   {
     "Format": "Tenkeyless (TKL)",
-    "Type": "Gaming",
-    "Brand": "Logitech",
-    "Color": "Grey",
+    "Type": "Compatible with Apple",
+    "Brand": "Canyon",
+    "Color": "Red",
     "ImageUrl": "https://laptop.bg/system/images/207339/double/58018366.jpg",
+    "Warranty": 18
+  },
+  {
+    "Format": "Compact",
+    "Type": "Universal",
+    "Brand": "Hama",
+    "Color": "Blue",
+    "ImageUrl": "https://laptop.bg/system/images/362703/double/HAMA182680.png",
     "Warranty": 36
   }
 ]

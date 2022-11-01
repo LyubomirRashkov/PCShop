@@ -33,7 +33,7 @@
     <None Update="InitialSourceFiles\formats.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="InitialSourceFiles\imageUrls.json">
+    <None Update="InitialSourceFiles\imageURLs.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="InitialSourceFiles\rams.json">

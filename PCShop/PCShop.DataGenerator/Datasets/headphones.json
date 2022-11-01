@@ -1,351 +1,351 @@
 [
   {
+    "Type": "Over-ear",
+    "Brand": "Hama",
+    "Color": "Blue",
+    "ImageUrl": "https://laptop.bg/system/images/213909/double/HAMA184016.jpg",
+    "Warranty": 6
+  },
+  {
     "Type": "Gaming",
-    "Brand": "Corsair",
-    "Color": "Green",
+    "Brand": "Philips",
+    "Color": "Blue",
     "ImageUrl": "https://laptop.bg/system/images/275929/double/S2IMYM448.jpg",
+    "Warranty": 6
+  },
+  {
+    "Type": "Gaming",
+    "Brand": "JBL",
+    "Color": "White",
+    "ImageUrl": "https://laptop.bg/system/images/287256/double/USL1221.jpg",
+    "Warranty": 36
+  },
+  {
+    "Type": "Over-ear",
+    "Brand": "Apple",
+    "Color": "Green",
+    "ImageUrl": "https://laptop.bg/system/images/204877/double/CNECEP3R.png",
     "Warranty": 24
   },
   {
+    "Type": "On-ear",
+    "Brand": "Hama",
+    "Color": "Green",
+    "ImageUrl": "https://laptop.bg/system/images/213909/double/HAMA184016.jpg",
+    "Warranty": 36
+  },
+  {
     "Type": "In-ear",
-    "Brand": "Canyon",
-    "Color": "Grey",
-    "ImageUrl": "https://laptop.bg/system/images/275929/double/S2IMYM448.jpg",
-    "Warranty": 30
+    "Brand": "Logitech",
+    "Color": "White",
+    "ImageUrl": "https://laptop.bg/system/images/287256/double/USL1221.jpg",
+    "Warranty": 36
+  },
+  {
+    "Type": "On-ear",
+    "Brand": "JBL",
+    "Color": "Blue",
+    "ImageUrl": "https://laptop.bg/system/images/287256/double/USL1221.jpg",
+    "Warranty": 18
   },
   {
     "Type": "In-ear",
     "Brand": "Corsair",
     "Color": "Pink",
+    "ImageUrl": "https://laptop.bg/system/images/287256/double/USL1221.jpg",
+    "Warranty": 24
+  },
+  {
+    "Type": "Gaming",
+    "Brand": "Logitech",
+    "Color": "Pink",
+    "ImageUrl": "https://laptop.bg/system/images/275929/double/S2IMYM448.jpg",
+    "Warranty": 12
+  },
+  {
+    "Type": "Gaming",
+    "Brand": "Corsair",
+    "Color": "White",
+    "ImageUrl": "https://laptop.bg/system/images/58183/double/CNECHP2.jpg",
+    "Warranty": 36
+  },
+  {
+    "Type": "Over-ear",
+    "Brand": "Logitech",
+    "Color": "Grey",
+    "ImageUrl": "https://laptop.bg/system/images/204877/double/CNECEP3R.png",
+    "Warranty": 18
+  },
+  {
+    "Type": "In-ear",
+    "Brand": "Philips",
+    "Color": "White",
+    "ImageUrl": "https://laptop.bg/system/images/204877/double/CNECEP3R.png",
+    "Warranty": 30
+  },
+  {
+    "Type": "Gaming",
+    "Brand": "Logitech",
+    "Color": "Blue",
+    "ImageUrl": "https://laptop.bg/system/images/58183/double/CNECHP2.jpg",
+    "Warranty": 24
+  },
+  {
+    "Type": "Over-ear",
+    "Brand": "Sony",
+    "Color": "Black",
     "ImageUrl": "https://laptop.bg/system/images/213909/double/HAMA184016.jpg",
     "Warranty": 6
   },
   {
     "Type": "On-ear",
-    "Brand": "Logitech",
+    "Brand": "JBL",
+    "Color": "Pink",
+    "ImageUrl": "https://laptop.bg/system/images/213909/double/HAMA184016.jpg",
+    "Warranty": 36
+  },
+  {
+    "Type": "On-ear",
+    "Brand": "Sony",
+    "Color": "Grey",
+    "ImageUrl": "https://laptop.bg/system/images/275929/double/S2IMYM448.jpg",
+    "Warranty": 12
+  },
+  {
+    "Type": "Gaming",
+    "Brand": "Canyon",
+    "Color": "Green",
+    "ImageUrl": "https://laptop.bg/system/images/58183/double/CNECHP2.jpg",
+    "Warranty": 6
+  },
+  {
+    "Type": "On-ear",
+    "Brand": "Apple",
+    "Color": "White",
+    "ImageUrl": "https://laptop.bg/system/images/213909/double/HAMA184016.jpg",
+    "Warranty": 24
+  },
+  {
+    "Type": "Over-ear",
+    "Brand": "Philips",
+    "Color": "Black",
+    "ImageUrl": "https://laptop.bg/system/images/287256/double/USL1221.jpg",
+    "Warranty": 30
+  },
+  {
+    "Type": "Over-ear",
+    "Brand": "Apple",
     "Color": "Pink",
     "ImageUrl": "https://laptop.bg/system/images/287256/double/USL1221.jpg",
+    "Warranty": 30
+  },
+  {
+    "Type": "Over-ear",
+    "Brand": "Canyon",
+    "Color": "Grey",
+    "ImageUrl": "https://laptop.bg/system/images/213909/double/HAMA184016.jpg",
+    "Warranty": 12
+  },
+  {
+    "Type": "In-ear",
+    "Brand": "Corsair",
+    "Color": "White",
+    "ImageUrl": "https://laptop.bg/system/images/287256/double/USL1221.jpg",
+    "Warranty": 30
+  },
+  {
+    "Type": "In-ear",
+    "Brand": "Apple",
+    "Color": "Silver",
+    "ImageUrl": "https://laptop.bg/system/images/58183/double/CNECHP2.jpg",
+    "Warranty": 12
+  },
+  {
+    "Type": "In-ear",
+    "Brand": "Canyon",
+    "Color": "Black",
+    "ImageUrl": "https://laptop.bg/system/images/275929/double/S2IMYM448.jpg",
+    "Warranty": 12
+  },
+  {
+    "Type": "On-ear",
+    "Brand": "Corsair",
+    "Color": "Blue",
+    "ImageUrl": "https://laptop.bg/system/images/287256/double/USL1221.jpg",
+    "Warranty": 18
+  },
+  {
+    "Type": "Gaming",
+    "Brand": "Canyon",
+    "Color": "Red",
+    "ImageUrl": "https://laptop.bg/system/images/213909/double/HAMA184016.jpg",
     "Warranty": 12
   },
   {
     "Type": "In-ear",
     "Brand": "Apple",
     "Color": "Black",
-    "ImageUrl": "https://laptop.bg/system/images/204877/double/CNECEP3R.png",
+    "ImageUrl": "https://laptop.bg/system/images/275929/double/S2IMYM448.jpg",
+    "Warranty": 12
+  },
+  {
+    "Type": "On-ear",
+    "Brand": "Canyon",
+    "Color": "Black",
+    "ImageUrl": "https://laptop.bg/system/images/58183/double/CNECHP2.jpg",
+    "Warranty": 30
+  },
+  {
+    "Type": "In-ear",
+    "Brand": "Corsair",
+    "Color": "White",
+    "ImageUrl": "https://laptop.bg/system/images/213909/double/HAMA184016.jpg",
     "Warranty": 12
   },
   {
     "Type": "Over-ear",
-    "Brand": "Canyon",
-    "Color": "Grey",
-    "ImageUrl": "https://laptop.bg/system/images/287256/double/USL1221.jpg",
+    "Brand": "Hama",
+    "Color": "Pink",
+    "ImageUrl": "https://laptop.bg/system/images/204877/double/CNECEP3R.png",
+    "Warranty": 24
+  },
+  {
+    "Type": "Over-ear",
+    "Brand": "Logitech",
+    "Color": "Black",
+    "ImageUrl": "https://laptop.bg/system/images/58183/double/CNECHP2.jpg",
     "Warranty": 6
   },
   {
-    "Type": "In-ear",
+    "Type": "Gaming",
     "Brand": "Hama",
-    "Color": "Red",
-    "ImageUrl": "https://laptop.bg/system/images/287256/double/USL1221.jpg",
+    "Color": "Green",
+    "ImageUrl": "https://laptop.bg/system/images/204877/double/CNECEP3R.png",
+    "Warranty": 6
+  },
+  {
+    "Type": "Over-ear",
+    "Brand": "Philips",
+    "Color": "Green",
+    "ImageUrl": "https://laptop.bg/system/images/58183/double/CNECHP2.jpg",
     "Warranty": 24
+  },
+  {
+    "Type": "In-ear",
+    "Brand": "Apple",
+    "Color": "Blue",
+    "ImageUrl": "https://laptop.bg/system/images/213909/double/HAMA184016.jpg",
+    "Warranty": 36
   },
   {
     "Type": "Gaming",
     "Brand": "Hama",
-    "Color": "Grey",
-    "ImageUrl": "https://laptop.bg/system/images/204877/double/CNECEP3R.png",
+    "Color": "Black",
+    "ImageUrl": "https://laptop.bg/system/images/58183/double/CNECHP2.jpg",
     "Warranty": 30
   },
   {
-    "Type": "Gaming",
+    "Type": "Over-ear",
     "Brand": "Sony",
-    "Color": "Red",
-    "ImageUrl": "https://laptop.bg/system/images/58183/double/CNECHP2.jpg",
+    "Color": "Pink",
+    "ImageUrl": "https://laptop.bg/system/images/275929/double/S2IMYM448.jpg",
     "Warranty": 18
-  },
-  {
-    "Type": "Gaming",
-    "Brand": "Philips",
-    "Color": "Silver",
-    "ImageUrl": "https://laptop.bg/system/images/213909/double/HAMA184016.jpg",
-    "Warranty": 24
   },
   {
     "Type": "Over-ear",
     "Brand": "JBL",
-    "Color": "Blue",
+    "Color": "Grey",
     "ImageUrl": "https://laptop.bg/system/images/213909/double/HAMA184016.jpg",
-    "Warranty": 12
-  },
-  {
-    "Type": "On-ear",
-    "Brand": "Canyon",
-    "Color": "Green",
-    "ImageUrl": "https://laptop.bg/system/images/275929/double/S2IMYM448.jpg",
-    "Warranty": 6
-  },
-  {
-    "Type": "Gaming",
-    "Brand": "Sony",
-    "Color": "Pink",
-    "ImageUrl": "https://laptop.bg/system/images/287256/double/USL1221.jpg",
-    "Warranty": 12
+    "Warranty": 30
   },
   {
     "Type": "In-ear",
-    "Brand": "Sony",
-    "Color": "Pink",
-    "ImageUrl": "https://laptop.bg/system/images/58183/double/CNECHP2.jpg",
-    "Warranty": 36
-  },
-  {
-    "Type": "In-ear",
-    "Brand": "Canyon",
-    "Color": "Silver",
-    "ImageUrl": "https://laptop.bg/system/images/287256/double/USL1221.jpg",
-    "Warranty": 36
-  },
-  {
-    "Type": "Over-ear",
     "Brand": "Philips",
     "Color": "Pink",
-    "ImageUrl": "https://laptop.bg/system/images/213909/double/HAMA184016.jpg",
-    "Warranty": 12
-  },
-  {
-    "Type": "On-ear",
-    "Brand": "Logitech",
-    "Color": "Black",
-    "ImageUrl": "https://laptop.bg/system/images/275929/double/S2IMYM448.jpg",
-    "Warranty": 12
-  },
-  {
-    "Type": "Gaming",
-    "Brand": "Logitech",
-    "Color": "Red",
-    "ImageUrl": "https://laptop.bg/system/images/204877/double/CNECEP3R.png",
-    "Warranty": 30
-  },
-  {
-    "Type": "On-ear",
-    "Brand": "Sony",
-    "Color": "Pink",
-    "ImageUrl": "https://laptop.bg/system/images/287256/double/USL1221.jpg",
-    "Warranty": 30
-  },
-  {
-    "Type": "On-ear",
-    "Brand": "Philips",
-    "Color": "Blue",
-    "ImageUrl": "https://laptop.bg/system/images/213909/double/HAMA184016.jpg",
-    "Warranty": 6
-  },
-  {
-    "Type": "On-ear",
-    "Brand": "Corsair",
-    "Color": "Pink",
-    "ImageUrl": "https://laptop.bg/system/images/204877/double/CNECEP3R.png",
-    "Warranty": 36
-  },
-  {
-    "Type": "In-ear",
-    "Brand": "Corsair",
-    "Color": "Blue",
-    "ImageUrl": "https://laptop.bg/system/images/204877/double/CNECEP3R.png",
-    "Warranty": 30
-  },
-  {
-    "Type": "Gaming",
-    "Brand": "Hama",
-    "Color": "Grey",
-    "ImageUrl": "https://laptop.bg/system/images/275929/double/S2IMYM448.jpg",
-    "Warranty": 30
-  },
-  {
-    "Type": "On-ear",
-    "Brand": "Philips",
-    "Color": "Silver",
-    "ImageUrl": "https://laptop.bg/system/images/58183/double/CNECHP2.jpg",
-    "Warranty": 12
-  },
-  {
-    "Type": "On-ear",
-    "Brand": "Apple",
-    "Color": "Green",
-    "ImageUrl": "https://laptop.bg/system/images/287256/double/USL1221.jpg",
-    "Warranty": 12
-  },
-  {
-    "Type": "Gaming",
-    "Brand": "Logitech",
-    "Color": "Grey",
-    "ImageUrl": "https://laptop.bg/system/images/275929/double/S2IMYM448.jpg",
-    "Warranty": 30
-  },
-  {
-    "Type": "In-ear",
-    "Brand": "Canyon",
-    "Color": "Pink",
-    "ImageUrl": "https://laptop.bg/system/images/58183/double/CNECHP2.jpg",
-    "Warranty": 12
-  },
-  {
-    "Type": "Over-ear",
-    "Brand": "Logitech",
-    "Color": "Red",
-    "ImageUrl": "https://laptop.bg/system/images/287256/double/USL1221.jpg",
-    "Warranty": 12
-  },
-  {
-    "Type": "Gaming",
-    "Brand": "Hama",
-    "Color": "Green",
-    "ImageUrl": "https://laptop.bg/system/images/213909/double/HAMA184016.jpg",
-    "Warranty": 24
-  },
-  {
-    "Type": "Gaming",
-    "Brand": "Hama",
-    "Color": "Black",
-    "ImageUrl": "https://laptop.bg/system/images/204877/double/CNECEP3R.png",
-    "Warranty": 12
-  },
-  {
-    "Type": "In-ear",
-    "Brand": "Corsair",
-    "Color": "Grey",
-    "ImageUrl": "https://laptop.bg/system/images/58183/double/CNECHP2.jpg",
-    "Warranty": 6
-  },
-  {
-    "Type": "On-ear",
-    "Brand": "Logitech",
-    "Color": "Pink",
-    "ImageUrl": "https://laptop.bg/system/images/204877/double/CNECEP3R.png",
-    "Warranty": 12
-  },
-  {
-    "Type": "Gaming",
-    "Brand": "Hama",
-    "Color": "Silver",
-    "ImageUrl": "https://laptop.bg/system/images/213909/double/HAMA184016.jpg",
-    "Warranty": 12
-  },
-  {
-    "Type": "On-ear",
-    "Brand": "Apple",
-    "Color": "Silver",
-    "ImageUrl": "https://laptop.bg/system/images/213909/double/HAMA184016.jpg",
-    "Warranty": 36
-  },
-  {
-    "Type": "Over-ear",
-    "Brand": "Hama",
-    "Color": "Silver",
-    "ImageUrl": "https://laptop.bg/system/images/287256/double/USL1221.jpg",
-    "Warranty": 6
-  },
-  {
-    "Type": "Gaming",
-    "Brand": "Sony",
-    "Color": "Grey",
-    "ImageUrl": "https://laptop.bg/system/images/204877/double/CNECEP3R.png",
-    "Warranty": 36
-  },
-  {
-    "Type": "On-ear",
-    "Brand": "Hama",
-    "Color": "White",
     "ImageUrl": "https://laptop.bg/system/images/204877/double/CNECEP3R.png",
     "Warranty": 18
   },
   {
+    "Type": "On-ear",
+    "Brand": "Apple",
+    "Color": "Grey",
+    "ImageUrl": "https://laptop.bg/system/images/58183/double/CNECHP2.jpg",
+    "Warranty": 36
+  },
+  {
+    "Type": "Gaming",
+    "Brand": "Logitech",
+    "Color": "Pink",
+    "ImageUrl": "https://laptop.bg/system/images/287256/double/USL1221.jpg",
+    "Warranty": 18
+  },
+  {
+    "Type": "Gaming",
+    "Brand": "Logitech",
+    "Color": "Pink",
+    "ImageUrl": "https://laptop.bg/system/images/275929/double/S2IMYM448.jpg",
+    "Warranty": 30
+  },
+  {
+    "Type": "Gaming",
+    "Brand": "Corsair",
+    "Color": "White",
+    "ImageUrl": "https://laptop.bg/system/images/204877/double/CNECEP3R.png",
+    "Warranty": 24
+  },
+  {
     "Type": "Gaming",
     "Brand": "Canyon",
+    "Color": "Black",
+    "ImageUrl": "https://laptop.bg/system/images/58183/double/CNECHP2.jpg",
+    "Warranty": 30
+  },
+  {
+    "Type": "In-ear",
+    "Brand": "JBL",
+    "Color": "Blue",
+    "ImageUrl": "https://laptop.bg/system/images/275929/double/S2IMYM448.jpg",
+    "Warranty": 18
+  },
+  {
+    "Type": "In-ear",
+    "Brand": "Sony",
     "Color": "Blue",
     "ImageUrl": "https://laptop.bg/system/images/275929/double/S2IMYM448.jpg",
     "Warranty": 30
   },
   {
     "Type": "Over-ear",
-    "Brand": "Apple",
-    "Color": "Grey",
-    "ImageUrl": "https://laptop.bg/system/images/213909/double/HAMA184016.jpg",
-    "Warranty": 12
-  },
-  {
-    "Type": "Over-ear",
-    "Brand": "Hama",
-    "Color": "White",
-    "ImageUrl": "https://laptop.bg/system/images/275929/double/S2IMYM448.jpg",
-    "Warranty": 36
-  },
-  {
-    "Type": "On-ear",
     "Brand": "Philips",
-    "Color": "Black",
-    "ImageUrl": "https://laptop.bg/system/images/213909/double/HAMA184016.jpg",
-    "Warranty": 30
-  },
-  {
-    "Type": "Over-ear",
-    "Brand": "Canyon",
-    "Color": "Pink",
-    "ImageUrl": "https://laptop.bg/system/images/275929/double/S2IMYM448.jpg",
-    "Warranty": 12
-  },
-  {
-    "Type": "On-ear",
-    "Brand": "Philips",
-    "Color": "Black",
-    "ImageUrl": "https://laptop.bg/system/images/287256/double/USL1221.jpg",
-    "Warranty": 12
-  },
-  {
-    "Type": "Over-ear",
-    "Brand": "Apple",
-    "Color": "Grey",
-    "ImageUrl": "https://laptop.bg/system/images/204877/double/CNECEP3R.png",
-    "Warranty": 36
-  },
-  {
-    "Type": "Over-ear",
-    "Brand": "Logitech",
-    "Color": "Silver",
-    "ImageUrl": "https://laptop.bg/system/images/204877/double/CNECEP3R.png",
-    "Warranty": 36
-  },
-  {
-    "Type": "Over-ear",
-    "Brand": "Canyon",
-    "Color": "White",
-    "ImageUrl": "https://laptop.bg/system/images/275929/double/S2IMYM448.jpg",
-    "Warranty": 24
-  },
-  {
-    "Type": "Over-ear",
-    "Brand": "Apple",
-    "Color": "White",
-    "ImageUrl": "https://laptop.bg/system/images/213909/double/HAMA184016.jpg",
-    "Warranty": 30
-  },
-  {
-    "Type": "In-ear",
-    "Brand": "Apple",
-    "Color": "Silver",
+    "Color": "Green",
     "ImageUrl": "https://laptop.bg/system/images/58183/double/CNECHP2.jpg",
-    "Warranty": 6
-  },
-  {
-    "Type": "Over-ear",
-    "Brand": "Philips",
-    "Color": "White",
-    "ImageUrl": "https://laptop.bg/system/images/213909/double/HAMA184016.jpg",
-    "Warranty": 24
+    "Warranty": 18
   },
   {
     "Type": "Gaming",
     "Brand": "Sony",
-    "Color": "White",
+    "Color": "Pink",
+    "ImageUrl": "https://laptop.bg/system/images/287256/double/USL1221.jpg",
+    "Warranty": 12
+  },
+  {
+    "Type": "In-ear",
+    "Brand": "Hama",
+    "Color": "Green",
+    "ImageUrl": "https://laptop.bg/system/images/204877/double/CNECEP3R.png",
+    "Warranty": 18
+  },
+  {
+    "Type": "Over-ear",
+    "Brand": "Corsair",
+    "Color": "Pink",
+    "ImageUrl": "https://laptop.bg/system/images/58183/double/CNECHP2.jpg",
+    "Warranty": 18
+  },
+  {
+    "Type": "Gaming",
+    "Brand": "Apple",
+    "Color": "Pink",
     "ImageUrl": "https://laptop.bg/system/images/287256/double/USL1221.jpg",
     "Warranty": 12
   }
