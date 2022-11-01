@@ -1,40 +1,40 @@
 {
-  "LaptopImageURLs": [
+  "LaptopImageUrls": [
     "https://laptop.bg/system/images/319393/double/asus_e210magj208ts.jpg",
     "https://laptop.bg/system/images/296698/double/lenovo_ideapad_3_15_ultraslim_gen_6_82KU004NBM.png",
     "https://laptop.bg/system/images/317670/double/asus_x515faej321.jpg",
     "https://laptop.bg/system/images/354299/double/hp_15seq2055nu.png",
     "https://laptop.bg/system/images/315506/double/hp_250_g8_2X7V6EAABB.png"
   ],
-  "MonitorImageURLs": [
+  "MonitorImageUrls": [
     "https://laptop.bg/system/images/301995/double/dell_e2222hs.jpg",
     "https://laptop.bg/system/images/332398/double/aoc_27b2am.png",
     "https://laptop.bg/system/images/143895/double/223V7QHAB.jpg",
     "https://laptop.bg/system/images/292408/double/dell_se2422h.jpeg",
     "https://laptop.bg/system/images/289023/double/philips_243v7qsb00.jpg"
   ],
-  "KeyboardImageURLs": [
+  "KeyboardImageUrls": [
     "https://laptop.bg/system/images/295571/double/a4tech_kr92.jpg",
     "https://laptop.bg/system/images/362703/double/HAMA182680.png",
     "https://laptop.bg/system/images/283917/double/23796.png",
     "https://laptop.bg/system/images/207339/double/58018366.jpg",
     "https://laptop.bg/system/images/323067/double/K503ARGBBK_VZ.jpg"
   ],
-  "MouseImageURLs": [
+  "MouseImageUrls": [
     "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
     "https://laptop.bg/system/images/284342/double/NMY0916.png",
     "https://laptop.bg/system/images/261947/double/CNECMSW11B.png",
     "https://laptop.bg/system/images/103819/double/JM08000.jpg",
     "https://laptop.bg/system/images/216497/double/13150035.jpg"
   ],
-  "HeadphoneImageURLs": [
+  "HeadphoneImageUrls": [
     "https://laptop.bg/system/images/204877/double/CNECEP3R.png",
     "https://laptop.bg/system/images/287256/double/USL1221.jpg",
     "https://laptop.bg/system/images/58183/double/CNECHP2.jpg",
     "https://laptop.bg/system/images/275929/double/S2IMYM448.jpg",
     "https://laptop.bg/system/images/213909/double/HAMA184016.jpg"
   ],
-  "MicrophoneImageURLs": [
+  "MicrophoneImageUrls": [
     "https://laptop.bg/system/images/315406/double/CG3H500MK3B0001.png",
     "https://laptop.bg/system/images/284461/double/NMI1563.png",
     "https://laptop.bg/system/images/245366/double/HAMA139905.png",

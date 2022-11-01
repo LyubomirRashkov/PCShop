@@ -1,930 +1,474 @@
 [
   {
     "Type": "Optic",
-    "Sensitivity": "11000 - 15999 DPI",
-    "Brand": "Logitech",
-    "Color": "Blue",
-    "ImageUrl": "https://laptop.bg/system/images/284342/double/NMY0916.png",
-    "Warranty": 24
-  },
-  {
-    "Type": "Gaming",
-    "Sensitivity": "11000 - 15999 DPI",
-    "Brand": "Microsoft",
-    "Color": "Green",
-    "ImageUrl": "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
-    "Warranty": 12
-  },
-  {
-    "Type": "Laser",
-    "Sensitivity": "500 - 5999 DPI",
-    "Brand": "Canyon",
-    "Color": "Red",
-    "ImageUrl": "https://laptop.bg/system/images/284342/double/NMY0916.png",
-    "Warranty": 18
-  },
-  {
-    "Type": "Bluetooth",
-    "Sensitivity": "500 - 5999 DPI",
-    "Brand": "Microsoft",
-    "Color": "Beige",
-    "ImageUrl": "https://laptop.bg/system/images/103819/double/JM08000.jpg",
-    "Warranty": 12
-  },
-  {
-    "Type": "Bluetooth",
-    "Sensitivity": "21000 - 25001 DPI",
-    "Brand": "Microsoft",
-    "Color": "Red",
-    "ImageUrl": "https://laptop.bg/system/images/261947/double/CNECMSW11B.png",
-    "Warranty": 12
-  },
-  {
-    "Type": "Compatible with Apple",
-    "Sensitivity": "11000 - 15999 DPI",
-    "Brand": "Hama",
-    "Color": "Red",
-    "ImageUrl": "https://laptop.bg/system/images/216497/double/13150035.jpg",
-    "Warranty": 6
-  },
-  {
-    "Type": "Gaming",
     "Sensitivity": "16000 - 20999 DPI",
-    "Brand": "Hama",
-    "Color": "White",
-    "ImageUrl": "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
-    "Warranty": 30
-  },
-  {
-    "Type": "Gaming",
-    "Sensitivity": "6000 - 10999 DPI",
-    "Brand": "Hama",
-    "Color": "Red",
-    "ImageUrl": "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
-    "Warranty": 30
-  },
-  {
-    "Type": "Compatible with Apple",
-    "Sensitivity": "500 - 5999 DPI",
-    "Brand": "Asus",
-    "Color": "Black",
-    "ImageUrl": "https://laptop.bg/system/images/103819/double/JM08000.jpg",
-    "Warranty": 36
-  },
-  {
-    "Type": "Laser",
-    "Sensitivity": "500 - 5999 DPI",
-    "Brand": "Canyon",
-    "Color": "Black",
-    "ImageUrl": "https://laptop.bg/system/images/284342/double/NMY0916.png",
-    "Warranty": 24
-  },
-  {
-    "Type": "Bluetooth",
-    "Sensitivity": "500 - 5999 DPI",
-    "Brand": "Apple",
-    "Color": "Pink",
-    "ImageUrl": "https://laptop.bg/system/images/216497/double/13150035.jpg",
-    "Warranty": 24
-  },
-  {
-    "Type": "Optic",
-    "Sensitivity": "500 - 5999 DPI",
-    "Brand": "Hama",
-    "Color": "Pink",
-    "ImageUrl": "https://laptop.bg/system/images/284342/double/NMY0916.png",
-    "Warranty": 36
-  },
-  {
-    "Type": "Bluetooth",
-    "Sensitivity": "11000 - 15999 DPI",
-    "Brand": "Lenovo",
-    "Color": "Black",
-    "ImageUrl": "https://laptop.bg/system/images/284342/double/NMY0916.png",
-    "Warranty": 36
-  },
-  {
-    "Type": "Compatible with Apple",
-    "Sensitivity": "6000 - 10999 DPI",
-    "Brand": "Hama",
+    "Brand": "Logitech",
     "Color": "Grey",
     "ImageUrl": "https://laptop.bg/system/images/284342/double/NMY0916.png",
-    "Warranty": 18
-  },
-  {
-    "Type": "Compatible with Apple",
-    "Sensitivity": "11000 - 15999 DPI",
-    "Brand": "Corsair",
-    "Color": "Green",
-    "ImageUrl": "https://laptop.bg/system/images/284342/double/NMY0916.png",
-    "Warranty": 6
-  },
-  {
-    "Type": "Compatible with Apple",
-    "Sensitivity": "500 - 5999 DPI",
-    "Brand": "HP",
-    "Color": "Blue",
-    "ImageUrl": "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
     "Warranty": 24
   },
   {
-    "Type": "Bluetooth",
+    "Type": "Optic",
     "Sensitivity": "16000 - 20999 DPI",
-    "Brand": "Canyon",
-    "Color": "Beige",
+    "Brand": "Microsoft",
+    "Color": "Yellow",
     "ImageUrl": "https://laptop.bg/system/images/261947/double/CNECMSW11B.png",
-    "Warranty": 6
-  },
-  {
-    "Type": "Gaming",
-    "Sensitivity": "500 - 5999 DPI",
-    "Brand": "Corsair",
-    "Color": "Red",
-    "ImageUrl": "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
     "Warranty": 30
   },
   {
-    "Type": "Optic",
-    "Sensitivity": "16000 - 20999 DPI",
-    "Brand": "Logitech",
-    "Color": "Yellow",
-    "ImageUrl": "https://laptop.bg/system/images/216497/double/13150035.jpg",
-    "Warranty": 6
-  },
-  {
-    "Type": "Optic",
-    "Sensitivity": "16000 - 20999 DPI",
-    "Brand": "Hama",
-    "Color": "Beige",
-    "ImageUrl": "https://laptop.bg/system/images/284342/double/NMY0916.png",
-    "Warranty": 30
-  },
-  {
-    "Type": "Gaming",
-    "Sensitivity": "6000 - 10999 DPI",
-    "Brand": "Apple",
-    "Color": "Black",
-    "ImageUrl": "https://laptop.bg/system/images/216497/double/13150035.jpg",
-    "Warranty": 36
-  },
-  {
-    "Type": "Gaming",
+    "Type": "Compatible with Apple",
     "Sensitivity": "11000 - 15999 DPI",
-    "Brand": "Apple",
-    "Color": "Yellow",
+    "Brand": "Asus",
+    "Color": "Red",
+    "ImageUrl": "https://laptop.bg/system/images/261947/double/CNECMSW11B.png",
+    "Warranty": 30
+  },
+  {
+    "Type": "Compatible with Apple",
+    "Sensitivity": "6000 - 10999 DPI",
+    "Brand": "Lenovo",
+    "Color": "Pink",
     "ImageUrl": "https://laptop.bg/system/images/103819/double/JM08000.jpg",
     "Warranty": 18
   },
   {
-    "Type": "Gaming",
-    "Sensitivity": "21000 - 25001 DPI",
-    "Brand": "Corsair",
-    "Color": "Blue",
-    "ImageUrl": "https://laptop.bg/system/images/261947/double/CNECMSW11B.png",
-    "Warranty": 30
+    "Type": "Compatible with Apple",
+    "Sensitivity": "16000 - 20999 DPI",
+    "Brand": "Logitech",
+    "Color": "Red",
+    "ImageUrl": "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
+    "Warranty": 18
   },
   {
-    "Type": "Bluetooth",
-    "Sensitivity": "500 - 5999 DPI",
-    "Brand": "HP",
+    "Type": "Optic",
+    "Sensitivity": "11000 - 15999 DPI",
+    "Brand": "Microsoft",
     "Color": "White",
     "ImageUrl": "https://laptop.bg/system/images/261947/double/CNECMSW11B.png",
-    "Warranty": 12
-  },
-  {
-    "Type": "Compatible with Apple",
-    "Sensitivity": "16000 - 20999 DPI",
-    "Brand": "Apple",
-    "Color": "Green",
-    "ImageUrl": "https://laptop.bg/system/images/261947/double/CNECMSW11B.png",
-    "Warranty": 30
-  },
-  {
-    "Type": "Laser",
-    "Sensitivity": "500 - 5999 DPI",
-    "Brand": "Lenovo",
-    "Color": "Green",
-    "ImageUrl": "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
     "Warranty": 6
   },
   {
     "Type": "Gaming",
-    "Sensitivity": "500 - 5999 DPI",
-    "Brand": "Corsair",
-    "Color": "Green",
-    "ImageUrl": "https://laptop.bg/system/images/103819/double/JM08000.jpg",
-    "Warranty": 24
-  },
-  {
-    "Type": "Compatible with Apple",
-    "Sensitivity": "500 - 5999 DPI",
-    "Brand": "Asus",
-    "Color": "Red",
-    "ImageUrl": "https://laptop.bg/system/images/261947/double/CNECMSW11B.png",
-    "Warranty": 12
-  },
-  {
-    "Type": "Compatible with Apple",
-    "Sensitivity": "11000 - 15999 DPI",
-    "Brand": "Canyon",
-    "Color": "Green",
-    "ImageUrl": "https://laptop.bg/system/images/216497/double/13150035.jpg",
-    "Warranty": 12
-  },
-  {
-    "Type": "Laser",
     "Sensitivity": "21000 - 25001 DPI",
-    "Brand": "Hama",
-    "Color": "Yellow",
-    "ImageUrl": "https://laptop.bg/system/images/103819/double/JM08000.jpg",
-    "Warranty": 24
-  },
-  {
-    "Type": "Bluetooth",
-    "Sensitivity": "16000 - 20999 DPI",
-    "Brand": "Hama",
+    "Brand": "HP",
     "Color": "Beige",
-    "ImageUrl": "https://laptop.bg/system/images/261947/double/CNECMSW11B.png",
-    "Warranty": 18
-  },
-  {
-    "Type": "Optic",
-    "Sensitivity": "500 - 5999 DPI",
-    "Brand": "Canyon",
-    "Color": "Blue",
-    "ImageUrl": "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
-    "Warranty": 6
-  },
-  {
-    "Type": "Laser",
-    "Sensitivity": "21000 - 25001 DPI",
-    "Brand": "Canyon",
-    "Color": "Yellow",
-    "ImageUrl": "https://laptop.bg/system/images/103819/double/JM08000.jpg",
-    "Warranty": 18
-  },
-  {
-    "Type": "Optic",
-    "Sensitivity": "6000 - 10999 DPI",
-    "Brand": "Apple",
-    "Color": "Blue",
     "ImageUrl": "https://laptop.bg/system/images/284342/double/NMY0916.png",
-    "Warranty": 36
-  },
-  {
-    "Type": "Laser",
-    "Sensitivity": "11000 - 15999 DPI",
-    "Brand": "HP",
-    "Color": "Black",
-    "ImageUrl": "https://laptop.bg/system/images/284342/double/NMY0916.png",
-    "Warranty": 6
+    "Warranty": 12
   },
   {
     "Type": "Bluetooth",
-    "Sensitivity": "11000 - 15999 DPI",
-    "Brand": "Apple",
-    "Color": "Red",
-    "ImageUrl": "https://laptop.bg/system/images/103819/double/JM08000.jpg",
-    "Warranty": 30
-  },
-  {
-    "Type": "Optic",
-    "Sensitivity": "6000 - 10999 DPI",
-    "Brand": "HP",
-    "Color": "Black",
-    "ImageUrl": "https://laptop.bg/system/images/103819/double/JM08000.jpg",
-    "Warranty": 24
-  },
-  {
-    "Type": "Gaming",
     "Sensitivity": "16000 - 20999 DPI",
     "Brand": "Corsair",
-    "Color": "Beige",
-    "ImageUrl": "https://laptop.bg/system/images/284342/double/NMY0916.png",
-    "Warranty": 36
-  },
-  {
-    "Type": "Compatible with Apple",
-    "Sensitivity": "21000 - 25001 DPI",
-    "Brand": "Asus",
-    "Color": "Red",
-    "ImageUrl": "https://laptop.bg/system/images/216497/double/13150035.jpg",
-    "Warranty": 24
-  },
-  {
-    "Type": "Optic",
-    "Sensitivity": "500 - 5999 DPI",
-    "Brand": "Microsoft",
-    "Color": "Yellow",
-    "ImageUrl": "https://laptop.bg/system/images/216497/double/13150035.jpg",
-    "Warranty": 30
-  },
-  {
-    "Type": "Laser",
-    "Sensitivity": "16000 - 20999 DPI",
-    "Brand": "Microsoft",
-    "Color": "Yellow",
-    "ImageUrl": "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
-    "Warranty": 36
-  },
-  {
-    "Type": "Bluetooth",
-    "Sensitivity": "16000 - 20999 DPI",
-    "Brand": "Apple",
-    "Color": "Red",
-    "ImageUrl": "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
-    "Warranty": 18
-  },
-  {
-    "Type": "Gaming",
-    "Sensitivity": "16000 - 20999 DPI",
-    "Brand": "Microsoft",
-    "Color": "Blue",
-    "ImageUrl": "https://laptop.bg/system/images/261947/double/CNECMSW11B.png",
-    "Warranty": 12
-  },
-  {
-    "Type": "Bluetooth",
-    "Sensitivity": "21000 - 25001 DPI",
-    "Brand": "Canyon",
-    "Color": "Red",
-    "ImageUrl": "https://laptop.bg/system/images/103819/double/JM08000.jpg",
-    "Warranty": 36
-  },
-  {
-    "Type": "Compatible with Apple",
-    "Sensitivity": "6000 - 10999 DPI",
-    "Brand": "Asus",
-    "Color": "Pink",
-    "ImageUrl": "https://laptop.bg/system/images/216497/double/13150035.jpg",
-    "Warranty": 30
-  },
-  {
-    "Type": "Optic",
-    "Sensitivity": "16000 - 20999 DPI",
-    "Brand": "HP",
-    "Color": "Green",
-    "ImageUrl": "https://laptop.bg/system/images/261947/double/CNECMSW11B.png",
-    "Warranty": 30
-  },
-  {
-    "Type": "Bluetooth",
-    "Sensitivity": "11000 - 15999 DPI",
-    "Brand": "Apple",
     "Color": "Black",
-    "ImageUrl": "https://laptop.bg/system/images/103819/double/JM08000.jpg",
-    "Warranty": 30
-  },
-  {
-    "Type": "Bluetooth",
-    "Sensitivity": "11000 - 15999 DPI",
-    "Brand": "HP",
-    "Color": "Green",
-    "ImageUrl": "https://laptop.bg/system/images/261947/double/CNECMSW11B.png",
-    "Warranty": 36
-  },
-  {
-    "Type": "Compatible with Apple",
-    "Sensitivity": "500 - 5999 DPI",
-    "Brand": "Lenovo",
-    "Color": "Beige",
-    "ImageUrl": "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
-    "Warranty": 30
+    "ImageUrl": "https://laptop.bg/system/images/216497/double/13150035.jpg",
+    "Warranty": 24
   },
   {
     "Type": "Gaming",
-    "Sensitivity": "500 - 5999 DPI",
-    "Brand": "Hama",
-    "Color": "Red",
+    "Sensitivity": "16000 - 20999 DPI",
+    "Brand": "Logitech",
+    "Color": "Grey",
     "ImageUrl": "https://laptop.bg/system/images/103819/double/JM08000.jpg",
-    "Warranty": 18
+    "Warranty": 24
   },
   {
-    "Type": "Laser",
-    "Sensitivity": "21000 - 25001 DPI",
+    "Type": "Optic",
+    "Sensitivity": "16000 - 20999 DPI",
     "Brand": "HP",
-    "Color": "Beige",
-    "ImageUrl": "https://laptop.bg/system/images/216497/double/13150035.jpg",
-    "Warranty": 12
-  },
-  {
-    "Type": "Laser",
-    "Sensitivity": "16000 - 20999 DPI",
-    "Brand": "Corsair",
-    "Color": "Yellow",
-    "ImageUrl": "https://laptop.bg/system/images/103819/double/JM08000.jpg",
-    "Warranty": 18
-  },
-  {
-    "Type": "Optic",
-    "Sensitivity": "21000 - 25001 DPI",
-    "Brand": "Lenovo",
-    "Color": "Green",
-    "ImageUrl": "https://laptop.bg/system/images/216497/double/13150035.jpg",
-    "Warranty": 30
-  },
-  {
-    "Type": "Optic",
-    "Sensitivity": "6000 - 10999 DPI",
-    "Brand": "Asus",
-    "Color": "Beige",
-    "ImageUrl": "https://laptop.bg/system/images/103819/double/JM08000.jpg",
-    "Warranty": 30
-  },
-  {
-    "Type": "Optic",
-    "Sensitivity": "6000 - 10999 DPI",
-    "Brand": "Lenovo",
-    "Color": "Grey",
-    "ImageUrl": "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
-    "Warranty": 12
-  },
-  {
-    "Type": "Laser",
-    "Sensitivity": "6000 - 10999 DPI",
-    "Brand": "Logitech",
-    "Color": "Red",
-    "ImageUrl": "https://laptop.bg/system/images/103819/double/JM08000.jpg",
-    "Warranty": 24
-  },
-  {
-    "Type": "Optic",
-    "Sensitivity": "6000 - 10999 DPI",
-    "Brand": "Lenovo",
-    "Color": "Grey",
-    "ImageUrl": "https://laptop.bg/system/images/216497/double/13150035.jpg",
-    "Warranty": 36
-  },
-  {
-    "Type": "Laser",
-    "Sensitivity": "21000 - 25001 DPI",
-    "Brand": "Apple",
     "Color": "Pink",
-    "ImageUrl": "https://laptop.bg/system/images/284342/double/NMY0916.png",
-    "Warranty": 12
-  },
-  {
-    "Type": "Bluetooth",
-    "Sensitivity": "16000 - 20999 DPI",
-    "Brand": "Logitech",
-    "Color": "Red",
-    "ImageUrl": "https://laptop.bg/system/images/284342/double/NMY0916.png",
+    "ImageUrl": "https://laptop.bg/system/images/103819/double/JM08000.jpg",
     "Warranty": 24
   },
   {
-    "Type": "Bluetooth",
+    "Type": "Compatible with Apple",
     "Sensitivity": "16000 - 20999 DPI",
-    "Brand": "Lenovo",
+    "Brand": "Hama",
+    "Color": "Green",
+    "ImageUrl": "https://laptop.bg/system/images/103819/double/JM08000.jpg",
+    "Warranty": 24
+  },
+  {
+    "Type": "Optic",
+    "Sensitivity": "11000 - 15999 DPI",
+    "Brand": "Logitech",
     "Color": "Yellow",
-    "ImageUrl": "https://laptop.bg/system/images/284342/double/NMY0916.png",
+    "ImageUrl": "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
     "Warranty": 6
   },
   {
-    "Type": "Bluetooth",
-    "Sensitivity": "21000 - 25001 DPI",
-    "Brand": "Lenovo",
-    "Color": "Red",
-    "ImageUrl": "https://laptop.bg/system/images/261947/double/CNECMSW11B.png",
-    "Warranty": 18
-  },
-  {
-    "Type": "Bluetooth",
-    "Sensitivity": "500 - 5999 DPI",
-    "Brand": "Lenovo",
-    "Color": "Pink",
-    "ImageUrl": "https://laptop.bg/system/images/284342/double/NMY0916.png",
-    "Warranty": 24
-  },
-  {
-    "Type": "Bluetooth",
-    "Sensitivity": "21000 - 25001 DPI",
-    "Brand": "Asus",
-    "Color": "Black",
-    "ImageUrl": "https://laptop.bg/system/images/284342/double/NMY0916.png",
-    "Warranty": 6
-  },
-  {
-    "Type": "Gaming",
-    "Sensitivity": "21000 - 25001 DPI",
-    "Brand": "Hama",
-    "Color": "Grey",
-    "ImageUrl": "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
-    "Warranty": 18
-  },
-  {
-    "Type": "Bluetooth",
-    "Sensitivity": "21000 - 25001 DPI",
-    "Brand": "HP",
-    "Color": "Yellow",
-    "ImageUrl": "https://laptop.bg/system/images/216497/double/13150035.jpg",
-    "Warranty": 36
-  },
-  {
-    "Type": "Gaming",
-    "Sensitivity": "21000 - 25001 DPI",
-    "Brand": "Apple",
-    "Color": "Pink",
-    "ImageUrl": "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
-    "Warranty": 18
-  },
-  {
-    "Type": "Bluetooth",
-    "Sensitivity": "500 - 5999 DPI",
-    "Brand": "Logitech",
-    "Color": "Pink",
-    "ImageUrl": "https://laptop.bg/system/images/216497/double/13150035.jpg",
-    "Warranty": 18
-  },
-  {
-    "Type": "Bluetooth",
-    "Sensitivity": "6000 - 10999 DPI",
-    "Brand": "Asus",
-    "Color": "Blue",
-    "ImageUrl": "https://laptop.bg/system/images/284342/double/NMY0916.png",
-    "Warranty": 18
-  },
-  {
-    "Type": "Gaming",
-    "Sensitivity": "6000 - 10999 DPI",
-    "Brand": "Lenovo",
-    "Color": "Green",
-    "ImageUrl": "https://laptop.bg/system/images/103819/double/JM08000.jpg",
-    "Warranty": 24
-  },
-  {
-    "Type": "Laser",
-    "Sensitivity": "16000 - 20999 DPI",
-    "Brand": "Lenovo",
-    "Color": "Beige",
-    "ImageUrl": "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
-    "Warranty": 30
-  },
-  {
     "Type": "Optic",
-    "Sensitivity": "21000 - 25001 DPI",
-    "Brand": "Asus",
-    "Color": "Green",
-    "ImageUrl": "https://laptop.bg/system/images/216497/double/13150035.jpg",
-    "Warranty": 30
-  },
-  {
-    "Type": "Compatible with Apple",
-    "Sensitivity": "11000 - 15999 DPI",
-    "Brand": "Asus",
-    "Color": "Red",
-    "ImageUrl": "https://laptop.bg/system/images/284342/double/NMY0916.png",
-    "Warranty": 24
-  },
-  {
-    "Type": "Optic",
-    "Sensitivity": "16000 - 20999 DPI",
-    "Brand": "Apple",
-    "Color": "Red",
-    "ImageUrl": "https://laptop.bg/system/images/261947/double/CNECMSW11B.png",
-    "Warranty": 12
-  },
-  {
-    "Type": "Laser",
-    "Sensitivity": "21000 - 25001 DPI",
+    "Sensitivity": "6000 - 10999 DPI",
     "Brand": "Logitech",
-    "Color": "White",
-    "ImageUrl": "https://laptop.bg/system/images/216497/double/13150035.jpg",
-    "Warranty": 24
-  },
-  {
-    "Type": "Gaming",
-    "Sensitivity": "21000 - 25001 DPI",
-    "Brand": "Microsoft",
-    "Color": "Black",
-    "ImageUrl": "https://laptop.bg/system/images/216497/double/13150035.jpg",
-    "Warranty": 30
-  },
-  {
-    "Type": "Laser",
-    "Sensitivity": "21000 - 25001 DPI",
-    "Brand": "Microsoft",
-    "Color": "Pink",
+    "Color": "Green",
     "ImageUrl": "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
     "Warranty": 36
   },
   {
-    "Type": "Compatible with Apple",
-    "Sensitivity": "6000 - 10999 DPI",
-    "Brand": "HP",
-    "Color": "Red",
-    "ImageUrl": "https://laptop.bg/system/images/103819/double/JM08000.jpg",
-    "Warranty": 18
-  },
-  {
-    "Type": "Bluetooth",
-    "Sensitivity": "21000 - 25001 DPI",
-    "Brand": "Microsoft",
-    "Color": "Red",
-    "ImageUrl": "https://laptop.bg/system/images/216497/double/13150035.jpg",
-    "Warranty": 12
-  },
-  {
-    "Type": "Laser",
-    "Sensitivity": "16000 - 20999 DPI",
-    "Brand": "Asus",
-    "Color": "Black",
-    "ImageUrl": "https://laptop.bg/system/images/261947/double/CNECMSW11B.png",
-    "Warranty": 36
-  },
-  {
-    "Type": "Laser",
-    "Sensitivity": "21000 - 25001 DPI",
-    "Brand": "HP",
-    "Color": "Red",
-    "ImageUrl": "https://laptop.bg/system/images/216497/double/13150035.jpg",
-    "Warranty": 30
-  },
-  {
-    "Type": "Bluetooth",
+    "Type": "Gaming",
     "Sensitivity": "6000 - 10999 DPI",
     "Brand": "Corsair",
-    "Color": "Grey",
-    "ImageUrl": "https://laptop.bg/system/images/261947/double/CNECMSW11B.png",
-    "Warranty": 18
-  },
-  {
-    "Type": "Compatible with Apple",
-    "Sensitivity": "21000 - 25001 DPI",
-    "Brand": "HP",
-    "Color": "White",
-    "ImageUrl": "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
-    "Warranty": 30
-  },
-  {
-    "Type": "Bluetooth",
-    "Sensitivity": "6000 - 10999 DPI",
-    "Brand": "Microsoft",
-    "Color": "Beige",
-    "ImageUrl": "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
-    "Warranty": 6
-  },
-  {
-    "Type": "Bluetooth",
-    "Sensitivity": "21000 - 25001 DPI",
-    "Brand": "HP",
     "Color": "Black",
-    "ImageUrl": "https://laptop.bg/system/images/103819/double/JM08000.jpg",
-    "Warranty": 6
+    "ImageUrl": "https://laptop.bg/system/images/216497/double/13150035.jpg",
+    "Warranty": 30
   },
   {
-    "Type": "Optic",
-    "Sensitivity": "16000 - 20999 DPI",
+    "Type": "Laser",
+    "Sensitivity": "500 - 5999 DPI",
     "Brand": "Apple",
-    "Color": "Grey",
-    "ImageUrl": "https://laptop.bg/system/images/216497/double/13150035.jpg",
-    "Warranty": 18
-  },
-  {
-    "Type": "Compatible with Apple",
-    "Sensitivity": "16000 - 20999 DPI",
-    "Brand": "Apple",
-    "Color": "Pink",
-    "ImageUrl": "https://laptop.bg/system/images/261947/double/CNECMSW11B.png",
-    "Warranty": 36
-  },
-  {
-    "Type": "Bluetooth",
-    "Sensitivity": "21000 - 25001 DPI",
-    "Brand": "Microsoft",
-    "Color": "Green",
-    "ImageUrl": "https://laptop.bg/system/images/216497/double/13150035.jpg",
-    "Warranty": 30
-  },
-  {
-    "Type": "Bluetooth",
-    "Sensitivity": "16000 - 20999 DPI",
-    "Brand": "Hama",
-    "Color": "Red",
-    "ImageUrl": "https://laptop.bg/system/images/284342/double/NMY0916.png",
-    "Warranty": 6
-  },
-  {
-    "Type": "Optic",
-    "Sensitivity": "16000 - 20999 DPI",
-    "Brand": "Canyon",
-    "Color": "Red",
-    "ImageUrl": "https://laptop.bg/system/images/284342/double/NMY0916.png",
-    "Warranty": 18
-  },
-  {
-    "Type": "Optic",
-    "Sensitivity": "500 - 5999 DPI",
-    "Brand": "Corsair",
-    "Color": "Pink",
-    "ImageUrl": "https://laptop.bg/system/images/284342/double/NMY0916.png",
-    "Warranty": 30
-  },
-  {
-    "Type": "Gaming",
-    "Sensitivity": "21000 - 25001 DPI",
-    "Brand": "Asus",
-    "Color": "White",
-    "ImageUrl": "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
-    "Warranty": 24
-  },
-  {
-    "Type": "Compatible with Apple",
-    "Sensitivity": "6000 - 10999 DPI",
-    "Brand": "Logitech",
-    "Color": "Beige",
-    "ImageUrl": "https://laptop.bg/system/images/284342/double/NMY0916.png",
-    "Warranty": 36
-  },
-  {
-    "Type": "Bluetooth",
-    "Sensitivity": "16000 - 20999 DPI",
-    "Brand": "Logitech",
-    "Color": "Red",
-    "ImageUrl": "https://laptop.bg/system/images/284342/double/NMY0916.png",
-    "Warranty": 6
-  },
-  {
-    "Type": "Bluetooth",
-    "Sensitivity": "16000 - 20999 DPI",
-    "Brand": "Microsoft",
-    "Color": "Blue",
-    "ImageUrl": "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
-    "Warranty": 24
-  },
-  {
-    "Type": "Optic",
-    "Sensitivity": "16000 - 20999 DPI",
-    "Brand": "HP",
-    "Color": "Beige",
-    "ImageUrl": "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
-    "Warranty": 24
-  },
-  {
-    "Type": "Optic",
-    "Sensitivity": "500 - 5999 DPI",
-    "Brand": "Logitech",
-    "Color": "Pink",
-    "ImageUrl": "https://laptop.bg/system/images/216497/double/13150035.jpg",
-    "Warranty": 30
-  },
-  {
-    "Type": "Gaming",
-    "Sensitivity": "6000 - 10999 DPI",
-    "Brand": "HP",
-    "Color": "White",
-    "ImageUrl": "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
-    "Warranty": 12
-  },
-  {
-    "Type": "Compatible with Apple",
-    "Sensitivity": "6000 - 10999 DPI",
-    "Brand": "Asus",
-    "Color": "Green",
-    "ImageUrl": "https://laptop.bg/system/images/284342/double/NMY0916.png",
-    "Warranty": 36
-  },
-  {
-    "Type": "Compatible with Apple",
-    "Sensitivity": "500 - 5999 DPI",
-    "Brand": "Corsair",
-    "Color": "Green",
-    "ImageUrl": "https://laptop.bg/system/images/284342/double/NMY0916.png",
-    "Warranty": 18
-  },
-  {
-    "Type": "Gaming",
-    "Sensitivity": "16000 - 20999 DPI",
-    "Brand": "HP",
-    "Color": "Blue",
-    "ImageUrl": "https://laptop.bg/system/images/284342/double/NMY0916.png",
-    "Warranty": 12
-  },
-  {
-    "Type": "Gaming",
-    "Sensitivity": "6000 - 10999 DPI",
-    "Brand": "Hama",
-    "Color": "Grey",
-    "ImageUrl": "https://laptop.bg/system/images/103819/double/JM08000.jpg",
-    "Warranty": 36
-  },
-  {
-    "Type": "Compatible with Apple",
-    "Sensitivity": "11000 - 15999 DPI",
-    "Brand": "Asus",
     "Color": "Yellow",
-    "ImageUrl": "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
-    "Warranty": 6
-  },
-  {
-    "Type": "Gaming",
-    "Sensitivity": "500 - 5999 DPI",
-    "Brand": "Hama",
-    "Color": "White",
-    "ImageUrl": "https://laptop.bg/system/images/261947/double/CNECMSW11B.png",
-    "Warranty": 12
-  },
-  {
-    "Type": "Laser",
-    "Sensitivity": "16000 - 20999 DPI",
-    "Brand": "Lenovo",
-    "Color": "Blue",
-    "ImageUrl": "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
+    "ImageUrl": "https://laptop.bg/system/images/216497/double/13150035.jpg",
     "Warranty": 36
   },
   {
     "Type": "Gaming",
     "Sensitivity": "500 - 5999 DPI",
-    "Brand": "Hama",
-    "Color": "Pink",
-    "ImageUrl": "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
-    "Warranty": 18
-  },
-  {
-    "Type": "Laser",
-    "Sensitivity": "11000 - 15999 DPI",
-    "Brand": "Logitech",
-    "Color": "Red",
-    "ImageUrl": "https://laptop.bg/system/images/103819/double/JM08000.jpg",
-    "Warranty": 12
-  },
-  {
-    "Type": "Optic",
-    "Sensitivity": "500 - 5999 DPI",
-    "Brand": "HP",
-    "Color": "Black",
-    "ImageUrl": "https://laptop.bg/system/images/216497/double/13150035.jpg",
-    "Warranty": 24
-  },
-  {
-    "Type": "Laser",
-    "Sensitivity": "11000 - 15999 DPI",
-    "Brand": "Apple",
-    "Color": "Beige",
-    "ImageUrl": "https://laptop.bg/system/images/103819/double/JM08000.jpg",
-    "Warranty": 30
-  },
-  {
-    "Type": "Optic",
-    "Sensitivity": "500 - 5999 DPI",
-    "Brand": "Apple",
+    "Brand": "Lenovo",
     "Color": "Grey",
     "ImageUrl": "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
     "Warranty": 6
   },
   {
-    "Type": "Compatible with Apple",
-    "Sensitivity": "16000 - 20999 DPI",
-    "Brand": "Lenovo",
+    "Type": "Gaming",
+    "Sensitivity": "21000 - 25001 DPI",
+    "Brand": "Apple",
     "Color": "Green",
+    "ImageUrl": "https://laptop.bg/system/images/261947/double/CNECMSW11B.png",
+    "Warranty": 24
+  },
+  {
+    "Type": "Optic",
+    "Sensitivity": "6000 - 10999 DPI",
+    "Brand": "Microsoft",
+    "Color": "Blue",
+    "ImageUrl": "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
+    "Warranty": 30
+  },
+  {
+    "Type": "Optic",
+    "Sensitivity": "6000 - 10999 DPI",
+    "Brand": "Asus",
+    "Color": "Blue",
+    "ImageUrl": "https://laptop.bg/system/images/216497/double/13150035.jpg",
+    "Warranty": 12
+  },
+  {
+    "Type": "Gaming",
+    "Sensitivity": "500 - 5999 DPI",
+    "Brand": "Asus",
+    "Color": "Grey",
+    "ImageUrl": "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
+    "Warranty": 36
+  },
+  {
+    "Type": "Optic",
+    "Sensitivity": "11000 - 15999 DPI",
+    "Brand": "Microsoft",
+    "Color": "White",
+    "ImageUrl": "https://laptop.bg/system/images/216497/double/13150035.jpg",
+    "Warranty": 18
+  },
+  {
+    "Type": "Gaming",
+    "Sensitivity": "500 - 5999 DPI",
+    "Brand": "Hama",
+    "Color": "Beige",
+    "ImageUrl": "https://laptop.bg/system/images/216497/double/13150035.jpg",
+    "Warranty": 30
+  },
+  {
+    "Type": "Laser",
+    "Sensitivity": "500 - 5999 DPI",
+    "Brand": "Lenovo",
+    "Color": "Yellow",
+    "ImageUrl": "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
+    "Warranty": 30
+  },
+  {
+    "Type": "Compatible with Apple",
+    "Sensitivity": "11000 - 15999 DPI",
+    "Brand": "HP",
+    "Color": "Green",
+    "ImageUrl": "https://laptop.bg/system/images/216497/double/13150035.jpg",
+    "Warranty": 18
+  },
+  {
+    "Type": "Laser",
+    "Sensitivity": "16000 - 20999 DPI",
+    "Brand": "Logitech",
+    "Color": "White",
     "ImageUrl": "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
     "Warranty": 12
   },
   {
-    "Type": "Optic",
-    "Sensitivity": "21000 - 25001 DPI",
-    "Brand": "Corsair",
+    "Type": "Gaming",
+    "Sensitivity": "16000 - 20999 DPI",
+    "Brand": "Asus",
     "Color": "Red",
-    "ImageUrl": "https://laptop.bg/system/images/284342/double/NMY0916.png",
-    "Warranty": 36
+    "ImageUrl": "https://laptop.bg/system/images/216497/double/13150035.jpg",
+    "Warranty": 30
   },
   {
     "Type": "Gaming",
-    "Sensitivity": "21000 - 25001 DPI",
-    "Brand": "Asus",
-    "Color": "Red",
+    "Sensitivity": "16000 - 20999 DPI",
+    "Brand": "Logitech",
+    "Color": "White",
     "ImageUrl": "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
+    "Warranty": 6
+  },
+  {
+    "Type": "Compatible with Apple",
+    "Sensitivity": "21000 - 25001 DPI",
+    "Brand": "Corsair",
+    "Color": "Blue",
+    "ImageUrl": "https://laptop.bg/system/images/216497/double/13150035.jpg",
+    "Warranty": 6
+  },
+  {
+    "Type": "Gaming",
+    "Sensitivity": "11000 - 15999 DPI",
+    "Brand": "Lenovo",
+    "Color": "Yellow",
+    "ImageUrl": "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
+    "Warranty": 6
+  },
+  {
+    "Type": "Bluetooth",
+    "Sensitivity": "16000 - 20999 DPI",
+    "Brand": "Asus",
+    "Color": "Beige",
+    "ImageUrl": "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
+    "Warranty": 24
+  },
+  {
+    "Type": "Laser",
+    "Sensitivity": "16000 - 20999 DPI",
+    "Brand": "Hama",
+    "Color": "Blue",
+    "ImageUrl": "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
+    "Warranty": 6
+  },
+  {
+    "Type": "Laser",
+    "Sensitivity": "11000 - 15999 DPI",
+    "Brand": "Canyon",
+    "Color": "Grey",
+    "ImageUrl": "https://laptop.bg/system/images/284342/double/NMY0916.png",
+    "Warranty": 6
+  },
+  {
+    "Type": "Laser",
+    "Sensitivity": "6000 - 10999 DPI",
+    "Brand": "Microsoft",
+    "Color": "Grey",
+    "ImageUrl": "https://laptop.bg/system/images/284342/double/NMY0916.png",
+    "Warranty": 24
+  },
+  {
+    "Type": "Bluetooth",
+    "Sensitivity": "16000 - 20999 DPI",
+    "Brand": "Asus",
+    "Color": "White",
+    "ImageUrl": "https://laptop.bg/system/images/284342/double/NMY0916.png",
     "Warranty": 6
   },
   {
     "Type": "Optic",
     "Sensitivity": "16000 - 20999 DPI",
-    "Brand": "Canyon",
-    "Color": "Beige",
+    "Brand": "Hama",
+    "Color": "Yellow",
+    "ImageUrl": "https://laptop.bg/system/images/261947/double/CNECMSW11B.png",
+    "Warranty": 24
+  },
+  {
+    "Type": "Bluetooth",
+    "Sensitivity": "16000 - 20999 DPI",
+    "Brand": "Hama",
+    "Color": "Black",
+    "ImageUrl": "https://laptop.bg/system/images/216497/double/13150035.jpg",
+    "Warranty": 12
+  },
+  {
+    "Type": "Compatible with Apple",
+    "Sensitivity": "11000 - 15999 DPI",
+    "Brand": "HP",
+    "Color": "Black",
+    "ImageUrl": "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
+    "Warranty": 6
+  },
+  {
+    "Type": "Bluetooth",
+    "Sensitivity": "11000 - 15999 DPI",
+    "Brand": "Hama",
+    "Color": "Green",
     "ImageUrl": "https://laptop.bg/system/images/284342/double/NMY0916.png",
+    "Warranty": 24
+  },
+  {
+    "Type": "Optic",
+    "Sensitivity": "16000 - 20999 DPI",
+    "Brand": "Canyon",
+    "Color": "Pink",
+    "ImageUrl": "https://laptop.bg/system/images/216497/double/13150035.jpg",
+    "Warranty": 30
+  },
+  {
+    "Type": "Gaming",
+    "Sensitivity": "11000 - 15999 DPI",
+    "Brand": "Logitech",
+    "Color": "Black",
+    "ImageUrl": "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
+    "Warranty": 12
+  },
+  {
+    "Type": "Bluetooth",
+    "Sensitivity": "500 - 5999 DPI",
+    "Brand": "Asus",
+    "Color": "Black",
+    "ImageUrl": "https://laptop.bg/system/images/261947/double/CNECMSW11B.png",
+    "Warranty": 12
+  },
+  {
+    "Type": "Bluetooth",
+    "Sensitivity": "21000 - 25001 DPI",
+    "Brand": "HP",
+    "Color": "Pink",
+    "ImageUrl": "https://laptop.bg/system/images/261947/double/CNECMSW11B.png",
+    "Warranty": 6
+  },
+  {
+    "Type": "Bluetooth",
+    "Sensitivity": "21000 - 25001 DPI",
+    "Brand": "Corsair",
+    "Color": "White",
+    "ImageUrl": "https://laptop.bg/system/images/284342/double/NMY0916.png",
+    "Warranty": 6
+  },
+  {
+    "Type": "Gaming",
+    "Sensitivity": "500 - 5999 DPI",
+    "Brand": "Canyon",
+    "Color": "Red",
+    "ImageUrl": "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
+    "Warranty": 36
+  },
+  {
+    "Type": "Bluetooth",
+    "Sensitivity": "16000 - 20999 DPI",
+    "Brand": "Apple",
+    "Color": "White",
+    "ImageUrl": "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
+    "Warranty": 12
+  },
+  {
+    "Type": "Laser",
+    "Sensitivity": "16000 - 20999 DPI",
+    "Brand": "Microsoft",
+    "Color": "Black",
+    "ImageUrl": "https://laptop.bg/system/images/103819/double/JM08000.jpg",
+    "Warranty": 12
+  },
+  {
+    "Type": "Compatible with Apple",
+    "Sensitivity": "6000 - 10999 DPI",
+    "Brand": "Canyon",
+    "Color": "White",
+    "ImageUrl": "https://laptop.bg/system/images/103819/double/JM08000.jpg",
+    "Warranty": 30
+  },
+  {
+    "Type": "Laser",
+    "Sensitivity": "500 - 5999 DPI",
+    "Brand": "Corsair",
+    "Color": "Green",
+    "ImageUrl": "https://laptop.bg/system/images/216497/double/13150035.jpg",
+    "Warranty": 24
+  },
+  {
+    "Type": "Bluetooth",
+    "Sensitivity": "21000 - 25001 DPI",
+    "Brand": "Hama",
+    "Color": "Pink",
+    "ImageUrl": "https://laptop.bg/system/images/216497/double/13150035.jpg",
+    "Warranty": 36
+  },
+  {
+    "Type": "Gaming",
+    "Sensitivity": "6000 - 10999 DPI",
+    "Brand": "Lenovo",
+    "Color": "Red",
+    "ImageUrl": "https://laptop.bg/system/images/103819/double/JM08000.jpg",
+    "Warranty": 30
+  },
+  {
+    "Type": "Bluetooth",
+    "Sensitivity": "21000 - 25001 DPI",
+    "Brand": "Lenovo",
+    "Color": "White",
+    "ImageUrl": "https://laptop.bg/system/images/261947/double/CNECMSW11B.png",
+    "Warranty": 24
+  },
+  {
+    "Type": "Gaming",
+    "Sensitivity": "16000 - 20999 DPI",
+    "Brand": "Microsoft",
+    "Color": "Red",
+    "ImageUrl": "https://laptop.bg/system/images/261947/double/CNECMSW11B.png",
     "Warranty": 24
   },
   {
     "Type": "Gaming",
     "Sensitivity": "21000 - 25001 DPI",
     "Brand": "Corsair",
-    "Color": "White",
-    "ImageUrl": "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
-    "Warranty": 30
+    "Color": "Blue",
+    "ImageUrl": "https://laptop.bg/system/images/216497/double/13150035.jpg",
+    "Warranty": 12
   },
   {
-    "Type": "Optic",
+    "Type": "Gaming",
     "Sensitivity": "500 - 5999 DPI",
-    "Brand": "Lenovo",
-    "Color": "Yellow",
-    "ImageUrl": "https://laptop.bg/system/images/284342/double/NMY0916.png",
+    "Brand": "Asus",
+    "Color": "Black",
+    "ImageUrl": "https://laptop.bg/system/images/103819/double/JM08000.jpg",
+    "Warranty": 36
+  },
+  {
+    "Type": "Laser",
+    "Sensitivity": "6000 - 10999 DPI",
+    "Brand": "HP",
+    "Color": "Green",
+    "ImageUrl": "https://laptop.bg/system/images/216497/double/13150035.jpg",
     "Warranty": 36
   },
   {
     "Type": "Optic",
+    "Sensitivity": "6000 - 10999 DPI",
+    "Brand": "Logitech",
+    "Color": "Grey",
+    "ImageUrl": "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
+    "Warranty": 24
+  },
+  {
+    "Type": "Bluetooth",
+    "Sensitivity": "500 - 5999 DPI",
+    "Brand": "HP",
+    "Color": "White",
+    "ImageUrl": "https://laptop.bg/system/images/261947/double/CNECMSW11B.png",
+    "Warranty": 12
+  },
+  {
+    "Type": "Optic",
+    "Sensitivity": "21000 - 25001 DPI",
+    "Brand": "Lenovo",
+    "Color": "Grey",
+    "ImageUrl": "https://laptop.bg/system/images/103819/double/JM08000.jpg",
+    "Warranty": 18
+  },
+  {
+    "Type": "Compatible with Apple",
     "Sensitivity": "16000 - 20999 DPI",
-    "Brand": "Asus",
-    "Color": "Yellow",
-    "ImageUrl": "https://laptop.bg/system/images/216497/double/13150035.jpg",
+    "Brand": "Corsair",
+    "Color": "Beige",
+    "ImageUrl": "https://laptop.bg/system/images/261947/double/CNECMSW11B.png",
     "Warranty": 18
   },
   {
@@ -933,21 +477,149 @@
     "Brand": "Corsair",
     "Color": "Grey",
     "ImageUrl": "https://laptop.bg/system/images/103819/double/JM08000.jpg",
-    "Warranty": 24
+    "Warranty": 36
+  },
+  {
+    "Type": "Optic",
+    "Sensitivity": "16000 - 20999 DPI",
+    "Brand": "Microsoft",
+    "Color": "Blue",
+    "ImageUrl": "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
+    "Warranty": 6
+  },
+  {
+    "Type": "Gaming",
+    "Sensitivity": "11000 - 15999 DPI",
+    "Brand": "Logitech",
+    "Color": "Beige",
+    "ImageUrl": "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
+    "Warranty": 6
+  },
+  {
+    "Type": "Compatible with Apple",
+    "Sensitivity": "21000 - 25001 DPI",
+    "Brand": "Corsair",
+    "Color": "Green",
+    "ImageUrl": "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
+    "Warranty": 6
   },
   {
     "Type": "Bluetooth",
     "Sensitivity": "21000 - 25001 DPI",
-    "Brand": "Asus",
+    "Brand": "Microsoft",
     "Color": "Grey",
+    "ImageUrl": "https://laptop.bg/system/images/261947/double/CNECMSW11B.png",
+    "Warranty": 24
+  },
+  {
+    "Type": "Gaming",
+    "Sensitivity": "6000 - 10999 DPI",
+    "Brand": "Logitech",
+    "Color": "Yellow",
+    "ImageUrl": "https://laptop.bg/system/images/261947/double/CNECMSW11B.png",
+    "Warranty": 24
+  },
+  {
+    "Type": "Laser",
+    "Sensitivity": "21000 - 25001 DPI",
+    "Brand": "Asus",
+    "Color": "Pink",
+    "ImageUrl": "https://laptop.bg/system/images/103819/double/JM08000.jpg",
+    "Warranty": 12
+  },
+  {
+    "Type": "Optic",
+    "Sensitivity": "11000 - 15999 DPI",
+    "Brand": "Microsoft",
+    "Color": "Blue",
+    "ImageUrl": "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
+    "Warranty": 18
+  },
+  {
+    "Type": "Compatible with Apple",
+    "Sensitivity": "21000 - 25001 DPI",
+    "Brand": "Lenovo",
+    "Color": "White",
+    "ImageUrl": "https://laptop.bg/system/images/103819/double/JM08000.jpg",
+    "Warranty": 36
+  },
+  {
+    "Type": "Optic",
+    "Sensitivity": "6000 - 10999 DPI",
+    "Brand": "HP",
+    "Color": "Pink",
     "ImageUrl": "https://laptop.bg/system/images/216497/double/13150035.jpg",
     "Warranty": 18
   },
   {
-    "Type": "Bluetooth",
+    "Type": "Compatible with Apple",
+    "Sensitivity": "500 - 5999 DPI",
+    "Brand": "Microsoft",
+    "Color": "Grey",
+    "ImageUrl": "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
+    "Warranty": 36
+  },
+  {
+    "Type": "Gaming",
+    "Sensitivity": "11000 - 15999 DPI",
+    "Brand": "Apple",
+    "Color": "Blue",
+    "ImageUrl": "https://laptop.bg/system/images/103819/double/JM08000.jpg",
+    "Warranty": 36
+  },
+  {
+    "Type": "Gaming",
+    "Sensitivity": "21000 - 25001 DPI",
+    "Brand": "Corsair",
+    "Color": "Yellow",
+    "ImageUrl": "https://laptop.bg/system/images/103819/double/JM08000.jpg",
+    "Warranty": 24
+  },
+  {
+    "Type": "Gaming",
     "Sensitivity": "6000 - 10999 DPI",
+    "Brand": "Canyon",
+    "Color": "Black",
+    "ImageUrl": "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
+    "Warranty": 12
+  },
+  {
+    "Type": "Bluetooth",
+    "Sensitivity": "11000 - 15999 DPI",
+    "Brand": "Lenovo",
+    "Color": "Red",
+    "ImageUrl": "https://laptop.bg/system/images/284342/double/NMY0916.png",
+    "Warranty": 6
+  },
+  {
+    "Type": "Laser",
+    "Sensitivity": "11000 - 15999 DPI",
     "Brand": "Asus",
     "Color": "Black",
+    "ImageUrl": "https://laptop.bg/system/images/261947/double/CNECMSW11B.png",
+    "Warranty": 6
+  },
+  {
+    "Type": "Bluetooth",
+    "Sensitivity": "11000 - 15999 DPI",
+    "Brand": "Canyon",
+    "Color": "Yellow",
+    "ImageUrl": "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
+    "Warranty": 18
+  },
+  {
+    "Type": "Gaming",
+    "Sensitivity": "21000 - 25001 DPI",
+    "Brand": "Logitech",
+    "Color": "Pink",
+    "ImageUrl": "https://laptop.bg/system/images/216497/double/13150035.jpg",
+    "Warranty": 36
+  },
+  {
+    "Type": "Laser",
+    "Sensitivity": "11000 - 15999 DPI",
+    "Brand": "HP",
+    "Color": "White",
     "ImageUrl": "https://laptop.bg/system/images/103819/double/JM08000.jpg",
     "Warranty": 36
   },
@@ -955,448 +627,776 @@
     "Type": "Bluetooth",
     "Sensitivity": "21000 - 25001 DPI",
     "Brand": "Hama",
-    "Color": "Red",
-    "ImageUrl": "https://laptop.bg/system/images/103819/double/JM08000.jpg",
-    "Warranty": 6
+    "Color": "Blue",
+    "ImageUrl": "https://laptop.bg/system/images/216497/double/13150035.jpg",
+    "Warranty": 30
   },
   {
-    "Type": "Compatible with Apple",
-    "Sensitivity": "11000 - 15999 DPI",
-    "Brand": "Asus",
-    "Color": "Yellow",
+    "Type": "Gaming",
+    "Sensitivity": "21000 - 25001 DPI",
+    "Brand": "Corsair",
+    "Color": "Pink",
     "ImageUrl": "https://laptop.bg/system/images/103819/double/JM08000.jpg",
-    "Warranty": 30
+    "Warranty": 24
   },
   {
     "Type": "Gaming",
     "Sensitivity": "6000 - 10999 DPI",
-    "Brand": "Corsair",
-    "Color": "Green",
-    "ImageUrl": "https://laptop.bg/system/images/103819/double/JM08000.jpg",
-    "Warranty": 30
+    "Brand": "Asus",
+    "Color": "Beige",
+    "ImageUrl": "https://laptop.bg/system/images/216497/double/13150035.jpg",
+    "Warranty": 6
   },
   {
-    "Type": "Gaming",
-    "Sensitivity": "16000 - 20999 DPI",
-    "Brand": "Asus",
+    "Type": "Optic",
+    "Sensitivity": "500 - 5999 DPI",
+    "Brand": "Canyon",
     "Color": "Red",
+    "ImageUrl": "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
+    "Warranty": 6
+  },
+  {
+    "Type": "Bluetooth",
+    "Sensitivity": "500 - 5999 DPI",
+    "Brand": "Asus",
+    "Color": "Grey",
+    "ImageUrl": "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
+    "Warranty": 6
+  },
+  {
+    "Type": "Laser",
+    "Sensitivity": "21000 - 25001 DPI",
+    "Brand": "HP",
+    "Color": "Red",
+    "ImageUrl": "https://laptop.bg/system/images/284342/double/NMY0916.png",
+    "Warranty": 18
+  },
+  {
+    "Type": "Bluetooth",
+    "Sensitivity": "11000 - 15999 DPI",
+    "Brand": "Hama",
+    "Color": "Beige",
     "ImageUrl": "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
     "Warranty": 12
   },
   {
     "Type": "Gaming",
     "Sensitivity": "500 - 5999 DPI",
-    "Brand": "Corsair",
-    "Color": "Red",
+    "Brand": "HP",
+    "Color": "Black",
     "ImageUrl": "https://laptop.bg/system/images/103819/double/JM08000.jpg",
-    "Warranty": 24
+    "Warranty": 30
   },
   {
     "Type": "Gaming",
-    "Sensitivity": "500 - 5999 DPI",
+    "Sensitivity": "6000 - 10999 DPI",
     "Brand": "Logitech",
+    "Color": "White",
+    "ImageUrl": "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
+    "Warranty": 6
+  },
+  {
+    "Type": "Compatible with Apple",
+    "Sensitivity": "11000 - 15999 DPI",
+    "Brand": "Apple",
+    "Color": "White",
+    "ImageUrl": "https://laptop.bg/system/images/216497/double/13150035.jpg",
+    "Warranty": 6
+  },
+  {
+    "Type": "Laser",
+    "Sensitivity": "6000 - 10999 DPI",
+    "Brand": "Canyon",
+    "Color": "Red",
+    "ImageUrl": "https://laptop.bg/system/images/284342/double/NMY0916.png",
+    "Warranty": 36
+  },
+  {
+    "Type": "Gaming",
+    "Sensitivity": "6000 - 10999 DPI",
+    "Brand": "Apple",
     "Color": "Pink",
     "ImageUrl": "https://laptop.bg/system/images/216497/double/13150035.jpg",
     "Warranty": 36
   },
   {
     "Type": "Bluetooth",
-    "Sensitivity": "500 - 5999 DPI",
+    "Sensitivity": "6000 - 10999 DPI",
     "Brand": "Apple",
     "Color": "Blue",
-    "ImageUrl": "https://laptop.bg/system/images/216497/double/13150035.jpg",
-    "Warranty": 6
-  },
-  {
-    "Type": "Compatible with Apple",
-    "Sensitivity": "500 - 5999 DPI",
-    "Brand": "Logitech",
-    "Color": "Black",
     "ImageUrl": "https://laptop.bg/system/images/284342/double/NMY0916.png",
     "Warranty": 30
   },
   {
     "Type": "Compatible with Apple",
-    "Sensitivity": "16000 - 20999 DPI",
-    "Brand": "Canyon",
-    "Color": "Blue",
-    "ImageUrl": "https://laptop.bg/system/images/261947/double/CNECMSW11B.png",
+    "Sensitivity": "6000 - 10999 DPI",
+    "Brand": "HP",
+    "Color": "White",
+    "ImageUrl": "https://laptop.bg/system/images/216497/double/13150035.jpg",
+    "Warranty": 18
+  },
+  {
+    "Type": "Optic",
+    "Sensitivity": "6000 - 10999 DPI",
+    "Brand": "Asus",
+    "Color": "Green",
+    "ImageUrl": "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
     "Warranty": 36
   },
   {
-    "Type": "Bluetooth",
-    "Sensitivity": "11000 - 15999 DPI",
-    "Brand": "Canyon",
+    "Type": "Gaming",
+    "Sensitivity": "21000 - 25001 DPI",
+    "Brand": "Corsair",
+    "Color": "Blue",
+    "ImageUrl": "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
+    "Warranty": 6
+  },
+  {
+    "Type": "Compatible with Apple",
+    "Sensitivity": "500 - 5999 DPI",
+    "Brand": "Hama",
     "Color": "White",
     "ImageUrl": "https://laptop.bg/system/images/261947/double/CNECMSW11B.png",
+    "Warranty": 18
+  },
+  {
+    "Type": "Compatible with Apple",
+    "Sensitivity": "16000 - 20999 DPI",
+    "Brand": "Hama",
+    "Color": "Green",
+    "ImageUrl": "https://laptop.bg/system/images/103819/double/JM08000.jpg",
+    "Warranty": 36
+  },
+  {
+    "Type": "Gaming",
+    "Sensitivity": "16000 - 20999 DPI",
+    "Brand": "Microsoft",
+    "Color": "Blue",
+    "ImageUrl": "https://laptop.bg/system/images/103819/double/JM08000.jpg",
+    "Warranty": 12
+  },
+  {
+    "Type": "Optic",
+    "Sensitivity": "500 - 5999 DPI",
+    "Brand": "Logitech",
+    "Color": "Green",
+    "ImageUrl": "https://laptop.bg/system/images/103819/double/JM08000.jpg",
+    "Warranty": 18
+  },
+  {
+    "Type": "Optic",
+    "Sensitivity": "16000 - 20999 DPI",
+    "Brand": "Microsoft",
+    "Color": "Beige",
+    "ImageUrl": "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
+    "Warranty": 36
+  },
+  {
+    "Type": "Gaming",
+    "Sensitivity": "500 - 5999 DPI",
+    "Brand": "Asus",
+    "Color": "White",
+    "ImageUrl": "https://laptop.bg/system/images/261947/double/CNECMSW11B.png",
+    "Warranty": 18
+  },
+  {
+    "Type": "Compatible with Apple",
+    "Sensitivity": "21000 - 25001 DPI",
+    "Brand": "Corsair",
+    "Color": "Beige",
+    "ImageUrl": "https://laptop.bg/system/images/103819/double/JM08000.jpg",
     "Warranty": 6
+  },
+  {
+    "Type": "Optic",
+    "Sensitivity": "11000 - 15999 DPI",
+    "Brand": "Canyon",
+    "Color": "Pink",
+    "ImageUrl": "https://laptop.bg/system/images/284342/double/NMY0916.png",
+    "Warranty": 30
+  },
+  {
+    "Type": "Gaming",
+    "Sensitivity": "21000 - 25001 DPI",
+    "Brand": "Apple",
+    "Color": "White",
+    "ImageUrl": "https://laptop.bg/system/images/261947/double/CNECMSW11B.png",
+    "Warranty": 24
+  },
+  {
+    "Type": "Compatible with Apple",
+    "Sensitivity": "6000 - 10999 DPI",
+    "Brand": "Apple",
+    "Color": "Green",
+    "ImageUrl": "https://laptop.bg/system/images/284342/double/NMY0916.png",
+    "Warranty": 36
+  },
+  {
+    "Type": "Compatible with Apple",
+    "Sensitivity": "21000 - 25001 DPI",
+    "Brand": "Microsoft",
+    "Color": "Beige",
+    "ImageUrl": "https://laptop.bg/system/images/261947/double/CNECMSW11B.png",
+    "Warranty": 30
+  },
+  {
+    "Type": "Compatible with Apple",
+    "Sensitivity": "500 - 5999 DPI",
+    "Brand": "Asus",
+    "Color": "Yellow",
+    "ImageUrl": "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
+    "Warranty": 24
+  },
+  {
+    "Type": "Gaming",
+    "Sensitivity": "16000 - 20999 DPI",
+    "Brand": "Logitech",
+    "Color": "Blue",
+    "ImageUrl": "https://laptop.bg/system/images/216497/double/13150035.jpg",
+    "Warranty": 12
+  },
+  {
+    "Type": "Laser",
+    "Sensitivity": "6000 - 10999 DPI",
+    "Brand": "Logitech",
+    "Color": "Yellow",
+    "ImageUrl": "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
+    "Warranty": 30
+  },
+  {
+    "Type": "Laser",
+    "Sensitivity": "11000 - 15999 DPI",
+    "Brand": "Hama",
+    "Color": "Red",
+    "ImageUrl": "https://laptop.bg/system/images/261947/double/CNECMSW11B.png",
+    "Warranty": 30
+  },
+  {
+    "Type": "Compatible with Apple",
+    "Sensitivity": "11000 - 15999 DPI",
+    "Brand": "Hama",
+    "Color": "Black",
+    "ImageUrl": "https://laptop.bg/system/images/103819/double/JM08000.jpg",
+    "Warranty": 18
+  },
+  {
+    "Type": "Optic",
+    "Sensitivity": "16000 - 20999 DPI",
+    "Brand": "Hama",
+    "Color": "Black",
+    "ImageUrl": "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
+    "Warranty": 18
+  },
+  {
+    "Type": "Laser",
+    "Sensitivity": "16000 - 20999 DPI",
+    "Brand": "Asus",
+    "Color": "Pink",
+    "ImageUrl": "https://laptop.bg/system/images/284342/double/NMY0916.png",
+    "Warranty": 18
+  },
+  {
+    "Type": "Laser",
+    "Sensitivity": "11000 - 15999 DPI",
+    "Brand": "HP",
+    "Color": "Blue",
+    "ImageUrl": "https://laptop.bg/system/images/103819/double/JM08000.jpg",
+    "Warranty": 6
+  },
+  {
+    "Type": "Gaming",
+    "Sensitivity": "500 - 5999 DPI",
+    "Brand": "HP",
+    "Color": "Red",
+    "ImageUrl": "https://laptop.bg/system/images/103819/double/JM08000.jpg",
+    "Warranty": 18
+  },
+  {
+    "Type": "Optic",
+    "Sensitivity": "6000 - 10999 DPI",
+    "Brand": "Microsoft",
+    "Color": "White",
+    "ImageUrl": "https://laptop.bg/system/images/284342/double/NMY0916.png",
+    "Warranty": 24
+  },
+  {
+    "Type": "Bluetooth",
+    "Sensitivity": "21000 - 25001 DPI",
+    "Brand": "Canyon",
+    "Color": "Red",
+    "ImageUrl": "https://laptop.bg/system/images/261947/double/CNECMSW11B.png",
+    "Warranty": 18
+  },
+  {
+    "Type": "Bluetooth",
+    "Sensitivity": "21000 - 25001 DPI",
+    "Brand": "Microsoft",
+    "Color": "Black",
+    "ImageUrl": "https://laptop.bg/system/images/261947/double/CNECMSW11B.png",
+    "Warranty": 18
+  },
+  {
+    "Type": "Bluetooth",
+    "Sensitivity": "6000 - 10999 DPI",
+    "Brand": "Logitech",
+    "Color": "Yellow",
+    "ImageUrl": "https://laptop.bg/system/images/261947/double/CNECMSW11B.png",
+    "Warranty": 24
+  },
+  {
+    "Type": "Bluetooth",
+    "Sensitivity": "21000 - 25001 DPI",
+    "Brand": "Hama",
+    "Color": "Grey",
+    "ImageUrl": "https://laptop.bg/system/images/103819/double/JM08000.jpg",
+    "Warranty": 12
+  },
+  {
+    "Type": "Laser",
+    "Sensitivity": "16000 - 20999 DPI",
+    "Brand": "Canyon",
+    "Color": "Black",
+    "ImageUrl": "https://laptop.bg/system/images/103819/double/JM08000.jpg",
+    "Warranty": 30
+  },
+  {
+    "Type": "Bluetooth",
+    "Sensitivity": "500 - 5999 DPI",
+    "Brand": "Logitech",
+    "Color": "Yellow",
+    "ImageUrl": "https://laptop.bg/system/images/284342/double/NMY0916.png",
+    "Warranty": 30
+  },
+  {
+    "Type": "Laser",
+    "Sensitivity": "11000 - 15999 DPI",
+    "Brand": "Asus",
+    "Color": "Red",
+    "ImageUrl": "https://laptop.bg/system/images/103819/double/JM08000.jpg",
+    "Warranty": 6
+  },
+  {
+    "Type": "Compatible with Apple",
+    "Sensitivity": "16000 - 20999 DPI",
+    "Brand": "Apple",
+    "Color": "Black",
+    "ImageUrl": "https://laptop.bg/system/images/103819/double/JM08000.jpg",
+    "Warranty": 12
+  },
+  {
+    "Type": "Gaming",
+    "Sensitivity": "21000 - 25001 DPI",
+    "Brand": "Corsair",
+    "Color": "Yellow",
+    "ImageUrl": "https://laptop.bg/system/images/261947/double/CNECMSW11B.png",
+    "Warranty": 12
+  },
+  {
+    "Type": "Optic",
+    "Sensitivity": "500 - 5999 DPI",
+    "Brand": "Lenovo",
+    "Color": "Black",
+    "ImageUrl": "https://laptop.bg/system/images/261947/double/CNECMSW11B.png",
+    "Warranty": 6
+  },
+  {
+    "Type": "Laser",
+    "Sensitivity": "21000 - 25001 DPI",
+    "Brand": "Microsoft",
+    "Color": "Green",
+    "ImageUrl": "https://laptop.bg/system/images/103819/double/JM08000.jpg",
+    "Warranty": 12
+  },
+  {
+    "Type": "Compatible with Apple",
+    "Sensitivity": "16000 - 20999 DPI",
+    "Brand": "Canyon",
+    "Color": "Pink",
+    "ImageUrl": "https://laptop.bg/system/images/103819/double/JM08000.jpg",
+    "Warranty": 6
+  },
+  {
+    "Type": "Optic",
+    "Sensitivity": "21000 - 25001 DPI",
+    "Brand": "Hama",
+    "Color": "Yellow",
+    "ImageUrl": "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
+    "Warranty": 30
+  },
+  {
+    "Type": "Laser",
+    "Sensitivity": "11000 - 15999 DPI",
+    "Brand": "Canyon",
+    "Color": "Red",
+    "ImageUrl": "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
+    "Warranty": 6
+  },
+  {
+    "Type": "Optic",
+    "Sensitivity": "6000 - 10999 DPI",
+    "Brand": "Canyon",
+    "Color": "Red",
+    "ImageUrl": "https://laptop.bg/system/images/216497/double/13150035.jpg",
+    "Warranty": 6
+  },
+  {
+    "Type": "Laser",
+    "Sensitivity": "6000 - 10999 DPI",
+    "Brand": "HP",
+    "Color": "Beige",
+    "ImageUrl": "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
+    "Warranty": 18
+  },
+  {
+    "Type": "Laser",
+    "Sensitivity": "6000 - 10999 DPI",
+    "Brand": "HP",
+    "Color": "Blue",
+    "ImageUrl": "https://laptop.bg/system/images/103819/double/JM08000.jpg",
+    "Warranty": 36
+  },
+  {
+    "Type": "Laser",
+    "Sensitivity": "6000 - 10999 DPI",
+    "Brand": "HP",
+    "Color": "Black",
+    "ImageUrl": "https://laptop.bg/system/images/261947/double/CNECMSW11B.png",
+    "Warranty": 30
+  },
+  {
+    "Type": "Gaming",
+    "Sensitivity": "21000 - 25001 DPI",
+    "Brand": "Hama",
+    "Color": "White",
+    "ImageUrl": "https://laptop.bg/system/images/284342/double/NMY0916.png",
+    "Warranty": 18
+  },
+  {
+    "Type": "Compatible with Apple",
+    "Sensitivity": "6000 - 10999 DPI",
+    "Brand": "Lenovo",
+    "Color": "White",
+    "ImageUrl": "https://laptop.bg/system/images/284342/double/NMY0916.png",
+    "Warranty": 30
+  },
+  {
+    "Type": "Compatible with Apple",
+    "Sensitivity": "500 - 5999 DPI",
+    "Brand": "Logitech",
+    "Color": "Red",
+    "ImageUrl": "https://laptop.bg/system/images/216497/double/13150035.jpg",
+    "Warranty": 12
+  },
+  {
+    "Type": "Optic",
+    "Sensitivity": "16000 - 20999 DPI",
+    "Brand": "Apple",
+    "Color": "Blue",
+    "ImageUrl": "https://laptop.bg/system/images/284342/double/NMY0916.png",
+    "Warranty": 12
   },
   {
     "Type": "Gaming",
     "Sensitivity": "6000 - 10999 DPI",
     "Brand": "HP",
-    "Color": "Red",
-    "ImageUrl": "https://laptop.bg/system/images/284342/double/NMY0916.png",
-    "Warranty": 6
+    "Color": "Yellow",
+    "ImageUrl": "https://laptop.bg/system/images/103819/double/JM08000.jpg",
+    "Warranty": 36
   },
   {
     "Type": "Optic",
     "Sensitivity": "21000 - 25001 DPI",
-    "Brand": "Asus",
-    "Color": "Red",
-    "ImageUrl": "https://laptop.bg/system/images/261947/double/CNECMSW11B.png",
-    "Warranty": 30
-  },
-  {
-    "Type": "Gaming",
-    "Sensitivity": "500 - 5999 DPI",
-    "Brand": "Logitech",
-    "Color": "Green",
-    "ImageUrl": "https://laptop.bg/system/images/216497/double/13150035.jpg",
-    "Warranty": 24
-  },
-  {
-    "Type": "Bluetooth",
-    "Sensitivity": "21000 - 25001 DPI",
-    "Brand": "Asus",
-    "Color": "Pink",
-    "ImageUrl": "https://laptop.bg/system/images/216497/double/13150035.jpg",
-    "Warranty": 24
-  },
-  {
-    "Type": "Optic",
-    "Sensitivity": "16000 - 20999 DPI",
-    "Brand": "Lenovo",
+    "Brand": "Apple",
     "Color": "Beige",
-    "ImageUrl": "https://laptop.bg/system/images/284342/double/NMY0916.png",
-    "Warranty": 12
+    "ImageUrl": "https://laptop.bg/system/images/103819/double/JM08000.jpg",
+    "Warranty": 30
   },
   {
     "Type": "Compatible with Apple",
-    "Sensitivity": "6000 - 10999 DPI",
-    "Brand": "Asus",
-    "Color": "Beige",
-    "ImageUrl": "https://laptop.bg/system/images/261947/double/CNECMSW11B.png",
-    "Warranty": 30
-  },
-  {
-    "Type": "Gaming",
-    "Sensitivity": "21000 - 25001 DPI",
-    "Brand": "Corsair",
-    "Color": "Yellow",
-    "ImageUrl": "https://laptop.bg/system/images/284342/double/NMY0916.png",
-    "Warranty": 24
-  },
-  {
-    "Type": "Bluetooth",
-    "Sensitivity": "11000 - 15999 DPI",
-    "Brand": "Corsair",
-    "Color": "Red",
-    "ImageUrl": "https://laptop.bg/system/images/216497/double/13150035.jpg",
-    "Warranty": 18
-  },
-  {
-    "Type": "Optic",
-    "Sensitivity": "6000 - 10999 DPI",
-    "Brand": "Canyon",
+    "Sensitivity": "16000 - 20999 DPI",
+    "Brand": "HP",
     "Color": "Pink",
     "ImageUrl": "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
-    "Warranty": 30
-  },
-  {
-    "Type": "Optic",
-    "Sensitivity": "6000 - 10999 DPI",
-    "Brand": "Asus",
-    "Color": "Red",
-    "ImageUrl": "https://laptop.bg/system/images/103819/double/JM08000.jpg",
-    "Warranty": 6
-  },
-  {
-    "Type": "Optic",
-    "Sensitivity": "16000 - 20999 DPI",
-    "Brand": "Lenovo",
-    "Color": "Beige",
-    "ImageUrl": "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
     "Warranty": 18
-  },
-  {
-    "Type": "Gaming",
-    "Sensitivity": "16000 - 20999 DPI",
-    "Brand": "Microsoft",
-    "Color": "Red",
-    "ImageUrl": "https://laptop.bg/system/images/216497/double/13150035.jpg",
-    "Warranty": 30
-  },
-  {
-    "Type": "Optic",
-    "Sensitivity": "6000 - 10999 DPI",
-    "Brand": "Canyon",
-    "Color": "Pink",
-    "ImageUrl": "https://laptop.bg/system/images/216497/double/13150035.jpg",
-    "Warranty": 6
-  },
-  {
-    "Type": "Gaming",
-    "Sensitivity": "6000 - 10999 DPI",
-    "Brand": "Asus",
-    "Color": "White",
-    "ImageUrl": "https://laptop.bg/system/images/261947/double/CNECMSW11B.png",
-    "Warranty": 30
-  },
-  {
-    "Type": "Gaming",
-    "Sensitivity": "21000 - 25001 DPI",
-    "Brand": "Canyon",
-    "Color": "Black",
-    "ImageUrl": "https://laptop.bg/system/images/284342/double/NMY0916.png",
-    "Warranty": 30
-  },
-  {
-    "Type": "Gaming",
-    "Sensitivity": "500 - 5999 DPI",
-    "Brand": "Canyon",
-    "Color": "White",
-    "ImageUrl": "https://laptop.bg/system/images/216497/double/13150035.jpg",
-    "Warranty": 12
   },
   {
     "Type": "Laser",
-    "Sensitivity": "21000 - 25001 DPI",
+    "Sensitivity": "16000 - 20999 DPI",
     "Brand": "Microsoft",
     "Color": "Blue",
-    "ImageUrl": "https://laptop.bg/system/images/261947/double/CNECMSW11B.png",
+    "ImageUrl": "https://laptop.bg/system/images/216497/double/13150035.jpg",
+    "Warranty": 24
+  },
+  {
+    "Type": "Laser",
+    "Sensitivity": "6000 - 10999 DPI",
+    "Brand": "HP",
+    "Color": "Yellow",
+    "ImageUrl": "https://laptop.bg/system/images/216497/double/13150035.jpg",
+    "Warranty": 6
+  },
+  {
+    "Type": "Compatible with Apple",
+    "Sensitivity": "16000 - 20999 DPI",
+    "Brand": "Asus",
+    "Color": "Beige",
+    "ImageUrl": "https://laptop.bg/system/images/284342/double/NMY0916.png",
+    "Warranty": 18
+  },
+  {
+    "Type": "Bluetooth",
+    "Sensitivity": "500 - 5999 DPI",
+    "Brand": "Asus",
+    "Color": "Blue",
+    "ImageUrl": "https://laptop.bg/system/images/284342/double/NMY0916.png",
+    "Warranty": 36
+  },
+  {
+    "Type": "Optic",
+    "Sensitivity": "21000 - 25001 DPI",
+    "Brand": "Corsair",
+    "Color": "Red",
+    "ImageUrl": "https://laptop.bg/system/images/216497/double/13150035.jpg",
     "Warranty": 36
   },
   {
     "Type": "Laser",
     "Sensitivity": "6000 - 10999 DPI",
-    "Brand": "Asus",
+    "Brand": "Logitech",
     "Color": "White",
-    "ImageUrl": "https://laptop.bg/system/images/103819/double/JM08000.jpg",
+    "ImageUrl": "https://laptop.bg/system/images/261947/double/CNECMSW11B.png",
+    "Warranty": 12
+  },
+  {
+    "Type": "Bluetooth",
+    "Sensitivity": "16000 - 20999 DPI",
+    "Brand": "Apple",
+    "Color": "Green",
+    "ImageUrl": "https://laptop.bg/system/images/284342/double/NMY0916.png",
+    "Warranty": 18
+  },
+  {
+    "Type": "Optic",
+    "Sensitivity": "500 - 5999 DPI",
+    "Brand": "Logitech",
+    "Color": "Pink",
+    "ImageUrl": "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
+    "Warranty": 18
+  },
+  {
+    "Type": "Laser",
+    "Sensitivity": "21000 - 25001 DPI",
+    "Brand": "Corsair",
+    "Color": "Green",
+    "ImageUrl": "https://laptop.bg/system/images/284342/double/NMY0916.png",
+    "Warranty": 36
+  },
+  {
+    "Type": "Compatible with Apple",
+    "Sensitivity": "21000 - 25001 DPI",
+    "Brand": "Logitech",
+    "Color": "Pink",
+    "ImageUrl": "https://laptop.bg/system/images/216497/double/13150035.jpg",
+    "Warranty": 18
+  },
+  {
+    "Type": "Gaming",
+    "Sensitivity": "21000 - 25001 DPI",
+    "Brand": "Hama",
+    "Color": "Pink",
+    "ImageUrl": "https://laptop.bg/system/images/284342/double/NMY0916.png",
+    "Warranty": 36
+  },
+  {
+    "Type": "Optic",
+    "Sensitivity": "21000 - 25001 DPI",
+    "Brand": "Logitech",
+    "Color": "Green",
+    "ImageUrl": "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
+    "Warranty": 30
+  },
+  {
+    "Type": "Optic",
+    "Sensitivity": "11000 - 15999 DPI",
+    "Brand": "Microsoft",
+    "Color": "Blue",
+    "ImageUrl": "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
+    "Warranty": 6
+  },
+  {
+    "Type": "Gaming",
+    "Sensitivity": "21000 - 25001 DPI",
+    "Brand": "Microsoft",
+    "Color": "Black",
+    "ImageUrl": "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
+    "Warranty": 36
+  },
+  {
+    "Type": "Compatible with Apple",
+    "Sensitivity": "21000 - 25001 DPI",
+    "Brand": "Lenovo",
+    "Color": "Pink",
+    "ImageUrl": "https://laptop.bg/system/images/284342/double/NMY0916.png",
+    "Warranty": 18
+  },
+  {
+    "Type": "Optic",
+    "Sensitivity": "11000 - 15999 DPI",
+    "Brand": "HP",
+    "Color": "White",
+    "ImageUrl": "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
     "Warranty": 24
   },
   {
     "Type": "Gaming",
-    "Sensitivity": "500 - 5999 DPI",
+    "Sensitivity": "16000 - 20999 DPI",
     "Brand": "Lenovo",
+    "Color": "Green",
+    "ImageUrl": "https://laptop.bg/system/images/103819/double/JM08000.jpg",
+    "Warranty": 24
+  },
+  {
+    "Type": "Optic",
+    "Sensitivity": "6000 - 10999 DPI",
+    "Brand": "Canyon",
     "Color": "Red",
-    "ImageUrl": "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
-    "Warranty": 6
+    "ImageUrl": "https://laptop.bg/system/images/261947/double/CNECMSW11B.png",
+    "Warranty": 18
+  },
+  {
+    "Type": "Compatible with Apple",
+    "Sensitivity": "11000 - 15999 DPI",
+    "Brand": "Apple",
+    "Color": "Black",
+    "ImageUrl": "https://laptop.bg/system/images/261947/double/CNECMSW11B.png",
+    "Warranty": 18
+  },
+  {
+    "Type": "Laser",
+    "Sensitivity": "21000 - 25001 DPI",
+    "Brand": "Lenovo",
+    "Color": "Pink",
+    "ImageUrl": "https://laptop.bg/system/images/103819/double/JM08000.jpg",
+    "Warranty": 30
+  },
+  {
+    "Type": "Compatible with Apple",
+    "Sensitivity": "6000 - 10999 DPI",
+    "Brand": "Apple",
+    "Color": "Red",
+    "ImageUrl": "https://laptop.bg/system/images/284342/double/NMY0916.png",
+    "Warranty": 36
+  },
+  {
+    "Type": "Optic",
+    "Sensitivity": "21000 - 25001 DPI",
+    "Brand": "Lenovo",
+    "Color": "Yellow",
+    "ImageUrl": "https://laptop.bg/system/images/216497/double/13150035.jpg",
+    "Warranty": 36
+  },
+  {
+    "Type": "Laser",
+    "Sensitivity": "6000 - 10999 DPI",
+    "Brand": "Microsoft",
+    "Color": "Black",
+    "ImageUrl": "https://laptop.bg/system/images/284342/double/NMY0916.png",
+    "Warranty": 36
+  },
+  {
+    "Type": "Gaming",
+    "Sensitivity": "11000 - 15999 DPI",
+    "Brand": "Corsair",
+    "Color": "Blue",
+    "ImageUrl": "https://laptop.bg/system/images/261947/double/CNECMSW11B.png",
+    "Warranty": 12
   },
   {
     "Type": "Compatible with Apple",
     "Sensitivity": "500 - 5999 DPI",
     "Brand": "HP",
-    "Color": "Pink",
-    "ImageUrl": "https://laptop.bg/system/images/284342/double/NMY0916.png",
-    "Warranty": 18
-  },
-  {
-    "Type": "Laser",
-    "Sensitivity": "11000 - 15999 DPI",
-    "Brand": "Microsoft",
-    "Color": "Black",
-    "ImageUrl": "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
-    "Warranty": 12
-  },
-  {
-    "Type": "Compatible with Apple",
-    "Sensitivity": "16000 - 20999 DPI",
-    "Brand": "Hama",
-    "Color": "Red",
+    "Color": "Beige",
     "ImageUrl": "https://laptop.bg/system/images/103819/double/JM08000.jpg",
-    "Warranty": 36
-  },
-  {
-    "Type": "Laser",
-    "Sensitivity": "16000 - 20999 DPI",
-    "Brand": "Lenovo",
-    "Color": "Black",
-    "ImageUrl": "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
     "Warranty": 12
-  },
-  {
-    "Type": "Compatible with Apple",
-    "Sensitivity": "500 - 5999 DPI",
-    "Brand": "Logitech",
-    "Color": "Blue",
-    "ImageUrl": "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
-    "Warranty": 18
   },
   {
     "Type": "Compatible with Apple",
     "Sensitivity": "6000 - 10999 DPI",
-    "Brand": "Lenovo",
-    "Color": "Red",
-    "ImageUrl": "https://laptop.bg/system/images/284342/double/NMY0916.png",
-    "Warranty": 24
-  },
-  {
-    "Type": "Gaming",
-    "Sensitivity": "500 - 5999 DPI",
-    "Brand": "Microsoft",
-    "Color": "Grey",
-    "ImageUrl": "https://laptop.bg/system/images/216497/double/13150035.jpg",
-    "Warranty": 6
-  },
-  {
-    "Type": "Bluetooth",
-    "Sensitivity": "500 - 5999 DPI",
-    "Brand": "Logitech",
-    "Color": "Beige",
-    "ImageUrl": "https://laptop.bg/system/images/261947/double/CNECMSW11B.png",
-    "Warranty": 12
-  },
-  {
-    "Type": "Bluetooth",
-    "Sensitivity": "21000 - 25001 DPI",
-    "Brand": "Corsair",
-    "Color": "Yellow",
-    "ImageUrl": "https://laptop.bg/system/images/284342/double/NMY0916.png",
-    "Warranty": 36
-  },
-  {
-    "Type": "Gaming",
-    "Sensitivity": "16000 - 20999 DPI",
-    "Brand": "Microsoft",
-    "Color": "White",
-    "ImageUrl": "https://laptop.bg/system/images/103819/double/JM08000.jpg",
-    "Warranty": 30
-  },
-  {
-    "Type": "Gaming",
-    "Sensitivity": "21000 - 25001 DPI",
     "Brand": "HP",
-    "Color": "Green",
-    "ImageUrl": "https://laptop.bg/system/images/284342/double/NMY0916.png",
-    "Warranty": 36
-  },
-  {
-    "Type": "Bluetooth",
-    "Sensitivity": "16000 - 20999 DPI",
-    "Brand": "Asus",
     "Color": "Pink",
     "ImageUrl": "https://laptop.bg/system/images/103819/double/JM08000.jpg",
-    "Warranty": 36
-  },
-  {
-    "Type": "Optic",
-    "Sensitivity": "16000 - 20999 DPI",
-    "Brand": "Microsoft",
-    "Color": "Green",
-    "ImageUrl": "https://laptop.bg/system/images/261947/double/CNECMSW11B.png",
-    "Warranty": 12
-  },
-  {
-    "Type": "Bluetooth",
-    "Sensitivity": "16000 - 20999 DPI",
-    "Brand": "Hama",
-    "Color": "White",
-    "ImageUrl": "https://laptop.bg/system/images/216497/double/13150035.jpg",
-    "Warranty": 30
+    "Warranty": 24
   },
   {
     "Type": "Laser",
     "Sensitivity": "16000 - 20999 DPI",
-    "Brand": "Lenovo",
-    "Color": "Grey",
-    "ImageUrl": "https://laptop.bg/system/images/216497/double/13150035.jpg",
-    "Warranty": 6
-  },
-  {
-    "Type": "Compatible with Apple",
-    "Sensitivity": "11000 - 15999 DPI",
-    "Brand": "Asus",
-    "Color": "Grey",
-    "ImageUrl": "https://laptop.bg/system/images/261947/double/CNECMSW11B.png",
-    "Warranty": 18
-  },
-  {
-    "Type": "Bluetooth",
-    "Sensitivity": "16000 - 20999 DPI",
-    "Brand": "Lenovo",
-    "Color": "White",
-    "ImageUrl": "https://laptop.bg/system/images/216497/double/13150035.jpg",
-    "Warranty": 6
-  },
-  {
-    "Type": "Compatible with Apple",
-    "Sensitivity": "16000 - 20999 DPI",
-    "Brand": "Canyon",
-    "Color": "Blue",
-    "ImageUrl": "https://laptop.bg/system/images/103819/double/JM08000.jpg",
-    "Warranty": 30
-  },
-  {
-    "Type": "Gaming",
-    "Sensitivity": "16000 - 20999 DPI",
-    "Brand": "Apple",
-    "Color": "Black",
-    "ImageUrl": "https://laptop.bg/system/images/284342/double/NMY0916.png",
-    "Warranty": 30
-  },
-  {
-    "Type": "Compatible with Apple",
-    "Sensitivity": "11000 - 15999 DPI",
     "Brand": "Corsair",
-    "Color": "Green",
-    "ImageUrl": "https://laptop.bg/system/images/216497/double/13150035.jpg",
-    "Warranty": 30
-  },
-  {
-    "Type": "Laser",
-    "Sensitivity": "6000 - 10999 DPI",
-    "Brand": "Microsoft",
-    "Color": "Yellow",
-    "ImageUrl": "https://laptop.bg/system/images/216497/double/13150035.jpg",
-    "Warranty": 12
-  },
-  {
-    "Type": "Laser",
-    "Sensitivity": "6000 - 10999 DPI",
-    "Brand": "Asus",
-    "Color": "Grey",
-    "ImageUrl": "https://laptop.bg/system/images/103819/double/JM08000.jpg",
-    "Warranty": 36
-  },
-  {
-    "Type": "Bluetooth",
-    "Sensitivity": "500 - 5999 DPI",
-    "Brand": "Apple",
-    "Color": "Pink",
-    "ImageUrl": "https://laptop.bg/system/images/284342/double/NMY0916.png",
+    "Color": "Beige",
+    "ImageUrl": "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
     "Warranty": 18
   },
   {
-    "Type": "Gaming",
-    "Sensitivity": "11000 - 15999 DPI",
-    "Brand": "Canyon",
+    "Type": "Compatible with Apple",
+    "Sensitivity": "500 - 5999 DPI",
+    "Brand": "Corsair",
     "Color": "Black",
-    "ImageUrl": "https://laptop.bg/system/images/261947/double/CNECMSW11B.png",
-    "Warranty": 30
+    "ImageUrl": "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
+    "Warranty": 24
   },
   {
-    "Type": "Compatible with Apple",
-    "Sensitivity": "6000 - 10999 DPI",
-    "Brand": "Hama",
-    "Color": "White",
-    "ImageUrl": "https://laptop.bg/system/images/103819/double/JM08000.jpg",
-    "Warranty": 36
-  },
-  {
-    "Type": "Compatible with Apple",
-    "Sensitivity": "6000 - 10999 DPI",
+    "Type": "Bluetooth",
+    "Sensitivity": "16000 - 20999 DPI",
     "Brand": "Apple",
     "Color": "Beige",
     "ImageUrl": "https://laptop.bg/system/images/216497/double/13150035.jpg",
+    "Warranty": 12
+  },
+  {
+    "Type": "Compatible with Apple",
+    "Sensitivity": "6000 - 10999 DPI",
+    "Brand": "Lenovo",
+    "Color": "Yellow",
+    "ImageUrl": "https://laptop.bg/system/images/196886/double/HAMA182618.jpg",
     "Warranty": 24
   },
   {
     "Type": "Optic",
+    "Sensitivity": "6000 - 10999 DPI",
+    "Brand": "HP",
+    "Color": "White",
+    "ImageUrl": "https://laptop.bg/system/images/284342/double/NMY0916.png",
+    "Warranty": 24
+  },
+  {
+    "Type": "Laser",
     "Sensitivity": "500 - 5999 DPI",
+    "Brand": "Hama",
+    "Color": "White",
+    "ImageUrl": "https://laptop.bg/system/images/103819/double/JM08000.jpg",
+    "Warranty": 24
+  },
+  {
+    "Type": "Optic",
+    "Sensitivity": "21000 - 25001 DPI",
+    "Brand": "Canyon",
+    "Color": "Grey",
+    "ImageUrl": "https://laptop.bg/system/images/261947/double/CNECMSW11B.png",
+    "Warranty": 24
+  },
+  {
+    "Type": "Gaming",
+    "Sensitivity": "6000 - 10999 DPI",
     "Brand": "Logitech",
-    "Color": "Black",
+    "Color": "Red",
     "ImageUrl": "https://laptop.bg/system/images/216497/double/13150035.jpg",
+    "Warranty": 6
+  },
+  {
+    "Type": "Laser",
+    "Sensitivity": "21000 - 25001 DPI",
+    "Brand": "Hama",
+    "Color": "Yellow",
+    "ImageUrl": "https://laptop.bg/system/images/261947/double/CNECMSW11B.png",
     "Warranty": 12
   }
 ]

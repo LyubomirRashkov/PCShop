@@ -62,7 +62,7 @@ namespace PCShop.DataGenerator
         /// <summary>
         /// Property holding all URLs of images by product type
         /// </summary>
-        public ImageURL ImageURLs => this.Deserialize<ImageURL>("InitialSourceFiles/imageURLs.json");
+        public ImageUrl ImageUrls => this.Deserialize<ImageUrl>("InitialSourceFiles/imageURLs.json");
 
         /// <summary>
         /// Property holding all RAMs
@@ -151,7 +151,7 @@ namespace PCShop.DataGenerator
                 {
                     Brand = this.Brands.LaptopBrands[randomNumber.Next(this.Brands.LaptopBrands.Count)],
                     Color = this.Colors.LaptopColors[randomNumber.Next(this.Colors.LaptopColors.Count)],
-                    ImageUrl = this.ImageURLs.LaptopImageURLs[randomNumber.Next(this.ImageURLs.LaptopImageURLs.Count)],
+                    ImageUrl = this.ImageUrls.LaptopImageUrls[randomNumber.Next(this.ImageUrls.LaptopImageUrls.Count)],
                     Warranty = this.Warranties.Warranties[randomNumber.Next(this.Warranties.Warranties.Count)],
                     CPU = this.CPUs.LaptopCPUs[randomNumber.Next(this.CPUs.LaptopCPUs.Count)],
                     RAM = this.RAMs.LaptopRAMs[randomNumber.Next(this.RAMs.LaptopRAMs.Count)],
@@ -159,6 +159,7 @@ namespace PCShop.DataGenerator
                                                     .Next(this.SSDCapacities.LaptopSSDCapacities.Count)],
                     VideoCard = this.VideoCards.LaptopVideoCards[randomNumber
                                                .Next(this.VideoCards.LaptopVideoCards.Count)],
+                    Type = this.Types.LaptopTypes[randomNumber.Next(this.Types.LaptopTypes.Count)],
                     DisplaySize = this.DisplaySizes.LaptopDisplaySizes[randomNumber
                                                    .Next(this.DisplaySizes.LaptopDisplaySizes.Count)],
                     DisplayCoverage = this.DisplayCoverages.DisplayCoverages[randomNumber
@@ -185,10 +186,11 @@ namespace PCShop.DataGenerator
                 {
                     Brand = this.Brands.MonitorBrands[randomNumber.Next(this.Brands.MonitorBrands.Count)],
                     Color = this.Colors.MonitorColors[randomNumber.Next(this.Colors.MonitorColors.Count)],
-                    ImageUrl = this.ImageURLs.MonitorImageURLs[randomNumber.Next(this.ImageURLs.MonitorImageURLs.Count)],
+                    ImageUrl = this.ImageUrls.MonitorImageUrls[randomNumber.Next(this.ImageUrls.MonitorImageUrls.Count)],
                     Warranty = this.Warranties.Warranties[randomNumber.Next(this.Warranties.Warranties.Count)],
                     DisplaySize = this.DisplaySizes.MonitorDisplaySizes[randomNumber
                                                    .Next(this.DisplaySizes.MonitorDisplaySizes.Count)],
+                    Type = this.Types.MonitorTypes[randomNumber.Next(this.Types.MonitorTypes.Count)],
                     DisplayTechnology = this.DisplayTechnologies.DisplayTechnologies[randomNumber
                                                                .Next(this.DisplayTechnologies.DisplayTechnologies.Count)],
                     DisplayCoverage = this.DisplayCoverages.DisplayCoverages[randomNumber
@@ -214,8 +216,8 @@ namespace PCShop.DataGenerator
                 {
                     Brand = this.Brands.KeyboardBrands[randomNumber.Next(this.Brands.KeyboardBrands.Count)],
                     Color = this.Colors.KeyboardColors[randomNumber.Next(this.Colors.KeyboardColors.Count)],
-                    ImageUrl = this.ImageURLs.KeyboardImageURLs[randomNumber
-                                             .Next(this.ImageURLs.KeyboardImageURLs.Count)],
+                    ImageUrl = this.ImageUrls.KeyboardImageUrls[randomNumber
+                                             .Next(this.ImageUrls.KeyboardImageUrls.Count)],
                     Warranty = this.Warranties.Warranties[randomNumber.Next(this.Warranties.Warranties.Count)],
                     Format = this.Formats.KeyboardFormats[randomNumber.Next(this.Formats.KeyboardFormats.Count)],
                     Type = this.Types.KeyboardTypes[randomNumber.Next(this.Types.KeyboardTypes.Count)],
@@ -237,7 +239,7 @@ namespace PCShop.DataGenerator
                 {
                     Brand = this.Brands.MouseBrands[randomNumber.Next(this.Brands.MouseBrands.Count)],
                     Color = this.Colors.MouseColors[randomNumber.Next(this.Colors.MouseColors.Count)],
-                    ImageUrl = this.ImageURLs.MouseImageURLs[randomNumber.Next(this.ImageURLs.MouseImageURLs.Count)],
+                    ImageUrl = this.ImageUrls.MouseImageUrls[randomNumber.Next(this.ImageUrls.MouseImageUrls.Count)],
                     Warranty = this.Warranties.Warranties[randomNumber.Next(this.Warranties.Warranties.Count)],
                     Type = this.Types.MouseTypes[randomNumber.Next(this.Types.MouseTypes.Count)],
                     Sensitivity = this.Sensitivities.MouseSensitivities[randomNumber
@@ -260,8 +262,8 @@ namespace PCShop.DataGenerator
                 {
                     Brand = this.Brands.HeadphoneBrands[randomNumber.Next(this.Brands.HeadphoneBrands.Count)],
                     Color = this.Colors.HeadphoneColors[randomNumber.Next(this.Colors.HeadphoneColors.Count)],
-                    ImageUrl = this.ImageURLs.HeadphoneImageURLs[randomNumber
-                                             .Next(this.ImageURLs.HeadphoneImageURLs.Count)],
+                    ImageUrl = this.ImageUrls.HeadphoneImageUrls[randomNumber
+                                             .Next(this.ImageUrls.HeadphoneImageUrls.Count)],
                     Warranty = this.Warranties.Warranties[randomNumber.Next(this.Warranties.Warranties.Count)],
                     Type = this.Types.HeadphoneTypes[randomNumber.Next(this.Types.HeadphoneTypes.Count)],
                 };
@@ -282,8 +284,8 @@ namespace PCShop.DataGenerator
                 {
                     Brand = this.Brands.MicrophoneBrands[randomNumber.Next(this.Brands.MicrophoneBrands.Count)],
                     Color = this.Colors.MicrophoneColors[randomNumber.Next(this.Colors.MicrophoneColors.Count)],
-                    ImageUrl = this.ImageURLs.MicrophoneImageURLs[randomNumber
-                                             .Next(this.ImageURLs.MicrophoneImageURLs.Count)],
+                    ImageUrl = this.ImageUrls.MicrophoneImageUrls[randomNumber
+                                             .Next(this.ImageUrls.MicrophoneImageUrls.Count)],
                     Warranty = this.Warranties.Warranties[randomNumber.Next(this.Warranties.Warranties.Count)],
                 };
 

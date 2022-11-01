@@ -13,6 +13,11 @@ namespace PCShop.DataGenerator.Classes
         public double DisplaySize { get; set; }
 
         /// <summary>
+        /// Monitor type
+        /// </summary>
+        public string Type { get; set; } = null!;
+
+        /// <summary>
         /// Monitor display technology
         /// </summary>
         public string DisplayTechnology { get; set; } = null!;

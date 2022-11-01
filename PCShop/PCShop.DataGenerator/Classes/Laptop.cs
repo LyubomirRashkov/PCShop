@@ -28,6 +28,11 @@ namespace PCShop.DataGenerator.Classes
         public string VideoCard { get; set; } = null!;
 
         /// <summary>
+        /// Laptop type
+        /// </summary>
+        public string Type { get; set; } = null!;
+
+        /// <summary>
         /// Laptop display size
         /// </summary>
         public double DisplaySize { get; set; }
