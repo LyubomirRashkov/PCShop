@@ -8,8 +8,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\PCShop.DataGenerator\PCShop.DataGenerator.csproj" />
     <ProjectReference Include="..\PCShop.Infrastructure\PCShop.Infrastructure.csproj" />
+    <ProjectReference Include="..\PCShop\PCShop.csproj" />
   </ItemGroup>
 
 </Project>
