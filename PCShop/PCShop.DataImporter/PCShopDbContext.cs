@@ -3,9 +3,9 @@ using PCShop.Infrastructure.Data.Models;
 using PCShop.Infrastructure.Data.Models.GravitatingClasses;
 using Monitor = PCShop.Infrastructure.Data.Models.Monitor;
 using Type = PCShop.Infrastructure.Data.Models.GravitatingClasses.Type;
-using static PCShop.DataImporter.Constants.Configuration;
+using static PCShop.DataSeeder.Constants.Configuration;
 
-namespace PCShop.DataImporter
+namespace PCShop.DataSeeder
 {
     /// <summary>
     /// The "DbContext" class used for seeding the database

@@ -1,4 +1,4 @@
-﻿namespace PCShop.DataImporter
+﻿namespace PCShop.DataSeeder
 {
     /// <summary>
     /// Class holding constants

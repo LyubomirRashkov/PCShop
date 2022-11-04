@@ -9,9 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PCShop.Core", "PCShop.Core\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PCShop.DataGenerator", "PCShop.DataGenerator\PCShop.DataGenerator.csproj", "{D2D625F4-08B0-4171-AB80-3889E81A1898}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PCShop.Infrastructure", "PCShop.Infrastructure\PCShop.Infrastructure.csproj", "{ED129908-9A48-4136-8C12-CE2F42A53F83}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PCShop.Infrastructure", "PCShop.Infrastructure\PCShop.Infrastructure.csproj", "{ED129908-9A48-4136-8C12-CE2F42A53F83}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PCShop.DataImporter", "PCShop.DataImporter\PCShop.DataImporter.csproj", "{8D8B9EDC-5D36-4520-8D4C-379AE8543D91}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PCShop.DataSeeder", "PCShop.DataImporter\PCShop.DataSeeder.csproj", "{8D8B9EDC-5D36-4520-8D4C-379AE8543D91}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

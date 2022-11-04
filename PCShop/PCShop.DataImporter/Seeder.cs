@@ -1,53 +1,53 @@
 ﻿using Newtonsoft.Json;
 using PCShop.Infrastructure.Data.Models;
 using PCShop.Infrastructure.Data.Models.GravitatingClasses;
-using static PCShop.DataImporter.Constants.Headphone;
-using static PCShop.DataImporter.Constants.Keyboard;
-using static PCShop.DataImporter.Constants.Laptop;
-using static PCShop.DataImporter.Constants.Microphone;
-using static PCShop.DataImporter.Constants.Monitor;
-using static PCShop.DataImporter.Constants.Mouse;
+using static PCShop.DataSeeder.Constants.Headphone;
+using static PCShop.DataSeeder.Constants.Keyboard;
+using static PCShop.DataSeeder.Constants.Laptop;
+using static PCShop.DataSeeder.Constants.Microphone;
+using static PCShop.DataSeeder.Constants.Monitor;
+using static PCShop.DataSeeder.Constants.Mouse;
 using Monitor = PCShop.Infrastructure.Data.Models.Monitor;
 using Type = PCShop.Infrastructure.Data.Models.GravitatingClasses.Type;
 
-namespace PCShop.DataImporter
+namespace PCShop.DataSeeder
 {
     /// <summary>
-    /// The "importing" class
+    /// The "seeding" class
     /// </summary>
-    public class Importer
+    public class Seeder
     {
         private readonly PCShopDbContext dbContext;
         private readonly Random random;
 
         /// <summary>
-        /// Constructor of Importer class
+        /// Constructor of Seeder class
         /// </summary>
-        public Importer()
+        public Seeder()
         {
             this.dbContext = new PCShopDbContext();
             this.random = new Random();
         }
 
         /// <summary>
-        /// Method that imports data into the database
+        /// Method that seeds data into the database
         /// </summary>
-        public void Import()
+        public void Seed()
         {
-            this.ImportLaptops(LaptopsSourcePath);
+            this.SeedLaptops(LaptopsSourcePath);
 
-            this.ImportMonitors(MonitorsSourcePath);
+            this.SeedMonitors(MonitorsSourcePath);
 
-            this.ImportKeyboards(KeyboardsSourcePath);
+            this.SeedKeyboards(KeyboardsSourcePath);
 
-            this.ImportMice(MiceSourcePath);
+            this.SeedMice(MiceSourcePath);
 
-            this.ImportHeadphones(HeadphonesSourcePath);
+            this.SeedHeadphones(HeadphonesSourcePath);
 
-            this.ImportMicrophones(MicrophonesSourcePath);
+            this.SeedMicrophones(MicrophonesSourcePath);
         }
 
-        private void ImportLaptops(string laptopsSourcePath)
+        private void SeedLaptops(string laptopsSourcePath)
         {
             string laptopsAsString = File.ReadAllText(laptopsSourcePath);
 
@@ -120,7 +120,7 @@ namespace PCShop.DataImporter
             }
         }
 
-        private void ImportMonitors(string monitorsSourcePath)
+        private void SeedMonitors(string monitorsSourcePath)
         {
             string monitorsAsString = File.ReadAllText(monitorsSourcePath);
 
@@ -181,7 +181,7 @@ namespace PCShop.DataImporter
             }
         }
 
-        private void ImportKeyboards(string keyboardsSourcePath)
+        private void SeedKeyboards(string keyboardsSourcePath)
         {
             string keyboardsAsString = File.ReadAllText(keyboardsSourcePath);
 
@@ -227,7 +227,7 @@ namespace PCShop.DataImporter
             }
         }
 
-        private void ImportMice(string miceSourcePath)
+        private void SeedMice(string miceSourcePath)
         {
             string miceAsString = File.ReadAllText(miceSourcePath);
 
@@ -273,7 +273,7 @@ namespace PCShop.DataImporter
             }
         }
 
-        private void ImportHeadphones(string headphonesSourcePath)
+        private void SeedHeadphones(string headphonesSourcePath)
         {
             string headphonesAsString = File.ReadAllText(headphonesSourcePath);
 
@@ -316,7 +316,7 @@ namespace PCShop.DataImporter
             }
         }
 
-        private void ImportMicrophones(string microphonesSourcePath)
+        private void SeedMicrophones(string microphonesSourcePath)
         {
             string microphonesAsString = File.ReadAllText(microphonesSourcePath);
 

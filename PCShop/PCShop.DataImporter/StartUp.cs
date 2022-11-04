@@ -1,10 +1,9 @@
-﻿//using PCShop.DataImporter;
+﻿//using PCShop.DataSeeder;
 
-//var importer = new Importer();
+//var seeder = new Seeder();
 
-//importer.Import();
+//seeder.Seed();
 
-//Console.WriteLine("Entities imported successfully");
-
+//Console.WriteLine("Entities seeded successfully");
 
 Console.WriteLine("It is commented!!!");
