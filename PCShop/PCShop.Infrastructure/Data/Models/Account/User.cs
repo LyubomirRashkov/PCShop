@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using System.ComponentModel.DataAnnotations;
-using static PCShop.Infrastructure.Constants.DataConstants.User;
+using static PCShop.Infrastructure.Constants.DataConstant.User;
 
 namespace PCShop.Infrastructure.Data.Models.Account
 {

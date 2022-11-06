@@ -1,12 +1,12 @@
 ﻿using Newtonsoft.Json;
 using PCShop.Infrastructure.Data.Models;
 using PCShop.Infrastructure.Data.Models.GravitatingClasses;
-using static PCShop.DataSeeder.Constants.Headphone;
-using static PCShop.DataSeeder.Constants.Keyboard;
-using static PCShop.DataSeeder.Constants.Laptop;
-using static PCShop.DataSeeder.Constants.Microphone;
-using static PCShop.DataSeeder.Constants.Monitor;
-using static PCShop.DataSeeder.Constants.Mouse;
+using static PCShop.DataSeeder.Constant.Headphone;
+using static PCShop.DataSeeder.Constant.Keyboard;
+using static PCShop.DataSeeder.Constant.Laptop;
+using static PCShop.DataSeeder.Constant.Microphone;
+using static PCShop.DataSeeder.Constant.Monitor;
+using static PCShop.DataSeeder.Constant.Mouse;
 using Monitor = PCShop.Infrastructure.Data.Models.Monitor;
 using Type = PCShop.Infrastructure.Data.Models.GravitatingClasses.Type;
 
@@ -15,7 +15,7 @@ namespace PCShop.DataSeeder
     /// <summary>
     /// The "seeding" class
     /// </summary>
-    public class Seeder
+    internal class Seeder
     {
         private readonly PCShopDbContext dbContext;
         private readonly Random random;
@@ -23,7 +23,7 @@ namespace PCShop.DataSeeder
         /// <summary>
         /// Constructor of Seeder class
         /// </summary>
-        public Seeder()
+        internal Seeder()
         {
             this.dbContext = new PCShopDbContext();
             this.random = new Random();
@@ -32,7 +32,7 @@ namespace PCShop.DataSeeder
         /// <summary>
         /// Method that seeds data into the database
         /// </summary>
-        public void Seed()
+        internal void Seed()
         {
             this.SeedLaptops(LaptopsSourcePath);
 

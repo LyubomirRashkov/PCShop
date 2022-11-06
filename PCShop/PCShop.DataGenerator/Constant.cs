@@ -3,36 +3,36 @@
     /// <summary>
     /// Class holding constants
     /// </summary>
-    public static class Constants
+    internal static class Constant
     {
         /// <summary>
         /// The count of laptops
         /// </summary>
-        public const int LaptopsCount = 100;
+        internal const int LaptopsCount = 100;
 
         /// <summary>
         /// The count of monitors
         /// </summary>
-        public const int MonitorsCount = 75;
+        internal const int MonitorsCount = 75;
 
         /// <summary>
         /// the count of keyboards
         /// </summary>
-        public const int KeyboardsCount = 150;
+        internal const int KeyboardsCount = 150;
 
         /// <summary>
         /// The count of mice
         /// </summary>
-        public const int MiceCount = 175;
+        internal const int MiceCount = 175;
 
         /// <summary>
         /// The count of headphones
         /// </summary>
-        public const int HeadphonesCount = 50;
+        internal const int HeadphonesCount = 50;
 
         /// <summary>
         /// The count of microphones
         /// </summary>
-        public const int MicrophonesCount = 25;
+        internal const int MicrophonesCount = 25;
     }
 }
