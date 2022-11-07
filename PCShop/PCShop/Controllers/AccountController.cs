@@ -91,15 +91,17 @@ namespace PCShop.Controllers
         /// <returns>A page that contains a form that must be filled</returns>
         [HttpGet]
         [AllowAnonymous]
-        public IActionResult SignIn()
+        public IActionResult SignIn(string? returnUrl = null)
         {
             if (this.User?.Identity?.IsAuthenticated ?? false)
             {
                 return RedirectToAction("Index", "Home");
             }
 
-            var model = new SignInViewModel();
-
+            var model = new SignInViewModel()
+            {
+                ReturnUrl = returnUrl,
+            };
             return View(model);
         }
 
@@ -107,7 +109,7 @@ namespace PCShop.Controllers
         /// HttpPost action for signing in
         /// </summary>
         /// <param name="model">The model that is filled by the user</param>
-        /// <returns>If the model is valid signs in the user and returns the home page. If there is an error returns the model</returns>
+        /// <returns>If the model is valid signs in the user, then returns the required page or the home page. If there is an error returns the model</returns>
         [HttpPost]
         [AllowAnonymous]
         public async Task<IActionResult> SignIn(SignInViewModel model)
@@ -125,6 +127,11 @@ namespace PCShop.Controllers
 
                 if (result.Succeeded)
                 {
+                    if (model.ReturnUrl is not null)
+                    {
+                        return Redirect(model.ReturnUrl);
+                    }
+
                     return RedirectToAction("Index", "Home");
                 }
             }

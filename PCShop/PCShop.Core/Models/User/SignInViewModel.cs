@@ -21,5 +21,11 @@ namespace PCShop.Core.Models.User
         [DataType(DataType.Password)]
         [Display(Name = "password")]
         public string Password { get; set; } = null!;
+
+        /// <summary>
+        /// Property that represents user's required url
+        /// </summary>
+        [UIHint("hidden")]
+        public string? ReturnUrl { get; set; }
     }
 }

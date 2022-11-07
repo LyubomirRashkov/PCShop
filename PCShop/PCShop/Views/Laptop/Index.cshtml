@@ -1,0 +1,46 @@
+﻿@model IEnumerable<LaptopExportViewModel>
+
+@{
+	ViewData["Title"] = "All laptops";
+}
+
+<h1 class="text-center mb-2">@ViewData["Title"]</h1>
+
+<hr />
+
+<table class="table table-striped table-hover mt-5">
+	<thead>
+		<tr class="table-primary">
+			<td>Brand</td>
+			<td>CPU</td>
+			<td>RAM</td>
+			<td>SSD</td>
+			<td>Video card</td>
+			<td>Price</td>
+			<td>Display size</td>
+			<td>Warranty</td>
+			<td>View</td>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var laptop in Model)
+		{
+			<tr>
+				<td>@laptop.Brand</td>
+				<td>@laptop.CPU</td>
+				<td>@laptop.RAM GB</td>
+				<td>@laptop.SSDCapacity GB</td>
+				<td>@laptop.VideoCard</td>
+				<td>@laptop.Price EUR</td>
+				<td>@laptop.DisplaySize inches</td>
+				<td>@laptop.Warranty months</td>
+				<td>
+					<form asp-controller="Laptop" asp-action="Details" method="post">
+						<input name="id" type="hidden" value="@laptop.Id" />
+						<button type="submit" class="btn btn-success">Details</button>
+					</form>
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>

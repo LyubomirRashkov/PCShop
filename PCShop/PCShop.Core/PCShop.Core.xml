@@ -54,6 +54,56 @@
             Constant for the max length of user's password
             </summary>
         </member>
+        <member name="T:PCShop.Core.Models.Laptop.LaptopExportViewModel">
+            <summary>
+            LaptopExportViewModel model
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Laptop.LaptopExportViewModel.Id">
+            <summary>
+            Property that represents laptop unique identifier
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Laptop.LaptopExportViewModel.Brand">
+            <summary>
+            Property that represents laptop brand
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Laptop.LaptopExportViewModel.CPU">
+            <summary>
+            Property that represents laptop CPU
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Laptop.LaptopExportViewModel.RAM">
+            <summary>
+            Property that represents laptop RAM
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Laptop.LaptopExportViewModel.SSDCapacity">
+            <summary>
+            Property that represents laptop SSD capacity
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Laptop.LaptopExportViewModel.VideoCard">
+            <summary>
+            Property that represents laptop video card
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Laptop.LaptopExportViewModel.Price">
+            <summary>
+            Property that represents laptop price
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Laptop.LaptopExportViewModel.DisplaySize">
+            <summary>
+            Property that represents laptop display size
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Laptop.LaptopExportViewModel.Warranty">
+            <summary>
+            Property that represents laptop warranty
+            </summary>
+        </member>
         <member name="T:PCShop.Core.Models.User.SignInViewModel">
             <summary>
             ViewModel class for sign in
@@ -67,6 +117,11 @@
         <member name="P:PCShop.Core.Models.User.SignInViewModel.Password">
             <summary>
             Property that represents user's password
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.User.SignInViewModel.ReturnUrl">
+            <summary>
+            Property that represents user's required url
             </summary>
         </member>
         <member name="T:PCShop.Core.Models.User.SignUpViewModel">
@@ -103,6 +158,34 @@
             <summary>
             Property for password confirmation
             </summary>
+        </member>
+        <member name="T:PCShop.Core.Services.Implementations.LaptopService">
+            <summary>
+            Implementation of ILaptopService interface
+            </summary>
+        </member>
+        <member name="M:PCShop.Core.Services.Implementations.LaptopService.#ctor(PCShop.Infrastructure.Common.IRepository)">
+            <summary>
+            Constructor of LaptopService class
+            </summary>
+            <param name="repository">The repository that will be used</param>
+        </member>
+        <member name="M:PCShop.Core.Services.Implementations.LaptopService.GetAllLaptopsAsync">
+            <summary>
+            Method for retrieving all active laptops
+            </summary>
+            <returns>Collection of LaptopExportViewModels</returns>
+        </member>
+        <member name="T:PCShop.Core.Services.Interfaces.ILaptopService">
+            <summary>
+            Abstraction of LaptopService
+            </summary>
+        </member>
+        <member name="M:PCShop.Core.Services.Interfaces.ILaptopService.GetAllLaptopsAsync">
+            <summary>
+            Method for retrieving all active laptops
+            </summary>
+            <returns>Collection of LaptopExportViewModels</returns>
         </member>
     </members>
 </doc>

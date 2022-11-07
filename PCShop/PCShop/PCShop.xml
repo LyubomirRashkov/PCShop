@@ -29,7 +29,7 @@
             <param name="model">The model that is filled by the user</param>
             <returns>If the model is valid creates the user, signs in the user and returns the home page. If there is an error returns the model</returns>
         </member>
-        <member name="M:PCShop.Controllers.AccountController.SignIn">
+        <member name="M:PCShop.Controllers.AccountController.SignIn(System.String)">
             <summary>
             HttpGet action for signing in
             </summary>
@@ -40,7 +40,7 @@
             HttpPost action for signing in
             </summary>
             <param name="model">The model that is filled by the user</param>
-            <returns>If the model is valid signs in the user and returns the home page. If there is an error returns the model</returns>
+            <returns>If the model is valid signs in the user, then returns the required page or the home page. If there is an error returns the model</returns>
         </member>
         <member name="M:PCShop.Controllers.AccountController.Signout">
             <summary>
@@ -58,6 +58,35 @@
             Action that returns the home page
             </summary>
             <returns>The home page</returns>
+        </member>
+        <member name="T:PCShop.Controllers.LaptopController">
+            <summary>
+            Laptop controller class
+            </summary>
+        </member>
+        <member name="M:PCShop.Controllers.LaptopController.#ctor(PCShop.Core.Services.Interfaces.ILaptopService)">
+            <summary>
+            Constructor of LaptopController class
+            </summary>
+            <param name="laptopService">The ILaptopService needed for functionality</param>
+        </member>
+        <member name="M:PCShop.Controllers.LaptopController.Index">
+            <summary>
+            HttpGet action for retrieving all active laptops
+            </summary>
+            <returns>Collection of laptops</returns>
+        </member>
+        <member name="T:Microsoft.Extensions.DependencyInjection.PCShopServiceCollectionExtension">
+            <summary>
+            PCShopServiceCollectionExtension model
+            </summary>
+        </member>
+        <member name="M:Microsoft.Extensions.DependencyInjection.PCShopServiceCollectionExtension.AddApplicationServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Extension method for adding services to the IoC container
+            </summary>
+            <param name="services">IServiceCollection that will be extended</param>
+            <returns>Extended IServiceCollection</returns>
         </member>
     </members>
 </doc>

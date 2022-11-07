@@ -1,4 +1,7 @@
 using Microsoft.EntityFrameworkCore;
+using PCShop.Core.Services.Implementations;
+using PCShop.Core.Services.Interfaces;
+using PCShop.Infrastructure.Common;
 using PCShop.Infrastructure.Data;
 using PCShop.Infrastructure.Data.Models.Account;
 
@@ -27,10 +30,12 @@ builder.Services.AddDefaultIdentity<User>(options =>
 
 builder.Services.ConfigureApplicationCookie(options => 
 {
-    options.LoginPath = "/Account/Login";
+    options.LoginPath = "/Account/SignIn";
 });
 
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddApplicationServices();
 
 var app = builder.Build();
 
