@@ -3,7 +3,7 @@
 namespace PCShop.Infrastructure.Data.Models.GravitatingClasses
 {
     /// <summary>
-    /// Product format model
+    /// Format model
     /// </summary>
     public class Format
     {
@@ -16,18 +16,18 @@ namespace PCShop.Infrastructure.Data.Models.GravitatingClasses
         }
 
         /// <summary>
-        /// Format unique identifier
+        /// Property that represents format unique identifier
         /// </summary>
         public int Id { get; set; }
 
         /// <summary>
-        /// Format name
+        /// Property that represents format name
         /// </summary>
         [Required]
         public string Name { get; set; } = null!;
 
         /// <summary>
-        /// Collection of keyboards
+        /// Property that represents a collection of keyboards
         /// </summary>
         public virtual ICollection<Keyboard> FormatKeyboards { get; set; }
     }

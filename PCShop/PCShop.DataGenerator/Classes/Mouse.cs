@@ -8,12 +8,12 @@ namespace PCShop.DataGenerator.Classes
     public class Mouse : Product
     {
         /// <summary>
-        /// Mouse type
+        /// Property that represents mouse type
         /// </summary>
         public string Type { get; set; } = null!;
 
         /// <summary>
-        /// Mouse sensitivity
+        /// Property that represents mouse sensitivity
         /// </summary>
         public string Sensitivity { get; set; } = null!;
     }

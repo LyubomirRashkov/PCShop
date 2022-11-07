@@ -1,7 +1,7 @@
 ﻿namespace PCShop.DataGenerator.Classes.GravitatingClasses
 {
     /// <summary>
-    /// Class holding a collection of mouse sensitivities
+    /// Sensitivity model
     /// </summary>
     public class Sensitivity
     {
@@ -14,7 +14,7 @@
         }
 
         /// <summary>
-        /// Collection of mouse sensitivities
+        /// Property that represents a collection of mouse sensitivities
         /// </summary>
         public IList<string> MouseSensitivities { get; set; }
     }

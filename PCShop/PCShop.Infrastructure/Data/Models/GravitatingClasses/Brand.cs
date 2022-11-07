@@ -3,7 +3,7 @@
 namespace PCShop.Infrastructure.Data.Models.GravitatingClasses
 {
     /// <summary>
-    /// Product brand model
+    /// Brand model
     /// </summary>
     public class Brand
     {
@@ -21,43 +21,43 @@ namespace PCShop.Infrastructure.Data.Models.GravitatingClasses
         }
 
         /// <summary>
-        /// Brand unique identifier
+        /// Property that represents brand unique identifier
         /// </summary>
         public int Id { get; set; }
 
         /// <summary>
-        /// Brand name
+        /// Property that represents brand name
         /// </summary>
         [Required]
         public string Name { get; set; } = null!;
 
         /// <summary>
-        /// Collection of laptops
+        /// Property that represents a collection of laptops
         /// </summary>
         public virtual ICollection<Laptop> BrandLaptops { get; set; }
 
         /// <summary>
-        /// Collection of monitors
+        /// Property that represents a collection of monitors
         /// </summary>
         public virtual ICollection<Monitor> BrandMonitors { get; set; }
 
         /// <summary>
-        /// Collection of keyboards
+        /// Property that represents a collection of keyboards
         /// </summary>
         public virtual ICollection<Keyboard> BrandKeyboards { get; set; }
 
         /// <summary>
-        /// Collection of mice
+        /// Property that represents a collection of mice
         /// </summary>
         public virtual ICollection<Mouse> BrandMice { get; set; }
 
         /// <summary>
-        /// Collection of headphones
+        /// Property that represents a collection of headphones
         /// </summary>
         public virtual ICollection<Headphone> BrandHeadphones { get; set; }
 
         /// <summary>
-        /// Collection of microphones
+        /// Property that represents a collection of microphones
         /// </summary>
         public virtual ICollection<Microphone> BrandMicrophones { get; set; }
     }

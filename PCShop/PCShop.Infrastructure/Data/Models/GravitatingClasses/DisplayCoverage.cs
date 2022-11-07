@@ -3,7 +3,7 @@
 namespace PCShop.Infrastructure.Data.Models.GravitatingClasses
 {
     /// <summary>
-    /// Product display coverage model
+    /// Display coverage model
     /// </summary>
     public class DisplayCoverage
     {
@@ -17,23 +17,23 @@ namespace PCShop.Infrastructure.Data.Models.GravitatingClasses
         }
 
         /// <summary>
-        /// DisplayCoverage unique identifier
+        /// Property that represents displayCoverage unique identifier
         /// </summary>
         public int Id { get; set; }
 
         /// <summary>
-        /// DisplayCoverage name
+        /// Property that represents displayCoverage name
         /// </summary>
         [Required]
         public string Name { get; set; } = null!;
 
         /// <summary>
-        /// Collection of laptops
+        /// Property that represents a collection of laptops
         /// </summary>
         public virtual ICollection<Laptop> DisplayCoverageLaptops { get; set; }
 
         /// <summary>
-        /// Collection of monitors
+        /// Property that represents a collection of monitors
         /// </summary>
         public virtual ICollection<Monitor> DisplayCoverageMonitors { get; set; }
     }

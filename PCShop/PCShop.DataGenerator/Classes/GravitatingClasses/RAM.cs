@@ -1,7 +1,7 @@
 ﻿namespace PCShop.DataGenerator.Classes.GravitatingClasses
 {
     /// <summary>
-    /// Class holding a collection of laptop RAMs
+    /// RAM model
     /// </summary>
     public class RAM
     {
@@ -14,7 +14,7 @@
         }
 
         /// <summary>
-        /// Collection of laptop RAMs
+        /// Property that represents a collection of laptop RAMs
         /// </summary>
         public IList<int> LaptopRAMs { get; set; }
     }

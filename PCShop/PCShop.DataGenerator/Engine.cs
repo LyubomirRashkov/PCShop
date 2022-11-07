@@ -8,7 +8,7 @@ using Monitor = PCShop.DataGenerator.Classes.Monitor;
 namespace PCShop.DataGenerator
 {
     /// <summary>
-    /// The "core" class
+    /// Engine model
     /// </summary>
     internal class Engine
     {
@@ -23,84 +23,84 @@ namespace PCShop.DataGenerator
         }
 
         /// <summary>
-        /// Property holding all brands by product type
+        /// Property that represents all brands by product type
         /// </summary>
         internal Brand Brands => this.Deserialize<Brand>("InitialSourceFiles/brands.json");
 
         /// <summary>
-        /// Property holding all colors by product type
+        /// Property that represents all colors by product type
         /// </summary>
         internal Color Colors => this.Deserialize<Color>("InitialSourceFiles/colors.json");
 
         /// <summary>
-        /// Property holding all CPUs
+        /// Property that represents all CPUs
         /// </summary>
         internal CPU CPUs => this.Deserialize<CPU>("InitialSourceFiles/cpus.json");
 
         /// <summary>
-        /// Property holding all displpay coverages by product type
+        /// Property that represents all displpay coverages by product type
         /// </summary>
         internal DisplayCoverage DisplayCoverages => this.Deserialize<DisplayCoverage>(
                                                    "InitialSourceFiles/displayCoverages.json");
 
         /// <summary>
-        /// Property holding all display sizes by product type
+        /// Property that represents all display sizes by product type
         /// </summary>
         internal DisplaySize DisplaySizes => this.Deserialize<DisplaySize>("InitialSourceFiles/displaySizes.json");
 
         /// <summary>
-        /// Property holding all display technologies
+        /// Property that represents all display technologies
         /// </summary>
         internal DisplayTechnology DisplayTechnologies => this.Deserialize<DisplayTechnology>(
                                                         "InitialSourceFiles/displayTechnologies.json");
 
         /// <summary>
-        /// Property holding all keyboard formats
+        /// Property that represents all keyboard formats
         /// </summary>
         internal Format Formats => this.Deserialize<Format>("InitialSourceFiles/formats.json");
 
         /// <summary>
-        /// Property holding all URLs of images by product type
+        /// Property that represents all Urls of images by product type
         /// </summary>
         internal ImageUrl ImageUrls => this.Deserialize<ImageUrl>("InitialSourceFiles/imageURLs.json");
 
         /// <summary>
-        /// Property holding all RAMs
+        /// Property that represents all laptop RAMs
         /// </summary>
         internal RAM RAMs => this.Deserialize<RAM>("InitialSourceFiles/rams.json");
 
         /// <summary>
-        /// Property holding all monitor refresh rates
+        /// Property that represents all monitor refresh rates
         /// </summary>
         internal RefreshRate RefreshRates => this.Deserialize<RefreshRate>("InitialSourceFiles/refreshRates.json");
 
         /// <summary>
-        /// Property holding all resolutions by product type
+        /// Property that represents all resolutions by product type
         /// </summary>
         internal Resolution Resolutions => this.Deserialize<Resolution>("InitialSourceFiles/resolutions.json");
 
         /// <summary>
-        /// Property holding all mouse sensitivities
+        /// Property that represents all mouse sensitivities
         /// </summary>
         internal Sensitivity Sensitivities => this.Deserialize<Sensitivity>("InitialSourceFiles/sensitivities.json");
 
         /// <summary>
-        /// Property holding all laptop SSD capacities
+        /// Property that represents all laptop SSD capacities
         /// </summary>
         internal SSDCapacity SSDCapacities => this.Deserialize<SSDCapacity>("InitialSourceFiles/ssds.json");
 
         /// <summary>
-        /// Property holding all types by product type
+        /// Property that represents all types by product type
         /// </summary>
         internal Type Types => this.Deserialize<Type>("InitialSourceFiles/types.json");
 
         /// <summary>
-        /// Property holding all laptop video cards
+        /// Property that represents all laptop video cards
         /// </summary>
         internal VideoCard VideoCards => this.Deserialize<VideoCard>("InitialSourceFiles/videoCards.json");
 
         /// <summary>
-        /// Property holding all warranties
+        /// Property that represents all warranties
         /// </summary>
         internal Warranty Warranties => this.Deserialize<Warranty>("InitialSourceFiles/warranties.json");
 

@@ -3,7 +3,7 @@
 namespace PCShop.Infrastructure.Data.Models.GravitatingClasses
 {
     /// <summary>
-    /// Product display technology model
+    /// Display technology model
     /// </summary>
     public class DisplayTechnology
     {
@@ -17,23 +17,23 @@ namespace PCShop.Infrastructure.Data.Models.GravitatingClasses
         }
 
         /// <summary>
-        /// DisplayTechnology unique identifier
+        /// Property that represents displayTechnology unique identifier
         /// </summary>
         public int Id { get; set; }
 
         /// <summary>
-        /// DisplayTechnology name
+        /// Property that represents displayTechnology name
         /// </summary>
         [Required]
         public string Name { get; set; } = null!;
 
         /// <summary>
-        /// Collection of laptops
+        /// Property that represents a collection of laptops
         /// </summary>
         public virtual ICollection<Laptop> DisplayTechnologyLaptops { get; set; }
 
         /// <summary>
-        /// Collection of monitors
+        /// Property that represents a collection of monitors
         /// </summary>
         public virtual ICollection<Monitor> DisplayTechnologyMonitors { get; set; }
     }

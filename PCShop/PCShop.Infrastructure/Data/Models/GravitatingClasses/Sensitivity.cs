@@ -3,7 +3,7 @@
 namespace PCShop.Infrastructure.Data.Models.GravitatingClasses
 {
     /// <summary>
-    /// Product sensitivity model
+    /// Sensitivity model
     /// </summary>
     public class Sensitivity
     {
@@ -16,18 +16,18 @@ namespace PCShop.Infrastructure.Data.Models.GravitatingClasses
         }
 
         /// <summary>
-        /// Sensitivity unique identifier
+        /// Property that represents sensitivity unique identifier
         /// </summary>
         public int Id { get; set; }
 
         /// <summary>
-        /// Sensitivity range
+        /// Property that represents sensitivity range
         /// </summary>
         [Required]
         public string Range { get; set; } = null!;
 
         /// <summary>
-        /// Collection of mice
+        /// Property that represents a collection of mice
         /// </summary>
         public virtual ICollection<Mouse> SensitivityMice { get; set; }
     }

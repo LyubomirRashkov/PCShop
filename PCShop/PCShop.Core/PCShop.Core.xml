@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PCShop.Core</name>
+    </assembly>
+    <members>
+        <member name="T:PCShop.Core.Constants.Constant">
+            <summary>
+            Class holding constants
+            </summary>
+        </member>
+        <member name="T:PCShop.Core.Constants.Constant.User">
+            <summary>
+            Class holding User constants
+            </summary>
+        </member>
+        <member name="F:PCShop.Core.Constants.Constant.User.FirstNameMinLength">
+            <summary>
+            Constant for the min length of user's first name
+            </summary>
+        </member>
+        <member name="F:PCShop.Core.Constants.Constant.User.LastNameMinLength">
+            <summary>
+            Constant for the min length of user's last name
+            </summary>
+        </member>
+        <member name="F:PCShop.Core.Constants.Constant.User.UsernameMinLength">
+            <summary>
+            Constant for the min length of user's username
+            </summary>
+        </member>
+        <member name="F:PCShop.Core.Constants.Constant.User.UsernameMaxLength">
+            <summary>
+            Constant for the max length of user's username
+            </summary>
+        </member>
+        <member name="F:PCShop.Core.Constants.Constant.User.EmailMinLength">
+            <summary>
+            Constant for the min length of user's email
+            </summary>
+        </member>
+        <member name="F:PCShop.Core.Constants.Constant.User.EmailMaxLength">
+            <summary>
+            Constant for the max length of user's email
+            </summary>
+        </member>
+        <member name="F:PCShop.Core.Constants.Constant.User.PasswordMinLength">
+            <summary>
+            Constant for the min length of user's password
+            </summary>
+        </member>
+        <member name="F:PCShop.Core.Constants.Constant.User.PasswordMaxLength">
+            <summary>
+            Constant for the max length of user's password
+            </summary>
+        </member>
+        <member name="T:PCShop.Core.Models.User.SignInViewModel">
+            <summary>
+            ViewModel class for sign in
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.User.SignInViewModel.UserName">
+            <summary>
+            Property that represents user's username
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.User.SignInViewModel.Password">
+            <summary>
+            Property that represents user's password
+            </summary>
+        </member>
+        <member name="T:PCShop.Core.Models.User.SignUpViewModel">
+            <summary>
+            ViewModel class for sign up
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.User.SignUpViewModel.FirstName">
+            <summary>
+            Property that represents user's first name
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.User.SignUpViewModel.LastName">
+            <summary>
+            Property that represents user's last name
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.User.SignUpViewModel.UserName">
+            <summary>
+            Property that represents user's username
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.User.SignUpViewModel.Email">
+            <summary>
+            Property that represents user's email
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.User.SignUpViewModel.Password">
+            <summary>
+            Property that represents user's password
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.User.SignUpViewModel.ConfirmPassword">
+            <summary>
+            Property for password confirmation
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -5,19 +5,19 @@ using static PCShop.Infrastructure.Constants.DataConstant.User;
 namespace PCShop.Infrastructure.Data.Models.Account
 {
     /// <summary>
-    /// Class User -> extending IdentityUser functionality
+    /// User model -> extending IdentityUser
     /// </summary>
     public class User : IdentityUser
     {
         /// <summary>
-        /// User first name
+        /// Property that represents user's first name
         /// </summary>
         [Required]
         [MaxLength(FirstNameMaxLength)]
         public string FirstName { get; set; } = null!;
 
         /// <summary>
-        /// User last name
+        /// Property that represents user's last name
         /// </summary>
         [Required]
         [MaxLength(LastNameMaxLength)]

@@ -1,0 +1,1174 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PCShop.Infrastructure</name>
+    </assembly>
+    <members>
+        <member name="T:PCShop.Infrastructure.Constants.DataConstant">
+            <summary>
+            Class holding data constants
+            </summary>
+        </member>
+        <member name="T:PCShop.Infrastructure.Constants.DataConstant.User">
+            <summary>
+            Class holding User constants
+            </summary>
+        </member>
+        <member name="F:PCShop.Infrastructure.Constants.DataConstant.User.FirstNameMaxLength">
+            <summary>
+            Constant for the max length of user's first name
+            </summary>
+        </member>
+        <member name="F:PCShop.Infrastructure.Constants.DataConstant.User.LastNameMaxLength">
+            <summary>
+            Constant for the max length of user's last name
+            </summary>
+        </member>
+        <member name="T:PCShop.Infrastructure.Data.ApplicationDbContext">
+            <summary>
+            ApplicationDbContext model
+            </summary>
+        </member>
+        <member name="M:PCShop.Infrastructure.Data.ApplicationDbContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{PCShop.Infrastructure.Data.ApplicationDbContext})">
+            <summary>
+            Constructor of ApplicationDbContext
+            </summary>
+            <param name="options">The DbContextOptions<c>ApplicationDbContext</c></param>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.ApplicationDbContext.Laptops">
+            <summary>
+            Property that represents a collection of laptops
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.ApplicationDbContext.Monitors">
+            <summary>
+            Property that represents a collection of monitors
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.ApplicationDbContext.Keyboards">
+            <summary>
+            Property that represents a collection of keyboards
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.ApplicationDbContext.Mice">
+            <summary>
+            Property that represents a collection of mice
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.ApplicationDbContext.Headphones">
+            <summary>
+            Property that represents a collection of headphones
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.ApplicationDbContext.Microphones">
+            <summary>
+            Property that represents a collection of microphones
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.ApplicationDbContext.Brands">
+            <summary>
+            Property that represents a collection of brands
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.ApplicationDbContext.Colors">
+            <summary>
+            Property that represents a collection of colors
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.ApplicationDbContext.CPUs">
+            <summary>
+            Property that represents a collection of CPUs
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.ApplicationDbContext.DisplayCoverages">
+            <summary>
+            Property that represents a collection of display coverages
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.ApplicationDbContext.DisplaySizes">
+            <summary>
+            Property that represents a collection of display sizes
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.ApplicationDbContext.DisplayTechnologies">
+            <summary>
+            Property that represents a collection of display technologies
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.ApplicationDbContext.Formats">
+            <summary>
+            Property that represents a collection of formats
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.ApplicationDbContext.RAMs">
+            <summary>
+            Property that represents a collection of RAMs
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.ApplicationDbContext.RefreshRates">
+            <summary>
+            Property that represents a collection of refresh rates
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.ApplicationDbContext.Resolutions">
+            <summary>
+            Property that represents a collection of resolutions
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.ApplicationDbContext.Sensitivities">
+            <summary>
+            Property that represents a collection of sensitivities
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.ApplicationDbContext.SSDCapacities">
+            <summary>
+            Property that represents a collection of SSD capacities
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.ApplicationDbContext.Types">
+            <summary>
+            Property that represents a collection of types
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.ApplicationDbContext.VideoCards">
+            <summary>
+            Property that represents a collection of video cards
+            </summary>
+        </member>
+        <member name="T:PCShop.Infrastructure.Data.Models.Account.User">
+            <summary>
+            User model -> extending IdentityUser
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Account.User.FirstName">
+            <summary>
+            Property that represents user's first name
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Account.User.LastName">
+            <summary>
+            Property that represents user's last name
+            </summary>
+        </member>
+        <member name="T:PCShop.Infrastructure.Data.Models.GravitatingClasses.Brand">
+            <summary>
+            Brand model
+            </summary>
+        </member>
+        <member name="M:PCShop.Infrastructure.Data.Models.GravitatingClasses.Brand.#ctor">
+            <summary>
+            Constructor of Brand class
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.GravitatingClasses.Brand.Id">
+            <summary>
+            Property that represents brand unique identifier
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.GravitatingClasses.Brand.Name">
+            <summary>
+            Property that represents brand name
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.GravitatingClasses.Brand.BrandLaptops">
+            <summary>
+            Property that represents a collection of laptops
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.GravitatingClasses.Brand.BrandMonitors">
+            <summary>
+            Property that represents a collection of monitors
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.GravitatingClasses.Brand.BrandKeyboards">
+            <summary>
+            Property that represents a collection of keyboards
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.GravitatingClasses.Brand.BrandMice">
+            <summary>
+            Property that represents a collection of mice
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.GravitatingClasses.Brand.BrandHeadphones">
+            <summary>
+            Property that represents a collection of headphones
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.GravitatingClasses.Brand.BrandMicrophones">
+            <summary>
+            Property that represents a collection of microphones
+            </summary>
+        </member>
+        <member name="T:PCShop.Infrastructure.Data.Models.GravitatingClasses.Color">
+            <summary>
+            Color model
+            </summary>
+        </member>
+        <member name="M:PCShop.Infrastructure.Data.Models.GravitatingClasses.Color.#ctor">
+            <summary>
+            Constructor of Color class
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.GravitatingClasses.Color.Id">
+            <summary>
+            Property that represents color unique identifier
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.GravitatingClasses.Color.Name">
+            <summary>
+            Property that represents color name
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.GravitatingClasses.Color.ColorLaptops">
+            <summary>
+            Property that represents a collection of laptops
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.GravitatingClasses.Color.ColorMonitors">
+            <summary>
+            Property that represents a collection of monitors
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.GravitatingClasses.Color.ColorKeyboards">
+            <summary>
+            Property that represents a collection of keyboards
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.GravitatingClasses.Color.ColorMice">
+            <summary>
+            Property that represents a collection of mice
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.GravitatingClasses.Color.ColorHeadphones">
+            <summary>
+            Property that represents a collection of headphones
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.GravitatingClasses.Color.ColorMicrophones">
+            <summary>
+            Property that represents a collection of microphones
+            </summary>
+        </member>
+        <member name="T:PCShop.Infrastructure.Data.Models.GravitatingClasses.CPU">
+            <summary>
+            CPU model
+            </summary>
+        </member>
+        <member name="M:PCShop.Infrastructure.Data.Models.GravitatingClasses.CPU.#ctor">
+            <summary>
+            Constructor of CPU class
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.GravitatingClasses.CPU.Id">
+            <summary>
+            Property that represents CPU unique identifier
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.GravitatingClasses.CPU.Name">
+            <summary>
+            Property that represents CPU name
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.GravitatingClasses.CPU.CPULaptops">
+            <summary>
+            Property that represents a collection of laptops
+            </summary>
+        </member>
+        <member name="T:PCShop.Infrastructure.Data.Models.GravitatingClasses.DisplayCoverage">
+            <summary>
+            Display coverage model
+            </summary>
+        </member>
+        <member name="M:PCShop.Infrastructure.Data.Models.GravitatingClasses.DisplayCoverage.#ctor">
+            <summary>
+            Constructor of DisplayCoverage class
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.GravitatingClasses.DisplayCoverage.Id">
+            <summary>
+            Property that represents displayCoverage unique identifier
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.GravitatingClasses.DisplayCoverage.Name">
+            <summary>
+            Property that represents displayCoverage name
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.GravitatingClasses.DisplayCoverage.DisplayCoverageLaptops">
+            <summary>
+            Property that represents a collection of laptops
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.GravitatingClasses.DisplayCoverage.DisplayCoverageMonitors">
+            <summary>
+            Property that represents a collection of monitors
+            </summary>
+        </member>
+        <member name="T:PCShop.Infrastructure.Data.Models.GravitatingClasses.DisplaySize">
+            <summary>
+            Display size model
+            </summary>
+        </member>
+        <member name="M:PCShop.Infrastructure.Data.Models.GravitatingClasses.DisplaySize.#ctor">
+            <summary>
+            Constructor of DisplaySize class
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.GravitatingClasses.DisplaySize.Id">
+            <summary>
+            Property that represents displaySize unique identifier
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.GravitatingClasses.DisplaySize.Value">
+            <summary>
+            Property that represents displaySize value
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.GravitatingClasses.DisplaySize.DisplaySizeLaptops">
+            <summary>
+            Property that represents a collection of laptops
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.GravitatingClasses.DisplaySize.DisplaySizeMonitors">
+            <summary>
+            Property that represents a collection of monitors
+            </summary>
+        </member>
+        <member name="T:PCShop.Infrastructure.Data.Models.GravitatingClasses.DisplayTechnology">
+            <summary>
+            Display technology model
+            </summary>
+        </member>
+        <member name="M:PCShop.Infrastructure.Data.Models.GravitatingClasses.DisplayTechnology.#ctor">
+            <summary>
+            Constructor of DisplayTechnology class
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.GravitatingClasses.DisplayTechnology.Id">
+            <summary>
+            Property that represents displayTechnology unique identifier
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.GravitatingClasses.DisplayTechnology.Name">
+            <summary>
+            Property that represents displayTechnology name
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.GravitatingClasses.DisplayTechnology.DisplayTechnologyLaptops">
+            <summary>
+            Property that represents a collection of laptops
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.GravitatingClasses.DisplayTechnology.DisplayTechnologyMonitors">
+            <summary>
+            Property that represents a collection of monitors
+            </summary>
+        </member>
+        <member name="T:PCShop.Infrastructure.Data.Models.GravitatingClasses.Format">
+            <summary>
+            Format model
+            </summary>
+        </member>
+        <member name="M:PCShop.Infrastructure.Data.Models.GravitatingClasses.Format.#ctor">
+            <summary>
+            Constructor of Format class
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.GravitatingClasses.Format.Id">
+            <summary>
+            Property that represents format unique identifier
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.GravitatingClasses.Format.Name">
+            <summary>
+            Property that represents format name
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.GravitatingClasses.Format.FormatKeyboards">
+            <summary>
+            Property that represents a collection of keyboards
+            </summary>
+        </member>
+        <member name="T:PCShop.Infrastructure.Data.Models.GravitatingClasses.RAM">
+            <summary>
+            RAM model
+            </summary>
+        </member>
+        <member name="M:PCShop.Infrastructure.Data.Models.GravitatingClasses.RAM.#ctor">
+            <summary>
+            Constructor of RAM class
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.GravitatingClasses.RAM.Id">
+            <summary>
+            Property that represents RAM unique identifier
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.GravitatingClasses.RAM.Value">
+            <summary>
+            Property that represents RAM value
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.GravitatingClasses.RAM.RAMLaptops">
+            <summary>
+            Property that represents a collection of laptops
+            </summary>
+        </member>
+        <member name="T:PCShop.Infrastructure.Data.Models.GravitatingClasses.RefreshRate">
+            <summary>
+            Refresh rate model
+            </summary>
+        </member>
+        <member name="M:PCShop.Infrastructure.Data.Models.GravitatingClasses.RefreshRate.#ctor">
+            <summary>
+            Constructor of RefreshRate class
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.GravitatingClasses.RefreshRate.Id">
+            <summary>
+            Property that represents refreshRate unique identifier
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.GravitatingClasses.RefreshRate.Value">
+            <summary>
+            Property that represents refreshRate value
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.GravitatingClasses.RefreshRate.RefreshRateMonitors">
+            <summary>
+            Property that represents a collection of monitors
+            </summary>
+        </member>
+        <member name="T:PCShop.Infrastructure.Data.Models.GravitatingClasses.Resolution">
+            <summary>
+            Resolution model
+            </summary>
+        </member>
+        <member name="M:PCShop.Infrastructure.Data.Models.GravitatingClasses.Resolution.#ctor">
+            <summary>
+            Constructor of Resolution class
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.GravitatingClasses.Resolution.Id">
+            <summary>
+            Property that represents resolution unique identifier
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.GravitatingClasses.Resolution.Value">
+            <summary>
+            Property that represents resolution value
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.GravitatingClasses.Resolution.ResolutionLaptops">
+            <summary>
+            Property that represents a collection of laptops
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.GravitatingClasses.Resolution.ResolutionMonitors">
+            <summary>
+            Property that represents a collection of monitors
+            </summary>
+        </member>
+        <member name="T:PCShop.Infrastructure.Data.Models.GravitatingClasses.Sensitivity">
+            <summary>
+            Sensitivity model
+            </summary>
+        </member>
+        <member name="M:PCShop.Infrastructure.Data.Models.GravitatingClasses.Sensitivity.#ctor">
+            <summary>
+            Constructor of Sensitivity class
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.GravitatingClasses.Sensitivity.Id">
+            <summary>
+            Property that represents sensitivity unique identifier
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.GravitatingClasses.Sensitivity.Range">
+            <summary>
+            Property that represents sensitivity range
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.GravitatingClasses.Sensitivity.SensitivityMice">
+            <summary>
+            Property that represents a collection of mice
+            </summary>
+        </member>
+        <member name="T:PCShop.Infrastructure.Data.Models.GravitatingClasses.SSDCapacity">
+            <summary>
+            SSD capacity model
+            </summary>
+        </member>
+        <member name="M:PCShop.Infrastructure.Data.Models.GravitatingClasses.SSDCapacity.#ctor">
+            <summary>
+            Constructor of SSDCapacity class
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.GravitatingClasses.SSDCapacity.Id">
+            <summary>
+            Property that represents SSDCapacity unique identifier
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.GravitatingClasses.SSDCapacity.Value">
+            <summary>
+            Property that represents SSDCapacity value
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.GravitatingClasses.SSDCapacity.SSDCapacityLaptops">
+            <summary>
+            Property that represents a collection of laptops
+            </summary>
+        </member>
+        <member name="T:PCShop.Infrastructure.Data.Models.GravitatingClasses.Type">
+            <summary>
+            Type model
+            </summary>
+        </member>
+        <member name="M:PCShop.Infrastructure.Data.Models.GravitatingClasses.Type.#ctor">
+            <summary>
+            Constructor of Type class
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.GravitatingClasses.Type.Id">
+            <summary>
+            Property that represents type unique identifier
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.GravitatingClasses.Type.Name">
+            <summary>
+            Property that represents type name
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.GravitatingClasses.Type.TypeLaptops">
+            <summary>
+            Property that represents a collection of laptops
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.GravitatingClasses.Type.TypeMonitors">
+            <summary>
+            Property that represents a collection of monitors
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.GravitatingClasses.Type.TypeKeyboards">
+            <summary>
+            Property that represents a collection of keyboards
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.GravitatingClasses.Type.TypeMice">
+            <summary>
+            Property that represents a collection of mice
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.GravitatingClasses.Type.TypeHeadphones">
+            <summary>
+            Property that represents a collection of headphones
+            </summary>
+        </member>
+        <member name="T:PCShop.Infrastructure.Data.Models.GravitatingClasses.VideoCard">
+            <summary>
+            Video card model
+            </summary>
+        </member>
+        <member name="M:PCShop.Infrastructure.Data.Models.GravitatingClasses.VideoCard.#ctor">
+            <summary>
+            Constructor of VideoCard class
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.GravitatingClasses.VideoCard.Id">
+            <summary>
+            Property that represents videoCard unique identifier
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.GravitatingClasses.VideoCard.Name">
+            <summary>
+            Property that represents videoCard name
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.GravitatingClasses.VideoCard.VideoCardLaptops">
+            <summary>
+            Property that represents a collection of laptops
+            </summary>
+        </member>
+        <member name="T:PCShop.Infrastructure.Data.Models.Headphone">
+            <summary>
+            Headphone model
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Headphone.Id">
+            <summary>
+            Property that represents headphone unique identifier
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Headphone.BrandId">
+            <summary>
+            Foreign key to headphone Brand unique identifier
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Headphone.Brand">
+            <summary>
+            Navigation property to headphone Brand
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Headphone.Price">
+            <summary>
+            Property that represents headphone price
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Headphone.TypeId">
+            <summary>
+            Foreign key to headphone Type unique identifier
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Headphone.Type">
+            <summary>
+            Navigation property to headphone Type
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Headphone.IsWireless">
+            <summary>
+            Property that represents if the headphone is wireless
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Headphone.HasMicrophone">
+            <summary>
+            Property that represents if the headphone has a microphone
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Headphone.ColorId">
+            <summary>
+            Foreign key to headphone Color unique identifier
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Headphone.Color">
+            <summary>
+            Navigation property to headphone Color
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Headphone.ImageUrl">
+            <summary>
+            Property that represents headphone image Url
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Headphone.Warranty">
+            <summary>
+            Property that represents headphone warranty
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Headphone.Quantity">
+            <summary>
+            Property that represents how namy headphones are in stock
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Headphone.IsDeleted">
+            <summary>
+            Property that represents headphone availability
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Headphone.AddedOn">
+            <summary>
+            Property that represents the date when the headphone is added in the database
+            </summary>
+        </member>
+        <member name="T:PCShop.Infrastructure.Data.Models.Keyboard">
+            <summary>
+            Keyboard model
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Keyboard.Id">
+            <summary>
+            Property that represents keyboard unique identifier
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Keyboard.BrandId">
+            <summary>
+            Foreign key to keyboard Brand unique identifier
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Keyboard.Brand">
+            <summary>
+            Navigation property to keyboard Brand
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Keyboard.Price">
+            <summary>
+            Property that represents keyboard price
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Keyboard.IsWireless">
+            <summary>
+            Property that represents if the keyboard is wireless
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Keyboard.FormatId">
+            <summary>
+            Foreign key to keyboard Format unique identifier
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Keyboard.Format">
+            <summary>
+            Navigation property to keyboard Format
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Keyboard.TypeId">
+            <summary>
+            Foreign key to keyboard Type unique identifier
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Keyboard.Type">
+            <summary>
+            Navigation property to keyboard Type
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Keyboard.ColorId">
+            <summary>
+            Foreign key to keyboard Color unique identifier
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Keyboard.Color">
+            <summary>
+            Navigation property to keyboard Color
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Keyboard.ImageUrl">
+            <summary>
+            Property that represents keyboard image Url
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Keyboard.Warranty">
+            <summary>
+            Property that represents keyboard warranty
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Keyboard.Quantity">
+            <summary>
+            Property that represents how many keyboards are in stock
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Keyboard.IsDeleted">
+            <summary>
+            Property that represents keyboard availability
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Keyboard.AddedOn">
+            <summary>
+            Property that represents the date when the keyboard is added in the database
+            </summary>
+        </member>
+        <member name="T:PCShop.Infrastructure.Data.Models.Laptop">
+            <summary>
+            Laptop model
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Laptop.Id">
+            <summary>
+            Property that represents laptop unique identifier
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Laptop.BrandId">
+            <summary>
+            Foreign key to laptop Brand unique identifier
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Laptop.Brand">
+            <summary>
+            Navigation property to laptop Brand
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Laptop.CPUId">
+            <summary>
+            Foreign key to laptop CPU unique identifier
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Laptop.CPU">
+            <summary>
+            Navigation property to laptop CPU
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Laptop.RAMId">
+            <summary>
+            Foreign key to laptop RAM unique identifier
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Laptop.RAM">
+            <summary>
+            Navigation property to laptop RAM
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Laptop.SSDCapacityId">
+            <summary>
+            Foreign key to laptop SSDCapacity unique identifier
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Laptop.SSDCapacity">
+            <summary>
+            Navigation property to laptop SSDCapacity
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Laptop.VideoCardId">
+            <summary>
+            Foreign key to laptop VideoCard unique identifier
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Laptop.VideoCard">
+            <summary>
+            Navigation property to laptop VideoCard
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Laptop.Price">
+            <summary>
+            Property that represents laptop price
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Laptop.TypeId">
+            <summary>
+            Foreign key to laptop Type unique identifier
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Laptop.Type">
+            <summary>
+            Navigation property to laptop Type
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Laptop.DisplaySizeId">
+            <summary>
+            Foreign key to laptop DisplaySize unique identifier
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Laptop.DisplaySize">
+            <summary>
+            Navigation property to laptop DisplaySize
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Laptop.DisplayCoverageId">
+            <summary>
+            Foreign key to laptop DisplayCoverage unique identifier
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Laptop.DisplayCoverage">
+            <summary>
+            Navigation property to laptop DisplayCoverage
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Laptop.DisplayTechnologyId">
+            <summary>
+            Foreign key to laptop DisplayTechnology unique identifier
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Laptop.DisplayTechnology">
+            <summary>
+            Navigation property to laptop DisplayTechnology
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Laptop.ResolutionId">
+            <summary>
+            Foreign key to laptop Resolution unique identifier
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Laptop.Resolution">
+            <summary>
+            Navigation property to laptop Resolution
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Laptop.ColorId">
+            <summary>
+            Foreign key to laptop Color unique identifier
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Laptop.Color">
+            <summary>
+            Navigation property to laptop Color
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Laptop.ImageUrl">
+            <summary>
+            Property that represents laptop image Url
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Laptop.Warranty">
+            <summary>
+            Property that represents laptop warranty
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Laptop.Quantity">
+            <summary>
+            Property that represents how many laptops are in stock
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Laptop.IsDeleted">
+            <summary>
+            Laptop availability
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Laptop.AddedOn">
+            <summary>
+            Property that represents the date when the laptop is added in the database
+            </summary>
+        </member>
+        <member name="T:PCShop.Infrastructure.Data.Models.Microphone">
+            <summary>
+            Microphone model
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Microphone.Id">
+            <summary>
+            Property that represents microphone unique identifier
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Microphone.BrandId">
+            <summary>
+            Foreign key to microphone Brand unique identifier
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Microphone.Brand">
+            <summary>
+            Navigation property to microphone Brand
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Microphone.Price">
+            <summary>
+            Property that represents microphone price
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Microphone.ColorId">
+            <summary>
+            Foreign key to microphone Color unique identifier
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Microphone.Color">
+            <summary>
+            Navigation property to microphone Color
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Microphone.ImageUrl">
+            <summary>
+            Property that represents microphone image Url
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Microphone.Warranty">
+            <summary>
+            Property that represents microphone warranty
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Microphone.Quantity">
+            <summary>
+            Property that represents how many microphones are in stock
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Microphone.IsDeleted">
+            <summary>
+            Property that represents microphone availability
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Microphone.AddedOn">
+            <summary>
+            Property that represents the date when the microphone is added in the database
+            </summary>
+        </member>
+        <member name="T:PCShop.Infrastructure.Data.Models.Monitor">
+            <summary>
+            Monitor model
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Monitor.Id">
+            <summary>
+            Property that represents monitor unique identifier
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Monitor.BrandId">
+            <summary>
+            Foreign key to monitor Brand unique identifier
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Monitor.Brand">
+            <summary>
+            Navigation property to monitor Brand
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Monitor.Price">
+            <summary>
+            Property that represents monitor price
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Monitor.DisplaySizeId">
+            <summary>
+            Foreign key to monitor DisplaySize unique identifier
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Monitor.DisplaySize">
+            <summary>
+            Navigation property to monitor DisplaySize
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Monitor.TypeId">
+            <summary>
+            Foreign key to monitor Type unique identifier
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Monitor.Type">
+            <summary>
+            Navigation property to monitor Type
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Monitor.DisplayCoverageId">
+            <summary>
+            Foreign key to monitor DisplayCoverage unique identifier
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Monitor.DisplayCoverage">
+            <summary>
+            Navigation property to monitor DisplayCoverage
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Monitor.DisplayTechnologyId">
+            <summary>
+            Foreign key to monitor DisplayTechnology unique identifier
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Monitor.DisplayTechnology">
+            <summary>
+            Navigation property to monitor DisplayTechnology
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Monitor.ResolutionId">
+            <summary>
+            Foreign key to monitor Resolution unique identifier
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Monitor.Resolution">
+            <summary>
+            Navigation property to monitor Resolution
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Monitor.RefreshRateId">
+            <summary>
+            Foreign key to monitor RefreshRate unique identifier
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Monitor.RefreshRate">
+            <summary>
+            Navigation property to monitor RefreshRate
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Monitor.ColorId">
+            <summary>
+            Foreign key to monitor Color unique identifier
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Monitor.Color">
+            <summary>
+            Navigation property to monitor Color
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Monitor.ImageUrl">
+            <summary>
+            Property that represents monitor image Url
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Monitor.Warranty">
+            <summary>
+            Property that represents monitor warranty
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Monitor.Quantity">
+            <summary>
+            Property that represents how many monitors are in stock
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Monitor.IsDeleted">
+            <summary>
+            Property that represents monitor availability
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Monitor.AddedOn">
+            <summary>
+            Property that represents the date when the monitor is added in the database
+            </summary>
+        </member>
+        <member name="T:PCShop.Infrastructure.Data.Models.Mouse">
+            <summary>
+            Mouse model
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Mouse.Id">
+            <summary>
+            Property that represents mouse unique identifier
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Mouse.BrandId">
+            <summary>
+            Foreign key to mouse Brand unique identifier
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Mouse.Brand">
+            <summary>
+            Navigation property to mouse Brand
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Mouse.Price">
+            <summary>
+            Property that represents mouse price
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Mouse.IsWireless">
+            <summary>
+            Property that represents if the mouse is wireless
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Mouse.TypeId">
+            <summary>
+            Foreign key to mouse Type unique identifier
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Mouse.Type">
+            <summary>
+            Navigation property to mouse Type
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Mouse.SensitivityId">
+            <summary>
+            Foreign key to mouse Sensitivity unique identifier
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Mouse.Sensitivity">
+            <summary>
+            Navigation property to mouse Sensitivity
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Mouse.ColorId">
+            <summary>
+            Foreign key to mouse Color unique identifier
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Mouse.Color">
+            <summary>
+            Navigation property to mouse Color
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Mouse.ImageUrl">
+            <summary>
+            Property that represents mouse image Url
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Mouse.Warranty">
+            <summary>
+            Property that represents mouse warranty
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Mouse.Quantity">
+            <summary>
+            Property that represents how many mice are in stock
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Mouse.IsDeleted">
+            <summary>
+            Property that represents mouse availability
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Mouse.AddedOn">
+            <summary>
+            Property that represents the date when the mouse is added in the database
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,638 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PCShop.DataGenerator</name>
+    </assembly>
+    <members>
+        <member name="T:PCShop.DataGenerator.Classes.BaseClass.Product">
+            <summary>
+            Base class for other classes
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Classes.BaseClass.Product.Brand">
+            <summary>
+            Property that represents product's brand
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Classes.BaseClass.Product.Color">
+            <summary>
+            Property that represents product's color
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Classes.BaseClass.Product.ImageUrl">
+            <summary>
+            Property that represents product's imageUrl
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Classes.BaseClass.Product.Warranty">
+            <summary>
+            Property that represents product's warranty
+            </summary>
+        </member>
+        <member name="T:PCShop.DataGenerator.Classes.GravitatingClasses.Brand">
+            <summary>
+            Brand model
+            </summary>
+        </member>
+        <member name="M:PCShop.DataGenerator.Classes.GravitatingClasses.Brand.#ctor">
+            <summary>
+            Constructor of Brand class
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Classes.GravitatingClasses.Brand.LaptopBrands">
+            <summary>
+            Property that represents a collection of laptop brands
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Classes.GravitatingClasses.Brand.MonitorBrands">
+            <summary>
+            Property that represents a collection of monitor brands
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Classes.GravitatingClasses.Brand.KeyboardBrands">
+            <summary>
+            Property that represents a collection of keyboard brands
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Classes.GravitatingClasses.Brand.MouseBrands">
+            <summary>
+            Property that represents a collection of mouse brands
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Classes.GravitatingClasses.Brand.HeadphoneBrands">
+            <summary>
+            Property that represents a collection of headphone brands
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Classes.GravitatingClasses.Brand.MicrophoneBrands">
+            <summary>
+            Property that represents a collection of microphone brands
+            </summary>
+        </member>
+        <member name="T:PCShop.DataGenerator.Classes.GravitatingClasses.Color">
+            <summary>
+            Color model
+            </summary>
+        </member>
+        <member name="M:PCShop.DataGenerator.Classes.GravitatingClasses.Color.#ctor">
+            <summary>
+            Constructor of Color class
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Classes.GravitatingClasses.Color.LaptopColors">
+            <summary>
+            Property that represents a collection of laptop colors
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Classes.GravitatingClasses.Color.MonitorColors">
+            <summary>
+            Property that represents a collection of monitor colors
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Classes.GravitatingClasses.Color.KeyboardColors">
+            <summary>
+            Property that represents a collection of keyboard colors
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Classes.GravitatingClasses.Color.MouseColors">
+            <summary>
+            Property that represents a collection of mouse colors
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Classes.GravitatingClasses.Color.HeadphoneColors">
+            <summary>
+            Property that represents a collection of headphone colors
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Classes.GravitatingClasses.Color.MicrophoneColors">
+            <summary>
+            Property that represents a collection of microphone colors
+            </summary>
+        </member>
+        <member name="T:PCShop.DataGenerator.Classes.GravitatingClasses.CPU">
+            <summary>
+            CPU model
+            </summary>
+        </member>
+        <member name="M:PCShop.DataGenerator.Classes.GravitatingClasses.CPU.#ctor">
+            <summary>
+            Constructor of CPU class
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Classes.GravitatingClasses.CPU.LaptopCPUs">
+            <summary>
+            Property that represents a collection of laptop CPUs
+            </summary>
+        </member>
+        <member name="T:PCShop.DataGenerator.Classes.GravitatingClasses.DisplayCoverage">
+            <summary>
+            Display conerage model
+            </summary>
+        </member>
+        <member name="M:PCShop.DataGenerator.Classes.GravitatingClasses.DisplayCoverage.#ctor">
+            <summary>
+            Constructor of DisplayCoverage class
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Classes.GravitatingClasses.DisplayCoverage.DisplayCoverages">
+            <summary>
+            Property that represents a collection of display coverages
+            </summary>
+        </member>
+        <member name="T:PCShop.DataGenerator.Classes.GravitatingClasses.DisplaySize">
+            <summary>
+            Display size model
+            </summary>
+        </member>
+        <member name="M:PCShop.DataGenerator.Classes.GravitatingClasses.DisplaySize.#ctor">
+            <summary>
+            Constructor of DisplaySize class
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Classes.GravitatingClasses.DisplaySize.LaptopDisplaySizes">
+            <summary>
+            Property that represents a collection of laptop display sizes
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Classes.GravitatingClasses.DisplaySize.MonitorDisplaySizes">
+            <summary>
+            Property that represents a collection of monitor display sizes
+            </summary>
+        </member>
+        <member name="T:PCShop.DataGenerator.Classes.GravitatingClasses.DisplayTechnology">
+            <summary>
+            Display technology model
+            </summary>
+        </member>
+        <member name="M:PCShop.DataGenerator.Classes.GravitatingClasses.DisplayTechnology.#ctor">
+            <summary>
+            Constructor of DisplayTechnology class
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Classes.GravitatingClasses.DisplayTechnology.DisplayTechnologies">
+            <summary>
+            Property that represents a collection of display technologies
+            </summary>
+        </member>
+        <member name="T:PCShop.DataGenerator.Classes.GravitatingClasses.Format">
+            <summary>
+            Format model
+            </summary>
+        </member>
+        <member name="M:PCShop.DataGenerator.Classes.GravitatingClasses.Format.#ctor">
+            <summary>
+            Constructor of Format class
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Classes.GravitatingClasses.Format.KeyboardFormats">
+            <summary>
+            Property that represents a collection of keyboard formats
+            </summary>
+        </member>
+        <member name="T:PCShop.DataGenerator.Classes.GravitatingClasses.ImageUrl">
+            <summary>
+            ImageUrl model
+            </summary>
+        </member>
+        <member name="M:PCShop.DataGenerator.Classes.GravitatingClasses.ImageUrl.#ctor">
+            <summary>
+            Constructor of ImageURL class
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Classes.GravitatingClasses.ImageUrl.LaptopImageUrls">
+            <summary>
+            Property that represents a collection of Urls of images of laptops
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Classes.GravitatingClasses.ImageUrl.MonitorImageUrls">
+            <summary>
+            Property that represents a collection of Urls of images of monitors
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Classes.GravitatingClasses.ImageUrl.KeyboardImageUrls">
+            <summary>
+            Property that represents a collection of Urls of images of keyboards
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Classes.GravitatingClasses.ImageUrl.MouseImageUrls">
+            <summary>
+            Property that represents a collection of Urls of images of mice
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Classes.GravitatingClasses.ImageUrl.HeadphoneImageUrls">
+            <summary>
+            Property that represents a collection of Urls of images of headphones
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Classes.GravitatingClasses.ImageUrl.MicrophoneImageUrls">
+            <summary>
+            Property that represents a collection of Urls of images of microphones
+            </summary>
+        </member>
+        <member name="T:PCShop.DataGenerator.Classes.GravitatingClasses.RAM">
+            <summary>
+            RAM model
+            </summary>
+        </member>
+        <member name="M:PCShop.DataGenerator.Classes.GravitatingClasses.RAM.#ctor">
+            <summary>
+            Constructor of RAM class
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Classes.GravitatingClasses.RAM.LaptopRAMs">
+            <summary>
+            Property that represents a collection of laptop RAMs
+            </summary>
+        </member>
+        <member name="T:PCShop.DataGenerator.Classes.GravitatingClasses.RefreshRate">
+            <summary>
+            RefreshRate model
+            </summary>
+        </member>
+        <member name="M:PCShop.DataGenerator.Classes.GravitatingClasses.RefreshRate.#ctor">
+            <summary>
+            Constructor of RefreshRate class
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Classes.GravitatingClasses.RefreshRate.RefreshRates">
+            <summary>
+            Property that represents a collection of monitor refresh rates
+            </summary>
+        </member>
+        <member name="T:PCShop.DataGenerator.Classes.GravitatingClasses.Resolution">
+            <summary>
+            Resolution model
+            </summary>
+        </member>
+        <member name="M:PCShop.DataGenerator.Classes.GravitatingClasses.Resolution.#ctor">
+            <summary>
+            Constructor of Resolution class
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Classes.GravitatingClasses.Resolution.LaptopResolutions">
+            <summary>
+            Property that represents a collection of laptop resolutions
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Classes.GravitatingClasses.Resolution.MonitorResolutions">
+            <summary>
+            Property that represents a collection of monitor resolutions
+            </summary>
+        </member>
+        <member name="T:PCShop.DataGenerator.Classes.GravitatingClasses.Sensitivity">
+            <summary>
+            Sensitivity model
+            </summary>
+        </member>
+        <member name="M:PCShop.DataGenerator.Classes.GravitatingClasses.Sensitivity.#ctor">
+            <summary>
+            Constructor of Sensitivity class
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Classes.GravitatingClasses.Sensitivity.MouseSensitivities">
+            <summary>
+            Property that represents a collection of mouse sensitivities
+            </summary>
+        </member>
+        <member name="T:PCShop.DataGenerator.Classes.GravitatingClasses.SSDCapacity">
+            <summary>
+            SSDCapacity model
+            </summary>
+        </member>
+        <member name="M:PCShop.DataGenerator.Classes.GravitatingClasses.SSDCapacity.#ctor">
+            <summary>
+            Constructor of SSDCapacity class
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Classes.GravitatingClasses.SSDCapacity.LaptopSSDCapacities">
+            <summary>
+            Property that represents a collection of laptop SSD capacities
+            </summary>
+        </member>
+        <member name="T:PCShop.DataGenerator.Classes.GravitatingClasses.Type">
+            <summary>
+            Type model
+            </summary>
+        </member>
+        <member name="M:PCShop.DataGenerator.Classes.GravitatingClasses.Type.#ctor">
+            <summary>
+            Constructor of Type class
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Classes.GravitatingClasses.Type.LaptopTypes">
+            <summary>
+            Property that represents a collection of laptop types
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Classes.GravitatingClasses.Type.MonitorTypes">
+            <summary>
+            Property that represents a collection of monitor types
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Classes.GravitatingClasses.Type.KeyboardTypes">
+            <summary>
+            Property that represents a collection of keyboard types
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Classes.GravitatingClasses.Type.MouseTypes">
+            <summary>
+            Property that represents a collection of mouse types
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Classes.GravitatingClasses.Type.HeadphoneTypes">
+            <summary>
+            Property that represents a collection of headphone types
+            </summary>
+        </member>
+        <member name="T:PCShop.DataGenerator.Classes.GravitatingClasses.VideoCard">
+            <summary>
+            Video card model
+            </summary>
+        </member>
+        <member name="M:PCShop.DataGenerator.Classes.GravitatingClasses.VideoCard.#ctor">
+            <summary>
+            Constructor of VideoCard class
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Classes.GravitatingClasses.VideoCard.LaptopVideoCards">
+            <summary>
+            Property that represents a collection of laptop video cards
+            </summary>
+        </member>
+        <member name="T:PCShop.DataGenerator.Classes.GravitatingClasses.Warranty">
+            <summary>
+            Warranty model
+            </summary>
+        </member>
+        <member name="M:PCShop.DataGenerator.Classes.GravitatingClasses.Warranty.#ctor">
+            <summary>
+            Constructor of Warranty class
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Classes.GravitatingClasses.Warranty.Warranties">
+            <summary>
+            Property that represents a collection of product warranties
+            </summary>
+        </member>
+        <member name="T:PCShop.DataGenerator.Classes.Headphone">
+            <summary>
+            Headphone model
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Classes.Headphone.Type">
+            <summary>
+            Property that represents headphone type
+            </summary>
+        </member>
+        <member name="T:PCShop.DataGenerator.Classes.Keyboard">
+            <summary>
+            Keyboard model
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Classes.Keyboard.Format">
+            <summary>
+            Property that represents keyboard format
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Classes.Keyboard.Type">
+            <summary>
+            Property that represents keyboard type
+            </summary>
+        </member>
+        <member name="T:PCShop.DataGenerator.Classes.Laptop">
+            <summary>
+            Laptop model
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Classes.Laptop.CPU">
+            <summary>
+            Property that represents laptop CPU
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Classes.Laptop.RAM">
+            <summary>
+            Property that represents laptop RAM
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Classes.Laptop.SSDCapacity">
+            <summary>
+            Property that represents laptop SSD capacity
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Classes.Laptop.VideoCard">
+            <summary>
+            Property that represents laptop video card
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Classes.Laptop.Type">
+            <summary>
+            Property that represents laptop type
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Classes.Laptop.DisplaySize">
+            <summary>
+            Property that represents laptop display size
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Classes.Laptop.DisplayCoverage">
+            <summary>
+            Property that represents laptop display coverage
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Classes.Laptop.DisplayTechnology">
+            <summary>
+            Property that represents laptop display technology
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Classes.Laptop.Resolution">
+            <summary>
+            Property that represents laptop display resolution
+            </summary>
+        </member>
+        <member name="T:PCShop.DataGenerator.Classes.Microphone">
+            <summary>
+            Microphone model
+            </summary>
+        </member>
+        <member name="T:PCShop.DataGenerator.Classes.Monitor">
+            <summary>
+            Monitor model
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Classes.Monitor.DisplaySize">
+            <summary>
+            Property that represents monitor display size
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Classes.Monitor.Type">
+            <summary>
+            Property that represents monitor type
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Classes.Monitor.DisplayTechnology">
+            <summary>
+            Property that represents monitor display technology
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Classes.Monitor.DisplayCoverage">
+            <summary>
+            Property that represents monitor display coverage
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Classes.Monitor.Resolution">
+            <summary>
+            Property that represents monitor display resolution
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Classes.Monitor.RefreshRate">
+            <summary>
+            Property that represents monitor refresh rate
+            </summary>
+        </member>
+        <member name="T:PCShop.DataGenerator.Classes.Mouse">
+            <summary>
+            Mouse model
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Classes.Mouse.Type">
+            <summary>
+            Property that represents mouse type
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Classes.Mouse.Sensitivity">
+            <summary>
+            Property that represents mouse sensitivity
+            </summary>
+        </member>
+        <member name="T:PCShop.DataGenerator.Constant">
+            <summary>
+            Class holding constants
+            </summary>
+        </member>
+        <member name="F:PCShop.DataGenerator.Constant.LaptopsCount">
+            <summary>
+            Constant for the count of laptops
+            </summary>
+        </member>
+        <member name="F:PCShop.DataGenerator.Constant.MonitorsCount">
+            <summary>
+            Constant for the count of monitors
+            </summary>
+        </member>
+        <member name="F:PCShop.DataGenerator.Constant.KeyboardsCount">
+            <summary>
+            Constant for the count of keyboards
+            </summary>
+        </member>
+        <member name="F:PCShop.DataGenerator.Constant.MiceCount">
+            <summary>
+            Constant for the count of mice
+            </summary>
+        </member>
+        <member name="F:PCShop.DataGenerator.Constant.HeadphonesCount">
+            <summary>
+            Constant for the count of headphones
+            </summary>
+        </member>
+        <member name="F:PCShop.DataGenerator.Constant.MicrophonesCount">
+            <summary>
+            Constant for the count of microphones
+            </summary>
+        </member>
+        <member name="T:PCShop.DataGenerator.Engine">
+            <summary>
+            Engine model
+            </summary>
+        </member>
+        <member name="M:PCShop.DataGenerator.Engine.#ctor">
+            <summary>
+            Constructor of Engine class
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Engine.Brands">
+            <summary>
+            Property that represents all brands by product type
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Engine.Colors">
+            <summary>
+            Property that represents all colors by product type
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Engine.CPUs">
+            <summary>
+            Property that represents all CPUs
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Engine.DisplayCoverages">
+            <summary>
+            Property that represents all displpay coverages by product type
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Engine.DisplaySizes">
+            <summary>
+            Property that represents all display sizes by product type
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Engine.DisplayTechnologies">
+            <summary>
+            Property that represents all display technologies
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Engine.Formats">
+            <summary>
+            Property that represents all keyboard formats
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Engine.ImageUrls">
+            <summary>
+            Property that represents all Urls of images by product type
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Engine.RAMs">
+            <summary>
+            Property that represents all laptop RAMs
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Engine.RefreshRates">
+            <summary>
+            Property that represents all monitor refresh rates
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Engine.Resolutions">
+            <summary>
+            Property that represents all resolutions by product type
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Engine.Sensitivities">
+            <summary>
+            Property that represents all mouse sensitivities
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Engine.SSDCapacities">
+            <summary>
+            Property that represents all laptop SSD capacities
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Engine.Types">
+            <summary>
+            Property that represents all types by product type
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Engine.VideoCards">
+            <summary>
+            Property that represents all laptop video cards
+            </summary>
+        </member>
+        <member name="P:PCShop.DataGenerator.Engine.Warranties">
+            <summary>
+            Property that represents all warranties
+            </summary>
+        </member>
+        <member name="M:PCShop.DataGenerator.Engine.Run">
+            <summary>
+            The "starting" method
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -3,7 +3,7 @@
 namespace PCShop.Infrastructure.Data.Models.GravitatingClasses
 {
     /// <summary>
-    /// Product color model
+    /// Color model
     /// </summary>
     public class Color
     {
@@ -21,43 +21,43 @@ namespace PCShop.Infrastructure.Data.Models.GravitatingClasses
         }
 
         /// <summary>
-        /// Color unique identifier
+        /// Property that represents color unique identifier
         /// </summary>
         public int Id { get; set; }
 
         /// <summary>
-        /// Color name
+        /// Property that represents color name
         /// </summary>
         [Required]
         public string Name { get; set; } = null!;
 
         /// <summary>
-        /// Collection of laptops
+        /// Property that represents a collection of laptops
         /// </summary>
         public virtual ICollection<Laptop> ColorLaptops { get; set; }
 
         /// <summary>
-        /// Collection of monitors
+        /// Property that represents a collection of monitors
         /// </summary>
         public virtual ICollection<Monitor> ColorMonitors { get; set; }
 
         /// <summary>
-        /// Collection of keyboards
+        /// Property that represents a collection of keyboards
         /// </summary>
         public virtual ICollection<Keyboard> ColorKeyboards { get; set; }
 
         /// <summary>
-        /// Collection of mice
+        /// Property that represents a collection of mice
         /// </summary>
         public virtual ICollection<Mouse> ColorMice { get; set; }
 
         /// <summary>
-        /// Collection of headphones
+        /// Property that represents a collection of headphones
         /// </summary>
         public virtual ICollection<Headphone> ColorHeadphones { get; set; }
 
         /// <summary>
-        /// Collection of microphones
+        /// Property that represents a collection of microphones
         /// </summary>
         public virtual ICollection<Microphone> ColorMicrophones { get; set; }
     }

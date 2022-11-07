@@ -8,7 +8,7 @@ namespace PCShop.Infrastructure.Data.Models
     public class Microphone
     {
         /// <summary>
-        /// Microphone unique identifier
+        /// Property that represents microphone unique identifier
         /// </summary>
         public int Id { get; set; }
 
@@ -23,7 +23,7 @@ namespace PCShop.Infrastructure.Data.Models
         public virtual Brand Brand { get; set; } = null!;
 
         /// <summary>
-        /// Microphone price
+        /// Property that represents microphone price
         /// </summary>
         public decimal Price { get; set; }
 
@@ -38,27 +38,27 @@ namespace PCShop.Infrastructure.Data.Models
         public virtual Color? Color { get; set; }
 
         /// <summary>
-        /// Microphone image Url
+        /// Property that represents microphone image Url
         /// </summary>
         public string? ImageUrl { get; set; }
 
         /// <summary>
-        /// Microphone warranty
+        /// Property that represents microphone warranty
         /// </summary>
         public int Warranty { get; set; }
 
         /// <summary>
-        /// Microphones in stock
+        /// Property that represents how many microphones are in stock
         /// </summary>
         public int Quantity { get; set; }
 
         /// <summary>
-        /// Microphone availability
+        /// Property that represents microphone availability
         /// </summary>
         public bool IsDeleted { get; set; }
 
         /// <summary>
-        /// Date when the microphone is added in the database
+        /// Property that represents the date when the microphone is added in the database
         /// </summary>
         public DateTime AddedOn { get; set; }
     }

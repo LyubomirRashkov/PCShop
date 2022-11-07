@@ -1,7 +1,7 @@
 ﻿namespace PCShop.DataGenerator.Classes.GravitatingClasses
 {
     /// <summary>
-    /// Class holding a collection of display technologies
+    /// Display technology model
     /// </summary>
     public class DisplayTechnology
     {
@@ -14,7 +14,7 @@
         }
 
         /// <summary>
-        /// Collection holding display technologies
+        /// Property that represents a collection of display technologies
         /// </summary>
         public IList<string> DisplayTechnologies { get; set; }
     }

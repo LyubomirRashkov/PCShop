@@ -1,7 +1,7 @@
 ﻿namespace PCShop.DataGenerator.Classes.GravitatingClasses
 {
     /// <summary>
-    /// Class holding collections of URLs of images by product type
+    /// ImageUrl model
     /// </summary>
     public class ImageUrl
     {
@@ -19,32 +19,32 @@
         }
 
         /// <summary>
-        /// Collection of URLs of images of laptops
+        /// Property that represents a collection of Urls of images of laptops
         /// </summary>
         public IList<string> LaptopImageUrls { get; set; }
 
         /// <summary>
-        /// Collection of URLs of images of monitors
+        /// Property that represents a collection of Urls of images of monitors
         /// </summary>
         public IList<string> MonitorImageUrls { get; set; }
 
         /// <summary>
-        /// Collection of URLs of images of keyboards
+        /// Property that represents a collection of Urls of images of keyboards
         /// </summary>
         public IList<string> KeyboardImageUrls { get; set; }
 
         /// <summary>
-        /// Collection of URLs of images of mice
+        /// Property that represents a collection of Urls of images of mice
         /// </summary>
         public IList<string> MouseImageUrls { get; set; }
 
         /// <summary>
-        /// Collection of URLs of images of headphones
+        /// Property that represents a collection of Urls of images of headphones
         /// </summary>
         public IList<string> HeadphoneImageUrls { get; set; }
 
         /// <summary>
-        /// Collection of URLs of images of microphones
+        /// Property that represents a collection of Urls of images of microphones
         /// </summary>
         public IList<string> MicrophoneImageUrls { get; set; }
     }

@@ -1,7 +1,7 @@
 ﻿namespace PCShop.DataGenerator.Classes.GravitatingClasses
 {
     /// <summary>
-    /// Class holding collections of types by product type
+    /// Type model
     /// </summary>
     public class Type
     {
@@ -18,27 +18,27 @@
         }
 
         /// <summary>
-        /// Collection of laptop types
+        /// Property that represents a collection of laptop types
         /// </summary>
         public IList<string> LaptopTypes { get; set; }
 
         /// <summary>
-        /// Collection of monitor types
+        /// Property that represents a collection of monitor types
         /// </summary>
         public IList<string> MonitorTypes { get; set; }
 
         /// <summary>
-        /// Collection of keyboard types
+        /// Property that represents a collection of keyboard types
         /// </summary>
         public IList<string> KeyboardTypes { get; set; }
-        
+
         /// <summary>
-        /// Collection of mouse types
+        /// Property that represents a collection of mouse types
         /// </summary>
         public IList<string> MouseTypes { get; set; }
-        
+
         /// <summary>
-        /// Collection of headphone types
+        /// Property that represents a collection of headphone types
         /// </summary>
         public IList<string> HeadphoneTypes { get; set; }
     }

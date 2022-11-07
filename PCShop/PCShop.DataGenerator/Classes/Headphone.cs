@@ -8,7 +8,7 @@ namespace PCShop.DataGenerator.Classes
     public class Headphone : Product
     {
         /// <summary>
-        /// Headphone type
+        /// Property that represents headphone type
         /// </summary>
         public string Type { get; set; } = null!;
     }

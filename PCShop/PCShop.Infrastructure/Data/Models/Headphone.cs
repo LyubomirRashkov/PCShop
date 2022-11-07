@@ -9,7 +9,7 @@ namespace PCShop.Infrastructure.Data.Models
     public class Headphone
     {
         /// <summary>
-        /// Headphone unique identifier
+        /// Property that represents headphone unique identifier
         /// </summary>
         public int Id { get; set; }
 
@@ -24,7 +24,7 @@ namespace PCShop.Infrastructure.Data.Models
         public virtual Brand Brand { get; set; } = null!;
 
         /// <summary>
-        /// Headphone price
+        /// Property that represents headphone price
         /// </summary>
         public decimal Price { get; set; }
 
@@ -39,12 +39,12 @@ namespace PCShop.Infrastructure.Data.Models
         public virtual Type Type { get; set; } = null!;
 
         /// <summary>
-        /// Headphone wireless (true / false)
+        /// Property that represents if the headphone is wireless
         /// </summary>
         public bool IsWireless { get; set; }
 
         /// <summary>
-        /// Headphone microphone (true / false)
+        /// Property that represents if the headphone has a microphone
         /// </summary>
         public bool HasMicrophone { get; set; }
 
@@ -59,27 +59,27 @@ namespace PCShop.Infrastructure.Data.Models
         public virtual Color? Color { get; set; }
 
         /// <summary>
-        /// Headphone image Url
+        /// Property that represents headphone image Url
         /// </summary>
         public string? ImageUrl { get; set; }
 
         /// <summary>
-        /// Headphone warranty
+        /// Property that represents headphone warranty
         /// </summary>
         public int Warranty { get; set; }
 
         /// <summary>
-        /// Headphones in stock
+        /// Property that represents how namy headphones are in stock
         /// </summary>
         public int Quantity { get; set; }
 
         /// <summary>
-        /// Headphone availability
+        /// Property that represents headphone availability
         /// </summary>
         public bool IsDeleted { get; set; }
 
         /// <summary>
-        /// Date when the mouse is added in the database
+        /// Property that represents the date when the headphone is added in the database
         /// </summary>
         public DateTime AddedOn { get; set; }
     }

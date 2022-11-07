@@ -9,7 +9,7 @@ namespace PCShop.Infrastructure.Data.Models
     public class Keyboard
     {
         /// <summary>
-        /// Keyboard unique identifier
+        /// Property that represents keyboard unique identifier
         /// </summary>
         public int Id { get; set; }
 
@@ -24,12 +24,12 @@ namespace PCShop.Infrastructure.Data.Models
         public virtual Brand Brand { get; set; } = null!;
 
         /// <summary>
-        /// Keyboard price
+        /// Property that represents keyboard price
         /// </summary>
         public decimal Price { get; set; }
 
         /// <summary>
-        /// Keyboard wireless (true / false)
+        /// Property that represents if the keyboard is wireless
         /// </summary>
         public bool IsWireless { get; set; }
 
@@ -64,27 +64,27 @@ namespace PCShop.Infrastructure.Data.Models
         public virtual Color? Color { get; set; }
 
         /// <summary>
-        /// Keyboard image Url
+        /// Property that represents keyboard image Url
         /// </summary>
         public string? ImageUrl { get; set; }
 
         /// <summary>
-        /// Keyboard warranty
+        /// Property that represents keyboard warranty
         /// </summary>
         public int Warranty { get; set; }
 
         /// <summary>
-        /// Keyboards in stock
+        /// Property that represents how many keyboards are in stock
         /// </summary>
         public int Quantity { get; set; }
 
         /// <summary>
-        /// Keyboard availability
+        /// Property that represents keyboard availability
         /// </summary>
         public bool IsDeleted { get; set; }
 
         /// <summary>
-        /// Date when the keyboard is added in the database
+        /// Property that represents the date when the keyboard is added in the database
         /// </summary>
         public DateTime AddedOn { get; set; }
     }

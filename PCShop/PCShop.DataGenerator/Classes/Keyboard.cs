@@ -8,12 +8,12 @@ namespace PCShop.DataGenerator.Classes
     public class Keyboard : Product
     {
         /// <summary>
-        /// Keyboard format
+        /// Property that represents keyboard format
         /// </summary>
         public string Format { get; set; } = null!;
 
         /// <summary>
-        /// Keyboard type
+        /// Property that represents keyboard type
         /// </summary>
         public string Type { get; set; } = null!;
     }

@@ -1,7 +1,7 @@
 ﻿namespace PCShop.DataGenerator.Classes.GravitatingClasses
 {
     /// <summary>
-    /// Class holding a collection of laptop SSD capacities
+    /// SSDCapacity model
     /// </summary>
     public class SSDCapacity
     {
@@ -14,7 +14,7 @@
         }
 
         /// <summary>
-        /// Collection of laptop SSD capacities
+        /// Property that represents a collection of laptop SSD capacities
         /// </summary>
         public IList<int> LaptopSSDCapacities { get; set; }
     }

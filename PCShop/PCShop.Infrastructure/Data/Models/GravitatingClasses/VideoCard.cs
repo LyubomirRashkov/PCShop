@@ -3,7 +3,7 @@
 namespace PCShop.Infrastructure.Data.Models.GravitatingClasses
 {
     /// <summary>
-    /// Product video card model
+    /// Video card model
     /// </summary>
     public class VideoCard
     {
@@ -16,18 +16,18 @@ namespace PCShop.Infrastructure.Data.Models.GravitatingClasses
         }
 
         /// <summary>
-        /// VideoCard unique identifier
+        /// Property that represents videoCard unique identifier
         /// </summary>
         public int Id { get; set; }
 
         /// <summary>
-        /// VideoCard name
+        /// Property that represents videoCard name
         /// </summary>
         [Required]
         public string Name { get; set; } = null!;
 
         /// <summary>
-        /// Collection of laptops
+        /// Property that represents a collection of laptops
         /// </summary>
         public virtual ICollection<Laptop> VideoCardLaptops { get; set; }
     }

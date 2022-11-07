@@ -1,7 +1,7 @@
 ﻿namespace PCShop.DataGenerator.Classes.GravitatingClasses
 {
     /// <summary>
-    /// Class holding a collection of keyboard formats
+    /// Format model
     /// </summary>
     public class Format
     {
@@ -14,7 +14,7 @@
         }
 
         /// <summary>
-        /// Collection of keyboard formats
+        /// Property that represents a collection of keyboard formats
         /// </summary>
         public IList<string> KeyboardFormats { get; set; }
     }

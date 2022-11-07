@@ -1,7 +1,7 @@
 ﻿namespace PCShop.DataGenerator.Classes.GravitatingClasses
 {
     /// <summary>
-    /// Class holding a collection of laptop CPUs
+    /// CPU model
     /// </summary>
     public class CPU
     {
@@ -14,7 +14,7 @@
         }
 
         /// <summary>
-        /// Collection holding laptop CPUs
+        /// Property that represents a collection of laptop CPUs
         /// </summary>
         public IList<string> LaptopCPUs { get; set; }
     }

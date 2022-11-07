@@ -1,7 +1,7 @@
 ﻿namespace PCShop.Infrastructure.Data.Models.GravitatingClasses
 {
     /// <summary>
-    /// Product display size model
+    /// Display size model
     /// </summary>
     public class DisplaySize
     {
@@ -15,22 +15,22 @@
         }
 
         /// <summary>
-        /// DisplaySize unique identifier
+        /// Property that represents displaySize unique identifier
         /// </summary>
         public int Id { get; set; }
 
         /// <summary>
-        /// DisplaySize value
+        /// Property that represents displaySize value
         /// </summary>
         public double Value { get; set; }
 
         /// <summary>
-        /// Collection of laptops
+        /// Property that represents a collection of laptops
         /// </summary>
         public virtual ICollection<Laptop> DisplaySizeLaptops { get; set; }
 
         /// <summary>
-        /// Collection of monitors
+        /// Property that represents a collection of monitors
         /// </summary>
         public virtual ICollection<Monitor> DisplaySizeMonitors { get; set; }
     }

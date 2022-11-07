@@ -1,7 +1,7 @@
 ﻿namespace PCShop.Infrastructure.Data.Models.GravitatingClasses
 {
     /// <summary>
-    /// Product SSD capacity model
+    /// SSD capacity model
     /// </summary>
     public class SSDCapacity
     {
@@ -14,17 +14,17 @@
         }
 
         /// <summary>
-        /// SSDCapacity unique identifier
+        /// Property that represents SSDCapacity unique identifier
         /// </summary>
         public int Id { get; set; }
 
         /// <summary>
-        /// SSDCapacity value
+        /// Property that represents SSDCapacity value
         /// </summary>
         public int Value { get; set; }
 
         /// <summary>
-        /// Collection of laptops
+        /// Property that represents a collection of laptops
         /// </summary>
         public virtual ICollection<Laptop> SSDCapacityLaptops { get; set; }
     }

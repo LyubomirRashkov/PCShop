@@ -1,7 +1,7 @@
 ﻿namespace PCShop.DataGenerator.Classes.GravitatingClasses
 {
     /// <summary>
-    /// Class holding collections of display sizes by product type
+    /// Display size model
     /// </summary>
     public class DisplaySize
     {
@@ -15,12 +15,12 @@
         }
 
         /// <summary>
-        /// Collection of laptop display sizes
+        /// Property that represents a collection of laptop display sizes
         /// </summary>
         public IList<double> LaptopDisplaySizes { get; set; }
 
         /// <summary>
-        /// Collection of monitor display sizes
+        /// Property that represents a collection of monitor display sizes
         /// </summary>
         public IList<double> MonitorDisplaySizes { get; set; }
     }

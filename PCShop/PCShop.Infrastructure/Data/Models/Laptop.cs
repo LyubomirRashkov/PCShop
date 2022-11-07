@@ -9,7 +9,7 @@ namespace PCShop.Infrastructure.Data.Models
     public class Laptop
     {
         /// <summary>
-        /// Laptop unique identifier
+        /// Property that represents laptop unique identifier
         /// </summary>
         public int Id { get; set; }
 
@@ -64,7 +64,7 @@ namespace PCShop.Infrastructure.Data.Models
         public virtual VideoCard VideoCard { get; set; } = null!;
 
         /// <summary>
-        /// Laptop price
+        /// Property that represents laptop price
         /// </summary>
         public decimal Price { get; set; }
 
@@ -129,17 +129,17 @@ namespace PCShop.Infrastructure.Data.Models
         public virtual Color? Color { get; set; }
 
         /// <summary>
-        /// Laptop image Url
+        /// Property that represents laptop image Url
         /// </summary>
         public string? ImageUrl { get; set; }
 
         /// <summary>
-        /// Laptop warranty
+        /// Property that represents laptop warranty
         /// </summary>
         public int Warranty { get; set; }
 
         /// <summary>
-        /// Laptops in stock
+        /// Property that represents how many laptops are in stock
         /// </summary>
         public int Quantity { get; set; }
 
@@ -149,7 +149,7 @@ namespace PCShop.Infrastructure.Data.Models
         public bool IsDeleted { get; set; }
 
         /// <summary>
-        /// Date when the laptop is added in the database
+        /// Property that represents the date when the laptop is added in the database
         /// </summary>
         public DateTime AddedOn { get; set; }
     }

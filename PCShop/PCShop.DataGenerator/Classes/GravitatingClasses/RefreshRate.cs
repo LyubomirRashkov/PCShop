@@ -1,7 +1,7 @@
 ﻿namespace PCShop.DataGenerator.Classes.GravitatingClasses
 {
     /// <summary>
-    /// Class holding a collection of monitor refresh rates
+    /// RefreshRate model
     /// </summary>
     public class RefreshRate
     {
@@ -14,7 +14,7 @@
         }
 
         /// <summary>
-        /// Collection of monitor refresh rates
+        /// Property that represents a collection of monitor refresh rates
         /// </summary>
         public IList<int> RefreshRates { get; set; }
     }

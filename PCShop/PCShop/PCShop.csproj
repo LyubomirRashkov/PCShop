@@ -5,6 +5,8 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UserSecretsId>aspnet-PCShop-63A114F9-784A-4100-A534-E752D04723CC</UserSecretsId>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <DocumentationFile>PCShop.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>

@@ -3,7 +3,7 @@
 namespace PCShop.Infrastructure.Data.Models.GravitatingClasses
 {
     /// <summary>
-    /// Product resolution model
+    /// Resolution model
     /// </summary>
     public class Resolution
     {
@@ -17,23 +17,23 @@ namespace PCShop.Infrastructure.Data.Models.GravitatingClasses
         }
 
         /// <summary>
-        /// Resolution unique identifier
+        /// Property that represents resolution unique identifier
         /// </summary>
         public int Id { get; set; }
 
         /// <summary>
-        /// Resolution value
+        /// Property that represents resolution value
         /// </summary>
         [Required]
         public string Value { get; set; } = null!;
 
         /// <summary>
-        /// Collection of laptops
+        /// Property that represents a collection of laptops
         /// </summary>
         public virtual ICollection<Laptop> ResolutionLaptops { get; set; }
 
         /// <summary>
-        /// Collection of monitors
+        /// Property that represents a collection of monitors
         /// </summary>
         public virtual ICollection<Monitor> ResolutionMonitors { get; set; }
     }

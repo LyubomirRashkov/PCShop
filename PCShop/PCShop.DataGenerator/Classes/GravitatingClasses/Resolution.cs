@@ -1,7 +1,7 @@
 ﻿namespace PCShop.DataGenerator.Classes.GravitatingClasses
 {
     /// <summary>
-    /// Class holding collections of resolutions by product type
+    /// Resolution model
     /// </summary>
     public class Resolution
     {
@@ -15,12 +15,12 @@
         }
 
         /// <summary>
-        /// Collection of laptop resolutions
+        /// Property that represents a collection of laptop resolutions
         /// </summary>
         public IList<string> LaptopResolutions { get; set; }
 
         /// <summary>
-        /// Collection of monitor resolutions
+        /// Property that represents a collection of monitor resolutions
         /// </summary>
         public IList<string> MonitorResolutions { get; set; }
     }

@@ -1,7 +1,7 @@
 ﻿namespace PCShop.DataGenerator.Classes.GravitatingClasses
 {
     /// <summary>
-    /// Class holding a collection of product warranties
+    /// Warranty model
     /// </summary>
     public class Warranty
     {
@@ -14,7 +14,7 @@
         }
 
         /// <summary>
-        /// Collection of product warranties
+        /// Property that represents a collection of product warranties
         /// </summary>
         public IList<int> Warranties { get; set; }
     }

@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PCShop</name>
+    </assembly>
+    <members>
+        <member name="T:PCShop.Controllers.AccountController">
+            <summary>
+            Account controller class
+            </summary>
+        </member>
+        <member name="M:PCShop.Controllers.AccountController.#ctor(Microsoft.AspNetCore.Identity.UserManager{PCShop.Infrastructure.Data.Models.Account.User},Microsoft.AspNetCore.Identity.SignInManager{PCShop.Infrastructure.Data.Models.Account.User})">
+            <summary>
+            Constructor of AccountController class
+            </summary>
+            <param name="userManager">The UserManager<c>User</c></param>
+            <param name="signInManager">The SignInManager<c>User</c></param>
+        </member>
+        <member name="M:PCShop.Controllers.AccountController.SignUp">
+            <summary>
+            HttpGet action for signing up
+            </summary>
+            <returns>A page that contains a form that must be filled</returns>
+        </member>
+        <member name="M:PCShop.Controllers.AccountController.SignUp(PCShop.Core.Models.User.SignUpViewModel)">
+            <summary>
+            HttpPost action for signing up
+            </summary>
+            <param name="model">The model that is filled by the user</param>
+            <returns>If the model is valid creates the user, signs in the user and returns the home page. If there is an error returns the model</returns>
+        </member>
+        <member name="M:PCShop.Controllers.AccountController.SignIn">
+            <summary>
+            HttpGet action for signing in
+            </summary>
+            <returns>A page that contains a form that must be filled</returns>
+        </member>
+        <member name="M:PCShop.Controllers.AccountController.SignIn(PCShop.Core.Models.User.SignInViewModel)">
+            <summary>
+            HttpPost action for signing in
+            </summary>
+            <param name="model">The model that is filled by the user</param>
+            <returns>If the model is valid signs in the user and returns the home page. If there is an error returns the model</returns>
+        </member>
+        <member name="M:PCShop.Controllers.AccountController.Signout">
+            <summary>
+            Action for signing out
+            </summary>
+            <returns>The home page</returns>
+        </member>
+        <member name="T:PCShop.Controllers.HomeController">
+            <summary>
+            Home controller class
+            </summary>
+        </member>
+        <member name="M:PCShop.Controllers.HomeController.Index">
+            <summary>
+            Action that returns the home page
+            </summary>
+            <returns>The home page</returns>
+        </member>
+    </members>
+</doc>

@@ -1,7 +1,7 @@
 ﻿namespace PCShop.DataGenerator.Classes.GravitatingClasses
 {
     /// <summary>
-    /// Class holding a collection of display coverages
+    /// Display conerage model
     /// </summary>
     public class DisplayCoverage
     {
@@ -14,7 +14,7 @@
         }
 
         /// <summary>
-        /// Collection holding display coverages
+        /// Property that represents a collection of display coverages
         /// </summary>
         public IList<string> DisplayCoverages { get; set; }
     }

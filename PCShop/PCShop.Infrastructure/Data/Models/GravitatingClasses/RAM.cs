@@ -1,7 +1,7 @@
 ﻿namespace PCShop.Infrastructure.Data.Models.GravitatingClasses
 {
     /// <summary>
-    /// Product RAM model
+    /// RAM model
     /// </summary>
     public class RAM
     {
@@ -14,17 +14,17 @@
         }
 
         /// <summary>
-        /// RAM unique identifier
+        /// Property that represents RAM unique identifier
         /// </summary>
         public int Id { get; set; }
 
         /// <summary>
-        /// RAM value
+        /// Property that represents RAM value
         /// </summary>
         public int Value { get; set; }
 
         /// <summary>
-        /// Collection of laptops
+        /// Property that represents a collection of laptops
         /// </summary>
         public virtual ICollection<Laptop> RAMLaptops { get; set; }
     }

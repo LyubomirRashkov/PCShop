@@ -9,7 +9,7 @@ namespace PCShop.Infrastructure.Data.Models
     public class Monitor
     {
         /// <summary>
-        /// Monitor unique identifier
+        /// Property that represents monitor unique identifier
         /// </summary>
         public int Id { get; set; }
 
@@ -24,7 +24,7 @@ namespace PCShop.Infrastructure.Data.Models
         public virtual Brand Brand { get; set; } = null!;
 
         /// <summary>
-        /// Monitor price
+        /// Property that represents monitor price
         /// </summary>
         public decimal Price { get; set; }
 
@@ -99,27 +99,27 @@ namespace PCShop.Infrastructure.Data.Models
         public virtual Color? Color { get; set; }
 
         /// <summary>
-        /// Monitor image Url
+        /// Property that represents monitor image Url
         /// </summary>
         public string? ImageUrl { get; set; }
 
         /// <summary>
-        /// Monitor warranty
+        /// Property that represents monitor warranty
         /// </summary>
         public int Warranty { get; set; }
 
         /// <summary>
-        /// Monitors in stock
+        /// Property that represents how many monitors are in stock
         /// </summary>
         public int Quantity { get; set; }
 
         /// <summary>
-        /// Monitor availability
+        /// Property that represents monitor availability
         /// </summary>
         public bool IsDeleted { get; set; }
 
         /// <summary>
-        /// Date when the monitor is added in the database
+        /// Property that represents the date when the monitor is added in the database
         /// </summary>
         public DateTime AddedOn { get; set; }
     }

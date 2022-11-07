@@ -1,7 +1,7 @@
 ﻿namespace PCShop.DataGenerator.Classes.GravitatingClasses
 {
     /// <summary>
-    /// Class holding collections of colors by product type
+    /// Color model
     /// </summary>
     public class Color
     {
@@ -19,32 +19,32 @@
         }
 
         /// <summary>
-        /// Collection of laptop colors
+        /// Property that represents a collection of laptop colors
         /// </summary>
         public IList<string> LaptopColors { get; set; }
 
         /// <summary>
-        /// Collection of monitor colors
+        /// Property that represents a collection of monitor colors
         /// </summary>
         public IList<string> MonitorColors { get; set; }
 
         /// <summary>
-        /// Collection of keyboard colors
+        /// Property that represents a collection of keyboard colors
         /// </summary>
         public IList<string> KeyboardColors { get; set; }
 
         /// <summary>
-        /// Collection of mouse colors
+        /// Property that represents a collection of mouse colors
         /// </summary>
         public IList<string> MouseColors { get; set; }
 
         /// <summary>
-        /// Collection of headphone colors
+        /// Property that represents a collection of headphone colors
         /// </summary>
         public IList<string> HeadphoneColors { get; set; }
 
         /// <summary>
-        /// Collection of microphone colors
+        /// Property that represents a collection of microphone colors
         /// </summary>
         public IList<string> MicrophoneColors { get; set; }
     }

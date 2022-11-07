@@ -9,7 +9,7 @@ namespace PCShop.Infrastructure.Data.Models
     public class Mouse
     {
         /// <summary>
-        /// Mouse unique identifier
+        /// Property that represents mouse unique identifier
         /// </summary>
         public int Id { get; set; }
 
@@ -24,12 +24,12 @@ namespace PCShop.Infrastructure.Data.Models
         public virtual Brand Brand { get; set; } = null!;
 
         /// <summary>
-        /// Mouse price
+        /// Property that represents mouse price
         /// </summary>
         public decimal Price { get; set; }
 
         /// <summary>
-        /// Mouse wireless (true / false)
+        /// Property that represents if the mouse is wireless
         /// </summary>
         public bool IsWireless { get; set; }
 
@@ -64,27 +64,27 @@ namespace PCShop.Infrastructure.Data.Models
         public virtual Color? Color { get; set; }
 
         /// <summary>
-        /// Mouse image Url
+        /// Property that represents mouse image Url
         /// </summary>
         public string? ImageUrl { get; set; }
 
         /// <summary>
-        /// Mouse warranty
+        /// Property that represents mouse warranty
         /// </summary>
         public int Warranty { get; set; }
 
         /// <summary>
-        /// Mice in stock
+        /// Property that represents how many mice are in stock
         /// </summary>
         public int Quantity { get; set; }
 
         /// <summary>
-        /// Mouse availability
+        /// Property that represents mouse availability
         /// </summary>
         public bool IsDeleted { get; set; }
 
         /// <summary>
-        /// Date when the mouse is added in the database
+        /// Property that represents the date when the mouse is added in the database
         /// </summary>
         public DateTime AddedOn { get; set; }
     }

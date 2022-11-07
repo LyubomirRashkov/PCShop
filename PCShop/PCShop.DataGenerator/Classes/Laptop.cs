@@ -8,47 +8,47 @@ namespace PCShop.DataGenerator.Classes
     public class Laptop : Product
     {
         /// <summary>
-        /// Laptop CPU
+        /// Property that represents laptop CPU
         /// </summary>
         public string CPU { get; set; } = null!;
 
         /// <summary>
-        /// Laptop RAM
+        /// Property that represents laptop RAM
         /// </summary>
         public int RAM { get; set; }
 
         /// <summary>
-        /// Laptop SSD capacity
+        /// Property that represents laptop SSD capacity
         /// </summary>
         public int SSDCapacity { get; set; }
 
         /// <summary>
-        /// Laptop video card
+        /// Property that represents laptop video card
         /// </summary>
         public string VideoCard { get; set; } = null!;
 
         /// <summary>
-        /// Laptop type
+        /// Property that represents laptop type
         /// </summary>
         public string Type { get; set; } = null!;
 
         /// <summary>
-        /// Laptop display size
+        /// Property that represents laptop display size
         /// </summary>
         public double DisplaySize { get; set; }
 
         /// <summary>
-        /// Laptop display coverage
+        /// Property that represents laptop display coverage
         /// </summary>
         public string DisplayCoverage { get; set; } = null!;
 
         /// <summary>
-        /// Laptop display technology
+        /// Property that represents laptop display technology
         /// </summary>
         public string DisplayTechnology { get; set; } = null!;
 
         /// <summary>
-        /// Laptop display resolution
+        /// Property that represents laptop display resolution
         /// </summary>
         public string Resolution { get; set; } = null!;
     }

@@ -1,0 +1,335 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PCShop.DataSeeder</name>
+    </assembly>
+    <members>
+        <member name="T:PCShop.DataSeeder.Constant">
+            <summary>
+            Class holding constants
+            </summary>
+        </member>
+        <member name="T:PCShop.DataSeeder.Constant.Configuration">
+            <summary>
+            Class holding configuration constants
+            </summary>
+        </member>
+        <member name="F:PCShop.DataSeeder.Constant.Configuration.ConnectionString">
+            <summary>
+            Constant for the connection string
+            </summary>
+        </member>
+        <member name="T:PCShop.DataSeeder.Constant.Laptop">
+            <summary>
+            Class holding laptop constants
+            </summary>
+        </member>
+        <member name="F:PCShop.DataSeeder.Constant.Laptop.LaptopsSourcePath">
+            <summary>
+            Constant fot the laptops source path
+            </summary>
+        </member>
+        <member name="F:PCShop.DataSeeder.Constant.Laptop.LaptopPriceMinValue">
+            <summary>
+            Constant for the min value of the laptop price
+            </summary>
+        </member>
+        <member name="F:PCShop.DataSeeder.Constant.Laptop.LaptopPriceMaxValue">
+            <summary>
+            Constant for the max value of the laptop price
+            </summary>
+        </member>
+        <member name="F:PCShop.DataSeeder.Constant.Laptop.LaptopQuantityMinValue">
+            <summary>
+            Constant for the min value of the laptop quantity
+            </summary>
+        </member>
+        <member name="F:PCShop.DataSeeder.Constant.Laptop.LaptopQuantityMaxValue">
+            <summary>
+            Constant for the max value of the laptop quantity
+            </summary>
+        </member>
+        <member name="T:PCShop.DataSeeder.Constant.Monitor">
+            <summary>
+            Class holding monitor constants
+            </summary>
+        </member>
+        <member name="F:PCShop.DataSeeder.Constant.Monitor.MonitorsSourcePath">
+            <summary>
+            Constant fot the monitors source path
+            </summary>
+        </member>
+        <member name="F:PCShop.DataSeeder.Constant.Monitor.MonitorPriceMinValue">
+            <summary>
+            Constant for the min value of the monitor price
+            </summary>
+        </member>
+        <member name="F:PCShop.DataSeeder.Constant.Monitor.MonitorPriceMaxValue">
+            <summary>
+            Constant for the max value of the monitor price
+            </summary>
+        </member>
+        <member name="F:PCShop.DataSeeder.Constant.Monitor.MonitorQuantityMinValue">
+            <summary>
+            Constant for the min value of the monitor quantity
+            </summary>
+        </member>
+        <member name="F:PCShop.DataSeeder.Constant.Monitor.MonitorQuantityMaxValue">
+            <summary>
+            Constant for the max value of the monitor quantity
+            </summary>
+        </member>
+        <member name="T:PCShop.DataSeeder.Constant.Keyboard">
+            <summary>
+            Class holding keyboard constants
+            </summary>
+        </member>
+        <member name="F:PCShop.DataSeeder.Constant.Keyboard.KeyboardsSourcePath">
+            <summary>
+            Constant fot the keyboards source path
+            </summary>
+        </member>
+        <member name="F:PCShop.DataSeeder.Constant.Keyboard.KeyboardPriceMinValue">
+            <summary>
+            Constant for the min value of the keyboard price
+            </summary>
+        </member>
+        <member name="F:PCShop.DataSeeder.Constant.Keyboard.KeyboardPriceMaxValue">
+            <summary>
+            Constant for the max value of the keyboard price
+            </summary>
+        </member>
+        <member name="F:PCShop.DataSeeder.Constant.Keyboard.KeyboardQuantityMinValue">
+            <summary>
+            Constant for the min value of the keyboard quantity
+            </summary>
+        </member>
+        <member name="F:PCShop.DataSeeder.Constant.Keyboard.KeyboardQuantityMaxValue">
+            <summary>
+            Constant for the max value of the keyboard quantity
+            </summary>
+        </member>
+        <member name="T:PCShop.DataSeeder.Constant.Mouse">
+            <summary>
+            Class holding mouse constants
+            </summary>
+        </member>
+        <member name="F:PCShop.DataSeeder.Constant.Mouse.MiceSourcePath">
+            <summary>
+            Constant fot the mice source path
+            </summary>
+        </member>
+        <member name="F:PCShop.DataSeeder.Constant.Mouse.MousePriceMinValue">
+            <summary>
+            Constant for the min value of the mouse price
+            </summary>
+        </member>
+        <member name="F:PCShop.DataSeeder.Constant.Mouse.MousePriceMaxValue">
+            <summary>
+            Constant for the max value of the mouse price
+            </summary>
+        </member>
+        <member name="F:PCShop.DataSeeder.Constant.Mouse.MouseQuantityMinValue">
+            <summary>
+            Constant for the min value of the mouse quantity
+            </summary>
+        </member>
+        <member name="F:PCShop.DataSeeder.Constant.Mouse.MouseQuantityMaxValue">
+            <summary>
+            Constant for the max value of the mouse quantity
+            </summary>
+        </member>
+        <member name="T:PCShop.DataSeeder.Constant.Headphone">
+            <summary>
+            Class holding headphone constants
+            </summary>
+        </member>
+        <member name="F:PCShop.DataSeeder.Constant.Headphone.HeadphonesSourcePath">
+            <summary>
+            Constant fot the headphones source path
+            </summary>
+        </member>
+        <member name="F:PCShop.DataSeeder.Constant.Headphone.HeadphonePriceMinValue">
+            <summary>
+            Constant for the min value of the headphone price
+            </summary>
+        </member>
+        <member name="F:PCShop.DataSeeder.Constant.Headphone.HeadphonePriceMaxValue">
+            <summary>
+            Constant for the max value of the headphone price
+            </summary>
+        </member>
+        <member name="F:PCShop.DataSeeder.Constant.Headphone.HeadphoneQuantityMinValue">
+            <summary>
+            Constant for the min value of the headphone quantity
+            </summary>
+        </member>
+        <member name="F:PCShop.DataSeeder.Constant.Headphone.HeadphoneQuantityMaxValue">
+            <summary>
+            Constant for the max value of the headphone quantity
+            </summary>
+        </member>
+        <member name="T:PCShop.DataSeeder.Constant.Microphone">
+            <summary>
+            Class holding microphone constants
+            </summary>
+        </member>
+        <member name="F:PCShop.DataSeeder.Constant.Microphone.MicrophonesSourcePath">
+            <summary>
+            Constant fot the microphones source path
+            </summary>
+        </member>
+        <member name="F:PCShop.DataSeeder.Constant.Microphone.MicrophonePriceMinValue">
+            <summary>
+            Constant for the min value of the microphone price
+            </summary>
+        </member>
+        <member name="F:PCShop.DataSeeder.Constant.Microphone.MicrophonePriceMaxValue">
+            <summary>
+            Constant for the max value of the microphone price
+            </summary>
+        </member>
+        <member name="F:PCShop.DataSeeder.Constant.Microphone.MicrophoneQuantityMinValue">
+            <summary>
+            Constant for the min value of the microphone quantity
+            </summary>
+        </member>
+        <member name="F:PCShop.DataSeeder.Constant.Microphone.MicrophoneQuantityMaxValue">
+            <summary>
+            Constant for the max value of the microphone quantity
+            </summary>
+        </member>
+        <member name="T:PCShop.DataSeeder.PCShopDbContext">
+            <summary>
+            The "DbContext" model used for seeding the database
+            </summary>
+        </member>
+        <member name="P:PCShop.DataSeeder.PCShopDbContext.Laptops">
+            <summary>
+            Property that represents a collection of laptops
+            </summary>
+        </member>
+        <member name="P:PCShop.DataSeeder.PCShopDbContext.Monitors">
+            <summary>
+            Property that represents a collection of monitors
+            </summary>
+        </member>
+        <member name="P:PCShop.DataSeeder.PCShopDbContext.Keyboards">
+            <summary>
+            Property that represents a collection of keyboards
+            </summary>
+        </member>
+        <member name="P:PCShop.DataSeeder.PCShopDbContext.Mice">
+            <summary>
+            Property that represents a collection of mice
+            </summary>
+        </member>
+        <member name="P:PCShop.DataSeeder.PCShopDbContext.Headphones">
+            <summary>
+            Property that represents a collection of headphones
+            </summary>
+        </member>
+        <member name="P:PCShop.DataSeeder.PCShopDbContext.Microphones">
+            <summary>
+            Property that represents a collection of microphones
+            </summary>
+        </member>
+        <member name="P:PCShop.DataSeeder.PCShopDbContext.Brands">
+            <summary>
+            Property that represents a collection of brands
+            </summary>
+        </member>
+        <member name="P:PCShop.DataSeeder.PCShopDbContext.Colors">
+            <summary>
+            Property that represents a collection of colors
+            </summary>
+        </member>
+        <member name="P:PCShop.DataSeeder.PCShopDbContext.CPUs">
+            <summary>
+            Property that represents a collection of CPUs
+            </summary>
+        </member>
+        <member name="P:PCShop.DataSeeder.PCShopDbContext.DisplayCoverages">
+            <summary>
+            Property that represents a collection of display coverages
+            </summary>
+        </member>
+        <member name="P:PCShop.DataSeeder.PCShopDbContext.DisplaySizes">
+            <summary>
+            Property that represents a collection of display sizes
+            </summary>
+        </member>
+        <member name="P:PCShop.DataSeeder.PCShopDbContext.DisplayTechnologies">
+            <summary>
+            Property that represents a collection of display technologies
+            </summary>
+        </member>
+        <member name="P:PCShop.DataSeeder.PCShopDbContext.Formats">
+            <summary>
+            Property that represents a collection of formats
+            </summary>
+        </member>
+        <member name="P:PCShop.DataSeeder.PCShopDbContext.RAMs">
+            <summary>
+            Property that represents a collection of RAMs
+            </summary>
+        </member>
+        <member name="P:PCShop.DataSeeder.PCShopDbContext.RefreshRates">
+            <summary>
+            Property that represents a collection of refresh rates
+            </summary>
+        </member>
+        <member name="P:PCShop.DataSeeder.PCShopDbContext.Resolutions">
+            <summary>
+            Property that represents a collection of resolutions
+            </summary>
+        </member>
+        <member name="P:PCShop.DataSeeder.PCShopDbContext.Sensitivities">
+            <summary>
+            Property that represents a collection of sensitivities
+            </summary>
+        </member>
+        <member name="P:PCShop.DataSeeder.PCShopDbContext.SSDCapacities">
+            <summary>
+            Property that represents a collection of SSD capacities
+            </summary>
+        </member>
+        <member name="P:PCShop.DataSeeder.PCShopDbContext.Types">
+            <summary>
+            Property that represents a collection of types
+            </summary>
+        </member>
+        <member name="P:PCShop.DataSeeder.PCShopDbContext.VideoCards">
+            <summary>
+            Property that represents a collection of video cards
+            </summary>
+        </member>
+        <member name="M:PCShop.DataSeeder.PCShopDbContext.OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)">
+            <summary>
+            Configures the settings for establishing a connection with the database
+            </summary>
+            <param name="optionsBuilder">The DbContextOptionsBuilder</param>
+        </member>
+        <member name="M:PCShop.DataSeeder.PCShopDbContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            Describes what to be done when creating the models (Fluent API)
+            </summary>
+            <param name="modelBuilder">The ModelBuilder</param>
+        </member>
+        <member name="T:PCShop.DataSeeder.Seeder">
+            <summary>
+            Seeder model
+            </summary>
+        </member>
+        <member name="M:PCShop.DataSeeder.Seeder.#ctor">
+            <summary>
+            Constructor of Seeder class
+            </summary>
+        </member>
+        <member name="M:PCShop.DataSeeder.Seeder.Seed">
+            <summary>
+            Seeds data into the database
+            </summary>
+        </member>
+    </members>
+</doc>

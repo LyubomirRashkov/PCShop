@@ -13,7 +13,7 @@ using Type = PCShop.Infrastructure.Data.Models.GravitatingClasses.Type;
 namespace PCShop.DataSeeder
 {
     /// <summary>
-    /// The "seeding" class
+    /// Seeder model
     /// </summary>
     internal class Seeder
     {
@@ -30,7 +30,7 @@ namespace PCShop.DataSeeder
         }
 
         /// <summary>
-        /// Method that seeds data into the database
+        /// Seeds data into the database
         /// </summary>
         internal void Seed()
         {

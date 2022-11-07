@@ -1,7 +1,7 @@
 ﻿namespace PCShop.Infrastructure.Data.Models.GravitatingClasses
 {
     /// <summary>
-    /// Product refresh rate model
+    /// Refresh rate model
     /// </summary>
     public class RefreshRate
     {
@@ -14,17 +14,17 @@
         }
 
         /// <summary>
-        /// RefreshRate unique identifier
+        /// Property that represents refreshRate unique identifier
         /// </summary>
         public int Id { get; set; }
 
         /// <summary>
-        /// RefreshRate value
+        /// Property that represents refreshRate value
         /// </summary>
         public int Value { get; set; }
 
         /// <summary>
-        /// Collection of monitors
+        /// Property that represents a collection of monitors
         /// </summary>
         public virtual ICollection<Monitor> RefreshRateMonitors { get; set; }
     }
