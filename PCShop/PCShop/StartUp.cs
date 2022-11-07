@@ -1,7 +1,4 @@
 using Microsoft.EntityFrameworkCore;
-using PCShop.Core.Services.Implementations;
-using PCShop.Core.Services.Interfaces;
-using PCShop.Infrastructure.Common;
 using PCShop.Infrastructure.Data;
 using PCShop.Infrastructure.Data.Models.Account;
 
