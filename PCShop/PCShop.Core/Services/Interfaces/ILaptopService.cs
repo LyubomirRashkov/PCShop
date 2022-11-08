@@ -8,9 +8,16 @@ namespace PCShop.Core.Services.Interfaces
     public interface ILaptopService
     {
         /// <summary>
-        /// Method for retrieving all active laptops
+        /// Method to retrieve all active laptops
         /// </summary>
         /// <returns>Collection of LaptopExportViewModels</returns>
         Task<IEnumerable<LaptopExportViewModel>> GetAllLaptopsAsync();
+
+        /// <summary>
+        /// Method to retrieve a specific laptop
+        /// </summary>
+        /// <param name="id">Laptop unique identifier</param>
+        /// <returns>The laptop as LaptopDetailsExportViewModel</returns>
+        Task<LaptopDetailsExportViewModel> GetLaptopByIdAsync(int id);
     }
 }

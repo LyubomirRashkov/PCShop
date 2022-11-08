@@ -72,9 +72,16 @@
         </member>
         <member name="M:PCShop.Controllers.LaptopController.Index">
             <summary>
-            HttpGet action for retrieving all active laptops
+            HttpGet action to retrieve all active laptops
             </summary>
             <returns>Collection of laptops</returns>
+        </member>
+        <member name="M:PCShop.Controllers.LaptopController.Details(System.Int32)">
+            <summary>
+            HttpGet action to retrieve detailed information about a specific laptop
+            </summary>
+            <param name="id">Laptop unique identifier</param>
+            <returns>Detailed information about the laptop</returns>
         </member>
         <member name="T:Microsoft.Extensions.DependencyInjection.PCShopServiceCollectionExtension">
             <summary>

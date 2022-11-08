@@ -84,7 +84,7 @@ namespace PCShop.Infrastructure.Data.Models
         public bool IsDeleted { get; set; }
 
         /// <summary>
-        /// Property that represents the date when the mouse is added in the database
+        /// Property that represents the date the mouse was added to the database
         /// </summary>
         public DateTime AddedOn { get; set; }
     }

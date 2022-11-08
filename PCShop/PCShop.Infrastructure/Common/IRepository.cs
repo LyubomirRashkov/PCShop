@@ -8,7 +8,7 @@ namespace PCShop.Infrastructure.Common
     public interface IRepository
     {
         /// <summary>
-        /// Method for retrieving all entities of type T which satisfy a certain condition as no tracking entities
+        /// Method to retrieve all entities of type T that satisfy a certain condition as no tracking entities
         /// </summary>
         /// <typeparam name="T">Type of the target entity</typeparam>
         /// <param name="condition">The condition that must be satisfied</param>

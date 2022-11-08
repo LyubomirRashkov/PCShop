@@ -22,7 +22,7 @@ namespace PCShop.Controllers
         }
 
         /// <summary>
-        /// HttpGet action for retrieving all active laptops
+        /// HttpGet action to retrieve all active laptops
         /// </summary>
         /// <returns>Collection of laptops</returns>
         [HttpGet]
@@ -31,6 +31,26 @@ namespace PCShop.Controllers
             var laptops = await this.laptopService.GetAllLaptopsAsync();
 
             return View(laptops);
+        }
+
+        /// <summary>
+        /// HttpGet action to retrieve detailed information about a specific laptop
+        /// </summary>
+        /// <param name="id">Laptop unique identifier</param>
+        /// <returns>Detailed information about the laptop</returns>
+        [HttpGet]
+        public async Task<IActionResult> Details(int id)
+        {
+            try
+            {
+                var laptop = await this.laptopService.GetLaptopByIdAsync(id);
+
+                return View(laptop);
+            }
+            catch (Exception)
+            {
+                return NotFound();
+            }
         }
     }
 }

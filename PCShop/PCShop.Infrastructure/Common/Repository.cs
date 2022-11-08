@@ -21,7 +21,7 @@ namespace PCShop.Infrastructure.Common
         }
 
         /// <summary>
-        /// Method for retrieving all entities of type T which satisfy a certain condition as no tracking entities
+        /// Method to retrieve all entities of type T that satisfy a certain condition as no tracking entities
         /// </summary>
         /// <typeparam name="T">Type of the target entity</typeparam>
         /// <param name="condition">The condition that must be satisfied</param>
@@ -29,7 +29,7 @@ namespace PCShop.Infrastructure.Common
         public IQueryable<T> AllAsReadOnly<T>(Expression<Func<T, bool>> condition)
             where T : class
         {
-            return this.DbSet<T>().Where(condition).AsNoTracking();
+            return this.DbSet<T>().AsNoTracking().Where(condition);
         }
 
         private DbSet<T> DbSet<T>()

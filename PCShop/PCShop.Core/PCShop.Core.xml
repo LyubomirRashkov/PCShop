@@ -54,6 +54,51 @@
             Constant for the max length of user's password
             </summary>
         </member>
+        <member name="T:PCShop.Core.Models.Laptop.LaptopDetailsExportViewModel">
+            <summary>
+            LaptopDetailsExportViewModel model
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Laptop.LaptopDetailsExportViewModel.Type">
+            <summary>
+            Property that represents laptop type
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Laptop.LaptopDetailsExportViewModel.DisplayCoverage">
+            <summary>
+            Property that represents laptop display coverage
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Laptop.LaptopDetailsExportViewModel.DisplayTechnology">
+            <summary>
+            Property that represents laptop display technology
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Laptop.LaptopDetailsExportViewModel.Resolution">
+            <summary>
+            Property that represents laptop display resolution
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Laptop.LaptopDetailsExportViewModel.Color">
+            <summary>
+            Property that represents laptop color
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Laptop.LaptopDetailsExportViewModel.ImageUrl">
+            <summary>
+            Property that represents laptop image url
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Laptop.LaptopDetailsExportViewModel.AddedOn">
+            <summary>
+            Property that represents the date the laptop was added to the database
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Laptop.LaptopDetailsExportViewModel.Quantity">
+            <summary>
+            Property that represents how many laptops are in stock
+            </summary>
+        </member>
         <member name="T:PCShop.Core.Models.Laptop.LaptopExportViewModel">
             <summary>
             LaptopExportViewModel model
@@ -172,9 +217,17 @@
         </member>
         <member name="M:PCShop.Core.Services.Implementations.LaptopService.GetAllLaptopsAsync">
             <summary>
-            Method for retrieving all active laptops
+            Method to retrieve all active laptops
             </summary>
             <returns>Collection of LaptopExportViewModels</returns>
+        </member>
+        <member name="M:PCShop.Core.Services.Implementations.LaptopService.GetLaptopByIdAsync(System.Int32)">
+            <summary>
+            Method to retrieve a specific laptop
+            </summary>
+            <param name="id">Laptop unique identifier</param>
+            <returns>The laptop as LaptopDetailsExportViewModel</returns>
+            <exception cref="T:System.ArgumentException">Thrown when there is no laptop with the given unique identifier in the database</exception>
         </member>
         <member name="T:PCShop.Core.Services.Interfaces.ILaptopService">
             <summary>
@@ -183,9 +236,16 @@
         </member>
         <member name="M:PCShop.Core.Services.Interfaces.ILaptopService.GetAllLaptopsAsync">
             <summary>
-            Method for retrieving all active laptops
+            Method to retrieve all active laptops
             </summary>
             <returns>Collection of LaptopExportViewModels</returns>
+        </member>
+        <member name="M:PCShop.Core.Services.Interfaces.ILaptopService.GetLaptopByIdAsync(System.Int32)">
+            <summary>
+            Method to retrieve a specific laptop
+            </summary>
+            <param name="id">Laptop unique identifier</param>
+            <returns>The laptop as LaptopDetailsExportViewModel</returns>
         </member>
     </members>
 </doc>

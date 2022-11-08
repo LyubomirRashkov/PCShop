@@ -11,7 +11,7 @@
         </member>
         <member name="M:PCShop.Infrastructure.Common.IRepository.AllAsReadOnly``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
             <summary>
-            Method for retrieving all entities of type T which satisfy a certain condition as no tracking entities
+            Method to retrieve all entities of type T that satisfy a certain condition as no tracking entities
             </summary>
             <typeparam name="T">Type of the target entity</typeparam>
             <param name="condition">The condition that must be satisfied</param>
@@ -30,7 +30,7 @@
         </member>
         <member name="M:PCShop.Infrastructure.Common.Repository.AllAsReadOnly``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
             <summary>
-            Method for retrieving all entities of type T which satisfy a certain condition as no tracking entities
+            Method to retrieve all entities of type T that satisfy a certain condition as no tracking entities
             </summary>
             <typeparam name="T">Type of the target entity</typeparam>
             <param name="condition">The condition that must be satisfied</param>
@@ -699,7 +699,7 @@
         </member>
         <member name="P:PCShop.Infrastructure.Data.Models.Headphone.AddedOn">
             <summary>
-            Property that represents the date when the headphone is added in the database
+            Property that represents the date the headphone was added to the database
             </summary>
         </member>
         <member name="T:PCShop.Infrastructure.Data.Models.Keyboard">
@@ -784,7 +784,7 @@
         </member>
         <member name="P:PCShop.Infrastructure.Data.Models.Keyboard.AddedOn">
             <summary>
-            Property that represents the date when the keyboard is added in the database
+            Property that represents the date the keyboard was added to the database
             </summary>
         </member>
         <member name="T:PCShop.Infrastructure.Data.Models.Laptop">
@@ -934,7 +934,7 @@
         </member>
         <member name="P:PCShop.Infrastructure.Data.Models.Laptop.AddedOn">
             <summary>
-            Property that represents the date when the laptop is added in the database
+            Property that represents the date the laptop was added to the database
             </summary>
         </member>
         <member name="T:PCShop.Infrastructure.Data.Models.Microphone">
@@ -994,7 +994,7 @@
         </member>
         <member name="P:PCShop.Infrastructure.Data.Models.Microphone.AddedOn">
             <summary>
-            Property that represents the date when the microphone is added in the database
+            Property that represents the date the microphone was added to the database
             </summary>
         </member>
         <member name="T:PCShop.Infrastructure.Data.Models.Monitor">
@@ -1114,7 +1114,7 @@
         </member>
         <member name="P:PCShop.Infrastructure.Data.Models.Monitor.AddedOn">
             <summary>
-            Property that represents the date when the monitor is added in the database
+            Property that represents the date the monitor was added to the database
             </summary>
         </member>
         <member name="T:PCShop.Infrastructure.Data.Models.Mouse">
@@ -1199,7 +1199,7 @@
         </member>
         <member name="P:PCShop.Infrastructure.Data.Models.Mouse.AddedOn">
             <summary>
-            Property that represents the date when the mouse is added in the database
+            Property that represents the date the mouse was added to the database
             </summary>
         </member>
     </members>

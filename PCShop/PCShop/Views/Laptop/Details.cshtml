@@ -1,0 +1,57 @@
+﻿@model LaptopDetailsExportViewModel
+
+@{
+	ViewData["Title"] = "Laptop details";
+}
+
+<h1 class="text-center mb-2">@ViewData["Title"]</h1>
+
+<hr />
+
+<div class="row">
+
+	<div class="col-sm-2"></div>
+
+	<div class="col-sm-8">
+
+		<div class="card text-center mt-5">
+
+			<img class="card-img-top"
+				 src="@Model.ImageUrl" alt="Movie Image">
+
+			<div class="card-body">
+				<h4 class="card-title mt-2 mb-3">@Model.Brand</h4>
+				<p class="mb-0">CPU: @Model.CPU</p>
+				<p class="mb-0">RAM: @Model.RAM GB</p>
+				<p class="mb-0">Video card: @Model.VideoCard</p>
+				<p class="mb-0">SSD capacity: @Model.SSDCapacity GB</p>
+				<p class="mb-0">Type: @Model.Type</p>
+				<p class="mb-0">Display size: @Model.DisplaySize inches</p>
+				<p class="mb-0">Display technology: @Model.DisplayTechnology</p>
+				<p class="mb-0">Display coverage: @Model.DisplayCoverage</p>
+				<p class="mb-0">Resolution: @Model.Resolution</p>
+				<p class="mb-2">Color: @Model.Color</p>
+
+				@if (Model.Quantity > 0)
+				{
+					<p class="text-success mb-2"><b>On sale from: @Model.AddedOn</b></p>
+					<p class="text-success mb-2"><b>Warranty: @Model.Warranty months</b></p>
+					<p class="text-success mb-3"><b>Price: @Model.Price EUR</b></p>
+
+					<a asp-controller="Laptop" asp-action="Buy" asp-route-id="@Model.Id" class="btn btn-success">Buy</a>
+				}
+				else
+				{
+					<h5 class="text-danger mb-3">This product is out of stock!</h5>
+				}
+
+				<a asp-controller="Laptop" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Edit</a>
+				<a asp-controller="Laptop" asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger">Delete</a>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
