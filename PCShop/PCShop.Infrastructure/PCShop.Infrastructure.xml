@@ -199,6 +199,17 @@
             </summary>
             <param name="builder">The builder to be used to configure the entity type</param>
         </member>
+        <member name="T:PCShop.Infrastructure.Data.Configuration.UserConfiguration">
+            <summary>
+            UserConfiguration model
+            </summary>
+        </member>
+        <member name="M:PCShop.Infrastructure.Data.Configuration.UserConfiguration.Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder{PCShop.Infrastructure.Data.Models.Account.User})">
+            <summary>
+            Configures the entity of type User
+            </summary>
+            <param name="builder">The builder to be used to configure the entity type</param>
+        </member>
         <member name="T:PCShop.Infrastructure.Data.Models.Account.User">
             <summary>
             User model -> extending IdentityUser

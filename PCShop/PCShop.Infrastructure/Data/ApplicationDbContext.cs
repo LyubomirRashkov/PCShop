@@ -131,6 +131,8 @@ namespace PCShop.Infrastructure.Data
         {
             builder.ApplyConfiguration(new RoleConfiguration());
 
+            builder.ApplyConfiguration(new UserConfiguration());
+
             base.OnModelCreating(builder);
         }
     }
