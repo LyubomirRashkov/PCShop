@@ -24,6 +24,7 @@ builder.Services.AddDefaultIdentity<User>(options =>
     options.Password.RequireUppercase = builder.Configuration.GetValue<bool>("Identity:RequireUppercase");
     options.Password.RequireLowercase = builder.Configuration.GetValue<bool>("Identity:RequireLowercase");
 })
+    .AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>();
 
 builder.Services.ConfigureApplicationCookie(options => 

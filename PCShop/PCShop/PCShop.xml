@@ -48,6 +48,12 @@
             </summary>
             <returns>The home page</returns>
         </member>
+        <member name="M:PCShop.Controllers.AccountController.AddUsersToRolesInitial">
+            <summary>
+            Initial action for adding users to corresponding roles
+            </summary>
+            <returns>The home page</returns>
+        </member>
         <member name="T:PCShop.Controllers.HomeController">
             <summary>
             Home controller class

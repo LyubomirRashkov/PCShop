@@ -22,6 +22,31 @@ namespace PCShop.Infrastructure.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
+            modelBuilder.Entity("Microsoft.AspNet.Identity.EntityFramework.IdentityUserRole", b =>
+                {
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("RoleId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("UserId", "RoleId");
+
+                    b.ToTable("IdentityUserRole");
+
+                    b.HasData(
+                        new
+                        {
+                            UserId = "19512f55-7aa0-4707-b60d-6588f20c2ab1",
+                            RoleId = "389271c7-6194-48d3-8402-7b1b28430a42"
+                        },
+                        new
+                        {
+                            UserId = "fdf4e641-9248-44d4-8d23-ca09ad4ad793",
+                            RoleId = "1b99a7a0-ca76-495f-9dff-2c486a558005"
+                        });
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
                     b.Property<string>("Id")
@@ -52,14 +77,14 @@ namespace PCShop.Infrastructure.Migrations
                         new
                         {
                             Id = "389271c7-6194-48d3-8402-7b1b28430a42",
-                            ConcurrencyStamp = "256756ab-4e12-4072-8faa-b2b6d262b886",
+                            ConcurrencyStamp = "c39ed361-fedf-483d-9e72-399c1de28dd3",
                             Name = "Administrator",
                             NormalizedName = "ADMINISTRATOR"
                         },
                         new
                         {
                             Id = "1b99a7a0-ca76-495f-9dff-2c486a558005",
-                            ConcurrencyStamp = "b827eddf-2ac9-4169-b2c8-cc76cae95c1e",
+                            ConcurrencyStamp = "0e7b6312-f1e7-4b4c-af13-542911ab6986",
                             Name = "SuperUser",
                             NormalizedName = "SUPERUSER"
                         });
@@ -257,7 +282,7 @@ namespace PCShop.Infrastructure.Migrations
                         {
                             Id = "19512f55-7aa0-4707-b60d-6588f20c2ab1",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "d9ed0bd7-0b0a-45b3-8f9b-c68c59299979",
+                            ConcurrencyStamp = "cc9419ac-996d-48c1-9f34-4d09d4bca5cc",
                             CountOfPurchases = 0,
                             Email = "admin@mail.com",
                             EmailConfirmed = false,
@@ -266,9 +291,9 @@ namespace PCShop.Infrastructure.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@MAIL.COM",
                             NormalizedUserName = "ADMIN",
-                            PasswordHash = "AQAAAAEAACcQAAAAEJcwHd8SHeAspsifxCQFOpnDuxK7NJgvOldxwZPane2LKQT8mIldzlZBEcL88AskbQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEN14HQLSO2sm/LxVvYBUhFRr681bq9I5sIIicWGiRzcrC22YiffJekEHgV7pcRAJrg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "1fe6daa5-2f5f-4e73-b683-e08cb78ae26a",
+                            SecurityStamp = "04617e3c-8b9e-4d2a-afc0-3aea1b367a2e",
                             TwoFactorEnabled = false,
                             UserName = "admin"
                         },
@@ -276,7 +301,7 @@ namespace PCShop.Infrastructure.Migrations
                         {
                             Id = "fdf4e641-9248-44d4-8d23-ca09ad4ad793",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "bde7aee2-41f6-47c4-9cf8-e030ba248c2b",
+                            ConcurrencyStamp = "07c44f41-2235-42aa-a68f-2d3de0bce4cd",
                             CountOfPurchases = 7,
                             Email = "superUser@mail.com",
                             EmailConfirmed = false,
@@ -285,9 +310,9 @@ namespace PCShop.Infrastructure.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "SUPERUSER@MAIL.COM",
                             NormalizedUserName = "SUPERUSER",
-                            PasswordHash = "AQAAAAEAACcQAAAAEOexJhaqgGdL4pYzlOb7gDtHV2y5XslvjiUlLwVQOCXm9QBhDVvZ/qFSViTjyShWLw==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEJLHRsO5dvT1iHRUy5F1QrE0/ivkMcraEpxExiHzUFmX3BcIpncXYR7d0TU3xdMUPA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "b105d3ce-ccc2-413d-8642-8abcdad66f05",
+                            SecurityStamp = "b0b5b121-9b3e-4eee-b8cf-67bb820d2c84",
                             TwoFactorEnabled = false,
                             UserName = "superUser"
                         },
@@ -295,7 +320,7 @@ namespace PCShop.Infrastructure.Migrations
                         {
                             Id = "b3b38c01-9e6d-4faf-83d5-e0ec48d26115",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "016f4cfc-0add-4fdd-8ded-8d0d776eddd0",
+                            ConcurrencyStamp = "349422aa-9f6c-445c-a2a9-309a3e92122a",
                             CountOfPurchases = 0,
                             Email = "user@mail.com",
                             EmailConfirmed = false,
@@ -304,9 +329,9 @@ namespace PCShop.Infrastructure.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "USER@MAIL.COM",
                             NormalizedUserName = "USER",
-                            PasswordHash = "AQAAAAEAACcQAAAAEDmQxMcQbSOM5DZ3jdxz8GHwMP0qzCImWW4bw4IwOUWsegjt4ba7/SGMm4WDPg/q9g==",
+                            PasswordHash = "AQAAAAEAACcQAAAAENP12HQlEdKc/zpgFJ5boR0Pp6/6PPLIcT98z3Q8bFKNQOALvwL6/tcSAUcZ8efBhA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "28d2fada-6f9b-4a85-88c5-68b1e1889cb4",
+                            SecurityStamp = "52a81ccc-fe81-4ef4-a85f-18eb747ffa37",
                             TwoFactorEnabled = false,
                             UserName = "user"
                         });
