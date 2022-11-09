@@ -9,192 +9,192 @@
             Class holding constants
             </summary>
         </member>
-        <member name="T:PCShop.DataSeeder.Constant.Configuration">
+        <member name="T:PCShop.DataSeeder.Constant.ConfigurationConstants">
             <summary>
             Class holding configuration constants
             </summary>
         </member>
-        <member name="F:PCShop.DataSeeder.Constant.Configuration.ConnectionString">
+        <member name="F:PCShop.DataSeeder.Constant.ConfigurationConstants.ConnectionString">
             <summary>
             Constant for the connection string
             </summary>
         </member>
-        <member name="T:PCShop.DataSeeder.Constant.Laptop">
+        <member name="T:PCShop.DataSeeder.Constant.LaptopConstants">
             <summary>
             Class holding laptop constants
             </summary>
         </member>
-        <member name="F:PCShop.DataSeeder.Constant.Laptop.LaptopsSourcePath">
+        <member name="F:PCShop.DataSeeder.Constant.LaptopConstants.LaptopsSourcePath">
             <summary>
             Constant fot the laptops source path
             </summary>
         </member>
-        <member name="F:PCShop.DataSeeder.Constant.Laptop.LaptopPriceMinValue">
+        <member name="F:PCShop.DataSeeder.Constant.LaptopConstants.LaptopPriceMinValue">
             <summary>
             Constant for the min value of the laptop price
             </summary>
         </member>
-        <member name="F:PCShop.DataSeeder.Constant.Laptop.LaptopPriceMaxValue">
+        <member name="F:PCShop.DataSeeder.Constant.LaptopConstants.LaptopPriceMaxValue">
             <summary>
             Constant for the max value of the laptop price
             </summary>
         </member>
-        <member name="F:PCShop.DataSeeder.Constant.Laptop.LaptopQuantityMinValue">
+        <member name="F:PCShop.DataSeeder.Constant.LaptopConstants.LaptopQuantityMinValue">
             <summary>
             Constant for the min value of the laptop quantity
             </summary>
         </member>
-        <member name="F:PCShop.DataSeeder.Constant.Laptop.LaptopQuantityMaxValue">
+        <member name="F:PCShop.DataSeeder.Constant.LaptopConstants.LaptopQuantityMaxValue">
             <summary>
             Constant for the max value of the laptop quantity
             </summary>
         </member>
-        <member name="T:PCShop.DataSeeder.Constant.Monitor">
+        <member name="T:PCShop.DataSeeder.Constant.MonitorConstants">
             <summary>
             Class holding monitor constants
             </summary>
         </member>
-        <member name="F:PCShop.DataSeeder.Constant.Monitor.MonitorsSourcePath">
+        <member name="F:PCShop.DataSeeder.Constant.MonitorConstants.MonitorsSourcePath">
             <summary>
             Constant fot the monitors source path
             </summary>
         </member>
-        <member name="F:PCShop.DataSeeder.Constant.Monitor.MonitorPriceMinValue">
+        <member name="F:PCShop.DataSeeder.Constant.MonitorConstants.MonitorPriceMinValue">
             <summary>
             Constant for the min value of the monitor price
             </summary>
         </member>
-        <member name="F:PCShop.DataSeeder.Constant.Monitor.MonitorPriceMaxValue">
+        <member name="F:PCShop.DataSeeder.Constant.MonitorConstants.MonitorPriceMaxValue">
             <summary>
             Constant for the max value of the monitor price
             </summary>
         </member>
-        <member name="F:PCShop.DataSeeder.Constant.Monitor.MonitorQuantityMinValue">
+        <member name="F:PCShop.DataSeeder.Constant.MonitorConstants.MonitorQuantityMinValue">
             <summary>
             Constant for the min value of the monitor quantity
             </summary>
         </member>
-        <member name="F:PCShop.DataSeeder.Constant.Monitor.MonitorQuantityMaxValue">
+        <member name="F:PCShop.DataSeeder.Constant.MonitorConstants.MonitorQuantityMaxValue">
             <summary>
             Constant for the max value of the monitor quantity
             </summary>
         </member>
-        <member name="T:PCShop.DataSeeder.Constant.Keyboard">
+        <member name="T:PCShop.DataSeeder.Constant.KeyboardConstants">
             <summary>
             Class holding keyboard constants
             </summary>
         </member>
-        <member name="F:PCShop.DataSeeder.Constant.Keyboard.KeyboardsSourcePath">
+        <member name="F:PCShop.DataSeeder.Constant.KeyboardConstants.KeyboardsSourcePath">
             <summary>
             Constant fot the keyboards source path
             </summary>
         </member>
-        <member name="F:PCShop.DataSeeder.Constant.Keyboard.KeyboardPriceMinValue">
+        <member name="F:PCShop.DataSeeder.Constant.KeyboardConstants.KeyboardPriceMinValue">
             <summary>
             Constant for the min value of the keyboard price
             </summary>
         </member>
-        <member name="F:PCShop.DataSeeder.Constant.Keyboard.KeyboardPriceMaxValue">
+        <member name="F:PCShop.DataSeeder.Constant.KeyboardConstants.KeyboardPriceMaxValue">
             <summary>
             Constant for the max value of the keyboard price
             </summary>
         </member>
-        <member name="F:PCShop.DataSeeder.Constant.Keyboard.KeyboardQuantityMinValue">
+        <member name="F:PCShop.DataSeeder.Constant.KeyboardConstants.KeyboardQuantityMinValue">
             <summary>
             Constant for the min value of the keyboard quantity
             </summary>
         </member>
-        <member name="F:PCShop.DataSeeder.Constant.Keyboard.KeyboardQuantityMaxValue">
+        <member name="F:PCShop.DataSeeder.Constant.KeyboardConstants.KeyboardQuantityMaxValue">
             <summary>
             Constant for the max value of the keyboard quantity
             </summary>
         </member>
-        <member name="T:PCShop.DataSeeder.Constant.Mouse">
+        <member name="T:PCShop.DataSeeder.Constant.MouseConstants">
             <summary>
             Class holding mouse constants
             </summary>
         </member>
-        <member name="F:PCShop.DataSeeder.Constant.Mouse.MiceSourcePath">
+        <member name="F:PCShop.DataSeeder.Constant.MouseConstants.MiceSourcePath">
             <summary>
             Constant fot the mice source path
             </summary>
         </member>
-        <member name="F:PCShop.DataSeeder.Constant.Mouse.MousePriceMinValue">
+        <member name="F:PCShop.DataSeeder.Constant.MouseConstants.MousePriceMinValue">
             <summary>
             Constant for the min value of the mouse price
             </summary>
         </member>
-        <member name="F:PCShop.DataSeeder.Constant.Mouse.MousePriceMaxValue">
+        <member name="F:PCShop.DataSeeder.Constant.MouseConstants.MousePriceMaxValue">
             <summary>
             Constant for the max value of the mouse price
             </summary>
         </member>
-        <member name="F:PCShop.DataSeeder.Constant.Mouse.MouseQuantityMinValue">
+        <member name="F:PCShop.DataSeeder.Constant.MouseConstants.MouseQuantityMinValue">
             <summary>
             Constant for the min value of the mouse quantity
             </summary>
         </member>
-        <member name="F:PCShop.DataSeeder.Constant.Mouse.MouseQuantityMaxValue">
+        <member name="F:PCShop.DataSeeder.Constant.MouseConstants.MouseQuantityMaxValue">
             <summary>
             Constant for the max value of the mouse quantity
             </summary>
         </member>
-        <member name="T:PCShop.DataSeeder.Constant.Headphone">
+        <member name="T:PCShop.DataSeeder.Constant.HeadphoneConstants">
             <summary>
             Class holding headphone constants
             </summary>
         </member>
-        <member name="F:PCShop.DataSeeder.Constant.Headphone.HeadphonesSourcePath">
+        <member name="F:PCShop.DataSeeder.Constant.HeadphoneConstants.HeadphonesSourcePath">
             <summary>
             Constant fot the headphones source path
             </summary>
         </member>
-        <member name="F:PCShop.DataSeeder.Constant.Headphone.HeadphonePriceMinValue">
+        <member name="F:PCShop.DataSeeder.Constant.HeadphoneConstants.HeadphonePriceMinValue">
             <summary>
             Constant for the min value of the headphone price
             </summary>
         </member>
-        <member name="F:PCShop.DataSeeder.Constant.Headphone.HeadphonePriceMaxValue">
+        <member name="F:PCShop.DataSeeder.Constant.HeadphoneConstants.HeadphonePriceMaxValue">
             <summary>
             Constant for the max value of the headphone price
             </summary>
         </member>
-        <member name="F:PCShop.DataSeeder.Constant.Headphone.HeadphoneQuantityMinValue">
+        <member name="F:PCShop.DataSeeder.Constant.HeadphoneConstants.HeadphoneQuantityMinValue">
             <summary>
             Constant for the min value of the headphone quantity
             </summary>
         </member>
-        <member name="F:PCShop.DataSeeder.Constant.Headphone.HeadphoneQuantityMaxValue">
+        <member name="F:PCShop.DataSeeder.Constant.HeadphoneConstants.HeadphoneQuantityMaxValue">
             <summary>
             Constant for the max value of the headphone quantity
             </summary>
         </member>
-        <member name="T:PCShop.DataSeeder.Constant.Microphone">
+        <member name="T:PCShop.DataSeeder.Constant.MicrophoneConstants">
             <summary>
             Class holding microphone constants
             </summary>
         </member>
-        <member name="F:PCShop.DataSeeder.Constant.Microphone.MicrophonesSourcePath">
+        <member name="F:PCShop.DataSeeder.Constant.MicrophoneConstants.MicrophonesSourcePath">
             <summary>
             Constant fot the microphones source path
             </summary>
         </member>
-        <member name="F:PCShop.DataSeeder.Constant.Microphone.MicrophonePriceMinValue">
+        <member name="F:PCShop.DataSeeder.Constant.MicrophoneConstants.MicrophonePriceMinValue">
             <summary>
             Constant for the min value of the microphone price
             </summary>
         </member>
-        <member name="F:PCShop.DataSeeder.Constant.Microphone.MicrophonePriceMaxValue">
+        <member name="F:PCShop.DataSeeder.Constant.MicrophoneConstants.MicrophonePriceMaxValue">
             <summary>
             Constant for the max value of the microphone price
             </summary>
         </member>
-        <member name="F:PCShop.DataSeeder.Constant.Microphone.MicrophoneQuantityMinValue">
+        <member name="F:PCShop.DataSeeder.Constant.MicrophoneConstants.MicrophoneQuantityMinValue">
             <summary>
             Constant for the min value of the microphone quantity
             </summary>
         </member>
-        <member name="F:PCShop.DataSeeder.Constant.Microphone.MicrophoneQuantityMaxValue">
+        <member name="F:PCShop.DataSeeder.Constant.MicrophoneConstants.MicrophoneQuantityMaxValue">
             <summary>
             Constant for the max value of the microphone quantity
             </summary>
@@ -312,9 +312,9 @@
         </member>
         <member name="M:PCShop.DataSeeder.PCShopDbContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)">
             <summary>
-            Describes what to be done when creating the models (Fluent API)
+            Describes what needs to be done when creating the models (Fluent API)
             </summary>
-            <param name="modelBuilder">The ModelBuilder</param>
+            <param name="modelBuilder">The builder being used to construct the model for this context</param>
         </member>
         <member name="T:PCShop.DataSeeder.Seeder">
             <summary>

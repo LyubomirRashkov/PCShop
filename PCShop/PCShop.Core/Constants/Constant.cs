@@ -8,7 +8,7 @@
         /// <summary>
         /// Class holding User constants
         /// </summary>
-        public static class User
+        public static class UserConstants
         {
             /// <summary>
             /// Constant for the min length of user's first name

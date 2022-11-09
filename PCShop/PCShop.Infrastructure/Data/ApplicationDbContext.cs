@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using PCShop.Infrastructure.Data.Configuration;
 using PCShop.Infrastructure.Data.Models;
 using PCShop.Infrastructure.Data.Models.Account;
 using PCShop.Infrastructure.Data.Models.GravitatingClasses;
@@ -121,5 +122,16 @@ namespace PCShop.Infrastructure.Data
         /// Property that represents a collection of video cards
         /// </summary>
         public DbSet<VideoCard> VideoCards { get; set; } = null!;
+
+        /// <summary>
+        /// Describes what needs to be done when creating the models (Fluent API)
+        /// </summary>
+        /// <param name="builder">The builder being used to construct the model for this context</param>
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            builder.ApplyConfiguration(new RoleConfiguration());
+
+            base.OnModelCreating(builder);
+        }
     }
 }

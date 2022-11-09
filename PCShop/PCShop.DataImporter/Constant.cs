@@ -8,7 +8,7 @@
         /// <summary>
         /// Class holding configuration constants
         /// </summary>
-        internal static class Configuration
+        internal static class ConfigurationConstants
         {
             /// <summary>
             /// Constant for the connection string
@@ -19,7 +19,7 @@
         /// <summary>
         /// Class holding laptop constants
         /// </summary>
-        internal static class Laptop
+        internal static class LaptopConstants
         {
             /// <summary>
             /// Constant fot the laptops source path
@@ -48,7 +48,7 @@
         /// <summary>
         /// Class holding monitor constants
         /// </summary>
-        internal static class Monitor
+        internal static class MonitorConstants
         {
             /// <summary>
             /// Constant fot the monitors source path
@@ -77,7 +77,7 @@
         /// <summary>
         /// Class holding keyboard constants
         /// </summary>
-        internal static class Keyboard
+        internal static class KeyboardConstants
         {
             /// <summary>
             /// Constant fot the keyboards source path
@@ -106,7 +106,7 @@
         /// <summary>
         /// Class holding mouse constants
         /// </summary>
-        internal static class Mouse
+        internal static class MouseConstants
         {
             /// <summary>
             /// Constant fot the mice source path
@@ -135,7 +135,7 @@
         /// <summary>
         /// Class holding headphone constants
         /// </summary>
-        internal static class Headphone
+        internal static class HeadphoneConstants
         {
             /// <summary>
             /// Constant fot the headphones source path
@@ -164,7 +164,7 @@
         /// <summary>
         /// Class holding microphone constants
         /// </summary>
-        internal static class Microphone
+        internal static class MicrophoneConstants
         {
             /// <summary>
             /// Constant fot the microphones source path

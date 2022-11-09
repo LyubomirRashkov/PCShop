@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using PCShop.Infrastructure.Data;
 using PCShop.Infrastructure.Data.Models.Account;

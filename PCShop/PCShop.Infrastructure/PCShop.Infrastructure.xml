@@ -41,19 +41,34 @@
             Class holding data constants
             </summary>
         </member>
-        <member name="T:PCShop.Infrastructure.Constants.DataConstant.User">
+        <member name="T:PCShop.Infrastructure.Constants.DataConstant.UserConstants">
             <summary>
             Class holding User constants
             </summary>
         </member>
-        <member name="F:PCShop.Infrastructure.Constants.DataConstant.User.FirstNameMaxLength">
+        <member name="F:PCShop.Infrastructure.Constants.DataConstant.UserConstants.FirstNameMaxLength">
             <summary>
             Constant for the max length of user's first name
             </summary>
         </member>
-        <member name="F:PCShop.Infrastructure.Constants.DataConstant.User.LastNameMaxLength">
+        <member name="F:PCShop.Infrastructure.Constants.DataConstant.UserConstants.LastNameMaxLength">
             <summary>
             Constant for the max length of user's last name
+            </summary>
+        </member>
+        <member name="T:PCShop.Infrastructure.Constants.DataConstant.RoleConstants">
+            <summary>
+            Class holding Role constants
+            </summary>
+        </member>
+        <member name="F:PCShop.Infrastructure.Constants.DataConstant.RoleConstants.Administrator">
+            <summary>
+            Constant for the name of Administrator role
+            </summary>
+        </member>
+        <member name="F:PCShop.Infrastructure.Constants.DataConstant.RoleConstants.SuperUser">
+            <summary>
+            Constant for the name of SuperUser role
             </summary>
         </member>
         <member name="T:PCShop.Infrastructure.Data.ApplicationDbContext">
@@ -166,6 +181,23 @@
             <summary>
             Property that represents a collection of video cards
             </summary>
+        </member>
+        <member name="M:PCShop.Infrastructure.Data.ApplicationDbContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            Describes what needs to be done when creating the models (Fluent API)
+            </summary>
+            <param name="builder">The builder being used to construct the model for this context</param>
+        </member>
+        <member name="T:PCShop.Infrastructure.Data.Configuration.RoleConfiguration">
+            <summary>
+            RoleConfiguration model
+            </summary>
+        </member>
+        <member name="M:PCShop.Infrastructure.Data.Configuration.RoleConfiguration.Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder{Microsoft.AspNetCore.Identity.IdentityRole})">
+            <summary>
+            Configures the entity of type IdentityRole
+            </summary>
+            <param name="builder">The builder to be used to configure the entity type</param>
         </member>
         <member name="T:PCShop.Infrastructure.Data.Models.Account.User">
             <summary>

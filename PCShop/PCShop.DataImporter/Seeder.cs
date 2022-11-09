@@ -1,12 +1,12 @@
 ﻿using Newtonsoft.Json;
 using PCShop.Infrastructure.Data.Models;
 using PCShop.Infrastructure.Data.Models.GravitatingClasses;
-using static PCShop.DataSeeder.Constant.Headphone;
-using static PCShop.DataSeeder.Constant.Keyboard;
-using static PCShop.DataSeeder.Constant.Laptop;
-using static PCShop.DataSeeder.Constant.Microphone;
-using static PCShop.DataSeeder.Constant.Monitor;
-using static PCShop.DataSeeder.Constant.Mouse;
+using static PCShop.DataSeeder.Constant.HeadphoneConstants;
+using static PCShop.DataSeeder.Constant.KeyboardConstants;
+using static PCShop.DataSeeder.Constant.LaptopConstants;
+using static PCShop.DataSeeder.Constant.MicrophoneConstants;
+using static PCShop.DataSeeder.Constant.MonitorConstants;
+using static PCShop.DataSeeder.Constant.MouseConstants;
 using Monitor = PCShop.Infrastructure.Data.Models.Monitor;
 using Type = PCShop.Infrastructure.Data.Models.GravitatingClasses.Type;
 

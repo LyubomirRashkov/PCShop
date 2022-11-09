@@ -3,7 +3,7 @@ using PCShop.Infrastructure.Data.Models;
 using PCShop.Infrastructure.Data.Models.GravitatingClasses;
 using Monitor = PCShop.Infrastructure.Data.Models.Monitor;
 using Type = PCShop.Infrastructure.Data.Models.GravitatingClasses.Type;
-using static PCShop.DataSeeder.Constant.Configuration;
+using static PCShop.DataSeeder.Constant.ConfigurationConstants;
 
 namespace PCShop.DataSeeder
 {
@@ -125,9 +125,9 @@ namespace PCShop.DataSeeder
         }
 
         /// <summary>
-        /// Describes what to be done when creating the models (Fluent API)
+        /// Describes what needs to be done when creating the models (Fluent API)
         /// </summary>
-        /// <param name="modelBuilder">The ModelBuilder</param>
+        /// <param name="modelBuilder">The builder being used to construct the model for this context</param>
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

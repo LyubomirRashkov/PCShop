@@ -9,47 +9,47 @@
             Class holding constants
             </summary>
         </member>
-        <member name="T:PCShop.Core.Constants.Constant.User">
+        <member name="T:PCShop.Core.Constants.Constant.UserConstants">
             <summary>
             Class holding User constants
             </summary>
         </member>
-        <member name="F:PCShop.Core.Constants.Constant.User.FirstNameMinLength">
+        <member name="F:PCShop.Core.Constants.Constant.UserConstants.FirstNameMinLength">
             <summary>
             Constant for the min length of user's first name
             </summary>
         </member>
-        <member name="F:PCShop.Core.Constants.Constant.User.LastNameMinLength">
+        <member name="F:PCShop.Core.Constants.Constant.UserConstants.LastNameMinLength">
             <summary>
             Constant for the min length of user's last name
             </summary>
         </member>
-        <member name="F:PCShop.Core.Constants.Constant.User.UsernameMinLength">
+        <member name="F:PCShop.Core.Constants.Constant.UserConstants.UsernameMinLength">
             <summary>
             Constant for the min length of user's username
             </summary>
         </member>
-        <member name="F:PCShop.Core.Constants.Constant.User.UsernameMaxLength">
+        <member name="F:PCShop.Core.Constants.Constant.UserConstants.UsernameMaxLength">
             <summary>
             Constant for the max length of user's username
             </summary>
         </member>
-        <member name="F:PCShop.Core.Constants.Constant.User.EmailMinLength">
+        <member name="F:PCShop.Core.Constants.Constant.UserConstants.EmailMinLength">
             <summary>
             Constant for the min length of user's email
             </summary>
         </member>
-        <member name="F:PCShop.Core.Constants.Constant.User.EmailMaxLength">
+        <member name="F:PCShop.Core.Constants.Constant.UserConstants.EmailMaxLength">
             <summary>
             Constant for the max length of user's email
             </summary>
         </member>
-        <member name="F:PCShop.Core.Constants.Constant.User.PasswordMinLength">
+        <member name="F:PCShop.Core.Constants.Constant.UserConstants.PasswordMinLength">
             <summary>
             Constant for the min length of user's password
             </summary>
         </member>
-        <member name="F:PCShop.Core.Constants.Constant.User.PasswordMaxLength">
+        <member name="F:PCShop.Core.Constants.Constant.UserConstants.PasswordMaxLength">
             <summary>
             Constant for the max length of user's password
             </summary>
