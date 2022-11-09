@@ -1,4 +1,6 @@
-﻿using PCShop.Infrastructure.Data.Models.GravitatingClasses;
+﻿using PCShop.Infrastructure.Data.Models.Account;
+using PCShop.Infrastructure.Data.Models.GravitatingClasses;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PCShop.Infrastructure.Data.Models
 {
@@ -61,5 +63,16 @@ namespace PCShop.Infrastructure.Data.Models
         /// Property that represents the date the microphone was added to the database
         /// </summary>
         public DateTime AddedOn { get; set; }
+
+        /// <summary>
+        /// Foreign key to microphone Seller unique identifier
+        /// </summary>
+        [ForeignKey(nameof(Seller))]
+        public string? SellerId { get; set; }
+
+        /// <summary>
+        /// Navigation property to microphone Seller
+        /// </summary>
+        public User? Seller { get; set; }
     }
 }

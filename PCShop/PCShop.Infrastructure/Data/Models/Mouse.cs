@@ -1,4 +1,6 @@
-﻿using PCShop.Infrastructure.Data.Models.GravitatingClasses;
+﻿using PCShop.Infrastructure.Data.Models.Account;
+using PCShop.Infrastructure.Data.Models.GravitatingClasses;
+using System.ComponentModel.DataAnnotations.Schema;
 using Type = PCShop.Infrastructure.Data.Models.GravitatingClasses.Type;
 
 namespace PCShop.Infrastructure.Data.Models
@@ -87,5 +89,16 @@ namespace PCShop.Infrastructure.Data.Models
         /// Property that represents the date the mouse was added to the database
         /// </summary>
         public DateTime AddedOn { get; set; }
+
+        /// <summary>
+        /// Foreign key to mouse Seller unique identifier
+        /// </summary>
+        [ForeignKey(nameof(Seller))]
+        public string? SellerId { get; set; }
+
+        /// <summary>
+        /// Navigation property to mouse Seller
+        /// </summary>
+        public User? Seller { get; set; }
     }
 }

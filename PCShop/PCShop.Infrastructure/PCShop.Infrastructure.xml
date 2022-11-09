@@ -204,6 +204,11 @@
             User model -> extending IdentityUser
             </summary>
         </member>
+        <member name="M:PCShop.Infrastructure.Data.Models.Account.User.#ctor">
+            <summary>
+            Constructor or User class
+            </summary>
+        </member>
         <member name="P:PCShop.Infrastructure.Data.Models.Account.User.FirstName">
             <summary>
             Property that represents user's first name
@@ -212,6 +217,41 @@
         <member name="P:PCShop.Infrastructure.Data.Models.Account.User.LastName">
             <summary>
             Property that represents user's last name
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Account.User.CountOfPurchases">
+            <summary>
+            Property that represents the count of purchases the user made
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Account.User.Laptops">
+            <summary>
+            Inverse property to user's laptops
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Account.User.Monitors">
+            <summary>
+            Inverse property to user's monitors
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Account.User.Keyboards">
+            <summary>
+            Inverse property to user's keyboards
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Account.User.Mice">
+            <summary>
+            Inverse property to user's mice
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Account.User.Headphones">
+            <summary>
+            Inverse property to user's headphones
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Account.User.Microphones">
+            <summary>
+            Inverse property to user's microphones
             </summary>
         </member>
         <member name="T:PCShop.Infrastructure.Data.Models.GravitatingClasses.Brand">
@@ -734,6 +774,16 @@
             Property that represents the date the headphone was added to the database
             </summary>
         </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Headphone.SellerId">
+            <summary>
+            Foreign key to headphone Seller unique identifier
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Headphone.Seller">
+            <summary>
+            Navigation property to headphone Seller
+            </summary>
+        </member>
         <member name="T:PCShop.Infrastructure.Data.Models.Keyboard">
             <summary>
             Keyboard model
@@ -817,6 +867,16 @@
         <member name="P:PCShop.Infrastructure.Data.Models.Keyboard.AddedOn">
             <summary>
             Property that represents the date the keyboard was added to the database
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Keyboard.SellerId">
+            <summary>
+            Foreign key to keyboard Seller unique identifier
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Keyboard.Seller">
+            <summary>
+            Navigation property to keyboard Seller
             </summary>
         </member>
         <member name="T:PCShop.Infrastructure.Data.Models.Laptop">
@@ -969,6 +1029,16 @@
             Property that represents the date the laptop was added to the database
             </summary>
         </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Laptop.SellerId">
+            <summary>
+            Foreign key to laptop Seller unique identifier
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Laptop.Seller">
+            <summary>
+            Navigation property to monitor Seller
+            </summary>
+        </member>
         <member name="T:PCShop.Infrastructure.Data.Models.Microphone">
             <summary>
             Microphone model
@@ -1027,6 +1097,16 @@
         <member name="P:PCShop.Infrastructure.Data.Models.Microphone.AddedOn">
             <summary>
             Property that represents the date the microphone was added to the database
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Microphone.SellerId">
+            <summary>
+            Foreign key to microphone Seller unique identifier
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Microphone.Seller">
+            <summary>
+            Navigation property to microphone Seller
             </summary>
         </member>
         <member name="T:PCShop.Infrastructure.Data.Models.Monitor">
@@ -1149,6 +1229,16 @@
             Property that represents the date the monitor was added to the database
             </summary>
         </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Monitor.SellerId">
+            <summary>
+            Foreign key to monitor Seller unique identifier
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Monitor.Seller">
+            <summary>
+            Navigation property to monitor Seller
+            </summary>
+        </member>
         <member name="T:PCShop.Infrastructure.Data.Models.Mouse">
             <summary>
             Mouse model
@@ -1232,6 +1322,16 @@
         <member name="P:PCShop.Infrastructure.Data.Models.Mouse.AddedOn">
             <summary>
             Property that represents the date the mouse was added to the database
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Mouse.SellerId">
+            <summary>
+            Foreign key to mouse Seller unique identifier
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Mouse.Seller">
+            <summary>
+            Navigation property to mouse Seller
             </summary>
         </member>
     </members>
