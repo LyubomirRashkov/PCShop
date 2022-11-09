@@ -44,5 +44,10 @@
         /// Property that represents how many laptops are in stock
         /// </summary>
 		public int Quantity { get; init; }
-	}
+
+		/// <summary>
+		/// Property that represents the unique identifier of the laptop's seller
+		/// </summary>
+		public string? SellerId { get; set; }
+    }
 }

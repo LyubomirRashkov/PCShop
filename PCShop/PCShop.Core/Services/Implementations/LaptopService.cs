@@ -76,6 +76,7 @@ namespace PCShop.Core.Services.Implementations
                     ImageUrl = l.ImageUrl,
                     AddedOn = l.AddedOn.ToString("MMMM, yyyy", CultureInfo.InvariantCulture),
                     Quantity = l.Quantity,
+                    SellerId = l.SellerId,
                 })
                 .FirstOrDefaultAsync();
 

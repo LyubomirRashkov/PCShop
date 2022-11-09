@@ -38,15 +38,25 @@
 					<p class="text-success mb-2"><b>Warranty: @Model.Warranty months</b></p>
 					<p class="text-success mb-3"><b>Price: @Model.Price EUR</b></p>
 
-					<a asp-controller="Laptop" asp-action="Buy" asp-route-id="@Model.Id" class="btn btn-success">Buy</a>
+					@if ((this.User?.Identity?.IsAuthenticated ?? false)
+							&& (!this.User.IsInRole(Administrator))
+							&& ((!this.User.IsInRole(SuperUser)) || (this.User.IsInRole(SuperUser) && this.User.Id() != Model.SellerId)))
+					{
+						<a asp-controller="Laptop" asp-action="Buy" asp-route-id="@Model.Id" class="btn btn-success">Buy</a>
+					}
 				}
 				else
 				{
 					<h5 class="text-danger mb-3">This product is out of stock!</h5>
 				}
 
-				<a asp-controller="Laptop" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Edit</a>
-				<a asp-controller="Laptop" asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger">Delete</a>
+				@if ((this.User?.Identity?.IsAuthenticated ?? false)
+					 && (this.User.IsInRole(Administrator) || (this.User.IsInRole(SuperUser) && this.User.Id() == Model.SellerId)))
+				{
+					<a asp-controller="Laptop" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Edit</a>
+					<a asp-controller="Laptop" asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger" 
+						onclick="return confirm('Are you sure you want to delete laptop @Model.Brand')">Delete</a>
+				}
 
 			</div>
 

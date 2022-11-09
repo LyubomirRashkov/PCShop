@@ -89,6 +89,18 @@
             <param name="id">Laptop unique identifier</param>
             <returns>Detailed information about the laptop</returns>
         </member>
+        <member name="T:PCShop.Extensions.ClaimsPrincipalExtension">
+            <summary>
+            ClaimsPrincipalExtension model
+            </summary>
+        </member>
+        <member name="M:PCShop.Extensions.ClaimsPrincipalExtension.Id(System.Security.Claims.ClaimsPrincipal)">
+            <summary>
+            Extension method for getting ClaimsPrincipal's unique identifier
+            </summary>
+            <param name="user">ClaimsPrincipal that will be extended</param>
+            <returns>ClaimsPrincipal's unique identifier</returns>
+        </member>
         <member name="T:Microsoft.Extensions.DependencyInjection.PCShopServiceCollectionExtension">
             <summary>
             PCShopServiceCollectionExtension model

@@ -1,7 +1,14 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+	ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
+	<h1 class="display-4 mb-5">Welcome</h1>
 </div>
+
+@if ((this.User?.Identity?.IsAuthenticated ?? false) && this.User.IsInRole(Administrator))
+{
+	<div class="text-center">
+		<a asp-controller="Account" asp-action="PromoteToAdmin" class="btn btn-primary">Promote to administrator</a>
+	</div>
+}

@@ -99,6 +99,11 @@
             Property that represents how many laptops are in stock
             </summary>
         </member>
+        <member name="P:PCShop.Core.Models.Laptop.LaptopDetailsExportViewModel.SellerId">
+            <summary>
+            Property that represents the unique identifier of the laptop's seller
+            </summary>
+        </member>
         <member name="T:PCShop.Core.Models.Laptop.LaptopExportViewModel">
             <summary>
             LaptopExportViewModel model
