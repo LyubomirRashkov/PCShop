@@ -28,6 +28,14 @@
             </summary>
             <param name="dbContext">The dbContext that will be used</param>
         </member>
+        <member name="M:PCShop.Infrastructure.Common.Repository.All``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+            <summary>
+            Method to retrieve all entities of type T that satisfy a certain condition
+            </summary>
+            <typeparam name="T">Type of the target entity</typeparam>
+            <param name="condition">The condition that must be satisfied</param>
+            <returns>Queryable expression tree</returns>
+        </member>
         <member name="M:PCShop.Infrastructure.Common.Repository.AllAsReadOnly``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
             <summary>
             Method to retrieve all entities of type T that satisfy a certain condition as no tracking entities
@@ -35,6 +43,12 @@
             <typeparam name="T">Type of the target entity</typeparam>
             <param name="condition">The condition that must be satisfied</param>
             <returns>Queryable expression tree</returns>
+        </member>
+        <member name="M:PCShop.Infrastructure.Common.Repository.SaveChangesAsync">
+            <summary>
+            Method to save all made changes in a transaction
+            </summary>
+            <returns>The number of state entries written to the database</returns>
         </member>
         <member name="T:PCShop.Infrastructure.Constants.DataConstant">
             <summary>

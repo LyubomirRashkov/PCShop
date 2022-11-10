@@ -23,11 +23,32 @@ namespace PCShop.Core.Services.Implementations
             this.repository = repository;
         }
 
-        /// <summary>
-        /// Method to retrieve all active laptops
-        /// </summary>
-        /// <returns>Collection of LaptopExportViewModels</returns>
-        public async Task<IEnumerable<LaptopExportViewModel>> GetAllLaptopsAsync()
+		/// <summary>
+		/// Method to mark a specific laptop as deleted
+		/// </summary>
+		/// <param name="id">Laptop unique identifier</param>
+		/// <exception cref="ArgumentException">Thrown when there is no laptop with the given unique identifier in the database</exception>
+		public async Task DeleteLaptopAsync(int id)
+		{
+            var laptop = await this.repository
+                .All<Laptop>(l => !l.IsDeleted)
+                .FirstOrDefaultAsync(l => l.Id == id);
+
+            if (laptop is null) 
+            {
+				throw new ArgumentException("Invalid laptop id!");
+			}
+
+            laptop.IsDeleted = true;
+
+            await this.repository.SaveChangesAsync();
+		}
+
+		/// <summary>
+		/// Method to retrieve all active laptops
+		/// </summary>
+		/// <returns>Collection of LaptopExportViewModels</returns>
+		public async Task<IEnumerable<LaptopExportViewModel>> GetAllLaptopsAsync()
         {
             return await this.repository
                 .AllAsReadOnly<Laptop>(l => !l.IsDeleted && l.Quantity >= 1)
@@ -52,7 +73,7 @@ namespace PCShop.Core.Services.Implementations
         /// <param name="id">Laptop unique identifier</param>
         /// <returns>The laptop as LaptopDetailsExportViewModel</returns>
         /// <exception cref="ArgumentException">Thrown when there is no laptop with the given unique identifier in the database</exception>
-        public async Task<LaptopDetailsExportViewModel> GetLaptopByIdAsync(int id)
+        public async Task<LaptopDetailsExportViewModel> GetLaptopByIdAsDtoAsync(int id)
         {
             var laptopExport = await this.repository
                 .AllAsReadOnly<Laptop>(l => !l.IsDeleted)

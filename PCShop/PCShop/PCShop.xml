@@ -89,6 +89,13 @@
             <param name="id">Laptop unique identifier</param>
             <returns>Detailed information about the laptop</returns>
         </member>
+        <member name="M:PCShop.Controllers.LaptopController.Delete(System.Int32)">
+            <summary>
+            Action to mark a specific laptop as deleted
+            </summary>
+            <param name="id">Laptop unique identifier</param>
+            <returns>The home page</returns>
+        </member>
         <member name="T:PCShop.Extensions.ClaimsPrincipalExtension">
             <summary>
             ClaimsPrincipalExtension model

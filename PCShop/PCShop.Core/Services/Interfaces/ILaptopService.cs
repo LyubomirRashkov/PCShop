@@ -18,6 +18,12 @@ namespace PCShop.Core.Services.Interfaces
         /// </summary>
         /// <param name="id">Laptop unique identifier</param>
         /// <returns>The laptop as LaptopDetailsExportViewModel</returns>
-        Task<LaptopDetailsExportViewModel> GetLaptopByIdAsync(int id);
+        Task<LaptopDetailsExportViewModel> GetLaptopByIdAsDtoAsync(int id);
+
+		/// <summary>
+		/// Method to mark a specific laptop as deleted
+		/// </summary>
+		/// <param name="id">Laptop unique identifier</param>
+		Task DeleteLaptopAsync(int id);
     }
 }

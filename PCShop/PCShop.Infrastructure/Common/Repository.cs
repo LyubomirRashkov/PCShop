@@ -20,19 +20,40 @@ namespace PCShop.Infrastructure.Common
             this.dbContext = dbContext;
         }
 
-        /// <summary>
-        /// Method to retrieve all entities of type T that satisfy a certain condition as no tracking entities
-        /// </summary>
-        /// <typeparam name="T">Type of the target entity</typeparam>
-        /// <param name="condition">The condition that must be satisfied</param>
-        /// <returns>Queryable expression tree</returns>
-        public IQueryable<T> AllAsReadOnly<T>(Expression<Func<T, bool>> condition)
+		/// <summary>
+		/// Method to retrieve all entities of type T that satisfy a certain condition
+		/// </summary>
+		/// <typeparam name="T">Type of the target entity</typeparam>
+		/// <param name="condition">The condition that must be satisfied</param>
+		/// <returns>Queryable expression tree</returns>
+		public IQueryable<T> All<T>(Expression<Func<T, bool>> condition) 
+            where T : class
+		{
+            return this.DbSet<T>().Where(condition);
+		}
+
+		/// <summary>
+		/// Method to retrieve all entities of type T that satisfy a certain condition as no tracking entities
+		/// </summary>
+		/// <typeparam name="T">Type of the target entity</typeparam>
+		/// <param name="condition">The condition that must be satisfied</param>
+		/// <returns>Queryable expression tree</returns>
+		public IQueryable<T> AllAsReadOnly<T>(Expression<Func<T, bool>> condition)
             where T : class
         {
             return this.DbSet<T>().AsNoTracking().Where(condition);
         }
 
-        private DbSet<T> DbSet<T>()
+		/// <summary>
+		/// Method to save all made changes in a transaction
+		/// </summary>
+		/// <returns>The number of state entries written to the database</returns>
+		public async Task<int> SaveChangesAsync()
+		{
+            return await this.dbContext.SaveChangesAsync();
+		}
+
+		private DbSet<T> DbSet<T>()
             where T : class
         {
             return this.dbContext.Set<T>();

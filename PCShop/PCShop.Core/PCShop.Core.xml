@@ -220,13 +220,20 @@
             </summary>
             <param name="repository">The repository that will be used</param>
         </member>
+        <member name="M:PCShop.Core.Services.Implementations.LaptopService.DeleteLaptopAsync(System.Int32)">
+            <summary>
+            Method to mark a specific laptop as deleted
+            </summary>
+            <param name="id">Laptop unique identifier</param>
+            <exception cref="T:System.ArgumentException">Thrown when there is no laptop with the given unique identifier in the database</exception>
+        </member>
         <member name="M:PCShop.Core.Services.Implementations.LaptopService.GetAllLaptopsAsync">
             <summary>
             Method to retrieve all active laptops
             </summary>
             <returns>Collection of LaptopExportViewModels</returns>
         </member>
-        <member name="M:PCShop.Core.Services.Implementations.LaptopService.GetLaptopByIdAsync(System.Int32)">
+        <member name="M:PCShop.Core.Services.Implementations.LaptopService.GetLaptopByIdAsDtoAsync(System.Int32)">
             <summary>
             Method to retrieve a specific laptop
             </summary>
@@ -245,12 +252,18 @@
             </summary>
             <returns>Collection of LaptopExportViewModels</returns>
         </member>
-        <member name="M:PCShop.Core.Services.Interfaces.ILaptopService.GetLaptopByIdAsync(System.Int32)">
+        <member name="M:PCShop.Core.Services.Interfaces.ILaptopService.GetLaptopByIdAsDtoAsync(System.Int32)">
             <summary>
             Method to retrieve a specific laptop
             </summary>
             <param name="id">Laptop unique identifier</param>
             <returns>The laptop as LaptopDetailsExportViewModel</returns>
+        </member>
+        <member name="M:PCShop.Core.Services.Interfaces.ILaptopService.DeleteLaptopAsync(System.Int32)">
+            <summary>
+            Method to mark a specific laptop as deleted
+            </summary>
+            <param name="id">Laptop unique identifier</param>
         </member>
     </members>
 </doc>
