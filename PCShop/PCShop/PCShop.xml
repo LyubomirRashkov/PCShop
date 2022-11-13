@@ -80,7 +80,7 @@
             <summary>
             HttpGet action to retrieve all active laptops
             </summary>
-            <returns>Collection of laptops</returns>
+            <returns>Collection of all laptops</returns>
         </member>
         <member name="M:PCShop.Controllers.LaptopController.Details(System.Int32)">
             <summary>
@@ -94,7 +94,20 @@
             Action to mark a specific laptop as deleted
             </summary>
             <param name="id">Laptop unique identifier</param>
-            <returns>The home page</returns>
+            <returns>Redirection to /Laptop/Index</returns>
+        </member>
+        <member name="M:PCShop.Controllers.LaptopController.Add">
+            <summary>
+            HttpGet action to return the form for adding a laptop
+            </summary>
+            <returns>The form for adding a laptop</returns>
+        </member>
+        <member name="M:PCShop.Controllers.LaptopController.Add(PCShop.Core.Models.Laptop.LaptopImportViewModel)">
+            <summary>
+            HttpPost action to add a laptop
+            </summary>
+            <param name="model">Laptop import model</param>
+            <returns>Redirection to /Laptop/Details</returns>
         </member>
         <member name="T:PCShop.Extensions.ClaimsPrincipalExtension">
             <summary>

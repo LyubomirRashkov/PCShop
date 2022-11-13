@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using static PCShop.Infrastructure.Constants.DataConstant.TypeConstants;
 
 namespace PCShop.Infrastructure.Data.Models.GravitatingClasses
 {
@@ -28,6 +29,7 @@ namespace PCShop.Infrastructure.Data.Models.GravitatingClasses
         /// Property that represents type name
         /// </summary>
         [Required]
+        [MaxLength(TypeNameMaxLength)]
         public string Name { get; set; } = null!;
 
         /// <summary>

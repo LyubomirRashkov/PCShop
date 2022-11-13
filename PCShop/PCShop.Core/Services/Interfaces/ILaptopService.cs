@@ -25,5 +25,13 @@ namespace PCShop.Core.Services.Interfaces
 		/// </summary>
 		/// <param name="id">Laptop unique identifier</param>
 		Task DeleteLaptopAsync(int id);
+
+		/// <summary>
+		/// Method to add a laptop
+		/// </summary>
+		/// <param name="model">Laptop input model</param>
+		/// <param name="userId">Laptop's owner unique identifier</param>
+		/// <returns>The unique identifier of the added laptop</returns>
+		Task<int> AddLaptopAsync(LaptopImportViewModel model, string? userId);
     }
 }

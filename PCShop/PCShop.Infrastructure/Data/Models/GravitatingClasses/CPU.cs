@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using static PCShop.Infrastructure.Constants.DataConstant.CPUConstants;
 
 namespace PCShop.Infrastructure.Data.Models.GravitatingClasses
 {
@@ -24,6 +25,7 @@ namespace PCShop.Infrastructure.Data.Models.GravitatingClasses
         /// Property that represents CPU name
         /// </summary>
         [Required]
+        [MaxLength(CPUNameMaxLength)]
         public string Name { get; set; } = null!;
 
         /// <summary>

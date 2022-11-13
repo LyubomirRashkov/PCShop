@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using static PCShop.Infrastructure.Constants.DataConstant.DisplayTechnologyConstants;
 
 namespace PCShop.Infrastructure.Data.Models.GravitatingClasses
 {
@@ -25,6 +26,7 @@ namespace PCShop.Infrastructure.Data.Models.GravitatingClasses
         /// Property that represents displayTechnology name
         /// </summary>
         [Required]
+        [MaxLength(DisplayTechnologyNameMaxLength)]
         public string Name { get; set; } = null!;
 
         /// <summary>

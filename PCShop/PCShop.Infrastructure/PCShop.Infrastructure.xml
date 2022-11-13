@@ -17,6 +17,35 @@
             <param name="condition">The condition that must be satisfied</param>
             <returns>Queryable expression tree</returns>
         </member>
+        <member name="M:PCShop.Infrastructure.Common.IRepository.All``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+            <summary>
+            Method to retrieve all entities of type T that satisfy a certain condition
+            </summary>
+            <typeparam name="T">Type of the target entity</typeparam>
+            <param name="condition">The condition that must be satisfied</param>
+            <returns>Queryable expression tree</returns>
+        </member>
+        <member name="M:PCShop.Infrastructure.Common.IRepository.SaveChangesAsync">
+            <summary>
+            Method to save all made changes in a transaction
+            </summary>
+            <returns>The number of state entries written to the database</returns>
+        </member>
+        <member name="M:PCShop.Infrastructure.Common.IRepository.GetByPropertyAsync``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+            <summary>
+            Method to get the first entity from the database according to a specific condition
+            </summary>
+            <typeparam name="T">Type of the target entity</typeparam>
+            <param name="condition">The condition that must be satisfied</param>
+            <returns>The entity or null</returns>
+        </member>
+        <member name="M:PCShop.Infrastructure.Common.IRepository.AddAsync``1(``0)">
+            <summary>
+            Method to add an entity to the database
+            </summary>
+            <typeparam name="T">Type of the entity</typeparam>
+            <param name="entity">Entity to add</param>
+        </member>
         <member name="T:PCShop.Infrastructure.Common.Repository">
             <summary>
             Implementation of IRepository interface
@@ -27,6 +56,13 @@
             Constructor of Repository class
             </summary>
             <param name="dbContext">The dbContext that will be used</param>
+        </member>
+        <member name="M:PCShop.Infrastructure.Common.Repository.AddAsync``1(``0)">
+            <summary>
+            Method to add an entity to the database
+            </summary>
+            <typeparam name="T">Type of the entity</typeparam>
+            <param name="entity">Entity to add</param>
         </member>
         <member name="M:PCShop.Infrastructure.Common.Repository.All``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
             <summary>
@@ -44,6 +80,14 @@
             <param name="condition">The condition that must be satisfied</param>
             <returns>Queryable expression tree</returns>
         </member>
+        <member name="M:PCShop.Infrastructure.Common.Repository.GetByPropertyAsync``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+            <summary>
+            Method to get the first entity from the database according to a specific condition
+            </summary>
+            <typeparam name="T">Type of the target entity</typeparam>
+            <param name="condition">The condition that must be satisfied</param>
+            <returns>The entity or null</returns>
+        </member>
         <member name="M:PCShop.Infrastructure.Common.Repository.SaveChangesAsync">
             <summary>
             Method to save all made changes in a transaction
@@ -60,14 +104,54 @@
             Class holding User constants
             </summary>
         </member>
+        <member name="F:PCShop.Infrastructure.Constants.DataConstant.UserConstants.FirstNameMinLength">
+            <summary>
+            Constant for the min length of user's first name
+            </summary>
+        </member>
         <member name="F:PCShop.Infrastructure.Constants.DataConstant.UserConstants.FirstNameMaxLength">
             <summary>
             Constant for the max length of user's first name
             </summary>
         </member>
+        <member name="F:PCShop.Infrastructure.Constants.DataConstant.UserConstants.LastNameMinLength">
+            <summary>
+            Constant for the min length of user's last name
+            </summary>
+        </member>
         <member name="F:PCShop.Infrastructure.Constants.DataConstant.UserConstants.LastNameMaxLength">
             <summary>
             Constant for the max length of user's last name
+            </summary>
+        </member>
+        <member name="F:PCShop.Infrastructure.Constants.DataConstant.UserConstants.UsernameMinLength">
+            <summary>
+            Constant for the min length of user's username
+            </summary>
+        </member>
+        <member name="F:PCShop.Infrastructure.Constants.DataConstant.UserConstants.UsernameMaxLength">
+            <summary>
+            Constant for the max length of user's username
+            </summary>
+        </member>
+        <member name="F:PCShop.Infrastructure.Constants.DataConstant.UserConstants.EmailMinLength">
+            <summary>
+            Constant for the min length of user's email
+            </summary>
+        </member>
+        <member name="F:PCShop.Infrastructure.Constants.DataConstant.UserConstants.EmailMaxLength">
+            <summary>
+            Constant for the max length of user's email
+            </summary>
+        </member>
+        <member name="F:PCShop.Infrastructure.Constants.DataConstant.UserConstants.PasswordMinLength">
+            <summary>
+            Constant for the min length of user's password
+            </summary>
+        </member>
+        <member name="F:PCShop.Infrastructure.Constants.DataConstant.UserConstants.PasswordMaxLength">
+            <summary>
+            Constant for the max length of user's password
             </summary>
         </member>
         <member name="T:PCShop.Infrastructure.Constants.DataConstant.RoleConstants">
@@ -83,6 +167,211 @@
         <member name="F:PCShop.Infrastructure.Constants.DataConstant.RoleConstants.SuperUser">
             <summary>
             Constant for the name of SuperUser role
+            </summary>
+        </member>
+        <member name="T:PCShop.Infrastructure.Constants.DataConstant.BrandConstants">
+            <summary>
+            Class holding Brand constants
+            </summary>
+        </member>
+        <member name="F:PCShop.Infrastructure.Constants.DataConstant.BrandConstants.BrandNameMinLength">
+            <summary>
+            Constant for the min length of brand's name
+            </summary>
+        </member>
+        <member name="F:PCShop.Infrastructure.Constants.DataConstant.BrandConstants.BrandNameMaxLength">
+            <summary>
+            Constant for the max length of brand's name
+            </summary>
+        </member>
+        <member name="T:PCShop.Infrastructure.Constants.DataConstant.ColorConstants">
+            <summary>
+            Class holding Color constants
+            </summary>
+        </member>
+        <member name="F:PCShop.Infrastructure.Constants.DataConstant.ColorConstants.ColorNameMinLength">
+            <summary>
+            Constant for the min length of color's name
+            </summary>
+        </member>
+        <member name="F:PCShop.Infrastructure.Constants.DataConstant.ColorConstants.ColorNameMaxLength">
+            <summary>
+            Constant for the max length of color's name
+            </summary>
+        </member>
+        <member name="T:PCShop.Infrastructure.Constants.DataConstant.CPUConstants">
+            <summary>
+            Class holding CPU constants
+            </summary>
+        </member>
+        <member name="F:PCShop.Infrastructure.Constants.DataConstant.CPUConstants.CPUNameMinLength">
+            <summary>
+            Constant for the min length of CPU's name
+            </summary>
+        </member>
+        <member name="F:PCShop.Infrastructure.Constants.DataConstant.CPUConstants.CPUNameMaxLength">
+            <summary>
+            Constant for the max length of CPU's name
+            </summary>
+        </member>
+        <member name="T:PCShop.Infrastructure.Constants.DataConstant.DisplayCoverageConstants">
+            <summary>
+            Class holding DisplayCoverage constants
+            </summary>
+        </member>
+        <member name="F:PCShop.Infrastructure.Constants.DataConstant.DisplayCoverageConstants.DisplayCoverageNameMinLength">
+            <summary>
+            Constant for the min length of displayCoverage's name
+            </summary>
+        </member>
+        <member name="F:PCShop.Infrastructure.Constants.DataConstant.DisplayCoverageConstants.DisplayCoverageNameMaxLength">
+            <summary>
+            Constant for the max length of displayCoverage's name
+            </summary>
+        </member>
+        <member name="T:PCShop.Infrastructure.Constants.DataConstant.DisplayTechnologyConstants">
+            <summary>
+            Class holding DisplayTechnology constants
+            </summary>
+        </member>
+        <member name="F:PCShop.Infrastructure.Constants.DataConstant.DisplayTechnologyConstants.DisplayTechnologyNameMinLength">
+            <summary>
+            Constant for the min length of displayTechnology's name
+            </summary>
+        </member>
+        <member name="F:PCShop.Infrastructure.Constants.DataConstant.DisplayTechnologyConstants.DisplayTechnologyNameMaxLength">
+            <summary>
+            Constant for the max length of displayTechnology's name
+            </summary>
+        </member>
+        <member name="T:PCShop.Infrastructure.Constants.DataConstant.FormatConstants">
+            <summary>
+            Class holding Format constants
+            </summary>
+        </member>
+        <member name="F:PCShop.Infrastructure.Constants.DataConstant.FormatConstants.FormatNameMinLength">
+            <summary>
+            Constant for the min length of format's name
+            </summary>
+        </member>
+        <member name="F:PCShop.Infrastructure.Constants.DataConstant.FormatConstants.FormatNameMaxLength">
+            <summary>
+            Constant for the max length of format's name
+            </summary>
+        </member>
+        <member name="T:PCShop.Infrastructure.Constants.DataConstant.ResolutionConstants">
+            <summary>
+            Class holding Resolution constants
+            </summary>
+        </member>
+        <member name="F:PCShop.Infrastructure.Constants.DataConstant.ResolutionConstants.ResolutionValueMinLength">
+            <summary>
+            Constant for the min length of resolution's value string
+            </summary>
+        </member>
+        <member name="F:PCShop.Infrastructure.Constants.DataConstant.ResolutionConstants.ResolutionValueMaxLength">
+            <summary>
+            Constant for the max length of resolution's value string
+            </summary>
+        </member>
+        <member name="T:PCShop.Infrastructure.Constants.DataConstant.SensitivityConstants">
+            <summary>
+            Class holding Sensitivity constants
+            </summary>
+        </member>
+        <member name="F:PCShop.Infrastructure.Constants.DataConstant.SensitivityConstants.SensitivityRangeMinLength">
+            <summary>
+            Constant for the min length of sensitivity's range string
+            </summary>
+        </member>
+        <member name="F:PCShop.Infrastructure.Constants.DataConstant.SensitivityConstants.SensitivityRangeMaxLength">
+            <summary>
+            Constant for the max length of sensitivity's range string
+            </summary>
+        </member>
+        <member name="T:PCShop.Infrastructure.Constants.DataConstant.TypeConstants">
+            <summary>
+            Class holding Type constants
+            </summary>
+        </member>
+        <member name="F:PCShop.Infrastructure.Constants.DataConstant.TypeConstants.TypeNameMinLength">
+            <summary>
+            Constant for the min length of type's name
+            </summary>
+        </member>
+        <member name="F:PCShop.Infrastructure.Constants.DataConstant.TypeConstants.TypeNameMaxLength">
+            <summary>
+            Constant for the max length of type's name
+            </summary>
+        </member>
+        <member name="T:PCShop.Infrastructure.Constants.DataConstant.VideoCardConstants">
+            <summary>
+            Class holding VideoCard constants
+            </summary>
+        </member>
+        <member name="F:PCShop.Infrastructure.Constants.DataConstant.VideoCardConstants.VideoCardNameMinLength">
+            <summary>
+            Constant for the min length of videoCard's name
+            </summary>
+        </member>
+        <member name="F:PCShop.Infrastructure.Constants.DataConstant.VideoCardConstants.VideoCardNameMaxLength">
+            <summary>
+            Constant for the max length of videoCard's name
+            </summary>
+        </member>
+        <member name="T:PCShop.Infrastructure.Constants.DataConstant.LaptopConstants">
+            <summary>
+            Class holding Laptop constants
+            </summary>
+        </member>
+        <member name="F:PCShop.Infrastructure.Constants.DataConstant.LaptopConstants.RAMMinValue">
+            <summary>
+            Constant for the min value of laptop's RAM
+            </summary>
+        </member>
+        <member name="F:PCShop.Infrastructure.Constants.DataConstant.LaptopConstants.RAMMaxValue">
+            <summary>
+            Constant for the max value of laptop's RAM
+            </summary>
+        </member>
+        <member name="F:PCShop.Infrastructure.Constants.DataConstant.LaptopConstants.SSDCapacityMinValue">
+            <summary>
+            Constant for the min value of laptop's SSD capacity
+            </summary>
+        </member>
+        <member name="F:PCShop.Infrastructure.Constants.DataConstant.LaptopConstants.SSDCapacityMaxValue">
+            <summary>
+            Constant for the max value of laptop's SSD capacity
+            </summary>
+        </member>
+        <member name="T:PCShop.Infrastructure.Constants.DataConstant.ProductConstants">
+            <summary>
+            Class holding constants for all product types
+            </summary>
+        </member>
+        <member name="F:PCShop.Infrastructure.Constants.DataConstant.ProductConstants.QuantityMinValue">
+            <summary>
+            Constant for the min value of product's quantity
+            </summary>
+        </member>
+        <member name="F:PCShop.Infrastructure.Constants.DataConstant.ProductConstants.QuantityMaxValue">
+            <summary>
+            Constant for the max value of product's quantity
+            </summary>
+        </member>
+        <member name="F:PCShop.Infrastructure.Constants.DataConstant.ProductConstants.WarrantyMinValue">
+            <summary>
+            Constant for the min value of product's warranty
+            </summary>
+        </member>
+        <member name="F:PCShop.Infrastructure.Constants.DataConstant.ProductConstants.WarrantyMaxValue">
+            <summary>
+            Constant for the max value of product's warranty
+            </summary>
+        </member>
+        <member name="F:PCShop.Infrastructure.Constants.DataConstant.ProductConstants.IntegerErrorMessage">
+            <summary>
+            Constant for the error message of product's integer property
             </summary>
         </member>
         <member name="T:PCShop.Infrastructure.Data.ApplicationDbContext">

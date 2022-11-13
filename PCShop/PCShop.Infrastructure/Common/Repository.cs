@@ -20,13 +20,24 @@ namespace PCShop.Infrastructure.Common
             this.dbContext = dbContext;
         }
 
-		/// <summary>
-		/// Method to retrieve all entities of type T that satisfy a certain condition
-		/// </summary>
-		/// <typeparam name="T">Type of the target entity</typeparam>
-		/// <param name="condition">The condition that must be satisfied</param>
-		/// <returns>Queryable expression tree</returns>
-		public IQueryable<T> All<T>(Expression<Func<T, bool>> condition) 
+        /// <summary>
+        /// Method to add an entity to the database
+        /// </summary>
+        /// <typeparam name="T">Type of the entity</typeparam>
+        /// <param name="entity">Entity to add</param>
+        public async Task AddAsync<T>(T entity) 
+            where T : class
+        {
+            await this.DbSet<T>().AddAsync(entity);
+        }
+
+        /// <summary>
+        /// Method to retrieve all entities of type T that satisfy a certain condition
+        /// </summary>
+        /// <typeparam name="T">Type of the target entity</typeparam>
+        /// <param name="condition">The condition that must be satisfied</param>
+        /// <returns>Queryable expression tree</returns>
+        public IQueryable<T> All<T>(Expression<Func<T, bool>> condition) 
             where T : class
 		{
             return this.DbSet<T>().Where(condition);
@@ -44,11 +55,23 @@ namespace PCShop.Infrastructure.Common
             return this.DbSet<T>().AsNoTracking().Where(condition);
         }
 
-		/// <summary>
-		/// Method to save all made changes in a transaction
-		/// </summary>
-		/// <returns>The number of state entries written to the database</returns>
-		public async Task<int> SaveChangesAsync()
+        /// <summary>
+        /// Method to get the first entity from the database according to a specific condition
+        /// </summary>
+        /// <typeparam name="T">Type of the target entity</typeparam>
+        /// <param name="condition">The condition that must be satisfied</param>
+        /// <returns>The entity or null</returns>
+        public async Task<T?> GetByPropertyAsync<T>(Expression<Func<T, bool>> condition) 
+            where T : class
+        {
+            return await this.DbSet<T>().Where(condition).FirstOrDefaultAsync();
+        }
+
+        /// <summary>
+        /// Method to save all made changes in a transaction
+        /// </summary>
+        /// <returns>The number of state entries written to the database</returns>
+        public async Task<int> SaveChangesAsync()
 		{
             return await this.dbContext.SaveChangesAsync();
 		}

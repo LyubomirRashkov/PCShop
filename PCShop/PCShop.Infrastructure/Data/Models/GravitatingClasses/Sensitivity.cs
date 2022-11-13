@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using static PCShop.Infrastructure.Constants.DataConstant.SensitivityConstants;
 
 namespace PCShop.Infrastructure.Data.Models.GravitatingClasses
 {
@@ -24,6 +25,7 @@ namespace PCShop.Infrastructure.Data.Models.GravitatingClasses
         /// Property that represents sensitivity range
         /// </summary>
         [Required]
+        [MaxLength(SensitivityRangeMaxLength)]
         public string Range { get; set; } = null!;
 
         /// <summary>

@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using static PCShop.Infrastructure.Constants.DataConstant.ColorConstants;
 
 namespace PCShop.Infrastructure.Data.Models.GravitatingClasses
 {
@@ -29,6 +30,7 @@ namespace PCShop.Infrastructure.Data.Models.GravitatingClasses
         /// Property that represents color name
         /// </summary>
         [Required]
+        [MaxLength(ColorNameMaxLength)]
         public string Name { get; set; } = null!;
 
         /// <summary>

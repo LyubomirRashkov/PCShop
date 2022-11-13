@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using static PCShop.Infrastructure.Constants.DataConstant.ResolutionConstants;
 
 namespace PCShop.Infrastructure.Data.Models.GravitatingClasses
 {
@@ -25,6 +26,7 @@ namespace PCShop.Infrastructure.Data.Models.GravitatingClasses
         /// Property that represents resolution value
         /// </summary>
         [Required]
+        [MaxLength(ResolutionValueMaxLength)]
         public string Value { get; set; } = null!;
 
         /// <summary>

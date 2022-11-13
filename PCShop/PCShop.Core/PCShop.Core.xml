@@ -4,56 +4,6 @@
         <name>PCShop.Core</name>
     </assembly>
     <members>
-        <member name="T:PCShop.Core.Constants.Constant">
-            <summary>
-            Class holding constants
-            </summary>
-        </member>
-        <member name="T:PCShop.Core.Constants.Constant.UserConstants">
-            <summary>
-            Class holding User constants
-            </summary>
-        </member>
-        <member name="F:PCShop.Core.Constants.Constant.UserConstants.FirstNameMinLength">
-            <summary>
-            Constant for the min length of user's first name
-            </summary>
-        </member>
-        <member name="F:PCShop.Core.Constants.Constant.UserConstants.LastNameMinLength">
-            <summary>
-            Constant for the min length of user's last name
-            </summary>
-        </member>
-        <member name="F:PCShop.Core.Constants.Constant.UserConstants.UsernameMinLength">
-            <summary>
-            Constant for the min length of user's username
-            </summary>
-        </member>
-        <member name="F:PCShop.Core.Constants.Constant.UserConstants.UsernameMaxLength">
-            <summary>
-            Constant for the max length of user's username
-            </summary>
-        </member>
-        <member name="F:PCShop.Core.Constants.Constant.UserConstants.EmailMinLength">
-            <summary>
-            Constant for the min length of user's email
-            </summary>
-        </member>
-        <member name="F:PCShop.Core.Constants.Constant.UserConstants.EmailMaxLength">
-            <summary>
-            Constant for the max length of user's email
-            </summary>
-        </member>
-        <member name="F:PCShop.Core.Constants.Constant.UserConstants.PasswordMinLength">
-            <summary>
-            Constant for the min length of user's password
-            </summary>
-        </member>
-        <member name="F:PCShop.Core.Constants.Constant.UserConstants.PasswordMaxLength">
-            <summary>
-            Constant for the max length of user's password
-            </summary>
-        </member>
         <member name="T:PCShop.Core.Models.Laptop.LaptopDetailsExportViewModel">
             <summary>
             LaptopDetailsExportViewModel model
@@ -154,6 +104,86 @@
             Property that represents laptop warranty
             </summary>
         </member>
+        <member name="T:PCShop.Core.Models.Laptop.LaptopImportViewModel">
+            <summary>
+            LaptopImportViewModel model
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Laptop.LaptopImportViewModel.Brand">
+            <summary>
+            Property that represents laptop brand
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Laptop.LaptopImportViewModel.CPU">
+            <summary>
+            Property that represents laptop CPU
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Laptop.LaptopImportViewModel.RAM">
+            <summary>
+            Property that represents laptop RAM
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Laptop.LaptopImportViewModel.SSDCapacity">
+            <summary>
+            Property that represents laptop SSD capacity
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Laptop.LaptopImportViewModel.VideoCard">
+            <summary>
+            Property that represents laptop video card
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Laptop.LaptopImportViewModel.DisplaySize">
+            <summary>
+            Property that represents laptop display size
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Laptop.LaptopImportViewModel.Type">
+            <summary>
+            Property that represents laptop type
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Laptop.LaptopImportViewModel.Quantity">
+            <summary>
+            Property that represents laptops count
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Laptop.LaptopImportViewModel.Price">
+            <summary>
+            Property that represents laptop price
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Laptop.LaptopImportViewModel.Warranty">
+            <summary>
+            Property that represents laptop warranty
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Laptop.LaptopImportViewModel.DisplayCoverage">
+            <summary>
+            Property that represents laptop display coverage
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Laptop.LaptopImportViewModel.DisplayTechnology">
+            <summary>
+            Property that represents laptop display technology
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Laptop.LaptopImportViewModel.Resolution">
+            <summary>
+            Property that represents laptop display resolution
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Laptop.LaptopImportViewModel.Color">
+            <summary>
+            Property that represents laptop color
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Laptop.LaptopImportViewModel.ImageUrl">
+            <summary>
+            Property that represents laptop image url
+            </summary>
+        </member>
         <member name="T:PCShop.Core.Models.User.SignInViewModel">
             <summary>
             ViewModel class for sign in
@@ -220,6 +250,14 @@
             </summary>
             <param name="repository">The repository that will be used</param>
         </member>
+        <member name="M:PCShop.Core.Services.Implementations.LaptopService.AddLaptopAsync(PCShop.Core.Models.Laptop.LaptopImportViewModel,System.String)">
+            <summary>
+            Method to add a laptop
+            </summary>
+            <param name="model">Laptop input model</param>
+            <param name="userId">Laptop's owner unique identifier</param>
+            <returns>The unique identifier of the added laptop</returns>
+        </member>
         <member name="M:PCShop.Core.Services.Implementations.LaptopService.DeleteLaptopAsync(System.Int32)">
             <summary>
             Method to mark a specific laptop as deleted
@@ -264,6 +302,14 @@
             Method to mark a specific laptop as deleted
             </summary>
             <param name="id">Laptop unique identifier</param>
+        </member>
+        <member name="M:PCShop.Core.Services.Interfaces.ILaptopService.AddLaptopAsync(PCShop.Core.Models.Laptop.LaptopImportViewModel,System.String)">
+            <summary>
+            Method to add a laptop
+            </summary>
+            <param name="model">Laptop input model</param>
+            <param name="userId">Laptop's owner unique identifier</param>
+            <returns>The unique identifier of the added laptop</returns>
         </member>
     </members>
 </doc>

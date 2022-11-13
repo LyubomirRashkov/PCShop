@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using static PCShop.Infrastructure.Constants.DataConstant.VideoCardConstants;
 
 namespace PCShop.Infrastructure.Data.Models.GravitatingClasses
 {
@@ -24,6 +25,7 @@ namespace PCShop.Infrastructure.Data.Models.GravitatingClasses
         /// Property that represents videoCard name
         /// </summary>
         [Required]
+        [MaxLength(VideoCardNameMaxLength)]
         public string Name { get; set; } = null!;
 
         /// <summary>

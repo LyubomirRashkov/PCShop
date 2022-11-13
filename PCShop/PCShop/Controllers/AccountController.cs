@@ -39,7 +39,7 @@ namespace PCShop.Controllers
         {
             if (this.User?.Identity?.IsAuthenticated ?? false)
             {
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction(nameof(HomeController.Index), "Home");
             }
 
             var model = new SignUpViewModel();
@@ -75,7 +75,7 @@ namespace PCShop.Controllers
             {
                 await this.signInManager.SignInAsync(user, isPersistent: false);
 
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction(nameof(HomeController.Index), "Home");
             }
 
             foreach (var error in result.Errors)
@@ -96,7 +96,7 @@ namespace PCShop.Controllers
         {
             if (this.User?.Identity?.IsAuthenticated ?? false)
             {
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction(nameof(HomeController.Index), "Home");
             }
 
             var model = new SignInViewModel()
@@ -133,7 +133,7 @@ namespace PCShop.Controllers
                         return Redirect(model.ReturnUrl);
                     }
 
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction(nameof(HomeController.Index), "Home");
                 }
             }
 
@@ -150,7 +150,7 @@ namespace PCShop.Controllers
         {
             await this.signInManager.SignOutAsync();
 
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction(nameof(HomeController.Index), "Home");
         }
         
         /// <summary>
@@ -167,7 +167,7 @@ namespace PCShop.Controllers
 
             await this.userManager.AddToRoleAsync(superUser, SuperUser);
 
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction(nameof(HomeController.Index), "Home");
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using PCShop.Core.Models.Laptop;
 using PCShop.Core.Services.Interfaces;
 using PCShop.Extensions;
 using static PCShop.Infrastructure.Constants.DataConstant.RoleConstants;
@@ -26,7 +27,7 @@ namespace PCShop.Controllers
 		/// <summary>
 		/// HttpGet action to retrieve all active laptops
 		/// </summary>
-		/// <returns>Collection of laptops</returns>
+		/// <returns>Collection of all laptops</returns>
 		[HttpGet]
 		public async Task<IActionResult> Index()
 		{
@@ -59,7 +60,7 @@ namespace PCShop.Controllers
 		/// Action to mark a specific laptop as deleted
 		/// </summary>
 		/// <param name="id">Laptop unique identifier</param>
-		/// <returns>The home page</returns>
+		/// <returns>Redirection to /Laptop/Index</returns>
 		[Authorize(Roles = $"{Administrator}, {SuperUser}")]
 		public async Task<IActionResult> Delete(int id)
 		{
@@ -74,11 +75,57 @@ namespace PCShop.Controllers
 
 				await this.laptopService.DeleteLaptopAsync(id);
 
-				return RedirectToAction("Index");
+				return RedirectToAction(nameof(Index));
 			}
 			catch (Exception)
 			{
 				return NotFound();
+			}
+		}
+
+        /// <summary>
+        /// HttpGet action to return the form for adding a laptop
+        /// </summary>
+        /// <returns>The form for adding a laptop</returns>
+        [HttpGet]
+		[Authorize(Roles = $"{Administrator}, {SuperUser}")]
+		public IActionResult Add()
+		{
+			return View();
+		}
+
+        /// <summary>
+        /// HttpPost action to add a laptop
+        /// </summary>
+        /// <param name="model">Laptop import model</param>
+        /// <returns>Redirection to /Laptop/Details</returns>
+        [HttpPost]
+		[Authorize(Roles = $"{Administrator}, {SuperUser}")]
+		public async Task<IActionResult> Add(LaptopImportViewModel model)
+		{
+			if (!this.ModelState.IsValid)
+			{
+				return View(model);
+			}
+
+			try
+			{
+				string? userId = null;
+
+				if (this.User.IsInRole(SuperUser))
+				{
+					userId = this.User.Id();
+				}
+
+				int id = await this.laptopService.AddLaptopAsync(model, userId);
+
+				return RedirectToAction(nameof(Details), new { id });
+			}
+			catch (Exception)
+			{
+				this.ModelState.AddModelError("", "Something went wrong... :)");
+
+				return View(model);
 			}
 		}
 	}
