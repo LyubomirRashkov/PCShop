@@ -121,6 +121,56 @@
             <param name="user">ClaimsPrincipal that will be extended</param>
             <returns>ClaimsPrincipal's unique identifier</returns>
         </member>
+        <member name="T:PCShop.ModelBinders.DecimalModelBinder">
+            <summary>
+            Custom decimal model binder
+            </summary>
+        </member>
+        <member name="M:PCShop.ModelBinders.DecimalModelBinder.BindModelAsync(Microsoft.AspNetCore.Mvc.ModelBinding.ModelBindingContext)">
+            <summary>
+            Method that attempts to bind a model
+            </summary>
+            <param name="bindingContext">The Microsoft.AspNetCore.Mvc.ModelBinding.ModelBindingContext</param>
+            <returns>A System.Threading.Tasks.Task which will complete when the model binding process completes. If model binding was successful, Microsoft.AspNetCore.Mvc.ModelBinding.ModelBindingContext.Result will be set to a value returned from Microsoft.AspNetCore.Mvc.ModelBinding.ModelBindingResult.Success(System.Object).</returns>
+        </member>
+        <member name="T:PCShop.ModelBinders.DecimalModelBinderProvider">
+            <summary>
+            Custom decimal model binder provider
+            </summary>
+        </member>
+        <member name="M:PCShop.ModelBinders.DecimalModelBinderProvider.GetBinder(Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderProviderContext)">
+            <summary>
+            Creates a DecimalModelBinder based on ModelBinderProviderContext
+            </summary>
+            <param name="context">The ModelBinderProviderContext</param>
+            <returns>A DecimalModelBinder</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown when ModelBinderProviderContext is null</exception>
+        </member>
+        <member name="T:PCShop.ModelBinders.DoubleModelBinder">
+            <summary>
+            Custom double model binder
+            </summary>
+        </member>
+        <member name="M:PCShop.ModelBinders.DoubleModelBinder.BindModelAsync(Microsoft.AspNetCore.Mvc.ModelBinding.ModelBindingContext)">
+            <summary>
+            Method that attempts to bind a model
+            </summary>
+            <param name="bindingContext">The Microsoft.AspNetCore.Mvc.ModelBinding.ModelBindingContext</param>
+            <returns>A System.Threading.Tasks.Task which will complete when the model binding process completes. If model binding was successful, Microsoft.AspNetCore.Mvc.ModelBinding.ModelBindingContext.Result will be set to a value returned from Microsoft.AspNetCore.Mvc.ModelBinding.ModelBindingResult.Success(System.Object).</returns>
+        </member>
+        <member name="T:PCShop.ModelBinders.DoubleModelBinderProvider">
+            <summary>
+            Custom decimal model binder provider
+            </summary>
+        </member>
+        <member name="M:PCShop.ModelBinders.DoubleModelBinderProvider.GetBinder(Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderProviderContext)">
+            <summary>
+            Creates a DoubleModelBinder based on ModelBinderProviderContext
+            </summary>
+            <param name="context">The ModelBinderProviderContext</param>
+            <returns>A DoubleModelBinder</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown when ModelBinderProviderContext is null</exception>
+        </member>
         <member name="T:Microsoft.Extensions.DependencyInjection.PCShopServiceCollectionExtension">
             <summary>
             PCShopServiceCollectionExtension model

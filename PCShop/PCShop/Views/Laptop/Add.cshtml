@@ -61,7 +61,7 @@
                  && this.User.IsInRole(Administrator))
             {
                 <div class="mb-3">
-                    <label asp-for="@Model.Warranty" class="form-label">Warranty (in months)</label>
+                    <label asp-for="@Model.Warranty" class="form-label">Warranty (in months) <sup>(required)</sup></label>
                     <input asp-for="@Model.Warranty" class="form-control" placeholder="12" />
                     <span asp-validation-for="Warranty" class="text-danger"></span>
                 </div>

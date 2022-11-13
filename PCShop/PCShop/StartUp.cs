@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PCShop.Infrastructure.Data;
 using PCShop.Infrastructure.Data.Models.Account;
+using PCShop.ModelBinders;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -38,7 +39,12 @@ builder.Services.AddMvc(options =>
 	options.Filters.Add(new AutoValidateAntiforgeryTokenAttribute());
 });
 
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllersWithViews()
+	.AddMvcOptions(options => 
+	{
+		options.ModelBinderProviders.Insert(0, new DoubleModelBinderProvider());
+		options.ModelBinderProviders.Insert(0, new DecimalModelBinderProvider());
+	});
 
 builder.Services.AddApplicationServices();
 
