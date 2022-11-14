@@ -109,6 +109,20 @@
             <param name="model">Laptop import model</param>
             <returns>Redirection to /Laptop/Details</returns>
         </member>
+        <member name="M:PCShop.Controllers.LaptopController.Edit(System.Int32)">
+            <summary>
+            HttpGet action to return the form for editing a laptop
+            </summary>
+            <param name="id">Laptop unique identifier</param>
+            <returns>The form for editing a laptop</returns>
+        </member>
+        <member name="M:PCShop.Controllers.LaptopController.Edit(PCShop.Core.Models.Laptop.LaptopEditViewModel)">
+            <summary>
+            HttpPost action to edit a laptop
+            </summary>
+            <param name="model">Laptop import model</param>
+            <returns>Redirection to /Laptop/Details</returns>
+        </member>
         <member name="T:PCShop.Extensions.ClaimsPrincipalExtension">
             <summary>
             ClaimsPrincipalExtension model

@@ -46,7 +46,7 @@ namespace PCShop.Controllers
 		{
 			try
 			{
-				var laptop = await this.laptopService.GetLaptopByIdAsDtoAsync(id);
+				var laptop = await this.laptopService.GetLaptopByIdAsLaptopDetailsExportViewModelAsync(id);
 
 				return View(laptop);
 			}
@@ -66,11 +66,11 @@ namespace PCShop.Controllers
 		{
 			try
 			{
-				var laptop = await this.laptopService.GetLaptopByIdAsDtoAsync(id);
+				var laptop = await this.laptopService.GetLaptopByIdAsLaptopDetailsExportViewModelAsync(id);
 
 				if (this.User.IsInRole(SuperUser) && this.User.Id() != laptop.SellerId)
 				{
-					return BadRequest();
+					return Unauthorized();
 				}
 
 				await this.laptopService.DeleteLaptopAsync(id);
@@ -83,23 +83,23 @@ namespace PCShop.Controllers
 			}
 		}
 
-        /// <summary>
-        /// HttpGet action to return the form for adding a laptop
-        /// </summary>
-        /// <returns>The form for adding a laptop</returns>
-        [HttpGet]
+		/// <summary>
+		/// HttpGet action to return the form for adding a laptop
+		/// </summary>
+		/// <returns>The form for adding a laptop</returns>
+		[HttpGet]
 		[Authorize(Roles = $"{Administrator}, {SuperUser}")]
 		public IActionResult Add()
 		{
 			return View();
 		}
 
-        /// <summary>
-        /// HttpPost action to add a laptop
-        /// </summary>
-        /// <param name="model">Laptop import model</param>
-        /// <returns>Redirection to /Laptop/Details</returns>
-        [HttpPost]
+		/// <summary>
+		/// HttpPost action to add a laptop
+		/// </summary>
+		/// <param name="model">Laptop import model</param>
+		/// <returns>Redirection to /Laptop/Details</returns>
+		[HttpPost]
 		[Authorize(Roles = $"{Administrator}, {SuperUser}")]
 		public async Task<IActionResult> Add(LaptopImportViewModel model)
 		{
@@ -127,6 +127,65 @@ namespace PCShop.Controllers
 
 				return View(model);
 			}
+		}
+
+        /// <summary>
+        /// HttpGet action to return the form for editing a laptop
+        /// </summary>
+        /// <param name="id">Laptop unique identifier</param>
+        /// <returns>The form for editing a laptop</returns>
+        [HttpGet]
+		[Authorize(Roles = $"{Administrator}, {SuperUser}")]
+		public async Task<IActionResult> Edit(int id)
+		{
+			try
+			{
+				var laptop = await this.laptopService.GetLaptopByIdAsLaptopEditViewModelAsync(id);
+
+				if (this.User.IsInRole(SuperUser) && this.User.Id() != laptop.SellerId)
+				{
+					return Unauthorized();
+				}
+
+				return View(laptop);
+			}
+			catch (Exception)
+			{
+				return NotFound();
+			}
+		}
+
+        /// <summary>
+        /// HttpPost action to edit a laptop
+        /// </summary>
+        /// <param name="model">Laptop import model</param>
+        /// <returns>Redirection to /Laptop/Details</returns>
+        [HttpPost]
+		[Authorize(Roles = $"{Administrator}, {SuperUser}")]
+		public async Task<IActionResult> Edit(LaptopEditViewModel model)
+		{
+			if (!this.ModelState.IsValid)
+			{
+				return View();
+			}
+
+			try
+			{
+				var laptop = await this.laptopService.GetLaptopByIdAsLaptopEditViewModelAsync(model.Id);
+
+				if (this.User.IsInRole(SuperUser) && this.User.Id() != laptop.SellerId)
+                {
+                    return Unauthorized();
+                }
+
+                int id = await this.laptopService.EditLaptopAsync(model);
+
+				return RedirectToAction(nameof(Details), new { id });
+			}
+			catch (Exception)
+			{
+                return NotFound();
+            }
 		}
 	}
 }

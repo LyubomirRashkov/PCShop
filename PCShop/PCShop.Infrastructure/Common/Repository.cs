@@ -76,7 +76,7 @@ namespace PCShop.Infrastructure.Common
             return await this.dbContext.SaveChangesAsync();
 		}
 
-		private DbSet<T> DbSet<T>()
+        private DbSet<T> DbSet<T>()
             where T : class
         {
             return this.dbContext.Set<T>();

@@ -54,6 +54,21 @@
             Property that represents the unique identifier of the laptop's seller
             </summary>
         </member>
+        <member name="T:PCShop.Core.Models.Laptop.LaptopEditViewModel">
+            <summary>
+            LaptopEditViewModel model
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Laptop.LaptopEditViewModel.Id">
+            <summary>
+            Property that represents laptop unique identifier
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Laptop.LaptopEditViewModel.SellerId">
+            <summary>
+            Property that represents laptop Seller unique identifier
+            </summary>
+        </member>
         <member name="T:PCShop.Core.Models.Laptop.LaptopExportViewModel">
             <summary>
             LaptopExportViewModel model
@@ -265,19 +280,33 @@
             <param name="id">Laptop unique identifier</param>
             <exception cref="T:System.ArgumentException">Thrown when there is no laptop with the given unique identifier in the database</exception>
         </member>
+        <member name="M:PCShop.Core.Services.Implementations.LaptopService.EditLaptopAsync(PCShop.Core.Models.Laptop.LaptopEditViewModel)">
+            <summary>
+            Method to edit a laptop
+            </summary>
+            <param name="model">Laptop input model</param>
+            <returns>The unique identifier of the edited laptop</returns>
+        </member>
         <member name="M:PCShop.Core.Services.Implementations.LaptopService.GetAllLaptopsAsync">
             <summary>
             Method to retrieve all active laptops
             </summary>
             <returns>Collection of LaptopExportViewModels</returns>
         </member>
-        <member name="M:PCShop.Core.Services.Implementations.LaptopService.GetLaptopByIdAsDtoAsync(System.Int32)">
+        <member name="M:PCShop.Core.Services.Implementations.LaptopService.GetLaptopByIdAsLaptopDetailsExportViewModelAsync(System.Int32)">
             <summary>
             Method to retrieve a specific laptop
             </summary>
             <param name="id">Laptop unique identifier</param>
             <returns>The laptop as LaptopDetailsExportViewModel</returns>
             <exception cref="T:System.ArgumentException">Thrown when there is no laptop with the given unique identifier in the database</exception>
+        </member>
+        <member name="M:PCShop.Core.Services.Implementations.LaptopService.GetLaptopByIdAsLaptopEditViewModelAsync(System.Int32)">
+            <summary>
+            Method to retrieve a specific laptop
+            </summary>
+            <param name="id">Laptop unique identifier</param>
+            <returns>The laptop as LaptopEditViewModel</returns>
         </member>
         <member name="T:PCShop.Core.Services.Interfaces.ILaptopService">
             <summary>
@@ -290,7 +319,7 @@
             </summary>
             <returns>Collection of LaptopExportViewModels</returns>
         </member>
-        <member name="M:PCShop.Core.Services.Interfaces.ILaptopService.GetLaptopByIdAsDtoAsync(System.Int32)">
+        <member name="M:PCShop.Core.Services.Interfaces.ILaptopService.GetLaptopByIdAsLaptopDetailsExportViewModelAsync(System.Int32)">
             <summary>
             Method to retrieve a specific laptop
             </summary>
@@ -310,6 +339,20 @@
             <param name="model">Laptop input model</param>
             <param name="userId">Laptop's owner unique identifier</param>
             <returns>The unique identifier of the added laptop</returns>
+        </member>
+        <member name="M:PCShop.Core.Services.Interfaces.ILaptopService.GetLaptopByIdAsLaptopEditViewModelAsync(System.Int32)">
+            <summary>
+            Method to retrieve a specific laptop
+            </summary>
+            <param name="id">Laptop unique identifier</param>
+            <returns>The laptop as LaptopEditViewModel</returns>
+        </member>
+        <member name="M:PCShop.Core.Services.Interfaces.ILaptopService.EditLaptopAsync(PCShop.Core.Models.Laptop.LaptopEditViewModel)">
+            <summary>
+            Method to edit a laptop
+            </summary>
+            <param name="model">Laptop input model</param>
+            <returns>The unique identifier of the edited laptop</returns>
         </member>
     </members>
 </doc>

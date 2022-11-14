@@ -18,7 +18,7 @@ namespace PCShop.Core.Services.Interfaces
         /// </summary>
         /// <param name="id">Laptop unique identifier</param>
         /// <returns>The laptop as LaptopDetailsExportViewModel</returns>
-        Task<LaptopDetailsExportViewModel> GetLaptopByIdAsDtoAsync(int id);
+        Task<LaptopDetailsExportViewModel> GetLaptopByIdAsLaptopDetailsExportViewModelAsync(int id);
 
 		/// <summary>
 		/// Method to mark a specific laptop as deleted
@@ -33,5 +33,19 @@ namespace PCShop.Core.Services.Interfaces
 		/// <param name="userId">Laptop's owner unique identifier</param>
 		/// <returns>The unique identifier of the added laptop</returns>
 		Task<int> AddLaptopAsync(LaptopImportViewModel model, string? userId);
-    }
+
+        /// <summary>
+        /// Method to retrieve a specific laptop
+        /// </summary>
+        /// <param name="id">Laptop unique identifier</param>
+        /// <returns>The laptop as LaptopEditViewModel</returns>
+		Task<LaptopEditViewModel> GetLaptopByIdAsLaptopEditViewModelAsync(int id);
+
+        /// <summary>
+        /// Method to edit a laptop
+        /// </summary>
+        /// <param name="model">Laptop input model</param>
+        /// <returns>The unique identifier of the edited laptop</returns>
+        Task<int> EditLaptopAsync(LaptopEditViewModel model);
+	}
 }
