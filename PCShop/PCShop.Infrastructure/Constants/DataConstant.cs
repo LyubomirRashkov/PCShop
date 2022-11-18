@@ -244,6 +244,11 @@
             /// Constant for the max value of laptop's SSD capacity
             /// </summary>
             public const int SSDCapacityMaxValue = int.MaxValue;
+
+			/// <summary>
+			/// Constant for the error message of invalid Laptop unique identifier
+			/// </summary>
+			public const string ErrorMessageForInvalidLaptopId = "Invalid laptop id!";
         }
 
         /// <summary>
@@ -273,6 +278,22 @@
             /// Constant for the error message of product's integer property
             /// </summary>
             public const string IntegerErrorMessage = "The field {0} must be an integer between {1} and {2}";
+        }
+
+		/// <summary>
+		/// Class holding Client constants
+		/// </summary>
+		public static class ClientConstants
+        {
+			/// <summary>
+			/// Constant for the max number of allowed active sales
+			/// </summary>
+			public const int MaxNumberOfAllowedSales = 10;
+
+			/// <summary>
+			/// Constant for the error message of invalid User unique identifier
+			/// </summary>
+			public const string ErrorMessageForInvalidUserId = "Invalid user id!";
         }
     }
 }

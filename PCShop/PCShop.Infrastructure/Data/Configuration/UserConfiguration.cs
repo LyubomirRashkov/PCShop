@@ -49,7 +49,6 @@ namespace PCShop.Infrastructure.Data.Configuration
                 NormalizedEmail = "SUPERUSER@MAIL.COM",
                 FirstName = "SuperUser-FN",
                 LastName = "SuperUser-LN",
-                CountOfPurchases = 7,
             };
 
             user.PasswordHash = hasher.HashPassword(user, "superUser");

@@ -1,4 +1,6 @@
-﻿namespace PCShop.Core.Models.Laptop
+﻿using PCShop.Infrastructure.Data.Models;
+
+namespace PCShop.Core.Models.Laptop
 {
     /// <summary>
     /// LaptopEditViewModel model
@@ -11,8 +13,8 @@
 		public int Id { get; init; }
 
         /// <summary>
-        /// Property that represents laptop Seller unique identifier
+        /// Property that represents laptop Seller
         /// </summary>
-		public string? SellerId { get; init; }
+		public Client? Seller { get; init; }
 	}
 }

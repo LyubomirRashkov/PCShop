@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PCShop.Infrastructure.Data;
 
@@ -11,9 +12,10 @@ using PCShop.Infrastructure.Data;
 namespace PCShop.Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20221116144823_MakeUserFirsrNameAndLastNameNullables")]
+    partial class MakeUserFirsrNameAndLastNameNullables
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -52,14 +54,14 @@ namespace PCShop.Infrastructure.Migrations
                         new
                         {
                             Id = "389271c7-6194-48d3-8402-7b1b28430a42",
-                            ConcurrencyStamp = "daa28100-a397-4e03-819e-cbd1144e6882",
+                            ConcurrencyStamp = "1ec8c510-f1c6-4c9c-a370-aa37b3e1edab",
                             Name = "Administrator",
                             NormalizedName = "ADMINISTRATOR"
                         },
                         new
                         {
                             Id = "1b99a7a0-ca76-495f-9dff-2c486a558005",
-                            ConcurrencyStamp = "5ae91a61-98a3-431c-a265-473f8d98e12e",
+                            ConcurrencyStamp = "089e527e-13e0-497b-927c-57b9fb3b47f1",
                             Name = "SuperUser",
                             NormalizedName = "SUPERUSER"
                         });
@@ -252,7 +254,7 @@ namespace PCShop.Infrastructure.Migrations
                         {
                             Id = "19512f55-7aa0-4707-b60d-6588f20c2ab1",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "73fd1597-f8ce-4977-b642-c799f2b19505",
+                            ConcurrencyStamp = "c2fbb752-ccef-4eca-9a78-91400fc166ba",
                             Email = "admin@mail.com",
                             EmailConfirmed = false,
                             FirstName = "Admin-FN",
@@ -260,9 +262,9 @@ namespace PCShop.Infrastructure.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@MAIL.COM",
                             NormalizedUserName = "ADMIN",
-                            PasswordHash = "AQAAAAEAACcQAAAAEETtdzH7pRzOfrmIimf/5OSNzr5o3p/qjV2ankLrvIGKRjH9HDmaNdUajH+2Hp2gvA==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEONWpXdWAEHcuv7zLXlrrVV3cik6MYFYc8ovH449E8lvx1cjSsKZdkO6EHVIXwA9ag==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "ea4ffc4a-9f73-4691-85e3-31e7fb348365",
+                            SecurityStamp = "b0adb32d-f618-48bc-bc69-65dac2cf89f2",
                             TwoFactorEnabled = false,
                             UserName = "admin"
                         },
@@ -270,7 +272,7 @@ namespace PCShop.Infrastructure.Migrations
                         {
                             Id = "fdf4e641-9248-44d4-8d23-ca09ad4ad793",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "7c2eeae8-9ecf-4546-8b38-98318678c3da",
+                            ConcurrencyStamp = "0db04864-0b89-4600-bad2-0b355144d324",
                             Email = "superUser@mail.com",
                             EmailConfirmed = false,
                             FirstName = "SuperUser-FN",
@@ -278,9 +280,9 @@ namespace PCShop.Infrastructure.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "SUPERUSER@MAIL.COM",
                             NormalizedUserName = "SUPERUSER",
-                            PasswordHash = "AQAAAAEAACcQAAAAEGB20bsUVQoF9XFgTk8+WR734LFBH2T/2knO+N6SvnVtj17LiomhAP3NtI4IwHu08w==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEHo0FvfIg1E11fD3xtcTB4ey8wI9Oe5UEbAXpQYoytXHLFcyv0S3ppqQsNT2HrJlyg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "57f3367f-68a6-4f2f-90e4-ab8774520de2",
+                            SecurityStamp = "0d52d318-3640-4438-b8be-c361dec52e70",
                             TwoFactorEnabled = false,
                             UserName = "superUser"
                         },
@@ -288,7 +290,7 @@ namespace PCShop.Infrastructure.Migrations
                         {
                             Id = "b3b38c01-9e6d-4faf-83d5-e0ec48d26115",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "76789368-c871-4ac9-bcff-145cbbc29829",
+                            ConcurrencyStamp = "c7f436ce-3fa7-477d-bd01-d8471c92bea1",
                             Email = "user@mail.com",
                             EmailConfirmed = false,
                             FirstName = "User-FN",
@@ -296,41 +298,11 @@ namespace PCShop.Infrastructure.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "USER@MAIL.COM",
                             NormalizedUserName = "USER",
-                            PasswordHash = "AQAAAAEAACcQAAAAEBsl4EiXI0i9l3zHU12QBj70IFkLxmGXBGLgi+6CYT9KHE0QFmFtd7LxEqNjA0RCJA==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEJP2CJs+8lZi7DiqvobbBxPsqsjwIe2bANS73A/NPLIrYEp0WsBxODGmte6be3jYPA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "11b585f9-7fb2-4358-be13-96662ec8ec78",
+                            SecurityStamp = "34304971-edcd-4f9b-952b-df937fec4f82",
                             TwoFactorEnabled = false,
                             UserName = "user"
-                        });
-                });
-
-            modelBuilder.Entity("PCShop.Infrastructure.Data.Models.Client", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<int>("CountOfPurchases")
-                        .HasColumnType("int");
-
-                    b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("Clients");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            CountOfPurchases = 7,
-                            UserId = "fdf4e641-9248-44d4-8d23-ca09ad4ad793"
                         });
                 });
 
@@ -613,8 +585,8 @@ namespace PCShop.Infrastructure.Migrations
                     b.Property<int>("Quantity")
                         .HasColumnType("int");
 
-                    b.Property<int?>("SellerId")
-                        .HasColumnType("int");
+                    b.Property<string>("SellerId")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<int>("TypeId")
                         .HasColumnType("int");
@@ -670,8 +642,8 @@ namespace PCShop.Infrastructure.Migrations
                     b.Property<int>("Quantity")
                         .HasColumnType("int");
 
-                    b.Property<int?>("SellerId")
-                        .HasColumnType("int");
+                    b.Property<string>("SellerId")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<int>("TypeId")
                         .HasColumnType("int");
@@ -744,8 +716,8 @@ namespace PCShop.Infrastructure.Migrations
                     b.Property<int>("SSDCapacityId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("SellerId")
-                        .HasColumnType("int");
+                    b.Property<string>("SellerId")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<int>("TypeId")
                         .HasColumnType("int");
@@ -814,8 +786,8 @@ namespace PCShop.Infrastructure.Migrations
                     b.Property<int>("Quantity")
                         .HasColumnType("int");
 
-                    b.Property<int?>("SellerId")
-                        .HasColumnType("int");
+                    b.Property<string>("SellerId")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<int>("Warranty")
                         .HasColumnType("int");
@@ -875,8 +847,8 @@ namespace PCShop.Infrastructure.Migrations
                     b.Property<int>("ResolutionId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("SellerId")
-                        .HasColumnType("int");
+                    b.Property<string>("SellerId")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<int>("TypeId")
                         .HasColumnType("int");
@@ -939,8 +911,8 @@ namespace PCShop.Infrastructure.Migrations
                     b.Property<int>("Quantity")
                         .HasColumnType("int");
 
-                    b.Property<int?>("SellerId")
-                        .HasColumnType("int");
+                    b.Property<string>("SellerId")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<int>("SensitivityId")
                         .HasColumnType("int");
@@ -1017,17 +989,6 @@ namespace PCShop.Infrastructure.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("PCShop.Infrastructure.Data.Models.Client", b =>
-                {
-                    b.HasOne("PCShop.Infrastructure.Data.Models.Account.User", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("User");
-                });
-
             modelBuilder.Entity("PCShop.Infrastructure.Data.Models.Headphone", b =>
                 {
                     b.HasOne("PCShop.Infrastructure.Data.Models.GravitatingClasses.Brand", "Brand")
@@ -1040,8 +1001,8 @@ namespace PCShop.Infrastructure.Migrations
                         .WithMany("ColorHeadphones")
                         .HasForeignKey("ColorId");
 
-                    b.HasOne("PCShop.Infrastructure.Data.Models.Client", "Seller")
-                        .WithMany("Headphones")
+                    b.HasOne("PCShop.Infrastructure.Data.Models.Account.User", "Seller")
+                        .WithMany()
                         .HasForeignKey("SellerId");
 
                     b.HasOne("PCShop.Infrastructure.Data.Models.GravitatingClasses.Type", "Type")
@@ -1075,8 +1036,8 @@ namespace PCShop.Infrastructure.Migrations
                         .WithMany("FormatKeyboards")
                         .HasForeignKey("FormatId");
 
-                    b.HasOne("PCShop.Infrastructure.Data.Models.Client", "Seller")
-                        .WithMany("Keyboards")
+                    b.HasOne("PCShop.Infrastructure.Data.Models.Account.User", "Seller")
+                        .WithMany()
                         .HasForeignKey("SellerId");
 
                     b.HasOne("PCShop.Infrastructure.Data.Models.GravitatingClasses.Type", "Type")
@@ -1144,8 +1105,8 @@ namespace PCShop.Infrastructure.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("PCShop.Infrastructure.Data.Models.Client", "Seller")
-                        .WithMany("Laptops")
+                    b.HasOne("PCShop.Infrastructure.Data.Models.Account.User", "Seller")
+                        .WithMany()
                         .HasForeignKey("SellerId");
 
                     b.HasOne("PCShop.Infrastructure.Data.Models.GravitatingClasses.Type", "Type")
@@ -1197,8 +1158,8 @@ namespace PCShop.Infrastructure.Migrations
                         .WithMany("ColorMicrophones")
                         .HasForeignKey("ColorId");
 
-                    b.HasOne("PCShop.Infrastructure.Data.Models.Client", "Seller")
-                        .WithMany("Microphones")
+                    b.HasOne("PCShop.Infrastructure.Data.Models.Account.User", "Seller")
+                        .WithMany()
                         .HasForeignKey("SellerId");
 
                     b.Navigation("Brand");
@@ -1246,8 +1207,8 @@ namespace PCShop.Infrastructure.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("PCShop.Infrastructure.Data.Models.Client", "Seller")
-                        .WithMany("Monitors")
+                    b.HasOne("PCShop.Infrastructure.Data.Models.Account.User", "Seller")
+                        .WithMany()
                         .HasForeignKey("SellerId");
 
                     b.HasOne("PCShop.Infrastructure.Data.Models.GravitatingClasses.Type", "Type")
@@ -1287,8 +1248,8 @@ namespace PCShop.Infrastructure.Migrations
                         .WithMany("ColorMice")
                         .HasForeignKey("ColorId");
 
-                    b.HasOne("PCShop.Infrastructure.Data.Models.Client", "Seller")
-                        .WithMany("Mice")
+                    b.HasOne("PCShop.Infrastructure.Data.Models.Account.User", "Seller")
+                        .WithMany()
                         .HasForeignKey("SellerId");
 
                     b.HasOne("PCShop.Infrastructure.Data.Models.GravitatingClasses.Sensitivity", "Sensitivity")
@@ -1312,21 +1273,6 @@ namespace PCShop.Infrastructure.Migrations
                     b.Navigation("Sensitivity");
 
                     b.Navigation("Type");
-                });
-
-            modelBuilder.Entity("PCShop.Infrastructure.Data.Models.Client", b =>
-                {
-                    b.Navigation("Headphones");
-
-                    b.Navigation("Keyboards");
-
-                    b.Navigation("Laptops");
-
-                    b.Navigation("Mice");
-
-                    b.Navigation("Microphones");
-
-                    b.Navigation("Monitors");
                 });
 
             modelBuilder.Entity("PCShop.Infrastructure.Data.Models.GravitatingClasses.Brand", b =>

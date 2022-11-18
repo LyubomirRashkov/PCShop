@@ -68,11 +68,11 @@ namespace PCShop.Infrastructure.Data.Models
         /// Foreign key to microphone Seller unique identifier
         /// </summary>
         [ForeignKey(nameof(Seller))]
-        public string? SellerId { get; set; }
+        public int? SellerId { get; set; }
 
         /// <summary>
         /// Navigation property to microphone Seller
         /// </summary>
-        public User? Seller { get; set; }
+        public Client? Seller { get; set; }
     }
 }

@@ -70,11 +70,12 @@
             Laptop controller class
             </summary>
         </member>
-        <member name="M:PCShop.Controllers.LaptopController.#ctor(PCShop.Core.Services.Interfaces.ILaptopService)">
+        <member name="M:PCShop.Controllers.LaptopController.#ctor(PCShop.Core.Services.Interfaces.ILaptopService,PCShop.Core.Services.Interfaces.IClientService)">
             <summary>
             Constructor of LaptopController class
             </summary>
             <param name="laptopService">The ILaptopService needed for functionality</param>
+            <param name="clientService">The IClientService needed for functionality</param>
         </member>
         <member name="M:PCShop.Controllers.LaptopController.Index">
             <summary>

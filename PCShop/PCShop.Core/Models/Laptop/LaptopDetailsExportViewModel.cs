@@ -1,14 +1,16 @@
 ﻿namespace PCShop.Core.Models.Laptop
 {
+    using PCShop.Infrastructure.Data.Models;
+
     /// <summary>
     /// LaptopDetailsExportViewModel model
     /// </summary>
     public class LaptopDetailsExportViewModel : LaptopExportViewModel
-	{
-		/// <summary>
-		/// Property that represents laptop type
-		/// </summary>
-		public string Type { get; init; } = null!;
+    {
+        /// <summary>
+        /// Property that represents laptop type
+        /// </summary>
+        public string Type { get; init; } = null!;
 
         /// <summary>
         /// Property that represents laptop display coverage
@@ -45,9 +47,9 @@
         /// </summary>
 		public int Quantity { get; init; }
 
-		/// <summary>
-		/// Property that represents the unique identifier of the laptop's seller
-		/// </summary>
-		public string? SellerId { get; set; }
+        /// <summary>
+        /// Property that represents laptop Seller
+        /// </summary>
+        public Client? Seller { get; set; }
     }
 }

@@ -49,9 +49,9 @@
             Property that represents how many laptops are in stock
             </summary>
         </member>
-        <member name="P:PCShop.Core.Models.Laptop.LaptopDetailsExportViewModel.SellerId">
+        <member name="P:PCShop.Core.Models.Laptop.LaptopDetailsExportViewModel.Seller">
             <summary>
-            Property that represents the unique identifier of the laptop's seller
+            Property that represents laptop Seller
             </summary>
         </member>
         <member name="T:PCShop.Core.Models.Laptop.LaptopEditViewModel">
@@ -64,9 +64,9 @@
             Property that represents laptop unique identifier
             </summary>
         </member>
-        <member name="P:PCShop.Core.Models.Laptop.LaptopEditViewModel.SellerId">
+        <member name="P:PCShop.Core.Models.Laptop.LaptopEditViewModel.Seller">
             <summary>
-            Property that represents laptop Seller unique identifier
+            Property that represents laptop Seller
             </summary>
         </member>
         <member name="T:PCShop.Core.Models.Laptop.LaptopExportViewModel">
@@ -254,6 +254,25 @@
             Property for password confirmation
             </summary>
         </member>
+        <member name="T:PCShop.Core.Services.Implementations.ClientService">
+            <summary>
+            Implementation of IClientService interface
+            </summary>
+        </member>
+        <member name="M:PCShop.Core.Services.Implementations.ClientService.#ctor(PCShop.Infrastructure.Common.IRepository)">
+            <summary>
+            Constructor of ClientService class
+            </summary>
+            <param name="repository">The repository that will be used</param>
+        </member>
+        <member name="M:PCShop.Core.Services.Implementations.ClientService.GetNumberOfActiveSales(System.String)">
+            <summary>
+            Method to retrieve the number of active sales for a given user
+            </summary>
+            <param name="userId">User unique identifier</param>
+            <returns>The number of active sales of the user</returns>
+            <exception cref="T:System.ArgumentException">Thrown when there is no client with the given user unique identifier in the database</exception>
+        </member>
         <member name="T:PCShop.Core.Services.Implementations.LaptopService">
             <summary>
             Implementation of ILaptopService interface
@@ -307,6 +326,18 @@
             </summary>
             <param name="id">Laptop unique identifier</param>
             <returns>The laptop as LaptopEditViewModel</returns>
+        </member>
+        <member name="T:PCShop.Core.Services.Interfaces.IClientService">
+            <summary>
+            Abstraction of ClientService
+            </summary>
+        </member>
+        <member name="M:PCShop.Core.Services.Interfaces.IClientService.GetNumberOfActiveSales(System.String)">
+            <summary>
+            Method to retrieve the number of active sales for a given user
+            </summary>
+            <param name="userId">User unique identifier</param>
+            <returns>The number of active sales of the user</returns>
         </member>
         <member name="T:PCShop.Core.Services.Interfaces.ILaptopService">
             <summary>

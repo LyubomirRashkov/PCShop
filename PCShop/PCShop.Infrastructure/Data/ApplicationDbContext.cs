@@ -24,6 +24,11 @@ namespace PCShop.Infrastructure.Data
         }
 
         /// <summary>
+        /// Property that represents a collection of Clients
+        /// </summary>
+        public DbSet<Client> Clients { get; set; } = null!;
+
+        /// <summary>
         /// Property that represents a collection of laptops
         /// </summary>
         public DbSet<Laptop> Laptops { get; set; } = null!;
@@ -132,6 +137,8 @@ namespace PCShop.Infrastructure.Data
             builder.ApplyConfiguration(new RoleConfiguration());
 
             builder.ApplyConfiguration(new UserConfiguration());
+
+            builder.ApplyConfiguration(new ClientConfiguration());
 
             base.OnModelCreating(builder);
         }

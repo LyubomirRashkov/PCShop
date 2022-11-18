@@ -19,6 +19,7 @@ namespace Microsoft.Extensions.DependencyInjection
             services.AddScoped<IRepository, Repository>();
 
             services.AddScoped<ILaptopService, LaptopService>();
+            services.AddScoped<IClientService, ClientService>();
 
 			return services;
         }

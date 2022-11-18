@@ -129,11 +129,11 @@ namespace PCShop.Infrastructure.Data.Models
         /// Foreign key to monitor Seller unique identifier
         /// </summary>
         [ForeignKey(nameof(Seller))]
-        public string? SellerId { get; set; }
+        public int? SellerId { get; set; }
 
         /// <summary>
         /// Navigation property to monitor Seller
         /// </summary>
-        public User? Seller { get; set; }
+        public Client? Seller { get; set; }
     }
 }

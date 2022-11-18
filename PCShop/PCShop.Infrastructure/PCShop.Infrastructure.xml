@@ -344,6 +344,11 @@
             Constant for the max value of laptop's SSD capacity
             </summary>
         </member>
+        <member name="F:PCShop.Infrastructure.Constants.DataConstant.LaptopConstants.ErrorMessageForInvalidLaptopId">
+            <summary>
+            Constant for the error message of invalid Laptop unique identifier
+            </summary>
+        </member>
         <member name="T:PCShop.Infrastructure.Constants.DataConstant.ProductConstants">
             <summary>
             Class holding constants for all product types
@@ -374,6 +379,21 @@
             Constant for the error message of product's integer property
             </summary>
         </member>
+        <member name="T:PCShop.Infrastructure.Constants.DataConstant.ClientConstants">
+            <summary>
+            Class holding Client constants
+            </summary>
+        </member>
+        <member name="F:PCShop.Infrastructure.Constants.DataConstant.ClientConstants.MaxNumberOfAllowedSales">
+            <summary>
+            Constant for the max number of allowed active sales
+            </summary>
+        </member>
+        <member name="F:PCShop.Infrastructure.Constants.DataConstant.ClientConstants.ErrorMessageForInvalidUserId">
+            <summary>
+            Constant for the error message of invalid User unique identifier
+            </summary>
+        </member>
         <member name="T:PCShop.Infrastructure.Data.ApplicationDbContext">
             <summary>
             ApplicationDbContext model
@@ -384,6 +404,11 @@
             Constructor of ApplicationDbContext
             </summary>
             <param name="options">The DbContextOptions<c>ApplicationDbContext</c></param>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.ApplicationDbContext.Clients">
+            <summary>
+            Property that represents a collection of Clients
+            </summary>
         </member>
         <member name="P:PCShop.Infrastructure.Data.ApplicationDbContext.Laptops">
             <summary>
@@ -491,6 +516,17 @@
             </summary>
             <param name="builder">The builder being used to construct the model for this context</param>
         </member>
+        <member name="T:PCShop.Infrastructure.Data.Configuration.ClientConfiguration">
+            <summary>
+            ClientConfiguration model
+            </summary>
+        </member>
+        <member name="M:PCShop.Infrastructure.Data.Configuration.ClientConfiguration.Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder{PCShop.Infrastructure.Data.Models.Client})">
+            <summary>
+            Configures the entity of type Client
+            </summary>
+            <param name="builder">The builder to be used to configure the entity type</param>
+        </member>
         <member name="T:PCShop.Infrastructure.Data.Configuration.RoleConfiguration">
             <summary>
             RoleConfiguration model
@@ -518,11 +554,6 @@
             User model -> extending IdentityUser
             </summary>
         </member>
-        <member name="M:PCShop.Infrastructure.Data.Models.Account.User.#ctor">
-            <summary>
-            Constructor or User class
-            </summary>
-        </member>
         <member name="P:PCShop.Infrastructure.Data.Models.Account.User.FirstName">
             <summary>
             Property that represents user's first name
@@ -533,39 +564,64 @@
             Property that represents user's last name
             </summary>
         </member>
-        <member name="P:PCShop.Infrastructure.Data.Models.Account.User.CountOfPurchases">
+        <member name="T:PCShop.Infrastructure.Data.Models.Client">
             <summary>
-            Property that represents the count of purchases the user made
+            Client model
             </summary>
         </member>
-        <member name="P:PCShop.Infrastructure.Data.Models.Account.User.Laptops">
+        <member name="M:PCShop.Infrastructure.Data.Models.Client.#ctor">
             <summary>
-            Inverse property to user's laptops
+            Constructor or Client class
             </summary>
         </member>
-        <member name="P:PCShop.Infrastructure.Data.Models.Account.User.Monitors">
+        <member name="P:PCShop.Infrastructure.Data.Models.Client.Id">
             <summary>
-            Inverse property to user's monitors
+            Client unique identifier
             </summary>
         </member>
-        <member name="P:PCShop.Infrastructure.Data.Models.Account.User.Keyboards">
+        <member name="P:PCShop.Infrastructure.Data.Models.Client.UserId">
             <summary>
-            Inverse property to user's keyboards
+            Foreign key to User unique identifier
             </summary>
         </member>
-        <member name="P:PCShop.Infrastructure.Data.Models.Account.User.Mice">
+        <member name="P:PCShop.Infrastructure.Data.Models.Client.User">
             <summary>
-            Inverse property to user's mice
+            Navigation property to User
             </summary>
         </member>
-        <member name="P:PCShop.Infrastructure.Data.Models.Account.User.Headphones">
+        <member name="P:PCShop.Infrastructure.Data.Models.Client.CountOfPurchases">
+            <summary>
+            Property that represents the count of purchases the client made
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Client.Laptops">
+            <summary>
+            Inverse property to client's laptops
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Client.Monitors">
+            <summary>
+            Inverse property to client's monitors
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Client.Keyboards">
+            <summary>
+            Inverse property to client's keyboards
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Client.Mice">
+            <summary>
+            Inverse property to client's mice
+            </summary>
+        </member>
+        <member name="P:PCShop.Infrastructure.Data.Models.Client.Headphones">
             <summary>
             Inverse property to user's headphones
             </summary>
         </member>
-        <member name="P:PCShop.Infrastructure.Data.Models.Account.User.Microphones">
+        <member name="P:PCShop.Infrastructure.Data.Models.Client.Microphones">
             <summary>
-            Inverse property to user's microphones
+            Inverse property to client's microphones
             </summary>
         </member>
         <member name="T:PCShop.Infrastructure.Data.Models.GravitatingClasses.Brand">

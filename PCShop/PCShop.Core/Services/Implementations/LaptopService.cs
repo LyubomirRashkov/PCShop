@@ -6,6 +6,8 @@ using PCShop.Infrastructure.Data.Models;
 using PCShop.Infrastructure.Data.Models.GravitatingClasses;
 using System.Globalization;
 using Type = PCShop.Infrastructure.Data.Models.GravitatingClasses.Type;
+using static PCShop.Infrastructure.Constants.DataConstant.LaptopConstants;
+using static PCShop.Infrastructure.Constants.DataConstant.ClientConstants;
 
 namespace PCShop.Core.Services.Implementations
 {
@@ -25,13 +27,13 @@ namespace PCShop.Core.Services.Implementations
             this.repository = repository;
         }
 
-		/// <summary>
-		/// Method to add a laptop
-		/// </summary>
-		/// <param name="model">Laptop input model</param>
-		/// <param name="userId">Laptop's owner unique identifier</param>
-		/// <returns>The unique identifier of the added laptop</returns>
-		public async Task<int> AddLaptopAsync(LaptopImportViewModel model, string? userId)
+        /// <summary>
+        /// Method to add a laptop
+        /// </summary>
+        /// <param name="model">Laptop input model</param>
+        /// <param name="userId">Laptop's owner unique identifier</param>
+        /// <returns>The unique identifier of the added laptop</returns>
+        public async Task<int> AddLaptopAsync(LaptopImportViewModel model, string? userId)
         {
             var laptop = new Laptop()
             {
@@ -42,9 +44,21 @@ namespace PCShop.Core.Services.Implementations
 
                 IsDeleted = false,
                 AddedOn = DateTime.UtcNow.Date,
-
-                SellerId = userId,
             };
+
+            Client? dbClient = null;
+
+            if (userId is not null)
+            {
+                dbClient = await this.repository.GetByPropertyAsync<Client>(c => c.UserId == userId);
+
+                if (dbClient is null)
+                {
+                    throw new ArgumentException(ErrorMessageForInvalidUserId);
+                }
+            }
+
+            laptop.Seller = dbClient;
 
             laptop = await this.SetNavigationPropertiesAsync(laptop, model.Brand, model.CPU, model.RAM, model.SSDCapacity, model.VideoCard, model.Type, model.DisplaySize, model.DisplayCoverage, model.DisplayTechnology, model.Resolution, model.Color);
 
@@ -68,7 +82,7 @@ namespace PCShop.Core.Services.Implementations
 
             if (laptop is null)
             {
-                throw new ArgumentException("Invalid laptop id!");
+                throw new ArgumentException(ErrorMessageForInvalidLaptopId);
             }
 
             laptop.IsDeleted = true;
@@ -101,7 +115,7 @@ namespace PCShop.Core.Services.Implementations
 
             if (laptop is null)
             {
-                throw new ArgumentException("Invalid laptop id!");
+                throw new ArgumentException(ErrorMessageForInvalidLaptopId);
             }
 
             laptop.ImageUrl = model.ImageUrl;
@@ -170,13 +184,13 @@ namespace PCShop.Core.Services.Implementations
                     ImageUrl = l.ImageUrl,
                     AddedOn = l.AddedOn.ToString("MMMM, yyyy", CultureInfo.InvariantCulture),
                     Quantity = l.Quantity,
-                    SellerId = l.SellerId,
+                    Seller = l.Seller,
                 })
                 .FirstOrDefaultAsync();
 
             if (laptopExport is null)
             {
-                throw new ArgumentException("Invalid laptop id!");
+                throw new ArgumentException(ErrorMessageForInvalidLaptopId);
             }
 
             return laptopExport;
@@ -188,39 +202,39 @@ namespace PCShop.Core.Services.Implementations
         /// <param name="id">Laptop unique identifier</param>
         /// <returns>The laptop as LaptopEditViewModel</returns>
         public async Task<LaptopEditViewModel> GetLaptopByIdAsLaptopEditViewModelAsync(int id)
-		{
-			var laptopExport = await this.repository
-				.All<Laptop>(l => !l.IsDeleted)
-				.Where(l => l.Id == id)
-				.Select(l => new LaptopEditViewModel()
-				{
-					Id = l.Id,
-					Brand = l.Brand.Name,
-					CPU = l.CPU.Name,
-					RAM = l.RAM.Value,
-					SSDCapacity = l.SSDCapacity.Value,
-					VideoCard = l.VideoCard.Name,
-					Price = l.Price,
-					DisplaySize = l.DisplaySize.Value,
-					Warranty = l.Warranty,
-					Type = l.Type.Name,
-					DisplayCoverage = l.DisplayCoverage != null ? l.DisplayCoverage.Name : "unknown",
-					DisplayTechnology = l.DisplayTechnology != null ? l.DisplayTechnology.Name : "unknown",
-					Resolution = l.Resolution != null ? l.Resolution.Value : "unknown",
-					Color = l.Color != null ? l.Color.Name : "unknown",
-					ImageUrl = l.ImageUrl,
-					Quantity = l.Quantity,
-                    SellerId = l.SellerId,
-				})
-				.FirstOrDefaultAsync();
+        {
+            var laptopExport = await this.repository
+                .All<Laptop>(l => !l.IsDeleted)
+                .Where(l => l.Id == id)
+                .Select(l => new LaptopEditViewModel()
+                {
+                    Id = l.Id,
+                    Brand = l.Brand.Name,
+                    CPU = l.CPU.Name,
+                    RAM = l.RAM.Value,
+                    SSDCapacity = l.SSDCapacity.Value,
+                    VideoCard = l.VideoCard.Name,
+                    Price = l.Price,
+                    DisplaySize = l.DisplaySize.Value,
+                    Warranty = l.Warranty,
+                    Type = l.Type.Name,
+                    DisplayCoverage = l.DisplayCoverage != null ? l.DisplayCoverage.Name : "unknown",
+                    DisplayTechnology = l.DisplayTechnology != null ? l.DisplayTechnology.Name : "unknown",
+                    Resolution = l.Resolution != null ? l.Resolution.Value : "unknown",
+                    Color = l.Color != null ? l.Color.Name : "unknown",
+                    ImageUrl = l.ImageUrl,
+                    Quantity = l.Quantity,
+                    Seller = l.Seller,
+                })
+                .FirstOrDefaultAsync();
 
-			if (laptopExport is null)
-			{
-				throw new ArgumentException("Invalid laptop id!");
-			}
+            if (laptopExport is null)
+            {
+                throw new ArgumentException(ErrorMessageForInvalidLaptopId);
+            }
 
-			return laptopExport;
-		}
+            return laptopExport;
+        }
 
         private async Task<Laptop> SetNavigationPropertiesAsync(Laptop laptop, string brand, string cpu, int ram, int ssdCapacity, string videoCard, string type, double displaySize, string? displayCoverage, string? displayTechnology, string? resolution, string? color)
         {
@@ -298,5 +312,5 @@ namespace PCShop.Core.Services.Implementations
 
             return laptop;
         }
-	}
+    }
 }
