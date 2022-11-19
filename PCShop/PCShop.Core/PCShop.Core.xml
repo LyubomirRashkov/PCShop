@@ -269,6 +269,16 @@
             Property that represents laptop Seller
             </summary>
         </member>
+        <member name="P:PCShop.Core.Models.Laptop.LaptopDetailsExportViewModel.SellerFirstName">
+            <summary>
+            Property that represents laptop seller first name
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Laptop.LaptopDetailsExportViewModel.SellerLastName">
+            <summary>
+            Property that represents laptop seller last name
+            </summary>
+        </member>
         <member name="T:PCShop.Core.Models.Laptop.LaptopEditViewModel">
             <summary>
             LaptopEditViewModel model

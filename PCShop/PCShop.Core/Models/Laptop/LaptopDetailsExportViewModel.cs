@@ -50,6 +50,16 @@
         /// <summary>
         /// Property that represents laptop Seller
         /// </summary>
-        public Client? Seller { get; set; }
+        public Client? Seller { get; init; }
+
+		/// <summary>
+		/// Property that represents laptop seller first name
+		/// </summary>
+		public string? SellerFirstName { get; init; }
+
+		/// <summary>
+		/// Property that represents laptop seller last name
+		/// </summary>
+		public string? SellerLastName { get; init; }
     }
 }
