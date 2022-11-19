@@ -1,0 +1,34 @@
+﻿@model LaptopDetailsExportViewModel
+
+<div class="card col-4" style="width: 20rem;">
+
+	@if (Model.ImageUrl is not null)
+	{
+		<img class="card-img-top" src="@Model.ImageUrl" alt="Laptop image">
+	}
+
+	<div class="card-body">
+		<h4 class="card-title mt-2 mb-3">@Model.Brand</h4>
+		<p class="mb-0"><b>CPU: @Model.CPU</b></p>
+		<p class="mb-0"><b>RAM: @Model.RAM GB</b></p>
+		<p class="mb-0"><b>Video card: @Model.VideoCard</b></p>
+		<p class="mb-0"><b>SSD capacity: @Model.SSDCapacity GB</b></p>
+		<p class="mb-0">Type: @Model.Type</p>
+		<p class="mb-0">Display size: @Model.DisplaySize inches</p>
+		<p class="mb-0">Display technology: @Model.DisplayTechnology</p>
+		<p class="mb-0">Display coverage: @Model.DisplayCoverage</p>
+		<p class="mb-0">Resolution: @Model.Resolution</p>
+		<p class="mb-2">Color: @Model.Color</p>
+		<p class="text-success mb-2"><b>On sale from: @Model.AddedOn</b></p>
+		<p class="text-success mb-2"><b>Quantity: @Model.Quantity</b></p>
+		<p class="text-success mb-3"><b>Price: @Model.Price EUR</b></p>
+
+		@if ((this.User?.Identity?.IsAuthenticated ?? false)
+				&& (this.User.IsInRole(SuperUser) && Model.Seller is not null && this.User.Id() == Model.Seller.UserId))
+		{
+			<a asp-controller="Laptop" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Edit</a>
+			<a asp-controller="Laptop" asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger"
+		   onclick="return confirm('Are you sure you want to delete laptop @Model.Brand')">Delete</a>
+		}
+	</div>
+</div>

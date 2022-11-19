@@ -10,42 +10,11 @@
 
 @if (Model.Any())
 {
-	<div class="text-center row">
+	<div class="row">
 
 		@foreach (var laptop in Model)
 		{
-			<div class="card col-4" style="width: 20rem;">
-
-				@if (laptop.ImageUrl is not null)
-				{
-					<img class="card-img-top" src="@laptop.ImageUrl" alt="Laptop image">
-				}
-
-				<div class="card-body">
-					<h4 class="card-title mt-2 mb-3">@laptop.Brand</h4>
-					<p class="mb-0"><b>CPU: @laptop.CPU</b></p>
-					<p class="mb-0"><b>RAM: @laptop.RAM GB</b></p>
-					<p class="mb-0"><b>Video card: @laptop.VideoCard</b></p>
-					<p class="mb-0"><b>SSD capacity: @laptop.SSDCapacity GB</b></p>
-					<p class="mb-0">Type: @laptop.Type</p>
-					<p class="mb-0">Display size: @laptop.DisplaySize inches</p>
-					<p class="mb-0">Display technology: @laptop.DisplayTechnology</p>
-					<p class="mb-0">Display coverage: @laptop.DisplayCoverage</p>
-					<p class="mb-0">Resolution: @laptop.Resolution</p>
-					<p class="mb-2">Color: @laptop.Color</p>
-					<p class="text-success mb-2"><b>On sale from: @laptop.AddedOn</b></p>
-					<p class="text-success mb-2"><b>Quantity: @laptop.Quantity</b></p>
-					<p class="text-success mb-3"><b>Price: @laptop.Price EUR</b></p>
-
-					@if ((this.User?.Identity?.IsAuthenticated ?? false)
-							&& (this.User.IsInRole(SuperUser) && laptop.Seller is not null && this.User.Id() == laptop.Seller.UserId))
-					{
-						<a asp-controller="Laptop" asp-action="Edit" asp-route-id="@laptop.Id" class="btn btn-primary">Edit</a>
-						<a asp-controller="Laptop" asp-action="Delete" asp-route-id="@laptop.Id" class="btn btn-danger"
-			   onclick="return confirm('Are you sure you want to delete laptop @laptop.Brand')">Delete</a>
-					}
-				</div>
-			</div>
+			<partial name="_LaptopPartial" model="@laptop" />
 		}
 	</div>
 }
