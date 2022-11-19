@@ -291,6 +291,7 @@
             <param name="model">Laptop input model</param>
             <param name="userId">Laptop's owner unique identifier</param>
             <returns>The unique identifier of the added laptop</returns>
+            <exception cref="T:System.ArgumentException">Thrown when there is no client with the given FK (userId) in the database</exception>
         </member>
         <member name="M:PCShop.Core.Services.Implementations.LaptopService.DeleteLaptopAsync(System.Int32)">
             <summary>
@@ -305,6 +306,7 @@
             </summary>
             <param name="model">Laptop input model</param>
             <returns>The unique identifier of the edited laptop</returns>
+            <exception cref="T:System.ArgumentException">Thrown when there is no laptop with the given unique identifier in the database</exception>
         </member>
         <member name="M:PCShop.Core.Services.Implementations.LaptopService.GetAllLaptopsAsync">
             <summary>
@@ -326,6 +328,15 @@
             </summary>
             <param name="id">Laptop unique identifier</param>
             <returns>The laptop as LaptopEditViewModel</returns>
+            <exception cref="T:System.ArgumentException">Thrown when there is no laptop with the given unique identifier in the database</exception>
+        </member>
+        <member name="M:PCShop.Core.Services.Implementations.LaptopService.GetUserLaptopsAsync(System.String)">
+            <summary>
+            Method to retrieve all active laptop sales of the currently logged in user
+            </summary>
+            <param name="userId">User unique identifier</param>
+            <returns>Collection of LaptopDetailsExportViewModels</returns>
+            <exception cref="T:System.ArgumentException">Thrown when there is no client with the given FK (userId) in the database</exception>
         </member>
         <member name="T:PCShop.Core.Services.Interfaces.IClientService">
             <summary>
@@ -384,6 +395,13 @@
             </summary>
             <param name="model">Laptop input model</param>
             <returns>The unique identifier of the edited laptop</returns>
+        </member>
+        <member name="M:PCShop.Core.Services.Interfaces.ILaptopService.GetUserLaptopsAsync(System.String)">
+            <summary>
+            Method to retrieve all active laptop sales of the currently logged in user
+            </summary>
+            <param name="userId">User unique identifier</param>
+            <returns>Collection of LaptopDetailsExportViewModels</returns>
         </member>
     </members>
 </doc>

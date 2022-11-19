@@ -47,5 +47,12 @@ namespace PCShop.Core.Services.Interfaces
         /// <param name="model">Laptop input model</param>
         /// <returns>The unique identifier of the edited laptop</returns>
         Task<int> EditLaptopAsync(LaptopEditViewModel model);
+
+        /// <summary>
+        /// Method to retrieve all active laptop sales of the currently logged in user
+        /// </summary>
+        /// <param name="userId">User unique identifier</param>
+        /// <returns>Collection of LaptopDetailsExportViewModels</returns>
+		Task<IEnumerable<LaptopDetailsExportViewModel>> GetUserLaptopsAsync(string userId);
 	}
 }

@@ -8,6 +8,7 @@ using System.Globalization;
 using Type = PCShop.Infrastructure.Data.Models.GravitatingClasses.Type;
 using static PCShop.Infrastructure.Constants.DataConstant.LaptopConstants;
 using static PCShop.Infrastructure.Constants.DataConstant.ClientConstants;
+using System.Linq.Expressions;
 
 namespace PCShop.Core.Services.Implementations
 {
@@ -33,6 +34,7 @@ namespace PCShop.Core.Services.Implementations
         /// <param name="model">Laptop input model</param>
         /// <param name="userId">Laptop's owner unique identifier</param>
         /// <returns>The unique identifier of the added laptop</returns>
+        /// <exception cref="ArgumentException">Thrown when there is no client with the given FK (userId) in the database</exception>
         public async Task<int> AddLaptopAsync(LaptopImportViewModel model, string? userId)
         {
             var laptop = new Laptop()
@@ -95,6 +97,7 @@ namespace PCShop.Core.Services.Implementations
         /// </summary>
         /// <param name="model">Laptop input model</param>
         /// <returns>The unique identifier of the edited laptop</returns>
+        /// <exception cref="ArgumentException">Thrown when there is no laptop with the given unique identifier in the database</exception>
         public async Task<int> EditLaptopAsync(LaptopEditViewModel model)
         {
             var laptop = await this.repository
@@ -162,38 +165,14 @@ namespace PCShop.Core.Services.Implementations
         /// <exception cref="ArgumentException">Thrown when there is no laptop with the given unique identifier in the database</exception>
         public async Task<LaptopDetailsExportViewModel> GetLaptopByIdAsLaptopDetailsExportViewModelAsync(int id)
         {
-            var laptopExport = await this.repository
-                .AllAsReadOnly<Laptop>(l => !l.IsDeleted)
-                .Where(l => l.Id == id)
-                .Select(l => new LaptopDetailsExportViewModel()
-                {
-                    Id = l.Id,
-                    Brand = l.Brand.Name,
-                    CPU = l.CPU.Name,
-                    RAM = l.RAM.Value,
-                    SSDCapacity = l.SSDCapacity.Value,
-                    VideoCard = l.VideoCard.Name,
-                    Price = l.Price,
-                    DisplaySize = l.DisplaySize.Value,
-                    Warranty = l.Warranty,
-                    Type = l.Type.Name,
-                    DisplayCoverage = l.DisplayCoverage != null ? l.DisplayCoverage.Name : "unknown",
-                    DisplayTechnology = l.DisplayTechnology != null ? l.DisplayTechnology.Name : "unknown",
-                    Resolution = l.Resolution != null ? l.Resolution.Value : "unknown",
-                    Color = l.Color != null ? l.Color.Name : "unknown",
-                    ImageUrl = l.ImageUrl,
-                    AddedOn = l.AddedOn.ToString("MMMM, yyyy", CultureInfo.InvariantCulture),
-                    Quantity = l.Quantity,
-                    Seller = l.Seller,
-                })
-                .FirstOrDefaultAsync();
+            var laptopExport = await this.GetLaptopsAsLaptopDetailsExportViewModelsAsync<Laptop>(l => l.Id == id);
 
             if (laptopExport is null)
             {
                 throw new ArgumentException(ErrorMessageForInvalidLaptopId);
             }
 
-            return laptopExport;
+            return laptopExport[0];
         }
 
         /// <summary>
@@ -201,6 +180,7 @@ namespace PCShop.Core.Services.Implementations
         /// </summary>
         /// <param name="id">Laptop unique identifier</param>
         /// <returns>The laptop as LaptopEditViewModel</returns>
+        /// <exception cref="ArgumentException">Thrown when there is no laptop with the given unique identifier in the database</exception>
         public async Task<LaptopEditViewModel> GetLaptopByIdAsLaptopEditViewModelAsync(int id)
         {
             var laptopExport = await this.repository
@@ -236,7 +216,27 @@ namespace PCShop.Core.Services.Implementations
             return laptopExport;
         }
 
-        private async Task<Laptop> SetNavigationPropertiesAsync(Laptop laptop, string brand, string cpu, int ram, int ssdCapacity, string videoCard, string type, double displaySize, string? displayCoverage, string? displayTechnology, string? resolution, string? color)
+        /// <summary>
+        /// Method to retrieve all active laptop sales of the currently logged in user
+        /// </summary>
+        /// <param name="userId">User unique identifier</param>
+        /// <returns>Collection of LaptopDetailsExportViewModels</returns>
+        /// <exception cref="ArgumentException">Thrown when there is no client with the given FK (userId) in the database</exception>
+		public async Task<IEnumerable<LaptopDetailsExportViewModel>> GetUserLaptopsAsync(string userId)
+		{
+            var client = await this.repository.GetByPropertyAsync<Client>(c => c.UserId == userId);
+
+			if (client is null)
+			{
+				throw new ArgumentException(ErrorMessageForInvalidUserId);
+			}
+
+            var userLaptops = await this.GetLaptopsAsLaptopDetailsExportViewModelsAsync<Laptop>(l => l.SellerId == client.Id);
+
+			return userLaptops;
+		}
+
+		private async Task<Laptop> SetNavigationPropertiesAsync(Laptop laptop, string brand, string cpu, int ram, int ssdCapacity, string videoCard, string type, double displaySize, string? displayCoverage, string? displayTechnology, string? resolution, string? color)
         {
             var brandNormalized = brand.ToLower();
             var dbBrand = await this.repository.GetByPropertyAsync<Brand>(b => EF.Functions.Like(b.Name.ToLower(), brandNormalized));
@@ -320,5 +320,36 @@ namespace PCShop.Core.Services.Implementations
 
             return laptop;
         }
-    }
+
+		private async Task<IList<LaptopDetailsExportViewModel>> GetLaptopsAsLaptopDetailsExportViewModelsAsync<T>(Expression<Func<Laptop, bool>> condition)
+		{
+			var laptopsAsLaptopDetailsExportViewModels = await this.repository
+				.AllAsReadOnly<Laptop>(l => !l.IsDeleted)
+				.Where(condition)
+				.Select(l => new LaptopDetailsExportViewModel()
+				{
+					Id = l.Id,
+					Brand = l.Brand.Name,
+					CPU = l.CPU.Name,
+					RAM = l.RAM.Value,
+					SSDCapacity = l.SSDCapacity.Value,
+					VideoCard = l.VideoCard.Name,
+					Price = l.Price,
+					DisplaySize = l.DisplaySize.Value,
+					Warranty = l.Warranty,
+					Type = l.Type.Name,
+					DisplayCoverage = l.DisplayCoverage != null ? l.DisplayCoverage.Name : "unknown",
+					DisplayTechnology = l.DisplayTechnology != null ? l.DisplayTechnology.Name : "unknown",
+					Resolution = l.Resolution != null ? l.Resolution.Value : "unknown",
+					Color = l.Color != null ? l.Color.Name : "unknown",
+					ImageUrl = l.ImageUrl,
+					AddedOn = l.AddedOn.ToString("MMMM, yyyy", CultureInfo.InvariantCulture),
+					Quantity = l.Quantity,
+					Seller = l.Seller,
+				})
+				.ToListAsync();
+
+			return laptopsAsLaptopDetailsExportViewModels;
+		}
+	}
 }

@@ -33,7 +33,7 @@ namespace PCShop.Controllers
 		/// <summary>
 		/// HttpGet action to retrieve all active laptops
 		/// </summary>
-		/// <returns>Collection of all laptops</returns>
+		/// <returns>Collection of all active laptops</returns>
 		[HttpGet]
 		public async Task<IActionResult> Index()
 		{
@@ -211,6 +211,28 @@ namespace PCShop.Controllers
 				int id = await this.laptopService.EditLaptopAsync(model);
 
 				return RedirectToAction(nameof(Details), new { id });
+			}
+			catch (Exception)
+			{
+				return NotFound();
+			}
+		}
+
+        /// <summary>
+        /// HttpGet action to retrieve all active laptop sales of the currently logged in user
+        /// </summary>
+        /// <returns>Collection of all active laptop sales of the currently logged in user</returns>
+        [HttpGet]
+		[Authorize(Roles = SuperUser)]
+		public async Task<IActionResult> MyLaptops()
+		{
+			var userId = this.User.Id();
+
+			try
+			{
+				var userLaptops = await this.laptopService.GetUserLaptopsAsync(userId);
+
+				return View(userLaptops);
 			}
 			catch (Exception)
 			{

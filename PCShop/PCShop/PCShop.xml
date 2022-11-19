@@ -81,7 +81,7 @@
             <summary>
             HttpGet action to retrieve all active laptops
             </summary>
-            <returns>Collection of all laptops</returns>
+            <returns>Collection of all active laptops</returns>
         </member>
         <member name="M:PCShop.Controllers.LaptopController.Details(System.Int32)">
             <summary>
@@ -123,6 +123,12 @@
             </summary>
             <param name="model">Laptop import model</param>
             <returns>Redirection to /Laptop/Details</returns>
+        </member>
+        <member name="M:PCShop.Controllers.LaptopController.MyLaptops">
+            <summary>
+            HttpGet action to retrieve all active laptop sales of the currently logged in user
+            </summary>
+            <returns>Collection of all active laptop sales of the currently logged in user</returns>
         </member>
         <member name="T:PCShop.Extensions.ClaimsPrincipalExtension">
             <summary>
