@@ -5,10 +5,10 @@ using PCShop.Infrastructure.Common;
 using PCShop.Infrastructure.Data.Models;
 using PCShop.Infrastructure.Data.Models.GravitatingClasses;
 using System.Globalization;
-using Type = PCShop.Infrastructure.Data.Models.GravitatingClasses.Type;
-using static PCShop.Infrastructure.Constants.DataConstant.LaptopConstants;
-using static PCShop.Infrastructure.Constants.DataConstant.ClientConstants;
 using System.Linq.Expressions;
+using static PCShop.Core.Constants.Constant.ClientConstants;
+using static PCShop.Core.Constants.Constant.LaptopConstants;
+using Type = PCShop.Infrastructure.Data.Models.GravitatingClasses.Type;
 
 namespace PCShop.Core.Services.Implementations
 {

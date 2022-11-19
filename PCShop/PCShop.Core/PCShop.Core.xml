@@ -4,6 +4,221 @@
         <name>PCShop.Core</name>
     </assembly>
     <members>
+        <member name="T:PCShop.Core.Constants.Constant">
+            <summary>
+            Class holding constants
+            </summary>
+        </member>
+        <member name="T:PCShop.Core.Constants.Constant.UserConstants">
+            <summary>
+            Class holding User constants
+            </summary>
+        </member>
+        <member name="F:PCShop.Core.Constants.Constant.UserConstants.FirstNameMinLength">
+            <summary>
+            Constant for the min length of user's first name
+            </summary>
+        </member>
+        <member name="F:PCShop.Core.Constants.Constant.UserConstants.LastNameMinLength">
+            <summary>
+            Constant for the min length of user's last name
+            </summary>
+        </member>
+        <member name="F:PCShop.Core.Constants.Constant.UserConstants.UsernameMinLength">
+            <summary>
+            Constant for the min length of user's username
+            </summary>
+        </member>
+        <member name="F:PCShop.Core.Constants.Constant.UserConstants.EmailMinLength">
+            <summary>
+            Constant for the min length of user's email
+            </summary>
+        </member>
+        <member name="F:PCShop.Core.Constants.Constant.UserConstants.PasswordMinLength">
+            <summary>
+            Constant for the min length of user's password
+            </summary>
+        </member>
+        <member name="F:PCShop.Core.Constants.Constant.UserConstants.PasswordMaxLength">
+            <summary>
+            Constant for the max length of user's password
+            </summary>
+        </member>
+        <member name="T:PCShop.Core.Constants.Constant.BrandConstants">
+            <summary>
+            Class holding Brand constants
+            </summary>
+        </member>
+        <member name="F:PCShop.Core.Constants.Constant.BrandConstants.BrandNameMinLength">
+            <summary>
+            Constant for the min length of brand's name
+            </summary>
+        </member>
+        <member name="T:PCShop.Core.Constants.Constant.ColorConstants">
+            <summary>
+            Class holding Color constants
+            </summary>
+        </member>
+        <member name="F:PCShop.Core.Constants.Constant.ColorConstants.ColorNameMinLength">
+            <summary>
+            Constant for the min length of color's name
+            </summary>
+        </member>
+        <member name="T:PCShop.Core.Constants.Constant.CPUConstants">
+            <summary>
+            Class holding CPU constants
+            </summary>
+        </member>
+        <member name="F:PCShop.Core.Constants.Constant.CPUConstants.CPUNameMinLength">
+            <summary>
+            Constant for the min length of CPU's name
+            </summary>
+        </member>
+        <member name="T:PCShop.Core.Constants.Constant.DisplayCoverageConstants">
+            <summary>
+            Class holding DisplayCoverage constants
+            </summary>
+        </member>
+        <member name="F:PCShop.Core.Constants.Constant.DisplayCoverageConstants.DisplayCoverageNameMinLength">
+            <summary>
+            Constant for the min length of displayCoverage's name
+            </summary>
+        </member>
+        <member name="T:PCShop.Core.Constants.Constant.DisplayTechnologyConstants">
+            <summary>
+            Class holding DisplayTechnology constants
+            </summary>
+        </member>
+        <member name="F:PCShop.Core.Constants.Constant.DisplayTechnologyConstants.DisplayTechnologyNameMinLength">
+            <summary>
+            Constant for the min length of displayTechnology's name
+            </summary>
+        </member>
+        <member name="T:PCShop.Core.Constants.Constant.FormatConstants">
+            <summary>
+            Class holding Format constants
+            </summary>
+        </member>
+        <member name="F:PCShop.Core.Constants.Constant.FormatConstants.FormatNameMinLength">
+            <summary>
+            Constant for the min length of format's name
+            </summary>
+        </member>
+        <member name="T:PCShop.Core.Constants.Constant.ResolutionConstants">
+            <summary>
+            Class holding Resolution constants
+            </summary>
+        </member>
+        <member name="F:PCShop.Core.Constants.Constant.ResolutionConstants.ResolutionValueMinLength">
+            <summary>
+            Constant for the min length of resolution's value string
+            </summary>
+        </member>
+        <member name="T:PCShop.Core.Constants.Constant.SensitivityConstants">
+            <summary>
+            Class holding Sensitivity constants
+            </summary>
+        </member>
+        <member name="F:PCShop.Core.Constants.Constant.SensitivityConstants.SensitivityRangeMinLength">
+            <summary>
+            Constant for the min length of sensitivity's range string
+            </summary>
+        </member>
+        <member name="T:PCShop.Core.Constants.Constant.TypeConstants">
+            <summary>
+            Class holding Type constants
+            </summary>
+        </member>
+        <member name="F:PCShop.Core.Constants.Constant.TypeConstants.TypeNameMinLength">
+            <summary>
+            Constant for the min length of type's name
+            </summary>
+        </member>
+        <member name="T:PCShop.Core.Constants.Constant.VideoCardConstants">
+            <summary>
+            Class holding VideoCard constants
+            </summary>
+        </member>
+        <member name="F:PCShop.Core.Constants.Constant.VideoCardConstants.VideoCardNameMinLength">
+            <summary>
+            Constant for the min length of videoCard's name
+            </summary>
+        </member>
+        <member name="T:PCShop.Core.Constants.Constant.LaptopConstants">
+            <summary>
+            Class holding Laptop constants
+            </summary>
+        </member>
+        <member name="F:PCShop.Core.Constants.Constant.LaptopConstants.RAMMinValue">
+            <summary>
+            Constant for the min value of laptop's RAM
+            </summary>
+        </member>
+        <member name="F:PCShop.Core.Constants.Constant.LaptopConstants.RAMMaxValue">
+            <summary>
+            Constant for the max value of laptop's RAM
+            </summary>
+        </member>
+        <member name="F:PCShop.Core.Constants.Constant.LaptopConstants.SSDCapacityMinValue">
+            <summary>
+            Constant for the min value of laptop's SSD capacity
+            </summary>
+        </member>
+        <member name="F:PCShop.Core.Constants.Constant.LaptopConstants.SSDCapacityMaxValue">
+            <summary>
+            Constant for the max value of laptop's SSD capacity
+            </summary>
+        </member>
+        <member name="F:PCShop.Core.Constants.Constant.LaptopConstants.ErrorMessageForInvalidLaptopId">
+            <summary>
+            Constant for the error message of invalid Laptop unique identifier
+            </summary>
+        </member>
+        <member name="T:PCShop.Core.Constants.Constant.ProductConstants">
+            <summary>
+            Class holding constants for all product types
+            </summary>
+        </member>
+        <member name="F:PCShop.Core.Constants.Constant.ProductConstants.QuantityMinValue">
+            <summary>
+            Constant for the min value of product's quantity
+            </summary>
+        </member>
+        <member name="F:PCShop.Core.Constants.Constant.ProductConstants.QuantityMaxValue">
+            <summary>
+            Constant for the max value of product's quantity
+            </summary>
+        </member>
+        <member name="F:PCShop.Core.Constants.Constant.ProductConstants.WarrantyMinValue">
+            <summary>
+            Constant for the min value of product's warranty
+            </summary>
+        </member>
+        <member name="F:PCShop.Core.Constants.Constant.ProductConstants.WarrantyMaxValue">
+            <summary>
+            Constant for the max value of product's warranty
+            </summary>
+        </member>
+        <member name="F:PCShop.Core.Constants.Constant.ProductConstants.IntegerErrorMessage">
+            <summary>
+            Constant for the error message of product's integer property
+            </summary>
+        </member>
+        <member name="T:PCShop.Core.Constants.Constant.ClientConstants">
+            <summary>
+            Class holding Client constants
+            </summary>
+        </member>
+        <member name="F:PCShop.Core.Constants.Constant.ClientConstants.MaxNumberOfAllowedSales">
+            <summary>
+            Constant for the max number of allowed active sales
+            </summary>
+        </member>
+        <member name="F:PCShop.Core.Constants.Constant.ClientConstants.ErrorMessageForInvalidUserId">
+            <summary>
+            Constant for the error message of invalid User unique identifier
+            </summary>
+        </member>
         <member name="T:PCShop.Core.Models.Laptop.LaptopDetailsExportViewModel">
             <summary>
             LaptopDetailsExportViewModel model

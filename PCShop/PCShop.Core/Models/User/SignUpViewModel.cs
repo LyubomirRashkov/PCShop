@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using static PCShop.Infrastructure.Constants.DataConstant.UserConstants;
+using static PCShop.Core.Constants.Constant.UserConstants;
 
 namespace PCShop.Core.Models.User
 {

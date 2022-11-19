@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using PCShop.Core.Models.Laptop;
 using PCShop.Core.Services.Interfaces;
 using PCShop.Extensions;
-using static PCShop.Infrastructure.Constants.DataConstant.ClientConstants;
+using static PCShop.Core.Constants.Constant.ClientConstants;
 using static PCShop.Infrastructure.Constants.DataConstant.RoleConstants;
 
 namespace PCShop.Controllers

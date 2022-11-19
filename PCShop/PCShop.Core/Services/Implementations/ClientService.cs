@@ -2,14 +2,14 @@
 using PCShop.Core.Services.Interfaces;
 using PCShop.Infrastructure.Common;
 using PCShop.Infrastructure.Data.Models;
-using static PCShop.Infrastructure.Constants.DataConstant.ClientConstants;
+using static PCShop.Core.Constants.Constant.ClientConstants;
 
 namespace PCShop.Core.Services.Implementations
 {
-	/// <summary>
-	/// Implementation of IClientService interface
-	/// </summary>
-	public class ClientService : IClientService
+    /// <summary>
+    /// Implementation of IClientService interface
+    /// </summary>
+    public class ClientService : IClientService
     {
         private readonly IRepository repository;
 
