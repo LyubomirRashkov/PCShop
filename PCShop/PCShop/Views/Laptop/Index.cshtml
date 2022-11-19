@@ -52,7 +52,7 @@
 					<td>@laptop.RAM GB</td>
 					<td>@laptop.SSDCapacity GB</td>
 					<td>@laptop.VideoCard</td>
-					<td>@laptop.Price EUR</td>
+					<td>@String.Format("{0:f2}", laptop.Price) EUR</td>
 					<td>@laptop.DisplaySize inches</td>
 					<td>
 						@if (laptop.Warranty > 0)
