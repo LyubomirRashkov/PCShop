@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using PCShop.Core.Exceptions;
 using PCShop.Core.Models.Laptop;
 using PCShop.Core.Services.Interfaces;
 using PCShop.Infrastructure.Common;
@@ -18,14 +19,19 @@ namespace PCShop.Core.Services.Implementations
     public class LaptopService : ILaptopService
     {
         private readonly IRepository repository;
+        private readonly IGuard guard;
 
         /// <summary>
         /// Constructor of LaptopService class
         /// </summary>
         /// <param name="repository">The repository that will be used</param>
-        public LaptopService(IRepository repository)
+        /// <param name="guard">The guard that will be used</param>
+        public LaptopService(
+            IRepository repository,
+            IGuard guard)
         {
             this.repository = repository;
+            this.guard = guard;
         }
 
         /// <summary>
@@ -34,7 +40,6 @@ namespace PCShop.Core.Services.Implementations
         /// <param name="model">Laptop input model</param>
         /// <param name="userId">Laptop's owner unique identifier</param>
         /// <returns>The unique identifier of the added laptop</returns>
-        /// <exception cref="ArgumentException">Thrown when there is no client with the given FK (userId) in the database</exception>
         public async Task<int> AddLaptopAsync(LaptopImportViewModel model, string? userId)
         {
             var laptop = new Laptop()
@@ -54,10 +59,7 @@ namespace PCShop.Core.Services.Implementations
             {
                 dbClient = await this.repository.GetByPropertyAsync<Client>(c => c.UserId == userId);
 
-                if (dbClient is null)
-                {
-                    throw new ArgumentException(ErrorMessageForInvalidUserId);
-                }
+                this.guard.AgainstNull<Client>(dbClient, ErrorMessageForInvalidUserId);
             }
 
             laptop.Seller = dbClient;
@@ -75,17 +77,13 @@ namespace PCShop.Core.Services.Implementations
         /// Method to mark a specific laptop as deleted
         /// </summary>
         /// <param name="id">Laptop unique identifier</param>
-        /// <exception cref="ArgumentException">Thrown when there is no laptop with the given unique identifier in the database</exception>
         public async Task DeleteLaptopAsync(int id)
         {
             var laptop = await this.repository
                 .All<Laptop>(l => !l.IsDeleted)
                 .FirstOrDefaultAsync(l => l.Id == id);
 
-            if (laptop is null)
-            {
-                throw new ArgumentException(ErrorMessageForInvalidLaptopId);
-            }
+            this.guard.AgainstNull<Laptop>(laptop, ErrorMessageForInvalidLaptopId);
 
             laptop.IsDeleted = true;
 
@@ -97,7 +95,6 @@ namespace PCShop.Core.Services.Implementations
         /// </summary>
         /// <param name="model">Laptop input model</param>
         /// <returns>The unique identifier of the edited laptop</returns>
-        /// <exception cref="ArgumentException">Thrown when there is no laptop with the given unique identifier in the database</exception>
         public async Task<int> EditLaptopAsync(LaptopEditViewModel model)
         {
             var laptop = await this.repository
@@ -116,10 +113,7 @@ namespace PCShop.Core.Services.Implementations
                 .Include(l => l.Color)
                 .FirstOrDefaultAsync();
 
-            if (laptop is null)
-            {
-                throw new ArgumentException(ErrorMessageForInvalidLaptopId);
-            }
+            this.guard.AgainstNull<Laptop>(laptop, ErrorMessageForInvalidLaptopId);
 
             laptop.ImageUrl = model.ImageUrl;
             laptop.Warranty = model.Warranty;
@@ -162,17 +156,13 @@ namespace PCShop.Core.Services.Implementations
         /// </summary>
         /// <param name="id">Laptop unique identifier</param>
         /// <returns>The laptop as LaptopDetailsExportViewModel</returns>
-        /// <exception cref="ArgumentException">Thrown when there is no laptop with the given unique identifier in the database</exception>
         public async Task<LaptopDetailsExportViewModel> GetLaptopByIdAsLaptopDetailsExportViewModelAsync(int id)
         {
-            var laptopExport = await this.GetLaptopsAsLaptopDetailsExportViewModelsAsync<Laptop>(l => l.Id == id);
+            var laptopExports = await this.GetLaptopsAsLaptopDetailsExportViewModelsAsync<Laptop>(l => l.Id == id);
 
-            if (laptopExport is null)
-            {
-                throw new ArgumentException(ErrorMessageForInvalidLaptopId);
-            }
+            this.guard.AgainstNullOrEmptyCollection<LaptopDetailsExportViewModel>(laptopExports, ErrorMessageForInvalidLaptopId);
 
-            return laptopExport[0];
+            return laptopExports[0];
         }
 
         /// <summary>
@@ -180,7 +170,6 @@ namespace PCShop.Core.Services.Implementations
         /// </summary>
         /// <param name="id">Laptop unique identifier</param>
         /// <returns>The laptop as LaptopEditViewModel</returns>
-        /// <exception cref="ArgumentException">Thrown when there is no laptop with the given unique identifier in the database</exception>
         public async Task<LaptopEditViewModel> GetLaptopByIdAsLaptopEditViewModelAsync(int id)
         {
             var laptopExport = await this.repository
@@ -208,10 +197,7 @@ namespace PCShop.Core.Services.Implementations
                 })
                 .FirstOrDefaultAsync();
 
-            if (laptopExport is null)
-            {
-                throw new ArgumentException(ErrorMessageForInvalidLaptopId);
-            }
+            this.guard.AgainstNull<LaptopEditViewModel>(laptopExport, ErrorMessageForInvalidLaptopId);
 
             return laptopExport;
         }
@@ -221,15 +207,11 @@ namespace PCShop.Core.Services.Implementations
         /// </summary>
         /// <param name="userId">User unique identifier</param>
         /// <returns>Collection of LaptopDetailsExportViewModels</returns>
-        /// <exception cref="ArgumentException">Thrown when there is no client with the given FK (userId) in the database</exception>
 		public async Task<IEnumerable<LaptopDetailsExportViewModel>> GetUserLaptopsAsync(string userId)
 		{
             var client = await this.repository.GetByPropertyAsync<Client>(c => c.UserId == userId);
 
-			if (client is null)
-			{
-				throw new ArgumentException(ErrorMessageForInvalidUserId);
-			}
+            this.guard.AgainstNull<Client>(client, ErrorMessageForInvalidUserId);
 
             var userLaptops = await this.GetLaptopsAsLaptopDetailsExportViewModelsAsync<Laptop>(l => l.SellerId == client.Id);
 

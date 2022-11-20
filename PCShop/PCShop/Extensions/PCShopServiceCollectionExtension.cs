@@ -1,4 +1,5 @@
-﻿using PCShop.Core.Services.Implementations;
+﻿using PCShop.Core.Exceptions;
+using PCShop.Core.Services.Implementations;
 using PCShop.Core.Services.Interfaces;
 using PCShop.Infrastructure.Common;
 
@@ -20,6 +21,8 @@ namespace Microsoft.Extensions.DependencyInjection
 
             services.AddScoped<ILaptopService, LaptopService>();
             services.AddScoped<IClientService, ClientService>();
+
+            services.AddScoped<IGuard, Guard>();
 
 			return services;
         }

@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using PCShop.Core.Exceptions;
 using PCShop.Core.Services.Interfaces;
 using PCShop.Infrastructure.Common;
 using PCShop.Infrastructure.Data.Models;
@@ -12,14 +13,19 @@ namespace PCShop.Core.Services.Implementations
     public class ClientService : IClientService
     {
         private readonly IRepository repository;
+        private readonly IGuard guard;
 
-		/// <summary>
-		/// Constructor of ClientService class
-		/// </summary>
-		/// <param name="repository">The repository that will be used</param>
-		public ClientService(IRepository repository)
+        /// <summary>
+        /// Constructor of ClientService class
+        /// </summary>
+        /// <param name="repository">The repository that will be used</param>
+        /// <param name="guard">The guard that will be used</param>
+        public ClientService(
+            IRepository repository,
+            IGuard guard)
         {
             this.repository = repository;
+            this.guard = guard;
         }
 
 		/// <summary>
@@ -27,7 +33,6 @@ namespace PCShop.Core.Services.Implementations
 		/// </summary>
 		/// <param name="userId">User unique identifier</param>
 		/// <returns>The number of active sales of the user</returns>
-		/// <exception cref="ArgumentException">Thrown when there is no client with the given user unique identifier in the database</exception>
 		public async Task<int> GetNumberOfActiveSales(string userId)
         {
             var client = await this.repository
@@ -40,10 +45,7 @@ namespace PCShop.Core.Services.Implementations
                 .Include(c => c.Microphones)
                 .FirstOrDefaultAsync();
 
-            if (client is null)
-            {
-                throw new ArgumentException(ErrorMessageForInvalidUserId);
-            }
+            this.guard.AgainstNull<Client>(client, ErrorMessageForInvalidUserId);
 
             var numberOfClientSales = client.Laptops.Where(l => !l.IsDeleted).Count()
                                       + client.Monitors.Where(m => !m.IsDeleted).Count()

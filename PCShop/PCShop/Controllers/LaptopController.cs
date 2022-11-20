@@ -67,6 +67,7 @@ namespace PCShop.Controllers
 		/// </summary>
 		/// <param name="id">Laptop unique identifier</param>
 		/// <returns>Redirection to /Laptop/Index</returns>
+		[HttpGet]
 		[Authorize(Roles = $"{Administrator}, {SuperUser}")]
 		public async Task<IActionResult> Delete(int id)
 		{
@@ -184,12 +185,12 @@ namespace PCShop.Controllers
 			}
 		}
 
-		/// <summary>
-		/// HttpPost action to edit a laptop
-		/// </summary>
-		/// <param name="model">Laptop import model</param>
-		/// <returns>Redirection to /Laptop/Details</returns>
-		[HttpPost]
+        /// <summary>
+        /// HttpPost action to edit a laptop
+        /// </summary>
+        /// <param name="model">Laptop import model</param>
+        /// <returns>Redirection to /Laptop/Details</returns>
+        [HttpPost]
 		[Authorize(Roles = $"{Administrator}, {SuperUser}")]
 		public async Task<IActionResult> Edit(LaptopEditViewModel model)
 		{

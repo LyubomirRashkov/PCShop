@@ -219,6 +219,64 @@
             Constant for the error message of invalid User unique identifier
             </summary>
         </member>
+        <member name="T:PCShop.Core.Exceptions.Guard">
+            <summary>
+            Guard model
+            </summary>
+        </member>
+        <member name="M:PCShop.Core.Exceptions.Guard.AgainstNull``1(``0,System.String)">
+            <summary>
+            Method, that will throw a PCShopException when the given value is null
+            </summary>
+            <typeparam name="T">Type of the value</typeparam>
+            <param name="value">The value that will be checked for null</param>
+            <param name="errorMessage">The error message that will be attached to the PCShopException</param>
+        </member>
+        <member name="M:PCShop.Core.Exceptions.Guard.AgainstNullOrEmptyCollection``1(System.Collections.Generic.IEnumerable{``0},System.String)">
+            <summary>
+            Method, that will throw a PCShopException when the given collection is null or empty
+            </summary>
+            <typeparam name="T">Type of the elements in the collection</typeparam>
+            <param name="collection">The collection that will be checked</param>
+            <param name="errorMessage">The error message that will be attached to the PCShopException</param>
+        </member>
+        <member name="T:PCShop.Core.Exceptions.IGuard">
+            <summary>
+            Abstraction of Guard
+            </summary>
+        </member>
+        <member name="M:PCShop.Core.Exceptions.IGuard.AgainstNull``1(``0,System.String)">
+            <summary>
+            Method, that will throw a PCShopException when the given value is null
+            </summary>
+            <typeparam name="T">Type of the value</typeparam>
+            <param name="value">The value that will be checked for null</param>
+            <param name="errorMessage">The error message that will be attached to the PCShopException</param>
+        </member>
+        <member name="M:PCShop.Core.Exceptions.IGuard.AgainstNullOrEmptyCollection``1(System.Collections.Generic.IEnumerable{``0},System.String)">
+            <summary>
+            Method, that will throw a PCShopException when the given collection is null or empty
+            </summary>
+            <typeparam name="T">Type of the elements in the collection</typeparam>
+            <param name="collection">The collection that will be checked</param>
+            <param name="errorMessage">The error message that will be attached to the PCShopException</param>
+        </member>
+        <member name="T:PCShop.Core.Exceptions.PCShopException">
+            <summary>
+            PCShopException model
+            </summary>
+        </member>
+        <member name="M:PCShop.Core.Exceptions.PCShopException.#ctor">
+            <summary>
+            Constructor of PCShopException class
+            </summary>
+        </member>
+        <member name="M:PCShop.Core.Exceptions.PCShopException.#ctor(System.String)">
+            <summary>
+            Constructor of PCShopException class
+            </summary>
+            <param name="errorMessage">The error message that will be attached to the exception</param>
+        </member>
         <member name="T:PCShop.Core.Models.Laptop.LaptopDetailsExportViewModel">
             <summary>
             LaptopDetailsExportViewModel model
@@ -484,11 +542,12 @@
             Implementation of IClientService interface
             </summary>
         </member>
-        <member name="M:PCShop.Core.Services.Implementations.ClientService.#ctor(PCShop.Infrastructure.Common.IRepository)">
+        <member name="M:PCShop.Core.Services.Implementations.ClientService.#ctor(PCShop.Infrastructure.Common.IRepository,PCShop.Core.Exceptions.IGuard)">
             <summary>
             Constructor of ClientService class
             </summary>
             <param name="repository">The repository that will be used</param>
+            <param name="guard">The guard that will be used</param>
         </member>
         <member name="M:PCShop.Core.Services.Implementations.ClientService.GetNumberOfActiveSales(System.String)">
             <summary>
@@ -496,18 +555,18 @@
             </summary>
             <param name="userId">User unique identifier</param>
             <returns>The number of active sales of the user</returns>
-            <exception cref="T:System.ArgumentException">Thrown when there is no client with the given user unique identifier in the database</exception>
         </member>
         <member name="T:PCShop.Core.Services.Implementations.LaptopService">
             <summary>
             Implementation of ILaptopService interface
             </summary>
         </member>
-        <member name="M:PCShop.Core.Services.Implementations.LaptopService.#ctor(PCShop.Infrastructure.Common.IRepository)">
+        <member name="M:PCShop.Core.Services.Implementations.LaptopService.#ctor(PCShop.Infrastructure.Common.IRepository,PCShop.Core.Exceptions.IGuard)">
             <summary>
             Constructor of LaptopService class
             </summary>
             <param name="repository">The repository that will be used</param>
+            <param name="guard">The guard that will be used</param>
         </member>
         <member name="M:PCShop.Core.Services.Implementations.LaptopService.AddLaptopAsync(PCShop.Core.Models.Laptop.LaptopImportViewModel,System.String)">
             <summary>
@@ -516,14 +575,12 @@
             <param name="model">Laptop input model</param>
             <param name="userId">Laptop's owner unique identifier</param>
             <returns>The unique identifier of the added laptop</returns>
-            <exception cref="T:System.ArgumentException">Thrown when there is no client with the given FK (userId) in the database</exception>
         </member>
         <member name="M:PCShop.Core.Services.Implementations.LaptopService.DeleteLaptopAsync(System.Int32)">
             <summary>
             Method to mark a specific laptop as deleted
             </summary>
             <param name="id">Laptop unique identifier</param>
-            <exception cref="T:System.ArgumentException">Thrown when there is no laptop with the given unique identifier in the database</exception>
         </member>
         <member name="M:PCShop.Core.Services.Implementations.LaptopService.EditLaptopAsync(PCShop.Core.Models.Laptop.LaptopEditViewModel)">
             <summary>
@@ -531,7 +588,6 @@
             </summary>
             <param name="model">Laptop input model</param>
             <returns>The unique identifier of the edited laptop</returns>
-            <exception cref="T:System.ArgumentException">Thrown when there is no laptop with the given unique identifier in the database</exception>
         </member>
         <member name="M:PCShop.Core.Services.Implementations.LaptopService.GetAllLaptopsAsync">
             <summary>
@@ -545,7 +601,6 @@
             </summary>
             <param name="id">Laptop unique identifier</param>
             <returns>The laptop as LaptopDetailsExportViewModel</returns>
-            <exception cref="T:System.ArgumentException">Thrown when there is no laptop with the given unique identifier in the database</exception>
         </member>
         <member name="M:PCShop.Core.Services.Implementations.LaptopService.GetLaptopByIdAsLaptopEditViewModelAsync(System.Int32)">
             <summary>
@@ -553,7 +608,6 @@
             </summary>
             <param name="id">Laptop unique identifier</param>
             <returns>The laptop as LaptopEditViewModel</returns>
-            <exception cref="T:System.ArgumentException">Thrown when there is no laptop with the given unique identifier in the database</exception>
         </member>
         <member name="M:PCShop.Core.Services.Implementations.LaptopService.GetUserLaptopsAsync(System.String)">
             <summary>
@@ -561,7 +615,6 @@
             </summary>
             <param name="userId">User unique identifier</param>
             <returns>Collection of LaptopDetailsExportViewModels</returns>
-            <exception cref="T:System.ArgumentException">Thrown when there is no client with the given FK (userId) in the database</exception>
         </member>
         <member name="T:PCShop.Core.Services.Interfaces.IClientService">
             <summary>
