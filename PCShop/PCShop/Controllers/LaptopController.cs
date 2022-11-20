@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using PCShop.Core.Exceptions;
 using PCShop.Core.Models.Laptop;
 using PCShop.Core.Services.Interfaces;
 using PCShop.Extensions;
@@ -114,9 +115,9 @@ namespace PCShop.Controllers
 						return View("AddNotAllowed");
 					}
 				}
-				catch (Exception)
+				catch (PCShopException)
 				{
-					return Unauthorized();
+					return View("DbError");
 				}
 			}
 
@@ -150,11 +151,9 @@ namespace PCShop.Controllers
 
 				return RedirectToAction(nameof(Details), new { id });
 			}
-			catch (Exception)
+			catch (PCShopException)
 			{
-				this.ModelState.AddModelError("", "Something went wrong... :)");
-
-				return View(model);
+				return View("DbError");
 			}
 		}
 
@@ -235,9 +234,9 @@ namespace PCShop.Controllers
 
 				return View(userLaptops);
 			}
-			catch (Exception)
+			catch (PCShopException)
 			{
-				return NotFound();
+				return View("DbError");
 			}
 		}
 	}
