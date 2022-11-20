@@ -1,9 +1,11 @@
 ﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using PCShop.Core.Exceptions;
 using PCShop.Core.Models.Laptop;
 using PCShop.Core.Services.Interfaces;
 using PCShop.Extensions;
+using PCShop.Infrastructure.Data.Models.Account;
 using static PCShop.Core.Constants.Constant.ClientConstants;
 using static PCShop.Infrastructure.Constants.DataConstant.RoleConstants;
 
@@ -17,18 +19,26 @@ namespace PCShop.Controllers
 	{
 		private readonly ILaptopService laptopService;
 		private readonly IClientService clientService;
+		private readonly UserManager<User> userManager;
+		private readonly SignInManager<User> signInManager;
 
 		/// <summary>
 		/// Constructor of LaptopController class
 		/// </summary>
 		/// <param name="laptopService">The ILaptopService needed for functionality</param>
 		/// <param name="clientService">The IClientService needed for functionality</param>
+		/// <param name="userManager">The UserManager<c>User</c></param>
+		/// <param name="signInManager">The SignInManager<c>User</c></param>
 		public LaptopController(
 			ILaptopService laptopService,
-			IClientService clientService)
+			IClientService clientService,
+			UserManager<User> userManager,
+			SignInManager<User> signInManager)
 		{
 			this.laptopService = laptopService;
 			this.clientService = clientService;
+			this.userManager = userManager;
+			this.signInManager = signInManager;
 		}
 
 		/// <summary>
@@ -57,7 +67,7 @@ namespace PCShop.Controllers
 
 				return View(laptop);
 			}
-			catch (Exception)
+			catch (ArgumentException)
 			{
 				return NotFound();
 			}
@@ -86,7 +96,7 @@ namespace PCShop.Controllers
 
 				return RedirectToAction(nameof(Index));
 			}
-			catch (Exception)
+			catch (ArgumentException)
 			{
 				return NotFound();
 			}
@@ -170,7 +180,7 @@ namespace PCShop.Controllers
 			{
 				var laptop = await this.laptopService.GetLaptopByIdAsLaptopEditViewModelAsync(id);
 
-				if (this.User.IsInRole(SuperUser) 
+				if (this.User.IsInRole(SuperUser)
 					&& (laptop.Seller is null || this.User.Id() != laptop.Seller.UserId))
 				{
 					return Unauthorized();
@@ -178,18 +188,18 @@ namespace PCShop.Controllers
 
 				return View(laptop);
 			}
-			catch (Exception)
+			catch (ArgumentException)
 			{
 				return NotFound();
 			}
 		}
 
-        /// <summary>
-        /// HttpPost action to edit a laptop
-        /// </summary>
-        /// <param name="model">Laptop import model</param>
-        /// <returns>Redirection to /Laptop/Details</returns>
-        [HttpPost]
+		/// <summary>
+		/// HttpPost action to edit a laptop
+		/// </summary>
+		/// <param name="model">Laptop import model</param>
+		/// <returns>Redirection to /Laptop/Details</returns>
+		[HttpPost]
 		[Authorize(Roles = $"{Administrator}, {SuperUser}")]
 		public async Task<IActionResult> Edit(LaptopEditViewModel model)
 		{
@@ -202,7 +212,7 @@ namespace PCShop.Controllers
 			{
 				var laptop = await this.laptopService.GetLaptopByIdAsLaptopEditViewModelAsync(model.Id);
 
-				if (this.User.IsInRole(SuperUser) 
+				if (this.User.IsInRole(SuperUser)
 					&& (laptop.Seller is null || this.User.Id() != laptop.Seller.UserId))
 				{
 					return Unauthorized();
@@ -212,17 +222,17 @@ namespace PCShop.Controllers
 
 				return RedirectToAction(nameof(Details), new { id });
 			}
-			catch (Exception)
+			catch (ArgumentException)
 			{
 				return NotFound();
 			}
 		}
 
-        /// <summary>
-        /// HttpGet action to retrieve all active laptop sales of the currently logged in user
-        /// </summary>
-        /// <returns>Collection of all active laptop sales of the currently logged in user</returns>
-        [HttpGet]
+		/// <summary>
+		/// HttpGet action to retrieve all active laptop sales of the currently logged in user
+		/// </summary>
+		/// <returns>Collection of all active laptop sales of the currently logged in user</returns>
+		[HttpGet]
 		[Authorize(Roles = SuperUser)]
 		public async Task<IActionResult> MyLaptops()
 		{
@@ -237,6 +247,50 @@ namespace PCShop.Controllers
 			catch (PCShopException)
 			{
 				return View("DbError");
+			}
+		}
+
+		/// <summary>
+		/// HttpGet action to buy a laptop
+		/// </summary>
+		/// <param name="id">Laptop unique identifier</param>
+		/// <returns>The corresponding view</returns>
+		[HttpGet]
+		public async Task<IActionResult> Buy(int id)
+		{
+			if (this.User.IsInRole(Administrator))
+			{
+				return Unauthorized();
+			}
+
+			try
+			{
+				ViewData["Title"] = "Buy a laptop";
+
+				await this.laptopService.MarkLaptopAsBought(id);
+
+				var userId = this.User.Id();
+
+				var client = await this.clientService.BuyProduct(userId);
+
+				if (client.CountOfPurchases == RequiredNumberOfPurchasesToBeSuperUser)
+				{
+					var user = await this.userManager.FindByIdAsync(userId);
+
+					await this.userManager.AddToRoleAsync(user, SuperUser);
+
+					await this.signInManager.SignOutAsync();
+
+					await this.signInManager.SignInAsync(user, false);
+
+					return View("PromoteToSuperUser");
+				}
+
+				return View("PurchaseMade");
+			}
+			catch (ArgumentException)
+			{
+				return NotFound();
 			}
 		}
 	}

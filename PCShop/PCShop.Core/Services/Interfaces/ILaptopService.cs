@@ -54,5 +54,11 @@ namespace PCShop.Core.Services.Interfaces
         /// <param name="userId">User unique identifier</param>
         /// <returns>Collection of LaptopDetailsExportViewModels</returns>
 		Task<IEnumerable<LaptopDetailsExportViewModel>> GetUserLaptopsAsync(string userId);
-	}
+
+		/// <summary>
+		/// Method to mark the laptop with the given unique identifier as bought
+		/// </summary>
+		/// <param name="id">Laptop unique identifier</param>
+		Task MarkLaptopAsBought(int id);
+    }
 }

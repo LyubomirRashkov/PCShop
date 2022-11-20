@@ -204,6 +204,16 @@
             Constant for the error message of product's integer property
             </summary>
         </member>
+        <member name="F:PCShop.Core.Constants.Constant.ProductConstants.ErrorMessageForDeletedProduct">
+            <summary>
+            Constant for the error message of a deleted product
+            </summary>
+        </member>
+        <member name="F:PCShop.Core.Constants.Constant.ProductConstants.ErrorMessageForProductThatIsOutOfStock">
+            <summary>
+            Constant for the error message of a product that is out of stock
+            </summary>
+        </member>
         <member name="T:PCShop.Core.Constants.Constant.ClientConstants">
             <summary>
             Class holding Client constants
@@ -219,14 +229,19 @@
             Constant for the error message of invalid User unique identifier
             </summary>
         </member>
+        <member name="F:PCShop.Core.Constants.Constant.ClientConstants.RequiredNumberOfPurchasesToBeSuperUser">
+            <summary>
+            Constant for the required number of purchases a client must make to become a SuperUser
+            </summary>
+        </member>
         <member name="T:PCShop.Core.Exceptions.Guard">
             <summary>
             Guard model
             </summary>
         </member>
-        <member name="M:PCShop.Core.Exceptions.Guard.AgainstNull``1(``0,System.String)">
+        <member name="M:PCShop.Core.Exceptions.Guard.AgainstClientThatDoesNotExist``1(``0,System.String)">
             <summary>
-            Method, that will throw a PCShopException when the given value is null
+            Method that will throw a PCShopException when the given value is null
             </summary>
             <typeparam name="T">Type of the value</typeparam>
             <param name="value">The value that will be checked for null</param>
@@ -234,20 +249,42 @@
         </member>
         <member name="M:PCShop.Core.Exceptions.Guard.AgainstNullOrEmptyCollection``1(System.Collections.Generic.IEnumerable{``0},System.String)">
             <summary>
-            Method, that will throw a PCShopException when the given collection is null or empty
+            Method that will throw an ArgumentException when the given collection is null or empty
             </summary>
             <typeparam name="T">Type of the elements in the collection</typeparam>
             <param name="collection">The collection that will be checked</param>
-            <param name="errorMessage">The error message that will be attached to the PCShopException</param>
+            <param name="errorMessage">The error message that will be attached to the ArgumentException</param>
+        </member>
+        <member name="M:PCShop.Core.Exceptions.Guard.AgainstProductThatIsNull``1(``0,System.String)">
+            <summary>
+            Method that will throw an ArgumentException when the given value is null
+            </summary>
+            <typeparam name="T">Type of the value</typeparam>
+            <param name="value">The value that will be checked for null</param>
+            <param name="errorMessage">The error message that will be attached to the ArgumentException</param>
+        </member>
+        <member name="M:PCShop.Core.Exceptions.Guard.AgainstProductThatIsDeleted(System.Boolean,System.String)">
+            <summary>
+            Method that will throw an ArgumentException when the given boolean is true
+            </summary>
+            <param name="isDeleted">The boolean that will be checked</param>
+            <param name="errorMessage">The error message that will be attached to the ArgumentException</param>
+        </member>
+        <member name="M:PCShop.Core.Exceptions.Guard.AgainstProductThatIsOutOfStock(System.Int32,System.String)">
+            <summary>
+            Method that will throw an ArgumentException when the given quantity is zero
+            </summary>
+            <param name="quantity">The quantity that will be checked</param>
+            <param name="errorMessage">The error message that will be attached to the ArgumentException</param>
         </member>
         <member name="T:PCShop.Core.Exceptions.IGuard">
             <summary>
             Abstraction of Guard
             </summary>
         </member>
-        <member name="M:PCShop.Core.Exceptions.IGuard.AgainstNull``1(``0,System.String)">
+        <member name="M:PCShop.Core.Exceptions.IGuard.AgainstClientThatDoesNotExist``1(``0,System.String)">
             <summary>
-            Method, that will throw a PCShopException when the given value is null
+            Method that will throw a PCShopException when the given value is null
             </summary>
             <typeparam name="T">Type of the value</typeparam>
             <param name="value">The value that will be checked for null</param>
@@ -255,11 +292,33 @@
         </member>
         <member name="M:PCShop.Core.Exceptions.IGuard.AgainstNullOrEmptyCollection``1(System.Collections.Generic.IEnumerable{``0},System.String)">
             <summary>
-            Method, that will throw a PCShopException when the given collection is null or empty
+            Method that will throw an ArgumentException when the given collection is null or empty
             </summary>
             <typeparam name="T">Type of the elements in the collection</typeparam>
             <param name="collection">The collection that will be checked</param>
-            <param name="errorMessage">The error message that will be attached to the PCShopException</param>
+            <param name="errorMessage">The error message that will be attached to the ArgumentException</param>
+        </member>
+        <member name="M:PCShop.Core.Exceptions.IGuard.AgainstProductThatIsDeleted(System.Boolean,System.String)">
+            <summary>
+            Method that will throw an ArgumentException when the given boolean is true
+            </summary>
+            <param name="isDeleted">The boolean that will be checked</param>
+            <param name="errorMessage">The error message that will be attached to the ArgumentException</param>
+        </member>
+        <member name="M:PCShop.Core.Exceptions.IGuard.AgainstProductThatIsOutOfStock(System.Int32,System.String)">
+            <summary>
+            Method that will throw an ArgumentException when the given quantity is zero
+            </summary>
+            <param name="quantity">The quantity that will be checked</param>
+            <param name="errorMessage">The error message that will be attached to the ArgumentException</param>
+        </member>
+        <member name="M:PCShop.Core.Exceptions.IGuard.AgainstProductThatIsNull``1(``0,System.String)">
+            <summary>
+            Method that will throw an ArgumentException when the given value is null
+            </summary>
+            <typeparam name="T">Type of the value</typeparam>
+            <param name="value">The value that will be checked for null</param>
+            <param name="errorMessage">The error message that will be attached to the ArgumentException</param>
         </member>
         <member name="T:PCShop.Core.Exceptions.PCShopException">
             <summary>
@@ -549,6 +608,13 @@
             <param name="repository">The repository that will be used</param>
             <param name="guard">The guard that will be used</param>
         </member>
+        <member name="M:PCShop.Core.Services.Implementations.ClientService.BuyProduct(System.String)">
+            <summary>
+            Method to buy a product
+            </summary>
+            <param name="userId">User unique identifier</param>
+            <returns>The client who purchased the product</returns>
+        </member>
         <member name="M:PCShop.Core.Services.Implementations.ClientService.GetNumberOfActiveSales(System.String)">
             <summary>
             Method to retrieve the number of active sales for a given user
@@ -616,6 +682,12 @@
             <param name="userId">User unique identifier</param>
             <returns>Collection of LaptopDetailsExportViewModels</returns>
         </member>
+        <member name="M:PCShop.Core.Services.Implementations.LaptopService.MarkLaptopAsBought(System.Int32)">
+            <summary>
+            Method to mark the laptop with the given unique identifier as bought
+            </summary>
+            <param name="id">Laptop unique identifier</param>
+        </member>
         <member name="T:PCShop.Core.Services.Interfaces.IClientService">
             <summary>
             Abstraction of ClientService
@@ -627,6 +699,13 @@
             </summary>
             <param name="userId">User unique identifier</param>
             <returns>The number of active sales of the user</returns>
+        </member>
+        <member name="M:PCShop.Core.Services.Interfaces.IClientService.BuyProduct(System.String)">
+            <summary>
+            Method to buy a product
+            </summary>
+            <param name="userId">User unique identifier</param>
+            <returns>The client who purchased the product</returns>
         </member>
         <member name="T:PCShop.Core.Services.Interfaces.ILaptopService">
             <summary>
@@ -680,6 +759,12 @@
             </summary>
             <param name="userId">User unique identifier</param>
             <returns>Collection of LaptopDetailsExportViewModels</returns>
+        </member>
+        <member name="M:PCShop.Core.Services.Interfaces.ILaptopService.MarkLaptopAsBought(System.Int32)">
+            <summary>
+            Method to mark the laptop with the given unique identifier as bought
+            </summary>
+            <param name="id">Laptop unique identifier</param>
         </member>
     </members>
 </doc>

@@ -55,13 +55,25 @@ namespace PCShop.Infrastructure.Common
             return this.DbSet<T>().AsNoTracking().Where(condition);
         }
 
-        /// <summary>
-        /// Method to get the first entity from the database according to a specific condition
-        /// </summary>
-        /// <typeparam name="T">Type of the target entity</typeparam>
-        /// <param name="condition">The condition that must be satisfied</param>
-        /// <returns>The entity or null</returns>
-        public async Task<T?> GetByPropertyAsync<T>(Expression<Func<T, bool>> condition) 
+		/// <summary>
+		/// Method to get the specific entity from the database by its unique identifier
+		/// </summary>
+		/// <typeparam name="T">Type of the target entity</typeparam>
+		/// <param name="id">Entity's unique identifier</param>
+		/// <returns>The entity or null</returns>
+		public async Task<T?> GetByIdAsync<T>(int id) 
+            where T : class
+		{
+			return await this.DbSet<T>().FindAsync(id);
+		}
+
+		/// <summary>
+		/// Method to get the first entity from the database according to a specific condition
+		/// </summary>
+		/// <typeparam name="T">Type of the target entity</typeparam>
+		/// <param name="condition">The condition that must be satisfied</param>
+		/// <returns>The entity or null</returns>
+		public async Task<T?> GetByPropertyAsync<T>(Expression<Func<T, bool>> condition) 
             where T : class
         {
             return await this.DbSet<T>().Where(condition).FirstOrDefaultAsync();

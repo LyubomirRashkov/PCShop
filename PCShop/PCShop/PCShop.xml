@@ -70,12 +70,14 @@
             Laptop controller class
             </summary>
         </member>
-        <member name="M:PCShop.Controllers.LaptopController.#ctor(PCShop.Core.Services.Interfaces.ILaptopService,PCShop.Core.Services.Interfaces.IClientService)">
+        <member name="M:PCShop.Controllers.LaptopController.#ctor(PCShop.Core.Services.Interfaces.ILaptopService,PCShop.Core.Services.Interfaces.IClientService,Microsoft.AspNetCore.Identity.UserManager{PCShop.Infrastructure.Data.Models.Account.User},Microsoft.AspNetCore.Identity.SignInManager{PCShop.Infrastructure.Data.Models.Account.User})">
             <summary>
             Constructor of LaptopController class
             </summary>
             <param name="laptopService">The ILaptopService needed for functionality</param>
             <param name="clientService">The IClientService needed for functionality</param>
+            <param name="userManager">The UserManager<c>User</c></param>
+            <param name="signInManager">The SignInManager<c>User</c></param>
         </member>
         <member name="M:PCShop.Controllers.LaptopController.Index">
             <summary>
@@ -129,6 +131,13 @@
             HttpGet action to retrieve all active laptop sales of the currently logged in user
             </summary>
             <returns>Collection of all active laptop sales of the currently logged in user</returns>
+        </member>
+        <member name="M:PCShop.Controllers.LaptopController.Buy(System.Int32)">
+            <summary>
+            HttpGet action to buy a laptop
+            </summary>
+            <param name="id">Laptop unique identifier</param>
+            <returns>The corresponding view</returns>
         </member>
         <member name="T:PCShop.Extensions.ClaimsPrincipalExtension">
             <summary>

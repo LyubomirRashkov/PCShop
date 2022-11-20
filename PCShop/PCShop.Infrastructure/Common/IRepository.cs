@@ -47,5 +47,14 @@ namespace PCShop.Infrastructure.Common
         /// <param name="entity">Entity to add</param>
         Task AddAsync<T>(T entity) 
             where T : class;
-    }
+
+		/// <summary>
+		/// Method to get the specific entity from the database by its unique identifier
+		/// </summary>
+		/// <typeparam name="T">Type of the target entity</typeparam>
+		/// <param name="id">Entity's unique identifier</param>
+		/// <returns>The entity or null</returns>
+		Task<T?> GetByIdAsync<T>(int id)
+            where T : class;
+	}
 }

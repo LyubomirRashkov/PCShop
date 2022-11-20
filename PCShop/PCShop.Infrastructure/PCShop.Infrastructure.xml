@@ -46,6 +46,14 @@
             <typeparam name="T">Type of the entity</typeparam>
             <param name="entity">Entity to add</param>
         </member>
+        <member name="M:PCShop.Infrastructure.Common.IRepository.GetByIdAsync``1(System.Int32)">
+            <summary>
+            Method to get the specific entity from the database by its unique identifier
+            </summary>
+            <typeparam name="T">Type of the target entity</typeparam>
+            <param name="id">Entity's unique identifier</param>
+            <returns>The entity or null</returns>
+        </member>
         <member name="T:PCShop.Infrastructure.Common.Repository">
             <summary>
             Implementation of IRepository interface
@@ -79,6 +87,14 @@
             <typeparam name="T">Type of the target entity</typeparam>
             <param name="condition">The condition that must be satisfied</param>
             <returns>Queryable expression tree</returns>
+        </member>
+        <member name="M:PCShop.Infrastructure.Common.Repository.GetByIdAsync``1(System.Int32)">
+            <summary>
+            Method to get the specific entity from the database by its unique identifier
+            </summary>
+            <typeparam name="T">Type of the target entity</typeparam>
+            <param name="id">Entity's unique identifier</param>
+            <returns>The entity or null</returns>
         </member>
         <member name="M:PCShop.Infrastructure.Common.Repository.GetByPropertyAsync``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
             <summary>

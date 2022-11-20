@@ -1,4 +1,6 @@
-﻿namespace PCShop.Core.Services.Interfaces
+﻿using PCShop.Infrastructure.Data.Models;
+
+namespace PCShop.Core.Services.Interfaces
 {
 	/// <summary>
 	/// Abstraction of ClientService
@@ -11,5 +13,12 @@
 		/// <param name="userId">User unique identifier</param>
 		/// <returns>The number of active sales of the user</returns>
 		Task<int> GetNumberOfActiveSales(string userId);
+
+		/// <summary>
+		/// Method to buy a product
+		/// </summary>
+		/// <param name="userId">User unique identifier</param>
+		/// <returns>The client who purchased the product</returns>
+		Task<Client> BuyProduct(string userId);
     }
 }

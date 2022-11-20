@@ -206,6 +206,16 @@
             /// Constant for the error message of product's integer property
             /// </summary>
             public const string IntegerErrorMessage = "The field {0} must be an integer between {1} and {2}";
+
+			/// <summary>
+			/// Constant for the error message of a deleted product
+			/// </summary>
+			public const string ErrorMessageForDeletedProduct = "The selected product is deleted!";
+
+			/// <summary>
+			/// Constant for the error message of a product that is out of stock
+			/// </summary>
+			public const string ErrorMessageForProductThatIsOutOfStock = "The selected product is out of stock!";
         }
 
         /// <summary>
@@ -222,6 +232,11 @@
             /// Constant for the error message of invalid User unique identifier
             /// </summary>
             public const string ErrorMessageForInvalidUserId = "Invalid user id!";
+
+			/// <summary>
+			/// Constant for the required number of purchases a client must make to become a SuperUser
+			/// </summary>
+			public const int RequiredNumberOfPurchasesToBeSuperUser = 5;
         }
     }
 }
