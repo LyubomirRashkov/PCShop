@@ -56,6 +56,17 @@ namespace PCShop.Infrastructure.Common
         }
 
 		/// <summary>
+		/// Method to retrieve all entities of type T as no tracking entities
+		/// </summary>
+		/// <typeparam name="T">Type of the target entity</typeparam>
+		/// <returns>Queryable expression tree</returns>
+		public IQueryable<T> AllAsReadOnly<T>() 
+            where T : class
+		{
+            return this.DbSet<T>().AsNoTracking();
+		}
+
+		/// <summary>
 		/// Method to get the specific entity from the database by its unique identifier
 		/// </summary>
 		/// <typeparam name="T">Type of the target entity</typeparam>

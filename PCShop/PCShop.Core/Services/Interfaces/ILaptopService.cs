@@ -1,4 +1,5 @@
-﻿using PCShop.Core.Models.Laptop;
+﻿using PCShop.Core.Constants;
+using PCShop.Core.Models.Laptop;
 
 namespace PCShop.Core.Services.Interfaces
 {
@@ -7,11 +8,23 @@ namespace PCShop.Core.Services.Interfaces
     /// </summary>
     public interface ILaptopService
     {
-        /// <summary>
-        /// Method to retrieve all active laptops
-        /// </summary>
-        /// <returns>Collection of LaptopExportViewModels</returns>
-        Task<IEnumerable<LaptopExportViewModel>> GetAllLaptopsAsync();
+		/// <summary>
+		/// Method to retrieve all active laptops according to specified criteria
+		/// </summary>
+		/// <param name="cpu">The criterion for the CPU model</param>
+		/// <param name="ram">The criterion for the RAM capacity</param>
+		/// <param name="ssdCapacity">The criterion for the SSD capacity</param>
+		/// <param name="videoCard">The criterion for the video card</param>
+		/// <param name="keyWord">The criterion for key word</param>
+		/// <param name="sorting">The criterion for sorting</param>
+		/// <returns>Collection of LaptopExportViewModels according to specified criteria</returns>
+		Task<IEnumerable<LaptopExportViewModel>> GetAllLaptopsAsync(
+            string? cpu = null,
+            int? ram = null,
+            int? ssdCapacity = null,
+            string? videoCard = null,
+            string? keyWord = null,
+            Sorting sorting = Sorting.PriceMinToMax);
 
         /// <summary>
         /// Method to retrieve a specific laptop
@@ -60,5 +73,29 @@ namespace PCShop.Core.Services.Interfaces
 		/// </summary>
 		/// <param name="id">Laptop unique identifier</param>
 		Task MarkLaptopAsBought(int id);
-    }
+
+		/// <summary>
+		/// Method to retrieve all CPU names
+		/// </summary>
+		/// <returns>Collection of CPU names</returns>
+		Task<IEnumerable<string>> GetAllCpusNames();
+
+		/// <summary>
+		/// Method to retrieve all RAM values
+		/// </summary>
+		/// <returns>Collection of RAM values</returns>
+		Task<IEnumerable<int>> GetAllRamsValues();
+
+		/// <summary>
+		/// Method to retrieve all SSD capacities
+		/// </summary>
+		/// <returns>Collection of SSD capacities</returns>
+		Task<IEnumerable<int>> GetAllSsdCapacitiesValues();
+
+		/// <summary>
+		/// Method to retrieve all video card names
+		/// </summary>
+		/// <returns>Collection of video card names</returns>
+		Task<IEnumerable<string>> GetAllVideoCardsNames();
+	}
 }

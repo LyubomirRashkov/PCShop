@@ -79,11 +79,12 @@
             <param name="userManager">The UserManager<c>User</c></param>
             <param name="signInManager">The SignInManager<c>User</c></param>
         </member>
-        <member name="M:PCShop.Controllers.LaptopController.Index">
+        <member name="M:PCShop.Controllers.LaptopController.Index(PCShop.Core.Models.Laptop.LaptopsQueryModel)">
             <summary>
-            HttpGet action to retrieve all active laptops
+            HttpGet action to retrieve all active laptops according to specified criteria
             </summary>
-            <returns>Collection of all active laptops</returns>
+            <param name="query">The entity that holds the specified criteria</param>
+            <returns>Collection of all active laptops according to specified criteria</returns>
         </member>
         <member name="M:PCShop.Controllers.LaptopController.Details(System.Int32)">
             <summary>

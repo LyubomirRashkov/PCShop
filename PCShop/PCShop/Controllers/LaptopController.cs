@@ -42,15 +42,29 @@ namespace PCShop.Controllers
 		}
 
 		/// <summary>
-		/// HttpGet action to retrieve all active laptops
+		/// HttpGet action to retrieve all active laptops according to specified criteria
 		/// </summary>
-		/// <returns>Collection of all active laptops</returns>
+		/// <param name="query">The entity that holds the specified criteria</param>
+		/// <returns>Collection of all active laptops according to specified criteria</returns>
 		[HttpGet]
-		public async Task<IActionResult> Index()
+		public async Task<IActionResult> Index([FromQuery] LaptopsQueryModel query)
 		{
-			var laptops = await this.laptopService.GetAllLaptopsAsync();
+			var result = await this.laptopService.GetAllLaptopsAsync(
+				query.Cpu,
+				query.Ram,
+				query.SsdCapacity,
+				query.VideoCard,
+				query.KeyWord,
+				query.Sorting);
 
-			return View(laptops);
+			query.Cpus = await this.laptopService.GetAllCpusNames();
+			query.Rams = await this.laptopService.GetAllRamsValues();
+			query.SsdCapacities = await this.laptopService.GetAllSsdCapacitiesValues();
+			query.VideoCards = await this.laptopService.GetAllVideoCardsNames();
+
+			query.Laptops = result;
+
+			return View(query);
 		}
 
 		/// <summary>

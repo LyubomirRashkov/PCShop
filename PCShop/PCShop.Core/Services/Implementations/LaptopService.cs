@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using PCShop.Core.Constants;
 using PCShop.Core.Exceptions;
 using PCShop.Core.Models.Laptop;
 using PCShop.Core.Services.Interfaces;
@@ -129,15 +130,69 @@ namespace PCShop.Core.Services.Implementations
             return laptop.Id;
         }
 
-        /// <summary>
-        /// Method to retrieve all active laptops
-        /// </summary>
-        /// <returns>Collection of LaptopExportViewModels</returns>
-        public async Task<IEnumerable<LaptopExportViewModel>> GetAllLaptopsAsync()
+		/// <summary>
+		/// Method to retrieve all active laptops according to specified criteria
+		/// </summary>
+		/// <param name="cpu">The criterion for the CPU model</param>
+		/// <param name="ram">The criterion for the RAM capacity</param>
+		/// <param name="ssdCapacity">The criterion for the SSD capacity</param>
+		/// <param name="videoCard">The criterion for the video card</param>
+		/// <param name="keyWord">The criterion for key word</param>
+		/// <param name="sorting">The criterion for sorting</param>
+		/// <returns>Collection of LaptopExportViewModels according to specified criteria</returns>
+		public async Task<IEnumerable<LaptopExportViewModel>> GetAllLaptopsAsync(
+            string? cpu = null,
+			int? ram = null,
+			int? ssdCapacity = null,
+			string? videoCard = null,
+			string? keyWord = null,
+			Sorting sorting = Sorting.Newest)
         {
-            return await this.repository
-                .AllAsReadOnly<Laptop>(l => !l.IsDeleted && l.Quantity >= 1)
-                .Select(l => new LaptopExportViewModel()
+            var query = this.repository.AllAsReadOnly<Laptop>(l => !l.IsDeleted);
+
+            if (!String.IsNullOrEmpty(cpu))
+            {
+				query = query.Where(l => l.CPU.Name == cpu);
+            }
+
+            if (ram is not null)
+            {
+                query = query.Where(l => l.RAM.Value == ram);
+            }
+
+            if (ssdCapacity is not null)
+            {
+                query = query.Where(l => l.SSDCapacity.Value == ssdCapacity);
+            }
+
+            if (!String.IsNullOrEmpty(videoCard))
+            {
+                query = query.Where(l => l.VideoCard.Name == videoCard);
+            }
+
+            if (!String.IsNullOrEmpty(keyWord))
+            {
+				var searchTerm = $"%{keyWord.ToLower()}%";
+
+                query = query.Where(l => EF.Functions.Like(l.Brand.Name.ToLower(), searchTerm)
+                                             || EF.Functions.Like(l.CPU.Name.ToLower(), searchTerm)
+                                             || EF.Functions.Like(l.VideoCard.Name.ToLower(), searchTerm)
+                                             || EF.Functions.Like(l.Type.Name.ToLower(), searchTerm));
+			}
+
+            query = sorting switch
+            {
+                Sorting.Brand => query.OrderBy(l => l.Brand.Name),
+
+                Sorting.PriceMinToMax => query.OrderBy(l => l.Price),
+
+                Sorting.PriceMaxToMin => query.OrderByDescending(l => l.Price),
+
+                _ => query.OrderByDescending(l => l.Id)
+            };
+
+            var laptops = await query
+				.Select(l => new LaptopExportViewModel()
                 {
                     Id = l.Id,
                     Brand = l.Brand.Name,
@@ -150,14 +205,16 @@ namespace PCShop.Core.Services.Implementations
                     Warranty = l.Warranty,
                 })
                 .ToListAsync();
+
+            return laptops;
         }
 
-        /// <summary>
-        /// Method to retrieve a specific laptop
-        /// </summary>
-        /// <param name="id">Laptop unique identifier</param>
-        /// <returns>The laptop as LaptopDetailsExportViewModel</returns>
-        public async Task<LaptopDetailsExportViewModel> GetLaptopByIdAsLaptopDetailsExportViewModelAsync(int id)
+		/// <summary>
+		/// Method to retrieve a specific laptop
+		/// </summary>
+		/// <param name="id">Laptop unique identifier</param>
+		/// <returns>The laptop as LaptopDetailsExportViewModel</returns>
+		public async Task<LaptopDetailsExportViewModel> GetLaptopByIdAsLaptopDetailsExportViewModelAsync(int id)
         {
             var laptopExports = await this.GetLaptopsAsLaptopDetailsExportViewModelsAsync<Laptop>(l => l.Id == id);
 
@@ -237,6 +294,50 @@ namespace PCShop.Core.Services.Implementations
 
             await this.repository.SaveChangesAsync();
         }
+
+		/// <summary>
+		/// Method to retrieve all CPU names
+		/// </summary>
+		/// <returns>Collection of CPU names</returns>
+		public async Task<IEnumerable<string>> GetAllCpusNames()
+		{
+            return await this.repository.AllAsReadOnly<CPU>()
+                .Select(cpu => cpu.Name)
+                .ToListAsync();
+		}
+
+		/// <summary>
+		/// Method to retrieve all RAM values
+		/// </summary>
+		/// <returns>Collection of RAM values</returns>
+		public async Task<IEnumerable<int>> GetAllRamsValues()
+		{
+            return await this.repository.AllAsReadOnly<RAM>()
+                .Select(ram => ram.Value)
+                .ToListAsync();
+		}
+
+		/// <summary>
+		/// Method to retrieve all SSD capacities
+		/// </summary>
+		/// <returns>Collection of SSD capacities</returns>
+		public async Task<IEnumerable<int>> GetAllSsdCapacitiesValues()
+		{
+            return await this.repository.AllAsReadOnly<SSDCapacity>()
+                .Select(s => s.Value)
+                .ToListAsync();
+		}
+
+		/// <summary>
+		/// Method to retrieve all video card names
+		/// </summary>
+		/// <returns>Collection of video card names</returns>
+		public async Task<IEnumerable<string>> GetAllVideoCardsNames()
+		{
+            return await this.repository.AllAsReadOnly<VideoCard>()
+                .Select(vc => vc.Name)
+                .ToListAsync();
+		}
 
 		private async Task<Laptop> SetNavigationPropertiesAsync(Laptop laptop, string brand, string cpu, int ram, int ssdCapacity, string videoCard, string type, double displaySize, string? displayCoverage, string? displayTechnology, string? resolution, string? color)
         {
@@ -355,5 +456,5 @@ namespace PCShop.Core.Services.Implementations
 
 			return laptopsAsLaptopDetailsExportViewModels;
 		}
-    }
+	}
 }

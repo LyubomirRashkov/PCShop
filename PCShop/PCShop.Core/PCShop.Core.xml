@@ -234,6 +234,31 @@
             Constant for the required number of purchases a client must make to become a SuperUser
             </summary>
         </member>
+        <member name="T:PCShop.Core.Constants.Sorting">
+            <summary>
+            An enumeration of product sortings
+            </summary>
+        </member>
+        <member name="F:PCShop.Core.Constants.Sorting.Newest">
+            <summary>
+            Enum value for sorting by the date of addition
+            </summary>
+        </member>
+        <member name="F:PCShop.Core.Constants.Sorting.Brand">
+            <summary>
+            Enum value for sorting by the brand name
+            </summary>
+        </member>
+        <member name="F:PCShop.Core.Constants.Sorting.PriceMinToMax">
+            <summary>
+            Enum value for sorting by price (min first, max last)
+            </summary>
+        </member>
+        <member name="F:PCShop.Core.Constants.Sorting.PriceMaxToMin">
+            <summary>
+            Enum value for sorting by price (max first, min last)
+            </summary>
+        </member>
         <member name="T:PCShop.Core.Exceptions.Guard">
             <summary>
             Guard model
@@ -541,6 +566,71 @@
             Property that represents laptop image url
             </summary>
         </member>
+        <member name="T:PCShop.Core.Models.Laptop.LaptopsQueryModel">
+            <summary>
+            LaptopsQueryModel model
+            </summary>
+        </member>
+        <member name="M:PCShop.Core.Models.Laptop.LaptopsQueryModel.#ctor">
+            <summary>
+            Constructor of LaptopsQueryModel class
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Laptop.LaptopsQueryModel.Cpu">
+            <summary>
+            Property that represents laptop CPU model
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Laptop.LaptopsQueryModel.Cpus">
+            <summary>
+            Property that represents a collection of all possible laptop CPU models
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Laptop.LaptopsQueryModel.Ram">
+            <summary>
+            Propeerty that represents laptop RAM
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Laptop.LaptopsQueryModel.Rams">
+            <summary>
+            Property that represents a collection of all possible laptop RAMs
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Laptop.LaptopsQueryModel.SsdCapacity">
+            <summary>
+            Property that represents laptop SSD capacity
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Laptop.LaptopsQueryModel.SsdCapacities">
+            <summary>
+            Property that represents all possible laptop SSD capacities
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Laptop.LaptopsQueryModel.VideoCard">
+            <summary>
+            Property that represents laptop video card model
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Laptop.LaptopsQueryModel.VideoCards">
+            <summary>
+            Property that represents all possible laptop video card models
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Laptop.LaptopsQueryModel.KeyWord">
+            <summary>
+            Property that represent a seacrh keyword
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Laptop.LaptopsQueryModel.Sorting">
+            <summary>
+            Property that represents a sorting criterion
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Laptop.LaptopsQueryModel.Laptops">
+            <summary>
+            Property that represents a collecion of laptops according to specified criteria
+            </summary>
+        </member>
         <member name="T:PCShop.Core.Models.User.SignInViewModel">
             <summary>
             ViewModel class for sign in
@@ -655,11 +745,17 @@
             <param name="model">Laptop input model</param>
             <returns>The unique identifier of the edited laptop</returns>
         </member>
-        <member name="M:PCShop.Core.Services.Implementations.LaptopService.GetAllLaptopsAsync">
+        <member name="M:PCShop.Core.Services.Implementations.LaptopService.GetAllLaptopsAsync(System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String,PCShop.Core.Constants.Sorting)">
             <summary>
-            Method to retrieve all active laptops
+            Method to retrieve all active laptops according to specified criteria
             </summary>
-            <returns>Collection of LaptopExportViewModels</returns>
+            <param name="cpu">The criterion for the CPU model</param>
+            <param name="ram">The criterion for the RAM capacity</param>
+            <param name="ssdCapacity">The criterion for the SSD capacity</param>
+            <param name="videoCard">The criterion for the video card</param>
+            <param name="keyWord">The criterion for key word</param>
+            <param name="sorting">The criterion for sorting</param>
+            <returns>Collection of LaptopExportViewModels according to specified criteria</returns>
         </member>
         <member name="M:PCShop.Core.Services.Implementations.LaptopService.GetLaptopByIdAsLaptopDetailsExportViewModelAsync(System.Int32)">
             <summary>
@@ -688,6 +784,30 @@
             </summary>
             <param name="id">Laptop unique identifier</param>
         </member>
+        <member name="M:PCShop.Core.Services.Implementations.LaptopService.GetAllCpusNames">
+            <summary>
+            Method to retrieve all CPU names
+            </summary>
+            <returns>Collection of CPU names</returns>
+        </member>
+        <member name="M:PCShop.Core.Services.Implementations.LaptopService.GetAllRamsValues">
+            <summary>
+            Method to retrieve all RAM values
+            </summary>
+            <returns>Collection of RAM values</returns>
+        </member>
+        <member name="M:PCShop.Core.Services.Implementations.LaptopService.GetAllSsdCapacitiesValues">
+            <summary>
+            Method to retrieve all SSD capacities
+            </summary>
+            <returns>Collection of SSD capacities</returns>
+        </member>
+        <member name="M:PCShop.Core.Services.Implementations.LaptopService.GetAllVideoCardsNames">
+            <summary>
+            Method to retrieve all video card names
+            </summary>
+            <returns>Collection of video card names</returns>
+        </member>
         <member name="T:PCShop.Core.Services.Interfaces.IClientService">
             <summary>
             Abstraction of ClientService
@@ -712,11 +832,17 @@
             Abstraction of LaptopService
             </summary>
         </member>
-        <member name="M:PCShop.Core.Services.Interfaces.ILaptopService.GetAllLaptopsAsync">
+        <member name="M:PCShop.Core.Services.Interfaces.ILaptopService.GetAllLaptopsAsync(System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String,PCShop.Core.Constants.Sorting)">
             <summary>
-            Method to retrieve all active laptops
+            Method to retrieve all active laptops according to specified criteria
             </summary>
-            <returns>Collection of LaptopExportViewModels</returns>
+            <param name="cpu">The criterion for the CPU model</param>
+            <param name="ram">The criterion for the RAM capacity</param>
+            <param name="ssdCapacity">The criterion for the SSD capacity</param>
+            <param name="videoCard">The criterion for the video card</param>
+            <param name="keyWord">The criterion for key word</param>
+            <param name="sorting">The criterion for sorting</param>
+            <returns>Collection of LaptopExportViewModels according to specified criteria</returns>
         </member>
         <member name="M:PCShop.Core.Services.Interfaces.ILaptopService.GetLaptopByIdAsLaptopDetailsExportViewModelAsync(System.Int32)">
             <summary>
@@ -765,6 +891,30 @@
             Method to mark the laptop with the given unique identifier as bought
             </summary>
             <param name="id">Laptop unique identifier</param>
+        </member>
+        <member name="M:PCShop.Core.Services.Interfaces.ILaptopService.GetAllCpusNames">
+            <summary>
+            Method to retrieve all CPU names
+            </summary>
+            <returns>Collection of CPU names</returns>
+        </member>
+        <member name="M:PCShop.Core.Services.Interfaces.ILaptopService.GetAllRamsValues">
+            <summary>
+            Method to retrieve all RAM values
+            </summary>
+            <returns>Collection of RAM values</returns>
+        </member>
+        <member name="M:PCShop.Core.Services.Interfaces.ILaptopService.GetAllSsdCapacitiesValues">
+            <summary>
+            Method to retrieve all SSD capacities
+            </summary>
+            <returns>Collection of SSD capacities</returns>
+        </member>
+        <member name="M:PCShop.Core.Services.Interfaces.ILaptopService.GetAllVideoCardsNames">
+            <summary>
+            Method to retrieve all video card names
+            </summary>
+            <returns>Collection of video card names</returns>
         </member>
     </members>
 </doc>

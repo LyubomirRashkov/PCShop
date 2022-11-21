@@ -56,5 +56,13 @@ namespace PCShop.Infrastructure.Common
 		/// <returns>The entity or null</returns>
 		Task<T?> GetByIdAsync<T>(int id)
             where T : class;
+
+		/// <summary>
+		/// Method to retrieve all entities of type T as no tracking entities
+		/// </summary>
+		/// <typeparam name="T">Type of the target entity</typeparam>
+		/// <returns>Queryable expression tree</returns>
+		IQueryable<T> AllAsReadOnly<T>()
+			where T : class;
 	}
 }
