@@ -3,12 +3,77 @@
 }
 
 <div class="text-center">
-	<h1 class="display-4 mb-5">Welcome</h1>
+	<h1>Welcome</h1>
+	<h3 class="mb-3">to the best online shop for laptops and peripherals</h3>
 </div>
 
-@if ((this.User?.Identity?.IsAuthenticated ?? false) && this.User.IsInRole(Administrator))
-{
-	<div class="text-center">
-		<a asp-controller="Account" asp-action="PromoteToAdmin" class="btn btn-primary">Promote to administrator</a>
+<div class="col-8 offset-2">
+	<div id="carousel" class="carousel slide" data-bs-ride="carousel">
+		<div class="carousel-indicators">
+			<button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+			<button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+			<button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+			<button type="button" data-bs-target="#carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+			<button type="button" data-bs-target="#carousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+			<button type="button" data-bs-target="#carousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+		</div>
+		<div class="carousel-inner">
+			<div class="carousel-item active img-fluid">
+				<img src="https://images.acer.com/is/image/acer/Nitro5_AN515-57_Backliton_RGB-Black_01a-1?$Product-Cards-XL$" class="d-block w-100" style="height: 400px; width: 400px" alt="Laptop image">
+				<div class="carousel-caption d-none d-md-block">
+					<h5>
+						<a class="btn btn-success" asp-controller="Laptop" asp-action="Index">Laptops</a>
+					</h5>
+				</div>
+			</div>
+			<div class="carousel-item img-fluid">
+				<img src="https://m.media-amazon.com/images/I/714mr6GxecL._SL1200_.jpg" class="d-block w-100" style="height: 400px; width: 400px" alt="Monitor image">
+				<div class="carousel-caption d-none d-md-block">
+					<h5>
+						<a class="btn btn-success" asp-controller="Monitor" asp-action="Index">Monitors</a>
+					</h5>
+				</div>
+			</div>
+			<div class="carousel-item img-fluid">
+				<img src="https://www.hp.com/us-en/shop/app/assets/images/uploads/prod/how-to-turn-keyboard-lighting-on-off-hero1561055925107573.png" class="d-block w-100" style="height: 400px; width: 400px" alt="Keyboard image">
+				<div class="carousel-caption d-none d-md-block">
+					<h5>
+						<a class="btn btn-success" asp-controller="Keyboard" asp-action="Index">Keyboards</a>
+					</h5>
+				</div>
+			</div>
+			<div class="carousel-item img-fluid">
+				<img src="https://ae01.alicdn.com/kf/S07dee40f101c43609c9199165e13e520e/Wired-Gaming-Mouse-USB-Computer-Mouse-Gaming-RGB-Mause-Gamer-Ergonomic-Mouse-7-Button-5500DPI-LED.jpg_Q90.jpg_.webp" class="d-block w-100" style="height: 400px; width: 400px" alt="Mouse image">
+				<div class="carousel-caption d-none d-md-block">
+					<h5>
+						<a class="btn btn-success" asp-controller="Mouse" asp-action="Index">Mice</a>
+					</h5>
+				</div>
+			</div>
+			<div class="carousel-item img-fluid">
+				<img src="https://assets-prd.ignimgs.com/2022/07/06/budget-gaming-headset-1657123288874.jpg?width=1280" class="d-block w-100" style="height: 400px; width: 400px" alt="Headphones image">
+				<div class="carousel-caption d-none d-md-block">
+					<h5>
+						<a class="btn btn-success" asp-controller="Headphone" asp-action="Index">Headphones</a>
+					</h5>
+				</div>
+			</div>
+			<div class="carousel-item img-fluid">
+				<img src="https://www.soundguys.com/wp-content/uploads/2022/01/DSCF0323-scaled-e1643060244456.jpg" class="d-block w-100" style="height: 400px; width: 400px" alt="Microphone image">
+				<div class="carousel-caption d-none d-md-block">
+					<h5>
+						<a class="btn btn-success" asp-controller="Microphone" asp-action="Index">Microphones</a>
+					</h5>
+				</div>
+			</div>
+		</div>
+		<button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			<span class="visually-hidden">Previous</span>
+		</button>
+		<button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+			<span class="visually-hidden">Next</span>
+		</button>
 	</div>
-}
+</div>
