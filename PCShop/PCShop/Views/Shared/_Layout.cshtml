@@ -22,6 +22,32 @@
 						<li class="nav-item">
 							<a class="nav-link text-dark" asp-area="" asp-controller="Laptop" asp-action="Index">Laptops</a>
 						</li>
+						<li class="nav-item">
+							<a class="nav-link text-dark" asp-area="" asp-controller="Monitor" asp-action="Index">Monitors</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-dark" asp-area="" asp-controller="Keyboard" asp-action="Index">Keyboards</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-dark" asp-area="" asp-controller="Mouse" asp-action="Index">Mice</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-dark" asp-area="" asp-controller="Headphone" asp-action="Index">Headphones</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-dark" asp-area="" asp-controller="Microphone" asp-action="Index">Microphones</a>
+						</li>
+						@if ((this.User?.Identity?.IsAuthenticated ?? false) && this.User.IsInRole(Administrator))
+						{
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+									Admin area
+								</a>
+								<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+									<li><a class="dropdown-item" href="/Administration/Account/PromoteToAdmin">Promote to admin</a></li>
+								</ul>
+							</li>
+						}
 					</ul>
 					<partial name="_LoginPartial" />
 				</div>
