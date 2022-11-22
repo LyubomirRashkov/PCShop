@@ -1,7 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using PCShop.Models;
-using System.Diagnostics;
 
 namespace PCShop.Controllers
 {
@@ -21,10 +19,19 @@ namespace PCShop.Controllers
             return View();
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+        /// <summary>
+        /// Action that handles errors
+        /// </summary>
+        /// <param name="statusCode">The status code of the response</param>
+        /// <returns>The corresponding page</returns>
+        public IActionResult Error(int statusCode)
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
+			return statusCode switch
+			{
+				401 => View("Error401"),
+				404 => View("Error404"),
+				_ => View("Error")
+			};
+		}
     }
 }

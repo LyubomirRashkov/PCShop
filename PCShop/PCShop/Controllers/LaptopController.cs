@@ -141,7 +141,7 @@ namespace PCShop.Controllers
 				}
 				catch (PCShopException)
 				{
-					return View("DbError");
+					return View("Error");
 				}
 			}
 
@@ -177,7 +177,7 @@ namespace PCShop.Controllers
 			}
 			catch (PCShopException)
 			{
-				return View("DbError");
+				return View("Error");
 			}
 		}
 
@@ -260,7 +260,7 @@ namespace PCShop.Controllers
 			}
 			catch (PCShopException)
 			{
-				return View("DbError");
+				return View("Error");
 			}
 		}
 

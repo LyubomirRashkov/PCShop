@@ -65,6 +65,13 @@
             </summary>
             <returns>The home page</returns>
         </member>
+        <member name="M:PCShop.Controllers.HomeController.Error(System.Int32)">
+            <summary>
+            Action that handles errors
+            </summary>
+            <param name="statusCode">The status code of the response</param>
+            <returns>The corresponding page</returns>
+        </member>
         <member name="T:PCShop.Controllers.LaptopController">
             <summary>
             Laptop controller class

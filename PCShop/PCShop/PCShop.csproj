@@ -21,4 +21,8 @@
     <ProjectReference Include="..\PCShop.Core\PCShop.Core.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Models\" />
+  </ItemGroup>
+
 </Project>
