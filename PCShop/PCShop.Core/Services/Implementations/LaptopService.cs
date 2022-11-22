@@ -298,44 +298,48 @@ namespace PCShop.Core.Services.Implementations
 		/// <summary>
 		/// Method to retrieve all CPU names
 		/// </summary>
-		/// <returns>Collection of CPU names</returns>
+		/// <returns>Ordered collection of CPU names</returns>
 		public async Task<IEnumerable<string>> GetAllCpusNames()
 		{
             return await this.repository.AllAsReadOnly<CPU>()
                 .Select(cpu => cpu.Name)
+                .OrderBy(n => n)
                 .ToListAsync();
 		}
 
 		/// <summary>
 		/// Method to retrieve all RAM values
 		/// </summary>
-		/// <returns>Collection of RAM values</returns>
+		/// <returns>Ordered collection of RAM values</returns>
 		public async Task<IEnumerable<int>> GetAllRamsValues()
 		{
             return await this.repository.AllAsReadOnly<RAM>()
                 .Select(ram => ram.Value)
+                .OrderBy(v => v)
                 .ToListAsync();
 		}
 
 		/// <summary>
 		/// Method to retrieve all SSD capacities
 		/// </summary>
-		/// <returns>Collection of SSD capacities</returns>
+		/// <returns>Ordered collection of SSD capacities</returns>
 		public async Task<IEnumerable<int>> GetAllSsdCapacitiesValues()
 		{
             return await this.repository.AllAsReadOnly<SSDCapacity>()
                 .Select(s => s.Value)
+                .OrderBy(v => v)
                 .ToListAsync();
 		}
 
 		/// <summary>
 		/// Method to retrieve all video card names
 		/// </summary>
-		/// <returns>Collection of video card names</returns>
+		/// <returns>Ordered collection of video card names</returns>
 		public async Task<IEnumerable<string>> GetAllVideoCardsNames()
 		{
             return await this.repository.AllAsReadOnly<VideoCard>()
                 .Select(vc => vc.Name)
+                .OrderBy(n => n)
                 .ToListAsync();
 		}
 

@@ -788,25 +788,25 @@
             <summary>
             Method to retrieve all CPU names
             </summary>
-            <returns>Collection of CPU names</returns>
+            <returns>Ordered collection of CPU names</returns>
         </member>
         <member name="M:PCShop.Core.Services.Implementations.LaptopService.GetAllRamsValues">
             <summary>
             Method to retrieve all RAM values
             </summary>
-            <returns>Collection of RAM values</returns>
+            <returns>Ordered collection of RAM values</returns>
         </member>
         <member name="M:PCShop.Core.Services.Implementations.LaptopService.GetAllSsdCapacitiesValues">
             <summary>
             Method to retrieve all SSD capacities
             </summary>
-            <returns>Collection of SSD capacities</returns>
+            <returns>Ordered collection of SSD capacities</returns>
         </member>
         <member name="M:PCShop.Core.Services.Implementations.LaptopService.GetAllVideoCardsNames">
             <summary>
             Method to retrieve all video card names
             </summary>
-            <returns>Collection of video card names</returns>
+            <returns>Ordered collection of video card names</returns>
         </member>
         <member name="T:PCShop.Core.Services.Interfaces.IClientService">
             <summary>
