@@ -8,21 +8,21 @@
 	@if (SignInManager.IsSignedIn(User))
 	{
 		<li class="nav-item">
-			<a class="nav-link text-dark" title="Manage">Hello, @User.Identity?.Name!</a>
+			<a class="nav-link text-light fw-bold" title="Manage">Hello, @User.Identity?.Name!</a>
 		</li>
 		<li class="nav-item">
 			<form class="form-inline" asp-controller="Account" asp-action="Signout" asp-route-id="@UserManager.GetUserId(User)">
-				<button type="submit" class="nav-link btn btn-link text-dark">Sign out</button>
+				<button type="submit" class="nav-link btn btn-link text-light fw-bold">Sign out</button>
 			</form>
 		</li>
 	}
 	else
 	{
 		<li class="nav-item">
-			<a class="nav-link text-dark" asp-controller="Account" asp-action="SignIn">Sign in</a>
+			<a class="nav-link text-light fw-bold" asp-controller="Account" asp-action="SignIn">Sign in</a>
 		</li>
 		<li class="nav-item">
-			<a class="nav-link text-dark" asp-controller="Account" asp-action="SignUp">Sign up</a>
+			<a class="nav-link text-light fw-bold" asp-controller="Account" asp-action="SignUp">Sign up</a>
 		</li>
 	}
 </ul>
