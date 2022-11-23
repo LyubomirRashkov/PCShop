@@ -152,22 +152,22 @@ namespace PCShop.Controllers
 
             return RedirectToAction(nameof(HomeController.Index), "Home");
         }
-        
-        /// <summary>
-        /// Initial action for adding users to corresponding roles
-        /// </summary>
-        /// <returns>The home page</returns>
-        public async Task<IActionResult> AddUsersToRolesInitial()
-        {
-            var adminUser = await this.userManager.FindByNameAsync("admin");
 
-            await this.userManager.AddToRoleAsync(adminUser, Administrator);
+		/// <summary>
+		/// Initial action for adding users to corresponding roles
+		/// </summary>
+		/// <returns>The home page</returns>
+		public async Task<IActionResult> AddUsersToRolesInitial()
+		{
+			var adminUser = await this.userManager.FindByNameAsync("admin");
 
-            var superUser = await this.userManager.FindByNameAsync("superUser");
+			await this.userManager.AddToRoleAsync(adminUser, Administrator);
 
-            await this.userManager.AddToRoleAsync(superUser, SuperUser);
+			var superUser = await this.userManager.FindByNameAsync("superUser");
 
-            return RedirectToAction(nameof(HomeController.Index), "Home");
-        }
-    }
+			await this.userManager.AddToRoleAsync(superUser, SuperUser);
+
+			return RedirectToAction(nameof(HomeController.Index), "Home");
+		}
+	}
 }

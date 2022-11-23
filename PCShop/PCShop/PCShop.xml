@@ -4,6 +4,32 @@
         <name>PCShop</name>
     </assembly>
     <members>
+        <member name="T:PCShop.Areas.Administration.Controllers.AccountController">
+            <summary>
+            Account controller class
+            </summary>
+        </member>
+        <member name="M:PCShop.Areas.Administration.Controllers.AccountController.#ctor(Microsoft.AspNetCore.Identity.RoleManager{Microsoft.AspNetCore.Identity.IdentityRole},Microsoft.AspNetCore.Identity.UserManager{PCShop.Infrastructure.Data.Models.Account.User},PCShop.Core.Services.Interfaces.IUserService)">
+            <summary>
+            Constructor of AccountController class
+            </summary>
+            <param name="roleManager">The RoleManager<c>IdentityRole</c></param>
+            <param name="userManager">The UserManager<c>User</c></param>
+            <param name="userService">The IUserService needed for functionality</param>
+        </member>
+        <member name="M:PCShop.Areas.Administration.Controllers.AccountController.GetUsers">
+            <summary>
+            HttpGet action to retrieve all users that do not have the specified role
+            </summary>
+            <returns>Collection of users</returns>
+        </member>
+        <member name="M:PCShop.Areas.Administration.Controllers.AccountController.PromoteToAdmin(System.String)">
+            <summary>
+            HttpGet action to add the specified user to Administrator role
+            </summary>
+            <param name="id">User unique identifier</param>
+            <returns>The corresponding view</returns>
+        </member>
         <member name="T:PCShop.Controllers.AccountController">
             <summary>
             Account controller class

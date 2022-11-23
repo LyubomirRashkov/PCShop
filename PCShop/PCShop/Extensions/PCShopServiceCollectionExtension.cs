@@ -21,6 +21,7 @@ namespace Microsoft.Extensions.DependencyInjection
 
             services.AddScoped<ILaptopService, LaptopService>();
             services.AddScoped<IClientService, ClientService>();
+            services.AddScoped<IUserService, UserService>();
 
             services.AddScoped<IGuard, Guard>();
 

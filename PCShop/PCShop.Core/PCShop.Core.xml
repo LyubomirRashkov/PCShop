@@ -686,6 +686,46 @@
             Property for password confirmation
             </summary>
         </member>
+        <member name="T:PCShop.Core.Models.User.UserExportViewModel">
+            <summary>
+            UserExportViewModel model
+            </summary>
+        </member>
+        <member name="M:PCShop.Core.Models.User.UserExportViewModel.#ctor">
+            <summary>
+            Constructor of UserExportViewModel class
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.User.UserExportViewModel.Id">
+            <summary>
+            Property that represents user unique identifier
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.User.UserExportViewModel.Username">
+            <summary>
+            Property that represents user username
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.User.UserExportViewModel.Email">
+            <summary>
+            Property that represents user email
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.User.UserExportViewModel.FirstName">
+            <summary>
+            Property that represents user first name
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.User.UserExportViewModel.LastName">
+            <summary>
+            Property that represents user last name
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.User.UserExportViewModel.Roles">
+            <summary>
+            Property that represents user roles
+            </summary>
+        </member>
         <member name="T:PCShop.Core.Services.Implementations.ClientService">
             <summary>
             Implementation of IClientService interface
@@ -808,6 +848,24 @@
             </summary>
             <returns>Ordered collection of video card names</returns>
         </member>
+        <member name="T:PCShop.Core.Services.Implementations.UserService">
+            <summary>
+            Implementation of IUserService interface
+            </summary>
+        </member>
+        <member name="M:PCShop.Core.Services.Implementations.UserService.#ctor(PCShop.Infrastructure.Common.IRepository)">
+            <summary>
+            Constructor of UserService class
+            </summary>
+            <param name="repository">The repository that will be used</param>
+        </member>
+        <member name="M:PCShop.Core.Services.Implementations.UserService.GetAllUsersThatAreNotInTheSpecifiedRole(System.String)">
+            <summary>
+            Method to retrieve all users that are not in the specified role
+            </summary>
+            <param name="roleId">Role unique identifier</param>
+            <returns>Ordered collection of UserExportViewModels</returns>
+        </member>
         <member name="T:PCShop.Core.Services.Interfaces.IClientService">
             <summary>
             Abstraction of ClientService
@@ -915,6 +973,18 @@
             Method to retrieve all video card names
             </summary>
             <returns>Collection of video card names</returns>
+        </member>
+        <member name="T:PCShop.Core.Services.Interfaces.IUserService">
+            <summary>
+            Abstraction of UserService
+            </summary>
+        </member>
+        <member name="M:PCShop.Core.Services.Interfaces.IUserService.GetAllUsersThatAreNotInTheSpecifiedRole(System.String)">
+            <summary>
+            Method to retrieve all users that are not in the specified role
+            </summary>
+            <param name="roleId">Role unique identifier</param>
+            <returns>Ordered collection of UserExportViewModels</returns>
         </member>
     </members>
 </doc>
