@@ -1,51 +1,44 @@
 ﻿@model IEnumerable<LaptopExportViewModel>
 
-@if (Model.Any())
-{
-	<table class="table table-striped table-hover mt-5">
-		<thead>
-			<tr class="table-primary">
-				<td>Brand</td>
-				<td>CPU</td>
-				<td>RAM</td>
-				<td>SSD</td>
-				<td>Video card</td>
-				<td>Price</td>
-				<td>Display size</td>
-				<td>Warranty</td>
-				<td>View</td>
+<table class="table table-striped table-hover mt-5">
+	<thead>
+		<tr class="table-primary">
+			<td>Brand</td>
+			<td>CPU</td>
+			<td>RAM</td>
+			<td>SSD</td>
+			<td>Video card</td>
+			<td>Price</td>
+			<td>Display size</td>
+			<td>Warranty</td>
+			<td>View</td>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var laptop in Model)
+		{
+			<tr>
+				<td>@laptop.Brand</td>
+				<td>@laptop.CPU</td>
+				<td>@laptop.RAM GB</td>
+				<td>@laptop.SSDCapacity GB</td>
+				<td>@laptop.VideoCard</td>
+				<td>@String.Format("{0:f2}", laptop.Price) EUR</td>
+				<td>@laptop.DisplaySize inches</td>
+				<td>
+					@if (laptop.Warranty > 0)
+					{
+						<p>@laptop.Warranty months</p>
+					}
+					else
+					{
+						<p>Second hand</p>
+					}
+				</td>
+				<td>
+					<a asp-controller="Laptop" asp-action="Details" asp-route-id="@laptop.Id" class="btn btn-primary">Details</a>
+				</td>
 			</tr>
-		</thead>
-		<tbody>
-			@foreach (var laptop in Model)
-			{
-				<tr>
-					<td>@laptop.Brand</td>
-					<td>@laptop.CPU</td>
-					<td>@laptop.RAM GB</td>
-					<td>@laptop.SSDCapacity GB</td>
-					<td>@laptop.VideoCard</td>
-					<td>@String.Format("{0:f2}", laptop.Price) EUR</td>
-					<td>@laptop.DisplaySize inches</td>
-					<td>
-						@if (laptop.Warranty > 0)
-						{
-							<p>@laptop.Warranty months</p>
-						}
-						else
-						{
-							<p>Second hand</p>
-						}
-					</td>
-					<td>
-						<a asp-controller="Laptop" asp-action="Details" asp-route-id="@laptop.Id" class="btn btn-primary">Details</a>
-					</td>
-				</tr>
-			}
-		</tbody>
-	</table>
-}
-else
-{
-	<h3 class="text-center mt-5">No laptops found by the given criteria!</h3>
-}
+		}
+	</tbody>
+</table>

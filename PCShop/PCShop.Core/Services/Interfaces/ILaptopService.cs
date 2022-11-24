@@ -17,14 +17,16 @@ namespace PCShop.Core.Services.Interfaces
 		/// <param name="videoCard">The criterion for the video card</param>
 		/// <param name="keyWord">The criterion for key word</param>
 		/// <param name="sorting">The criterion for sorting</param>
+		/// <param name="currentPage">Current page number</param>
 		/// <returns>Collection of LaptopExportViewModels according to specified criteria</returns>
-		Task<IEnumerable<LaptopExportViewModel>> GetAllLaptopsAsync(
+		Task<LaptopsQueryModel> GetAllLaptopsAsync(
             string? cpu = null,
             int? ram = null,
             int? ssdCapacity = null,
             string? videoCard = null,
             string? keyWord = null,
-            Sorting sorting = Sorting.PriceMinToMax);
+            Sorting sorting = Sorting.PriceMinToMax,
+			int currentPage = 1);
 
         /// <summary>
         /// Method to retrieve a specific laptop

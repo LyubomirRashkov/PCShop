@@ -112,7 +112,7 @@
             <param name="userManager">The UserManager<c>User</c></param>
             <param name="signInManager">The SignInManager<c>User</c></param>
         </member>
-        <member name="M:PCShop.Controllers.LaptopController.Index(PCShop.Core.Models.Laptop.LaptopsQueryModel)">
+        <member name="M:PCShop.Controllers.LaptopController.Index(PCShop.Core.Models.Laptop.AllLaptopsQueryModel)">
             <summary>
             HttpGet action to retrieve all active laptops according to specified criteria
             </summary>

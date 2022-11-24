@@ -1,6 +1,4 @@
-﻿using PCShop.Core.Constants;
-
-namespace PCShop.Core.Models.Laptop
+﻿namespace PCShop.Core.Models.Laptop
 {
 	/// <summary>
 	/// LaptopsQueryModel model
@@ -12,65 +10,16 @@ namespace PCShop.Core.Models.Laptop
 		/// </summary>
 		public LaptopsQueryModel()
 		{
-			this.Cpus = Enumerable.Empty<string>();
-			this.Rams = Enumerable.Empty<int>();
-			this.SsdCapacities = Enumerable.Empty<int>();
-			this.VideoCards = Enumerable.Empty<string>();
-			this.Laptops = Enumerable.Empty<LaptopExportViewModel>();
+			this.Laptops = new List<LaptopExportViewModel>();
 		}
 
 		/// <summary>
-		/// Property that represents laptop CPU model
+		/// Property that represents total count of laptops
 		/// </summary>
-		public string? Cpu { get; set; }
+		public int TotalLaptopsCount { get; set; }
 
 		/// <summary>
-		/// Property that represents a collection of all possible laptop CPU models
-		/// </summary>
-		public IEnumerable<string> Cpus { get; set; }
-
-		/// <summary>
-		/// Propeerty that represents laptop RAM
-		/// </summary>
-		public int? Ram { get; set; }
-
-		/// <summary>
-		/// Property that represents a collection of all possible laptop RAMs
-		/// </summary>
-		public IEnumerable<int> Rams { get; set; }
-
-		/// <summary>
-		/// Property that represents laptop SSD capacity
-		/// </summary>
-		public int? SsdCapacity { get; set; }
-
-		/// <summary>
-		/// Property that represents all possible laptop SSD capacities
-		/// </summary>
-		public IEnumerable<int> SsdCapacities { get; set; }
-
-		/// <summary>
-		/// Property that represents laptop video card model
-		/// </summary>
-		public string? VideoCard { get; set; }
-
-		/// <summary>
-		/// Property that represents all possible laptop video card models
-		/// </summary>
-		public IEnumerable<string> VideoCards { get; set; }
-
-		/// <summary>
-		/// Property that represent a seacrh keyword
-		/// </summary>
-		public string? KeyWord { get; set; }
-
-		/// <summary>
-		/// Property that represents a sorting criterion
-		/// </summary>
-		public Sorting Sorting { get; set; }
-
-		/// <summary>
-		/// Property that represents a collecion of laptops according to specified criteria
+		/// Property that represents a collection of laptops
 		/// </summary>
 		public IEnumerable<LaptopExportViewModel> Laptops { get; set; }
 	}

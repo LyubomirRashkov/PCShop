@@ -177,7 +177,12 @@
             /// Constant for the error message of invalid Laptop unique identifier
             /// </summary>
             public const string ErrorMessageForInvalidLaptopId = "Invalid laptop id!";
-        }
+
+            /// <summary>
+            /// Constant for the number of laptops displayed on one page
+            /// </summary>
+			public const int LaptopsPerPage = 25;
+		}
 
         /// <summary>
         /// Class holding constants for all product types

@@ -139,15 +139,19 @@ namespace PCShop.Core.Services.Implementations
 		/// <param name="videoCard">The criterion for the video card</param>
 		/// <param name="keyWord">The criterion for key word</param>
 		/// <param name="sorting">The criterion for sorting</param>
+		/// <param name="currentPage">Current page number</param>
 		/// <returns>Collection of LaptopExportViewModels according to specified criteria</returns>
-		public async Task<IEnumerable<LaptopExportViewModel>> GetAllLaptopsAsync(
+		public async Task<LaptopsQueryModel> GetAllLaptopsAsync(
             string? cpu = null,
 			int? ram = null,
 			int? ssdCapacity = null,
 			string? videoCard = null,
 			string? keyWord = null,
-			Sorting sorting = Sorting.Newest)
+			Sorting sorting = Sorting.Newest,
+            int currentPage = 1)
         {
+            var result = new LaptopsQueryModel();
+
             var query = this.repository.AllAsReadOnly<Laptop>(l => !l.IsDeleted);
 
             if (!String.IsNullOrEmpty(cpu))
@@ -191,7 +195,9 @@ namespace PCShop.Core.Services.Implementations
                 _ => query.OrderByDescending(l => l.Id)
             };
 
-            var laptops = await query
+            result.Laptops = await query
+                .Skip((currentPage - 1) * LaptopsPerPage)
+                .Take(LaptopsPerPage)
 				.Select(l => new LaptopExportViewModel()
                 {
                     Id = l.Id,
@@ -206,7 +212,9 @@ namespace PCShop.Core.Services.Implementations
                 })
                 .ToListAsync();
 
-            return laptops;
+            result.TotalLaptopsCount = await query.CountAsync();
+
+            return result;
         }
 
 		/// <summary>
