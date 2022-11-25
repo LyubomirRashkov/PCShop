@@ -177,12 +177,7 @@
             /// Constant for the error message of invalid Laptop unique identifier
             /// </summary>
             public const string ErrorMessageForInvalidLaptopId = "Invalid laptop id!";
-
-            /// <summary>
-            /// Constant for the number of laptops displayed on one page
-            /// </summary>
-			public const int LaptopsPerPage = 25;
-		}
+        }
 
         /// <summary>
         /// Class holding constants for all product types
@@ -221,7 +216,17 @@
 			/// Constant for the error message of a product that is out of stock
 			/// </summary>
 			public const string ErrorMessageForProductThatIsOutOfStock = "The selected product is out of stock!";
-        }
+
+			/// <summary>
+			/// Constant for the number of products displayed on one page
+			/// </summary>
+			public const int ProductsPerPage = 25;
+
+            /// <summary>
+            /// Constant for unknown product characteristic
+            /// </summary>
+            public const string UnknownProductCharacteristic = "unknown";
+		}
 
         /// <summary>
         /// Class holding Client constants

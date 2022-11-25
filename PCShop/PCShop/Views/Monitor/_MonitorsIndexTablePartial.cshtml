@@ -1,0 +1,44 @@
+﻿@model IEnumerable<MonitorExportViewModel>
+
+<table class="table table-striped table-hover mt-5">
+	<thead>
+		<tr class="table-primary">
+			<td>Brand</td>
+			<td>Display size</td>
+			<td>Display resolution</td>
+			<td>Display technology</td>
+			<td>Display coverage</td>
+			<td>Refresh rate</td>
+			<td>Warranty</td>
+			<td>Price</td>
+			<td>View</td>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var monitor in Model)
+		{
+			<tr>
+				<td>@monitor.Brand</td>
+				<td>@monitor.DisplaySize inches</td>
+				<td>@monitor.Resolution</td>
+				<td>@monitor.DisplayTechnology</td>
+				<td>@monitor.DisplayCoverage</td>
+				<td>@monitor.RefreshRate Hz</td>
+				<td>
+					@if (monitor.Warranty > 0)
+					{
+						<p>@monitor.Warranty months</p>
+					}
+					else
+					{
+						<p>Second hand</p>
+					}
+				</td>
+				<td>@String.Format("{0:f2}", monitor.Price) EUR</td>
+				<td>
+					<a asp-controller="Monitor" asp-action="Details" asp-route-id="@monitor.Id" class="btn btn-primary">Details</a>
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>

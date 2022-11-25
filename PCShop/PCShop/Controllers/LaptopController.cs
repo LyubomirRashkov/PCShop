@@ -251,7 +251,7 @@ namespace PCShop.Controllers
 		/// <returns>Collection of all active laptop sales of the currently logged in user</returns>
 		[HttpGet]
 		[Authorize(Roles = SuperUser)]
-		public async Task<IActionResult> MyLaptops()
+		public async Task<IActionResult> Mine()
 		{
 			var userId = this.User.Id();
 

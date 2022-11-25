@@ -160,7 +160,7 @@
             <param name="model">Laptop import model</param>
             <returns>Redirection to /Laptop/Details</returns>
         </member>
-        <member name="M:PCShop.Controllers.LaptopController.MyLaptops">
+        <member name="M:PCShop.Controllers.LaptopController.Mine">
             <summary>
             HttpGet action to retrieve all active laptop sales of the currently logged in user
             </summary>
@@ -172,6 +172,24 @@
             </summary>
             <param name="id">Laptop unique identifier</param>
             <returns>The corresponding view</returns>
+        </member>
+        <member name="T:PCShop.Controllers.MonitorController">
+            <summary>
+            Monitor controller class
+            </summary>
+        </member>
+        <member name="M:PCShop.Controllers.MonitorController.#ctor(PCShop.Core.Services.Interfaces.IMonitorService)">
+            <summary>
+            Constructor of MonitorController class
+            </summary>
+            <param name="monitorService">The IMonitorService needed for functionality</param>
+        </member>
+        <member name="M:PCShop.Controllers.MonitorController.Index(PCShop.Core.Models.Monitor.AllMonitorsQueryModel)">
+            <summary>
+            HttpGet action to retrieve all active monitors according to specified criteria
+            </summary>
+            <param name="query">The entity that holds the specified criteria</param>
+            <returns>Collection of all active monitors according to specified criteria</returns>
         </member>
         <member name="T:PCShop.Extensions.ClaimsPrincipalExtension">
             <summary>

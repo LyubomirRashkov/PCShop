@@ -174,11 +174,6 @@
             Constant for the error message of invalid Laptop unique identifier
             </summary>
         </member>
-        <member name="F:PCShop.Core.Constants.Constant.LaptopConstants.LaptopsPerPage">
-            <summary>
-            Constant for the number of laptops displayed on one page
-            </summary>
-        </member>
         <member name="T:PCShop.Core.Constants.Constant.ProductConstants">
             <summary>
             Class holding constants for all product types
@@ -217,6 +212,16 @@
         <member name="F:PCShop.Core.Constants.Constant.ProductConstants.ErrorMessageForProductThatIsOutOfStock">
             <summary>
             Constant for the error message of a product that is out of stock
+            </summary>
+        </member>
+        <member name="F:PCShop.Core.Constants.Constant.ProductConstants.ProductsPerPage">
+            <summary>
+            Constant for the number of products displayed on one page
+            </summary>
+        </member>
+        <member name="F:PCShop.Core.Constants.Constant.ProductConstants.UnknownProductCharacteristic">
+            <summary>
+            Constant for unknown product characteristic
             </summary>
         </member>
         <member name="T:PCShop.Core.Constants.Constant.ClientConstants">
@@ -418,7 +423,7 @@
         </member>
         <member name="P:PCShop.Core.Models.Laptop.AllLaptopsQueryModel.Keyword">
             <summary>
-            Property that represent a seacrh keyword
+            Property that represent a search keyword
             </summary>
         </member>
         <member name="P:PCShop.Core.Models.Laptop.AllLaptopsQueryModel.Sorting">
@@ -428,7 +433,7 @@
         </member>
         <member name="P:PCShop.Core.Models.Laptop.AllLaptopsQueryModel.CurrentPage">
             <summary>
-            Property that represents current page
+            Property that represents the number of the current page
             </summary>
         </member>
         <member name="P:PCShop.Core.Models.Laptop.AllLaptopsQueryModel.TotalLaptopsCount">
@@ -521,16 +526,6 @@
             LaptopExportViewModel model
             </summary>
         </member>
-        <member name="P:PCShop.Core.Models.Laptop.LaptopExportViewModel.Id">
-            <summary>
-            Property that represents laptop unique identifier
-            </summary>
-        </member>
-        <member name="P:PCShop.Core.Models.Laptop.LaptopExportViewModel.Brand">
-            <summary>
-            Property that represents laptop brand
-            </summary>
-        </member>
         <member name="P:PCShop.Core.Models.Laptop.LaptopExportViewModel.CPU">
             <summary>
             Property that represents laptop CPU
@@ -551,19 +546,9 @@
             Property that represents laptop video card
             </summary>
         </member>
-        <member name="P:PCShop.Core.Models.Laptop.LaptopExportViewModel.Price">
-            <summary>
-            Property that represents laptop price
-            </summary>
-        </member>
         <member name="P:PCShop.Core.Models.Laptop.LaptopExportViewModel.DisplaySize">
             <summary>
             Property that represents laptop display size
-            </summary>
-        </member>
-        <member name="P:PCShop.Core.Models.Laptop.LaptopExportViewModel.Warranty">
-            <summary>
-            Property that represents laptop warranty
             </summary>
         </member>
         <member name="T:PCShop.Core.Models.Laptop.LaptopImportViewModel">
@@ -664,6 +649,156 @@
         <member name="P:PCShop.Core.Models.Laptop.LaptopsQueryModel.Laptops">
             <summary>
             Property that represents a collection of laptops
+            </summary>
+        </member>
+        <member name="T:PCShop.Core.Models.Monitor.AllMonitorsQueryModel">
+            <summary>
+            AllMonitorsQueryModel model
+            </summary>
+        </member>
+        <member name="M:PCShop.Core.Models.Monitor.AllMonitorsQueryModel.#ctor">
+            <summary>
+            Constructor of AllMonitorsQueryModel class
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Monitor.AllMonitorsQueryModel.Brand">
+            <summary>
+            Property that represents monitor brand
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Monitor.AllMonitorsQueryModel.Brands">
+            <summary>
+            Property that represents a collection of all possible monitor brands
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Monitor.AllMonitorsQueryModel.DisplaySize">
+            <summary>
+            Property that represents monitor display size
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Monitor.AllMonitorsQueryModel.DisplaySizes">
+            <summary>
+            Property that represents a collection of all possible monitor display sizes
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Monitor.AllMonitorsQueryModel.Resolution">
+            <summary>
+            Property that represents monitor resolution
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Monitor.AllMonitorsQueryModel.Resolutions">
+            <summary>
+            Property that represents a collection of all possible monitor resolutions
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Monitor.AllMonitorsQueryModel.RefreshRate">
+            <summary>
+            Property that represents monitorr refresh rate
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Monitor.AllMonitorsQueryModel.RefreshRates">
+            <summary>
+            Property that represents a collection of all possible monitor refresh rates
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Monitor.AllMonitorsQueryModel.Keyword">
+            <summary>
+            Property that represent a search keyword
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Monitor.AllMonitorsQueryModel.Sorting">
+            <summary>
+            Property that represents a sorting criterion
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Monitor.AllMonitorsQueryModel.CurrentPage">
+            <summary>
+            Property that represents the number of the current page
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Monitor.AllMonitorsQueryModel.TotalMonitorsCount">
+            <summary>
+            Property that represents total count of monitors
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Monitor.AllMonitorsQueryModel.Monitors">
+            <summary>
+            Property that represents a collecion of monitors according to specified criteria
+            </summary>
+        </member>
+        <member name="T:PCShop.Core.Models.Monitor.MonitorExportViewModel">
+            <summary>
+            MonitorExportViewModel model
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Monitor.MonitorExportViewModel.DisplaySize">
+            <summary>
+            Property that represents monitor display size
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Monitor.MonitorExportViewModel.DisplayTechnology">
+            <summary>
+            Property that represents monitor display technology
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Monitor.MonitorExportViewModel.Resolution">
+            <summary>
+            Property that represents monitor resolution
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Monitor.MonitorExportViewModel.DisplayCoverage">
+            <summary>
+            Property that represents monitor display coverage
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Monitor.MonitorExportViewModel.RefreshRate">
+            <summary>
+            Property that represents monitor refresh rate
+            </summary>
+        </member>
+        <member name="T:PCShop.Core.Models.Monitor.MonitorsQueryModel">
+            <summary>
+            MonitorsQueryModel model
+            </summary>
+        </member>
+        <member name="M:PCShop.Core.Models.Monitor.MonitorsQueryModel.#ctor">
+            <summary>
+            Constructor of MonitorsQueryModel
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Monitor.MonitorsQueryModel.TotalMonitorsCount">
+            <summary>
+            Property that represents total count of monitors
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Monitor.MonitorsQueryModel.Monitors">
+            <summary>
+            Property that represents a collection of monitors
+            </summary>
+        </member>
+        <member name="T:PCShop.Core.Models.Product.ProductExportViewModel">
+            <summary>
+            ProductExportViewModel model
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Product.ProductExportViewModel.Id">
+            <summary>
+            Property that represents product unique identifier
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Product.ProductExportViewModel.Brand">
+            <summary>
+            Property that represents product brand
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Product.ProductExportViewModel.Price">
+            <summary>
+            Property that represents product price
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Product.ProductExportViewModel.Warranty">
+            <summary>
+            Property that represents product warranty
             </summary>
         </member>
         <member name="T:PCShop.Core.Models.User.SignInViewModel">
@@ -828,10 +963,10 @@
             <param name="ram">The criterion for the RAM capacity</param>
             <param name="ssdCapacity">The criterion for the SSD capacity</param>
             <param name="videoCard">The criterion for the video card</param>
-            <param name="keyWord">The criterion for key word</param>
+            <param name="keyword">The criterion for keyword</param>
             <param name="sorting">The criterion for sorting</param>
             <param name="currentPage">Current page number</param>
-            <returns>Collection of LaptopExportViewModels according to specified criteria</returns>
+            <returns>LaptopsQueryModel object</returns>
         </member>
         <member name="M:PCShop.Core.Services.Implementations.LaptopService.GetLaptopByIdAsLaptopDetailsExportViewModelAsync(System.Int32)">
             <summary>
@@ -884,6 +1019,54 @@
             </summary>
             <returns>Ordered collection of video card names</returns>
         </member>
+        <member name="T:PCShop.Core.Services.Implementations.MonitorService">
+            <summary>
+            Implementation of IMonitorService interface
+            </summary>
+        </member>
+        <member name="M:PCShop.Core.Services.Implementations.MonitorService.#ctor(PCShop.Infrastructure.Common.IRepository)">
+            <summary>
+            Constructor of MonitorService class
+            </summary>
+            <param name="repository">The repository that will be used</param>
+        </member>
+        <member name="M:PCShop.Core.Services.Implementations.MonitorService.GetAllBrandsNames">
+            <summary>
+            Method to retrieve all monitor brands names
+            </summary>
+            <returns>Ordered collection of brand names</returns>
+        </member>
+        <member name="M:PCShop.Core.Services.Implementations.MonitorService.GetAllDisplaysSizesValues">
+            <summary>
+            Method to retrieve all monitor display sizes
+            </summary>
+            <returns>Ordered collection of display sizes</returns>
+        </member>
+        <member name="M:PCShop.Core.Services.Implementations.MonitorService.GetAllMonitorsAsync(System.String,System.Nullable{System.Double},System.String,System.Nullable{System.Int32},System.String,PCShop.Core.Constants.Sorting,System.Int32)">
+            <summary>
+            Method to retrieve all active monitors according to specified criteria
+            </summary>
+            <param name="brand">The criterion for the monitor brand</param>
+            <param name="displaySize">The criterion for the monitor display size</param>
+            <param name="resolution">The criterion for the monitor resolution</param>
+            <param name="refreshRate">The criterion for the monitor refresh rate</param>
+            <param name="keyword">The criterion for keyword</param>
+            <param name="sorting">The criterion for sorting</param>
+            <param name="currentPage">Current page number</param>
+            <returns>MonitorsQueryModel object</returns>
+        </member>
+        <member name="M:PCShop.Core.Services.Implementations.MonitorService.GetAllRefreshRatesValues">
+            <summary>
+            Method to retrieve all monitor refresh rates
+            </summary>
+            <returns>Ordered collection of refresh rates</returns>
+        </member>
+        <member name="M:PCShop.Core.Services.Implementations.MonitorService.GetAllResolutionsValues">
+            <summary>
+            Method to retrieve all monitor resolutions
+            </summary>
+            <returns>Ordered collection of resolutions</returns>
+        </member>
         <member name="T:PCShop.Core.Services.Implementations.UserService">
             <summary>
             Implementation of IUserService interface
@@ -934,10 +1117,10 @@
             <param name="ram">The criterion for the RAM capacity</param>
             <param name="ssdCapacity">The criterion for the SSD capacity</param>
             <param name="videoCard">The criterion for the video card</param>
-            <param name="keyWord">The criterion for key word</param>
+            <param name="keyword">The criterion for keyword</param>
             <param name="sorting">The criterion for sorting</param>
             <param name="currentPage">Current page number</param>
-            <returns>Collection of LaptopExportViewModels according to specified criteria</returns>
+            <returns>LaptopsQueryModel object</returns>
         </member>
         <member name="M:PCShop.Core.Services.Interfaces.ILaptopService.GetLaptopByIdAsLaptopDetailsExportViewModelAsync(System.Int32)">
             <summary>
@@ -991,25 +1174,67 @@
             <summary>
             Method to retrieve all CPU names
             </summary>
-            <returns>Collection of CPU names</returns>
+            <returns>Ordered collection of CPU names</returns>
         </member>
         <member name="M:PCShop.Core.Services.Interfaces.ILaptopService.GetAllRamsValues">
             <summary>
             Method to retrieve all RAM values
             </summary>
-            <returns>Collection of RAM values</returns>
+            <returns>Ordered collection of RAM values</returns>
         </member>
         <member name="M:PCShop.Core.Services.Interfaces.ILaptopService.GetAllSsdCapacitiesValues">
             <summary>
             Method to retrieve all SSD capacities
             </summary>
-            <returns>Collection of SSD capacities</returns>
+            <returns>Ordered collection of SSD capacities</returns>
         </member>
         <member name="M:PCShop.Core.Services.Interfaces.ILaptopService.GetAllVideoCardsNames">
             <summary>
             Method to retrieve all video card names
             </summary>
-            <returns>Collection of video card names</returns>
+            <returns>Ordered collection of video card names</returns>
+        </member>
+        <member name="T:PCShop.Core.Services.Interfaces.IMonitorService">
+            <summary>
+            Abstraction of MonitorService
+            </summary>
+        </member>
+        <member name="M:PCShop.Core.Services.Interfaces.IMonitorService.GetAllMonitorsAsync(System.String,System.Nullable{System.Double},System.String,System.Nullable{System.Int32},System.String,PCShop.Core.Constants.Sorting,System.Int32)">
+            <summary>
+            Method to retrieve all active monitors according to specified criteria
+            </summary>
+            <param name="brand">The criterion for the monitor brand</param>
+            <param name="displaySize">The criterion for the monitor display size</param>
+            <param name="resolution">The criterion for the monitor resolution</param>
+            <param name="refreshRate">The criterion for the monitor refresh rate</param>
+            <param name="keyword">The criterion for keyword</param>
+            <param name="sorting">The criterion for sorting</param>
+            <param name="currentPage">Current page number</param>
+            <returns>MonitorsQueryModel object</returns>
+        </member>
+        <member name="M:PCShop.Core.Services.Interfaces.IMonitorService.GetAllBrandsNames">
+            <summary>
+            Method to retrieve all monitor brands names
+            </summary>
+            <returns>Ordered collection of brand names</returns>
+        </member>
+        <member name="M:PCShop.Core.Services.Interfaces.IMonitorService.GetAllDisplaysSizesValues">
+            <summary>
+            Method to retrieve all monitor display sizes
+            </summary>
+            <returns>Ordered collection of display sizes</returns>
+        </member>
+        <member name="M:PCShop.Core.Services.Interfaces.IMonitorService.GetAllResolutionsValues">
+            <summary>
+            Method to retrieve all monitor resolutions
+            </summary>
+            <returns>Ordered collection of resolutions</returns>
+        </member>
+        <member name="M:PCShop.Core.Services.Interfaces.IMonitorService.GetAllRefreshRatesValues">
+            <summary>
+            Method to retrieve all monitor refresh rates
+            </summary>
+            <returns>Ordered collection of refresh rates</returns>
         </member>
         <member name="T:PCShop.Core.Services.Interfaces.IUserService">
             <summary>

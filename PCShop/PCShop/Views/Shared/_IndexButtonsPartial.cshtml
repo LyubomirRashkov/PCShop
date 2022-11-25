@@ -1,0 +1,39 @@
+﻿@model IEnumerable<ProductExportViewModel>
+
+@{
+	var controllerName = string.Empty;
+	var addButtonText = string.Empty;
+	var mineButtonText = string.Empty;
+}
+
+@if (Model is IEnumerable<LaptopExportViewModel>)
+{
+	controllerName = "Laptop";
+	addButtonText = "Add a laptop";
+	mineButtonText = "My laptops";
+}
+else if (Model is IEnumerable<MonitorExportViewModel>)
+{
+	controllerName = "Monitor";
+	addButtonText = "Add a monitor";
+	mineButtonText = "My monitors";
+}
+
+@if ((this.User?.Identity?.IsAuthenticated ?? false) && (this.User.IsInRole(Administrator)))
+{
+	<div class="text-center">
+		<a asp-controller=@controllerName asp-action="Add" class="btn btn-primary">@addButtonText</a>
+	</div>
+}
+
+@if ((this.User?.Identity?.IsAuthenticated ?? false) && this.User.IsInRole(SuperUser))
+{
+	<div class="text-center">
+		<a asp-controller=@controllerName asp-action="Add" class="btn btn-primary">@addButtonText</a>
+
+		@if (Model.Any())
+		{
+			<a asp-controller=@controllerName asp-action="Mine" class="btn btn-success">@mineButtonText</a>
+		}
+	</div>
+}

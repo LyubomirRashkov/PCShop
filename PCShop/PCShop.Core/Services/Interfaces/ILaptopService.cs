@@ -15,17 +15,17 @@ namespace PCShop.Core.Services.Interfaces
 		/// <param name="ram">The criterion for the RAM capacity</param>
 		/// <param name="ssdCapacity">The criterion for the SSD capacity</param>
 		/// <param name="videoCard">The criterion for the video card</param>
-		/// <param name="keyWord">The criterion for key word</param>
+		/// <param name="keyword">The criterion for keyword</param>
 		/// <param name="sorting">The criterion for sorting</param>
 		/// <param name="currentPage">Current page number</param>
-		/// <returns>Collection of LaptopExportViewModels according to specified criteria</returns>
+		/// <returns>LaptopsQueryModel object</returns>
 		Task<LaptopsQueryModel> GetAllLaptopsAsync(
             string? cpu = null,
             int? ram = null,
             int? ssdCapacity = null,
             string? videoCard = null,
-            string? keyWord = null,
-            Sorting sorting = Sorting.PriceMinToMax,
+            string? keyword = null,
+            Sorting sorting = Sorting.Newest,
 			int currentPage = 1);
 
         /// <summary>
@@ -79,25 +79,25 @@ namespace PCShop.Core.Services.Interfaces
 		/// <summary>
 		/// Method to retrieve all CPU names
 		/// </summary>
-		/// <returns>Collection of CPU names</returns>
+		/// <returns>Ordered collection of CPU names</returns>
 		Task<IEnumerable<string>> GetAllCpusNames();
 
 		/// <summary>
 		/// Method to retrieve all RAM values
 		/// </summary>
-		/// <returns>Collection of RAM values</returns>
+		/// <returns>Ordered collection of RAM values</returns>
 		Task<IEnumerable<int>> GetAllRamsValues();
 
 		/// <summary>
 		/// Method to retrieve all SSD capacities
 		/// </summary>
-		/// <returns>Collection of SSD capacities</returns>
+		/// <returns>Ordered collection of SSD capacities</returns>
 		Task<IEnumerable<int>> GetAllSsdCapacitiesValues();
 
 		/// <summary>
 		/// Method to retrieve all video card names
 		/// </summary>
-		/// <returns>Collection of video card names</returns>
+		/// <returns>Ordered collection of video card names</returns>
 		Task<IEnumerable<string>> GetAllVideoCardsNames();
 	}
 }

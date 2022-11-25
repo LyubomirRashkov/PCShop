@@ -8,9 +8,9 @@
 			<td>RAM</td>
 			<td>SSD</td>
 			<td>Video card</td>
-			<td>Price</td>
 			<td>Display size</td>
 			<td>Warranty</td>
+			<td>Price</td>
 			<td>View</td>
 		</tr>
 	</thead>
@@ -23,7 +23,6 @@
 				<td>@laptop.RAM GB</td>
 				<td>@laptop.SSDCapacity GB</td>
 				<td>@laptop.VideoCard</td>
-				<td>@String.Format("{0:f2}", laptop.Price) EUR</td>
 				<td>@laptop.DisplaySize inches</td>
 				<td>
 					@if (laptop.Warranty > 0)
@@ -35,6 +34,7 @@
 						<p>Second hand</p>
 					}
 				</td>
+				<td>@String.Format("{0:f2}", laptop.Price) EUR</td>
 				<td>
 					<a asp-controller="Laptop" asp-action="Details" asp-route-id="@laptop.Id" class="btn btn-primary">Details</a>
 				</td>

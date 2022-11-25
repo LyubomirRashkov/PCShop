@@ -63,7 +63,7 @@ namespace PCShop.Core.Models.Laptop
 		public IEnumerable<string> VideoCards { get; set; }
 
 		/// <summary>
-		/// Property that represent a seacrh keyword
+		/// Property that represent a search keyword
 		/// </summary>
 		public string? Keyword { get; init; }
 
@@ -73,7 +73,7 @@ namespace PCShop.Core.Models.Laptop
 		public Sorting Sorting { get; init; }
 
 		/// <summary>
-		/// Property that represents current page
+		/// Property that represents the number of the current page
 		/// </summary>
 		public int CurrentPage { get; init; }
 

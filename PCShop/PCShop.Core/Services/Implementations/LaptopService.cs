@@ -137,16 +137,16 @@ namespace PCShop.Core.Services.Implementations
 		/// <param name="ram">The criterion for the RAM capacity</param>
 		/// <param name="ssdCapacity">The criterion for the SSD capacity</param>
 		/// <param name="videoCard">The criterion for the video card</param>
-		/// <param name="keyWord">The criterion for key word</param>
+		/// <param name="keyword">The criterion for keyword</param>
 		/// <param name="sorting">The criterion for sorting</param>
 		/// <param name="currentPage">Current page number</param>
-		/// <returns>Collection of LaptopExportViewModels according to specified criteria</returns>
+		/// <returns>LaptopsQueryModel object</returns>
 		public async Task<LaptopsQueryModel> GetAllLaptopsAsync(
             string? cpu = null,
 			int? ram = null,
 			int? ssdCapacity = null,
 			string? videoCard = null,
-			string? keyWord = null,
+			string? keyword = null,
 			Sorting sorting = Sorting.Newest,
             int currentPage = 1)
         {
@@ -174,9 +174,9 @@ namespace PCShop.Core.Services.Implementations
                 query = query.Where(l => l.VideoCard.Name == videoCard);
             }
 
-            if (!String.IsNullOrEmpty(keyWord))
+            if (!String.IsNullOrEmpty(keyword))
             {
-				var searchTerm = $"%{keyWord.ToLower()}%";
+				var searchTerm = $"%{keyword.ToLower()}%";
 
                 query = query.Where(l => EF.Functions.Like(l.Brand.Name.ToLower(), searchTerm)
                                              || EF.Functions.Like(l.CPU.Name.ToLower(), searchTerm)
@@ -196,8 +196,8 @@ namespace PCShop.Core.Services.Implementations
             };
 
             result.Laptops = await query
-                .Skip((currentPage - 1) * LaptopsPerPage)
-                .Take(LaptopsPerPage)
+                .Skip((currentPage - 1) * ProductsPerPage)
+                .Take(ProductsPerPage)
 				.Select(l => new LaptopExportViewModel()
                 {
                     Id = l.Id,
@@ -453,10 +453,16 @@ namespace PCShop.Core.Services.Implementations
 					DisplaySize = l.DisplaySize.Value,
 					Warranty = l.Warranty,
 					Type = l.Type.Name,
-					DisplayCoverage = l.DisplayCoverage != null ? l.DisplayCoverage.Name : "unknown",
-					DisplayTechnology = l.DisplayTechnology != null ? l.DisplayTechnology.Name : "unknown",
-					Resolution = l.Resolution != null ? l.Resolution.Value : "unknown",
-					Color = l.Color != null ? l.Color.Name : "unknown",
+					DisplayCoverage = l.DisplayCoverage != null 
+                                      ? l.DisplayCoverage.Name 
+                                      : UnknownProductCharacteristic,
+					DisplayTechnology = l.DisplayTechnology != null 
+                                        ? l.DisplayTechnology.Name 
+                                        : UnknownProductCharacteristic,
+					Resolution = l.Resolution != null 
+                                 ? l.Resolution.Value 
+                                 : UnknownProductCharacteristic,
+					Color = l.Color != null ? l.Color.Name : UnknownProductCharacteristic,
 					ImageUrl = l.ImageUrl,
 					AddedOn = l.AddedOn.ToString("MMMM, yyyy", CultureInfo.InvariantCulture),
 					Quantity = l.Quantity,
