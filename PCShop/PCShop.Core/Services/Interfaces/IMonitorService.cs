@@ -58,5 +58,11 @@ namespace PCShop.Core.Services.Interfaces
 		/// <param name="id">Monitor unique identifier</param>
 		/// <returns>The monitor as MonitorDetailsExportViewModel</returns>
 		Task<MonitorDetailsExportViewModel> GetMonitorByIdAsMonitorDetailsExportViewModelAsync(int id);
+
+		/// <summary>
+		/// Method to mark a specific monitor as deleted
+		/// </summary>
+		/// <param name="id">Monitor unique identifier</param>
+		Task DeleteMonitorAsync(int id);
 	}
 }

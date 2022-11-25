@@ -198,6 +198,13 @@
             <param name="id">Monitor unique identifier</param>
             <returns>Detailedinformation about the monitor</returns>
         </member>
+        <member name="M:PCShop.Controllers.MonitorController.Delete(System.Int32)">
+            <summary>
+            Action to mark a specific monitor as deleted
+            </summary>
+            <param name="id">Monitor unique identifier</param>
+            <returns>Redirection to /Monitor/Index</returns>
+        </member>
         <member name="T:PCShop.Extensions.ClaimsPrincipalExtension">
             <summary>
             ClaimsPrincipalExtension model

@@ -33,6 +33,23 @@ namespace PCShop.Core.Services.Implementations
 		}
 
 		/// <summary>
+		/// Method to mark a specific monitor as deleted
+		/// </summary>
+		/// <param name="id">Monitor unique identifier</param>
+		public async Task DeleteMonitorAsync(int id)
+		{
+			var monitor = await this.repository.GetByIdAsync<Monitor>(id);
+
+			this.guard.AgainstProductThatIsNull<Monitor>(monitor, ErrorMessageForInvalidProductId);
+
+			this.guard.AgainstProductThatIsDeleted(monitor.IsDeleted, ErrorMessageForDeletedProduct);
+
+			monitor.IsDeleted = true;
+
+			await this.repository.SaveChangesAsync();
+		}
+
+		/// <summary>
 		/// Method to retrieve all monitor brands names
 		/// </summary>
 		/// <returns>Ordered collection of brand names</returns>

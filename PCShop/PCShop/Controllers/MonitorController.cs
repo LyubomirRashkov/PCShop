@@ -2,6 +2,8 @@
 using Microsoft.AspNetCore.Mvc;
 using PCShop.Core.Models.Monitor;
 using PCShop.Core.Services.Interfaces;
+using PCShop.Extensions;
+using static PCShop.Infrastructure.Constants.DataConstant.RoleConstants;
 
 namespace PCShop.Controllers
 {
@@ -64,6 +66,35 @@ namespace PCShop.Controllers
 				var monitor = await this.monitorService.GetMonitorByIdAsMonitorDetailsExportViewModelAsync(id);
 
 				return View(monitor);
+			}
+			catch (ArgumentException)
+			{
+				return NotFound();
+			}
+		}
+
+		/// <summary>
+		/// Action to mark a specific monitor as deleted
+		/// </summary>
+		/// <param name="id">Monitor unique identifier</param>
+		/// <returns>Redirection to /Monitor/Index</returns>
+		[HttpGet]
+		[Authorize(Roles = $"{Administrator}, {SuperUser}")]
+		public async Task<IActionResult> Delete(int id)
+		{
+			try
+			{
+				var monitor = await this.monitorService.GetMonitorByIdAsMonitorDetailsExportViewModelAsync(id);
+
+				if (this.User.IsInRole(SuperUser) 
+					&& (monitor.Seller is null || this.User.Id() != monitor.Seller.UserId))
+				{
+					return Unauthorized();
+				}
+
+				await this.monitorService.DeleteMonitorAsync(id);
+
+				return RedirectToAction(nameof(Index));
 			}
 			catch (ArgumentException)
 			{

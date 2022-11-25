@@ -1076,6 +1076,12 @@
             <param name="repository">The repository that will be used</param>
             <param name="guard">The guard that will be used</param>
         </member>
+        <member name="M:PCShop.Core.Services.Implementations.MonitorService.DeleteMonitorAsync(System.Int32)">
+            <summary>
+            Method to mark a specific monitor as deleted
+            </summary>
+            <param name="id">Monitor unique identifier</param>
+        </member>
         <member name="M:PCShop.Core.Services.Implementations.MonitorService.GetAllBrandsNames">
             <summary>
             Method to retrieve all monitor brands names
@@ -1295,6 +1301,12 @@
             </summary>
             <param name="id">Monitor unique identifier</param>
             <returns>The monitor as MonitorDetailsExportViewModel</returns>
+        </member>
+        <member name="M:PCShop.Core.Services.Interfaces.IMonitorService.DeleteMonitorAsync(System.Int32)">
+            <summary>
+            Method to mark a specific monitor as deleted
+            </summary>
+            <param name="id">Monitor unique identifier</param>
         </member>
         <member name="T:PCShop.Core.Services.Interfaces.IUserService">
             <summary>
