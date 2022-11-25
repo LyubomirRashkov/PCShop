@@ -1,0 +1,76 @@
+﻿@model MonitorDetailsExportViewModel
+
+@{
+	ViewData["Title"] = "Monitor details";
+}
+
+<h1 class="text-center mb-2">@ViewData["Title"]</h1>
+
+<hr />
+
+<div class="row">
+
+	<div class="col-sm-2"></div>
+
+	<div class="col-sm-8">
+
+		<div class="card text-center mt-5">
+
+			@if (Model.ImageUrl is not null)
+			{
+				<img class="card-img-top" src="@Model.ImageUrl" alt="Movie Image">
+			}
+
+			<div class="card-body">
+				<h4 class="card-title mt-2 mb-3">@Model.Brand</h4>
+				<p class="mb-0"><b>Display size: @Model.DisplaySize inches</b></p>
+				<p class="mb-0"><b>Display resolution: @Model.Resolution</b></p>
+				<p class="mb-0"><b>Display technology: @Model.DisplayTechnology</b></p>
+				<p class="mb-0"><b>Display coverage: @Model.DisplayCoverage</b></p>
+				<p class="mb-0">Refresh rate: @Model.RefreshRate Hz</p>
+				<p class="mb-0">Type: @Model.Type</p>
+				<p class="mb-2">Color: @Model.Color</p>
+
+				@if (Model.Quantity > 0)
+				{
+					<p class="text-success mb-2"><b>On sale from: @Model.AddedOn</b></p>
+
+					@if (Model.Warranty > 0)
+					{
+						<p class="text-success mb-2"><b>Warranty: @Model.Warranty months</b></p>
+					}
+					else
+					{
+						<p class="text-warning mb-2"><b>This laptop is second hand</b></p>
+						<p class="text-warning mb-2"><b>Seller: @Model.SellerFirstName @Model.SellerLastName</b></p>
+					}
+
+					<p class="text-success mb-3"><b>Price: @String.Format("{0:f2}", Model.Price) EUR</b></p>
+
+					@if ((this.User?.Identity?.IsAuthenticated ?? false)
+							&& (!this.User.IsInRole(Administrator))
+							&& ((!this.User.IsInRole(SuperUser)) || (this.User.IsInRole(SuperUser) && (Model.Seller is null || this.User.Id() != Model.Seller.UserId))))
+					{
+						<a asp-controller="Monitor" asp-action="Buy" asp-route-id="@Model.Id" class="btn btn-success">Buy</a>
+					}
+				}
+				else
+				{
+					<h5 class="text-danger mb-3">This product is out of stock!</h5>
+				}
+
+				@if ((this.User?.Identity?.IsAuthenticated ?? false)
+						&& (this.User.IsInRole(Administrator) || (this.User.IsInRole(SuperUser) && Model.Seller is not null && this.User.Id() == Model.Seller.UserId)))
+				{
+					<a asp-controller="Monitor" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Edit</a>
+					<a asp-controller="Monitor" asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger"
+				   onclick="return confirm('Are you sure you want to delete monitor @Model.Brand')">Delete</a>
+				}
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>

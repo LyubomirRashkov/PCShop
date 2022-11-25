@@ -191,6 +191,13 @@
             <param name="query">The entity that holds the specified criteria</param>
             <returns>Collection of all active monitors according to specified criteria</returns>
         </member>
+        <member name="M:PCShop.Controllers.MonitorController.Details(System.Int32)">
+            <summary>
+            HttpGet action to retrieve detailed information about a specific monitor
+            </summary>
+            <param name="id">Monitor unique identifier</param>
+            <returns>Detailedinformation about the monitor</returns>
+        </member>
         <member name="T:PCShop.Extensions.ClaimsPrincipalExtension">
             <summary>
             ClaimsPrincipalExtension model

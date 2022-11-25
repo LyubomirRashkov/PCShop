@@ -1,8 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using PCShop.Core.Constants;
+using PCShop.Core.Exceptions;
 using PCShop.Core.Models.Monitor;
 using PCShop.Core.Services.Interfaces;
 using PCShop.Infrastructure.Common;
+using System.Globalization;
+using System.Linq.Expressions;
 using static PCShop.Core.Constants.Constant.ProductConstants;
 using Monitor = PCShop.Infrastructure.Data.Models.Monitor;
 
@@ -14,14 +17,19 @@ namespace PCShop.Core.Services.Implementations
 	public class MonitorService : IMonitorService
 	{
 		private readonly IRepository repository;
+		private readonly IGuard guard;
 
 		/// <summary>
 		/// Constructor of MonitorService class
 		/// </summary>
 		/// <param name="repository">The repository that will be used</param>
-		public MonitorService(IRepository repository)
+		/// <param name="guard">The guard that will be used</param>
+		public MonitorService(
+			IRepository repository,
+			IGuard guard)
 		{
 			this.repository = repository;
+			this.guard = guard;
 		}
 
 		/// <summary>
@@ -165,6 +173,54 @@ namespace PCShop.Core.Services.Implementations
 				.Distinct()
 				.OrderBy(v => v)
 				.ToListAsync();
+		}
+
+		/// <summary>
+		/// Method to retrieve a specific monitor
+		/// </summary>
+		/// <param name="id">Monitor unique identifier</param>
+		/// <returns>The monitor as MonitorDetailsExportViewModel</returns>
+		public async Task<MonitorDetailsExportViewModel> GetMonitorByIdAsMonitorDetailsExportViewModelAsync(int id)
+		{
+			var monitorExports = await this.GetMonitorsAsMonitorsDetailsExportViewModelsAsync<Monitor>(m => m.Id == id);
+
+			this.guard.AgainstNullOrEmptyCollection<MonitorDetailsExportViewModel>(monitorExports, ErrorMessageForInvalidProductId);
+
+			return monitorExports[0];
+		}
+
+		private async Task<IList<MonitorDetailsExportViewModel>> GetMonitorsAsMonitorsDetailsExportViewModelsAsync<T>(Expression<Func<Monitor, bool>> condition)
+		{
+			var monitorsAsMonitorsExportViewModels = await this.repository
+				.AllAsReadOnly<Monitor>(m => !m.IsDeleted)
+				.Where(condition)
+				.Select(m => new MonitorDetailsExportViewModel()
+				{
+					Id = m.Id,
+					Brand = m.Brand.Name,
+					Price = m.Price,
+					Warranty = m.Warranty,
+					DisplaySize = m.DisplaySize.Value,
+					DisplayTechnology = m.DisplayTechnology != null 
+										? m.DisplayTechnology.Name 
+										: UnknownProductCharacteristic,
+					Resolution = m.Resolution.Value,
+					DisplayCoverage = m.DisplayCoverage != null 
+								      ? m.DisplayCoverage.Name 
+									  : UnknownProductCharacteristic,
+					RefreshRate = m.RefreshRate.Value,
+					Type = m.Type.Name,
+					Color = m.Color != null ? m.Color.Name : UnknownProductCharacteristic,
+					ImageUrl = m.ImageUrl,
+					AddedOn = m.AddedOn.ToString("MMMM, yyyy", CultureInfo.InvariantCulture),
+					Quantity = m.Quantity,
+					Seller = m.Seller,
+					SellerFirstName = m.Seller != null ? m.Seller.User.FirstName : null,
+					SellerLastName = m.Seller != null ? m.Seller.User.LastName : null,
+				})
+				.ToListAsync();
+
+			return monitorsAsMonitorsExportViewModels;
 		}
 	}
 }

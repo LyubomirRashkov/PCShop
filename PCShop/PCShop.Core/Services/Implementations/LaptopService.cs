@@ -9,7 +9,6 @@ using PCShop.Infrastructure.Data.Models.GravitatingClasses;
 using System.Globalization;
 using System.Linq.Expressions;
 using static PCShop.Core.Constants.Constant.ClientConstants;
-using static PCShop.Core.Constants.Constant.LaptopConstants;
 using static PCShop.Core.Constants.Constant.ProductConstants;
 using Type = PCShop.Infrastructure.Data.Models.GravitatingClasses.Type;
 
@@ -83,7 +82,7 @@ namespace PCShop.Core.Services.Implementations
         {
             var laptop = await this.repository.GetByIdAsync<Laptop>(id);
 
-            this.guard.AgainstProductThatIsNull<Laptop>(laptop, ErrorMessageForInvalidLaptopId);
+            this.guard.AgainstProductThatIsNull<Laptop>(laptop, ErrorMessageForInvalidProductId);
 
             this.guard.AgainstProductThatIsDeleted(laptop.IsDeleted, ErrorMessageForDeletedProduct);
 
@@ -115,7 +114,7 @@ namespace PCShop.Core.Services.Implementations
                 .Include(l => l.Color)
                 .FirstOrDefaultAsync();
 
-            this.guard.AgainstProductThatIsNull<Laptop>(laptop, ErrorMessageForInvalidLaptopId);
+            this.guard.AgainstProductThatIsNull<Laptop>(laptop, ErrorMessageForInvalidProductId);
 
             laptop.ImageUrl = model.ImageUrl;
             laptop.Warranty = model.Warranty;
@@ -226,7 +225,7 @@ namespace PCShop.Core.Services.Implementations
         {
             var laptopExports = await this.GetLaptopsAsLaptopDetailsExportViewModelsAsync<Laptop>(l => l.Id == id);
 
-            this.guard.AgainstNullOrEmptyCollection<LaptopDetailsExportViewModel>(laptopExports, ErrorMessageForInvalidLaptopId);
+            this.guard.AgainstNullOrEmptyCollection<LaptopDetailsExportViewModel>(laptopExports, ErrorMessageForInvalidProductId);
 
             return laptopExports[0];
         }
@@ -263,7 +262,7 @@ namespace PCShop.Core.Services.Implementations
                 })
                 .FirstOrDefaultAsync();
 
-            this.guard.AgainstProductThatIsNull<LaptopEditViewModel>(laptopExport, ErrorMessageForInvalidLaptopId);
+            this.guard.AgainstProductThatIsNull<LaptopEditViewModel>(laptopExport, ErrorMessageForInvalidProductId);
 
             return laptopExport;
         }
@@ -292,7 +291,7 @@ namespace PCShop.Core.Services.Implementations
         {
             var laptop = await this.repository.GetByIdAsync<Laptop>(id);
 
-            this.guard.AgainstProductThatIsNull<Laptop>(laptop, ErrorMessageForInvalidLaptopId);
+            this.guard.AgainstProductThatIsNull<Laptop>(laptop, ErrorMessageForInvalidProductId);
 
             this.guard.AgainstProductThatIsDeleted(laptop.IsDeleted, ErrorMessageForDeletedProduct);
 
@@ -467,8 +466,8 @@ namespace PCShop.Core.Services.Implementations
 					AddedOn = l.AddedOn.ToString("MMMM, yyyy", CultureInfo.InvariantCulture),
 					Quantity = l.Quantity,
 					Seller = l.Seller,
-                    SellerFirstName = l.Seller == null ? null : l.Seller.User.FirstName,
-                    SellerLastName = l.Seller == null ? null : l.Seller.User.LastName,
+                    SellerFirstName = l.Seller != null ? l.Seller.User.FirstName : null,
+                    SellerLastName = l.Seller != null ? l.Seller.User.LastName : null,
 				})
 				.ToListAsync();
 

@@ -172,11 +172,6 @@
             /// Constant for the max value of laptop's SSD capacity
             /// </summary>
             public const int SSDCapacityMaxValue = int.MaxValue;
-
-            /// <summary>
-            /// Constant for the error message of invalid Laptop unique identifier
-            /// </summary>
-            public const string ErrorMessageForInvalidLaptopId = "Invalid laptop id!";
         }
 
         /// <summary>
@@ -226,6 +221,11 @@
             /// Constant for unknown product characteristic
             /// </summary>
             public const string UnknownProductCharacteristic = "unknown";
+
+			/// <summary>
+			/// Constant for the error message of invalid product unique identifier
+			/// </summary>
+			public const string ErrorMessageForInvalidProductId = "Invalid product id!";
 		}
 
         /// <summary>

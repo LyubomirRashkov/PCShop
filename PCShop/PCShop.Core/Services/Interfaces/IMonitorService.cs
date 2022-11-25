@@ -51,5 +51,12 @@ namespace PCShop.Core.Services.Interfaces
 		/// </summary>
 		/// <returns>Ordered collection of refresh rates</returns>
 		Task<IEnumerable<int>> GetAllRefreshRatesValues();
+
+		/// <summary>
+		/// Method to retrieve a specific monitor
+		/// </summary>
+		/// <param name="id">Monitor unique identifier</param>
+		/// <returns>The monitor as MonitorDetailsExportViewModel</returns>
+		Task<MonitorDetailsExportViewModel> GetMonitorByIdAsMonitorDetailsExportViewModelAsync(int id);
 	}
 }

@@ -50,5 +50,25 @@ namespace PCShop.Controllers
 
 			return View(query);
 		}
+
+		/// <summary>
+		/// HttpGet action to retrieve detailed information about a specific monitor
+		/// </summary>
+		/// <param name="id">Monitor unique identifier</param>
+		/// <returns>Detailedinformation about the monitor</returns>
+		[HttpGet]
+		public async Task<IActionResult> Details(int id)
+		{
+			try
+			{
+				var monitor = await this.monitorService.GetMonitorByIdAsMonitorDetailsExportViewModelAsync(id);
+
+				return View(monitor);
+			}
+			catch (ArgumentException)
+			{
+				return NotFound();
+			}
+		}
 	}
 }

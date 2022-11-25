@@ -169,11 +169,6 @@
             Constant for the max value of laptop's SSD capacity
             </summary>
         </member>
-        <member name="F:PCShop.Core.Constants.Constant.LaptopConstants.ErrorMessageForInvalidLaptopId">
-            <summary>
-            Constant for the error message of invalid Laptop unique identifier
-            </summary>
-        </member>
         <member name="T:PCShop.Core.Constants.Constant.ProductConstants">
             <summary>
             Class holding constants for all product types
@@ -222,6 +217,11 @@
         <member name="F:PCShop.Core.Constants.Constant.ProductConstants.UnknownProductCharacteristic">
             <summary>
             Constant for unknown product characteristic
+            </summary>
+        </member>
+        <member name="F:PCShop.Core.Constants.Constant.ProductConstants.ErrorMessageForInvalidProductId">
+            <summary>
+            Constant for the error message of invalid product unique identifier
             </summary>
         </member>
         <member name="T:PCShop.Core.Constants.Constant.ClientConstants">
@@ -726,6 +726,51 @@
             Property that represents a collecion of monitors according to specified criteria
             </summary>
         </member>
+        <member name="T:PCShop.Core.Models.Monitor.MonitorDetailsExportViewModel">
+            <summary>
+            MonitorDetailsExportViewModel model
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Monitor.MonitorDetailsExportViewModel.Type">
+            <summary>
+            Property that represents monitor type
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Monitor.MonitorDetailsExportViewModel.Color">
+            <summary>
+            Property that represents monitor color
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Monitor.MonitorDetailsExportViewModel.ImageUrl">
+            <summary>
+            Property that represents monitor image url
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Monitor.MonitorDetailsExportViewModel.AddedOn">
+            <summary>
+            Property that represents the date the monitor was added to the database
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Monitor.MonitorDetailsExportViewModel.Quantity">
+            <summary>
+            Property that represents how many monitors are in stock
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Monitor.MonitorDetailsExportViewModel.Seller">
+            <summary>
+            Property that represents monior Seller
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Monitor.MonitorDetailsExportViewModel.SellerFirstName">
+            <summary>
+            Property that represents monitor seller first name
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Monitor.MonitorDetailsExportViewModel.SellerLastName">
+            <summary>
+            Property that represents monitor seller last name
+            </summary>
+        </member>
         <member name="T:PCShop.Core.Models.Monitor.MonitorExportViewModel">
             <summary>
             MonitorExportViewModel model
@@ -1024,11 +1069,12 @@
             Implementation of IMonitorService interface
             </summary>
         </member>
-        <member name="M:PCShop.Core.Services.Implementations.MonitorService.#ctor(PCShop.Infrastructure.Common.IRepository)">
+        <member name="M:PCShop.Core.Services.Implementations.MonitorService.#ctor(PCShop.Infrastructure.Common.IRepository,PCShop.Core.Exceptions.IGuard)">
             <summary>
             Constructor of MonitorService class
             </summary>
             <param name="repository">The repository that will be used</param>
+            <param name="guard">The guard that will be used</param>
         </member>
         <member name="M:PCShop.Core.Services.Implementations.MonitorService.GetAllBrandsNames">
             <summary>
@@ -1066,6 +1112,13 @@
             Method to retrieve all monitor resolutions
             </summary>
             <returns>Ordered collection of resolutions</returns>
+        </member>
+        <member name="M:PCShop.Core.Services.Implementations.MonitorService.GetMonitorByIdAsMonitorDetailsExportViewModelAsync(System.Int32)">
+            <summary>
+            Method to retrieve a specific monitor
+            </summary>
+            <param name="id">Monitor unique identifier</param>
+            <returns>The monitor as MonitorDetailsExportViewModel</returns>
         </member>
         <member name="T:PCShop.Core.Services.Implementations.UserService">
             <summary>
@@ -1235,6 +1288,13 @@
             Method to retrieve all monitor refresh rates
             </summary>
             <returns>Ordered collection of refresh rates</returns>
+        </member>
+        <member name="M:PCShop.Core.Services.Interfaces.IMonitorService.GetMonitorByIdAsMonitorDetailsExportViewModelAsync(System.Int32)">
+            <summary>
+            Method to retrieve a specific monitor
+            </summary>
+            <param name="id">Monitor unique identifier</param>
+            <returns>The monitor as MonitorDetailsExportViewModel</returns>
         </member>
         <member name="T:PCShop.Core.Services.Interfaces.IUserService">
             <summary>
