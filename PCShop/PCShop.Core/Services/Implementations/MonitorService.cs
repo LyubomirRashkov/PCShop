@@ -4,10 +4,14 @@ using PCShop.Core.Exceptions;
 using PCShop.Core.Models.Monitor;
 using PCShop.Core.Services.Interfaces;
 using PCShop.Infrastructure.Common;
+using PCShop.Infrastructure.Data.Models;
+using PCShop.Infrastructure.Data.Models.GravitatingClasses;
 using System.Globalization;
 using System.Linq.Expressions;
+using static PCShop.Core.Constants.Constant.ClientConstants;
 using static PCShop.Core.Constants.Constant.ProductConstants;
 using Monitor = PCShop.Infrastructure.Data.Models.Monitor;
+using Type = PCShop.Infrastructure.Data.Models.GravitatingClasses.Type;
 
 namespace PCShop.Core.Services.Implementations
 {
@@ -32,11 +36,50 @@ namespace PCShop.Core.Services.Implementations
 			this.guard = guard;
 		}
 
-		/// <summary>
-		/// Method to mark a specific monitor as deleted
-		/// </summary>
-		/// <param name="id">Monitor unique identifier</param>
-		public async Task DeleteMonitorAsync(int id)
+        /// <summary>
+        /// Method to add a monitor
+        /// </summary>
+        /// <param name="model">Monitor input model</param>
+        /// <param name="userId">Monitor's owner unique identifier</param>
+        /// <returns>The unique identifier of the added monitor</returns>
+        public async Task<int> AddMonitorAsync(MonitorImportViewModel model, string? userId)
+        {
+			var monitor = new Monitor()
+			{
+				ImageUrl = model.ImageUrl,
+				Warranty = model.Warranty,
+				Price = model.Price,
+				Quantity = model.Quantity,
+
+				IsDeleted = false,
+				AddedOn = DateTime.UtcNow.Date,
+			};
+
+			Client? dbClient = null;
+
+			if (userId is not null)
+			{
+				dbClient = await this.repository.GetByPropertyAsync<Client>(c => c.UserId == userId);
+
+				this.guard.AgainstClientThatDoesNotExist<Client>(dbClient, ErrorMessageForInvalidUserId);
+			}
+
+			monitor.Seller = dbClient;
+
+			monitor = await this.SetNavigationPropertiesAsync(monitor, model.Brand, model.DisplaySize, model.Resolution, model.RefreshRate, model.Type, model.DisplayCoverage, model.DisplayTechnology, model.Color);
+
+			await this.repository.AddAsync<Monitor>(monitor);
+
+			await this.repository.SaveChangesAsync();
+
+			return monitor.Id;
+		}
+
+        /// <summary>
+        /// Method to mark a specific monitor as deleted
+        /// </summary>
+        /// <param name="id">Monitor unique identifier</param>
+        public async Task DeleteMonitorAsync(int id)
 		{
 			var monitor = await this.repository.GetByIdAsync<Monitor>(id);
 
@@ -239,5 +282,69 @@ namespace PCShop.Core.Services.Implementations
 
 			return monitorsAsMonitorsExportViewModels;
 		}
+
+        private async Task<Monitor> SetNavigationPropertiesAsync(Monitor monitor, string brand, double displaySize, string resolution, int refreshRate, string type, string? displayCoverage, string? displayTechnology, string? color)
+        {
+            var brandNormalized = brand.ToLower();
+            var dbBrand = await this.repository.GetByPropertyAsync<Brand>(b => EF.Functions.Like(b.Name.ToLower(), brandNormalized));
+            dbBrand ??= new Brand { Name = brand };
+            monitor.Brand = dbBrand;
+
+            var dbDisplaySize = await this.repository.GetByPropertyAsync<DisplaySize>(ds => ds.Value == displaySize);
+            dbDisplaySize ??= new DisplaySize { Value = displaySize };
+            monitor.DisplaySize = dbDisplaySize;
+
+			var resolutionNormalized = resolution.ToLower();
+			var dbResolution = await this.repository.GetByPropertyAsync<Resolution>(r => EF.Functions.Like(r.Value.ToLower(), resolutionNormalized));
+			dbResolution ??= new Resolution { Value = resolution };
+			monitor.Resolution = dbResolution;
+
+			var dbRefreshRate = await this.repository.GetByPropertyAsync<RefreshRate>(rr => rr.Value == refreshRate);
+			dbRefreshRate ??= new RefreshRate { Value = refreshRate };
+			monitor.RefreshRate = dbRefreshRate;
+
+            var typeNormalized = type.ToLower();
+            var dbType = await this.repository.GetByPropertyAsync<Type>(t => EF.Functions.Like(t.Name.ToLower(), typeNormalized));
+            dbType ??= new Type { Name = type };
+            monitor.Type = dbType;
+
+            if (String.IsNullOrWhiteSpace(displayCoverage))
+            {
+                monitor.DisplayCoverage = null;
+            }
+            else
+            {
+                var displayCoverageNormalized = displayCoverage.ToLower();
+                var dbDisplayCoverage = await this.repository.GetByPropertyAsync<DisplayCoverage>(dc => EF.Functions.Like(dc.Name.ToLower(), displayCoverageNormalized));
+                dbDisplayCoverage ??= new DisplayCoverage { Name = displayCoverage };
+                monitor.DisplayCoverage = dbDisplayCoverage;
+            }
+
+            if (String.IsNullOrWhiteSpace(displayTechnology))
+            {
+                monitor.DisplayTechnology = null;
+            }
+            else
+            {
+                var displayTechnologyNormalized = displayTechnology.ToLower();
+                var dbDisplayTechnology = await this.repository.GetByPropertyAsync<DisplayTechnology>(dt => EF.Functions.Like(dt.Name.ToLower(), displayTechnologyNormalized));
+                dbDisplayTechnology ??= new DisplayTechnology { Name = displayTechnology };
+                monitor.DisplayTechnology = dbDisplayTechnology;
+            }
+
+            if (String.IsNullOrWhiteSpace(color))
+            {
+                monitor.Color = null;
+            }
+            else
+            {
+                var colorNormalized = color.ToLower();
+                var dbColor = await this.repository.GetByPropertyAsync<Color>(c => EF.Functions.Like(c.Name.ToLower(), colorNormalized));
+                dbColor ??= new Color { Name = color };
+                monitor.Color = dbColor;
+            }
+
+            return monitor;
+        }
 	}
 }

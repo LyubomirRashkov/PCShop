@@ -248,5 +248,20 @@
 			/// </summary>
 			public const int RequiredNumberOfPurchasesToBeSuperUser = 5;
         }
+
+        /// <summary>
+        /// Class holding Monitor constants
+        /// </summary>
+        public static class MonitorConstants
+        {
+            /// <summary>
+            /// Constant for the min value of monitor's refresh rate
+            /// </summary>
+            public const int RefreshRateMinValue = 1;
+            /// <summary>
+            /// Constant for the max value of monitor's refresh rate
+            /// </summary>
+            public const int RefreshRateMaxValue = int.MaxValue;
+        }
     }
 }

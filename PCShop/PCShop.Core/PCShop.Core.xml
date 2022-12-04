@@ -244,6 +244,21 @@
             Constant for the required number of purchases a client must make to become a SuperUser
             </summary>
         </member>
+        <member name="T:PCShop.Core.Constants.Constant.MonitorConstants">
+            <summary>
+            Class holding Monitor constants
+            </summary>
+        </member>
+        <member name="F:PCShop.Core.Constants.Constant.MonitorConstants.RefreshRateMinValue">
+            <summary>
+            Constant for the min value of monitor's refresh rate
+            </summary>
+        </member>
+        <member name="F:PCShop.Core.Constants.Constant.MonitorConstants.RefreshRateMaxValue">
+            <summary>
+            Constant for the max value of monitor's refresh rate
+            </summary>
+        </member>
         <member name="T:PCShop.Core.Constants.Sorting">
             <summary>
             An enumeration of product sortings
@@ -801,6 +816,71 @@
             Property that represents monitor refresh rate
             </summary>
         </member>
+        <member name="T:PCShop.Core.Models.Monitor.MonitorImportViewModel">
+            <summary>
+            MonitorImportViewModel model
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Monitor.MonitorImportViewModel.Brand">
+            <summary>
+            Property that represents monitor brand
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Monitor.MonitorImportViewModel.DisplaySize">
+            <summary>
+            Property that represents monitor display size
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Monitor.MonitorImportViewModel.Resolution">
+            <summary>
+            Property that represents monitor display resolution
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Monitor.MonitorImportViewModel.RefreshRate">
+            <summary>
+            Property that represents monitor refresh rate
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Monitor.MonitorImportViewModel.Type">
+            <summary>
+            Property that represents monitor type
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Monitor.MonitorImportViewModel.Quantity">
+            <summary>
+            Property that represents monitor count
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Monitor.MonitorImportViewModel.Price">
+            <summary>
+            Property that represents monitor price
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Monitor.MonitorImportViewModel.Warranty">
+            <summary>
+            Property that represents monitor warranty
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Monitor.MonitorImportViewModel.DisplayCoverage">
+            <summary>
+            Property that represents monitor display coverage
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Monitor.MonitorImportViewModel.DisplayTechnology">
+            <summary>
+            Property that represents monitor display technology
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Monitor.MonitorImportViewModel.Color">
+            <summary>
+            Property that represents monitor color
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Monitor.MonitorImportViewModel.ImageUrl">
+            <summary>
+            Property that represents monitor image url
+            </summary>
+        </member>
         <member name="T:PCShop.Core.Models.Monitor.MonitorsQueryModel">
             <summary>
             MonitorsQueryModel model
@@ -1076,6 +1156,14 @@
             <param name="repository">The repository that will be used</param>
             <param name="guard">The guard that will be used</param>
         </member>
+        <member name="M:PCShop.Core.Services.Implementations.MonitorService.AddMonitorAsync(PCShop.Core.Models.Monitor.MonitorImportViewModel,System.String)">
+            <summary>
+            Method to add a monitor
+            </summary>
+            <param name="model">Monitor input model</param>
+            <param name="userId">Monitor's owner unique identifier</param>
+            <returns>The unique identifier of the added monitor</returns>
+        </member>
         <member name="M:PCShop.Core.Services.Implementations.MonitorService.DeleteMonitorAsync(System.Int32)">
             <summary>
             Method to mark a specific monitor as deleted
@@ -1307,6 +1395,14 @@
             Method to mark a specific monitor as deleted
             </summary>
             <param name="id">Monitor unique identifier</param>
+        </member>
+        <member name="M:PCShop.Core.Services.Interfaces.IMonitorService.AddMonitorAsync(PCShop.Core.Models.Monitor.MonitorImportViewModel,System.String)">
+            <summary>
+            Method to add a monitor
+            </summary>
+            <param name="model">Monitor input model</param>
+            <param name="userId">Monitor's owner unique identifier</param>
+            <returns>The unique identifier of the added monitor</returns>
         </member>
         <member name="T:PCShop.Core.Services.Interfaces.IUserService">
             <summary>

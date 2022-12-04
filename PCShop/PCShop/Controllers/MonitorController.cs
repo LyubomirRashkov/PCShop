@@ -1,8 +1,10 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using PCShop.Core.Exceptions;
 using PCShop.Core.Models.Monitor;
 using PCShop.Core.Services.Interfaces;
 using PCShop.Extensions;
+using static PCShop.Core.Constants.Constant.ClientConstants;
 using static PCShop.Infrastructure.Constants.DataConstant.RoleConstants;
 
 namespace PCShop.Controllers
@@ -14,14 +16,19 @@ namespace PCShop.Controllers
 	public class MonitorController : Controller
 	{
 		private readonly IMonitorService monitorService;
+		private readonly IClientService clientService;
 
-		/// <summary>
-		/// Constructor of MonitorController class
-		/// </summary>
-		/// <param name="monitorService">The IMonitorService needed for functionality</param>
-		public MonitorController(IMonitorService monitorService)
+        /// <summary>
+        /// Constructor of MonitorController class
+        /// </summary>
+        /// <param name="monitorService">The IMonitorService needed for functionality</param>
+        /// <param name="clientService">The IClientService needed for functionality</param>
+        public MonitorController(
+			IMonitorService monitorService, 
+			IClientService clientService)
 		{
 			this.monitorService = monitorService;
+			this.clientService = clientService;
 		}
 
 		/// <summary>
@@ -99,6 +106,71 @@ namespace PCShop.Controllers
 			catch (ArgumentException)
 			{
 				return NotFound();
+			}
+		}
+
+        /// <summary>
+        /// HttpGet action to return the form for adding a monitor
+        /// </summary>
+        /// <returns>The form for adding a monitor</returns>
+        [HttpGet]
+		[Authorize(Roles = $"{Administrator}, {SuperUser}")]
+		public async Task<IActionResult> Add()
+		{
+			if (this.User.IsInRole(SuperUser))
+			{
+				var userId = this.User.Id();
+
+				try
+				{
+					var numberOfActiveSales = await this.clientService.GetNumberOfActiveSales(userId);
+
+					if (numberOfActiveSales == MaxNumberOfAllowedSales)
+					{
+						ViewData["Title"] = "Add a monitor";
+
+						return View("AddNotAllowed");
+					}
+				}
+				catch (PCShopException)
+				{
+					return View("Error");
+				}
+			}
+
+			return View();
+		}
+
+        /// <summary>
+        /// HttpPost action to add a monitor
+        /// </summary>
+        /// <param name="model">Monitor import model</param>
+        /// <returns>Redirection to /Monitor/Details</returns>
+        [HttpPost]
+		[Authorize(Roles = $"{Administrator}, {SuperUser}")]
+		public async Task<IActionResult> Add(MonitorImportViewModel model)
+		{
+			if (!this.ModelState.IsValid)
+			{
+				return View(model);
+			}
+
+			string? userId = null;
+
+			if (this.User.IsInRole(SuperUser))
+			{
+				userId = this.User.Id();
+			}
+
+			try
+			{
+				int id = await this.monitorService.AddMonitorAsync(model, userId);
+
+				return RedirectToAction(nameof(Details), new { id });
+			}
+			catch (PCShopException)
+			{
+				return View("Error");
 			}
 		}
 	}

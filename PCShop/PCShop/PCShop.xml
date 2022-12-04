@@ -178,11 +178,12 @@
             Monitor controller class
             </summary>
         </member>
-        <member name="M:PCShop.Controllers.MonitorController.#ctor(PCShop.Core.Services.Interfaces.IMonitorService)">
+        <member name="M:PCShop.Controllers.MonitorController.#ctor(PCShop.Core.Services.Interfaces.IMonitorService,PCShop.Core.Services.Interfaces.IClientService)">
             <summary>
             Constructor of MonitorController class
             </summary>
             <param name="monitorService">The IMonitorService needed for functionality</param>
+            <param name="clientService">The IClientService needed for functionality</param>
         </member>
         <member name="M:PCShop.Controllers.MonitorController.Index(PCShop.Core.Models.Monitor.AllMonitorsQueryModel)">
             <summary>
@@ -204,6 +205,19 @@
             </summary>
             <param name="id">Monitor unique identifier</param>
             <returns>Redirection to /Monitor/Index</returns>
+        </member>
+        <member name="M:PCShop.Controllers.MonitorController.Add">
+            <summary>
+            HttpGet action to return the form for adding a monitor
+            </summary>
+            <returns>The form for adding a monitor</returns>
+        </member>
+        <member name="M:PCShop.Controllers.MonitorController.Add(PCShop.Core.Models.Monitor.MonitorImportViewModel)">
+            <summary>
+            HttpPost action to add a monitor
+            </summary>
+            <param name="model">Monitor import model</param>
+            <returns>Redirection to /Monitor/Details</returns>
         </member>
         <member name="T:PCShop.Extensions.ClaimsPrincipalExtension">
             <summary>

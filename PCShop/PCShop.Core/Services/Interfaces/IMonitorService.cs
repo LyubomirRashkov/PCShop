@@ -64,5 +64,13 @@ namespace PCShop.Core.Services.Interfaces
 		/// </summary>
 		/// <param name="id">Monitor unique identifier</param>
 		Task DeleteMonitorAsync(int id);
+
+		/// <summary>
+		/// Method to add a monitor
+		/// </summary>
+		/// <param name="model">Monitor input model</param>
+		/// <param name="userId">Monitor's owner unique identifier</param>
+		/// <returns>The unique identifier of the added monitor</returns>
+		Task<int> AddMonitorAsync(MonitorImportViewModel model, string? userId);
 	}
 }

@@ -1,0 +1,91 @@
+﻿@model MonitorImportViewModel
+
+@{
+    ViewData["Title"] = "Add a monitor";
+}
+
+<h1 class="text-center mb-2">@ViewData["Title"]</h1>
+
+<hr />
+
+<div class="row">
+    <div class="col-sm-12 offset-lg-2 col-lg-8 offset-xl-3 col-xl-6">
+        <form method="post">
+            <div class="mb-3">
+                <label asp-for="@Model.Brand" class="form-label">Brand <sup>(required)</sup></label>
+                <input asp-for="@Model.Brand" class="form-control" aria-required="true" placeholder="Enter brand" />
+                <span asp-validation-for="Brand" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="@Model.DisplaySize" class="form-label">Displpay size (in inches) <sup>(required)</sup></label>
+                <input asp-for="@Model.DisplaySize" class="form-control" aria-required="true" placeholder="24.5" />
+                <span asp-validation-for="DisplaySize" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="@Model.Resolution" class="form-label">Display resolution <sup>(required)</sup></label>
+                <input asp-for="@Model.Resolution" class="form-control" placeholder="3840x2160 4K Ultra HD" />
+                <span asp-validation-for="Resolution" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="@Model.RefreshRate" class="form-label">Refresh rate <sup>(required)</sup></label>
+                <input asp-for="@Model.RefreshRate" class="form-control" placeholder="144" />
+                <span asp-validation-for="RefreshRate" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="@Model.Type" class="form-label">Type <sup>(required)</sup></label>
+                <input asp-for="@Model.Type" class="form-control" aria-required="true" placeholder="For graphic design" />
+                <span asp-validation-for="Type" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="@Model.Quantity" class="form-label">Quantity <sup>(required)</sup></label>
+                <input asp-for="@Model.Quantity" class="form-control" aria-required="true" placeholder="1" />
+                <span asp-validation-for="Quantity" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="@Model.Price" class="form-label">Price <sup>(required)</sup></label>
+                <input asp-for="@Model.Price" class="form-control" aria-required="true" placeholder="1250.00" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+
+            @if ((this.User?.Identity?.IsAuthenticated ?? false)
+            && this.User.IsInRole(Administrator))
+            {
+                <div class="mb-3">
+                    <label asp-for="@Model.Warranty" class="form-label">Warranty (in months) <sup>(required)</sup></label>
+                    <input asp-for="@Model.Warranty" class="form-control" placeholder="12" />
+                    <span asp-validation-for="Warranty" class="text-danger"></span>
+                </div>
+            }
+
+            <div class="mb-3">
+                <label asp-for="@Model.DisplayCoverage" class="form-label">Display coverage</label>
+                <input asp-for="@Model.DisplayCoverage" class="form-control" placeholder="Matte" />
+                <span asp-validation-for="DisplayCoverage" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="@Model.DisplayTechnology" class="form-label">Display technology</label>
+                <input asp-for="@Model.DisplayTechnology" class="form-control" placeholder="LED" />
+                <span asp-validation-for="DisplayTechnology" class="text-danger"></span>
+            </div>
+           
+            <div class="mb-3">
+                <label asp-for="@Model.Color" class="form-label">Monitor color</label>
+                <input asp-for="@Model.Color" class="form-control" placeholder="Black" />
+                <span asp-validation-for="Color" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="@Model.ImageUrl" class="form-label">Monitor image URL <sup>(highly recommended)</sup></label>
+                <input asp-for="@Model.ImageUrl" class="form-control" placeholder="https://laptop.bg/system/images/292408/double/dell_se2422h.jpeg" />
+                <span asp-validation-for="ImageUrl" class="text-danger"></span>
+            </div>
+
+            <div class="text-center mb-3">
+                <input class="btn btn-primary" type="submit" value="Add" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
