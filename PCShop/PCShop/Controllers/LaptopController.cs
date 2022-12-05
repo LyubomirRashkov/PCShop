@@ -282,11 +282,21 @@ namespace PCShop.Controllers
 
 			try
 			{
+				var userId = this.User.Id();
+
+				if (this.User.IsInRole(SuperUser))
+				{
+					var laptopSeller = (await this.laptopService.GetLaptopByIdAsLaptopEditViewModelAsync(id)).Seller;
+
+					if (laptopSeller is not null && laptopSeller.UserId == userId)
+					{
+						return Unauthorized();
+					}
+				}
+
 				ViewData["Title"] = "Buy a laptop";
 
 				await this.laptopService.MarkLaptopAsBought(id);
-
-				var userId = this.User.Id();
 
 				var client = await this.clientService.BuyProduct(userId);
 
