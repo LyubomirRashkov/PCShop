@@ -233,6 +233,12 @@
             <param name="model">Monitor import model</param>
             <returns>Redirection to /Monitor/Details</returns>
         </member>
+        <member name="M:PCShop.Controllers.MonitorController.Mine">
+            <summary>
+            HttpGet action to retrieve all active monitor sales of the currently logged in user
+            </summary>
+            <returns>Collection of all active monitor sales of the currently logged in user</returns>
+        </member>
         <member name="T:PCShop.Extensions.ClaimsPrincipalExtension">
             <summary>
             ClaimsPrincipalExtension model

@@ -1,0 +1,24 @@
+﻿@model IEnumerable<MonitorDetailsExportViewModel>
+
+@{
+	ViewData["Title"] = "My monitors";
+}
+
+<h1 class="text-center mb-2">@ViewData["Title"]</h1>
+
+<hr />
+
+@if (Model.Any())
+{
+	<div class="row">
+
+		@foreach (var monitor in Model)
+		{
+			<partial name="_MonitorPartial" model="@monitor" />
+		}
+	</div>
+}
+else
+{
+	<h3 class="text-center mt-5">You have no monitors added yet!</h3>
+}

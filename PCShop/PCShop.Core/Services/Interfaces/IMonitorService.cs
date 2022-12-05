@@ -86,5 +86,12 @@ namespace PCShop.Core.Services.Interfaces
         /// <param name="model">Monitor input model</param>
         /// <returns>The unique identifier of the edited monitor</returns>
         Task<int> EditMonitorAsync(MonitorEditViewModel model);
+
+		/// <summary>
+		/// Method to retrieve all active monitor sales of the currently logged in user
+		/// </summary>
+		/// <param name="userId">User unique identifier</param>
+		/// <returns>Collection of MonitorDetailsExportViewModels</returns>
+		Task<IEnumerable<MonitorDetailsExportViewModel>> GetUserMonitorsAsync(string userId);
 	}
 }

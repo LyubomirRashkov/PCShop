@@ -318,6 +318,22 @@ namespace PCShop.Core.Services.Implementations
 			return monitorExport;
         }
 
+		/// <summary>
+		/// Method to retrieve all active monitor sales of the currently logged in user
+		/// </summary>
+		/// <param name="userId">User unique identifier</param>
+		/// <returns>Collection of MonitorDetailsExportViewModels</returns>
+		public async Task<IEnumerable<MonitorDetailsExportViewModel>> GetUserMonitorsAsync(string userId)
+        {
+			var client = await this.repository.GetByPropertyAsync<Client>(c => c.UserId == userId);
+
+			this.guard.AgainstClientThatDoesNotExist<Client>(client, ErrorMessageForInvalidUserId);
+
+			var userMonitors = await this.GetMonitorsAsMonitorsDetailsExportViewModelsAsync<Monitor>(m => m.SellerId == client.Id);
+
+			return userMonitors;
+        }
+
         private async Task<IList<MonitorDetailsExportViewModel>> GetMonitorsAsMonitorsDetailsExportViewModelsAsync<T>(Expression<Func<Monitor, bool>> condition)
 		{
 			var monitorsAsMonitorsExportViewModels = await this.repository
