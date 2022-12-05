@@ -786,6 +786,21 @@
             Property that represents monitor seller last name
             </summary>
         </member>
+        <member name="T:PCShop.Core.Models.Monitor.MonitorEditViewModel">
+            <summary>
+            MonitorEditViewModel model
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Monitor.MonitorEditViewModel.Id">
+            <summary>
+            Property that represents monitor unique identifier
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Monitor.MonitorEditViewModel.Seller">
+            <summary>
+            Property thaat represents monitor Seller
+            </summary>
+        </member>
         <member name="T:PCShop.Core.Models.Monitor.MonitorExportViewModel">
             <summary>
             MonitorExportViewModel model
@@ -1170,6 +1185,13 @@
             </summary>
             <param name="id">Monitor unique identifier</param>
         </member>
+        <member name="M:PCShop.Core.Services.Implementations.MonitorService.EditMonitorAsync(PCShop.Core.Models.Monitor.MonitorEditViewModel)">
+            <summary>
+            Method to edit a monitor
+            </summary>
+            <param name="model">Monitor input model</param>
+            <returns>The unique identifier of the edited monitor</returns>
+        </member>
         <member name="M:PCShop.Core.Services.Implementations.MonitorService.GetAllBrandsNames">
             <summary>
             Method to retrieve all monitor brands names
@@ -1213,6 +1235,13 @@
             </summary>
             <param name="id">Monitor unique identifier</param>
             <returns>The monitor as MonitorDetailsExportViewModel</returns>
+        </member>
+        <member name="M:PCShop.Core.Services.Implementations.MonitorService.GetMonitorByIdAsMonitorEditViewModelAsync(System.Int32)">
+            <summary>
+            Method to retrieve a specific monitor
+            </summary>
+            <param name="id">Monitor unique identifier</param>
+            <returns>The monitor as MonitorEditViewModel</returns>
         </member>
         <member name="T:PCShop.Core.Services.Implementations.UserService">
             <summary>
@@ -1403,6 +1432,20 @@
             <param name="model">Monitor input model</param>
             <param name="userId">Monitor's owner unique identifier</param>
             <returns>The unique identifier of the added monitor</returns>
+        </member>
+        <member name="M:PCShop.Core.Services.Interfaces.IMonitorService.GetMonitorByIdAsMonitorEditViewModelAsync(System.Int32)">
+            <summary>
+            Method to retrieve a specific monitor
+            </summary>
+            <param name="id">Monitor unique identifier</param>
+            <returns>The monitor as MonitorEditViewModel</returns>
+        </member>
+        <member name="M:PCShop.Core.Services.Interfaces.IMonitorService.EditMonitorAsync(PCShop.Core.Models.Monitor.MonitorEditViewModel)">
+            <summary>
+            Method to edit a monitor
+            </summary>
+            <param name="model">Monitor input model</param>
+            <returns>The unique identifier of the edited monitor</returns>
         </member>
         <member name="T:PCShop.Core.Services.Interfaces.IUserService">
             <summary>

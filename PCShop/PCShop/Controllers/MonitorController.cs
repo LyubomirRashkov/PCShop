@@ -173,5 +173,66 @@ namespace PCShop.Controllers
 				return View("Error");
 			}
 		}
+
+        /// <summary>
+        /// HttpGet action to return the form for editing a monitor
+        /// </summary>
+        /// <param name="id">Monitor unique identifier</param>
+        /// <returns>The form for editing a monitor</returns>
+        [HttpGet]
+		[Authorize(Roles = $"{Administrator}, {SuperUser}")]
+		public async Task<IActionResult> Edit(int id)
+		{
+			try
+			{
+				var monitor = await this.monitorService.GetMonitorByIdAsMonitorEditViewModelAsync(id);
+
+				if (this.User.IsInRole(SuperUser) 
+					&& (monitor.Seller is null || this.User.Id() != monitor.Seller.UserId))
+				{
+					return Unauthorized();
+				}
+
+				return View(monitor);
+			}
+			catch (ArgumentException)
+			{
+				return NotFound();
+			}
+		}
+
+        /// <summary>
+        /// HttpPost action to edit a monitor
+        /// </summary>
+        /// <param name="model">Monitor import model</param>
+        /// <returns>Redirection to /Monitor/Details</returns>
+        [HttpPost]
+		[Authorize(Roles = $"{Administrator}, {SuperUser}")]
+		public async Task<IActionResult> Edit(MonitorEditViewModel model)
+		{
+			if (!this.ModelState.IsValid)
+			{
+				return View(model);
+			}
+
+			try
+			{
+				var monitor = await this.monitorService.GetMonitorByIdAsMonitorEditViewModelAsync(model.Id);
+
+				if ((this.User.IsInRole(SuperUser)) 
+					&& (monitor.Seller is null || this.User.Id() != monitor.Seller.UserId))
+				{
+					return Unauthorized();
+				}
+
+				int id = await this.monitorService.EditMonitorAsync(model);
+
+				return RedirectToAction(nameof(Details), new { id });
+			}
+			catch (ArgumentException)
+			{
+				return NotFound();
+			}
+		}
 	}
 }

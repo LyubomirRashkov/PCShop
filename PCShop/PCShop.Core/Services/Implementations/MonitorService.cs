@@ -92,11 +92,46 @@ namespace PCShop.Core.Services.Implementations
 			await this.repository.SaveChangesAsync();
 		}
 
-		/// <summary>
-		/// Method to retrieve all monitor brands names
-		/// </summary>
-		/// <returns>Ordered collection of brand names</returns>
-		public async Task<IEnumerable<string>> GetAllBrandsNames()
+        /// <summary>
+        /// Method to edit a monitor
+        /// </summary>
+        /// <param name="model">Monitor input model</param>
+        /// <returns>The unique identifier of the edited monitor</returns>
+        public async Task<int> EditMonitorAsync(MonitorEditViewModel model)
+        {
+			var monitor = await this.repository
+				.All<Monitor>(m => !m.IsDeleted)
+				.Where(m => m.Id == model.Id)
+				.Include(m => m.Brand)
+				.Include(m => m.DisplaySize)
+				.Include(m => m.Type)
+				.Include(m => m.DisplayCoverage)
+				.Include(m => m.DisplayTechnology)
+				.Include(m => m.Resolution)
+				.Include(m => m.RefreshRate)
+				.Include(m => m.Color)
+				.FirstOrDefaultAsync();
+
+			this.guard.AgainstProductThatIsNull<Monitor>(monitor, ErrorMessageForInvalidProductId);
+
+			monitor.ImageUrl = model.ImageUrl;
+			monitor.Warranty = model.Warranty;
+			monitor.Price = model.Price;
+			monitor.Quantity = model.Quantity;
+			monitor.AddedOn = DateTime.UtcNow.Date;
+
+			monitor = await this.SetNavigationPropertiesAsync(monitor, model.Brand, model.DisplaySize, model.Resolution, model.RefreshRate, model.Type, model.DisplayCoverage, model.DisplayTechnology, model.Color);
+
+			await this.repository.SaveChangesAsync();
+
+			return monitor.Id;
+        }
+
+        /// <summary>
+        /// Method to retrieve all monitor brands names
+        /// </summary>
+        /// <returns>Ordered collection of brand names</returns>
+        public async Task<IEnumerable<string>> GetAllBrandsNames()
 		{
 			return await this.repository.AllAsReadOnly<Monitor>(m => !m.IsDeleted)
 				.Select(m => m.Brand.Name)
@@ -249,7 +284,41 @@ namespace PCShop.Core.Services.Implementations
 			return monitorExports[0];
 		}
 
-		private async Task<IList<MonitorDetailsExportViewModel>> GetMonitorsAsMonitorsDetailsExportViewModelsAsync<T>(Expression<Func<Monitor, bool>> condition)
+        /// <summary>
+        /// Method to retrieve a specific monitor
+        /// </summary>
+        /// <param name="id">Monitor unique identifier</param>
+        /// <returns>The monitor as MonitorEditViewModel</returns>
+        public async Task<MonitorEditViewModel> GetMonitorByIdAsMonitorEditViewModelAsync(int id)
+        {
+			var monitorExport = await this.repository
+				.All<Monitor>(m => !m.IsDeleted)
+				.Where(m => m.Id == id)
+				.Select(m => new MonitorEditViewModel()
+				{
+					Id = m.Id,
+					Brand = m.Brand.Name,
+					DisplaySize = m.DisplaySize.Value,
+					Resolution = m.Resolution.Value,
+					RefreshRate = m.RefreshRate.Value,
+					Type = m.Type.Name,
+					Quantity = m.Quantity,
+					Price = m.Price,
+					Warranty = m.Warranty,
+					DisplayCoverage = m.DisplayCoverage == null ? null : m.DisplayCoverage.Name,
+					DisplayTechnology = m.DisplayTechnology == null ? null : m.DisplayTechnology.Name,
+					Color = m.Color == null ? null : m.Color.Name,
+					ImageUrl = m.ImageUrl,
+					Seller = m.Seller,
+				})
+				.FirstOrDefaultAsync();
+
+			this.guard.AgainstProductThatIsNull<MonitorEditViewModel>(monitorExport, ErrorMessageForInvalidProductId);
+
+			return monitorExport;
+        }
+
+        private async Task<IList<MonitorDetailsExportViewModel>> GetMonitorsAsMonitorsDetailsExportViewModelsAsync<T>(Expression<Func<Monitor, bool>> condition)
 		{
 			var monitorsAsMonitorsExportViewModels = await this.repository
 				.AllAsReadOnly<Monitor>(m => !m.IsDeleted)

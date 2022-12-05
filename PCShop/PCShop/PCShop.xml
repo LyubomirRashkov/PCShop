@@ -219,6 +219,20 @@
             <param name="model">Monitor import model</param>
             <returns>Redirection to /Monitor/Details</returns>
         </member>
+        <member name="M:PCShop.Controllers.MonitorController.Edit(System.Int32)">
+            <summary>
+            HttpGet action to return the form for editing a monitor
+            </summary>
+            <param name="id">Monitor unique identifier</param>
+            <returns>The form for editing a monitor</returns>
+        </member>
+        <member name="M:PCShop.Controllers.MonitorController.Edit(PCShop.Core.Models.Monitor.MonitorEditViewModel)">
+            <summary>
+            HttpPost action to edit a monitor
+            </summary>
+            <param name="model">Monitor import model</param>
+            <returns>Redirection to /Monitor/Details</returns>
+        </member>
         <member name="T:PCShop.Extensions.ClaimsPrincipalExtension">
             <summary>
             ClaimsPrincipalExtension model
