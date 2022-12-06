@@ -103,14 +103,13 @@
             Laptop controller class
             </summary>
         </member>
-        <member name="M:PCShop.Controllers.LaptopController.#ctor(PCShop.Core.Services.Interfaces.ILaptopService,PCShop.Core.Services.Interfaces.IClientService,Microsoft.AspNetCore.Identity.UserManager{PCShop.Infrastructure.Data.Models.Account.User},Microsoft.AspNetCore.Identity.SignInManager{PCShop.Infrastructure.Data.Models.Account.User})">
+        <member name="M:PCShop.Controllers.LaptopController.#ctor(PCShop.Core.Services.Interfaces.ILaptopService,PCShop.Core.Services.Interfaces.IClientService,PCShop.Core.Services.Interfaces.IUserService)">
             <summary>
             Constructor of LaptopController class
             </summary>
             <param name="laptopService">The ILaptopService needed for functionality</param>
             <param name="clientService">The IClientService needed for functionality</param>
-            <param name="userManager">The UserManager<c>User</c></param>
-            <param name="signInManager">The SignInManager<c>User</c></param>
+            <param name="userService">The IUserService needed for functionality</param>
         </member>
         <member name="M:PCShop.Controllers.LaptopController.Index(PCShop.Core.Models.Laptop.AllLaptopsQueryModel)">
             <summary>

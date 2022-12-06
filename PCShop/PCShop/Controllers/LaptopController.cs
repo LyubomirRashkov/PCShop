@@ -19,26 +19,22 @@ namespace PCShop.Controllers
 	{
 		private readonly ILaptopService laptopService;
 		private readonly IClientService clientService;
-		private readonly UserManager<User> userManager;
-		private readonly SignInManager<User> signInManager;
+		private readonly IUserService userService;
 
 		/// <summary>
 		/// Constructor of LaptopController class
 		/// </summary>
 		/// <param name="laptopService">The ILaptopService needed for functionality</param>
 		/// <param name="clientService">The IClientService needed for functionality</param>
-		/// <param name="userManager">The UserManager<c>User</c></param>
-		/// <param name="signInManager">The SignInManager<c>User</c></param>
+		/// <param name="userService">The IUserService needed for functionality</param>
 		public LaptopController(
 			ILaptopService laptopService,
 			IClientService clientService,
-			UserManager<User> userManager,
-			SignInManager<User> signInManager)
+			IUserService userService)
 		{
 			this.laptopService = laptopService;
 			this.clientService = clientService;
-			this.userManager = userManager;
-			this.signInManager = signInManager;
+			this.userService = userService;
 		}
 
 		/// <summary>
@@ -300,16 +296,10 @@ namespace PCShop.Controllers
 
 				var client = await this.clientService.BuyProduct(userId);
 
-				if (client.CountOfPurchases == RequiredNumberOfPurchasesToBeSuperUser)
+				var isNowPromotedToSuperUser = await this.userService.ShouldBePromotedToSuperUser(client);
+
+				if (isNowPromotedToSuperUser)
 				{
-					var user = await this.userManager.FindByIdAsync(userId);
-
-					await this.userManager.AddToRoleAsync(user, SuperUser);
-
-					await this.signInManager.SignOutAsync();
-
-					await this.signInManager.SignInAsync(user, false);
-
 					return View("PromoteToSuperUser");
 				}
 
