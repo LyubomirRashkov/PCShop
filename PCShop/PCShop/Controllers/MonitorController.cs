@@ -17,18 +17,22 @@ namespace PCShop.Controllers
 	{
 		private readonly IMonitorService monitorService;
 		private readonly IClientService clientService;
+		private readonly IUserService userService;
 
-        /// <summary>
-        /// Constructor of MonitorController class
-        /// </summary>
-        /// <param name="monitorService">The IMonitorService needed for functionality</param>
-        /// <param name="clientService">The IClientService needed for functionality</param>
-        public MonitorController(
+		/// <summary>
+		/// Constructor of MonitorController class
+		/// </summary>
+		/// <param name="monitorService">The IMonitorService needed for functionality</param>
+		/// <param name="clientService">The IClientService needed for functionality</param>
+		/// <param name="userService">The IUserService needed for functionality</param>
+		public MonitorController(
 			IMonitorService monitorService, 
-			IClientService clientService)
+			IClientService clientService,
+			IUserService userService)
 		{
 			this.monitorService = monitorService;
 			this.clientService = clientService;
+			this.userService = userService;
 		}
 
 		/// <summary>
@@ -254,6 +258,54 @@ namespace PCShop.Controllers
 			catch (PCShopException)
 			{
 				return View("Error");
+			}
+		}
+
+		/// <summary>
+		/// HttpGet action to buy a monitor
+		/// </summary>
+		/// <param name="id">Monitor unique identifier</param>
+		/// <returns>The corresponding view</returns>
+		[HttpGet]
+		public async Task<IActionResult> Buy(int id)
+		{
+			if (this.User.IsInRole(Administrator))
+			{
+				return Unauthorized();
+			}
+
+			try
+			{
+				var userId = this.User.Id();
+
+				if (this.User.IsInRole(SuperUser))
+				{
+					var monitorSeller = (await this.monitorService.GetMonitorByIdAsMonitorEditViewModelAsync(id)).Seller;
+
+					if (monitorSeller is not null && monitorSeller.UserId == userId)
+					{
+						return Unauthorized();
+					}
+				}
+
+				ViewData["Title"] = "Buy a monitor";
+
+				await this.monitorService.MarkMonitorAsBought(id);
+
+				var client = await this.clientService.BuyProduct(userId);
+
+				var isNowPromotedToSuperUser = await this.userService.ShouldBePromotedToSuperUser(client);
+
+				if (isNowPromotedToSuperUser)
+				{
+					return View("PromoteToSuperUser");
+				}
+
+				return View("PurchaseMade");
+			}
+			catch (ArgumentException)
+			{
+				return NotFound();
 			}
 		}
 	}

@@ -93,5 +93,11 @@ namespace PCShop.Core.Services.Interfaces
 		/// <param name="userId">User unique identifier</param>
 		/// <returns>Collection of MonitorDetailsExportViewModels</returns>
 		Task<IEnumerable<MonitorDetailsExportViewModel>> GetUserMonitorsAsync(string userId);
+
+		/// <summary>
+		/// Method to mark the monitor with the given unique identifier as bought
+		/// </summary>
+		/// <param name="id">Monitor unique identifier</param>
+		Task MarkMonitorAsBought(int id);
 	}
 }

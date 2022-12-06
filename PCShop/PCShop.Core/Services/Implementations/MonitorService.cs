@@ -334,7 +334,26 @@ namespace PCShop.Core.Services.Implementations
 			return userMonitors;
         }
 
-        private async Task<IList<MonitorDetailsExportViewModel>> GetMonitorsAsMonitorsDetailsExportViewModelsAsync<T>(Expression<Func<Monitor, bool>> condition)
+		/// <summary>
+		/// Method to mark the monitor with the given unique identifier as bought
+		/// </summary>
+		/// <param name="id">Monitor unique identifier</param>
+		public async Task MarkMonitorAsBought(int id)
+		{
+			var monitor = await this.repository.GetByIdAsync<Monitor>(id);
+
+			this.guard.AgainstProductThatIsNull<Monitor>(monitor, ErrorMessageForInvalidProductId);
+
+			this.guard.AgainstProductThatIsDeleted(monitor.IsDeleted, ErrorMessageForDeletedProduct);
+
+			this.guard.AgainstProductThatIsOutOfStock(monitor.Quantity, ErrorMessageForProductThatIsOutOfStock);
+
+			monitor.Quantity--;
+
+			await this.repository.SaveChangesAsync();
+		}
+
+		private async Task<IList<MonitorDetailsExportViewModel>> GetMonitorsAsMonitorsDetailsExportViewModelsAsync<T>(Expression<Func<Monitor, bool>> condition)
 		{
 			var monitorsAsMonitorsExportViewModels = await this.repository
 				.AllAsReadOnly<Monitor>(m => !m.IsDeleted)

@@ -1250,6 +1250,12 @@
             <param name="userId">User unique identifier</param>
             <returns>Collection of MonitorDetailsExportViewModels</returns>
         </member>
+        <member name="M:PCShop.Core.Services.Implementations.MonitorService.MarkMonitorAsBought(System.Int32)">
+            <summary>
+            Method to mark the monitor with the given unique identifier as bought
+            </summary>
+            <param name="id">Monitor unique identifier</param>
+        </member>
         <member name="T:PCShop.Core.Services.Implementations.UserService">
             <summary>
             Implementation of IUserService interface
@@ -1469,6 +1475,12 @@
             </summary>
             <param name="userId">User unique identifier</param>
             <returns>Collection of MonitorDetailsExportViewModels</returns>
+        </member>
+        <member name="M:PCShop.Core.Services.Interfaces.IMonitorService.MarkMonitorAsBought(System.Int32)">
+            <summary>
+            Method to mark the monitor with the given unique identifier as bought
+            </summary>
+            <param name="id">Monitor unique identifier</param>
         </member>
         <member name="T:PCShop.Core.Services.Interfaces.IUserService">
             <summary>
