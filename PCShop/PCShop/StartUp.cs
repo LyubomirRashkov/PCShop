@@ -1,6 +1,5 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Razor;
 using Microsoft.EntityFrameworkCore;
 using PCShop.Infrastructure.Data;
 using PCShop.Infrastructure.Data.Models.Account;
@@ -63,6 +62,9 @@ else
 
 	app.UseHsts();
 }
+
+app.SeedAdmin();
+app.SeedSuperUser();
 
 app.UseHttpsRedirection();
 

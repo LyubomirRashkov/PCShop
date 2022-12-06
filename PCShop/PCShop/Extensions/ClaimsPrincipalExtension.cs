@@ -1,6 +1,4 @@
-﻿using System.Security.Claims;
-
-namespace PCShop.Extensions
+﻿namespace System.Security.Claims
 {
 	/// <summary>
 	/// ClaimsPrincipalExtension model
@@ -10,7 +8,7 @@ namespace PCShop.Extensions
 		/// <summary>
 		/// Extension method for getting ClaimsPrincipal's unique identifier
 		/// </summary>
-		/// <param name="user">ClaimsPrincipal that will be extended</param>
+		/// <param name="user">The ClaimsPrincipal that will be extended</param>
 		/// <returns>ClaimsPrincipal's unique identifier</returns>
 		public static string Id(this ClaimsPrincipal user)
 		{

@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using PCShop.Core.Models.User;
 using PCShop.Infrastructure.Data.Models.Account;
-using static PCShop.Infrastructure.Constants.DataConstant.RoleConstants;
 
 namespace PCShop.Controllers
 {
@@ -152,22 +151,5 @@ namespace PCShop.Controllers
 
             return RedirectToAction(nameof(HomeController.Index), "Home");
         }
-
-		/// <summary>
-		/// Initial action for adding users to corresponding roles
-		/// </summary>
-		/// <returns>The home page</returns>
-		public async Task<IActionResult> AddUsersToRolesInitial()
-		{
-			var adminUser = await this.userManager.FindByNameAsync("admin");
-
-			await this.userManager.AddToRoleAsync(adminUser, Administrator);
-
-			var superUser = await this.userManager.FindByNameAsync("superUser");
-
-			await this.userManager.AddToRoleAsync(superUser, SuperUser);
-
-			return RedirectToAction(nameof(HomeController.Index), "Home");
-		}
 	}
 }

@@ -154,6 +154,16 @@
             Constant for the max length of user's email
             </summary>
         </member>
+        <member name="F:PCShop.Infrastructure.Constants.DataConstant.UserConstants.AdminUserName">
+            <summary>
+            Constant for the admin username
+            </summary>
+        </member>
+        <member name="F:PCShop.Infrastructure.Constants.DataConstant.UserConstants.SuperUserUserName">
+            <summary>
+            Constant for the superUser username
+            </summary>
+        </member>
         <member name="T:PCShop.Infrastructure.Constants.DataConstant.RoleConstants">
             <summary>
             Class holding Role constants

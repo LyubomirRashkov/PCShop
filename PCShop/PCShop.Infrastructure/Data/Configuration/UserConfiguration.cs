@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using PCShop.Infrastructure.Data.Models.Account;
+using static PCShop.Infrastructure.Constants.DataConstant.UserConstants;
 
 namespace PCShop.Infrastructure.Data.Configuration
 {
@@ -28,8 +29,8 @@ namespace PCShop.Infrastructure.Data.Configuration
             var user = new User()
             {
                 Id = "19512f55-7aa0-4707-b60d-6588f20c2ab1",
-                UserName = "admin",
-                NormalizedUserName = "ADMIN",
+                UserName = AdminUserName,
+                NormalizedUserName = AdminUserName.ToUpper(),
                 Email = "admin@mail.com",
                 NormalizedEmail = "ADMIN@MAIL.COM",
                 FirstName = "Admin-FN",
@@ -43,8 +44,8 @@ namespace PCShop.Infrastructure.Data.Configuration
             user = new User()
             {
                 Id = "fdf4e641-9248-44d4-8d23-ca09ad4ad793",
-                UserName = "superUser",
-                NormalizedUserName = "SUPERUSER",
+                UserName = SuperUserUserName,
+                NormalizedUserName = SuperUserUserName.ToUpper(),
                 Email = "superUser@mail.com",
                 NormalizedEmail = "SUPERUSER@MAIL.COM",
                 FirstName = "SuperUser-FN",

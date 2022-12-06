@@ -29,6 +29,16 @@
 			/// Constant for the max length of user's email
 			/// </summary>
 			public const int EmailMaxLength = 40;
+
+            /// <summary>
+            /// Constant for the admin username
+            /// </summary>
+            public const string AdminUserName = "admin";
+
+            /// <summary>
+            /// Constant for the superUser username
+            /// </summary>
+            public const string SuperUserUserName = "superUser";
         }
 
         /// <summary>

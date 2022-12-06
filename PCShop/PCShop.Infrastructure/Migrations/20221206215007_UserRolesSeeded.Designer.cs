@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PCShop.Infrastructure.Data;
 
@@ -11,9 +12,10 @@ using PCShop.Infrastructure.Data;
 namespace PCShop.Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20221206215007_UserRolesSeeded")]
+    partial class UserRolesSeeded
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -323,7 +325,7 @@ namespace PCShop.Infrastructure.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Clients", (string)null);
+                    b.ToTable("Clients");
 
                     b.HasData(
                         new
@@ -349,7 +351,7 @@ namespace PCShop.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Brands", (string)null);
+                    b.ToTable("Brands");
                 });
 
             modelBuilder.Entity("PCShop.Infrastructure.Data.Models.GravitatingClasses.Color", b =>
@@ -367,7 +369,7 @@ namespace PCShop.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Colors", (string)null);
+                    b.ToTable("Colors");
                 });
 
             modelBuilder.Entity("PCShop.Infrastructure.Data.Models.GravitatingClasses.CPU", b =>
@@ -385,7 +387,7 @@ namespace PCShop.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("CPUs", (string)null);
+                    b.ToTable("CPUs");
                 });
 
             modelBuilder.Entity("PCShop.Infrastructure.Data.Models.GravitatingClasses.DisplayCoverage", b =>
@@ -403,7 +405,7 @@ namespace PCShop.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("DisplayCoverages", (string)null);
+                    b.ToTable("DisplayCoverages");
                 });
 
             modelBuilder.Entity("PCShop.Infrastructure.Data.Models.GravitatingClasses.DisplaySize", b =>
@@ -419,7 +421,7 @@ namespace PCShop.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("DisplaySizes", (string)null);
+                    b.ToTable("DisplaySizes");
                 });
 
             modelBuilder.Entity("PCShop.Infrastructure.Data.Models.GravitatingClasses.DisplayTechnology", b =>
@@ -437,7 +439,7 @@ namespace PCShop.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("DisplayTechnologies", (string)null);
+                    b.ToTable("DisplayTechnologies");
                 });
 
             modelBuilder.Entity("PCShop.Infrastructure.Data.Models.GravitatingClasses.Format", b =>
@@ -455,7 +457,7 @@ namespace PCShop.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Formats", (string)null);
+                    b.ToTable("Formats");
                 });
 
             modelBuilder.Entity("PCShop.Infrastructure.Data.Models.GravitatingClasses.RAM", b =>
@@ -471,7 +473,7 @@ namespace PCShop.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("RAMs", (string)null);
+                    b.ToTable("RAMs");
                 });
 
             modelBuilder.Entity("PCShop.Infrastructure.Data.Models.GravitatingClasses.RefreshRate", b =>
@@ -487,7 +489,7 @@ namespace PCShop.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("RefreshRates", (string)null);
+                    b.ToTable("RefreshRates");
                 });
 
             modelBuilder.Entity("PCShop.Infrastructure.Data.Models.GravitatingClasses.Resolution", b =>
@@ -505,7 +507,7 @@ namespace PCShop.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Resolutions", (string)null);
+                    b.ToTable("Resolutions");
                 });
 
             modelBuilder.Entity("PCShop.Infrastructure.Data.Models.GravitatingClasses.Sensitivity", b =>
@@ -523,7 +525,7 @@ namespace PCShop.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Sensitivities", (string)null);
+                    b.ToTable("Sensitivities");
                 });
 
             modelBuilder.Entity("PCShop.Infrastructure.Data.Models.GravitatingClasses.SSDCapacity", b =>
@@ -539,7 +541,7 @@ namespace PCShop.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("SSDCapacities", (string)null);
+                    b.ToTable("SSDCapacities");
                 });
 
             modelBuilder.Entity("PCShop.Infrastructure.Data.Models.GravitatingClasses.Type", b =>
@@ -557,7 +559,7 @@ namespace PCShop.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Types", (string)null);
+                    b.ToTable("Types");
                 });
 
             modelBuilder.Entity("PCShop.Infrastructure.Data.Models.GravitatingClasses.VideoCard", b =>
@@ -575,7 +577,7 @@ namespace PCShop.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("VideoCards", (string)null);
+                    b.ToTable("VideoCards");
                 });
 
             modelBuilder.Entity("PCShop.Infrastructure.Data.Models.Headphone", b =>
@@ -632,7 +634,7 @@ namespace PCShop.Infrastructure.Migrations
 
                     b.HasIndex("TypeId");
 
-                    b.ToTable("Headphones", (string)null);
+                    b.ToTable("Headphones");
                 });
 
             modelBuilder.Entity("PCShop.Infrastructure.Data.Models.Keyboard", b =>
@@ -691,7 +693,7 @@ namespace PCShop.Infrastructure.Migrations
 
                     b.HasIndex("TypeId");
 
-                    b.ToTable("Keyboards", (string)null);
+                    b.ToTable("Keyboards");
                 });
 
             modelBuilder.Entity("PCShop.Infrastructure.Data.Models.Laptop", b =>
@@ -782,7 +784,7 @@ namespace PCShop.Infrastructure.Migrations
 
                     b.HasIndex("VideoCardId");
 
-                    b.ToTable("Laptops", (string)null);
+                    b.ToTable("Laptops");
                 });
 
             modelBuilder.Entity("PCShop.Infrastructure.Data.Models.Microphone", b =>
@@ -828,7 +830,7 @@ namespace PCShop.Infrastructure.Migrations
 
                     b.HasIndex("SellerId");
 
-                    b.ToTable("Microphones", (string)null);
+                    b.ToTable("Microphones");
                 });
 
             modelBuilder.Entity("PCShop.Infrastructure.Data.Models.Monitor", b =>
@@ -904,7 +906,7 @@ namespace PCShop.Infrastructure.Migrations
 
                     b.HasIndex("TypeId");
 
-                    b.ToTable("Monitors", (string)null);
+                    b.ToTable("Monitors");
                 });
 
             modelBuilder.Entity("PCShop.Infrastructure.Data.Models.Mouse", b =>
@@ -963,7 +965,7 @@ namespace PCShop.Infrastructure.Migrations
 
                     b.HasIndex("TypeId");
 
-                    b.ToTable("Mice", (string)null);
+                    b.ToTable("Mice");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

@@ -1,11 +1,9 @@
 ﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using PCShop.Core.Exceptions;
 using PCShop.Core.Models.Laptop;
 using PCShop.Core.Services.Interfaces;
-using PCShop.Extensions;
-using PCShop.Infrastructure.Data.Models.Account;
+using System.Security.Claims;
 using static PCShop.Core.Constants.Constant.ClientConstants;
 using static PCShop.Infrastructure.Constants.DataConstant.RoleConstants;
 

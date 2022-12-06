@@ -13,7 +13,7 @@ namespace Microsoft.Extensions.DependencyInjection
         /// <summary>
         /// Extension method for adding services to the IoC container
         /// </summary>
-        /// <param name="services">IServiceCollection that will be extended</param>
+        /// <param name="services">The IServiceCollection that will be extended</param>
         /// <returns>Extended IServiceCollection</returns>
 		public static IServiceCollection AddApplicationServices(this IServiceCollection services)
 		{

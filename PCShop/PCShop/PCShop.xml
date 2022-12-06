@@ -74,12 +74,6 @@
             </summary>
             <returns>The home page</returns>
         </member>
-        <member name="M:PCShop.Controllers.AccountController.AddUsersToRolesInitial">
-            <summary>
-            Initial action for adding users to corresponding roles
-            </summary>
-            <returns>The home page</returns>
-        </member>
         <member name="T:PCShop.Controllers.HomeController">
             <summary>
             Home controller class
@@ -246,18 +240,6 @@
             <param name="id">Monitor unique identifier</param>
             <returns>The corresponding view</returns>
         </member>
-        <member name="T:PCShop.Extensions.ClaimsPrincipalExtension">
-            <summary>
-            ClaimsPrincipalExtension model
-            </summary>
-        </member>
-        <member name="M:PCShop.Extensions.ClaimsPrincipalExtension.Id(System.Security.Claims.ClaimsPrincipal)">
-            <summary>
-            Extension method for getting ClaimsPrincipal's unique identifier
-            </summary>
-            <param name="user">ClaimsPrincipal that will be extended</param>
-            <returns>ClaimsPrincipal's unique identifier</returns>
-        </member>
         <member name="T:PCShop.ModelBinders.DecimalModelBinder">
             <summary>
             Custom decimal model binder
@@ -308,6 +290,25 @@
             <returns>A DoubleModelBinder</returns>
             <exception cref="T:System.ArgumentNullException">Thrown when ModelBinderProviderContext is null</exception>
         </member>
+        <member name="T:Microsoft.AspNetCore.Builder.ApplicationBuilderExtensions">
+            <summary>
+            ApplicationBuilderExtensions model
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Builder.ApplicationBuilderExtensions.SeedAdmin(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            Extension method for adding admin user to the Administrator role
+            </summary>
+            <param name="app">The IApplicationBuilder that will be extended</param>
+            <returns>Extended IApplicationBuilder</returns>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Builder.ApplicationBuilderExtensions.SeedSuperUser(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            Extension method for adding superUser user to the SuperUser role
+            </summary>
+            <param name="app">The IApplicationBuilder that will be extended</param>
+            <returns>Extended IApplicationBuilder</returns>
+        </member>
         <member name="T:Microsoft.Extensions.DependencyInjection.PCShopServiceCollectionExtension">
             <summary>
             PCShopServiceCollectionExtension model
@@ -317,8 +318,20 @@
             <summary>
             Extension method for adding services to the IoC container
             </summary>
-            <param name="services">IServiceCollection that will be extended</param>
+            <param name="services">The IServiceCollection that will be extended</param>
             <returns>Extended IServiceCollection</returns>
+        </member>
+        <member name="T:System.Security.Claims.ClaimsPrincipalExtension">
+            <summary>
+            ClaimsPrincipalExtension model
+            </summary>
+        </member>
+        <member name="M:System.Security.Claims.ClaimsPrincipalExtension.Id(System.Security.Claims.ClaimsPrincipal)">
+            <summary>
+            Extension method for getting ClaimsPrincipal's unique identifier
+            </summary>
+            <param name="user">The ClaimsPrincipal that will be extended</param>
+            <returns>ClaimsPrincipal's unique identifier</returns>
         </member>
     </members>
 </doc>

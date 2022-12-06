@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using PCShop.Core.Exceptions;
 using PCShop.Core.Models.Monitor;
 using PCShop.Core.Services.Interfaces;
-using PCShop.Extensions;
+using System.Security.Claims;
 using static PCShop.Core.Constants.Constant.ClientConstants;
 using static PCShop.Infrastructure.Constants.DataConstant.RoleConstants;
 
