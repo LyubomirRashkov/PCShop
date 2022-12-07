@@ -1,8 +1,10 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Memory;
 using PCShop.Core.Models.User;
 using PCShop.Infrastructure.Data.Models.Account;
+using static PCShop.Areas.Administration.Constant;
 
 namespace PCShop.Controllers
 {
@@ -14,18 +16,22 @@ namespace PCShop.Controllers
     {
         private readonly UserManager<User> userManager;
         private readonly SignInManager<User> signInManager;
+        private readonly IMemoryCache memoryCache;
 
-        /// <summary>
-        /// Constructor of AccountController class
-        /// </summary>
-        /// <param name="userManager">The UserManager<c>User</c></param>
-        /// <param name="signInManager">The SignInManager<c>User</c></param>
-        public AccountController(
+		/// <summary>
+		/// Constructor of AccountController class
+		/// </summary>
+		/// <param name="userManager">The UserManager<c>User</c> needed for functionality</param>
+		/// <param name="signInManager">The SignInManager<c>User</c> needed for functionality</param>
+		/// <param name="memoryCache">The IMemoryCache needed for functionality</param>
+		public AccountController(
             UserManager<User> userManager,
-            SignInManager<User> signInManager)
+            SignInManager<User> signInManager,
+            IMemoryCache memoryCache)
         {
             this.userManager = userManager;
             this.signInManager = signInManager;
+            this.memoryCache = memoryCache;
         }
 
         /// <summary>
@@ -73,6 +79,8 @@ namespace PCShop.Controllers
             if (result.Succeeded)
             {
                 await this.signInManager.SignInAsync(user, isPersistent: false);
+
+                this.memoryCache.Remove(UsersCacheKey);
 
                 return RedirectToAction(nameof(HomeController.Index), "Home");
             }

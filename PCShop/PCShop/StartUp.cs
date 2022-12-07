@@ -49,6 +49,8 @@ builder.Services.AddControllersWithViews()
 
 builder.Services.AddApplicationServices();
 
+builder.Services.AddMemoryCache();
+
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())

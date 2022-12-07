@@ -1,8 +1,10 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Memory;
 using PCShop.Core.Exceptions;
+using PCShop.Core.Models.User;
 using PCShop.Core.Services.Interfaces;
-using PCShop.Infrastructure.Data.Models.Account;
+using static PCShop.Areas.Administration.Constant;
 using static PCShop.Infrastructure.Constants.DataConstant.RoleConstants;
 
 namespace PCShop.Areas.Administration.Controllers
@@ -13,23 +15,23 @@ namespace PCShop.Areas.Administration.Controllers
 	public class AccountController : BaseController
 	{
 		private readonly RoleManager<IdentityRole> roleManager;
-		private readonly UserManager<User> userManager;
 		private readonly IUserService userService;
+		private readonly IMemoryCache memoryCache;
 
 		/// <summary>
 		/// Constructor of AccountController class
 		/// </summary>
-		/// <param name="roleManager">The RoleManager<c>IdentityRole</c></param>
-		/// <param name="userManager">The UserManager<c>User</c></param>
+		/// <param name="roleManager">The RoleManager<c>IdentityRole</c> needed for functionality</param>
 		/// <param name="userService">The IUserService needed for functionality</param>
+		/// <param name="memoryCache">The IMemoryCache needed for functionality</param>
 		public AccountController(
 			RoleManager<IdentityRole> roleManager,
-			UserManager<User> userManager,
-			IUserService userService)
+			IUserService userService,
+			IMemoryCache memoryCache)
 		{
 			this.roleManager = roleManager;
-			this.userManager = userManager;
 			this.userService = userService;
+			this.memoryCache = memoryCache;
 		}
 
 		/// <summary>
@@ -39,9 +41,18 @@ namespace PCShop.Areas.Administration.Controllers
 		[HttpGet]
 		public async Task<IActionResult> GetUsers()
 		{
-			var role = this.roleManager.Roles.FirstOrDefault(r => r.Name == Administrator);
+			var users = this.memoryCache.Get<IEnumerable<UserExportViewModel>>(UsersCacheKey);
 
-			var users = await this.userService.GetAllUsersThatAreNotInTheSpecifiedRole(role?.Id ?? null);
+			if (users is null)
+			{
+				var role = this.roleManager.Roles.FirstOrDefault(r => r.Name == Administrator);
+
+				users = await this.userService.GetAllUsersThatAreNotInTheSpecifiedRole(role?.Id ?? null);
+
+				var cacheOptions = new MemoryCacheEntryOptions().SetAbsoluteExpiration(TimeSpan.FromMinutes(3));
+
+				this.memoryCache.Set(UsersCacheKey, users, cacheOptions);
+			}
 
 			return View(users);
 		}
@@ -57,7 +68,9 @@ namespace PCShop.Areas.Administration.Controllers
 			try
 			{
 				var user = await this.userService.PromoteToAdminAsync(id);
-			
+
+				this.memoryCache.Remove(UsersCacheKey);
+
 				return View(user);
 			}
 			catch (PCShopException)

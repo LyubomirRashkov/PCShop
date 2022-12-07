@@ -4,18 +4,28 @@
         <name>PCShop</name>
     </assembly>
     <members>
+        <member name="T:PCShop.Areas.Administration.Constant">
+            <summary>
+            Class holding administration constants
+            </summary>
+        </member>
+        <member name="F:PCShop.Areas.Administration.Constant.UsersCacheKey">
+            <summary>
+            Constant for the users cache key
+            </summary>
+        </member>
         <member name="T:PCShop.Areas.Administration.Controllers.AccountController">
             <summary>
             Account controller class
             </summary>
         </member>
-        <member name="M:PCShop.Areas.Administration.Controllers.AccountController.#ctor(Microsoft.AspNetCore.Identity.RoleManager{Microsoft.AspNetCore.Identity.IdentityRole},Microsoft.AspNetCore.Identity.UserManager{PCShop.Infrastructure.Data.Models.Account.User},PCShop.Core.Services.Interfaces.IUserService)">
+        <member name="M:PCShop.Areas.Administration.Controllers.AccountController.#ctor(Microsoft.AspNetCore.Identity.RoleManager{Microsoft.AspNetCore.Identity.IdentityRole},PCShop.Core.Services.Interfaces.IUserService,Microsoft.Extensions.Caching.Memory.IMemoryCache)">
             <summary>
             Constructor of AccountController class
             </summary>
-            <param name="roleManager">The RoleManager<c>IdentityRole</c></param>
-            <param name="userManager">The UserManager<c>User</c></param>
+            <param name="roleManager">The RoleManager<c>IdentityRole</c> needed for functionality</param>
             <param name="userService">The IUserService needed for functionality</param>
+            <param name="memoryCache">The IMemoryCache needed for functionality</param>
         </member>
         <member name="M:PCShop.Areas.Administration.Controllers.AccountController.GetUsers">
             <summary>
@@ -51,12 +61,13 @@
             Account controller class
             </summary>
         </member>
-        <member name="M:PCShop.Controllers.AccountController.#ctor(Microsoft.AspNetCore.Identity.UserManager{PCShop.Infrastructure.Data.Models.Account.User},Microsoft.AspNetCore.Identity.SignInManager{PCShop.Infrastructure.Data.Models.Account.User})">
+        <member name="M:PCShop.Controllers.AccountController.#ctor(Microsoft.AspNetCore.Identity.UserManager{PCShop.Infrastructure.Data.Models.Account.User},Microsoft.AspNetCore.Identity.SignInManager{PCShop.Infrastructure.Data.Models.Account.User},Microsoft.Extensions.Caching.Memory.IMemoryCache)">
             <summary>
             Constructor of AccountController class
             </summary>
-            <param name="userManager">The UserManager<c>User</c></param>
-            <param name="signInManager">The SignInManager<c>User</c></param>
+            <param name="userManager">The UserManager<c>User</c> needed for functionality</param>
+            <param name="signInManager">The SignInManager<c>User</c> needed for functionality</param>
+            <param name="memoryCache">The IMemoryCache needed for functionality</param>
         </member>
         <member name="M:PCShop.Controllers.AccountController.SignUp">
             <summary>
