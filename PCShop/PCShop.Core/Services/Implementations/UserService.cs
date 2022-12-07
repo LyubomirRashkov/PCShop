@@ -47,10 +47,10 @@ namespace PCShop.Core.Services.Implementations
 				.Select(u => new UserExportViewModel()
 				{
 					Id = u.Id,
-					Username = u.UserName != null ? u.UserName : "unknown",
-					Email = u.Email != null ? u.Email : "unknown",
-					FirstName = u.FirstName != null ? u.FirstName : "unknown",
-					LastName = u.LastName != null ? u.LastName : "unknown",
+					Username = u.UserName ?? "unknown",
+					Email = u.Email ?? "unknown",
+					FirstName = u.FirstName ?? "unknown",
+					LastName = u.LastName ?? "unknown",
 					Roles = this.repository.AllAsReadOnly<IdentityUserRole<string>>()
 							.Where(x => x.UserId == u.Id)
 							.Select(x => x.RoleId)
