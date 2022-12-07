@@ -289,7 +289,7 @@
             Guard model
             </summary>
         </member>
-        <member name="M:PCShop.Core.Exceptions.Guard.AgainstClientThatDoesNotExist``1(``0,System.String)">
+        <member name="M:PCShop.Core.Exceptions.Guard.AgainstInvalidUserId``1(``0,System.String)">
             <summary>
             Method that will throw a PCShopException when the given value is null
             </summary>
@@ -332,7 +332,7 @@
             Abstraction of Guard
             </summary>
         </member>
-        <member name="M:PCShop.Core.Exceptions.IGuard.AgainstClientThatDoesNotExist``1(``0,System.String)">
+        <member name="M:PCShop.Core.Exceptions.IGuard.AgainstInvalidUserId``1(``0,System.String)">
             <summary>
             Method that will throw a PCShopException when the given value is null
             </summary>
@@ -1276,13 +1276,14 @@
             Implementation of IUserService interface
             </summary>
         </member>
-        <member name="M:PCShop.Core.Services.Implementations.UserService.#ctor(PCShop.Infrastructure.Common.IRepository,Microsoft.AspNetCore.Identity.UserManager{PCShop.Infrastructure.Data.Models.Account.User},Microsoft.AspNetCore.Identity.SignInManager{PCShop.Infrastructure.Data.Models.Account.User})">
+        <member name="M:PCShop.Core.Services.Implementations.UserService.#ctor(PCShop.Infrastructure.Common.IRepository,Microsoft.AspNetCore.Identity.UserManager{PCShop.Infrastructure.Data.Models.Account.User},Microsoft.AspNetCore.Identity.SignInManager{PCShop.Infrastructure.Data.Models.Account.User},PCShop.Core.Exceptions.IGuard)">
             <summary>
             Constructor of UserService class
             </summary>
             <param name="repository">The repository that will be used</param>
             <param name="userManager">The UserManager<c>User</c></param>
             <param name="signInManager">The SignInManager<c>User</c></param>
+            <param name="guard">The guard that will be used</param>
         </member>
         <member name="M:PCShop.Core.Services.Implementations.UserService.GetAllUsersThatAreNotInTheSpecifiedRole(System.String)">
             <summary>
@@ -1290,6 +1291,13 @@
             </summary>
             <param name="roleId">Role unique identifier</param>
             <returns>Ordered collection of UserExportViewModels</returns>
+        </member>
+        <member name="M:PCShop.Core.Services.Implementations.UserService.PromoteToAdminAsync(System.String)">
+            <summary>
+            Method to add the user with the specified unique identifier to Administrator role
+            </summary>
+            <param name="id">User unique identifier</param>
+            <returns>The promoted to admin user</returns>
         </member>
         <member name="M:PCShop.Core.Services.Implementations.UserService.ShouldBePromotedToSuperUser(PCShop.Infrastructure.Data.Models.Client)">
             <summary>
@@ -1515,6 +1523,13 @@
             </summary>
             <param name="client">The client who made the purchase</param>
             <returns>True when the count of client purchases is equal to required number of purchases to be SuperUser, else returns false</returns>
+        </member>
+        <member name="M:PCShop.Core.Services.Interfaces.IUserService.PromoteToAdminAsync(System.String)">
+            <summary>
+            Method to add the user with the specified unique identifier to Administrator role
+            </summary>
+            <param name="id">User unique identifier</param>
+            <returns>The promoted to admin user</returns>
         </member>
     </members>
 </doc>

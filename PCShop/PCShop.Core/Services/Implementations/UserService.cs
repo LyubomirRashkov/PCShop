@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using PCShop.Core.Exceptions;
 using PCShop.Core.Models.User;
 using PCShop.Core.Services.Interfaces;
 using PCShop.Infrastructure.Common;
@@ -19,6 +20,7 @@ namespace PCShop.Core.Services.Implementations
 		private readonly IRepository repository;
 		private readonly UserManager<User> userManager;
 		private readonly SignInManager<User> signInManager;
+		private readonly IGuard guard;
 
 		/// <summary>
 		/// Constructor of UserService class
@@ -26,14 +28,17 @@ namespace PCShop.Core.Services.Implementations
 		/// <param name="repository">The repository that will be used</param>
 		/// <param name="userManager">The UserManager<c>User</c></param>
 		/// <param name="signInManager">The SignInManager<c>User</c></param>
+		/// <param name="guard">The guard that will be used</param>
 		public UserService(
 			IRepository repository,
 			UserManager<User> userManager,
-			SignInManager<User> signInManager)
+			SignInManager<User> signInManager,
+			IGuard guard)
 		{
 			this.repository = repository;
 			this.userManager = userManager;
 			this.signInManager = signInManager;
+			this.guard = guard;
 		}
 
 		/// <summary>
@@ -67,6 +72,22 @@ namespace PCShop.Core.Services.Implementations
 			}
 
 			return users;
+		}
+
+		/// <summary>
+		/// Method to add the user with the specified unique identifier to Administrator role
+		/// </summary>
+		/// <param name="id">User unique identifier</param>
+		/// <returns>The promoted to admin user</returns>
+		public async Task<User> PromoteToAdminAsync(string id)
+		{
+			var user = await this.userManager.FindByIdAsync(id);
+
+			this.guard.AgainstInvalidUserId<User>(user, ErrorMessageForInvalidUserId);
+
+			await this.userManager.AddToRoleAsync(user, Administrator);
+
+			return user;
 		}
 
 		/// <summary>

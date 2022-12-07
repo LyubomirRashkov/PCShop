@@ -30,6 +30,22 @@
             <param name="id">User unique identifier</param>
             <returns>The corresponding view</returns>
         </member>
+        <member name="T:PCShop.Areas.Administration.Controllers.BaseController">
+            <summary>
+            Base controller class for Administration area
+            </summary>
+        </member>
+        <member name="T:PCShop.Areas.Administration.Controllers.HomeController">
+            <summary>
+            Home controller class
+            </summary>
+        </member>
+        <member name="M:PCShop.Areas.Administration.Controllers.HomeController.Index">
+            <summary>
+            Action that returns the admin page
+            </summary>
+            <returns>The admin page</returns>
+        </member>
         <member name="T:PCShop.Controllers.AccountController">
             <summary>
             Account controller class

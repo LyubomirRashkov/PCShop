@@ -1,6 +1,6 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using PCShop.Core.Exceptions;
 using PCShop.Core.Services.Interfaces;
 using PCShop.Infrastructure.Data.Models.Account;
 using static PCShop.Infrastructure.Constants.DataConstant.RoleConstants;
@@ -10,8 +10,7 @@ namespace PCShop.Areas.Administration.Controllers
 	/// <summary>
 	/// Account controller class
 	/// </summary>
-	[Authorize(Roles = $"{Administrator}")]
-	public class AccountController : Controller
+	public class AccountController : BaseController
 	{
 		private readonly RoleManager<IdentityRole> roleManager;
 		private readonly UserManager<User> userManager;
@@ -44,7 +43,7 @@ namespace PCShop.Areas.Administration.Controllers
 
 			var users = await this.userService.GetAllUsersThatAreNotInTheSpecifiedRole(role?.Id ?? null);
 
-			return View("~/Areas/Administration/Views/Account/GetUsers.cshtml", users);
+			return View(users);
 		}
 
 		/// <summary>
@@ -55,16 +54,16 @@ namespace PCShop.Areas.Administration.Controllers
 		[HttpGet]
 		public async Task<IActionResult> PromoteToAdmin(string id)
 		{
-			var user = await this.userManager.FindByIdAsync(id);
-
-			if (user == null) 
+			try
+			{
+				var user = await this.userService.PromoteToAdminAsync(id);
+			
+				return View(user);
+			}
+			catch (PCShopException)
 			{
 				return NotFound();
 			}
-
-			await this.userManager.AddToRoleAsync(user, Administrator);
-
-			return View("~/Areas/Administration/Views/Account/PromoteToAdmin.cshtml", user);
 		}
 	}
 }

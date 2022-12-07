@@ -11,7 +11,7 @@
 		/// <typeparam name="T">Type of the value</typeparam>
 		/// <param name="value">The value that will be checked for null</param>
 		/// <param name="errorMessage">The error message that will be attached to the PCShopException</param>
-		void AgainstClientThatDoesNotExist<T>(T value, string? errorMessage = null);
+		void AgainstInvalidUserId<T>(T value, string? errorMessage = null);
 
 		/// <summary>
 		/// Method that will throw an ArgumentException when the given collection is null or empty

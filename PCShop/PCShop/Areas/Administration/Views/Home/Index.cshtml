@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Admin Page";
+}
+
+<div class="mt-4 p-5 text-center">
+    <h2 class="display-4"><b>Hello, Administrator!</b></h2>
+
+    <p class="lead mb-1 mt-3">This is the <b><span style="color: red">administration area</span></b>.</p>
+
+    <p class="lead mt-1">
+        Here you can take a look at <b><span style="color: red">all registered users</span></b> and make them <b><span style="color: red">administrators</span></b>.
+    </p>
+
+    <p class="lead mt-1">
+        Of course you can browse all our products.
+    </p>
+
+    <a asp-area="Administration" asp-controller="Account" asp-action="GetUsers" class="mt-4 btn btn-primary btn-lg">Users</a>
+</div>

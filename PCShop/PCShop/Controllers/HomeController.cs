@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using static PCShop.Infrastructure.Constants.DataConstant.RoleConstants;
 
 namespace PCShop.Controllers
 {
@@ -16,6 +17,11 @@ namespace PCShop.Controllers
         [AllowAnonymous]
         public IActionResult Index()
         {
+            if (this.User.IsInRole(Administrator))
+            {
+                return RedirectToAction(nameof(HomeController.Index), "Home", new { area = "Administration" });
+            }
+
             return View();
         }
 

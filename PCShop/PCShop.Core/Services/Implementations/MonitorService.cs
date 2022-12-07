@@ -61,7 +61,7 @@ namespace PCShop.Core.Services.Implementations
 			{
 				dbClient = await this.repository.GetByPropertyAsync<Client>(c => c.UserId == userId);
 
-				this.guard.AgainstClientThatDoesNotExist<Client>(dbClient, ErrorMessageForInvalidUserId);
+				this.guard.AgainstInvalidUserId<Client>(dbClient, ErrorMessageForInvalidUserId);
 			}
 
 			monitor.Seller = dbClient;
@@ -327,7 +327,7 @@ namespace PCShop.Core.Services.Implementations
         {
 			var client = await this.repository.GetByPropertyAsync<Client>(c => c.UserId == userId);
 
-			this.guard.AgainstClientThatDoesNotExist<Client>(client, ErrorMessageForInvalidUserId);
+			this.guard.AgainstInvalidUserId<Client>(client, ErrorMessageForInvalidUserId);
 
 			var userMonitors = await this.GetMonitorsAsMonitorsDetailsExportViewModelsAsync<Monitor>(m => m.SellerId == client.Id);
 

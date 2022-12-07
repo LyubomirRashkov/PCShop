@@ -71,7 +71,7 @@ namespace PCShop.Core.Services.Implementations
 				.Include(c => c.Microphones)
 				.FirstOrDefaultAsync();
 
-			this.guard.AgainstClientThatDoesNotExist<Client>(client, ErrorMessageForInvalidUserId);
+			this.guard.AgainstInvalidUserId<Client>(client, ErrorMessageForInvalidUserId);
 
 			var numberOfClientSales = client.Laptops.Where(l => !l.IsDeleted).Count()
 									  + client.Monitors.Where(m => !m.IsDeleted).Count()
