@@ -226,6 +226,21 @@
 			/// Constant for the error message of invalid product unique identifier
 			/// </summary>
 			public const string ErrorMessageForInvalidProductId = "Invalid product id!";
+
+            /// <summary>
+            /// Constant for the TempData message for a successfully added product
+            /// </summary>
+            public const string ProductSuccessfullyAdded = "You have successfully added a product!";
+
+			/// <summary>
+			/// Constant for the TempData message for a successfully edited product
+			/// </summary>
+			public const string ProductSuccessfullyEdited = "You have successfully edited a product!";
+
+			/// <summary>
+			/// Constant for the TempData message for a successfully deleted product
+			/// </summary>
+			public const string ProductSuccessfullyDeleted = "You have successfully deleted a product!";
 		}
 
         /// <summary>
@@ -262,6 +277,17 @@
             /// Constant for the max value of monitor's refresh rate
             /// </summary>
             public const int RefreshRateMaxValue = int.MaxValue;
+        }
+
+        /// <summary>
+        /// Class holding global constants
+        /// </summary>
+        public static class GlobalConstants
+        {
+            /// <summary>
+            /// Constant for the TempData key
+            /// </summary>
+            public const string TempDataMessage = "Message";
         }
     }
 }

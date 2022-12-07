@@ -1,12 +1,13 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.VisualBasic;
 using PCShop.Core.Exceptions;
 using PCShop.Core.Models.Laptop;
 using PCShop.Core.Services.Interfaces;
 using PCShop.Extensions;
 using System.Security.Claims;
 using static PCShop.Core.Constants.Constant.ClientConstants;
+using static PCShop.Core.Constants.Constant.GlobalConstants;
+using static PCShop.Core.Constants.Constant.ProductConstants;
 using static PCShop.Infrastructure.Constants.DataConstant.RoleConstants;
 
 namespace PCShop.Controllers
@@ -113,6 +114,8 @@ namespace PCShop.Controllers
 
 				await this.laptopService.DeleteLaptopAsync(id);
 
+				TempData[TempDataMessage] = ProductSuccessfullyDeleted;
+
 				return RedirectToAction(nameof(Index));
 			}
 			catch (ArgumentException)
@@ -178,6 +181,8 @@ namespace PCShop.Controllers
 			{
 				int id = await this.laptopService.AddLaptopAsync(model, userId);
 
+				TempData[TempDataMessage] = ProductSuccessfullyAdded;
+
 				return RedirectToAction(nameof(Details), new { id, information = model.GetInformation() });
 			}
 			catch (PCShopException)
@@ -238,6 +243,8 @@ namespace PCShop.Controllers
 				}
 
 				int id = await this.laptopService.EditLaptopAsync(model);
+
+				TempData[TempDataMessage] = ProductSuccessfullyEdited;
 
 				return RedirectToAction(nameof(Details), new { id, information = model.GetInformation() });
 			}
