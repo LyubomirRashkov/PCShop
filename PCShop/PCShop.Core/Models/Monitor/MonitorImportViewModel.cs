@@ -19,7 +19,7 @@ namespace PCShop.Core.Models.Monitor
     /// <summary>
     /// MonitorImportViewModel model
     /// </summary>
-    public class MonitorImportViewModel
+    public class MonitorImportViewModel : IProductModel
     {
         /// <summary>
         /// Property that represents monitor brand

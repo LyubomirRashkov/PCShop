@@ -5,7 +5,7 @@ namespace PCShop.Core.Models.Laptop
     /// <summary>
     /// LaptopEditViewModel model
     /// </summary>
-    public class LaptopEditViewModel : LaptopImportViewModel
+    public class LaptopEditViewModel : LaptopImportViewModel, IProductModel
 	{
         /// <summary>
         /// Property that represents laptop unique identifier

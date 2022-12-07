@@ -36,7 +36,7 @@
 				</td>
 				<td>@String.Format("{0:f2}", monitor.Price) EUR</td>
 				<td>
-					<a asp-controller="Monitor" asp-action="Details" asp-route-id="@monitor.Id" class="btn btn-primary">Details</a>
+					<a asp-controller="Monitor" asp-action="Details" asp-route-id="@monitor.Id" asp-route-information="@monitor.GetInformation()" class="btn btn-primary">Details</a>
 				</td>
 			</tr>
 		}

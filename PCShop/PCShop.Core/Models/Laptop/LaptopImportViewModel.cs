@@ -23,7 +23,7 @@ namespace PCShop.Core.Models.Laptop
     /// <summary>
     /// LaptopImportViewModel model
     /// </summary>
-    public class LaptopImportViewModel
+    public class LaptopImportViewModel : IProductModel
     {
         /// <summary>
         /// Property that represents laptop brand

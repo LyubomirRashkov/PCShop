@@ -1,8 +1,10 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.VisualBasic;
 using PCShop.Core.Exceptions;
 using PCShop.Core.Models.Laptop;
 using PCShop.Core.Services.Interfaces;
+using PCShop.Extensions;
 using System.Security.Claims;
 using static PCShop.Core.Constants.Constant.ClientConstants;
 using static PCShop.Infrastructure.Constants.DataConstant.RoleConstants;
@@ -64,17 +66,23 @@ namespace PCShop.Controllers
 			return View(query);
 		}
 
-		/// <summary>
-		/// HttpGet action to retrieve detailed information about a specific laptop
-		/// </summary>
-		/// <param name="id">Laptop unique identifier</param>
-		/// <returns>Detailed information about the laptop</returns>
-		[HttpGet]
-		public async Task<IActionResult> Details(int id)
+        /// <summary>
+        /// HttpGet action to retrieve detailed information about a specific laptop
+        /// </summary>
+        /// <param name="id">Laptop unique identifier</param>
+        /// <param name="information">Laptop additional information</param>
+        /// <returns>Detailed information about the laptop</returns>
+        [HttpGet]
+		public async Task<IActionResult> Details(int id, string information)
 		{
 			try
 			{
 				var laptop = await this.laptopService.GetLaptopByIdAsLaptopDetailsExportViewModelAsync(id);
+
+				if (information != laptop.GetInformation())
+				{
+					return NotFound();
+				}
 
 				return View(laptop);
 			}
@@ -170,7 +178,7 @@ namespace PCShop.Controllers
 			{
 				int id = await this.laptopService.AddLaptopAsync(model, userId);
 
-				return RedirectToAction(nameof(Details), new { id });
+				return RedirectToAction(nameof(Details), new { id, information = model.GetInformation() });
 			}
 			catch (PCShopException)
 			{
@@ -231,7 +239,7 @@ namespace PCShop.Controllers
 
 				int id = await this.laptopService.EditLaptopAsync(model);
 
-				return RedirectToAction(nameof(Details), new { id });
+				return RedirectToAction(nameof(Details), new { id, information = model.GetInformation() });
 			}
 			catch (ArgumentException)
 			{

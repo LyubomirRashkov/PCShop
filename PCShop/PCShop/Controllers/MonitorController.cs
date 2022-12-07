@@ -1,8 +1,10 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.VisualBasic;
 using PCShop.Core.Exceptions;
 using PCShop.Core.Models.Monitor;
 using PCShop.Core.Services.Interfaces;
+using PCShop.Extensions;
 using System.Security.Claims;
 using static PCShop.Core.Constants.Constant.ClientConstants;
 using static PCShop.Infrastructure.Constants.DataConstant.RoleConstants;
@@ -68,13 +70,19 @@ namespace PCShop.Controllers
 		/// HttpGet action to retrieve detailed information about a specific monitor
 		/// </summary>
 		/// <param name="id">Monitor unique identifier</param>
+		/// <param name="information">Monitor additional information</param>
 		/// <returns>Detailedinformation about the monitor</returns>
 		[HttpGet]
-		public async Task<IActionResult> Details(int id)
+		public async Task<IActionResult> Details(int id, string information)
 		{
 			try
 			{
 				var monitor = await this.monitorService.GetMonitorByIdAsMonitorDetailsExportViewModelAsync(id);
+
+				if (information != monitor.GetInformation())
+				{
+					return NotFound();
+				}
 
 				return View(monitor);
 			}
@@ -170,7 +178,7 @@ namespace PCShop.Controllers
 			{
 				int id = await this.monitorService.AddMonitorAsync(model, userId);
 
-				return RedirectToAction(nameof(Details), new { id });
+				return RedirectToAction(nameof(Details), new { id, information = model.GetInformation() });
 			}
 			catch (PCShopException)
 			{
@@ -231,7 +239,7 @@ namespace PCShop.Controllers
 
 				int id = await this.monitorService.EditMonitorAsync(model);
 
-				return RedirectToAction(nameof(Details), new { id });
+				return RedirectToAction(nameof(Details), new { id, information = model.GetInformation() });
 			}
 			catch (ArgumentException)
 			{

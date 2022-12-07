@@ -5,7 +5,7 @@ namespace PCShop.Core.Models.Laptop
     /// <summary>
     /// LaptopExportViewModel model
     /// </summary>
-    public class LaptopExportViewModel : ProductExportViewModel
+    public class LaptopExportViewModel : ProductExportViewModel, IProductModel
     {
         /// <summary>
         /// Property that represents laptop CPU

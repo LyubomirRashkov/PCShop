@@ -5,7 +5,7 @@ namespace PCShop.Core.Models.Monitor
 	/// <summary>
 	/// MonitorExportViewModel model
 	/// </summary>
-	public class MonitorExportViewModel : ProductExportViewModel
+	public class MonitorExportViewModel : ProductExportViewModel, IProductModel
 	{
 		/// <summary>
 		/// Property that represents monitor display size

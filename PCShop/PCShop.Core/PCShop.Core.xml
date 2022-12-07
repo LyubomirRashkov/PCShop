@@ -386,6 +386,21 @@
             </summary>
             <param name="errorMessage">The error message that will be attached to the exception</param>
         </member>
+        <member name="T:PCShop.Core.Models.IProductModel">
+            <summary>
+            Abstraction of ProductModel
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.IProductModel.Brand">
+            <summary>
+            Property that represents product brand
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.IProductModel.Price">
+            <summary>
+            Property that represents product price
+            </summary>
+        </member>
         <member name="T:PCShop.Core.Models.Laptop.AllLaptopsQueryModel">
             <summary>
             AllLaptopsQueryModel model

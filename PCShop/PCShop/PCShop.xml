@@ -112,11 +112,12 @@
             <param name="query">The entity that holds the specified criteria</param>
             <returns>Collection of all active laptops according to specified criteria</returns>
         </member>
-        <member name="M:PCShop.Controllers.LaptopController.Details(System.Int32)">
+        <member name="M:PCShop.Controllers.LaptopController.Details(System.Int32,System.String)">
             <summary>
             HttpGet action to retrieve detailed information about a specific laptop
             </summary>
             <param name="id">Laptop unique identifier</param>
+            <param name="information">Laptop additional information</param>
             <returns>Detailed information about the laptop</returns>
         </member>
         <member name="M:PCShop.Controllers.LaptopController.Delete(System.Int32)">
@@ -186,11 +187,12 @@
             <param name="query">The entity that holds the specified criteria</param>
             <returns>Collection of all active monitors according to specified criteria</returns>
         </member>
-        <member name="M:PCShop.Controllers.MonitorController.Details(System.Int32)">
+        <member name="M:PCShop.Controllers.MonitorController.Details(System.Int32,System.String)">
             <summary>
             HttpGet action to retrieve detailed information about a specific monitor
             </summary>
             <param name="id">Monitor unique identifier</param>
+            <param name="information">Monitor additional information</param>
             <returns>Detailedinformation about the monitor</returns>
         </member>
         <member name="M:PCShop.Controllers.MonitorController.Delete(System.Int32)">
@@ -239,6 +241,18 @@
             </summary>
             <param name="id">Monitor unique identifier</param>
             <returns>The corresponding view</returns>
+        </member>
+        <member name="T:PCShop.Extensions.ModelExtensions">
+            <summary>
+            ModelExtensions model
+            </summary>
+        </member>
+        <member name="M:PCShop.Extensions.ModelExtensions.GetInformation(PCShop.Core.Models.IProductModel)">
+            <summary>
+            Extension method for getting additional information for the product
+            </summary>
+            <param name="productModel">The IProductModel that will be extended</param>
+            <returns>A string that contains information about the product</returns>
         </member>
         <member name="T:PCShop.ModelBinders.DecimalModelBinder">
             <summary>

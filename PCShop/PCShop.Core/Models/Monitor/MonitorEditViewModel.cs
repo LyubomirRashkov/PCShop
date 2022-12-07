@@ -5,7 +5,7 @@ namespace PCShop.Core.Models.Monitor
     /// <summary>
     /// MonitorEditViewModel model
     /// </summary>
-    public class MonitorEditViewModel : MonitorImportViewModel
+    public class MonitorEditViewModel : MonitorImportViewModel, IProductModel
     {
         /// <summary>
         /// Property that represents monitor unique identifier
