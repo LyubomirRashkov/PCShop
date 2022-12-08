@@ -44,5 +44,11 @@ namespace PCShop.Core.Services.Interfaces
 		/// <param name="id">Keyboard unique identifier</param>
 		/// <returns>The keyboard as KeyboardDetailsExportViewModel</returns>
 		Task<KeyboardDetailsExportViewModel> GetKeyboardByIdAsKeyboardDetailsExportViewModelAsync(int id);
+
+		/// <summary>
+		/// Method to mark a specific keyboard as deleted
+		/// </summary>
+		/// <param name="id">Keyboard unique identifier</param>
+		Task DeleteKeyboardAsync(int id);
 	}
 }

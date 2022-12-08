@@ -145,6 +145,13 @@
             <param name="information">Keyboard additional information</param>
             <returns>Detailed information about the keyboard</returns>
         </member>
+        <member name="M:PCShop.Controllers.KeyboardController.Delete(System.Int32)">
+            <summary>
+            Action to mark a specific keyboard as deleted
+            </summary>
+            <param name="id">Keyboard unique identifier</param>
+            <returns>Redirection to /Keyboard/Index</returns>
+        </member>
         <member name="T:PCShop.Controllers.LaptopController">
             <summary>
             Laptop controller class

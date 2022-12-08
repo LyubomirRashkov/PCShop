@@ -3,6 +3,10 @@ using Microsoft.AspNetCore.Mvc;
 using PCShop.Core.Models.Keyboard;
 using PCShop.Core.Services.Interfaces;
 using PCShop.Extensions;
+using System.Security.Claims;
+using static PCShop.Core.Constants.Constant.GlobalConstants;
+using static PCShop.Core.Constants.Constant.ProductConstants;
+using static PCShop.Infrastructure.Constants.DataConstant.RoleConstants;
 
 namespace PCShop.Controllers
 {
@@ -68,6 +72,37 @@ namespace PCShop.Controllers
 				}
 
 				return View(keyboard);
+			}
+			catch (ArgumentException)
+			{
+				return NotFound();
+			}
+		}
+
+		/// <summary>
+		/// Action to mark a specific keyboard as deleted
+		/// </summary>
+		/// <param name="id">Keyboard unique identifier</param>
+		/// <returns>Redirection to /Keyboard/Index</returns>
+		[HttpGet]
+		[Authorize(Roles = $"{Administrator}, {SuperUser}")]
+		public async Task<IActionResult> Delete(int id)
+		{
+			try
+			{
+				var keyboard = await this.keyboardService.GetKeyboardByIdAsKeyboardDetailsExportViewModelAsync(id);
+
+				if (this.User.IsInRole(SuperUser) 
+					&& (keyboard.Seller is null || this.User.Id() != keyboard.Seller.UserId))
+				{
+					return Unauthorized();
+				}
+
+				await this.keyboardService.DeleteKeyboardAsync(id);
+
+				TempData[TempDataMessage] = ProductSuccessfullyDeleted;
+
+				return RedirectToAction(nameof(Index));
 			}
 			catch (ArgumentException)
 			{

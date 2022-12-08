@@ -34,6 +34,23 @@ namespace PCShop.Core.Services.Implementations
 		}
 
 		/// <summary>
+		/// Method to mark a specific keyboard as deleted
+		/// </summary>
+		/// <param name="id">Keyboard unique identifier</param>
+		public async Task DeleteKeyboardAsync(int id)
+		{
+			var keyboard = await this.repository.GetByIdAsync<Keyboard>(id);
+
+			this.guard.AgainstProductThatIsNull<Keyboard>(keyboard, ErrorMessageForInvalidProductId);
+
+			this.guard.AgainstProductThatIsDeleted(keyboard.IsDeleted, ErrorMessageForDeletedProduct);
+
+			keyboard.IsDeleted = true;
+
+			await this.repository.SaveChangesAsync();
+		}
+
+		/// <summary>
 		/// Method to retrieve all active keyboards according to specified criteria
 		/// </summary>
 		/// <param name="format">The criterion for the keyboard format</param>

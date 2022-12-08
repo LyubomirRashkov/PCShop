@@ -1274,6 +1274,12 @@
             <param name="repository">The repository that will be used</param>
             <param name="guard">The guard that will be used</param>
         </member>
+        <member name="M:PCShop.Core.Services.Implementations.KeyboardService.DeleteKeyboardAsync(System.Int32)">
+            <summary>
+            Method to mark a specific keyboard as deleted
+            </summary>
+            <param name="id">Keyboard unique identifier</param>
+        </member>
         <member name="M:PCShop.Core.Services.Implementations.KeyboardService.GetAllKeyboardsAsync(System.String,System.String,PCShop.Core.Constants.Wireless,System.String,PCShop.Core.Constants.Sorting,System.Int32)">
             <summary>
             Method to retrieve all active keyboards according to specified criteria
@@ -1588,6 +1594,12 @@
             </summary>
             <param name="id">Keyboard unique identifier</param>
             <returns>The keyboard as KeyboardDetailsExportViewModel</returns>
+        </member>
+        <member name="M:PCShop.Core.Services.Interfaces.IKeyboardService.DeleteKeyboardAsync(System.Int32)">
+            <summary>
+            Method to mark a specific keyboard as deleted
+            </summary>
+            <param name="id">Keyboard unique identifier</param>
         </member>
         <member name="T:PCShop.Core.Services.Interfaces.ILaptopService">
             <summary>
