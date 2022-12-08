@@ -57,10 +57,10 @@ namespace PCShop.Controllers
 
 			query.TotalMonitorsCount = result.TotalMonitorsCount;
 
-			query.Brands = await this.monitorService.GetAllBrandsNames();
-			query.DisplaySizes = await this.monitorService.GetAllDisplaysSizesValues();
-			query.Resolutions = await this.monitorService.GetAllResolutionsValues();
-			query.RefreshRates = await this.monitorService.GetAllRefreshRatesValues();
+			query.Brands = await this.monitorService.GetAllBrandsNamesAsync();
+			query.DisplaySizes = await this.monitorService.GetAllDisplaysSizesValuesAsync();
+			query.Resolutions = await this.monitorService.GetAllResolutionsValuesAsync();
+			query.RefreshRates = await this.monitorService.GetAllRefreshRatesValuesAsync();
 
 			query.Monitors = result.Monitors;
 
@@ -305,7 +305,7 @@ namespace PCShop.Controllers
 
 				ViewData["Title"] = "Buy a monitor";
 
-				await this.monitorService.MarkMonitorAsBought(id);
+				await this.monitorService.MarkMonitorAsBoughtAsync(id);
 
 				var client = await this.clientService.BuyProduct(userId);
 

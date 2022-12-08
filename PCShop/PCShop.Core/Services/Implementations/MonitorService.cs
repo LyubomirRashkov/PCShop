@@ -9,6 +9,7 @@ using PCShop.Infrastructure.Data.Models.GravitatingClasses;
 using System.Globalization;
 using System.Linq.Expressions;
 using static PCShop.Core.Constants.Constant.ClientConstants;
+using static PCShop.Core.Constants.Constant.GlobalConstants;
 using static PCShop.Core.Constants.Constant.ProductConstants;
 using Monitor = PCShop.Infrastructure.Data.Models.Monitor;
 using Type = PCShop.Infrastructure.Data.Models.GravitatingClasses.Type;
@@ -131,7 +132,7 @@ namespace PCShop.Core.Services.Implementations
         /// Method to retrieve all monitor brands names
         /// </summary>
         /// <returns>Ordered collection of brand names</returns>
-        public async Task<IEnumerable<string>> GetAllBrandsNames()
+        public async Task<IEnumerable<string>> GetAllBrandsNamesAsync()
 		{
 			return await this.repository.AllAsReadOnly<Monitor>(m => !m.IsDeleted)
 				.Select(m => m.Brand.Name)
@@ -144,7 +145,7 @@ namespace PCShop.Core.Services.Implementations
 		/// Method to retrieve all monitor display sizes
 		/// </summary>
 		/// <returns>Ordered collection of display sizes</returns>
-		public async Task<IEnumerable<double>> GetAllDisplaysSizesValues()
+		public async Task<IEnumerable<double>> GetAllDisplaysSizesValuesAsync()
 		{
 			return await this.repository.AllAsReadOnly<Monitor>(m => !m.IsDeleted)
 				.Select(m => m.DisplaySize.Value)
@@ -228,11 +229,11 @@ namespace PCShop.Core.Services.Implementations
 					DisplaySize = m.DisplaySize.Value,
 					DisplayTechnology = m.DisplayTechnology != null 
 									    ? m.DisplayTechnology.Name 
-										: UnknownProductCharacteristic,
+										: UnknownCharacteristic,
 					Resolution = m.Resolution.Value,
 					DisplayCoverage = m.DisplayCoverage != null 
 									  ? m.DisplayCoverage.Name
-									  : UnknownProductCharacteristic,
+									  : UnknownCharacteristic,
 					RefreshRate = m.RefreshRate.Value,
 					Price = m.Price,
 					Warranty = m.Warranty,
@@ -248,7 +249,7 @@ namespace PCShop.Core.Services.Implementations
 		/// Method to retrieve all monitor refresh rates
 		/// </summary>
 		/// <returns>Ordered collection of refresh rates</returns>
-		public async Task<IEnumerable<int>> GetAllRefreshRatesValues()
+		public async Task<IEnumerable<int>> GetAllRefreshRatesValuesAsync()
 		{
 			return await this.repository.AllAsReadOnly<Monitor>(m => !m.IsDeleted)
 				.Select(m => m.RefreshRate.Value)
@@ -261,7 +262,7 @@ namespace PCShop.Core.Services.Implementations
 		/// Method to retrieve all monitor resolutions
 		/// </summary>
 		/// <returns>Ordered collection of resolutions</returns>
-		public async Task<IEnumerable<string>> GetAllResolutionsValues()
+		public async Task<IEnumerable<string>> GetAllResolutionsValuesAsync()
 		{
 			return await this.repository.AllAsReadOnly<Monitor>(m => !m.IsDeleted)
 				.Select(m => m.Resolution.Value)
@@ -338,7 +339,7 @@ namespace PCShop.Core.Services.Implementations
 		/// Method to mark the monitor with the given unique identifier as bought
 		/// </summary>
 		/// <param name="id">Monitor unique identifier</param>
-		public async Task MarkMonitorAsBought(int id)
+		public async Task MarkMonitorAsBoughtAsync(int id)
 		{
 			var monitor = await this.repository.GetByIdAsync<Monitor>(id);
 
@@ -367,14 +368,14 @@ namespace PCShop.Core.Services.Implementations
 					DisplaySize = m.DisplaySize.Value,
 					DisplayTechnology = m.DisplayTechnology != null 
 										? m.DisplayTechnology.Name 
-										: UnknownProductCharacteristic,
+										: UnknownCharacteristic,
 					Resolution = m.Resolution.Value,
 					DisplayCoverage = m.DisplayCoverage != null 
 								      ? m.DisplayCoverage.Name 
-									  : UnknownProductCharacteristic,
+									  : UnknownCharacteristic,
 					RefreshRate = m.RefreshRate.Value,
 					Type = m.Type.Name,
-					Color = m.Color != null ? m.Color.Name : UnknownProductCharacteristic,
+					Color = m.Color != null ? m.Color.Name : UnknownCharacteristic,
 					ImageUrl = m.ImageUrl,
 					AddedOn = m.AddedOn.ToString("MMMM, yyyy", CultureInfo.InvariantCulture),
 					Quantity = m.Quantity,

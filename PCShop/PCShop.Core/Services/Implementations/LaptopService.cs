@@ -9,6 +9,7 @@ using PCShop.Infrastructure.Data.Models.GravitatingClasses;
 using System.Globalization;
 using System.Linq.Expressions;
 using static PCShop.Core.Constants.Constant.ClientConstants;
+using static PCShop.Core.Constants.Constant.GlobalConstants;
 using static PCShop.Core.Constants.Constant.ProductConstants;
 using Type = PCShop.Infrastructure.Data.Models.GravitatingClasses.Type;
 
@@ -287,7 +288,7 @@ namespace PCShop.Core.Services.Implementations
         /// Method to mark the laptop with the given unique identifier as bought
         /// </summary>
         /// <param name="id">Laptop unique identifier</param>
-        public async Task MarkLaptopAsBought(int id)
+        public async Task MarkLaptopAsBoughtAsync(int id)
         {
             var laptop = await this.repository.GetByIdAsync<Laptop>(id);
 
@@ -306,7 +307,7 @@ namespace PCShop.Core.Services.Implementations
 		/// Method to retrieve all CPU names
 		/// </summary>
 		/// <returns>Ordered collection of CPU names</returns>
-		public async Task<IEnumerable<string>> GetAllCpusNames()
+		public async Task<IEnumerable<string>> GetAllCpusNamesAsync()
 		{
             return await this.repository.AllAsReadOnly<CPU>()
                 .Select(cpu => cpu.Name)
@@ -318,7 +319,7 @@ namespace PCShop.Core.Services.Implementations
 		/// Method to retrieve all RAM values
 		/// </summary>
 		/// <returns>Ordered collection of RAM values</returns>
-		public async Task<IEnumerable<int>> GetAllRamsValues()
+		public async Task<IEnumerable<int>> GetAllRamsValuesAsync()
 		{
             return await this.repository.AllAsReadOnly<RAM>()
                 .Select(ram => ram.Value)
@@ -330,7 +331,7 @@ namespace PCShop.Core.Services.Implementations
 		/// Method to retrieve all SSD capacities
 		/// </summary>
 		/// <returns>Ordered collection of SSD capacities</returns>
-		public async Task<IEnumerable<int>> GetAllSsdCapacitiesValues()
+		public async Task<IEnumerable<int>> GetAllSsdCapacitiesValuesAsync()
 		{
             return await this.repository.AllAsReadOnly<SSDCapacity>()
                 .Select(s => s.Value)
@@ -342,7 +343,7 @@ namespace PCShop.Core.Services.Implementations
 		/// Method to retrieve all video card names
 		/// </summary>
 		/// <returns>Ordered collection of video card names</returns>
-		public async Task<IEnumerable<string>> GetAllVideoCardsNames()
+		public async Task<IEnumerable<string>> GetAllVideoCardsNamesAsync()
 		{
             return await this.repository.AllAsReadOnly<VideoCard>()
                 .Select(vc => vc.Name)
@@ -454,14 +455,14 @@ namespace PCShop.Core.Services.Implementations
 					Type = l.Type.Name,
 					DisplayCoverage = l.DisplayCoverage != null 
                                       ? l.DisplayCoverage.Name 
-                                      : UnknownProductCharacteristic,
+                                      : UnknownCharacteristic,
 					DisplayTechnology = l.DisplayTechnology != null 
                                         ? l.DisplayTechnology.Name 
-                                        : UnknownProductCharacteristic,
+                                        : UnknownCharacteristic,
 					Resolution = l.Resolution != null 
                                  ? l.Resolution.Value 
-                                 : UnknownProductCharacteristic,
-					Color = l.Color != null ? l.Color.Name : UnknownProductCharacteristic,
+                                 : UnknownCharacteristic,
+					Color = l.Color != null ? l.Color.Name : UnknownCharacteristic,
 					ImageUrl = l.ImageUrl,
 					AddedOn = l.AddedOn.ToString("MMMM, yyyy", CultureInfo.InvariantCulture),
 					Quantity = l.Quantity,

@@ -1,0 +1,49 @@
+﻿@model IEnumerable<KeyboardExportViewModel>
+
+<table class="table table-striped table-hover mt-5">
+	<thead>
+		<tr class="table-primary">
+			<td>Brand</td>
+			<td>Format</td>
+			<td>Type</td>
+			<td>Wireless</td>
+			<td>Warranty</td>
+			<td>Price</td>
+			<td>View</td>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var keyboard in Model)
+		{
+			<tr>
+				<td>@keyboard.Brand</td>
+				<td>@keyboard.Format</td>
+				<td>@keyboard.Type</td>
+				<td>
+					@if (keyboard.Wireless)
+					{
+						<label>✔</label>
+					}
+					else
+					{
+						<label>❌</label>
+					}
+				</td>
+				<td>
+					@if (keyboard.Warranty > 0)
+					{
+						<p>@keyboard.Warranty months</p>
+					}
+					else
+					{
+						<p>Second hand</p>
+					}
+				</td>
+				<td>@String.Format("{0:f2}", keyboard.Price) EUR</td>
+				<td>
+					<a asp-controller="Keyboard" asp-action="Details" asp-route-id="@keyboard.Id" asp-route-information="@keyboard.GetInformation()" class="btn btn-primary">Details</a>
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>

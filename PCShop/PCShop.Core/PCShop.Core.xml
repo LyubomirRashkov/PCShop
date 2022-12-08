@@ -214,14 +214,24 @@
             Constant for the number of products displayed on one page
             </summary>
         </member>
-        <member name="F:PCShop.Core.Constants.Constant.ProductConstants.UnknownProductCharacteristic">
-            <summary>
-            Constant for unknown product characteristic
-            </summary>
-        </member>
         <member name="F:PCShop.Core.Constants.Constant.ProductConstants.ErrorMessageForInvalidProductId">
             <summary>
             Constant for the error message of invalid product unique identifier
+            </summary>
+        </member>
+        <member name="F:PCShop.Core.Constants.Constant.ProductConstants.ProductSuccessfullyAdded">
+            <summary>
+            Constant for the TempData message for a successfully added product
+            </summary>
+        </member>
+        <member name="F:PCShop.Core.Constants.Constant.ProductConstants.ProductSuccessfullyEdited">
+            <summary>
+            Constant for the TempData message for a successfully edited product
+            </summary>
+        </member>
+        <member name="F:PCShop.Core.Constants.Constant.ProductConstants.ProductSuccessfullyDeleted">
+            <summary>
+            Constant for the TempData message for a successfully deleted product
             </summary>
         </member>
         <member name="T:PCShop.Core.Constants.Constant.ClientConstants">
@@ -259,6 +269,21 @@
             Constant for the max value of monitor's refresh rate
             </summary>
         </member>
+        <member name="T:PCShop.Core.Constants.Constant.GlobalConstants">
+            <summary>
+            Class holding global constants
+            </summary>
+        </member>
+        <member name="F:PCShop.Core.Constants.Constant.GlobalConstants.TempDataMessage">
+            <summary>
+            Constant for the TempData key
+            </summary>
+        </member>
+        <member name="F:PCShop.Core.Constants.Constant.GlobalConstants.UnknownCharacteristic">
+            <summary>
+            Constant for unknown characteristic
+            </summary>
+        </member>
         <member name="T:PCShop.Core.Constants.Sorting">
             <summary>
             An enumeration of product sortings
@@ -282,6 +307,26 @@
         <member name="F:PCShop.Core.Constants.Sorting.PriceMaxToMin">
             <summary>
             Enum value for sorting by price (max first, min last)
+            </summary>
+        </member>
+        <member name="T:PCShop.Core.Constants.Wireless">
+            <summary>
+            An enumeration of product connectivity
+            </summary>
+        </member>
+        <member name="F:PCShop.Core.Constants.Wireless.Regardless">
+            <summary>
+            Enum value for all products (regardless of their connectivity)
+            </summary>
+        </member>
+        <member name="F:PCShop.Core.Constants.Wireless.No">
+            <summary>
+            Enum value for wired products
+            </summary>
+        </member>
+        <member name="F:PCShop.Core.Constants.Wireless.Yes">
+            <summary>
+            Enum value for wireless products
             </summary>
         </member>
         <member name="T:PCShop.Core.Exceptions.Guard">
@@ -399,6 +444,106 @@
         <member name="P:PCShop.Core.Models.IProductModel.Price">
             <summary>
             Property that represents product price
+            </summary>
+        </member>
+        <member name="T:PCShop.Core.Models.Keyboard.AllKeyboardsQueryModel">
+            <summary>
+            AllKeyboardsQueryModel model
+            </summary>
+        </member>
+        <member name="M:PCShop.Core.Models.Keyboard.AllKeyboardsQueryModel.#ctor">
+            <summary>
+            Constructor of AllKeyboardsQueryModel class
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Keyboard.AllKeyboardsQueryModel.Format">
+            <summary>
+            Property that represents keyboard format
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Keyboard.AllKeyboardsQueryModel.Formats">
+            <summary>
+            Property that represents a collection of all possible keyboard formats
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Keyboard.AllKeyboardsQueryModel.Type">
+            <summary>
+            Property that represents keyboard type
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Keyboard.AllKeyboardsQueryModel.Types">
+            <summary>
+            Property that represents a collection of all possible keyboard types
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Keyboard.AllKeyboardsQueryModel.Wireless">
+            <summary>
+            Property that represents keyboard connectivity
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Keyboard.AllKeyboardsQueryModel.Keyword">
+            <summary>
+            Property that represents a search keyword
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Keyboard.AllKeyboardsQueryModel.Sorting">
+            <summary>
+            Property that represents a sorting criterion
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Keyboard.AllKeyboardsQueryModel.CurrentPage">
+            <summary>
+            Property that represents the number of the current page
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Keyboard.AllKeyboardsQueryModel.TotalKeyboardsCount">
+            <summary>
+            Property that represents total count of keyboards
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Keyboard.AllKeyboardsQueryModel.Keyboards">
+            <summary>
+            Property that represents a collecion of keyboards according to specified criteria
+            </summary>
+        </member>
+        <member name="T:PCShop.Core.Models.Keyboard.KeyboardExportViewModel">
+            <summary>
+            LaptopExportViewModel model
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Keyboard.KeyboardExportViewModel.Wireless">
+            <summary>
+            Property that represents if the keyboard is wireless
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Keyboard.KeyboardExportViewModel.Type">
+            <summary>
+            Property that represents keyboard type
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Keyboard.KeyboardExportViewModel.Format">
+            <summary>
+            Property that represents keyboard format
+            </summary>
+        </member>
+        <member name="T:PCShop.Core.Models.Keyboard.KeyboardsQueryModel">
+            <summary>
+            KeyboardsQueryModel model
+            </summary>
+        </member>
+        <member name="M:PCShop.Core.Models.Keyboard.KeyboardsQueryModel.#ctor">
+            <summary>
+            Constructor of KeyboardsQueryModel class
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Keyboard.KeyboardsQueryModel.TotalKeyboardsCount">
+            <summary>
+            Property that represents total count of keyboards
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Keyboard.KeyboardsQueryModel.Keyboards">
+            <summary>
+            Property that represents a collection of keyboards
             </summary>
         </member>
         <member name="T:PCShop.Core.Models.Laptop.AllLaptopsQueryModel">
@@ -1077,6 +1222,41 @@
             <param name="userId">User unique identifier</param>
             <returns>The number of active sales of the user</returns>
         </member>
+        <member name="T:PCShop.Core.Services.Implementations.KeyboardService">
+            <summary>
+            Implementation of IKeyboardService interface
+            </summary>
+        </member>
+        <member name="M:PCShop.Core.Services.Implementations.KeyboardService.#ctor(PCShop.Infrastructure.Common.IRepository)">
+            <summary>
+            Cnstructor of KeyboardService class
+            </summary>
+            <param name="repository">The repository that will be used</param>
+        </member>
+        <member name="M:PCShop.Core.Services.Implementations.KeyboardService.GetAllKeyboardsAsync(System.String,System.String,PCShop.Core.Constants.Wireless,System.String,PCShop.Core.Constants.Sorting,System.Int32)">
+            <summary>
+            Method to retrieve all active keyboards according to specified criteria
+            </summary>
+            <param name="format">The criterion for the keyboard format</param>
+            <param name="type">The criterion for the keyboard type</param>
+            <param name="wireless">The criterion for the keyboard connectivity</param>
+            <param name="keyword">The criterion for keyword</param>
+            <param name="sorting">The criterion for sorting</param>
+            <param name="currentPage">Current page number</param>
+            <returns>KeyboardsQueryModel object</returns>
+        </member>
+        <member name="M:PCShop.Core.Services.Implementations.KeyboardService.GetAllKeyboardsFormatsAsync">
+            <summary>
+            Method to retrieve all keyboard formats
+            </summary>
+            <returns>Ordered collection of format names</returns>
+        </member>
+        <member name="M:PCShop.Core.Services.Implementations.KeyboardService.GetAllKeyboardsTypesAsync">
+            <summary>
+            Method to retrieve all keyboard types
+            </summary>
+            <returns>Ordered collection of type names</returns>
+        </member>
         <member name="T:PCShop.Core.Services.Implementations.LaptopService">
             <summary>
             Implementation of ILaptopService interface
@@ -1144,31 +1324,31 @@
             <param name="userId">User unique identifier</param>
             <returns>Collection of LaptopDetailsExportViewModels</returns>
         </member>
-        <member name="M:PCShop.Core.Services.Implementations.LaptopService.MarkLaptopAsBought(System.Int32)">
+        <member name="M:PCShop.Core.Services.Implementations.LaptopService.MarkLaptopAsBoughtAsync(System.Int32)">
             <summary>
             Method to mark the laptop with the given unique identifier as bought
             </summary>
             <param name="id">Laptop unique identifier</param>
         </member>
-        <member name="M:PCShop.Core.Services.Implementations.LaptopService.GetAllCpusNames">
+        <member name="M:PCShop.Core.Services.Implementations.LaptopService.GetAllCpusNamesAsync">
             <summary>
             Method to retrieve all CPU names
             </summary>
             <returns>Ordered collection of CPU names</returns>
         </member>
-        <member name="M:PCShop.Core.Services.Implementations.LaptopService.GetAllRamsValues">
+        <member name="M:PCShop.Core.Services.Implementations.LaptopService.GetAllRamsValuesAsync">
             <summary>
             Method to retrieve all RAM values
             </summary>
             <returns>Ordered collection of RAM values</returns>
         </member>
-        <member name="M:PCShop.Core.Services.Implementations.LaptopService.GetAllSsdCapacitiesValues">
+        <member name="M:PCShop.Core.Services.Implementations.LaptopService.GetAllSsdCapacitiesValuesAsync">
             <summary>
             Method to retrieve all SSD capacities
             </summary>
             <returns>Ordered collection of SSD capacities</returns>
         </member>
-        <member name="M:PCShop.Core.Services.Implementations.LaptopService.GetAllVideoCardsNames">
+        <member name="M:PCShop.Core.Services.Implementations.LaptopService.GetAllVideoCardsNamesAsync">
             <summary>
             Method to retrieve all video card names
             </summary>
@@ -1207,13 +1387,13 @@
             <param name="model">Monitor input model</param>
             <returns>The unique identifier of the edited monitor</returns>
         </member>
-        <member name="M:PCShop.Core.Services.Implementations.MonitorService.GetAllBrandsNames">
+        <member name="M:PCShop.Core.Services.Implementations.MonitorService.GetAllBrandsNamesAsync">
             <summary>
             Method to retrieve all monitor brands names
             </summary>
             <returns>Ordered collection of brand names</returns>
         </member>
-        <member name="M:PCShop.Core.Services.Implementations.MonitorService.GetAllDisplaysSizesValues">
+        <member name="M:PCShop.Core.Services.Implementations.MonitorService.GetAllDisplaysSizesValuesAsync">
             <summary>
             Method to retrieve all monitor display sizes
             </summary>
@@ -1232,13 +1412,13 @@
             <param name="currentPage">Current page number</param>
             <returns>MonitorsQueryModel object</returns>
         </member>
-        <member name="M:PCShop.Core.Services.Implementations.MonitorService.GetAllRefreshRatesValues">
+        <member name="M:PCShop.Core.Services.Implementations.MonitorService.GetAllRefreshRatesValuesAsync">
             <summary>
             Method to retrieve all monitor refresh rates
             </summary>
             <returns>Ordered collection of refresh rates</returns>
         </member>
-        <member name="M:PCShop.Core.Services.Implementations.MonitorService.GetAllResolutionsValues">
+        <member name="M:PCShop.Core.Services.Implementations.MonitorService.GetAllResolutionsValuesAsync">
             <summary>
             Method to retrieve all monitor resolutions
             </summary>
@@ -1265,7 +1445,7 @@
             <param name="userId">User unique identifier</param>
             <returns>Collection of MonitorDetailsExportViewModels</returns>
         </member>
-        <member name="M:PCShop.Core.Services.Implementations.MonitorService.MarkMonitorAsBought(System.Int32)">
+        <member name="M:PCShop.Core.Services.Implementations.MonitorService.MarkMonitorAsBoughtAsync(System.Int32)">
             <summary>
             Method to mark the monitor with the given unique identifier as bought
             </summary>
@@ -1324,6 +1504,35 @@
             </summary>
             <param name="userId">User unique identifier</param>
             <returns>The client who purchased the product</returns>
+        </member>
+        <member name="T:PCShop.Core.Services.Interfaces.IKeyboardService">
+            <summary>
+            Abstraction of KeyboardService
+            </summary>
+        </member>
+        <member name="M:PCShop.Core.Services.Interfaces.IKeyboardService.GetAllKeyboardsAsync(System.String,System.String,PCShop.Core.Constants.Wireless,System.String,PCShop.Core.Constants.Sorting,System.Int32)">
+            <summary>
+            Method to retrieve all active keyboards according to specified criteria
+            </summary>
+            <param name="format">The criterion for the keyboard format</param>
+            <param name="type">The criterion for the keyboard type</param>
+            <param name="wireless">The criterion for the keyboard connectivity</param>
+            <param name="keyword">The criterion for keyword</param>
+            <param name="sorting">The criterion for sorting</param>
+            <param name="currentPage">Current page number</param>
+            <returns>KeyboardsQueryModel object</returns>
+        </member>
+        <member name="M:PCShop.Core.Services.Interfaces.IKeyboardService.GetAllKeyboardsFormatsAsync">
+            <summary>
+            Method to retrieve all keyboard formats
+            </summary>
+            <returns>Ordered collection of format names</returns>
+        </member>
+        <member name="M:PCShop.Core.Services.Interfaces.IKeyboardService.GetAllKeyboardsTypesAsync">
+            <summary>
+            Method to retrieve all keyboard types
+            </summary>
+            <returns>Ordered collection of type names</returns>
         </member>
         <member name="T:PCShop.Core.Services.Interfaces.ILaptopService">
             <summary>
@@ -1385,31 +1594,31 @@
             <param name="userId">User unique identifier</param>
             <returns>Collection of LaptopDetailsExportViewModels</returns>
         </member>
-        <member name="M:PCShop.Core.Services.Interfaces.ILaptopService.MarkLaptopAsBought(System.Int32)">
+        <member name="M:PCShop.Core.Services.Interfaces.ILaptopService.MarkLaptopAsBoughtAsync(System.Int32)">
             <summary>
             Method to mark the laptop with the given unique identifier as bought
             </summary>
             <param name="id">Laptop unique identifier</param>
         </member>
-        <member name="M:PCShop.Core.Services.Interfaces.ILaptopService.GetAllCpusNames">
+        <member name="M:PCShop.Core.Services.Interfaces.ILaptopService.GetAllCpusNamesAsync">
             <summary>
             Method to retrieve all CPU names
             </summary>
             <returns>Ordered collection of CPU names</returns>
         </member>
-        <member name="M:PCShop.Core.Services.Interfaces.ILaptopService.GetAllRamsValues">
+        <member name="M:PCShop.Core.Services.Interfaces.ILaptopService.GetAllRamsValuesAsync">
             <summary>
             Method to retrieve all RAM values
             </summary>
             <returns>Ordered collection of RAM values</returns>
         </member>
-        <member name="M:PCShop.Core.Services.Interfaces.ILaptopService.GetAllSsdCapacitiesValues">
+        <member name="M:PCShop.Core.Services.Interfaces.ILaptopService.GetAllSsdCapacitiesValuesAsync">
             <summary>
             Method to retrieve all SSD capacities
             </summary>
             <returns>Ordered collection of SSD capacities</returns>
         </member>
-        <member name="M:PCShop.Core.Services.Interfaces.ILaptopService.GetAllVideoCardsNames">
+        <member name="M:PCShop.Core.Services.Interfaces.ILaptopService.GetAllVideoCardsNamesAsync">
             <summary>
             Method to retrieve all video card names
             </summary>
@@ -1433,25 +1642,25 @@
             <param name="currentPage">Current page number</param>
             <returns>MonitorsQueryModel object</returns>
         </member>
-        <member name="M:PCShop.Core.Services.Interfaces.IMonitorService.GetAllBrandsNames">
+        <member name="M:PCShop.Core.Services.Interfaces.IMonitorService.GetAllBrandsNamesAsync">
             <summary>
             Method to retrieve all monitor brands names
             </summary>
             <returns>Ordered collection of brand names</returns>
         </member>
-        <member name="M:PCShop.Core.Services.Interfaces.IMonitorService.GetAllDisplaysSizesValues">
+        <member name="M:PCShop.Core.Services.Interfaces.IMonitorService.GetAllDisplaysSizesValuesAsync">
             <summary>
             Method to retrieve all monitor display sizes
             </summary>
             <returns>Ordered collection of display sizes</returns>
         </member>
-        <member name="M:PCShop.Core.Services.Interfaces.IMonitorService.GetAllResolutionsValues">
+        <member name="M:PCShop.Core.Services.Interfaces.IMonitorService.GetAllResolutionsValuesAsync">
             <summary>
             Method to retrieve all monitor resolutions
             </summary>
             <returns>Ordered collection of resolutions</returns>
         </member>
-        <member name="M:PCShop.Core.Services.Interfaces.IMonitorService.GetAllRefreshRatesValues">
+        <member name="M:PCShop.Core.Services.Interfaces.IMonitorService.GetAllRefreshRatesValuesAsync">
             <summary>
             Method to retrieve all monitor refresh rates
             </summary>
@@ -1499,7 +1708,7 @@
             <param name="userId">User unique identifier</param>
             <returns>Collection of MonitorDetailsExportViewModels</returns>
         </member>
-        <member name="M:PCShop.Core.Services.Interfaces.IMonitorService.MarkMonitorAsBought(System.Int32)">
+        <member name="M:PCShop.Core.Services.Interfaces.IMonitorService.MarkMonitorAsBoughtAsync(System.Int32)">
             <summary>
             Method to mark the monitor with the given unique identifier as bought
             </summary>

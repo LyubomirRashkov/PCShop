@@ -32,25 +32,25 @@ namespace PCShop.Core.Services.Interfaces
 		/// Method to retrieve all monitor brands names
 		/// </summary>
 		/// <returns>Ordered collection of brand names</returns>
-		Task<IEnumerable<string>> GetAllBrandsNames();
+		Task<IEnumerable<string>> GetAllBrandsNamesAsync();
 
 		/// <summary>
 		/// Method to retrieve all monitor display sizes
 		/// </summary>
 		/// <returns>Ordered collection of display sizes</returns>
-		Task<IEnumerable<double>> GetAllDisplaysSizesValues();
+		Task<IEnumerable<double>> GetAllDisplaysSizesValuesAsync();
 
 		/// <summary>
 		/// Method to retrieve all monitor resolutions
 		/// </summary>
 		/// <returns>Ordered collection of resolutions</returns>
-		Task<IEnumerable<string>> GetAllResolutionsValues();
+		Task<IEnumerable<string>> GetAllResolutionsValuesAsync();
 
 		/// <summary>
 		/// Method to retrieve all monitor refresh rates
 		/// </summary>
 		/// <returns>Ordered collection of refresh rates</returns>
-		Task<IEnumerable<int>> GetAllRefreshRatesValues();
+		Task<IEnumerable<int>> GetAllRefreshRatesValuesAsync();
 
 		/// <summary>
 		/// Method to retrieve a specific monitor
@@ -98,6 +98,6 @@ namespace PCShop.Core.Services.Interfaces
 		/// Method to mark the monitor with the given unique identifier as bought
 		/// </summary>
 		/// <param name="id">Monitor unique identifier</param>
-		Task MarkMonitorAsBought(int id);
+		Task MarkMonitorAsBoughtAsync(int id);
 	}
 }

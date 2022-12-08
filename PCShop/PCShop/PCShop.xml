@@ -119,6 +119,24 @@
             <param name="statusCode">The status code of the response</param>
             <returns>The corresponding page</returns>
         </member>
+        <member name="T:PCShop.Controllers.KeyboardController">
+            <summary>
+            Keyboard controller class
+            </summary>
+        </member>
+        <member name="M:PCShop.Controllers.KeyboardController.#ctor(PCShop.Core.Services.Interfaces.IKeyboardService)">
+            <summary>
+            Constructor of KeyboardController class
+            </summary>
+            <param name="keyboardService">The IKeyboardService needed for functionality</param>
+        </member>
+        <member name="M:PCShop.Controllers.KeyboardController.Index(PCShop.Core.Models.Keyboard.AllKeyboardsQueryModel)">
+            <summary>
+            HttpGet action to retrieve all active keyboards according to specified criteria
+            </summary>
+            <param name="query">The entity that holds the specified criteria</param>
+            <returns>Collection of all active keyboards according to specified criteria</returns>
+        </member>
         <member name="T:PCShop.Controllers.LaptopController">
             <summary>
             Laptop controller class

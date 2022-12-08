@@ -74,30 +74,30 @@ namespace PCShop.Core.Services.Interfaces
 		/// Method to mark the laptop with the given unique identifier as bought
 		/// </summary>
 		/// <param name="id">Laptop unique identifier</param>
-		Task MarkLaptopAsBought(int id);
+		Task MarkLaptopAsBoughtAsync(int id);
 
 		/// <summary>
 		/// Method to retrieve all CPU names
 		/// </summary>
 		/// <returns>Ordered collection of CPU names</returns>
-		Task<IEnumerable<string>> GetAllCpusNames();
+		Task<IEnumerable<string>> GetAllCpusNamesAsync();
 
 		/// <summary>
 		/// Method to retrieve all RAM values
 		/// </summary>
 		/// <returns>Ordered collection of RAM values</returns>
-		Task<IEnumerable<int>> GetAllRamsValues();
+		Task<IEnumerable<int>> GetAllRamsValuesAsync();
 
 		/// <summary>
 		/// Method to retrieve all SSD capacities
 		/// </summary>
 		/// <returns>Ordered collection of SSD capacities</returns>
-		Task<IEnumerable<int>> GetAllSsdCapacitiesValues();
+		Task<IEnumerable<int>> GetAllSsdCapacitiesValuesAsync();
 
 		/// <summary>
 		/// Method to retrieve all video card names
 		/// </summary>
 		/// <returns>Ordered collection of video card names</returns>
-		Task<IEnumerable<string>> GetAllVideoCardsNames();
+		Task<IEnumerable<string>> GetAllVideoCardsNamesAsync();
 	}
 }

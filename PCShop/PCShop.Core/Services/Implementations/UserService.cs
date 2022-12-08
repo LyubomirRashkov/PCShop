@@ -8,6 +8,7 @@ using PCShop.Infrastructure.Data.Models;
 using PCShop.Infrastructure.Data.Models.Account;
 using System.Data;
 using static PCShop.Core.Constants.Constant.ClientConstants;
+using static PCShop.Core.Constants.Constant.GlobalConstants;
 using static PCShop.Infrastructure.Constants.DataConstant.RoleConstants;
 
 namespace PCShop.Core.Services.Implementations
@@ -52,10 +53,10 @@ namespace PCShop.Core.Services.Implementations
 				.Select(u => new UserExportViewModel()
 				{
 					Id = u.Id,
-					Username = u.UserName ?? "unknown",
-					Email = u.Email ?? "unknown",
-					FirstName = u.FirstName ?? "unknown",
-					LastName = u.LastName ?? "unknown",
+					Username = u.UserName ?? UnknownCharacteristic,
+					Email = u.Email ?? UnknownCharacteristic,
+					FirstName = u.FirstName ?? UnknownCharacteristic,
+					LastName = u.LastName ?? UnknownCharacteristic,
 					Roles = this.repository.AllAsReadOnly<IdentityUserRole<string>>()
 							.Where(x => x.UserId == u.Id)
 							.Select(x => x.RoleId)

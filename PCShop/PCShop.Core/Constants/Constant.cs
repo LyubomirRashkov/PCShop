@@ -217,11 +217,6 @@
 			/// </summary>
 			public const int ProductsPerPage = 25;
 
-            /// <summary>
-            /// Constant for unknown product characteristic
-            /// </summary>
-            public const string UnknownProductCharacteristic = "unknown";
-
 			/// <summary>
 			/// Constant for the error message of invalid product unique identifier
 			/// </summary>
@@ -288,6 +283,11 @@
             /// Constant for the TempData key
             /// </summary>
             public const string TempDataMessage = "Message";
-        }
+
+			/// <summary>
+			/// Constant for unknown characteristic
+			/// </summary>
+			public const string UnknownCharacteristic = "unknown";
+		}
     }
 }
