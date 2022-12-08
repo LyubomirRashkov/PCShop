@@ -144,12 +144,12 @@ namespace PCShop.Controllers
 					{
 						ViewData["Title"] = "Add a laptop";
 
-						return View("AddNotAllowed");
+						return View(AddNotAllowedViewName);
 					}
 				}
 				catch (PCShopException)
 				{
-					return View("Error");
+					return View(ErrorCommonViewName);
 				}
 			}
 
@@ -187,7 +187,7 @@ namespace PCShop.Controllers
 			}
 			catch (PCShopException)
 			{
-				return View("Error");
+				return View(ErrorCommonViewName);
 			}
 		}
 
@@ -272,7 +272,7 @@ namespace PCShop.Controllers
 			}
 			catch (PCShopException)
 			{
-				return View("Error");
+				return View(ErrorCommonViewName);
 			}
 		}
 
@@ -313,10 +313,10 @@ namespace PCShop.Controllers
 
 				if (isNowPromotedToSuperUser)
 				{
-					return View("PromoteToSuperUser");
+					return View(PromoteToSuperUserViewName);
 				}
 
-				return View("PurchaseMade");
+				return View(PurchaseMadeViewName);
 			}
 			catch (ArgumentException)
 			{

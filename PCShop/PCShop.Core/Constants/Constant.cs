@@ -288,6 +288,36 @@
 			/// Constant for unknown characteristic
 			/// </summary>
 			public const string UnknownCharacteristic = "unknown";
+
+            /// <summary>
+            /// Constant for the view name for a common error
+            /// </summary>
+            public const string ErrorCommonViewName = "Error";
+
+			/// <summary>
+			/// Constant for the view name for error 401
+			/// </summary>
+			public const string Error401ViewName = "Error401";
+
+			/// <summary>
+			/// Constant for the view name for error 404
+			/// </summary>
+			public const string Error404ViewName = "Error404";
+
+			/// <summary>
+			/// Constant for the view name for a not allowed addition
+			/// </summary>
+			public const string AddNotAllowedViewName = "AddNotAllowed";
+
+			/// <summary>
+			/// Constant for the view name for a promotion to superUser
+			/// </summary>
+			public const string PromoteToSuperUserViewName = "PromoteToSuperUser";
+
+			/// <summary>
+			/// Constant for the view name for a successful purchase
+			/// </summary>
+			public const string PurchaseMadeViewName = "PurchaseMade";
 		}
     }
 }

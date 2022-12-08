@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using static PCShop.Core.Constants.Constant.GlobalConstants;
 using static PCShop.Infrastructure.Constants.DataConstant.RoleConstants;
 
 namespace PCShop.Controllers
@@ -34,9 +35,9 @@ namespace PCShop.Controllers
         {
 			return statusCode switch
 			{
-				401 => View("Error401"),
-				404 => View("Error404"),
-				_ => View("Error")
+				401 => View(Error401ViewName),
+				404 => View(Error404ViewName),
+				_ => View(ErrorCommonViewName)
 			};
 		}
     }
