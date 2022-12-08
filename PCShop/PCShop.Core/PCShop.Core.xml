@@ -506,12 +506,52 @@
             Property that represents a collecion of keyboards according to specified criteria
             </summary>
         </member>
+        <member name="T:PCShop.Core.Models.Keyboard.KeyboardDetailsExportViewModel">
+            <summary>
+            KeyboardDetailsExportViewModel model
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Keyboard.KeyboardDetailsExportViewModel.Color">
+            <summary>
+            Property that represents keyboard color
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Keyboard.KeyboardDetailsExportViewModel.ImageUrl">
+            <summary>
+            Property that represents keyboard image url
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Keyboard.KeyboardDetailsExportViewModel.AddedOn">
+            <summary>
+            Property that represents the date the keyboard was added to the database
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Keyboard.KeyboardDetailsExportViewModel.Quantity">
+            <summary>
+            Property that represents how many keyboards are in stock
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Keyboard.KeyboardDetailsExportViewModel.Seller">
+            <summary>
+            Property that represents keyboard Seller
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Keyboard.KeyboardDetailsExportViewModel.SellerFirstName">
+            <summary>
+            Property that represents keyboard seller first name
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Keyboard.KeyboardDetailsExportViewModel.SellerLastName">
+            <summary>
+            Property that represents keyboard seller last name
+            </summary>
+        </member>
         <member name="T:PCShop.Core.Models.Keyboard.KeyboardExportViewModel">
             <summary>
             LaptopExportViewModel model
             </summary>
         </member>
-        <member name="P:PCShop.Core.Models.Keyboard.KeyboardExportViewModel.Wireless">
+        <member name="P:PCShop.Core.Models.Keyboard.KeyboardExportViewModel.IsWireless">
             <summary>
             Property that represents if the keyboard is wireless
             </summary>
@@ -1227,11 +1267,12 @@
             Implementation of IKeyboardService interface
             </summary>
         </member>
-        <member name="M:PCShop.Core.Services.Implementations.KeyboardService.#ctor(PCShop.Infrastructure.Common.IRepository)">
+        <member name="M:PCShop.Core.Services.Implementations.KeyboardService.#ctor(PCShop.Infrastructure.Common.IRepository,PCShop.Core.Exceptions.IGuard)">
             <summary>
             Cnstructor of KeyboardService class
             </summary>
             <param name="repository">The repository that will be used</param>
+            <param name="guard">The guard that will be used</param>
         </member>
         <member name="M:PCShop.Core.Services.Implementations.KeyboardService.GetAllKeyboardsAsync(System.String,System.String,PCShop.Core.Constants.Wireless,System.String,PCShop.Core.Constants.Sorting,System.Int32)">
             <summary>
@@ -1256,6 +1297,13 @@
             Method to retrieve all keyboard types
             </summary>
             <returns>Ordered collection of type names</returns>
+        </member>
+        <member name="M:PCShop.Core.Services.Implementations.KeyboardService.GetKeyboardByIdAsKeyboardDetailsExportViewModelAsync(System.Int32)">
+            <summary>
+            Method to retrieve a specific keyboard
+            </summary>
+            <param name="id">Keyboard unique identifier</param>
+            <returns>The keyboard as KeyboardDetailsExportViewModel</returns>
         </member>
         <member name="T:PCShop.Core.Services.Implementations.LaptopService">
             <summary>
@@ -1533,6 +1581,13 @@
             Method to retrieve all keyboard types
             </summary>
             <returns>Ordered collection of type names</returns>
+        </member>
+        <member name="M:PCShop.Core.Services.Interfaces.IKeyboardService.GetKeyboardByIdAsKeyboardDetailsExportViewModelAsync(System.Int32)">
+            <summary>
+            Method to retrieve a specific keyboard
+            </summary>
+            <param name="id">Keyboard unique identifier</param>
+            <returns>The keyboard as KeyboardDetailsExportViewModel</returns>
         </member>
         <member name="T:PCShop.Core.Services.Interfaces.ILaptopService">
             <summary>

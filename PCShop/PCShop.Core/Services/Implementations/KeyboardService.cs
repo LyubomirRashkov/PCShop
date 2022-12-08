@@ -1,9 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using PCShop.Core.Constants;
+using PCShop.Core.Exceptions;
 using PCShop.Core.Models.Keyboard;
 using PCShop.Core.Services.Interfaces;
 using PCShop.Infrastructure.Common;
 using PCShop.Infrastructure.Data.Models;
+using System.Globalization;
+using System.Linq.Expressions;
 using static PCShop.Core.Constants.Constant.GlobalConstants;
 using static PCShop.Core.Constants.Constant.ProductConstants;
 
@@ -15,14 +18,19 @@ namespace PCShop.Core.Services.Implementations
 	public class KeyboardService : IKeyboardService
 	{
 		private readonly IRepository repository;
+		private readonly IGuard guard;
 
 		/// <summary>
 		/// Cnstructor of KeyboardService class
 		/// </summary>
 		/// <param name="repository">The repository that will be used</param>
-		public KeyboardService(IRepository repository)
+		/// <param name="guard">The guard that will be used</param>
+		public KeyboardService(
+			IRepository repository,
+			IGuard guard)
 		{
 			this.repository = repository;
+			this.guard = guard;
 		}
 
 		/// <summary>
@@ -95,7 +103,7 @@ namespace PCShop.Core.Services.Implementations
 					Brand = k.Brand.Name,
 					Type = k.Type.Name,
 					Format = k.Format != null ? k.Format.Name : UnknownCharacteristic,
-					Wireless = k.IsWireless,
+					IsWireless = k.IsWireless,
 					Price = k.Price,
 					Warranty = k.Warranty,
 				})
@@ -131,6 +139,47 @@ namespace PCShop.Core.Services.Implementations
 				.Distinct()
 				.OrderBy(n => n)
 				.ToListAsync();
+		}
+
+		/// <summary>
+		/// Method to retrieve a specific keyboard
+		/// </summary>
+		/// <param name="id">Keyboard unique identifier</param>
+		/// <returns>The keyboard as KeyboardDetailsExportViewModel</returns>
+		public async Task<KeyboardDetailsExportViewModel> GetKeyboardByIdAsKeyboardDetailsExportViewModelAsync(int id)
+		{
+			var keyboardExports = await this.GetKeyboardsAsKeyboardDetailsExportViewModelsAsync<Keyboard>(k => k.Id == id);
+
+			this.guard.AgainstNullOrEmptyCollection<KeyboardDetailsExportViewModel>(keyboardExports, ErrorMessageForInvalidProductId);
+
+			return keyboardExports.First();
+		}
+
+		private async Task<IList<KeyboardDetailsExportViewModel>> GetKeyboardsAsKeyboardDetailsExportViewModelsAsync<T>(Expression<Func<Keyboard, bool>> condition)
+		{
+			var keyboardsAsKeyboardDetailsExportViewModels = await this.repository
+				.AllAsReadOnly<Keyboard>(k => !k.IsDeleted)
+				.Where(condition)
+				.Select(k => new KeyboardDetailsExportViewModel()
+				{
+					Id = k.Id,
+					Brand = k.Brand.Name,
+					Price = k.Price,
+					IsWireless = k.IsWireless,
+					Format = k.Format != null ? k.Format.Name : UnknownCharacteristic,
+					Type = k.Type.Name,
+					Color = k.Color != null ? k.Color.Name : UnknownCharacteristic,
+					ImageUrl = k.ImageUrl,
+					Warranty = k.Warranty,
+					Quantity = k.Quantity,
+					AddedOn = k.AddedOn.ToString("MMMM, yyyy", CultureInfo.InvariantCulture),
+					Seller = k.Seller,
+					SellerFirstName = k.Seller != null ? k.Seller.User.FirstName : null,
+					SellerLastName = k.Seller != null ? k.Seller.User.LastName : null,
+				})
+				.ToListAsync();
+
+			return keyboardsAsKeyboardDetailsExportViewModels;
 		}
 	}
 }

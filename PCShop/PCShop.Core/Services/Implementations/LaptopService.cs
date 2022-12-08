@@ -228,7 +228,7 @@ namespace PCShop.Core.Services.Implementations
 
             this.guard.AgainstNullOrEmptyCollection<LaptopDetailsExportViewModel>(laptopExports, ErrorMessageForInvalidProductId);
 
-            return laptopExports[0];
+            return laptopExports.First();
         }
 
         /// <summary>

@@ -37,5 +37,12 @@ namespace PCShop.Core.Services.Interfaces
 		/// </summary>
 		/// <returns>Ordered collection of type names</returns>
 		Task<IEnumerable<string>> GetAllKeyboardsTypesAsync();
+
+		/// <summary>
+		/// Method to retrieve a specific keyboard
+		/// </summary>
+		/// <param name="id">Keyboard unique identifier</param>
+		/// <returns>The keyboard as KeyboardDetailsExportViewModel</returns>
+		Task<KeyboardDetailsExportViewModel> GetKeyboardByIdAsKeyboardDetailsExportViewModelAsync(int id);
 	}
 }

@@ -282,7 +282,7 @@ namespace PCShop.Core.Services.Implementations
 
 			this.guard.AgainstNullOrEmptyCollection<MonitorDetailsExportViewModel>(monitorExports, ErrorMessageForInvalidProductId);
 
-			return monitorExports[0];
+			return monitorExports.First();
 		}
 
         /// <summary>

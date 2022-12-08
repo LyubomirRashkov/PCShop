@@ -10,7 +10,7 @@ namespace PCShop.Core.Models.Keyboard
 		/// <summary>
 		/// Property that represents if the keyboard is wireless
 		/// </summary>
-		public bool Wireless { get; init; }
+		public bool IsWireless { get; init; }
 
 		/// <summary>
 		/// Property that represents keyboard type
