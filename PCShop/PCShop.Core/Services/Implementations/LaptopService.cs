@@ -135,7 +135,19 @@ namespace PCShop.Core.Services.Implementations
             laptop.Quantity = model.Quantity;
             laptop.AddedOn = DateTime.UtcNow.Date;
 
-            laptop = await this.SetNavigationPropertiesAsync(laptop, model.Brand, model.CPU, model.RAM, model.SSDCapacity, model.VideoCard, model.Type, model.DisplaySize, model.DisplayCoverage, model.DisplayTechnology, model.Resolution, model.Color);
+            laptop = await this.SetNavigationPropertiesAsync(
+                laptop, 
+                model.Brand,
+                model.CPU,
+                model.RAM, 
+                model.SSDCapacity,
+                model.VideoCard,
+                model.Type,
+                model.DisplaySize, 
+                model.DisplayCoverage,
+                model.DisplayTechnology,
+                model.Resolution,
+                model.Color);
 
             await this.repository.SaveChangesAsync();
 
@@ -251,7 +263,7 @@ namespace PCShop.Core.Services.Implementations
         public async Task<LaptopEditViewModel> GetLaptopByIdAsLaptopEditViewModelAsync(int id)
         {
             var laptopExport = await this.repository
-                .All<Laptop>(l => !l.IsDeleted)
+                .AllAsReadOnly<Laptop>(l => !l.IsDeleted)
                 .Where(l => l.Id == id)
                 .Select(l => new LaptopEditViewModel()
                 {

@@ -581,6 +581,21 @@
             Property that represents keyboard seller last name
             </summary>
         </member>
+        <member name="T:PCShop.Core.Models.Keyboard.KeyboardEditViewModel">
+            <summary>
+            KeyboardEditViewModel model
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Keyboard.KeyboardEditViewModel.Id">
+            <summary>
+            Property that represents keyboard unique identifier
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Keyboard.KeyboardEditViewModel.Seller">
+            <summary>
+            Property that represents keyboard Seller
+            </summary>
+        </member>
         <member name="T:PCShop.Core.Models.Keyboard.KeyboardExportViewModel">
             <summary>
             LaptopExportViewModel model
@@ -1373,6 +1388,13 @@
             </summary>
             <param name="id">Keyboard unique identifier</param>
         </member>
+        <member name="M:PCShop.Core.Services.Implementations.KeyboardService.EditKeyboardAsync(PCShop.Core.Models.Keyboard.KeyboardEditViewModel)">
+            <summary>
+            Method to edit a keyboard
+            </summary>
+            <param name="model">Keyboard input model</param>
+            <returns>The unique identifier of the edited keyboard</returns>
+        </member>
         <member name="M:PCShop.Core.Services.Implementations.KeyboardService.GetAllKeyboardsAsync(System.String,System.String,PCShop.Core.Constants.Wireless,System.String,PCShop.Core.Constants.Sorting,System.Int32)">
             <summary>
             Method to retrieve all active keyboards according to specified criteria
@@ -1403,6 +1425,13 @@
             </summary>
             <param name="id">Keyboard unique identifier</param>
             <returns>The keyboard as KeyboardDetailsExportViewModel</returns>
+        </member>
+        <member name="M:PCShop.Core.Services.Implementations.KeyboardService.GetKeyboardByIdAsKeyboardEditViewModelAsync(System.Int32)">
+            <summary>
+            Method to retrieve a specific keyboard
+            </summary>
+            <param name="id">Keyboard unique identifier</param>
+            <returns>The keyboars as KeyboardEditViewModel</returns>
         </member>
         <member name="T:PCShop.Core.Services.Implementations.LaptopService">
             <summary>
@@ -1701,6 +1730,20 @@
             <param name="model">Keyboard input model</param>
             <param name="userId">Keyboard's owner unique identifier</param>
             <returns>The unique identifier of the added keyboard</returns>
+        </member>
+        <member name="M:PCShop.Core.Services.Interfaces.IKeyboardService.GetKeyboardByIdAsKeyboardEditViewModelAsync(System.Int32)">
+            <summary>
+            Method to retrieve a specific keyboard
+            </summary>
+            <param name="id">Keyboard unique identifier</param>
+            <returns>The keyboars as KeyboardEditViewModel</returns>
+        </member>
+        <member name="M:PCShop.Core.Services.Interfaces.IKeyboardService.EditKeyboardAsync(PCShop.Core.Models.Keyboard.KeyboardEditViewModel)">
+            <summary>
+            Method to edit a keyboard
+            </summary>
+            <param name="model">Keyboard input model</param>
+            <returns>The unique identifier of the edited keyboard</returns>
         </member>
         <member name="T:PCShop.Core.Services.Interfaces.ILaptopService">
             <summary>

@@ -2,7 +2,6 @@
 using Microsoft.AspNetCore.Mvc;
 using PCShop.Core.Exceptions;
 using PCShop.Core.Models.Keyboard;
-using PCShop.Core.Models.Laptop;
 using PCShop.Core.Services.Interfaces;
 using PCShop.Extensions;
 using System.Security.Claims;
@@ -194,5 +193,69 @@ namespace PCShop.Controllers
 				return View(ErrorCommonViewName);
 			}
 		}
-	}
+
+        /// <summary>
+        /// HttpGet action to return the form for editing a keyboard
+        /// </summary>
+        /// <param name="id">Keyboard unique identifier</param>
+        /// <returns>The form for editing a keyboard</returns>
+        [HttpGet]
+		[Authorize(Roles = $"{Administrator}, {SuperUser}")]
+		public async Task<IActionResult> Edit(int id)
+		{
+			try
+			{
+				var keyboard = await this.keyboardService.GetKeyboardByIdAsKeyboardEditViewModelAsync(id);
+
+				if (this.User.IsInRole(SuperUser)
+					&& (keyboard.Seller is null || this.User.Id() != keyboard.Seller.UserId))
+				{
+					return Unauthorized();
+				}
+
+				return View(keyboard);
+			}
+			catch (ArgumentException)
+			{
+				return NotFound();
+			}
+		}
+
+        /// <summary>
+        /// HttpPost action to edit a keyboard
+        /// </summary>
+        /// <param name="model">Keyboard import model</param>
+        /// <returns>Redirection to /Keyboard/Details</returns>
+        [HttpPost]
+		[Authorize(Roles = $"{Administrator}, {SuperUser}")]
+		public async Task<IActionResult> Edit(KeyboardEditViewModel model)
+		{
+			if (!this.ModelState.IsValid)
+			{
+				return View();
+			}
+
+			try
+			{
+				var keyboard = await this.keyboardService.GetKeyboardByIdAsKeyboardEditViewModelAsync(model.Id);
+
+				if (this.User.IsInRole(SuperUser)
+					&& (keyboard.Seller is null || this.User.Id() != keyboard.Seller.UserId))
+				{
+					return Unauthorized();
+				}
+
+				int id = await this.keyboardService.EditKeyboardAsync(model);
+
+                TempData[TempDataMessage] = ProductSuccessfullyEdited;
+
+                return RedirectToAction(nameof(Details), new { id, information = model.GetInformation() });
+            }
+			catch (ArgumentException)
+			{
+				return NotFound();
+			}
+		}
+
+    }
 }

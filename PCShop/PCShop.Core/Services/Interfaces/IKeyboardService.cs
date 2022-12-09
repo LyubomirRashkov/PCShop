@@ -58,5 +58,19 @@ namespace PCShop.Core.Services.Interfaces
 		/// <param name="userId">Keyboard's owner unique identifier</param>
 		/// <returns>The unique identifier of the added keyboard</returns>
 		Task<int> AddKeyboardAsync(KeyboardImportViewModel model, string? userId);
+
+        /// <summary>
+        /// Method to retrieve a specific keyboard
+        /// </summary>
+        /// <param name="id">Keyboard unique identifier</param>
+        /// <returns>The keyboars as KeyboardEditViewModel</returns>
+        Task<KeyboardEditViewModel> GetKeyboardByIdAsKeyboardEditViewModelAsync(int id);
+
+        /// <summary>
+        /// Method to edit a keyboard
+        /// </summary>
+        /// <param name="model">Keyboard input model</param>
+        /// <returns>The unique identifier of the edited keyboard</returns>
+        Task<int> EditKeyboardAsync(KeyboardEditViewModel model);
 	}
 }

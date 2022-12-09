@@ -67,7 +67,7 @@ namespace PCShop.Core.Services.Implementations
 
 			keyboard.Seller = dbClient;
 
-			keyboard = await this.SetNavigationProperties(
+			keyboard = await this.SetNavigationPropertiesAsync(
 				keyboard, 
 				model.Brand, 
 				model.Type, 
@@ -98,17 +98,54 @@ namespace PCShop.Core.Services.Implementations
 			await this.repository.SaveChangesAsync();
 		}
 
-		/// <summary>
-		/// Method to retrieve all active keyboards according to specified criteria
-		/// </summary>
-		/// <param name="format">The criterion for the keyboard format</param>
-		/// <param name="type">The criterion for the keyboard type</param>
-		/// <param name="wireless">The criterion for the keyboard connectivity</param>
-		/// <param name="keyword">The criterion for keyword</param>
-		/// <param name="sorting">The criterion for sorting</param>
-		/// <param name="currentPage">Current page number</param>
-		/// <returns>KeyboardsQueryModel object</returns>
-		public async Task<KeyboardsQueryModel> GetAllKeyboardsAsync(
+        /// <summary>
+        /// Method to edit a keyboard
+        /// </summary>
+        /// <param name="model">Keyboard input model</param>
+        /// <returns>The unique identifier of the edited keyboard</returns>
+        public async Task<int> EditKeyboardAsync(KeyboardEditViewModel model)
+        {
+			var keyboard = await this.repository
+				.All<Keyboard>(k => !k.IsDeleted)
+				.Where(k => k.Id == model.Id)
+				.Include(k => k.Brand)
+				.Include(k => k.Format)
+				.Include(k => k.Type)
+				.Include(k => k.Color)
+				.FirstOrDefaultAsync();
+
+			this.guard.AgainstProductThatIsNull<Keyboard>(keyboard, ErrorMessageForInvalidProductId);
+
+			keyboard.ImageUrl = model.ImageUrl;
+			keyboard.Warranty = model.Warranty;
+			keyboard.Price = model.Price;
+			keyboard.Quantity = model.Quantity;
+			keyboard.IsWireless = model.IsWireless;
+			keyboard.AddedOn = DateTime.UtcNow.Date;
+
+			keyboard = await this.SetNavigationPropertiesAsync(
+				keyboard, 
+				model.Brand, 
+				model.Type, 
+				model.Format, 
+				model.Color);
+
+			await this.repository.SaveChangesAsync();
+
+			return keyboard.Id;
+        }
+
+        /// <summary>
+        /// Method to retrieve all active keyboards according to specified criteria
+        /// </summary>
+        /// <param name="format">The criterion for the keyboard format</param>
+        /// <param name="type">The criterion for the keyboard type</param>
+        /// <param name="wireless">The criterion for the keyboard connectivity</param>
+        /// <param name="keyword">The criterion for keyword</param>
+        /// <param name="sorting">The criterion for sorting</param>
+        /// <param name="currentPage">Current page number</param>
+        /// <returns>KeyboardsQueryModel object</returns>
+        public async Task<KeyboardsQueryModel> GetAllKeyboardsAsync(
 			string? format = null,
 			string? type = null,
 			Wireless wireless = Wireless.No,
@@ -220,6 +257,37 @@ namespace PCShop.Core.Services.Implementations
 			return keyboardExports.First();
 		}
 
+        /// <summary>
+        /// Method to retrieve a specific keyboard
+        /// </summary>
+        /// <param name="id">Keyboard unique identifier</param>
+        /// <returns>The keyboars as KeyboardEditViewModel</returns>
+        public async Task<KeyboardEditViewModel> GetKeyboardByIdAsKeyboardEditViewModelAsync(int id)
+		{
+			var keyboardExport = await this.repository
+				.AllAsReadOnly<Keyboard>(k => !k.IsDeleted)
+				.Where(k => k.Id == id)
+				.Select(k => new KeyboardEditViewModel()
+				{
+					Id = k.Id,
+					Brand = k.Brand.Name,
+					IsWireless = k.IsWireless,
+					Type = k.Type.Name,
+					Quantity = k.Quantity,
+					Price = k.Price,
+					Warranty = k.Warranty,
+					Format = k.Format == null ? null : k.Format.Name,
+					Color = k.Color == null ? null : k.Color.Name,
+					ImageUrl = k.ImageUrl,
+					Seller = k.Seller,
+				})
+				.FirstOrDefaultAsync();
+
+			this.guard.AgainstProductThatIsNull<KeyboardEditViewModel>(keyboardExport, ErrorMessageForInvalidProductId);
+
+			return keyboardExport;
+		}
+
 		private async Task<IList<KeyboardDetailsExportViewModel>> GetKeyboardsAsKeyboardDetailsExportViewModelsAsync<T>(Expression<Func<Keyboard, bool>> condition)
 		{
 			var keyboardsAsKeyboardDetailsExportViewModels = await this.repository
@@ -247,7 +315,7 @@ namespace PCShop.Core.Services.Implementations
 			return keyboardsAsKeyboardDetailsExportViewModels;
 		}
 
-		private async Task<Keyboard> SetNavigationProperties(
+		private async Task<Keyboard> SetNavigationPropertiesAsync(
 			Keyboard keyboard, 
 			string brand, 
 			string type, 

@@ -130,7 +130,16 @@ namespace PCShop.Core.Services.Implementations
 			monitor.Quantity = model.Quantity;
 			monitor.AddedOn = DateTime.UtcNow.Date;
 
-			monitor = await this.SetNavigationPropertiesAsync(monitor, model.Brand, model.DisplaySize, model.Resolution, model.RefreshRate, model.Type, model.DisplayCoverage, model.DisplayTechnology, model.Color);
+			monitor = await this.SetNavigationPropertiesAsync(
+				monitor, 
+				model.Brand,
+				model.DisplaySize,
+				model.Resolution, 
+				model.RefreshRate, 
+				model.Type,
+				model.DisplayCoverage, 
+				model.DisplayTechnology,
+				model.Color);
 
 			await this.repository.SaveChangesAsync();
 
@@ -302,7 +311,7 @@ namespace PCShop.Core.Services.Implementations
         public async Task<MonitorEditViewModel> GetMonitorByIdAsMonitorEditViewModelAsync(int id)
         {
 			var monitorExport = await this.repository
-				.All<Monitor>(m => !m.IsDeleted)
+				.AllAsReadOnly<Monitor>(m => !m.IsDeleted)
 				.Where(m => m.Id == id)
 				.Select(m => new MonitorEditViewModel()
 				{

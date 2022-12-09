@@ -167,6 +167,20 @@
             <param name="radioButton">The value of selected radio button</param>
             <returns>Redirection to /Keyboard/Details</returns>
         </member>
+        <member name="M:PCShop.Controllers.KeyboardController.Edit(System.Int32)">
+            <summary>
+            HttpGet action to return the form for editing a keyboard
+            </summary>
+            <param name="id">Keyboard unique identifier</param>
+            <returns>The form for editing a keyboard</returns>
+        </member>
+        <member name="M:PCShop.Controllers.KeyboardController.Edit(PCShop.Core.Models.Keyboard.KeyboardEditViewModel)">
+            <summary>
+            HttpPost action to edit a keyboard
+            </summary>
+            <param name="model">Keyboard import model</param>
+            <returns>Redirection to /Keyboard/Details</returns>
+        </member>
         <member name="T:PCShop.Controllers.LaptopController">
             <summary>
             Laptop controller class
