@@ -5,10 +5,13 @@ using PCShop.Core.Models.Keyboard;
 using PCShop.Core.Services.Interfaces;
 using PCShop.Infrastructure.Common;
 using PCShop.Infrastructure.Data.Models;
+using PCShop.Infrastructure.Data.Models.GravitatingClasses;
 using System.Globalization;
 using System.Linq.Expressions;
+using static PCShop.Core.Constants.Constant.ClientConstants;
 using static PCShop.Core.Constants.Constant.GlobalConstants;
 using static PCShop.Core.Constants.Constant.ProductConstants;
+using Type = PCShop.Infrastructure.Data.Models.GravitatingClasses.Type;
 
 namespace PCShop.Core.Services.Implementations
 {
@@ -31,6 +34,51 @@ namespace PCShop.Core.Services.Implementations
 		{
 			this.repository = repository;
 			this.guard = guard;
+		}
+
+		/// <summary>
+		/// Method to add a keyboard
+		/// </summary>
+		/// <param name="model">Keyboard input model</param>
+		/// <param name="userId">Keyboard's owner unique identifier</param>
+		/// <returns>The unique identifier of the added keyboard</returns>
+		public async Task<int> AddKeyboardAsync(KeyboardImportViewModel model, string? userId)
+		{
+			var keyboard = new Keyboard()
+			{
+				ImageUrl = model.ImageUrl,
+				Warranty = model.Warranty,
+				Price = model.Price,
+				Quantity = model.Quantity,
+				IsWireless = model.IsWireless,
+
+				IsDeleted = false,
+				AddedOn = DateTime.UtcNow.Date,
+			};
+
+			Client? dbClient = null;
+
+			if (userId is not null)
+			{
+				dbClient = await this.repository.GetByPropertyAsync<Client>(c => c.UserId == userId);
+
+				this.guard.AgainstInvalidUserId<Client>(dbClient, ErrorMessageForInvalidUserId);
+			}
+
+			keyboard.Seller = dbClient;
+
+			keyboard = await this.SetNavigationProperties(
+				keyboard, 
+				model.Brand, 
+				model.Type, 
+				model.Format, 
+				model.Color);
+
+			await this.repository.AddAsync<Keyboard>(keyboard);
+
+			await this.repository.SaveChangesAsync();
+
+			return keyboard.Id;
 		}
 
 		/// <summary>
@@ -197,6 +245,50 @@ namespace PCShop.Core.Services.Implementations
 				.ToListAsync();
 
 			return keyboardsAsKeyboardDetailsExportViewModels;
+		}
+
+		private async Task<Keyboard> SetNavigationProperties(
+			Keyboard keyboard, 
+			string brand, 
+			string type, 
+			string? format, 
+			string? color)
+		{
+			var brandNormalized = brand.ToLower();
+			var dbBrand = await this.repository.GetByPropertyAsync<Brand>(b => EF.Functions.Like(b.Name.ToLower(), brandNormalized));
+			dbBrand ??= new Brand { Name = brand };
+			keyboard.Brand = dbBrand;
+
+			var typeNormalized = type.ToLower();
+			var dbType = await this.repository.GetByPropertyAsync<Type>(t => EF.Functions.Like(t.Name.ToLower(), typeNormalized));
+			dbType ??= new Type { Name = type };
+			keyboard.Type = dbType;
+
+			if (String.IsNullOrEmpty(format))
+			{
+				keyboard.Format = null;
+			}
+			else
+			{
+				var formatNormalized = format.ToLower();
+				var dbFormat = await this.repository.GetByPropertyAsync<Format>(f => EF.Functions.Like(f.Name.ToLower(), formatNormalized));
+				dbFormat ??= new Format { Name = format };
+				keyboard.Format = dbFormat;
+			}
+
+			if (String.IsNullOrWhiteSpace(color))
+			{
+				keyboard.Color = null;
+			}
+			else
+			{
+				var colorNormalized = color.ToLower();
+				var dbColor = await this.repository.GetByPropertyAsync<Color>(c => EF.Functions.Like(c.Name.ToLower(), colorNormalized));
+				dbColor ??= new Color { Name = color };
+				keyboard.Color = dbColor;
+			}
+
+			return keyboard;
 		}
 	}
 }

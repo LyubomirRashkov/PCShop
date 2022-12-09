@@ -124,11 +124,12 @@
             Keyboard controller class
             </summary>
         </member>
-        <member name="M:PCShop.Controllers.KeyboardController.#ctor(PCShop.Core.Services.Interfaces.IKeyboardService)">
+        <member name="M:PCShop.Controllers.KeyboardController.#ctor(PCShop.Core.Services.Interfaces.IKeyboardService,PCShop.Core.Services.Interfaces.IClientService)">
             <summary>
             Constructor of KeyboardController class
             </summary>
             <param name="keyboardService">The IKeyboardService needed for functionality</param>
+            <param name="clientService">The IClientService needed for functionality</param>
         </member>
         <member name="M:PCShop.Controllers.KeyboardController.Index(PCShop.Core.Models.Keyboard.AllKeyboardsQueryModel)">
             <summary>
@@ -151,6 +152,20 @@
             </summary>
             <param name="id">Keyboard unique identifier</param>
             <returns>Redirection to /Keyboard/Index</returns>
+        </member>
+        <member name="M:PCShop.Controllers.KeyboardController.Add">
+            <summary>
+            HttpGet action to return the form for adding a keyboard
+            </summary>
+            <returns>The form for adding a keyboard</returns>
+        </member>
+        <member name="M:PCShop.Controllers.KeyboardController.Add(PCShop.Core.Models.Keyboard.KeyboardImportViewModel,System.Nullable{System.Boolean})">
+            <summary>
+            HttpPost action to add a keyboard
+            </summary>
+            <param name="model">Keyboard import model</param>
+            <param name="radioButton">The value of selected radio button</param>
+            <returns>Redirection to /Keyboard/Details</returns>
         </member>
         <member name="T:PCShop.Controllers.LaptopController">
             <summary>

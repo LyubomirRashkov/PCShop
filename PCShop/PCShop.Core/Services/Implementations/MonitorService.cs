@@ -67,7 +67,16 @@ namespace PCShop.Core.Services.Implementations
 
 			monitor.Seller = dbClient;
 
-			monitor = await this.SetNavigationPropertiesAsync(monitor, model.Brand, model.DisplaySize, model.Resolution, model.RefreshRate, model.Type, model.DisplayCoverage, model.DisplayTechnology, model.Color);
+			monitor = await this.SetNavigationPropertiesAsync(
+				monitor, 
+				model.Brand, 
+				model.DisplaySize,
+				model.Resolution, 
+				model.RefreshRate, 
+				model.Type, 
+				model.DisplayCoverage,
+				model.DisplayTechnology,
+				model.Color);
 
 			await this.repository.AddAsync<Monitor>(monitor);
 
@@ -388,7 +397,16 @@ namespace PCShop.Core.Services.Implementations
 			return monitorsAsMonitorsExportViewModels;
 		}
 
-        private async Task<Monitor> SetNavigationPropertiesAsync(Monitor monitor, string brand, double displaySize, string resolution, int refreshRate, string type, string? displayCoverage, string? displayTechnology, string? color)
+        private async Task<Monitor> SetNavigationPropertiesAsync(
+			Monitor monitor, 
+			string brand, 
+			double displaySize, 
+			string resolution, 
+			int refreshRate,
+			string type, 
+			string? displayCoverage, 
+			string? displayTechnology,
+			string? color)
         {
             var brandNormalized = brand.ToLower();
             var dbBrand = await this.repository.GetByPropertyAsync<Brand>(b => EF.Functions.Like(b.Name.ToLower(), brandNormalized));

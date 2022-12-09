@@ -66,7 +66,19 @@ namespace PCShop.Core.Services.Implementations
 
             laptop.Seller = dbClient;
 
-            laptop = await this.SetNavigationPropertiesAsync(laptop, model.Brand, model.CPU, model.RAM, model.SSDCapacity, model.VideoCard, model.Type, model.DisplaySize, model.DisplayCoverage, model.DisplayTechnology, model.Resolution, model.Color);
+            laptop = await this.SetNavigationPropertiesAsync(
+                laptop, 
+                model.Brand, 
+                model.CPU, 
+                model.RAM, 
+                model.SSDCapacity, 
+                model.VideoCard, 
+                model.Type, 
+                model.DisplaySize,
+                model.DisplayCoverage, 
+                model.DisplayTechnology,
+                model.Resolution, 
+                model.Color);
 
             await this.repository.AddAsync<Laptop>(laptop);
 
@@ -351,7 +363,19 @@ namespace PCShop.Core.Services.Implementations
                 .ToListAsync();
 		}
 
-		private async Task<Laptop> SetNavigationPropertiesAsync(Laptop laptop, string brand, string cpu, int ram, int ssdCapacity, string videoCard, string type, double displaySize, string? displayCoverage, string? displayTechnology, string? resolution, string? color)
+		private async Task<Laptop> SetNavigationPropertiesAsync(
+            Laptop laptop, 
+            string brand, 
+            string cpu, 
+            int ram, 
+            int ssdCapacity, 
+            string videoCard, 
+            string type, 
+            double displaySize,
+            string? displayCoverage, 
+            string? displayTechnology,
+            string? resolution,
+            string? color)
         {
             var brandNormalized = brand.ToLower();
             var dbBrand = await this.repository.GetByPropertyAsync<Brand>(b => EF.Functions.Like(b.Name.ToLower(), brandNormalized));

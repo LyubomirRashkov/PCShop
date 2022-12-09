@@ -50,5 +50,13 @@ namespace PCShop.Core.Services.Interfaces
 		/// </summary>
 		/// <param name="id">Keyboard unique identifier</param>
 		Task DeleteKeyboardAsync(int id);
+
+		/// <summary>
+		/// Method to add a keyboard
+		/// </summary>
+		/// <param name="model">Keyboard input model</param>
+		/// <param name="userId">Keyboard's owner unique identifier</param>
+		/// <returns>The unique identifier of the added keyboard</returns>
+		Task<int> AddKeyboardAsync(KeyboardImportViewModel model, string? userId);
 	}
 }

@@ -213,6 +213,11 @@
 			public const string ErrorMessageForProductThatIsOutOfStock = "The selected product is out of stock!";
 
 			/// <summary>
+			/// Constant for the error message when no option is selected
+			/// </summary>
+			public const string ErrorMessageForUnselectedOption = "Please, select an option (Yes/No)";
+
+			/// <summary>
 			/// Constant for the number of products displayed on one page
 			/// </summary>
 			public const int ProductsPerPage = 25;

@@ -1,9 +1,12 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using PCShop.Core.Exceptions;
 using PCShop.Core.Models.Keyboard;
+using PCShop.Core.Models.Laptop;
 using PCShop.Core.Services.Interfaces;
 using PCShop.Extensions;
 using System.Security.Claims;
+using static PCShop.Core.Constants.Constant.ClientConstants;
 using static PCShop.Core.Constants.Constant.GlobalConstants;
 using static PCShop.Core.Constants.Constant.ProductConstants;
 using static PCShop.Infrastructure.Constants.DataConstant.RoleConstants;
@@ -17,14 +20,19 @@ namespace PCShop.Controllers
 	public class KeyboardController : Controller
 	{
 		private readonly IKeyboardService keyboardService;
+		private readonly IClientService clientService;
 
 		/// <summary>
 		/// Constructor of KeyboardController class
 		/// </summary>
 		/// <param name="keyboardService">The IKeyboardService needed for functionality</param>
-		public KeyboardController(IKeyboardService keyboardService)
+		/// <param name="clientService">The IClientService needed for functionality</param>
+		public KeyboardController(
+			IKeyboardService keyboardService,
+			IClientService clientService)
 		{
 			this.keyboardService = keyboardService;
+			this.clientService = clientService;
 		}
 
 		/// <summary>
@@ -107,6 +115,83 @@ namespace PCShop.Controllers
 			catch (ArgumentException)
 			{
 				return NotFound();
+			}
+		}
+
+		/// <summary>
+		/// HttpGet action to return the form for adding a keyboard
+		/// </summary>
+		/// <returns>The form for adding a keyboard</returns>
+		[HttpGet]
+		[Authorize(Roles = $"{Administrator}, {SuperUser}")]
+		public async Task<IActionResult> Add()
+		{
+			if (this.User.IsInRole(SuperUser))
+			{
+				var userId = this.User.Id();
+
+				try
+				{
+					var numberOfActiveSales = await this.clientService.GetNumberOfActiveSales(userId);
+
+					if (numberOfActiveSales == MaxNumberOfAllowedSales)
+					{
+						ViewData["Title"] = "Add a keyboard";
+
+						return View(AddNotAllowedViewName);
+					}
+				}
+				catch (PCShopException)
+				{
+					return View(ErrorCommonViewName);
+				}
+			}
+
+			return View();
+		}
+
+		/// <summary>
+		/// HttpPost action to add a keyboard
+		/// </summary>
+		/// <param name="model">Keyboard import model</param>
+		/// <param name="radioButton">The value of selected radio button</param>
+		/// <returns>Redirection to /Keyboard/Details</returns>
+		[HttpPost]
+		[Authorize(Roles = $"{Administrator}, {SuperUser}")]
+		public async Task<IActionResult> Add(KeyboardImportViewModel model, bool? radioButton)
+		{
+			if (radioButton is null)
+			{
+				this.ModelState.AddModelError("IsWireless", ErrorMessageForUnselectedOption);
+			}
+			else
+			{
+				model.IsWireless = (bool)radioButton;
+			}
+
+			if (!this.ModelState.IsValid)
+			{
+				return View(model);
+			}
+
+			string? userId = null;
+
+			if (this.User.IsInRole(SuperUser))
+			{
+				userId = this.User.Id();
+			}
+
+			try
+			{
+				int id = await this.keyboardService.AddKeyboardAsync(model, userId);
+
+				TempData[TempDataMessage] = ProductSuccessfullyAdded;
+
+				return RedirectToAction(nameof(Details), new { id, information = model.GetInformation() });
+			}
+			catch (PCShopException)
+			{
+				return View(ErrorCommonViewName);
 			}
 		}
 	}
