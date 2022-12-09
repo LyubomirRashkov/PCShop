@@ -288,7 +288,23 @@ namespace PCShop.Core.Services.Implementations
 			return keyboardExport;
 		}
 
-		private async Task<IList<KeyboardDetailsExportViewModel>> GetKeyboardsAsKeyboardDetailsExportViewModelsAsync<T>(Expression<Func<Keyboard, bool>> condition)
+		/// <summary>
+		/// Method to retrieve all active keyboards sales of the currently logged in user
+		/// </summary>
+		/// <param name="userId">User unique identifier</param>
+		/// <returns>Collection of KeyboardDetailsExportViewModels</returns>
+		public async Task<IEnumerable<KeyboardDetailsExportViewModel>> GetUserKeyboardsAsync(string userId)
+        {
+			var client = await this.repository.GetByPropertyAsync<Client>(c => c.UserId == userId);
+
+			this.guard.AgainstInvalidUserId<Client>(client, ErrorMessageForInvalidUserId);
+
+			var userKeyboards = await this.GetKeyboardsAsKeyboardDetailsExportViewModelsAsync<Keyboard>(k => k.SellerId == client.Id);
+
+			return userKeyboards;
+        }
+
+        private async Task<IList<KeyboardDetailsExportViewModel>> GetKeyboardsAsKeyboardDetailsExportViewModelsAsync<T>(Expression<Func<Keyboard, bool>> condition)
 		{
 			var keyboardsAsKeyboardDetailsExportViewModels = await this.repository
 				.AllAsReadOnly<Keyboard>(k => !k.IsDeleted)

@@ -1,0 +1,24 @@
+﻿@model IEnumerable<KeyboardDetailsExportViewModel>
+
+@{
+	ViewData["Title"] = "My keyboards";
+}
+
+<h1 class="text-center mb-2">@ViewData["Title"]</h1>
+
+<hr />
+
+@if (Model.Any())
+{
+	<div class="row">
+
+		@foreach (var keyboard in Model)
+		{
+			<partial name="_KeyboardPartial" model="@keyboard" />
+		}
+	</div>
+}
+else
+{
+	<h3 class="text-center mt-5">You have no keyboards added yet!</h3>
+}

@@ -257,5 +257,26 @@ namespace PCShop.Controllers
 			}
 		}
 
+		/// <summary>
+		/// HttpGet action to retrieve all active keyboard sales of the currently logged in user
+		/// </summary>
+		/// <returns>Collection of all active keyboard sales of the currently logged in user</returns>
+		[HttpGet]
+		[Authorize(Roles = SuperUser)]
+		public async Task<IActionResult> Mine()
+		{
+			var userId = this.User.Id();
+
+			try
+			{
+				var userKeyboards = await this.keyboardService.GetUserKeyboardsAsync(userId);
+
+				return View(userKeyboards);
+			}
+			catch (PCShopException)
+			{
+				return View(ErrorCommonViewName);
+			}
+		}
     }
 }

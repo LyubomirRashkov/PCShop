@@ -72,5 +72,12 @@ namespace PCShop.Core.Services.Interfaces
         /// <param name="model">Keyboard input model</param>
         /// <returns>The unique identifier of the edited keyboard</returns>
         Task<int> EditKeyboardAsync(KeyboardEditViewModel model);
+
+		/// <summary>
+		/// Method to retrieve all active keyboards sales of the currently logged in user
+		/// </summary>
+		/// <param name="userId">User unique identifier</param>
+		/// <returns>Collection of KeyboardDetailsExportViewModels</returns>
+		Task<IEnumerable<KeyboardDetailsExportViewModel>> GetUserKeyboardsAsync(string userId);
 	}
 }

@@ -1433,6 +1433,13 @@
             <param name="id">Keyboard unique identifier</param>
             <returns>The keyboars as KeyboardEditViewModel</returns>
         </member>
+        <member name="M:PCShop.Core.Services.Implementations.KeyboardService.GetUserKeyboardsAsync(System.String)">
+            <summary>
+            Method to retrieve all active keyboards sales of the currently logged in user
+            </summary>
+            <param name="userId">User unique identifier</param>
+            <returns>Collection of KeyboardDetailsExportViewModels</returns>
+        </member>
         <member name="T:PCShop.Core.Services.Implementations.LaptopService">
             <summary>
             Implementation of ILaptopService interface
@@ -1744,6 +1751,13 @@
             </summary>
             <param name="model">Keyboard input model</param>
             <returns>The unique identifier of the edited keyboard</returns>
+        </member>
+        <member name="M:PCShop.Core.Services.Interfaces.IKeyboardService.GetUserKeyboardsAsync(System.String)">
+            <summary>
+            Method to retrieve all active keyboards sales of the currently logged in user
+            </summary>
+            <param name="userId">User unique identifier</param>
+            <returns>Collection of KeyboardDetailsExportViewModels</returns>
         </member>
         <member name="T:PCShop.Core.Services.Interfaces.ILaptopService">
             <summary>
