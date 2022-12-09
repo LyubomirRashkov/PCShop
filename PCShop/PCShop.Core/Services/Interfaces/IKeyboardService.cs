@@ -79,5 +79,11 @@ namespace PCShop.Core.Services.Interfaces
 		/// <param name="userId">User unique identifier</param>
 		/// <returns>Collection of KeyboardDetailsExportViewModels</returns>
 		Task<IEnumerable<KeyboardDetailsExportViewModel>> GetUserKeyboardsAsync(string userId);
+
+		/// <summary>
+		/// Method to mark the keyboard with the given unique identifier as bought
+		/// </summary>
+		/// <param name="id">Keyboard unique identifier</param>
+		Task MarkKeyboardAsBoughtAsync(int id);
 	}
 }

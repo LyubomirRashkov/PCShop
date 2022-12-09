@@ -55,7 +55,7 @@ namespace PCShop.Core.Services.Implementations
 				IsDeleted = false,
 				AddedOn = DateTime.UtcNow.Date,
 			};
-
+			
 			Client? dbClient = null;
 
 			if (userId is not null)
@@ -304,7 +304,26 @@ namespace PCShop.Core.Services.Implementations
 			return userKeyboards;
         }
 
-        private async Task<IList<KeyboardDetailsExportViewModel>> GetKeyboardsAsKeyboardDetailsExportViewModelsAsync<T>(Expression<Func<Keyboard, bool>> condition)
+		/// <summary>
+		/// Method to mark the keyboard with the given unique identifier as bought
+		/// </summary>
+		/// <param name="id">Keyboard unique identifier</param>
+		public async Task MarkKeyboardAsBoughtAsync(int id)
+		{
+			var keyboard = await this.repository.GetByIdAsync<Keyboard>(id);
+
+			this.guard.AgainstProductThatIsNull<Keyboard>(keyboard, ErrorMessageForInvalidProductId);
+
+			this.guard.AgainstProductThatIsDeleted(keyboard.IsDeleted, ErrorMessageForDeletedProduct);
+
+			this.guard.AgainstProductThatIsOutOfStock(keyboard.Quantity, ErrorMessageForProductThatIsOutOfStock);
+
+			keyboard.Quantity--;
+
+			await this.repository.SaveChangesAsync();
+		}
+
+		private async Task<IList<KeyboardDetailsExportViewModel>> GetKeyboardsAsKeyboardDetailsExportViewModelsAsync<T>(Expression<Func<Keyboard, bool>> condition)
 		{
 			var keyboardsAsKeyboardDetailsExportViewModels = await this.repository
 				.AllAsReadOnly<Keyboard>(k => !k.IsDeleted)

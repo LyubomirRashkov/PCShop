@@ -55,7 +55,7 @@
 							&& (!this.User.IsInRole(Administrator))
 							&& ((!this.User.IsInRole(SuperUser)) || (this.User.IsInRole(SuperUser) && (Model.Seller is null || this.User.Id() != Model.Seller.UserId))))
 					{
-						<a asp-controller="Laptop" asp-action="Buy" asp-route-id="@Model.Id" class="btn btn-success">Buy</a>
+						<a asp-controller="Keyboard" asp-action="Buy" asp-route-id="@Model.Id" class="btn btn-success">Buy</a>
 					}
 				}
 				else

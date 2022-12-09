@@ -1440,6 +1440,12 @@
             <param name="userId">User unique identifier</param>
             <returns>Collection of KeyboardDetailsExportViewModels</returns>
         </member>
+        <member name="M:PCShop.Core.Services.Implementations.KeyboardService.MarkKeyboardAsBoughtAsync(System.Int32)">
+            <summary>
+            Method to mark the keyboard with the given unique identifier as bought
+            </summary>
+            <param name="id">Keyboard unique identifier</param>
+        </member>
         <member name="T:PCShop.Core.Services.Implementations.LaptopService">
             <summary>
             Implementation of ILaptopService interface
@@ -1758,6 +1764,12 @@
             </summary>
             <param name="userId">User unique identifier</param>
             <returns>Collection of KeyboardDetailsExportViewModels</returns>
+        </member>
+        <member name="M:PCShop.Core.Services.Interfaces.IKeyboardService.MarkKeyboardAsBoughtAsync(System.Int32)">
+            <summary>
+            Method to mark the keyboard with the given unique identifier as bought
+            </summary>
+            <param name="id">Keyboard unique identifier</param>
         </member>
         <member name="T:PCShop.Core.Services.Interfaces.ILaptopService">
             <summary>

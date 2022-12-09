@@ -20,18 +20,22 @@ namespace PCShop.Controllers
 	{
 		private readonly IKeyboardService keyboardService;
 		private readonly IClientService clientService;
+		private readonly IUserService userService;
 
 		/// <summary>
 		/// Constructor of KeyboardController class
 		/// </summary>
 		/// <param name="keyboardService">The IKeyboardService needed for functionality</param>
 		/// <param name="clientService">The IClientService needed for functionality</param>
+		/// <param name="userService">The IUserService needed for functionality</param>
 		public KeyboardController(
 			IKeyboardService keyboardService,
-			IClientService clientService)
+			IClientService clientService,
+			IUserService userService)
 		{
 			this.keyboardService = keyboardService;
 			this.clientService = clientService;
+			this.userService = userService;
 		}
 
 		/// <summary>
@@ -99,7 +103,7 @@ namespace PCShop.Controllers
 			{
 				var keyboard = await this.keyboardService.GetKeyboardByIdAsKeyboardDetailsExportViewModelAsync(id);
 
-				if (this.User.IsInRole(SuperUser) 
+				if (this.User.IsInRole(SuperUser)
 					&& (keyboard.Seller is null || this.User.Id() != keyboard.Seller.UserId))
 				{
 					return Unauthorized();
@@ -194,12 +198,12 @@ namespace PCShop.Controllers
 			}
 		}
 
-        /// <summary>
-        /// HttpGet action to return the form for editing a keyboard
-        /// </summary>
-        /// <param name="id">Keyboard unique identifier</param>
-        /// <returns>The form for editing a keyboard</returns>
-        [HttpGet]
+		/// <summary>
+		/// HttpGet action to return the form for editing a keyboard
+		/// </summary>
+		/// <param name="id">Keyboard unique identifier</param>
+		/// <returns>The form for editing a keyboard</returns>
+		[HttpGet]
 		[Authorize(Roles = $"{Administrator}, {SuperUser}")]
 		public async Task<IActionResult> Edit(int id)
 		{
@@ -221,12 +225,12 @@ namespace PCShop.Controllers
 			}
 		}
 
-        /// <summary>
-        /// HttpPost action to edit a keyboard
-        /// </summary>
-        /// <param name="model">Keyboard import model</param>
-        /// <returns>Redirection to /Keyboard/Details</returns>
-        [HttpPost]
+		/// <summary>
+		/// HttpPost action to edit a keyboard
+		/// </summary>
+		/// <param name="model">Keyboard import model</param>
+		/// <returns>Redirection to /Keyboard/Details</returns>
+		[HttpPost]
 		[Authorize(Roles = $"{Administrator}, {SuperUser}")]
 		public async Task<IActionResult> Edit(KeyboardEditViewModel model)
 		{
@@ -247,10 +251,10 @@ namespace PCShop.Controllers
 
 				int id = await this.keyboardService.EditKeyboardAsync(model);
 
-                TempData[TempDataMessage] = ProductSuccessfullyEdited;
+				TempData[TempDataMessage] = ProductSuccessfullyEdited;
 
-                return RedirectToAction(nameof(Details), new { id, information = model.GetInformation() });
-            }
+				return RedirectToAction(nameof(Details), new { id, information = model.GetInformation() });
+			}
 			catch (ArgumentException)
 			{
 				return NotFound();
@@ -278,5 +282,53 @@ namespace PCShop.Controllers
 				return View(ErrorCommonViewName);
 			}
 		}
-    }
+
+		/// <summary>
+		/// HttpGet action to buy a keyboard
+		/// </summary>
+		/// <param name="id">Keyboard unique identifier</param>
+		/// <returns>The corresponding view</returns>
+		[HttpGet]
+		public async Task<IActionResult> Buy(int id)
+		{
+			if (this.User.IsInRole(Administrator))
+			{
+				return Unauthorized();
+			}
+
+			try
+			{
+				var userId = this.User.Id();
+
+				if (this.User.IsInRole(SuperUser))
+				{
+					var keyboardSeller = (await this.keyboardService.GetKeyboardByIdAsKeyboardEditViewModelAsync(id)).Seller;
+
+					if (keyboardSeller is not null && keyboardSeller.UserId == userId)
+					{
+						return Unauthorized();
+					}
+				}
+
+				ViewData["Title"] = "Buy a keyboard";
+
+				await this.keyboardService.MarkKeyboardAsBoughtAsync(id);
+
+				var client = await this.clientService.BuyProduct(userId);
+
+				var isNowPromotedToSuperUser = await this.userService.ShouldBePromotedToSuperUser(client);
+
+				if (isNowPromotedToSuperUser)
+				{
+					return View(PromoteToSuperUserViewName);
+				}
+
+				return View(PurchaseMadeViewName);
+			}
+			catch (ArgumentException)
+			{
+				return NotFound();
+			}
+		}
+	}
 }
