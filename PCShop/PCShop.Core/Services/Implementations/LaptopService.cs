@@ -333,8 +333,9 @@ namespace PCShop.Core.Services.Implementations
 		/// <returns>Ordered collection of CPU names</returns>
 		public async Task<IEnumerable<string>> GetAllCpusNamesAsync()
 		{
-            return await this.repository.AllAsReadOnly<CPU>()
-                .Select(cpu => cpu.Name)
+            return await this.repository.AllAsReadOnly<Laptop>()
+                .Select(l => l.CPU.Name)
+                .Distinct()
                 .OrderBy(n => n)
                 .ToListAsync();
 		}
@@ -345,8 +346,9 @@ namespace PCShop.Core.Services.Implementations
 		/// <returns>Ordered collection of RAM values</returns>
 		public async Task<IEnumerable<int>> GetAllRamsValuesAsync()
 		{
-            return await this.repository.AllAsReadOnly<RAM>()
-                .Select(ram => ram.Value)
+            return await this.repository.AllAsReadOnly<Laptop>()
+                .Select(l => l.RAM.Value)
+                .Distinct()
                 .OrderBy(v => v)
                 .ToListAsync();
 		}
@@ -357,8 +359,9 @@ namespace PCShop.Core.Services.Implementations
 		/// <returns>Ordered collection of SSD capacities</returns>
 		public async Task<IEnumerable<int>> GetAllSsdCapacitiesValuesAsync()
 		{
-            return await this.repository.AllAsReadOnly<SSDCapacity>()
-                .Select(s => s.Value)
+            return await this.repository.AllAsReadOnly<Laptop>()
+                .Select(l => l.SSDCapacity.Value)
+                .Distinct()
                 .OrderBy(v => v)
                 .ToListAsync();
 		}
@@ -369,8 +372,9 @@ namespace PCShop.Core.Services.Implementations
 		/// <returns>Ordered collection of video card names</returns>
 		public async Task<IEnumerable<string>> GetAllVideoCardsNamesAsync()
 		{
-            return await this.repository.AllAsReadOnly<VideoCard>()
-                .Select(vc => vc.Name)
+            return await this.repository.AllAsReadOnly<Laptop>()
+                .Select(l => l.VideoCard.Name)
+                .Distinct()
                 .OrderBy(n => n)
                 .ToListAsync();
 		}
