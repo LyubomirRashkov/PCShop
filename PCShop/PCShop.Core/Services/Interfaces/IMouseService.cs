@@ -37,5 +37,12 @@ namespace PCShop.Core.Services.Interfaces
 		/// </summary>
 		/// <returns>Ordered collection of sensitivity ranges</returns>
 		Task<IEnumerable<string>> GetAllMiceSensitivitiesAsync();
+
+		/// <summary>
+		/// Method to retrieve a specific mouse
+		/// </summary>
+		/// <param name="id">Mouse unique identifier</param>
+		/// <returns>The mouse as MouseDetailsExportViewModel</returns>
+		Task<MouseDetailsExportViewModel> GetMouseByIdAsMouseDetailsExportViewModelAsync(int id);
 	}
 }

@@ -1296,6 +1296,46 @@
             Property that represents a collection of mice
             </summary>
         </member>
+        <member name="T:PCShop.Core.Models.Mouse.MouseDetailsExportViewModel">
+            <summary>
+            MouseDetailsExportViewModel model
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Mouse.MouseDetailsExportViewModel.Color">
+            <summary>
+            Property that represents mouse color
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Mouse.MouseDetailsExportViewModel.ImageUrl">
+            <summary>
+            Property that represents mouse image url
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Mouse.MouseDetailsExportViewModel.AddedOn">
+            <summary>
+            Property that represents the date the mouse was added to the database
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Mouse.MouseDetailsExportViewModel.Quantity">
+            <summary>
+            Property that represents how many mice are in stock
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Mouse.MouseDetailsExportViewModel.Seller">
+            <summary>
+            Property that represents mouse Seller
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Mouse.MouseDetailsExportViewModel.SellerFirstName">
+            <summary>
+            Property that represents mouse seller first name
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Mouse.MouseDetailsExportViewModel.SellerLastName">
+            <summary>
+            Property that represents mouse seller last name
+            </summary>
+        </member>
         <member name="T:PCShop.Core.Models.Mouse.MouseExportViewModel">
             <summary>
             MouseExportViewModel model
@@ -1745,11 +1785,12 @@
             Implementation of IMouseService interface
             </summary>
         </member>
-        <member name="M:PCShop.Core.Services.Implementations.MouseService.#ctor(PCShop.Infrastructure.Common.IRepository)">
+        <member name="M:PCShop.Core.Services.Implementations.MouseService.#ctor(PCShop.Infrastructure.Common.IRepository,PCShop.Core.Exceptions.IGuard)">
             <summary>
             Constructor of MouseService class
             </summary>
             <param name="repository">The repository that will be used</param>
+            <param name="guard">The guard that will be used</param>
         </member>
         <member name="M:PCShop.Core.Services.Implementations.MouseService.GetAllMiceAsync(System.String,System.String,PCShop.Core.Constants.Wireless,System.String,PCShop.Core.Constants.Sorting,System.Int32)">
             <summary>
@@ -1774,6 +1815,13 @@
             Method to retrieve all mouse types
             </summary>
             <returns>Ordered collection of type names</returns>
+        </member>
+        <member name="M:PCShop.Core.Services.Implementations.MouseService.GetMouseByIdAsMouseDetailsExportViewModelAsync(System.Int32)">
+            <summary>
+            Method to retrieve a specific mouse
+            </summary>
+            <param name="id">Mouse unique identifier</param>
+            <returns>The mouse as MouseDetailsExportViewModel</returns>
         </member>
         <member name="T:PCShop.Core.Services.Implementations.UserService">
             <summary>
@@ -2114,6 +2162,13 @@
             Method to retrieve all mouse sensitivities
             </summary>
             <returns>Ordered collection of sensitivity ranges</returns>
+        </member>
+        <member name="M:PCShop.Core.Services.Interfaces.IMouseService.GetMouseByIdAsMouseDetailsExportViewModelAsync(System.Int32)">
+            <summary>
+            Method to retrieve a specific mouse
+            </summary>
+            <param name="id">Mouse unique identifier</param>
+            <returns>The mouse as MouseDetailsExportViewModel</returns>
         </member>
         <member name="T:PCShop.Core.Services.Interfaces.IUserService">
             <summary>

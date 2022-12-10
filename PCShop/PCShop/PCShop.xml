@@ -363,6 +363,14 @@
             <param name="query">The entity that holds the specified criteria</param>
             <returns>Collection of all active mice according to specified criteria</returns>
         </member>
+        <member name="M:PCShop.Controllers.MouseController.Details(System.Int32,System.String)">
+            <summary>
+            HttpGet action to retrieve detailed information about a specific mouse
+            </summary>
+            <param name="id">Mouse unique identifier</param>
+            <param name="information">Mouse additional information</param>
+            <returns>Detailed information about the mouse</returns>
+        </member>
         <member name="T:PCShop.Extensions.ModelExtensions">
             <summary>
             ModelExtensions model

@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using PCShop.Core.Models.Mouse;
 using PCShop.Core.Services.Interfaces;
+using PCShop.Extensions;
 
 namespace PCShop.Controllers
 {
@@ -46,6 +47,32 @@ namespace PCShop.Controllers
 			query.Mice = result.Mice;
 
 			return View(query);
+		}
+
+		/// <summary>
+		/// HttpGet action to retrieve detailed information about a specific mouse
+		/// </summary>
+		/// <param name="id">Mouse unique identifier</param>
+		/// <param name="information">Mouse additional information</param>
+		/// <returns>Detailed information about the mouse</returns>
+		[HttpGet]
+		public async Task<IActionResult> Details(int id, string information)
+		{
+			try
+			{
+				var mouse = await this.mouseService.GetMouseByIdAsMouseDetailsExportViewModelAsync(id);
+
+				if (information != mouse.GetInformation())
+				{
+					return NotFound();
+				}
+
+				return View(mouse);
+			}
+			catch (ArgumentException)
+			{
+				return NotFound();
+			}
 		}
 	}
 }
