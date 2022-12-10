@@ -1792,6 +1792,12 @@
             <param name="repository">The repository that will be used</param>
             <param name="guard">The guard that will be used</param>
         </member>
+        <member name="M:PCShop.Core.Services.Implementations.MouseService.DeleteMouseAsync(System.Int32)">
+            <summary>
+            Method to mark a specific mouse as deleted
+            </summary>
+            <param name="id">Mouse unique identifier</param>
+        </member>
         <member name="M:PCShop.Core.Services.Implementations.MouseService.GetAllMiceAsync(System.String,System.String,PCShop.Core.Constants.Wireless,System.String,PCShop.Core.Constants.Sorting,System.Int32)">
             <summary>
             Method to retrieve all active mice according to specified criteria
@@ -2169,6 +2175,12 @@
             </summary>
             <param name="id">Mouse unique identifier</param>
             <returns>The mouse as MouseDetailsExportViewModel</returns>
+        </member>
+        <member name="M:PCShop.Core.Services.Interfaces.IMouseService.DeleteMouseAsync(System.Int32)">
+            <summary>
+            Method to mark a specific mouse as deleted
+            </summary>
+            <param name="id">Mouse unique identifier</param>
         </member>
         <member name="T:PCShop.Core.Services.Interfaces.IUserService">
             <summary>

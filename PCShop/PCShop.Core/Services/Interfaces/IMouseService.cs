@@ -44,5 +44,11 @@ namespace PCShop.Core.Services.Interfaces
 		/// <param name="id">Mouse unique identifier</param>
 		/// <returns>The mouse as MouseDetailsExportViewModel</returns>
 		Task<MouseDetailsExportViewModel> GetMouseByIdAsMouseDetailsExportViewModelAsync(int id);
+
+		/// <summary>
+		/// Method to mark a specific mouse as deleted
+		/// </summary>
+		/// <param name="id">Mouse unique identifier</param>
+		Task DeleteMouseAsync(int id);
 	}
 }

@@ -371,6 +371,13 @@
             <param name="information">Mouse additional information</param>
             <returns>Detailed information about the mouse</returns>
         </member>
+        <member name="M:PCShop.Controllers.MouseController.Delete(System.Int32)">
+            <summary>
+            Action to mark a specific mouse as deleted
+            </summary>
+            <param name="id">Mouse unique identifier</param>
+            <returns>Redirection to /Mouse/Index</returns>
+        </member>
         <member name="T:PCShop.Extensions.ModelExtensions">
             <summary>
             ModelExtensions model

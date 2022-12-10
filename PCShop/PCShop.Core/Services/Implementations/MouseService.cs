@@ -34,6 +34,23 @@ namespace PCShop.Core.Services.Implementations
 		}
 
 		/// <summary>
+		/// Method to mark a specific mouse as deleted
+		/// </summary>
+		/// <param name="id">Mouse unique identifier</param>
+		public async Task DeleteMouseAsync(int id)
+		{
+			var mouse = await this.repository.GetByIdAsync<Mouse>(id);
+
+			this.guard.AgainstProductThatIsNull<Mouse>(mouse, ErrorMessageForInvalidProductId);
+
+			this.guard.AgainstProductThatIsDeleted(mouse.IsDeleted, ErrorMessageForDeletedProduct);
+
+			mouse.IsDeleted = true;
+
+			await this.repository.SaveChangesAsync();
+		}
+
+		/// <summary>
 		/// Method to retrieve all active mice according to specified criteria
 		/// </summary>
 		/// <param name="type">The criterion for the mouse type</param>
