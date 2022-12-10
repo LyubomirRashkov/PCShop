@@ -1216,6 +1216,106 @@
             Property that represents a collection of monitors
             </summary>
         </member>
+        <member name="T:PCShop.Core.Models.Mouse.AllMiceQueryModel">
+            <summary>
+            AllMiceQueryModel model
+            </summary>
+        </member>
+        <member name="M:PCShop.Core.Models.Mouse.AllMiceQueryModel.#ctor">
+            <summary>
+            Constructor of AllMiceQueryModel class
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Mouse.AllMiceQueryModel.Sensitivity">
+            <summary>
+            Property that represents mouse sensitivity
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Mouse.AllMiceQueryModel.Sensitivities">
+            <summary>
+            Property that represents a collection of all possible mouse sensitivities
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Mouse.AllMiceQueryModel.Type">
+            <summary>
+            Property that represents mouse type
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Mouse.AllMiceQueryModel.Types">
+            <summary>
+            Property that represents a collection of all possible mouse types
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Mouse.AllMiceQueryModel.Wireless">
+            <summary>
+            Property that represents mouse connectivity
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Mouse.AllMiceQueryModel.Keyword">
+            <summary>
+            Property that represents a search keyword
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Mouse.AllMiceQueryModel.Sorting">
+            <summary>
+            Property that represents a sorting criterion
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Mouse.AllMiceQueryModel.CurrentPage">
+            <summary>
+            Property that represents the number of the current page
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Mouse.AllMiceQueryModel.TotalMiceCount">
+            <summary>
+            Property that represents total count of mice
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Mouse.AllMiceQueryModel.Mice">
+            <summary>
+            Property that represents a collecion of mice according to specified criteria
+            </summary>
+        </member>
+        <member name="T:PCShop.Core.Models.Mouse.MiceQueryModel">
+            <summary>
+            MiceQueryModel model
+            </summary>
+        </member>
+        <member name="M:PCShop.Core.Models.Mouse.MiceQueryModel.#ctor">
+            <summary>
+            Constructor of MiceQueryModel class
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Mouse.MiceQueryModel.TotalMiceCount">
+            <summary>
+            Property that represents total count of mice
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Mouse.MiceQueryModel.Mice">
+            <summary>
+            Property that represents a collection of mice
+            </summary>
+        </member>
+        <member name="T:PCShop.Core.Models.Mouse.MouseExportViewModel">
+            <summary>
+            MouseExportViewModel model
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Mouse.MouseExportViewModel.IsWireless">
+            <summary>
+            Property that represents if the mouse is wireless
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Mouse.MouseExportViewModel.Type">
+            <summary>
+            Property that represents mouse type
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Mouse.MouseExportViewModel.Sensitivity">
+            <summary>
+            Property that represents mouse sensitivity
+            </summary>
+        </member>
         <member name="T:PCShop.Core.Models.Product.ProductExportViewModel">
             <summary>
             ProductExportViewModel model
@@ -1640,6 +1740,41 @@
             </summary>
             <param name="id">Monitor unique identifier</param>
         </member>
+        <member name="T:PCShop.Core.Services.Implementations.MouseService">
+            <summary>
+            Implementation of IMouseService interface
+            </summary>
+        </member>
+        <member name="M:PCShop.Core.Services.Implementations.MouseService.#ctor(PCShop.Infrastructure.Common.IRepository)">
+            <summary>
+            Constructor of MouseService class
+            </summary>
+            <param name="repository">The repository that will be used</param>
+        </member>
+        <member name="M:PCShop.Core.Services.Implementations.MouseService.GetAllMiceAsync(System.String,System.String,PCShop.Core.Constants.Wireless,System.String,PCShop.Core.Constants.Sorting,System.Int32)">
+            <summary>
+            Method to retrieve all active mice according to specified criteria
+            </summary>
+            <param name="type">The criterion for the mouse type</param>
+            <param name="sensitivity">The criterion for the mouse sensitivity</param>
+            <param name="wireless">The criterion for the mouse connectivity</param>
+            <param name="keyword">The criterion for keyword</param>
+            <param name="sorting">The criterion for sorting</param>
+            <param name="currentPage">Current page number</param>
+            <returns>MiceQueryModel object</returns>
+        </member>
+        <member name="M:PCShop.Core.Services.Implementations.MouseService.GetAllMiceSensitivitiesAsync">
+            <summary>
+            Method to retrieve all mouse sensitivities
+            </summary>
+            <returns>Ordered collection of sensitivity ranges</returns>
+        </member>
+        <member name="M:PCShop.Core.Services.Implementations.MouseService.GetAllMiceTypesAsync">
+            <summary>
+            Method to retrieve all mouse types
+            </summary>
+            <returns>Ordered collection of type names</returns>
+        </member>
         <member name="T:PCShop.Core.Services.Implementations.UserService">
             <summary>
             Implementation of IUserService interface
@@ -1950,6 +2085,35 @@
             Method to mark the monitor with the given unique identifier as bought
             </summary>
             <param name="id">Monitor unique identifier</param>
+        </member>
+        <member name="T:PCShop.Core.Services.Interfaces.IMouseService">
+            <summary>
+            Abstraction of MouseService
+            </summary>
+        </member>
+        <member name="M:PCShop.Core.Services.Interfaces.IMouseService.GetAllMiceAsync(System.String,System.String,PCShop.Core.Constants.Wireless,System.String,PCShop.Core.Constants.Sorting,System.Int32)">
+            <summary>
+            Method to retrieve all active mice according to specified criteria
+            </summary>
+            <param name="type">The criterion for the mouse type</param>
+            <param name="sensitivity">The criterion for the mouse sensitivity</param>
+            <param name="wireless">The criterion for the mouse connectivity</param>
+            <param name="keyword">The criterion for keyword</param>
+            <param name="sorting">The criterion for sorting</param>
+            <param name="currentPage">Current page number</param>
+            <returns>MiceQueryModel object</returns>
+        </member>
+        <member name="M:PCShop.Core.Services.Interfaces.IMouseService.GetAllMiceTypesAsync">
+            <summary>
+            Method to retrieve all mouse types
+            </summary>
+            <returns>Ordered collection of type names</returns>
+        </member>
+        <member name="M:PCShop.Core.Services.Interfaces.IMouseService.GetAllMiceSensitivitiesAsync">
+            <summary>
+            Method to retrieve all mouse sensitivities
+            </summary>
+            <returns>Ordered collection of sensitivity ranges</returns>
         </member>
         <member name="T:PCShop.Core.Services.Interfaces.IUserService">
             <summary>

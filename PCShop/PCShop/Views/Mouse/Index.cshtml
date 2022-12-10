@@ -1,0 +1,146 @@
+﻿@model AllMiceQueryModel
+
+@{
+	ViewData["Title"] = "Mice";
+}
+
+<h1 class="text-center mb-2">@ViewData["Title"]</h1>
+
+<hr />
+
+<partial name="_IndexButtonsPartial" model="@Model.Mice" />
+
+<br />
+
+<form method="get">
+	<div class="row">
+		<div class="form-group col-md-3">
+			<div class="form-group">
+				<label asp-for="Type">Mouse type</label>
+				<select asp-for="Type" class="form-control">
+					<option value="">All</option>
+					@foreach (var type in Model.Types)
+					{
+						<option value="@type">@type</option>
+					}
+				</select>
+			</div>
+		</div>
+
+		<div class="form-group col-md-3">
+			<div class="form-group">
+				<label asp-for="Sensitivity">Mouse sensitivity</label>
+				<select asp-for="Sensitivity" class="form-control">
+					<option value="">All</option>
+					@foreach (var sensitivity in Model.Sensitivities)
+					{
+						<option value="@sensitivity">@sensitivity</option>
+					}
+				</select>
+			</div>
+		</div>
+
+		<div class="form-group col-md-3">
+			<div class="form-group">
+				<label asp-for="Wireless">Wireless</label>
+				<select asp-for="Wireless" class="form-control">
+					<option value="0">All</option>
+					<option value="1">No</option>
+					<option value="2">Yes</option>
+				</select>
+			</div>
+		</div>
+	</div>
+
+	<br />
+
+	<div class="row">
+		<div class="form-group col-md-3">
+			<div class="form-group">
+				<label asp-for="Keyword">Search by a keyword</label>
+				<input asp-for="Keyword" class="form-control" placeholder="...">
+			</div>
+		</div>
+
+		<div class="form-group col-md-3">
+			<div class="form-group">
+				<label asp-for="Sorting">Sort by</label>
+				<select asp-for="Sorting" class="form-control">
+					<option value="0">Newest</option>
+					<option value="1">Brand</option>
+					<option value="2">Price(from min to max)</option>
+					<option value="3">Price(from max to min)</option>
+				</select>
+			</div>
+		</div>
+	</div>
+
+	<div class="text-center">
+		<div class="form-group mt-4 p-2">
+			<input type="submit" value="Search" class="btn btn-success" />
+		</div>
+	</div>
+</form>
+
+@if (!Model.Mice.Any())
+{
+	<h3 class="text-center mt-5">No mice found by the given criteria!</h3>
+}
+else
+{
+	if (Model.TotalMiceCount == 1)
+	{
+		<h4 class="text-center mt-4">@Model.TotalMiceCount mouse found by the given criteria!</h4>
+	}
+	else
+	{
+		<h4 class="text-center mt-4">@Model.TotalMiceCount mice found by the given criteria!</h4>
+	}
+
+	<div class="row">
+		<partial name="_MiceIndexTablePartial" model="@Model.Mice" />
+	</div>
+
+	var previousPage = Model.CurrentPage - 1;
+
+	if (previousPage < 1)
+	{
+		previousPage = 1;
+	}
+
+	var maxPage = Math.Ceiling((double)Model.TotalMiceCount / ProductsPerPage);
+
+	<div class="row mt-3">
+		<div class="col-md-6 d-grid gap-2 d-md-flex justify-content-md-start">
+			<a class="btn btn-warning @(Model.CurrentPage == 1 ? "disabled" : string.Empty)"
+		   asp-controller="Mouse"
+		   asp-action="Index"
+		   asp-route-currentPage="@previousPage"
+		   asp-route-type="@Model.Type"
+		   asp-route-sensitivity="@Model.Sensitivity"
+		   asp-route-wireless="@Model.Wireless"
+		   asp-route-keyWord="@Model.Keyword"
+		   asp-route-sorting="@((int)Model.Sorting)">Prev</a>
+		</div>
+
+		@{
+			var shouldButtonBeDisabled = Model.CurrentPage == maxPage || !Model.Mice.Any();
+		}
+
+		<div class="col-md-6 d-grid gap-2 d-md-flex justify-content-md-end">
+			<a class="btn btn-warning @(shouldButtonBeDisabled ? "disabled" : string.Empty)"
+		   asp-controller="Mouse"
+		   asp-action="Index"
+		   asp-route-currentPage="@(Model.CurrentPage + 1)"
+		   asp-route-type="@Model.Type"
+		   asp-route-sensitivity="@Model.Sensitivity"
+		   asp-route-wireless="@Model.Wireless"
+		   asp-route-keyWord="@Model.Keyword"
+		   asp-route-sorting="@((int)Model.Sorting)">Next</a>
+		</div>
+	</div>
+
+	<div>
+		<h6 class="text-center">Page @Model.CurrentPage / @maxPage</h6>
+	</div>
+}

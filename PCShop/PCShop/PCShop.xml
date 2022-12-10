@@ -345,6 +345,24 @@
             <param name="id">Monitor unique identifier</param>
             <returns>The corresponding view</returns>
         </member>
+        <member name="T:PCShop.Controllers.MouseController">
+            <summary>
+            Mouse controller class
+            </summary>
+        </member>
+        <member name="M:PCShop.Controllers.MouseController.#ctor(PCShop.Core.Services.Interfaces.IMouseService)">
+            <summary>
+            Constructor of MouseController class
+            </summary>
+            <param name="mouseService">The IMouseService needed for functionality</param>
+        </member>
+        <member name="M:PCShop.Controllers.MouseController.Index(PCShop.Core.Models.Mouse.AllMiceQueryModel)">
+            <summary>
+            HttpGet action to retrieve all active mice according to specified criteria
+            </summary>
+            <param name="query">The entity that holds the specified criteria</param>
+            <returns>Collection of all active mice according to specified criteria</returns>
+        </member>
         <member name="T:PCShop.Extensions.ModelExtensions">
             <summary>
             ModelExtensions model

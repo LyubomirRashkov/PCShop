@@ -21,7 +21,7 @@ namespace PCShop.Core.Services.Interfaces
 		Task<KeyboardsQueryModel> GetAllKeyboardsAsync(
 			string? format = null,
 			string? type = null,
-			Wireless wireless = Wireless.No,
+			Wireless wireless = Wireless.Regardless,
 			string? keyword = null,
 			Sorting sorting = Sorting.Newest,
 			int currentPage = 1);

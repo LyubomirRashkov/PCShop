@@ -1,0 +1,49 @@
+﻿@model IEnumerable<MouseExportViewModel>
+
+<table class="table table-striped table-hover mt-5">
+	<thead>
+		<tr class="table-primary">
+			<td>Brand</td>
+			<td>Type</td>
+			<td>Sensitivity</td>
+			<td>Wireless</td>
+			<td>Warranty</td>
+			<td>Price</td>
+			<td>View</td>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var mouse in Model)
+		{
+			<tr>
+				<td>@mouse.Brand</td>
+				<td>@mouse.Type</td>
+				<td>@mouse.Sensitivity</td>
+				<td>
+					@if (mouse.IsWireless)
+					{
+						<label>✔</label>
+					}
+					else
+					{
+						<label>❌</label>
+					}
+				</td>
+				<td>
+					@if (mouse.Warranty > 0)
+					{
+						<p>@mouse.Warranty months</p>
+					}
+					else
+					{
+						<p>Second hand</p>
+					}
+				</td>
+				<td>@String.Format("{0:f2}", mouse.Price) EUR</td>
+				<td>
+					<a asp-controller="Mouse" asp-action="Details" asp-route-id="@mouse.Id" asp-route-information="@mouse.GetInformation()" class="btn btn-primary">Details</a>
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>
