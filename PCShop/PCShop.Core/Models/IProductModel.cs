@@ -13,6 +13,6 @@
         /// <summary>
         /// Property that represents product price
         /// </summary>
-        public decimal Price { get; }
+        public decimal? Price { get; }
     }
 }

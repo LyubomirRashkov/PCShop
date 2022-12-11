@@ -214,6 +214,11 @@
             Constant for the error message when no option is selected
             </summary>
         </member>
+        <member name="F:PCShop.Core.Constants.Constant.ProductConstants.ErrorMessageForNotExistingValue">
+            <summary>
+            Constant for the error message of a not existing value
+            </summary>
+        </member>
         <member name="F:PCShop.Core.Constants.Constant.ProductConstants.ProductsPerPage">
             <summary>
             Constant for the number of products displayed on one page
@@ -407,6 +412,14 @@
             <param name="quantity">The quantity that will be checked</param>
             <param name="errorMessage">The error message that will be attached to the ArgumentException</param>
         </member>
+        <member name="M:PCShop.Core.Exceptions.Guard.AgainstNotExistingValue``1(``0,System.String)">
+            <summary>
+            Method that will throw an ArgumentException when the given value is null
+            </summary>
+            <typeparam name="T">Type of the value</typeparam>
+            <param name="value">The value that will be checked for null</param>
+            <param name="errorMessage">The error message that will be attached to the ArgumentException</param>
+        </member>
         <member name="T:PCShop.Core.Exceptions.IGuard">
             <summary>
             Abstraction of Guard
@@ -443,6 +456,14 @@
             <param name="errorMessage">The error message that will be attached to the ArgumentException</param>
         </member>
         <member name="M:PCShop.Core.Exceptions.IGuard.AgainstProductThatIsNull``1(``0,System.String)">
+            <summary>
+            Method that will throw an ArgumentException when the given value is null
+            </summary>
+            <typeparam name="T">Type of the value</typeparam>
+            <param name="value">The value that will be checked for null</param>
+            <param name="errorMessage">The error message that will be attached to the ArgumentException</param>
+        </member>
+        <member name="M:PCShop.Core.Exceptions.IGuard.AgainstNotExistingValue``1(``0,System.String)">
             <summary>
             Method that will throw an ArgumentException when the given value is null
             </summary>
@@ -621,11 +642,6 @@
             KeyboardImportViewModel model
             </summary>
         </member>
-        <member name="P:PCShop.Core.Models.Keyboard.KeyboardImportViewModel.Brand">
-            <summary>
-            Property that represents keyboard brand
-            </summary>
-        </member>
         <member name="P:PCShop.Core.Models.Keyboard.KeyboardImportViewModel.IsWireless">
             <summary>
             Property that represents if the keyboard is wireless
@@ -636,34 +652,9 @@
             Property that represents keyboard type
             </summary>
         </member>
-        <member name="P:PCShop.Core.Models.Keyboard.KeyboardImportViewModel.Quantity">
-            <summary>
-            Property that represents keyboards count
-            </summary>
-        </member>
-        <member name="P:PCShop.Core.Models.Keyboard.KeyboardImportViewModel.Price">
-            <summary>
-            Property that represents keyboard price
-            </summary>
-        </member>
-        <member name="P:PCShop.Core.Models.Keyboard.KeyboardImportViewModel.Warranty">
-            <summary>
-            Property that represents keyboard warranty
-            </summary>
-        </member>
         <member name="P:PCShop.Core.Models.Keyboard.KeyboardImportViewModel.Format">
             <summary>
             Property that represents keyboard format
-            </summary>
-        </member>
-        <member name="P:PCShop.Core.Models.Keyboard.KeyboardImportViewModel.Color">
-            <summary>
-            Property that represents keyboard color
-            </summary>
-        </member>
-        <member name="P:PCShop.Core.Models.Keyboard.KeyboardImportViewModel.ImageUrl">
-            <summary>
-            Property that represents keyboard image url
             </summary>
         </member>
         <member name="T:PCShop.Core.Models.Keyboard.KeyboardsQueryModel">
@@ -871,11 +862,6 @@
             LaptopImportViewModel model
             </summary>
         </member>
-        <member name="P:PCShop.Core.Models.Laptop.LaptopImportViewModel.Brand">
-            <summary>
-            Property that represents laptop brand
-            </summary>
-        </member>
         <member name="P:PCShop.Core.Models.Laptop.LaptopImportViewModel.CPU">
             <summary>
             Property that represents laptop CPU
@@ -906,21 +892,6 @@
             Property that represents laptop type
             </summary>
         </member>
-        <member name="P:PCShop.Core.Models.Laptop.LaptopImportViewModel.Quantity">
-            <summary>
-            Property that represents laptops count
-            </summary>
-        </member>
-        <member name="P:PCShop.Core.Models.Laptop.LaptopImportViewModel.Price">
-            <summary>
-            Property that represents laptop price
-            </summary>
-        </member>
-        <member name="P:PCShop.Core.Models.Laptop.LaptopImportViewModel.Warranty">
-            <summary>
-            Property that represents laptop warranty
-            </summary>
-        </member>
         <member name="P:PCShop.Core.Models.Laptop.LaptopImportViewModel.DisplayCoverage">
             <summary>
             Property that represents laptop display coverage
@@ -934,16 +905,6 @@
         <member name="P:PCShop.Core.Models.Laptop.LaptopImportViewModel.Resolution">
             <summary>
             Property that represents laptop display resolution
-            </summary>
-        </member>
-        <member name="P:PCShop.Core.Models.Laptop.LaptopImportViewModel.Color">
-            <summary>
-            Property that represents laptop color
-            </summary>
-        </member>
-        <member name="P:PCShop.Core.Models.Laptop.LaptopImportViewModel.ImageUrl">
-            <summary>
-            Property that represents laptop image url
             </summary>
         </member>
         <member name="T:PCShop.Core.Models.Laptop.LaptopsQueryModel">
@@ -1136,11 +1097,6 @@
             MonitorImportViewModel model
             </summary>
         </member>
-        <member name="P:PCShop.Core.Models.Monitor.MonitorImportViewModel.Brand">
-            <summary>
-            Property that represents monitor brand
-            </summary>
-        </member>
         <member name="P:PCShop.Core.Models.Monitor.MonitorImportViewModel.DisplaySize">
             <summary>
             Property that represents monitor display size
@@ -1161,21 +1117,6 @@
             Property that represents monitor type
             </summary>
         </member>
-        <member name="P:PCShop.Core.Models.Monitor.MonitorImportViewModel.Quantity">
-            <summary>
-            Property that represents monitor count
-            </summary>
-        </member>
-        <member name="P:PCShop.Core.Models.Monitor.MonitorImportViewModel.Price">
-            <summary>
-            Property that represents monitor price
-            </summary>
-        </member>
-        <member name="P:PCShop.Core.Models.Monitor.MonitorImportViewModel.Warranty">
-            <summary>
-            Property that represents monitor warranty
-            </summary>
-        </member>
         <member name="P:PCShop.Core.Models.Monitor.MonitorImportViewModel.DisplayCoverage">
             <summary>
             Property that represents monitor display coverage
@@ -1184,16 +1125,6 @@
         <member name="P:PCShop.Core.Models.Monitor.MonitorImportViewModel.DisplayTechnology">
             <summary>
             Property that represents monitor display technology
-            </summary>
-        </member>
-        <member name="P:PCShop.Core.Models.Monitor.MonitorImportViewModel.Color">
-            <summary>
-            Property that represents monitor color
-            </summary>
-        </member>
-        <member name="P:PCShop.Core.Models.Monitor.MonitorImportViewModel.ImageUrl">
-            <summary>
-            Property that represents monitor image url
             </summary>
         </member>
         <member name="T:PCShop.Core.Models.Monitor.MonitorsQueryModel">
@@ -1356,6 +1287,36 @@
             Property that represents mouse sensitivity
             </summary>
         </member>
+        <member name="T:PCShop.Core.Models.Mouse.MouseImportViewModel">
+            <summary>
+            MouseImportViewModel model
+            </summary>
+        </member>
+        <member name="M:PCShop.Core.Models.Mouse.MouseImportViewModel.#ctor">
+            <summary>
+            Constructor of MouseImportViewModel class
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Mouse.MouseImportViewModel.IsWireless">
+            <summary>
+            Property that represents if the mouse is wireless
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Mouse.MouseImportViewModel.Type">
+            <summary>
+            Property that represents mouse type
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Mouse.MouseImportViewModel.Sensitivity">
+            <summary>
+            Property that represents mouse sensitivity range
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Mouse.MouseImportViewModel.Sensitivities">
+            <summary>
+            Property that represents all mouse sensitivity ranges
+            </summary>
+        </member>
         <member name="T:PCShop.Core.Models.Product.ProductExportViewModel">
             <summary>
             ProductExportViewModel model
@@ -1379,6 +1340,41 @@
         <member name="P:PCShop.Core.Models.Product.ProductExportViewModel.Warranty">
             <summary>
             Property that represents product warranty
+            </summary>
+        </member>
+        <member name="T:PCShop.Core.Models.Product.ProductImportViewModel">
+            <summary>
+            ProductImportViewModel model
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Product.ProductImportViewModel.Brand">
+            <summary>
+            Property that represents product brand
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Product.ProductImportViewModel.Quantity">
+            <summary>
+            Property that represents products count
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Product.ProductImportViewModel.Price">
+            <summary>
+            Property that represents product price
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Product.ProductImportViewModel.Warranty">
+            <summary>
+            Property that represents product warranty
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Product.ProductImportViewModel.Color">
+            <summary>
+            Property that represents product color
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Product.ProductImportViewModel.ImageUrl">
+            <summary>
+            Property that represents product image url
             </summary>
         </member>
         <member name="T:PCShop.Core.Models.User.SignInViewModel">
@@ -1792,6 +1788,14 @@
             <param name="repository">The repository that will be used</param>
             <param name="guard">The guard that will be used</param>
         </member>
+        <member name="M:PCShop.Core.Services.Implementations.MouseService.AddMouseAsync(PCShop.Core.Models.Mouse.MouseImportViewModel,System.String)">
+            <summary>
+            Method to add a mouse
+            </summary>
+            <param name="model">Mouse input model</param>
+            <param name="userId">Mouse's owner unique identifier</param>
+            <returns>The unique identifier of the added mouse</returns>
+        </member>
         <member name="M:PCShop.Core.Services.Implementations.MouseService.DeleteMouseAsync(System.Int32)">
             <summary>
             Method to mark a specific mouse as deleted
@@ -2181,6 +2185,14 @@
             Method to mark a specific mouse as deleted
             </summary>
             <param name="id">Mouse unique identifier</param>
+        </member>
+        <member name="M:PCShop.Core.Services.Interfaces.IMouseService.AddMouseAsync(PCShop.Core.Models.Mouse.MouseImportViewModel,System.String)">
+            <summary>
+            Method to add a mouse
+            </summary>
+            <param name="model">Mouse input model</param>
+            <param name="userId">Mouse's owner unique identifier</param>
+            <returns>The unique identifier of the added mouse</returns>
         </member>
         <member name="T:PCShop.Core.Services.Interfaces.IUserService">
             <summary>

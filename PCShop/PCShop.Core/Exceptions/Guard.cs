@@ -92,5 +92,23 @@
 				throw exception;
 			}
 		}
+
+		/// <summary>
+		/// Method that will throw an ArgumentException when the given value is null
+		/// </summary>
+		/// <typeparam name="T">Type of the value</typeparam>
+		/// <param name="value">The value that will be checked for null</param>
+		/// <param name="errorMessage">The error message that will be attached to the ArgumentException</param>
+		public void AgainstNotExistingValue<T>(T value, string? errorMessage = null)
+		{
+			if (value is null)
+			{
+				var exception = errorMessage is null
+								? new ArgumentException()
+								: new ArgumentException(errorMessage);
+
+				throw exception;
+			}
+		}
 	}
 }

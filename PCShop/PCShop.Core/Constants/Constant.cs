@@ -215,7 +215,12 @@
 			/// <summary>
 			/// Constant for the error message when no option is selected
 			/// </summary>
-			public const string ErrorMessageForUnselectedOption = "Please, select an option (Yes/No)";
+			public const string ErrorMessageForUnselectedOption = "Please, select an option";
+
+			/// <summary>
+			/// Constant for the error message of a not existing value
+			/// </summary>
+			public const string ErrorMessageForNotExistingValue = "The value does not exist in the database!";
 
 			/// <summary>
 			/// Constant for the number of products displayed on one page

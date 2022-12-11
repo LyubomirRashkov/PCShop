@@ -18,7 +18,7 @@
 		/// <summary>
 		/// Property that represents product price
 		/// </summary>
-		public decimal Price { get; init; }
+		public decimal? Price { get; init; }
 
 		/// <summary>
 		/// Property that represents product warranty

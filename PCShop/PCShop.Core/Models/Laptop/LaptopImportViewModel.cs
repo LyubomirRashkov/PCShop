@@ -1,6 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
-using static PCShop.Core.Constants.Constant.BrandConstants;
-using static PCShop.Core.Constants.Constant.ColorConstants;
+﻿using PCShop.Core.Models.Product;
+using System.ComponentModel.DataAnnotations;
 using static PCShop.Core.Constants.Constant.CPUConstants;
 using static PCShop.Core.Constants.Constant.DisplayCoverageConstants;
 using static PCShop.Core.Constants.Constant.DisplayTechnologyConstants;
@@ -9,8 +8,6 @@ using static PCShop.Core.Constants.Constant.ProductConstants;
 using static PCShop.Core.Constants.Constant.ResolutionConstants;
 using static PCShop.Core.Constants.Constant.TypeConstants;
 using static PCShop.Core.Constants.Constant.VideoCardConstants;
-using static PCShop.Infrastructure.Constants.DataConstant.BrandConstants;
-using static PCShop.Infrastructure.Constants.DataConstant.ColorConstants;
 using static PCShop.Infrastructure.Constants.DataConstant.CPUConstants;
 using static PCShop.Infrastructure.Constants.DataConstant.DisplayCoverageConstants;
 using static PCShop.Infrastructure.Constants.DataConstant.DisplayTechnologyConstants;
@@ -23,16 +20,8 @@ namespace PCShop.Core.Models.Laptop
     /// <summary>
     /// LaptopImportViewModel model
     /// </summary>
-    public class LaptopImportViewModel : IProductModel
+    public class LaptopImportViewModel : ProductImportViewModel
     {
-        /// <summary>
-        /// Property that represents laptop brand
-        /// </summary>
-        [Display(Name = "brand")]
-        [Required]
-        [StringLength(BrandNameMaxLength, MinimumLength = BrandNameMinLength)]
-        public string Brand { get; init; } = null!;
-
         /// <summary>
         /// Property that represents laptop CPU
         /// </summary>
@@ -81,28 +70,6 @@ namespace PCShop.Core.Models.Laptop
 		public string Type { get; init; } = null!;
 
         /// <summary>
-        /// Property that represents laptops count
-        /// </summary>
-        [Display(Name = "quantity")]
-        [Required]
-        [Range(QuantityMinValue, QuantityMaxValue, ErrorMessage = IntegerErrorMessage)]
-		public int Quantity { get; init; }
-
-        /// <summary>
-        /// Property that represents laptop price
-        /// </summary>
-        [Display(Name = "price")]
-        [Required]
-        public decimal Price { get; init; }
-
-        /// <summary>
-        /// Property that represents laptop warranty
-        /// </summary>
-        [Display(Name = "warranty")]
-        [Range(WarrantyMinValue, WarrantyMaxValue, ErrorMessage = IntegerErrorMessage)]
-        public int Warranty { get; init; }
-
-        /// <summary>
         /// Property that represents laptop display coverage
         /// </summary>
         [Display(Name = "display coverage")]
@@ -122,19 +89,5 @@ namespace PCShop.Core.Models.Laptop
         [Display(Name = "resolution")]
         [StringLength(ResolutionValueMaxLength, MinimumLength = ResolutionValueMinLength)]
 		public string? Resolution { get; init; }
-
-        /// <summary>
-        /// Property that represents laptop color
-        /// </summary>
-        [Display(Name  = "color")]
-        [StringLength(ColorNameMaxLength, MinimumLength = ColorNameMinLength)]
-		public string? Color { get; init; }
-
-        /// <summary>
-        /// Property that represents laptop image url
-        /// </summary>
-        [Display(Name = "image url")]
-        [Url]
-		public string? ImageUrl { get; init; }
 	}
 }

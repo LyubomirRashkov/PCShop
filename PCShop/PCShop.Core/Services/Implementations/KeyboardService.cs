@@ -48,9 +48,9 @@ namespace PCShop.Core.Services.Implementations
 			{
 				ImageUrl = model.ImageUrl,
 				Warranty = model.Warranty,
-				Price = model.Price,
-				Quantity = model.Quantity,
-				IsWireless = model.IsWireless,
+				Price = model.Price != null ? model.Price.Value : default,
+				Quantity = model.Quantity != null ? model.Quantity.Value : default,
+				IsWireless = model.IsWireless != null ? model.IsWireless.Value : default,
 
 				IsDeleted = false,
 				AddedOn = DateTime.UtcNow.Date,
@@ -118,9 +118,9 @@ namespace PCShop.Core.Services.Implementations
 
 			keyboard.ImageUrl = model.ImageUrl;
 			keyboard.Warranty = model.Warranty;
-			keyboard.Price = model.Price;
-			keyboard.Quantity = model.Quantity;
-			keyboard.IsWireless = model.IsWireless;
+			keyboard.Price = model.Price != null ? model.Price.Value : default;
+			keyboard.Quantity = model.Quantity != null ? model.Quantity.Value : default;
+			keyboard.IsWireless = model.IsWireless != null ? model.IsWireless.Value : default;
 			keyboard.AddedOn = DateTime.UtcNow.Date;
 
 			keyboard = await this.SetNavigationPropertiesAsync(

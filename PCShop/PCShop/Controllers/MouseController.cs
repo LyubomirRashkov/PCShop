@@ -1,9 +1,12 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
+using PCShop.Core.Exceptions;
 using PCShop.Core.Models.Mouse;
 using PCShop.Core.Services.Interfaces;
 using PCShop.Extensions;
 using System.Security.Claims;
+using static PCShop.Core.Constants.Constant.ClientConstants;
 using static PCShop.Core.Constants.Constant.GlobalConstants;
 using static PCShop.Core.Constants.Constant.ProductConstants;
 using static PCShop.Infrastructure.Constants.DataConstant.RoleConstants;
@@ -17,14 +20,19 @@ namespace PCShop.Controllers
 	public class MouseController : Controller
 	{
 		private readonly IMouseService mouseService;
+		private readonly IClientService clientService;
 
 		/// <summary>
 		/// Constructor of MouseController class
 		/// </summary>
 		/// <param name="mouseService">The IMouseService needed for functionality</param>
-		public MouseController(IMouseService mouseService)
+		/// <param name="clientService">The IClientService needed for functionality</param>
+		public MouseController(
+			IMouseService mouseService,
+			IClientService clientService)
 		{
 			this.mouseService = mouseService;
+			this.clientService = clientService;
 		}
 
 		/// <summary>
@@ -107,6 +115,111 @@ namespace PCShop.Controllers
 			catch (ArgumentException)
 			{
 				return NotFound();
+			}
+		}
+
+		/// <summary>
+		/// HttpGet action to return the form for adding a mouse
+		/// </summary>
+		/// <returns>The form for adding a mouse</returns>
+		[HttpGet]
+		[Authorize(Roles = $"{Administrator}, {SuperUser}")]
+		public async Task<IActionResult> Add()
+		{
+			if (this.User.IsInRole(SuperUser))
+			{
+				var userId = this.User.Id();
+
+				try
+				{
+					var numberOfActiveSales = await this.clientService.GetNumberOfActiveSales(userId);
+
+					if (numberOfActiveSales == MaxNumberOfAllowedSales)
+					{
+						ViewData["Title"] = "Add a mouse";
+
+						return View(AddNotAllowedViewName);
+					}
+				}
+				catch (PCShopException)
+				{
+					return View(ErrorCommonViewName);
+				}
+			}
+
+			var model = new MouseImportViewModel
+			{
+				Sensitivities = await this.mouseService.GetAllMiceSensitivitiesAsync()
+			};
+
+			return View(model);
+		}
+
+		/// <summary>
+		/// HttpPost action to add a mouse
+		/// </summary>
+		/// <param name="model">Mouse import model</param>
+		/// <param name="rbIsWireless">The value of selected radio button for connectivity</param>
+		/// <param name="rbSensitivity">The value of selected radio button for sensitivity range</param>
+		/// <returns>Redirection to /Mouse/Details</returns>
+		[HttpPost]
+		[Authorize(Roles = $"{Administrator}, {SuperUser}")]
+		public async Task<IActionResult> Add(MouseImportViewModel model, bool? rbIsWireless, string? rbSensitivity)
+		{
+			if (rbIsWireless is null && rbSensitivity is null)
+			{
+				this.ModelState.AddModelError("IsWireless", ErrorMessageForUnselectedOption);
+
+				this.ModelState.AddModelError("Sensitivity", ErrorMessageForUnselectedOption);
+			}
+			else if (rbIsWireless is null)
+			{
+				this.ModelState.AddModelError("IsWireless", ErrorMessageForUnselectedOption);
+
+				model.Sensitivity = rbSensitivity;
+			}
+			else if (rbSensitivity is null)
+			{
+				this.ModelState.AddModelError("Sensitivity", ErrorMessageForUnselectedOption);
+
+				model.IsWireless = rbIsWireless;
+			}
+			else
+			{
+				model.IsWireless = rbIsWireless;
+
+				model.Sensitivity = rbSensitivity;
+			}
+
+			if (!this.ModelState.IsValid)
+			{
+				model.Sensitivities = await this.mouseService.GetAllMiceSensitivitiesAsync();
+
+				return View(model);
+			}
+
+			string? userId = null;
+
+			if (this.User.IsInRole(SuperUser))
+			{
+				userId = this.User.Id();
+			}
+
+			try
+			{
+				int id = await this.mouseService.AddMouseAsync(model, userId);
+
+				TempData[TempDataMessage] = ProductSuccessfullyAdded;
+
+				return RedirectToAction(nameof(Details), new { id, information = model.GetInformation() });
+			}
+			catch (PCShopException)
+			{
+				return View(ErrorCommonViewName);
+			}
+			catch (ArgumentException)
+			{
+				return View(ErrorCommonViewName);
 			}
 		}
 	}

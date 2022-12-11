@@ -49,8 +49,8 @@ namespace PCShop.Core.Services.Implementations
 			{
 				ImageUrl = model.ImageUrl,
 				Warranty = model.Warranty,
-				Price = model.Price,
-				Quantity = model.Quantity,
+				Price = model.Price != null ? model.Price.Value : default,
+				Quantity = model.Quantity != null ? model.Quantity.Value : default,
 
 				IsDeleted = false,
 				AddedOn = DateTime.UtcNow.Date,
@@ -126,8 +126,8 @@ namespace PCShop.Core.Services.Implementations
 
 			monitor.ImageUrl = model.ImageUrl;
 			monitor.Warranty = model.Warranty;
-			monitor.Price = model.Price;
-			monitor.Quantity = model.Quantity;
+			monitor.Price = model.Price != null ? model.Price.Value : default;
+			monitor.Quantity = model.Quantity != null ? model.Quantity.Value : default;
 			monitor.AddedOn = DateTime.UtcNow.Date;
 
 			monitor = await this.SetNavigationPropertiesAsync(

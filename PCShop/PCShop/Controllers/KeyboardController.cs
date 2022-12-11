@@ -169,7 +169,7 @@ namespace PCShop.Controllers
 			}
 			else
 			{
-				model.IsWireless = (bool)radioButton;
+				model.IsWireless = radioButton;
 			}
 
 			if (!this.ModelState.IsValid)

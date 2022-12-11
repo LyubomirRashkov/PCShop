@@ -50,5 +50,13 @@ namespace PCShop.Core.Services.Interfaces
 		/// </summary>
 		/// <param name="id">Mouse unique identifier</param>
 		Task DeleteMouseAsync(int id);
+
+		/// <summary>
+		/// Method to add a mouse
+		/// </summary>
+		/// <param name="model">Mouse input model</param>
+		/// <param name="userId">Mouse's owner unique identifier</param>
+		/// <returns>The unique identifier of the added mouse</returns>
+		Task<int> AddMouseAsync(MouseImportViewModel model, string? userId);
 	}
 }

@@ -350,11 +350,12 @@
             Mouse controller class
             </summary>
         </member>
-        <member name="M:PCShop.Controllers.MouseController.#ctor(PCShop.Core.Services.Interfaces.IMouseService)">
+        <member name="M:PCShop.Controllers.MouseController.#ctor(PCShop.Core.Services.Interfaces.IMouseService,PCShop.Core.Services.Interfaces.IClientService)">
             <summary>
             Constructor of MouseController class
             </summary>
             <param name="mouseService">The IMouseService needed for functionality</param>
+            <param name="clientService">The IClientService needed for functionality</param>
         </member>
         <member name="M:PCShop.Controllers.MouseController.Index(PCShop.Core.Models.Mouse.AllMiceQueryModel)">
             <summary>
@@ -377,6 +378,21 @@
             </summary>
             <param name="id">Mouse unique identifier</param>
             <returns>Redirection to /Mouse/Index</returns>
+        </member>
+        <member name="M:PCShop.Controllers.MouseController.Add">
+            <summary>
+            HttpGet action to return the form for adding a mouse
+            </summary>
+            <returns>The form for adding a mouse</returns>
+        </member>
+        <member name="M:PCShop.Controllers.MouseController.Add(PCShop.Core.Models.Mouse.MouseImportViewModel,System.Nullable{System.Boolean},System.String)">
+            <summary>
+            HttpPost action to add a mouse
+            </summary>
+            <param name="model">Mouse import model</param>
+            <param name="rbIsWireless">The value of selected radio button for connectivity</param>
+            <param name="rbSensitivity">The value of selected radio button for sensitivity range</param>
+            <returns>Redirection to /Mouse/Details</returns>
         </member>
         <member name="T:PCShop.Extensions.ModelExtensions">
             <summary>
