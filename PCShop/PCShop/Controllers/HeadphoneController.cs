@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using PCShop.Core.Models.Headphone;
 using PCShop.Core.Services.Interfaces;
+using PCShop.Extensions;
 
 namespace PCShop.Controllers
 {
@@ -44,6 +45,32 @@ namespace PCShop.Controllers
 			query.Headphones = result.Headphones;
 
 			return View(query);
+		}
+
+		/// <summary>
+		/// HttpGet action to retrieve detailed information about a specific headphone
+		/// </summary>
+		/// <param name="id">Headphone unique identifier</param>
+		/// <param name="information">Headphone additional information</param>
+		/// <returns>Detailed information about the headphone</returns>
+		[HttpGet]
+		public async Task<IActionResult> Details(int id, string information)
+		{
+			try
+			{
+				var headphone = await this.headphoneService.GetHeadphoneByIdAsHeadphoneDetailsExportViewModelAsync(id);
+
+				if (information.ToLower() != headphone.GetInformation().ToLower())
+				{
+					return NotFound();
+				}
+
+				return View(headphone);
+			}
+			catch (ArgumentException)
+			{
+				return NotFound();
+			}
 		}
 	}
 }

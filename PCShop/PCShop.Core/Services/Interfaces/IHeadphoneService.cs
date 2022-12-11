@@ -29,5 +29,12 @@ namespace PCShop.Core.Services.Interfaces
 		/// </summary>
 		/// <returns>Ordered collection of type names</returns>
 		Task<IEnumerable<string>> GetAllHeadphonesTypesAsync();
+
+		/// <summary>
+		/// Method to retrieve a specific headphone
+		/// </summary>
+		/// <param name="id">Headphone unique identifier</param>
+		/// <returns>The headphone as HeadphoneDetailsExportViewModel</returns>
+		Task<HeadphoneDetailsExportViewModel> GetHeadphoneByIdAsHeadphoneDetailsExportViewModelAsync(int id);
 	}
 }

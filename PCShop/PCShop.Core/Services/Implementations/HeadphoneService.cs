@@ -1,9 +1,13 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using PCShop.Core.Constants;
+using PCShop.Core.Exceptions;
 using PCShop.Core.Models.Headphone;
 using PCShop.Core.Services.Interfaces;
 using PCShop.Infrastructure.Common;
 using PCShop.Infrastructure.Data.Models;
+using System.Globalization;
+using System.Linq.Expressions;
+using static PCShop.Core.Constants.Constant.GlobalConstants;
 using static PCShop.Core.Constants.Constant.ProductConstants;
 
 namespace PCShop.Core.Services.Implementations
@@ -14,14 +18,19 @@ namespace PCShop.Core.Services.Implementations
 	public class HeadphoneService : IHeadphoneService
 	{
 		private readonly IRepository repository;
+		private readonly IGuard guard;
 
 		/// <summary>
 		/// Constructor of HeadphoneService class
 		/// </summary>
 		/// <param name="repository">The repository that will be used</param>
-		public HeadphoneService(IRepository repository)
+		/// <param name="guard">The guard that will be used</param>
+		public HeadphoneService(
+			IRepository repository,
+			IGuard guard)
 		{
 			this.repository = repository;
+			this.guard = guard;
 		}
 
 		/// <summary>
@@ -108,6 +117,47 @@ namespace PCShop.Core.Services.Implementations
 				.Distinct()
 				.OrderBy(n => n)
 				.ToListAsync();
+		}
+
+		/// <summary>
+		/// Method to retrieve a specific headphone
+		/// </summary>
+		/// <param name="id">Headphone unique identifier</param>
+		/// <returns>The headphone as HeadphoneDetailsExportViewModel</returns>
+		public async Task<HeadphoneDetailsExportViewModel> GetHeadphoneByIdAsHeadphoneDetailsExportViewModelAsync(int id)
+		{
+			var headphoneExports = await this.GetHeadphonesAsHeadphonesDetailsExportViewModelsAsync<Headphone>(h => h.Id == id);
+
+			this.guard.AgainstNullOrEmptyCollection<HeadphoneDetailsExportViewModel>(headphoneExports, ErrorMessageForInvalidProductId);
+
+			return headphoneExports.First();
+		}
+
+		private async Task<IList<HeadphoneDetailsExportViewModel>> GetHeadphonesAsHeadphonesDetailsExportViewModelsAsync<T>(Expression<Func<Headphone, bool>> condition)
+		{
+			var headphonesAsHeadphoneDetailsExportViewModels = await this.repository
+				.AllAsReadOnly<Headphone>(h => !h.IsDeleted)
+				.Where(condition)
+				.Select(h => new HeadphoneDetailsExportViewModel()
+				{
+					Id = h.Id,
+					Brand = h.Brand.Name,
+					Price = h.Price,
+					IsWireless = h.IsWireless,
+					HasMicrophone = h.HasMicrophone,
+					Type = h.Type.Name,
+					Color = h.Color != null ? h.Color.Name : UnknownCharacteristic,
+					ImageUrl = h.ImageUrl,
+					Warranty = h.Warranty,
+					Quantity = h.Quantity,
+					AddedOn = h.AddedOn.ToString("MMMM, yyyy", CultureInfo.InvariantCulture),
+					Seller = h.Seller,
+					SellerFirstName = h.Seller != null ? h.Seller.User.FirstName : null,
+					SellerLastName = h.Seller != null ? h.Seller.User.LastName : null,
+				})
+				.ToListAsync();
+
+			return headphonesAsHeadphoneDetailsExportViewModels;
 		}
 	}
 }

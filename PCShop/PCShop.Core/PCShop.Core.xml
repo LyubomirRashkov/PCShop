@@ -537,6 +537,46 @@
             Property that represents a collecion of headphones according to specified criteria
             </summary>
         </member>
+        <member name="T:PCShop.Core.Models.Headphone.HeadphoneDetailsExportViewModel">
+            <summary>
+            HeadphoneDetailsExportViewModel model
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Headphone.HeadphoneDetailsExportViewModel.Color">
+            <summary>
+            Property that represents headphone color
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Headphone.HeadphoneDetailsExportViewModel.ImageUrl">
+            <summary>
+            Property that represents headphone image url
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Headphone.HeadphoneDetailsExportViewModel.AddedOn">
+            <summary>
+            Property that represents the date the headphone was added to the database
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Headphone.HeadphoneDetailsExportViewModel.Quantity">
+            <summary>
+            Property that represents how many headphones are in stock
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Headphone.HeadphoneDetailsExportViewModel.Seller">
+            <summary>
+            Property that represents headphone Seller
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Headphone.HeadphoneDetailsExportViewModel.SellerFirstName">
+            <summary>
+            Property that represents headphone seller first name
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Headphone.HeadphoneDetailsExportViewModel.SellerLastName">
+            <summary>
+            Property that represents headphone seller last name
+            </summary>
+        </member>
         <member name="T:PCShop.Core.Models.Headphone.HeadphoneExportViewModel">
             <summary>
             HeadphoneExportViewModel model
@@ -1608,11 +1648,12 @@
             Implementation of IHeadphoneService interface
             </summary>
         </member>
-        <member name="M:PCShop.Core.Services.Implementations.HeadphoneService.#ctor(PCShop.Infrastructure.Common.IRepository)">
+        <member name="M:PCShop.Core.Services.Implementations.HeadphoneService.#ctor(PCShop.Infrastructure.Common.IRepository,PCShop.Core.Exceptions.IGuard)">
             <summary>
             Constructor of HeadphoneService class
             </summary>
             <param name="repository">The repository that will be used</param>
+            <param name="guard">The guard that will be used</param>
         </member>
         <member name="M:PCShop.Core.Services.Implementations.HeadphoneService.GetAllHeadphonesAsync(System.String,PCShop.Core.Constants.Wireless,System.String,PCShop.Core.Constants.Sorting,System.Int32)">
             <summary>
@@ -1630,6 +1671,13 @@
             Method to retrieve all headphone types
             </summary>
             <returns>Ordered collection of type names</returns>
+        </member>
+        <member name="M:PCShop.Core.Services.Implementations.HeadphoneService.GetHeadphoneByIdAsHeadphoneDetailsExportViewModelAsync(System.Int32)">
+            <summary>
+            Method to retrieve a specific headphone
+            </summary>
+            <param name="id">Headphone unique identifier</param>
+            <returns>The headphone as HeadphoneDetailsExportViewModel</returns>
         </member>
         <member name="T:PCShop.Core.Services.Implementations.KeyboardService">
             <summary>
@@ -2068,6 +2116,13 @@
             Method to retrieve all headphone types
             </summary>
             <returns>Ordered collection of type names</returns>
+        </member>
+        <member name="M:PCShop.Core.Services.Interfaces.IHeadphoneService.GetHeadphoneByIdAsHeadphoneDetailsExportViewModelAsync(System.Int32)">
+            <summary>
+            Method to retrieve a specific headphone
+            </summary>
+            <param name="id">Headphone unique identifier</param>
+            <returns>The headphone as HeadphoneDetailsExportViewModel</returns>
         </member>
         <member name="T:PCShop.Core.Services.Interfaces.IKeyboardService">
             <summary>

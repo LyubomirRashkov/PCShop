@@ -119,6 +119,14 @@
             <param name="query">The entity that holds the specified criteria</param>
             <returns>Collection of all active headphones according to specified criteria</returns>
         </member>
+        <member name="M:PCShop.Controllers.HeadphoneController.Details(System.Int32,System.String)">
+            <summary>
+            HttpGet action to retrieve detailed information about a specific headphone
+            </summary>
+            <param name="id">Headphone unique identifier</param>
+            <param name="information">Headphone additional information</param>
+            <returns>Detailed information about the headphone</returns>
+        </member>
         <member name="T:PCShop.Controllers.HomeController">
             <summary>
             Home controller class
