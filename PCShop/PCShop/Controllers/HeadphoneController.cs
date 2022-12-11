@@ -214,5 +214,63 @@ namespace PCShop.Controllers
 				return View(ErrorCommonViewName);
 			}
 		}
-	}
+
+		[HttpGet]
+		[Authorize(Roles = $"{Administrator}, {SuperUser}")]
+		public async Task<IActionResult> Edit(int id)
+		{
+			try
+			{
+				var headphone = await this.headphoneService.GetHeadphoneByIdAsHeadphoneEditViewModelAsync(id);
+
+				if (this.User.IsInRole(SuperUser)
+					&& (headphone.Seller is null || this.User.Id() != headphone.Seller.UserId))
+				{
+					return Unauthorized();
+				}
+
+				return View(headphone);
+			}
+			catch (ArgumentException)
+			{
+				return NotFound();
+			}
+		}
+
+        /// <summary>
+        /// HttpPost action to edit a headphone
+        /// </summary>
+        /// <param name="model">Headphone import model</param>
+        /// <returns>Redirection to /Headphone/Details</returns>
+        [HttpPost]
+		[Authorize(Roles = $"{Administrator}, {SuperUser}")]
+		public async Task<IActionResult> Edit(HeadphoneEditViewModel model)
+		{
+			if (!this.ModelState.IsValid)
+			{
+				return View(model);
+			}
+
+			try
+			{
+				var headphone = await this.headphoneService.GetHeadphoneByIdAsHeadphoneEditViewModelAsync(model.Id);
+
+				if (this.User.IsInRole(SuperUser)
+					&& (headphone.Seller is null || this.User.Id() != headphone.Seller.UserId))
+				{
+					return Unauthorized();
+				}
+
+				int id = await this.headphoneService.EditHeadphoneAsync(model);
+
+                TempData[TempDataMessage] = ProductSuccessfullyEdited;
+
+                return RedirectToAction(nameof(Details), new { id, information = model.GetInformation() });
+            }
+			catch (ArgumentException)
+			{
+				return NotFound();
+			}
+		}
+    }
 }

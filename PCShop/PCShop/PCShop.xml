@@ -150,6 +150,13 @@
             <param name="rbHasMicrophone">The value of selected radio button for microphone availability</param>
             <returns>Redirection to /Headphone/Details</returns>
         </member>
+        <member name="M:PCShop.Controllers.HeadphoneController.Edit(PCShop.Core.Models.Headphone.HeadphoneEditViewModel)">
+            <summary>
+            HttpPost action to edit a headphone
+            </summary>
+            <param name="model">Headphone import model</param>
+            <returns>Redirection to /Headphone/Details</returns>
+        </member>
         <member name="T:PCShop.Controllers.HomeController">
             <summary>
             Home controller class

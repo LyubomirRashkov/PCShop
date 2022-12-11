@@ -577,6 +577,21 @@
             Property that represents headphone seller last name
             </summary>
         </member>
+        <member name="T:PCShop.Core.Models.Headphone.HeadphoneEditViewModel">
+            <summary>
+            HeadphoneEditViewModel model
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Headphone.HeadphoneEditViewModel.Id">
+            <summary>
+            Property that represents headphone unique identifier
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Headphone.HeadphoneEditViewModel.Seller">
+            <summary>
+            Property that represents headphone Seller
+            </summary>
+        </member>
         <member name="T:PCShop.Core.Models.Headphone.HeadphoneExportViewModel">
             <summary>
             HeadphoneExportViewModel model
@@ -1689,6 +1704,13 @@
             </summary>
             <param name="id">Headphone unique identifier</param>
         </member>
+        <member name="M:PCShop.Core.Services.Implementations.HeadphoneService.EditHeadphoneAsync(PCShop.Core.Models.Headphone.HeadphoneEditViewModel)">
+            <summary>
+            Method to edit a headphone
+            </summary>
+            <param name="model">Headphone input model</param>
+            <returns>The unique identifier of the edited headphone</returns>
+        </member>
         <member name="M:PCShop.Core.Services.Implementations.HeadphoneService.GetAllHeadphonesAsync(System.String,PCShop.Core.Constants.Wireless,System.String,PCShop.Core.Constants.Sorting,System.Int32)">
             <summary>
             Method to retrieve all active headphones according to specified criteria
@@ -1712,6 +1734,13 @@
             </summary>
             <param name="id">Headphone unique identifier</param>
             <returns>The headphone as HeadphoneDetailsExportViewModel</returns>
+        </member>
+        <member name="M:PCShop.Core.Services.Implementations.HeadphoneService.GetHeadphoneByIdAsHeadphoneEditViewModelAsync(System.Int32)">
+            <summary>
+            Method to retrieve a specific headphone
+            </summary>
+            <param name="id">Headphone unique identifier</param>
+            <returns>The headphone as HeadphoneEditViewModel</returns>
         </member>
         <member name="T:PCShop.Core.Services.Implementations.KeyboardService">
             <summary>
@@ -2171,6 +2200,20 @@
             <param name="model">Headphone input model</param>
             <param name="userId">Headphone's owner unique identifier</param>
             <returns>The unique identifier of the added headphone</returns>
+        </member>
+        <member name="M:PCShop.Core.Services.Interfaces.IHeadphoneService.GetHeadphoneByIdAsHeadphoneEditViewModelAsync(System.Int32)">
+            <summary>
+            Method to retrieve a specific headphone
+            </summary>
+            <param name="id">Headphone unique identifier</param>
+            <returns>The headphone as HeadphoneEditViewModel</returns>
+        </member>
+        <member name="M:PCShop.Core.Services.Interfaces.IHeadphoneService.EditHeadphoneAsync(PCShop.Core.Models.Headphone.HeadphoneEditViewModel)">
+            <summary>
+            Method to edit a headphone
+            </summary>
+            <param name="model">Headphone input model</param>
+            <returns>The unique identifier of the edited headphone</returns>
         </member>
         <member name="T:PCShop.Core.Services.Interfaces.IKeyboardService">
             <summary>

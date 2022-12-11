@@ -50,5 +50,19 @@ namespace PCShop.Core.Services.Interfaces
 		/// <param name="userId">Headphone's owner unique identifier</param>
 		/// <returns>The unique identifier of the added headphone</returns>
 		Task<int> AddHeadphoneAsync(HeadphoneImportViewModel model, string? userId);
+
+        /// <summary>
+        /// Method to retrieve a specific headphone
+        /// </summary>
+        /// <param name="id">Headphone unique identifier</param>
+        /// <returns>The headphone as HeadphoneEditViewModel</returns>
+        Task<HeadphoneEditViewModel> GetHeadphoneByIdAsHeadphoneEditViewModelAsync(int id);
+
+        /// <summary>
+        /// Method to edit a headphone
+        /// </summary>
+        /// <param name="model">Headphone input model</param>
+        /// <returns>The unique identifier of the edited headphone</returns>
+        Task<int> EditHeadphoneAsync(HeadphoneEditViewModel model);
 	}
 }
