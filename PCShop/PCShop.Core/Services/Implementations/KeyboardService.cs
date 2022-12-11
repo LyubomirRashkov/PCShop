@@ -261,7 +261,7 @@ namespace PCShop.Core.Services.Implementations
         /// Method to retrieve a specific keyboard
         /// </summary>
         /// <param name="id">Keyboard unique identifier</param>
-        /// <returns>The keyboars as KeyboardEditViewModel</returns>
+        /// <returns>The keyboard as KeyboardEditViewModel</returns>
         public async Task<KeyboardEditViewModel> GetKeyboardByIdAsKeyboardEditViewModelAsync(int id)
 		{
 			var keyboardExport = await this.repository

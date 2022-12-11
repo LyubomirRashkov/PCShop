@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.ModelBinding;
 using PCShop.Core.Exceptions;
 using PCShop.Core.Models.Mouse;
 using PCShop.Core.Services.Interfaces;
@@ -222,5 +221,70 @@ namespace PCShop.Controllers
 				return View(ErrorCommonViewName);
 			}
 		}
-	}
+
+        /// <summary>
+        /// HttpGet action to return the form for editing a mouse
+        /// </summary>
+        /// <param name="id">Mouse unique identifier</param>
+        /// <returns>The form for editing a mouse</returns>
+        [HttpGet]
+		[Authorize(Roles = $"{Administrator}, {SuperUser}")]
+		public async Task<IActionResult> Edit(int id)
+		{
+			try
+			{
+				var mouse = await this.mouseService.GetMouseByIdAsMouseEditViewModelAsync(id);
+
+				if (this.User.IsInRole(SuperUser)
+					&& (mouse.Seller is null || this.User.Id() != mouse.Seller.UserId))
+				{
+					return Unauthorized();
+				}
+
+				mouse.Sensitivities = await this.mouseService.GetAllMiceSensitivitiesAsync();
+
+				return View(mouse);
+			}
+			catch (ArgumentException)
+			{
+				return NotFound();
+			}
+		}
+
+        /// <summary>
+        /// HttpPost action to edit a mouse
+        /// </summary>
+        /// <param name="model">Mouse import model</param>
+        /// <returns>Redirection to /Mouse/Details</returns>
+        [HttpPost]
+		[Authorize(Roles = $"{Administrator}, {SuperUser}")]
+		public async Task<IActionResult> Edit(MouseEditViewModel model)
+		{
+			if (!this.ModelState.IsValid)
+			{
+				return View(model);
+			}
+
+			try
+			{
+				var mouse = await this.mouseService.GetMouseByIdAsMouseEditViewModelAsync(model.Id);
+
+				if (this.User.IsInRole(SuperUser)
+					&& (mouse.Seller is null || this.User.Id() != mouse.Seller.UserId))
+				{
+					return Unauthorized();
+				}
+
+				int id = await this.mouseService.EditMouseAsync(model);
+
+                TempData[TempDataMessage] = ProductSuccessfullyEdited;
+
+                return RedirectToAction(nameof(Details), new { id, information = model.GetInformation() });
+            }
+			catch (ArgumentException)
+			{
+				return NotFound();
+			}
+		}
+    }
 }

@@ -394,6 +394,20 @@
             <param name="rbSensitivity">The value of selected radio button for sensitivity range</param>
             <returns>Redirection to /Mouse/Details</returns>
         </member>
+        <member name="M:PCShop.Controllers.MouseController.Edit(System.Int32)">
+            <summary>
+            HttpGet action to return the form for editing a mouse
+            </summary>
+            <param name="id">Mouse unique identifier</param>
+            <returns>The form for editing a mouse</returns>
+        </member>
+        <member name="M:PCShop.Controllers.MouseController.Edit(PCShop.Core.Models.Mouse.MouseEditViewModel)">
+            <summary>
+            HttpPost action to edit a mouse
+            </summary>
+            <param name="model">Mouse import model</param>
+            <returns>Redirection to /Mouse/Details</returns>
+        </member>
         <member name="T:PCShop.Extensions.ModelExtensions">
             <summary>
             ModelExtensions model

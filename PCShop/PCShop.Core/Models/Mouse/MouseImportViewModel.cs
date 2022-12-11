@@ -39,7 +39,7 @@ namespace PCShop.Core.Models.Mouse
 		public string? Sensitivity { get; set; }
 
 		/// <summary>
-		/// Property that represents all mouse sensitivity ranges
+		/// Property that represents a collection of all mouse sensitivity ranges
 		/// </summary>
 		public IEnumerable<string> Sensitivities { get; set; }
 	}

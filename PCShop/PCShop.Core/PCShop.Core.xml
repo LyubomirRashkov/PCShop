@@ -1267,6 +1267,21 @@
             Property that represents mouse seller last name
             </summary>
         </member>
+        <member name="T:PCShop.Core.Models.Mouse.MouseEditViewModel">
+            <summary>
+            MouseEditViewModel model
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Mouse.MouseEditViewModel.Id">
+            <summary>
+            Property that represents mouse unique identifier
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Mouse.MouseEditViewModel.Seller">
+            <summary>
+            Property that represents mouse Seller
+            </summary>
+        </member>
         <member name="T:PCShop.Core.Models.Mouse.MouseExportViewModel">
             <summary>
             MouseExportViewModel model
@@ -1314,7 +1329,7 @@
         </member>
         <member name="P:PCShop.Core.Models.Mouse.MouseImportViewModel.Sensitivities">
             <summary>
-            Property that represents all mouse sensitivity ranges
+            Property that represents a collection of all mouse sensitivity ranges
             </summary>
         </member>
         <member name="T:PCShop.Core.Models.Product.ProductExportViewModel">
@@ -1567,7 +1582,7 @@
             Method to retrieve a specific keyboard
             </summary>
             <param name="id">Keyboard unique identifier</param>
-            <returns>The keyboars as KeyboardEditViewModel</returns>
+            <returns>The keyboard as KeyboardEditViewModel</returns>
         </member>
         <member name="M:PCShop.Core.Services.Implementations.KeyboardService.GetUserKeyboardsAsync(System.String)">
             <summary>
@@ -1802,6 +1817,13 @@
             </summary>
             <param name="id">Mouse unique identifier</param>
         </member>
+        <member name="M:PCShop.Core.Services.Implementations.MouseService.EditMouseAsync(PCShop.Core.Models.Mouse.MouseEditViewModel)">
+            <summary>
+            Method to edit a mouse
+            </summary>
+            <param name="model">Mouse input model</param>
+            <returns>The unique identifier of the edited mouse</returns>
+        </member>
         <member name="M:PCShop.Core.Services.Implementations.MouseService.GetAllMiceAsync(System.String,System.String,PCShop.Core.Constants.Wireless,System.String,PCShop.Core.Constants.Sorting,System.Int32)">
             <summary>
             Method to retrieve all active mice according to specified criteria
@@ -1832,6 +1854,13 @@
             </summary>
             <param name="id">Mouse unique identifier</param>
             <returns>The mouse as MouseDetailsExportViewModel</returns>
+        </member>
+        <member name="M:PCShop.Core.Services.Implementations.MouseService.GetMouseByIdAsMouseEditViewModelAsync(System.Int32)">
+            <summary>
+            Method to retrieve a specific mouse
+            </summary>
+            <param name="id">Mouse unique identifier</param>
+            <returns>The mouse as MouseEditViewModel</returns>
         </member>
         <member name="T:PCShop.Core.Services.Implementations.UserService">
             <summary>
@@ -1942,7 +1971,7 @@
             Method to retrieve a specific keyboard
             </summary>
             <param name="id">Keyboard unique identifier</param>
-            <returns>The keyboars as KeyboardEditViewModel</returns>
+            <returns>The keyboard as KeyboardEditViewModel</returns>
         </member>
         <member name="M:PCShop.Core.Services.Interfaces.IKeyboardService.EditKeyboardAsync(PCShop.Core.Models.Keyboard.KeyboardEditViewModel)">
             <summary>
@@ -2193,6 +2222,20 @@
             <param name="model">Mouse input model</param>
             <param name="userId">Mouse's owner unique identifier</param>
             <returns>The unique identifier of the added mouse</returns>
+        </member>
+        <member name="M:PCShop.Core.Services.Interfaces.IMouseService.GetMouseByIdAsMouseEditViewModelAsync(System.Int32)">
+            <summary>
+            Method to retrieve a specific mouse
+            </summary>
+            <param name="id">Mouse unique identifier</param>
+            <returns>The mouse as MouseEditViewModel</returns>
+        </member>
+        <member name="M:PCShop.Core.Services.Interfaces.IMouseService.EditMouseAsync(PCShop.Core.Models.Mouse.MouseEditViewModel)">
+            <summary>
+            Method to edit a mouse
+            </summary>
+            <param name="model">Mouse input model</param>
+            <returns>The unique identifier of the edited mouse</returns>
         </member>
         <member name="T:PCShop.Core.Services.Interfaces.IUserService">
             <summary>

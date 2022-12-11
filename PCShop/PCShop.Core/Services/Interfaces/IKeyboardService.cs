@@ -63,7 +63,7 @@ namespace PCShop.Core.Services.Interfaces
         /// Method to retrieve a specific keyboard
         /// </summary>
         /// <param name="id">Keyboard unique identifier</param>
-        /// <returns>The keyboars as KeyboardEditViewModel</returns>
+        /// <returns>The keyboard as KeyboardEditViewModel</returns>
         Task<KeyboardEditViewModel> GetKeyboardByIdAsKeyboardEditViewModelAsync(int id);
 
         /// <summary>
