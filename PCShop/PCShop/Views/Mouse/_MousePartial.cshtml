@@ -1,10 +1,10 @@
-﻿@model KeyboardDetailsExportViewModel
+﻿@model MouseDetailsExportViewModel
 
 <div class="card col-4" style="width: 20rem;">
 
 	@if (Model.ImageUrl is not null)
 	{
-		<img class="card-img-top" src="@Model.ImageUrl" alt="Keyboard image">
+		<img class="card-img-top" src="@Model.ImageUrl" alt="Mouse image">
 	}
 
 	<div class="card-body text-center">
@@ -18,7 +18,7 @@
 			<p class="mb-0"><b>Wireless: <label>❌</label></b></p>
 		}
 		<p class="mb-0"><b>Type: @Model.Type</b></p>
-		<p class="mb-0">Format: @Model.Format</p>
+		<p class="mb-0"><b>Sensitivity range: @Model.Sensitivity</b></p>
 		<p class="mb-2">Color: @Model.Color</p>
 		<p class="text-success mb-2"><b>On sale from: @Model.AddedOn</b></p>
 		<p class="text-success mb-2"><b>Quantity: @Model.Quantity</b></p>
@@ -27,9 +27,9 @@
 		@if ((this.User?.Identity?.IsAuthenticated ?? false)
 				&& (this.User.IsInRole(SuperUser) && Model.Seller is not null && this.User.Id() == Model.Seller.UserId))
 		{
-			<a asp-controller="Keyboard" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Edit</a>
-			<a asp-controller="Keyboard" asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger"
-		   onclick="return confirm('Are you sure you want to delete keyboard @Model.Brand')">Delete</a>
+			<a asp-controller="Mouse" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Edit</a>
+			<a asp-controller="Mouse" asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger"
+		   onclick="return confirm('Are you sure you want to delete mouse @Model.Brand')">Delete</a>
 		}
 	</div>
 </div>

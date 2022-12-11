@@ -286,5 +286,27 @@ namespace PCShop.Controllers
 				return NotFound();
 			}
 		}
+
+		/// <summary>
+		/// HttpGet action to retrieve all active mouse sales of the currently logged in user
+		/// </summary>
+		/// <returns>Collection of all active mouse sales of the currently logged in user</returns>
+		[HttpGet]
+		[Authorize(Roles = SuperUser)]
+		public async Task<IActionResult> Mine()
+		{
+			var userId = this.User.Id();
+
+			try
+			{
+				var userMice = await this.mouseService.GetUserMiceAsync(userId);
+
+				return View(userMice);
+			}
+			catch (PCShopException)
+			{
+				return View(ErrorCommonViewName);
+			}
+		}
     }
 }

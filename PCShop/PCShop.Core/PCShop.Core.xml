@@ -1862,6 +1862,13 @@
             <param name="id">Mouse unique identifier</param>
             <returns>The mouse as MouseEditViewModel</returns>
         </member>
+        <member name="M:PCShop.Core.Services.Implementations.MouseService.GetUserMiceAsync(System.String)">
+            <summary>
+            Method to retrieve all active mice sales of the currently logged in user
+            </summary>
+            <param name="userId">User unique identifier</param>
+            <returns>Collection of MouseDetailsExportViewModels</returns>
+        </member>
         <member name="T:PCShop.Core.Services.Implementations.UserService">
             <summary>
             Implementation of IUserService interface
@@ -2236,6 +2243,13 @@
             </summary>
             <param name="model">Mouse input model</param>
             <returns>The unique identifier of the edited mouse</returns>
+        </member>
+        <member name="M:PCShop.Core.Services.Interfaces.IMouseService.GetUserMiceAsync(System.String)">
+            <summary>
+            Method to retrieve all active mice sales of the currently logged in user
+            </summary>
+            <param name="userId">User unique identifier</param>
+            <returns>Collection of MouseDetailsExportViewModels</returns>
         </member>
         <member name="T:PCShop.Core.Services.Interfaces.IUserService">
             <summary>

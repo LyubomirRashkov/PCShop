@@ -287,6 +287,22 @@ namespace PCShop.Core.Services.Implementations
 			return mouseExport;
         }
 
+		/// <summary>
+		/// Method to retrieve all active mice sales of the currently logged in user
+		/// </summary>
+		/// <param name="userId">User unique identifier</param>
+		/// <returns>Collection of MouseDetailsExportViewModels</returns>
+		public async Task<IEnumerable<MouseDetailsExportViewModel>> GetUserMiceAsync(string userId)
+        {
+			var client = await this.repository.GetByPropertyAsync<Client>(c => c.UserId == userId);
+
+			this.guard.AgainstInvalidUserId<Client>(client, ErrorMessageForInvalidUserId);
+
+			var userMice = await this.GetMiceAsMouseDetailsExportViewModelsAsync<Mouse>(m => m.SellerId == client.Id);
+
+			return userMice;
+        }
+
         private async Task<IList<MouseDetailsExportViewModel>> GetMiceAsMouseDetailsExportViewModelsAsync<T>(Expression<Func<Mouse, bool>> condition)
 		{
 			var miceAsMouseDetailsExportViewModels = await this.repository

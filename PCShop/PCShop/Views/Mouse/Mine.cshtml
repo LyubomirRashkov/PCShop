@@ -1,0 +1,24 @@
+﻿@model IEnumerable<MouseDetailsExportViewModel>
+
+@{
+	ViewData["Title"] = "My mice";
+}
+
+<h1 class="text-center mb-2">@ViewData["Title"]</h1>
+
+<hr />
+
+@if (Model.Any())
+{
+	<div class="row">
+
+		@foreach (var mouse in Model)
+		{
+			<partial name="_MousePartial" model="@mouse" />
+		}
+	</div>
+}
+else
+{
+	<h3 class="text-center mt-5">You have no mice added yet!</h3>
+}
