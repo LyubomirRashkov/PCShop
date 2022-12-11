@@ -597,6 +597,26 @@
             Property that represents if the headphone has a microphone
             </summary>
         </member>
+        <member name="T:PCShop.Core.Models.Headphone.HeadphoneImportViewModel">
+            <summary>
+            HeadphoneImportViewModel model
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Headphone.HeadphoneImportViewModel.Type">
+            <summary>
+            Property that represents headphone type
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Headphone.HeadphoneImportViewModel.IsWireless">
+            <summary>
+            Property that represents if the headphone is wireless
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Headphone.HeadphoneImportViewModel.HasMicrophone">
+            <summary>
+            Property that represents if the headphone has a microphone
+            </summary>
+        </member>
         <member name="T:PCShop.Core.Models.Headphone.HeadphonesQueryModel">
             <summary>
             HeadphonesQueryModel model
@@ -1655,6 +1675,14 @@
             <param name="repository">The repository that will be used</param>
             <param name="guard">The guard that will be used</param>
         </member>
+        <member name="M:PCShop.Core.Services.Implementations.HeadphoneService.AddHeadphoneAsync(PCShop.Core.Models.Headphone.HeadphoneImportViewModel,System.String)">
+            <summary>
+            Method to add a headphone
+            </summary>
+            <param name="model">Headphone input model</param>
+            <param name="userId">Headphone's owner unique identifier</param>
+            <returns>The unique identifier of the added headphone</returns>
+        </member>
         <member name="M:PCShop.Core.Services.Implementations.HeadphoneService.DeleteHeadphoneAsync(System.Int32)">
             <summary>
             Method to mark a specific headphone as deleted
@@ -2135,6 +2163,14 @@
             Method to mark a specific headphone as deleted
             </summary>
             <param name="id">Headphone unique identifier</param>
+        </member>
+        <member name="M:PCShop.Core.Services.Interfaces.IHeadphoneService.AddHeadphoneAsync(PCShop.Core.Models.Headphone.HeadphoneImportViewModel,System.String)">
+            <summary>
+            Method to add a headphone
+            </summary>
+            <param name="model">Headphone input model</param>
+            <param name="userId">Headphone's owner unique identifier</param>
+            <returns>The unique identifier of the added headphone</returns>
         </member>
         <member name="T:PCShop.Core.Services.Interfaces.IKeyboardService">
             <summary>
