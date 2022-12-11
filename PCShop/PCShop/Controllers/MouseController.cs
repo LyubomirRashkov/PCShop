@@ -74,7 +74,7 @@ namespace PCShop.Controllers
 			{
 				var mouse = await this.mouseService.GetMouseByIdAsMouseDetailsExportViewModelAsync(id);
 
-				if (information != mouse.GetInformation())
+				if (information.ToLower() != mouse.GetInformation().ToLower())
 				{
 					return NotFound();
 				}

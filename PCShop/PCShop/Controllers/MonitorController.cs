@@ -80,7 +80,7 @@ namespace PCShop.Controllers
 			{
 				var monitor = await this.monitorService.GetMonitorByIdAsMonitorDetailsExportViewModelAsync(id);
 
-				if (information != monitor.GetInformation())
+				if (information.ToLower() != monitor.GetInformation().ToLower())
 				{
 					return NotFound();
 				}
