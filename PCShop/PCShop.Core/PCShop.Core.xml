@@ -1655,6 +1655,12 @@
             <param name="repository">The repository that will be used</param>
             <param name="guard">The guard that will be used</param>
         </member>
+        <member name="M:PCShop.Core.Services.Implementations.HeadphoneService.DeleteHeadphoneAsync(System.Int32)">
+            <summary>
+            Method to mark a specific headphone as deleted
+            </summary>
+            <param name="id">Headphone unique identifier</param>
+        </member>
         <member name="M:PCShop.Core.Services.Implementations.HeadphoneService.GetAllHeadphonesAsync(System.String,PCShop.Core.Constants.Wireless,System.String,PCShop.Core.Constants.Sorting,System.Int32)">
             <summary>
             Method to retrieve all active headphones according to specified criteria
@@ -2123,6 +2129,12 @@
             </summary>
             <param name="id">Headphone unique identifier</param>
             <returns>The headphone as HeadphoneDetailsExportViewModel</returns>
+        </member>
+        <member name="M:PCShop.Core.Services.Interfaces.IHeadphoneService.DeleteHeadphoneAsync(System.Int32)">
+            <summary>
+            Method to mark a specific headphone as deleted
+            </summary>
+            <param name="id">Headphone unique identifier</param>
         </member>
         <member name="T:PCShop.Core.Services.Interfaces.IKeyboardService">
             <summary>

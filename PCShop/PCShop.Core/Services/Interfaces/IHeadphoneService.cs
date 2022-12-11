@@ -36,5 +36,11 @@ namespace PCShop.Core.Services.Interfaces
 		/// <param name="id">Headphone unique identifier</param>
 		/// <returns>The headphone as HeadphoneDetailsExportViewModel</returns>
 		Task<HeadphoneDetailsExportViewModel> GetHeadphoneByIdAsHeadphoneDetailsExportViewModelAsync(int id);
+
+		/// <summary>
+		/// Method to mark a specific headphone as deleted
+		/// </summary>
+		/// <param name="id">Headphone unique identifier</param>
+		Task DeleteHeadphoneAsync(int id);
 	}
 }

@@ -3,6 +3,10 @@ using Microsoft.AspNetCore.Mvc;
 using PCShop.Core.Models.Headphone;
 using PCShop.Core.Services.Interfaces;
 using PCShop.Extensions;
+using System.Security.Claims;
+using static PCShop.Core.Constants.Constant.GlobalConstants;
+using static PCShop.Core.Constants.Constant.ProductConstants;
+using static PCShop.Infrastructure.Constants.DataConstant.RoleConstants;
 
 namespace PCShop.Controllers
 {
@@ -66,6 +70,37 @@ namespace PCShop.Controllers
 				}
 
 				return View(headphone);
+			}
+			catch (ArgumentException)
+			{
+				return NotFound();
+			}
+		}
+
+		/// <summary>
+		/// Action to mark a specific headphone as deleted
+		/// </summary>
+		/// <param name="id">Headphone unique identifier</param>
+		/// <returns>Redirection to /Headphone/Index</returns>
+		[HttpGet]
+		[Authorize(Roles = $"{Administrator}, {SuperUser}")]
+		public async Task<IActionResult> Delete(int id)
+		{
+			try
+			{
+				var headphone = await this.headphoneService.GetHeadphoneByIdAsHeadphoneDetailsExportViewModelAsync(id);
+
+				if (this.User.IsInRole(SuperUser)
+					&& (headphone.Seller is null || this.User.Id() != headphone.Seller.UserId))
+				{
+					return Unauthorized();
+				}
+
+				await this.headphoneService.DeleteHeadphoneAsync(id);
+
+				TempData[TempDataMessage] = ProductSuccessfullyDeleted;
+
+				return RedirectToAction(nameof(Index));
 			}
 			catch (ArgumentException)
 			{

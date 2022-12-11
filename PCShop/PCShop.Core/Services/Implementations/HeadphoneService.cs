@@ -34,6 +34,23 @@ namespace PCShop.Core.Services.Implementations
 		}
 
 		/// <summary>
+		/// Method to mark a specific headphone as deleted
+		/// </summary>
+		/// <param name="id">Headphone unique identifier</param>
+		public async Task DeleteHeadphoneAsync(int id)
+		{
+			var headphone = await this.repository.GetByIdAsync<Headphone>(id);
+
+			this.guard.AgainstProductThatIsNull<Headphone>(headphone, ErrorMessageForInvalidProductId);
+
+			this.guard.AgainstProductThatIsDeleted(headphone.IsDeleted, ErrorMessageForDeletedProduct);
+
+			headphone.IsDeleted = true;
+
+			await this.repository.SaveChangesAsync();
+		}
+
+		/// <summary>
 		/// Method to retrieve all active headphones according to specified criteria
 		/// </summary>
 		/// <param name="type">The criterion for the headphone type</param>
