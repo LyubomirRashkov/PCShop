@@ -101,6 +101,24 @@
             </summary>
             <returns>The home page</returns>
         </member>
+        <member name="T:PCShop.Controllers.HeadphoneController">
+            <summary>
+            Headphone controller class
+            </summary>
+        </member>
+        <member name="M:PCShop.Controllers.HeadphoneController.#ctor(PCShop.Core.Services.Interfaces.IHeadphoneService)">
+            <summary>
+            Constructor of HeadphoneController class
+            </summary>
+            <param name="headphoneService">The IHeadphoneService needed for functionality</param>
+        </member>
+        <member name="M:PCShop.Controllers.HeadphoneController.Index(PCShop.Core.Models.Headphone.AllHeadphonesQueryModel)">
+            <summary>
+            HttpGet action to retrieve all active headphones according to specified criteria
+            </summary>
+            <param name="query">The entity that holds the specified criteria</param>
+            <returns>Collection of all active headphones according to specified criteria</returns>
+        </member>
         <member name="T:PCShop.Controllers.HomeController">
             <summary>
             Home controller class

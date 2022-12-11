@@ -487,6 +487,96 @@
             </summary>
             <param name="errorMessage">The error message that will be attached to the exception</param>
         </member>
+        <member name="T:PCShop.Core.Models.Headphone.AllHeadphonesQueryModel">
+            <summary>
+            AllHeadphonesQueryModel model
+            </summary>
+        </member>
+        <member name="M:PCShop.Core.Models.Headphone.AllHeadphonesQueryModel.#ctor">
+            <summary>
+            Constructor of AllHeadphonesQueryModel class
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Headphone.AllHeadphonesQueryModel.Type">
+            <summary>
+            Property that represents headphone type
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Headphone.AllHeadphonesQueryModel.Types">
+            <summary>
+            Property that represents a collection of all possible headphone types
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Headphone.AllHeadphonesQueryModel.Wireless">
+            <summary>
+            Property that represents headphone connectivity
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Headphone.AllHeadphonesQueryModel.Keyword">
+            <summary>
+            Property that represents a search keyword
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Headphone.AllHeadphonesQueryModel.Sorting">
+            <summary>
+            Property that represents a sorting criterion
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Headphone.AllHeadphonesQueryModel.CurrentPage">
+            <summary>
+            Property that represents the number of the current page
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Headphone.AllHeadphonesQueryModel.TotalHeadphonesCount">
+            <summary>
+            Property that represents total count of headphones
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Headphone.AllHeadphonesQueryModel.Headphones">
+            <summary>
+            Property that represents a collecion of headphones according to specified criteria
+            </summary>
+        </member>
+        <member name="T:PCShop.Core.Models.Headphone.HeadphoneExportViewModel">
+            <summary>
+            HeadphoneExportViewModel model
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Headphone.HeadphoneExportViewModel.Type">
+            <summary>
+            Property that represents headphone type
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Headphone.HeadphoneExportViewModel.IsWireless">
+            <summary>
+            Property that represents if the headphone is wireless
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Headphone.HeadphoneExportViewModel.HasMicrophone">
+            <summary>
+            Property that represents if the headphone has a microphone
+            </summary>
+        </member>
+        <member name="T:PCShop.Core.Models.Headphone.HeadphonesQueryModel">
+            <summary>
+            HeadphonesQueryModel model
+            </summary>
+        </member>
+        <member name="M:PCShop.Core.Models.Headphone.HeadphonesQueryModel.#ctor">
+            <summary>
+            Constructor of HeadphonesQueryModel class
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Headphone.HeadphonesQueryModel.TotalHeadphonesCount">
+            <summary>
+            Property that represents total count of headphones
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Headphone.HeadphonesQueryModel.Headphones">
+            <summary>
+            Property that represents a collection of headphones
+            </summary>
+        </member>
         <member name="T:PCShop.Core.Models.IProductModel">
             <summary>
             Abstraction of ProductModel
@@ -1513,6 +1603,34 @@
             <param name="userId">User unique identifier</param>
             <returns>The number of active sales of the user</returns>
         </member>
+        <member name="T:PCShop.Core.Services.Implementations.HeadphoneService">
+            <summary>
+            Implementation of IHeadphoneService interface
+            </summary>
+        </member>
+        <member name="M:PCShop.Core.Services.Implementations.HeadphoneService.#ctor(PCShop.Infrastructure.Common.IRepository)">
+            <summary>
+            Constructor of HeadphoneService class
+            </summary>
+            <param name="repository">The repository that will be used</param>
+        </member>
+        <member name="M:PCShop.Core.Services.Implementations.HeadphoneService.GetAllHeadphonesAsync(System.String,PCShop.Core.Constants.Wireless,System.String,PCShop.Core.Constants.Sorting,System.Int32)">
+            <summary>
+            Method to retrieve all active headphones according to specified criteria
+            </summary>
+            <param name="type">The criterion for the headphone type</param>
+            <param name="wireless">The criterion for the headphone connectivity</param>
+            <param name="keyword">The criterion for keyword</param>
+            <param name="sorting">The criterion for sorting</param>
+            <param name="currentPage">Current page number</param>
+            <returns>HeadphoneQueryModel object</returns>
+        </member>
+        <member name="M:PCShop.Core.Services.Implementations.HeadphoneService.GetAllHeadphonesTypesAsync">
+            <summary>
+            Method to retrieve all headphone types
+            </summary>
+            <returns>Ordered collection of type names</returns>
+        </member>
         <member name="T:PCShop.Core.Services.Implementations.KeyboardService">
             <summary>
             Implementation of IKeyboardService interface
@@ -1928,6 +2046,28 @@
             </summary>
             <param name="userId">User unique identifier</param>
             <returns>The client who purchased the product</returns>
+        </member>
+        <member name="T:PCShop.Core.Services.Interfaces.IHeadphoneService">
+            <summary>
+            Abstraction of HeadphoneService
+            </summary>
+        </member>
+        <member name="M:PCShop.Core.Services.Interfaces.IHeadphoneService.GetAllHeadphonesAsync(System.String,PCShop.Core.Constants.Wireless,System.String,PCShop.Core.Constants.Sorting,System.Int32)">
+            <summary>
+            Method to retrieve all active headphones according to specified criteria
+            </summary>
+            <param name="type">The criterion for the headphone type</param>
+            <param name="wireless">The criterion for the headphone connectivity</param>
+            <param name="keyword">The criterion for keyword</param>
+            <param name="sorting">The criterion for sorting</param>
+            <param name="currentPage">Current page number</param>
+            <returns>HeadphoneQueryModel object</returns>
+        </member>
+        <member name="M:PCShop.Core.Services.Interfaces.IHeadphoneService.GetAllHeadphonesTypesAsync">
+            <summary>
+            Method to retrieve all headphone types
+            </summary>
+            <returns>Ordered collection of type names</returns>
         </member>
         <member name="T:PCShop.Core.Services.Interfaces.IKeyboardService">
             <summary>

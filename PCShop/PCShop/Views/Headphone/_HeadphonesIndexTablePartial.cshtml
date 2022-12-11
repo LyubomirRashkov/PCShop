@@ -1,0 +1,58 @@
+﻿@model IEnumerable<HeadphoneExportViewModel>
+
+<table class="table table-striped table-hover mt-5">
+	<thead>
+		<tr class="table-primary">
+			<td>Brand</td>
+			<td>Type</td>
+			<td>Wireless</td>
+			<td>Microphone</td>
+			<td>Warranty</td>
+			<td>Price</td>
+			<td>View</td>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var headphone in Model)
+		{
+			<tr>
+				<td>@headphone.Brand</td>
+				<td>@headphone.Type</td>
+				<td>
+					@if (headphone.IsWireless)
+					{
+						<label>✔</label>
+					}
+					else
+					{
+						<label>❌</label>
+					}
+				</td>
+				<td>
+					@if (headphone.HasMicrophone)
+					{
+						<label>✔</label>
+					}
+					else
+					{
+						<label>❌</label>
+					}
+				</td>
+				<td>
+					@if (headphone.Warranty > 0)
+					{
+						<p>@headphone.Warranty months</p>
+					}
+					else
+					{
+						<p>Second hand</p>
+					}
+				</td>
+				<td>@String.Format("{0:f2}", headphone.Price) EUR</td>
+				<td>
+					<a asp-controller="Headphone" asp-action="Details" asp-route-id="@headphone.Id" asp-route-information="@headphone.GetInformation()" class="btn btn-primary">Details</a>
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>
