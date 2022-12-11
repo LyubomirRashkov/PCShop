@@ -157,6 +157,12 @@
             <param name="model">Headphone import model</param>
             <returns>Redirection to /Headphone/Details</returns>
         </member>
+        <member name="M:PCShop.Controllers.HeadphoneController.Mine">
+            <summary>
+            HttpGet action to retrieve all active headphone sales of the currently logged in user
+            </summary>
+            <returns>Collection of all active headphone sales of the currently logged in user</returns>
+        </member>
         <member name="T:PCShop.Controllers.HomeController">
             <summary>
             Home controller class

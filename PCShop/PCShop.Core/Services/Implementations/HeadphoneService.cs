@@ -257,7 +257,23 @@ namespace PCShop.Core.Services.Implementations
 			return headphoneExport;
 		}
 
-		private async Task<IList<HeadphoneDetailsExportViewModel>> GetHeadphonesAsHeadphonesDetailsExportViewModelsAsync<T>(Expression<Func<Headphone, bool>> condition)
+		/// <summary>
+		/// Method to retrieve all active headphones sales of the currently logged in user
+		/// </summary>
+		/// <param name="userId">User unique identifier</param>
+		/// <returns>Collection of HeadphoneDetailsExportViewModels</returns>
+		public async Task<IEnumerable<HeadphoneDetailsExportViewModel>> GetUserHeadphonesAsync(string userId)
+        {
+			var client = await this.repository.GetByPropertyAsync<Client>(c => c.UserId == userId);
+
+			this.guard.AgainstInvalidUserId<Client>(client, ErrorMessageForInvalidUserId);
+
+			var userHeadphones = await this.GetHeadphonesAsHeadphonesDetailsExportViewModelsAsync<Headphone>(h => h.SellerId == client.Id);
+
+			return userHeadphones;
+        }
+
+        private async Task<IList<HeadphoneDetailsExportViewModel>> GetHeadphonesAsHeadphonesDetailsExportViewModelsAsync<T>(Expression<Func<Headphone, bool>> condition)
 		{
 			var headphonesAsHeadphoneDetailsExportViewModels = await this.repository
 				.AllAsReadOnly<Headphone>(h => !h.IsDeleted)

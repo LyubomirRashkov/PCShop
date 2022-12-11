@@ -1,0 +1,24 @@
+﻿@model IEnumerable<HeadphoneDetailsExportViewModel>
+
+@{
+	ViewData["Title"] = "My headphones";
+}
+
+<h1 class="text-center mb-2">@ViewData["Title"]</h1>
+
+<hr />
+
+@if (Model.Any())
+{
+	<div class="row">
+
+		@foreach (var headphone in Model)
+		{
+			<partial name="_HeadphonePartial" model="@headphone" />
+		}
+	</div>
+}
+else
+{
+	<h3 class="text-center mt-5">You have no headphones added yet!</h3>
+}

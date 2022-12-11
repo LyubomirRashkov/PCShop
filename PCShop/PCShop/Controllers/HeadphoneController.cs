@@ -272,5 +272,27 @@ namespace PCShop.Controllers
 				return NotFound();
 			}
 		}
+
+		/// <summary>
+		/// HttpGet action to retrieve all active headphone sales of the currently logged in user
+		/// </summary>
+		/// <returns>Collection of all active headphone sales of the currently logged in user</returns>
+		[HttpGet]
+		[Authorize(Roles = SuperUser)]
+		public async Task<IActionResult> Mine()
+		{
+			var userId = this.User.Id();
+
+			try
+			{
+				var userHeadphones = await this.headphoneService.GetUserHeadphonesAsync(userId);
+
+				return View(userHeadphones);
+			}
+			catch (PCShopException)
+			{
+				return View(ErrorCommonViewName);
+			}
+		}
     }
 }

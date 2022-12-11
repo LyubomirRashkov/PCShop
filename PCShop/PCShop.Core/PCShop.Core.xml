@@ -1742,6 +1742,13 @@
             <param name="id">Headphone unique identifier</param>
             <returns>The headphone as HeadphoneEditViewModel</returns>
         </member>
+        <member name="M:PCShop.Core.Services.Implementations.HeadphoneService.GetUserHeadphonesAsync(System.String)">
+            <summary>
+            Method to retrieve all active headphones sales of the currently logged in user
+            </summary>
+            <param name="userId">User unique identifier</param>
+            <returns>Collection of HeadphoneDetailsExportViewModels</returns>
+        </member>
         <member name="T:PCShop.Core.Services.Implementations.KeyboardService">
             <summary>
             Implementation of IKeyboardService interface
@@ -2214,6 +2221,13 @@
             </summary>
             <param name="model">Headphone input model</param>
             <returns>The unique identifier of the edited headphone</returns>
+        </member>
+        <member name="M:PCShop.Core.Services.Interfaces.IHeadphoneService.GetUserHeadphonesAsync(System.String)">
+            <summary>
+            Method to retrieve all active headphones sales of the currently logged in user
+            </summary>
+            <param name="userId">User unique identifier</param>
+            <returns>Collection of HeadphoneDetailsExportViewModels</returns>
         </member>
         <member name="T:PCShop.Core.Services.Interfaces.IKeyboardService">
             <summary>
