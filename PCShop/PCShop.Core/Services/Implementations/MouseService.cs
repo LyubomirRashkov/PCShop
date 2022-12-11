@@ -303,7 +303,26 @@ namespace PCShop.Core.Services.Implementations
 			return userMice;
         }
 
-        private async Task<IList<MouseDetailsExportViewModel>> GetMiceAsMouseDetailsExportViewModelsAsync<T>(Expression<Func<Mouse, bool>> condition)
+		/// <summary>
+		/// Method to mark the mouse with the given unique identifier as bought
+		/// </summary>
+		/// <param name="id">Mouse unique identifier</param>
+		public async Task MarkMouseAsBoughtAsync(int id)
+		{
+			var mouse = await this.repository.GetByIdAsync<Mouse>(id);
+
+			this.guard.AgainstProductThatIsNull<Mouse>(mouse, ErrorMessageForInvalidProductId);
+
+			this.guard.AgainstProductThatIsDeleted(mouse.IsDeleted, ErrorMessageForDeletedProduct);
+
+			this.guard.AgainstProductThatIsOutOfStock(mouse.Quantity, ErrorMessageForProductThatIsOutOfStock);
+
+			mouse.Quantity--;
+
+			await this.repository.SaveChangesAsync();
+		}
+
+		private async Task<IList<MouseDetailsExportViewModel>> GetMiceAsMouseDetailsExportViewModelsAsync<T>(Expression<Func<Mouse, bool>> condition)
 		{
 			var miceAsMouseDetailsExportViewModels = await this.repository
 				.AllAsReadOnly<Mouse>(m => !m.IsDeleted)

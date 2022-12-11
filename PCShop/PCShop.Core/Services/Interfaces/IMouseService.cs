@@ -79,5 +79,11 @@ namespace PCShop.Core.Services.Interfaces
 		/// <param name="userId">User unique identifier</param>
 		/// <returns>Collection of MouseDetailsExportViewModels</returns>
 		Task<IEnumerable<MouseDetailsExportViewModel>> GetUserMiceAsync(string userId);
+
+		/// <summary>
+		/// Method to mark the mouse with the given unique identifier as bought
+		/// </summary>
+		/// <param name="id">Mouse unique identifier</param>
+		Task MarkMouseAsBoughtAsync(int id);
 	}
 }

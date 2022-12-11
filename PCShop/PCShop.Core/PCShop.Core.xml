@@ -1869,6 +1869,12 @@
             <param name="userId">User unique identifier</param>
             <returns>Collection of MouseDetailsExportViewModels</returns>
         </member>
+        <member name="M:PCShop.Core.Services.Implementations.MouseService.MarkMouseAsBoughtAsync(System.Int32)">
+            <summary>
+            Method to mark the mouse with the given unique identifier as bought
+            </summary>
+            <param name="id">Mouse unique identifier</param>
+        </member>
         <member name="T:PCShop.Core.Services.Implementations.UserService">
             <summary>
             Implementation of IUserService interface
@@ -2250,6 +2256,12 @@
             </summary>
             <param name="userId">User unique identifier</param>
             <returns>Collection of MouseDetailsExportViewModels</returns>
+        </member>
+        <member name="M:PCShop.Core.Services.Interfaces.IMouseService.MarkMouseAsBoughtAsync(System.Int32)">
+            <summary>
+            Method to mark the mouse with the given unique identifier as bought
+            </summary>
+            <param name="id">Mouse unique identifier</param>
         </member>
         <member name="T:PCShop.Core.Services.Interfaces.IUserService">
             <summary>

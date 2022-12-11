@@ -20,18 +20,22 @@ namespace PCShop.Controllers
 	{
 		private readonly IMouseService mouseService;
 		private readonly IClientService clientService;
+		private readonly IUserService userService;
 
 		/// <summary>
 		/// Constructor of MouseController class
 		/// </summary>
 		/// <param name="mouseService">The IMouseService needed for functionality</param>
 		/// <param name="clientService">The IClientService needed for functionality</param>
+		/// <param name="userService">The IUserService needed for functionality</param>
 		public MouseController(
 			IMouseService mouseService,
-			IClientService clientService)
+			IClientService clientService,
+			IUserService userService)
 		{
 			this.mouseService = mouseService;
 			this.clientService = clientService;
+			this.userService = userService;
 		}
 
 		/// <summary>
@@ -308,5 +312,53 @@ namespace PCShop.Controllers
 				return View(ErrorCommonViewName);
 			}
 		}
-    }
+
+		/// <summary>
+		/// HttpGet action to buy a mouse
+		/// </summary>
+		/// <param name="id">Mouse unique identifier</param>
+		/// <returns>The corresponding view</returns>
+		[HttpGet]
+		public async Task<IActionResult> Buy(int id)
+		{
+			if (this.User.IsInRole(Administrator))
+			{
+				return Unauthorized();
+			}
+
+			try
+			{
+				var userId = this.User.Id();
+
+				if (this.User.IsInRole(SuperUser))
+				{
+					var mouseSeller = (await this.mouseService.GetMouseByIdAsMouseEditViewModelAsync(id)).Seller;
+
+					if (mouseSeller is not null && mouseSeller.UserId == userId)
+					{
+						return Unauthorized();
+					}
+				}
+
+				ViewData["Title"] = "Buy a mouse";
+
+				await this.mouseService.MarkMouseAsBoughtAsync(id);
+
+				var client = await this.clientService.BuyProduct(userId);
+
+				var isNowPromotedToSuperUser = await this.userService.ShouldBePromotedToSuperUser(client);
+
+				if (isNowPromotedToSuperUser)
+				{
+					return View(PromoteToSuperUserViewName);
+				}
+
+				return View(PurchaseMadeViewName);
+			}
+			catch (ArgumentException)
+			{
+				return NotFound();
+			}
+		}
+	}
 }

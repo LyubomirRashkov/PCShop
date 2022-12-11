@@ -350,12 +350,13 @@
             Mouse controller class
             </summary>
         </member>
-        <member name="M:PCShop.Controllers.MouseController.#ctor(PCShop.Core.Services.Interfaces.IMouseService,PCShop.Core.Services.Interfaces.IClientService)">
+        <member name="M:PCShop.Controllers.MouseController.#ctor(PCShop.Core.Services.Interfaces.IMouseService,PCShop.Core.Services.Interfaces.IClientService,PCShop.Core.Services.Interfaces.IUserService)">
             <summary>
             Constructor of MouseController class
             </summary>
             <param name="mouseService">The IMouseService needed for functionality</param>
             <param name="clientService">The IClientService needed for functionality</param>
+            <param name="userService">The IUserService needed for functionality</param>
         </member>
         <member name="M:PCShop.Controllers.MouseController.Index(PCShop.Core.Models.Mouse.AllMiceQueryModel)">
             <summary>
@@ -413,6 +414,13 @@
             HttpGet action to retrieve all active mouse sales of the currently logged in user
             </summary>
             <returns>Collection of all active mouse sales of the currently logged in user</returns>
+        </member>
+        <member name="M:PCShop.Controllers.MouseController.Buy(System.Int32)">
+            <summary>
+            HttpGet action to buy a mouse
+            </summary>
+            <param name="id">Mouse unique identifier</param>
+            <returns>The corresponding view</returns>
         </member>
         <member name="T:PCShop.Extensions.ModelExtensions">
             <summary>
