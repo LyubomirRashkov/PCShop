@@ -1,0 +1,62 @@
+﻿@model MicrophoneEditViewModel
+
+@{
+    ViewData["Title"] = "Edit microphone";
+}
+
+<h1 class="text-center mb-2">@ViewData["Title"]</h1>
+
+<hr />
+
+<div class="row">
+    <div class="col-sm-12 offset-lg-2 col-lg-8 offset-xl-3 col-xl-6">
+        <form method="post">
+            @Html.HiddenFor(l => l.Id)
+            <div class="mb-3">
+                <label asp-for="@Model.Brand" class="form-label">Brand <sup>(required)</sup></label>
+                <input asp-for="@Model.Brand" class="form-control" aria-required="true" />
+                <span asp-validation-for="Brand" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="@Model.Quantity" class="form-label">Quantity <sup>(required)</sup></label>
+                <input asp-for="@Model.Quantity" class="form-control" aria-required="true" />
+                <span asp-validation-for="Quantity" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="@Model.Price" class="form-label">Price <sup>(required)</sup></label>
+                <input asp-for="@Model.Price" class="form-control" aria-required="true" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+
+            @if ((this.User?.Identity?.IsAuthenticated ?? false)
+            && this.User.IsInRole(Administrator))
+            {
+                <div class="mb-3">
+                    <label asp-for="@Model.Warranty" class="form-label">Warranty (in months) <sup>(required)</sup></label>
+                    <input asp-for="@Model.Warranty" class="form-control" />
+                    <span asp-validation-for="Warranty" class="text-danger"></span>
+                </div>
+            }
+
+            <div class="mb-3">
+                <label asp-for="@Model.Color" class="form-label">Microphone color</label>
+                <input asp-for="@Model.Color" class="form-control" />
+                <span asp-validation-for="Color" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="@Model.ImageUrl" class="form-label">Microphone image URL <sup>(highly recommended)</sup></label>
+                <input asp-for="@Model.ImageUrl" class="form-control" />
+                <span asp-validation-for="ImageUrl" class="text-danger"></span>
+            </div>
+
+            <div class="text-center mb-3">
+                <input class="btn btn-primary" type="submit" value="Save changes" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

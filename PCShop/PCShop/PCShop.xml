@@ -394,6 +394,20 @@
             <param name="model">Microphone import model</param>
             <returns>Redirection to /Microphone/Details</returns>
         </member>
+        <member name="M:PCShop.Controllers.MicrophoneController.Edit(System.Int32)">
+            <summary>
+            HttpGet action to return the form for editing a microphone
+            </summary>
+            <param name="id">Microphone unique identifier</param>
+            <returns>The form for editing a microphone</returns>
+        </member>
+        <member name="M:PCShop.Controllers.MicrophoneController.Edit(PCShop.Core.Models.Microphone.MicrophoneEditViewModel)">
+            <summary>
+            HttpPost action to edit a microphone
+            </summary>
+            <param name="model">Microphone import model</param>
+            <returns>Redirection to /Microphone/Details</returns>
+        </member>
         <member name="T:PCShop.Controllers.MonitorController">
             <summary>
             Monitor controller class

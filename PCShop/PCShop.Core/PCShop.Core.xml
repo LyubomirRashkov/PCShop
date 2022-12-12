@@ -1087,6 +1087,21 @@
             Property that represents microphone seller last name
             </summary>
         </member>
+        <member name="T:PCShop.Core.Models.Microphone.MicrophoneEditViewModel">
+            <summary>
+            MicrophoneEditViewModel model
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Microphone.MicrophoneEditViewModel.Id">
+            <summary>
+            Property that represents microphone unique identifier
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Microphone.MicrophoneEditViewModel.Seller">
+            <summary>
+            Property that represents microphone Seller
+            </summary>
+        </member>
         <member name="T:PCShop.Core.Models.Microphone.MicrophoneExportViewModel">
             <summary>
             MicrophoneExportViewModel model
@@ -1972,6 +1987,13 @@
             </summary>
             <param name="id">Microphone unique identifier</param>
         </member>
+        <member name="M:PCShop.Core.Services.Implementations.MicrophoneService.EditMicrophoneAsync(PCShop.Core.Models.Microphone.MicrophoneEditViewModel)">
+            <summary>
+            Method to edit a microphone
+            </summary>
+            <param name="model">Microphone input model</param>
+            <returns>The unique identifier of the edited microphone</returns>
+        </member>
         <member name="M:PCShop.Core.Services.Implementations.MicrophoneService.GetAllMicrophonesAsync(System.String,PCShop.Core.Constants.Sorting,System.Int32)">
             <summary>
             Method to retrieve all active microphones according to specified criteria
@@ -1987,6 +2009,13 @@
             </summary>
             <param name="id">Microphone unique identifier</param>
             <returns>The microphone as MicrophoneDetailsExportViewModel</returns>
+        </member>
+        <member name="M:PCShop.Core.Services.Implementations.MicrophoneService.GetMicrophoneByIdAsMicrophoneEditViewModelAsync(System.Int32)">
+            <summary>
+            Method to retrieve a specific microphone
+            </summary>
+            <param name="id">Microphone unique identifier</param>
+            <returns>The microphone as MicrophoneEditViewModel</returns>
         </member>
         <member name="T:PCShop.Core.Services.Implementations.MonitorService">
             <summary>
@@ -2494,6 +2523,20 @@
             <param name="model">Microphone input model</param>
             <param name="userId">Microphone's owner unique identifier</param>
             <returns>The unique identifier of the added microphone</returns>
+        </member>
+        <member name="M:PCShop.Core.Services.Interfaces.IMicrophoneService.GetMicrophoneByIdAsMicrophoneEditViewModelAsync(System.Int32)">
+            <summary>
+            Method to retrieve a specific microphone
+            </summary>
+            <param name="id">Microphone unique identifier</param>
+            <returns>The microphone as MicrophoneEditViewModel</returns>
+        </member>
+        <member name="M:PCShop.Core.Services.Interfaces.IMicrophoneService.EditMicrophoneAsync(PCShop.Core.Models.Microphone.MicrophoneEditViewModel)">
+            <summary>
+            Method to edit a microphone
+            </summary>
+            <param name="model">Microphone input model</param>
+            <returns>The unique identifier of the edited microphone</returns>
         </member>
         <member name="T:PCShop.Core.Services.Interfaces.IMonitorService">
             <summary>

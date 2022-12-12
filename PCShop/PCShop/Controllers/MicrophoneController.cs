@@ -181,5 +181,68 @@ namespace PCShop.Controllers
 				return View(ErrorCommonViewName);
 			}
 		}
-	}
+
+        /// <summary>
+        /// HttpGet action to return the form for editing a microphone
+        /// </summary>
+        /// <param name="id">Microphone unique identifier</param>
+        /// <returns>The form for editing a microphone</returns>
+        [HttpGet]
+		[Authorize(Roles = $"{Administrator}, {SuperUser}")]
+		public async Task<IActionResult> Edit(int id)
+		{
+			try
+			{
+				var microphone = await this.microphoneService.GetMicrophoneByIdAsMicrophoneEditViewModelAsync(id);
+
+				if (this.User.IsInRole(SuperUser)
+					&& (microphone.Seller is null || this.User.Id() != microphone.Seller.UserId))
+				{
+					return Unauthorized();
+				}
+
+				return View(microphone);
+			}
+			catch (ArgumentException)
+			{
+				return NotFound();
+			}
+		}
+
+        /// <summary>
+        /// HttpPost action to edit a microphone
+        /// </summary>
+        /// <param name="model">Microphone import model</param>
+        /// <returns>Redirection to /Microphone/Details</returns>
+        [HttpPost]
+		[Authorize(Roles = $"{Administrator}, {SuperUser}")]
+		public async Task<IActionResult> Edit(MicrophoneEditViewModel model)
+		{
+			if (!this.ModelState.IsValid)
+			{
+				return View(model);
+			}
+
+			try
+			{
+				var microphone = await this.microphoneService.GetMicrophoneByIdAsMicrophoneEditViewModelAsync(model.Id);
+
+                if (this.User.IsInRole(SuperUser)
+                    && (microphone.Seller is null || this.User.Id() != microphone.Seller.UserId))
+                {
+                    return Unauthorized();
+                }
+
+				int id = await this.microphoneService.EditMicrophoneAsync(model);
+
+                TempData[TempDataMessage] = ProductSuccessfullyEdited;
+
+                return RedirectToAction(nameof(Details), new { id, information = model.GetInformation() });
+            }
+			catch (ArgumentException)
+			{
+				return NotFound();
+			}
+		}
+    }
 }

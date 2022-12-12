@@ -91,14 +91,43 @@ namespace PCShop.Core.Services.Implementations
 			await this.repository.SaveChangesAsync();
 		}
 
-		/// <summary>
-		/// Method to retrieve all active microphones according to specified criteria
-		/// </summary>
-		/// <param name="keyword">The criterion for keyword</param>
-		/// <param name="sorting">The criterion for sorting</param>
-		/// <param name="currentPage">Current page number</param>
-		/// <returns>MicrophonesQueryModel object</returns>
-		public async Task<MicrophonesQueryModel> GetAllMicrophonesAsync(
+        /// <summary>
+        /// Method to edit a microphone
+        /// </summary>
+        /// <param name="model">Microphone input model</param>
+        /// <returns>The unique identifier of the edited microphone</returns>
+        public async Task<int> EditMicrophoneAsync(MicrophoneEditViewModel model)
+        {
+			var microphone = await this.repository
+				.All<Microphone>(m => !m.IsDeleted)
+				.Where(m => m.Id == model.Id)
+				.Include(m => m.Brand)
+				.Include(m => m.Color)
+				.FirstOrDefaultAsync();
+
+			this.guard.AgainstProductThatIsNull<Microphone>(microphone, ErrorMessageForInvalidProductId);
+
+            microphone.ImageUrl = model.ImageUrl;
+            microphone.Warranty = model.Warranty;
+            microphone.Price = model.Price != null ? model.Price.Value : default;
+            microphone.Quantity = model.Quantity != null ? model.Quantity.Value : default;
+            microphone.AddedOn = DateTime.UtcNow.Date;
+
+            microphone = await this.SetNavigationPropertiesAsync(microphone, model.Brand, model.Color);
+
+            await this.repository.SaveChangesAsync();
+
+            return microphone.Id;
+        }
+
+        /// <summary>
+        /// Method to retrieve all active microphones according to specified criteria
+        /// </summary>
+        /// <param name="keyword">The criterion for keyword</param>
+        /// <param name="sorting">The criterion for sorting</param>
+        /// <param name="currentPage">Current page number</param>
+        /// <returns>MicrophonesQueryModel object</returns>
+        public async Task<MicrophonesQueryModel> GetAllMicrophonesAsync(
 			string? keyword = null,
 			Sorting sorting = Sorting.Newest,
 			int currentPage = 1)
@@ -154,6 +183,34 @@ namespace PCShop.Core.Services.Implementations
 			this.guard.AgainstNullOrEmptyCollection<MicrophoneDetailsExportViewModel>(microphoneExports, ErrorMessageForInvalidProductId);
 
 			return microphoneExports.First();
+		}
+
+        /// <summary>
+        /// Method to retrieve a specific microphone
+        /// </summary>
+        /// <param name="id">Microphone unique identifier</param>
+        /// <returns>The microphone as MicrophoneEditViewModel</returns>
+        public async Task<MicrophoneEditViewModel> GetMicrophoneByIdAsMicrophoneEditViewModelAsync(int id)
+		{
+			var microphoneExport = await this.repository
+				.AllAsReadOnly<Microphone>(m => !m.IsDeleted)
+				.Where(m => m.Id == id)
+				.Select(m => new MicrophoneEditViewModel()
+				{
+					Id = m.Id,
+					Brand = m.Brand.Name,
+					Quantity = m.Quantity,
+					Price = m.Price,
+					Warranty = m.Warranty,
+					Color = m.Color == null ? null : m.Color.Name,
+					ImageUrl = m.ImageUrl,
+					Seller = m.Seller,
+				})
+				.FirstOrDefaultAsync();
+
+			this.guard.AgainstProductThatIsNull<MicrophoneEditViewModel>(microphoneExport, ErrorMessageForInvalidProductId);
+
+			return microphoneExport;
 		}
 
 		private async Task<IList<MicrophoneDetailsExportViewModel>> GetMicrophonesAsMicrophonesDetailsExportViewModelsAsync<T>(Expression<Func<Microphone, bool>> condition)
