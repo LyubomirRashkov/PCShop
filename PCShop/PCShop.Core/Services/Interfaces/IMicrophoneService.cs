@@ -19,5 +19,12 @@ namespace PCShop.Core.Services.Interfaces
 			string? keyword = null, 
 			Sorting sorting = Sorting.Newest,
 			int currentPage = 1);
+
+		/// <summary>
+		/// Method to retrieve a specific microphone
+		/// </summary>
+		/// <param name="id">Microphone unique identifier</param>
+		/// <returns>The microphone as MicrophoneDetailsExportViewModel</returns>
+		Task<MicrophoneDetailsExportViewModel> GetMicrophoneByIdAsMicrohoneDetailsExportViewModelAsync(int id);
 	}
 }

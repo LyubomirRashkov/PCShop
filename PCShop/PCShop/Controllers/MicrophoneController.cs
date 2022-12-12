@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using PCShop.Core.Models.Microphone;
 using PCShop.Core.Services.Interfaces;
+using PCShop.Extensions;
 
 namespace PCShop.Controllers
 {
@@ -40,6 +41,32 @@ namespace PCShop.Controllers
 			query.Microphones = result.Microphones;
 
 			return View(query);
+		}
+
+		/// <summary>
+		/// HttpGet action to retrieve detailed information about a specific microphone
+		/// </summary>
+		/// <param name="id">Microphone unique identifier</param>
+		/// <param name="information">Microphone additional information</param>
+		/// <returns>Detailed information about the microphone</returns>
+		[HttpGet]
+		public async Task<IActionResult> Details(int id, string information)
+		{
+			try
+			{
+				var microphone = await this.microphoneService.GetMicrophoneByIdAsMicrohoneDetailsExportViewModelAsync(id);
+
+				if (information.ToLower() != microphone.GetInformation().ToLower())
+				{
+					return NotFound();
+				}
+
+				return View(microphone);
+			}
+			catch (ArgumentException)
+			{
+				return NotFound();
+			}
 		}
 	}
 }

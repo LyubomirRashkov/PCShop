@@ -1,9 +1,13 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using PCShop.Core.Constants;
+using PCShop.Core.Exceptions;
 using PCShop.Core.Models.Microphone;
 using PCShop.Core.Services.Interfaces;
 using PCShop.Infrastructure.Common;
 using PCShop.Infrastructure.Data.Models;
+using System.Globalization;
+using System.Linq.Expressions;
+using static PCShop.Core.Constants.Constant.GlobalConstants;
 using static PCShop.Core.Constants.Constant.ProductConstants;
 
 namespace PCShop.Core.Services.Implementations
@@ -14,14 +18,19 @@ namespace PCShop.Core.Services.Implementations
 	public class MicrophoneService : IMicrophoneService
 	{
 		private readonly IRepository repository;
+		private readonly IGuard guard;
 
 		/// <summary>
 		/// Constructor of MicrophoneService class
 		/// </summary>
 		/// <param name="repository">The repository that will be used</param>
-		public MicrophoneService(IRepository repository)
+		/// <param name="guard">The guard that will be used</param>
+		public MicrophoneService(
+			IRepository repository,
+			IGuard guard)
 		{
 			this.repository = repository;
+			this.guard = guard;
 		}
 
 		/// <summary>
@@ -73,6 +82,44 @@ namespace PCShop.Core.Services.Implementations
 			result.TotalMicrophonesCount = await query.CountAsync();
 
 			return result;
+		}
+
+		/// <summary>
+		/// Method to retrieve a specific microphone
+		/// </summary>
+		/// <param name="id">Microphone unique identifier</param>
+		/// <returns>The microphone as MicrophoneDetailsExportViewModel</returns>
+		public async Task<MicrophoneDetailsExportViewModel> GetMicrophoneByIdAsMicrohoneDetailsExportViewModelAsync(int id)
+		{
+			var microphoneExports = await this.GetMicrophonesAsMicrophonesDetailsExportViewModelsAsync<Microphone>(m => m.Id == id);
+
+			this.guard.AgainstNullOrEmptyCollection<MicrophoneDetailsExportViewModel>(microphoneExports, ErrorMessageForInvalidProductId);
+
+			return microphoneExports.First();
+		}
+
+		private async Task<IList<MicrophoneDetailsExportViewModel>> GetMicrophonesAsMicrophonesDetailsExportViewModelsAsync<T>(Expression<Func<Microphone, bool>> condition)
+		{
+			var microphonesAsMicrophoneDetailsExportViewModels = await this.repository
+				.AllAsReadOnly<Microphone>(m => !m.IsDeleted)
+				.Where(condition)
+				.Select(m => new MicrophoneDetailsExportViewModel()
+				{
+					Id = m.Id,
+					Brand = m.Brand.Name,
+					Price = m.Price,
+					Color = m.Color != null ? m.Color.Name : UnknownCharacteristic,
+					ImageUrl = m.ImageUrl,
+					Warranty = m.Warranty,
+					Quantity = m.Quantity,
+					AddedOn = m.AddedOn.ToString("MMMM, yyyy", CultureInfo.InvariantCulture),
+					Seller = m.Seller,
+					SellerFirstName = m.Seller != null ? m.Seller.User.FirstName : null,
+					SellerLastName = m.Seller != null ? m.Seller.User.LastName : null,
+				})
+				.ToListAsync();
+
+			return microphonesAsMicrophoneDetailsExportViewModels;
 		}
 	}
 }

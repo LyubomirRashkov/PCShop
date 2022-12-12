@@ -1047,6 +1047,46 @@
             Property that represents a collecion of microphones according to specified criteria
             </summary>
         </member>
+        <member name="T:PCShop.Core.Models.Microphone.MicrophoneDetailsExportViewModel">
+            <summary>
+            MicrophoneDetailsExportViewModel model
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Microphone.MicrophoneDetailsExportViewModel.Color">
+            <summary>
+            Property that represents microphone color
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Microphone.MicrophoneDetailsExportViewModel.ImageUrl">
+            <summary>
+            Property that represents microphone image url
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Microphone.MicrophoneDetailsExportViewModel.AddedOn">
+            <summary>
+            Property that represents the date the microphone was added to the database
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Microphone.MicrophoneDetailsExportViewModel.Quantity">
+            <summary>
+            Property that represents how many microphones are in stock
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Microphone.MicrophoneDetailsExportViewModel.Seller">
+            <summary>
+            Property that represents microphone Seller
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Microphone.MicrophoneDetailsExportViewModel.SellerFirstName">
+            <summary>
+            Property that represents microphone seller first name
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Microphone.MicrophoneDetailsExportViewModel.SellerLastName">
+            <summary>
+            Property that represents microphone seller last name
+            </summary>
+        </member>
         <member name="T:PCShop.Core.Models.Microphone.MicrophoneExportViewModel">
             <summary>
             MicrophoneExportViewModel model
@@ -1906,11 +1946,12 @@
             Implementation of IMicrophoneService interface
             </summary>
         </member>
-        <member name="M:PCShop.Core.Services.Implementations.MicrophoneService.#ctor(PCShop.Infrastructure.Common.IRepository)">
+        <member name="M:PCShop.Core.Services.Implementations.MicrophoneService.#ctor(PCShop.Infrastructure.Common.IRepository,PCShop.Core.Exceptions.IGuard)">
             <summary>
             Constructor of MicrophoneService class
             </summary>
             <param name="repository">The repository that will be used</param>
+            <param name="guard">The guard that will be used</param>
         </member>
         <member name="M:PCShop.Core.Services.Implementations.MicrophoneService.GetAllMicrophonesAsync(System.String,PCShop.Core.Constants.Sorting,System.Int32)">
             <summary>
@@ -1920,6 +1961,13 @@
             <param name="sorting">The criterion for sorting</param>
             <param name="currentPage">Current page number</param>
             <returns>MicrophonesQueryModel object</returns>
+        </member>
+        <member name="M:PCShop.Core.Services.Implementations.MicrophoneService.GetMicrophoneByIdAsMicrohoneDetailsExportViewModelAsync(System.Int32)">
+            <summary>
+            Method to retrieve a specific microphone
+            </summary>
+            <param name="id">Microphone unique identifier</param>
+            <returns>The microphone as MicrophoneDetailsExportViewModel</returns>
         </member>
         <member name="T:PCShop.Core.Services.Implementations.MonitorService">
             <summary>
@@ -2406,6 +2454,13 @@
             <param name="sorting">The criterion for sorting</param>
             <param name="currentPage">Current page number</param>
             <returns>MicrophonesQueryModel object</returns>
+        </member>
+        <member name="M:PCShop.Core.Services.Interfaces.IMicrophoneService.GetMicrophoneByIdAsMicrohoneDetailsExportViewModelAsync(System.Int32)">
+            <summary>
+            Method to retrieve a specific microphone
+            </summary>
+            <param name="id">Microphone unique identifier</param>
+            <returns>The microphone as MicrophoneDetailsExportViewModel</returns>
         </member>
         <member name="T:PCShop.Core.Services.Interfaces.IMonitorService">
             <summary>

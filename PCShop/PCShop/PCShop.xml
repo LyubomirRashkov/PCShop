@@ -365,6 +365,14 @@
             <param name="query">The entity that holds the specified criteria</param>
             <returns>Collection of all active microphones according to specified criteria</returns>
         </member>
+        <member name="M:PCShop.Controllers.MicrophoneController.Details(System.Int32,System.String)">
+            <summary>
+            HttpGet action to retrieve detailed information about a specific microphone
+            </summary>
+            <param name="id">Microphone unique identifier</param>
+            <param name="information">Microphone additional information</param>
+            <returns>Detailed information about the microphone</returns>
+        </member>
         <member name="T:PCShop.Controllers.MonitorController">
             <summary>
             Monitor controller class
