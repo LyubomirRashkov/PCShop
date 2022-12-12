@@ -1749,6 +1749,12 @@
             <param name="userId">User unique identifier</param>
             <returns>Collection of HeadphoneDetailsExportViewModels</returns>
         </member>
+        <member name="M:PCShop.Core.Services.Implementations.HeadphoneService.MarkHeadphoneAsBoughtAsync(System.Int32)">
+            <summary>
+            Method to mark the headphone with the given unique identifier as bought
+            </summary>
+            <param name="id">Headphone unique identifier</param>
+        </member>
         <member name="T:PCShop.Core.Services.Implementations.KeyboardService">
             <summary>
             Implementation of IKeyboardService interface
@@ -2228,6 +2234,12 @@
             </summary>
             <param name="userId">User unique identifier</param>
             <returns>Collection of HeadphoneDetailsExportViewModels</returns>
+        </member>
+        <member name="M:PCShop.Core.Services.Interfaces.IHeadphoneService.MarkHeadphoneAsBoughtAsync(System.Int32)">
+            <summary>
+            Method to mark the headphone with the given unique identifier as bought
+            </summary>
+            <param name="id">Headphone unique identifier</param>
         </member>
         <member name="T:PCShop.Core.Services.Interfaces.IKeyboardService">
             <summary>

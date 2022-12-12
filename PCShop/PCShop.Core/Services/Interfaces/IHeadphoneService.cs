@@ -71,5 +71,11 @@ namespace PCShop.Core.Services.Interfaces
 		/// <param name="userId">User unique identifier</param>
 		/// <returns>Collection of HeadphoneDetailsExportViewModels</returns>
 		Task<IEnumerable<HeadphoneDetailsExportViewModel>> GetUserHeadphonesAsync(string userId);
+
+		/// <summary>
+		/// Method to mark the headphone with the given unique identifier as bought
+		/// </summary>
+		/// <param name="id">Headphone unique identifier</param>
+		Task MarkHeadphoneAsBoughtAsync(int id);
 	}
 }

@@ -106,12 +106,13 @@
             Headphone controller class
             </summary>
         </member>
-        <member name="M:PCShop.Controllers.HeadphoneController.#ctor(PCShop.Core.Services.Interfaces.IHeadphoneService,PCShop.Core.Services.Interfaces.IClientService)">
+        <member name="M:PCShop.Controllers.HeadphoneController.#ctor(PCShop.Core.Services.Interfaces.IHeadphoneService,PCShop.Core.Services.Interfaces.IClientService,PCShop.Core.Services.Interfaces.IUserService)">
             <summary>
             Constructor of HeadphoneController class
             </summary>
             <param name="headphoneService">The IHeadphoneService needed for functionality</param>
             <param name="clientService">The IClientService needed for functionality</param>
+            <param name="userService">The IUserService needed for functionality</param>
         </member>
         <member name="M:PCShop.Controllers.HeadphoneController.Index(PCShop.Core.Models.Headphone.AllHeadphonesQueryModel)">
             <summary>
@@ -150,6 +151,13 @@
             <param name="rbHasMicrophone">The value of selected radio button for microphone availability</param>
             <returns>Redirection to /Headphone/Details</returns>
         </member>
+        <member name="M:PCShop.Controllers.HeadphoneController.Edit(System.Int32)">
+            <summary>
+            HttpGet action to return the form for editing a headphone
+            </summary>
+            <param name="id">Headphone unique identifier</param>
+            <returns>The form for editing a headphone</returns>
+        </member>
         <member name="M:PCShop.Controllers.HeadphoneController.Edit(PCShop.Core.Models.Headphone.HeadphoneEditViewModel)">
             <summary>
             HttpPost action to edit a headphone
@@ -162,6 +170,13 @@
             HttpGet action to retrieve all active headphone sales of the currently logged in user
             </summary>
             <returns>Collection of all active headphone sales of the currently logged in user</returns>
+        </member>
+        <member name="M:PCShop.Controllers.HeadphoneController.Buy(System.Int32)">
+            <summary>
+            HttpGet action to buy a headphone
+            </summary>
+            <param name="id">Headphone unique identifier</param>
+            <returns>The corresponding view</returns>
         </member>
         <member name="T:PCShop.Controllers.HomeController">
             <summary>

@@ -273,7 +273,26 @@ namespace PCShop.Core.Services.Implementations
 			return userHeadphones;
         }
 
-        private async Task<IList<HeadphoneDetailsExportViewModel>> GetHeadphonesAsHeadphonesDetailsExportViewModelsAsync<T>(Expression<Func<Headphone, bool>> condition)
+		/// <summary>
+		/// Method to mark the headphone with the given unique identifier as bought
+		/// </summary>
+		/// <param name="id">Headphone unique identifier</param>
+		public async Task MarkHeadphoneAsBoughtAsync(int id)
+		{
+			var headphone = await this.repository.GetByIdAsync<Headphone>(id);
+
+			this.guard.AgainstProductThatIsNull<Headphone>(headphone, ErrorMessageForInvalidProductId);
+
+			this.guard.AgainstProductThatIsDeleted(headphone.IsDeleted, ErrorMessageForDeletedProduct);
+
+			this.guard.AgainstProductThatIsOutOfStock(headphone.Quantity, ErrorMessageForProductThatIsOutOfStock);
+
+			headphone.Quantity--;
+
+			await this.repository.SaveChangesAsync();
+		}
+
+		private async Task<IList<HeadphoneDetailsExportViewModel>> GetHeadphonesAsHeadphonesDetailsExportViewModelsAsync<T>(Expression<Func<Headphone, bool>> condition)
 		{
 			var headphonesAsHeadphoneDetailsExportViewModels = await this.repository
 				.AllAsReadOnly<Headphone>(h => !h.IsDeleted)
