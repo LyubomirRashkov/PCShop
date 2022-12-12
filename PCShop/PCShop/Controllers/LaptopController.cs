@@ -55,7 +55,7 @@ namespace PCShop.Controllers
 				query.Sorting,
 				query.CurrentPage);
 
-			query.TotalLaptopsCount = result.TotalLaptopsCount;
+			query.TotalProductsCount = result.TotalLaptopsCount;
 
 			query.Cpus = await this.laptopService.GetAllCpusNamesAsync();
 			query.Rams = await this.laptopService.GetAllRamsValuesAsync();

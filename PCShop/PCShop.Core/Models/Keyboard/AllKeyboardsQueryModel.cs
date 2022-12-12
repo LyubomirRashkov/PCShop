@@ -1,11 +1,12 @@
 ﻿using PCShop.Core.Constants;
+using PCShop.Core.Models.Product;
 
 namespace PCShop.Core.Models.Keyboard
 {
 	/// <summary>
 	/// AllKeyboardsQueryModel model
 	/// </summary>
-	public class AllKeyboardsQueryModel
+	public class AllKeyboardsQueryModel : AllProductsQueryModel
 	{
 		/// <summary>
 		/// Constructor of AllKeyboardsQueryModel class
@@ -44,26 +45,6 @@ namespace PCShop.Core.Models.Keyboard
 		/// Property that represents keyboard connectivity
 		/// </summary>
 		public Wireless Wireless { get; init; }
-
-		/// <summary>
-		/// Property that represents a search keyword
-		/// </summary>
-		public string? Keyword { get; init; }
-
-		/// <summary>
-		/// Property that represents a sorting criterion
-		/// </summary>
-		public Sorting Sorting { get; init; }
-
-		/// <summary>
-		/// Property that represents the number of the current page
-		/// </summary>
-		public int CurrentPage { get; init; }
-
-		/// <summary>
-		/// Property that represents total count of keyboards
-		/// </summary>
-		public int TotalKeyboardsCount { get; set; }
 
 		/// <summary>
 		/// Property that represents a collecion of keyboards according to specified criteria

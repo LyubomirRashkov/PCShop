@@ -1,5 +1,4 @@
-﻿using PCShop.Core.Constants;
-using PCShop.Core.Models.Product;
+﻿using PCShop.Core.Models.Product;
 
 namespace PCShop.Core.Models.Microphone
 {

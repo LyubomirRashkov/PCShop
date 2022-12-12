@@ -103,13 +103,13 @@
 }
 else
 {
-	if (Model.TotalLaptopsCount == 1)
+	if (Model.TotalProductsCount == 1)
 	{
-		<h4 class="text-center mt-4">@Model.TotalLaptopsCount laptop found by the given criteria!</h4>
+		<h4 class="text-center mt-4">@Model.TotalProductsCount laptop found by the given criteria!</h4>
 	}
 	else
 	{
-		<h4 class="text-center mt-4">@Model.TotalLaptopsCount laptops found by the given criteria!</h4>
+		<h4 class="text-center mt-4">@Model.TotalProductsCount laptops found by the given criteria!</h4>
 	}
 
 	<div class="row">
@@ -123,7 +123,7 @@ else
 		previousPage = 1;
 	}
 
-	var maxPage = Math.Ceiling((double)Model.TotalLaptopsCount / ProductsPerPage);
+	var maxPage = Math.Ceiling((double)Model.TotalProductsCount / ProductsPerPage);
 
 	<div class="row mt-3">
 		<div class="col-md-6 d-grid gap-2 d-md-flex justify-content-md-start">

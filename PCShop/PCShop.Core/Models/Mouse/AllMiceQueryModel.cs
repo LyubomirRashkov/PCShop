@@ -1,11 +1,12 @@
 ﻿using PCShop.Core.Constants;
+using PCShop.Core.Models.Product;
 
 namespace PCShop.Core.Models.Mouse
 {
 	/// <summary>
 	/// AllMiceQueryModel model
 	/// </summary>
-	public class AllMiceQueryModel
+	public class AllMiceQueryModel : AllProductsQueryModel
 	{
 		/// <summary>
 		/// Constructor of AllMiceQueryModel class
@@ -44,26 +45,6 @@ namespace PCShop.Core.Models.Mouse
 		/// Property that represents mouse connectivity
 		/// </summary>
 		public Wireless Wireless { get; init; }
-
-		/// <summary>
-		/// Property that represents a search keyword
-		/// </summary>
-		public string? Keyword { get; init; }
-
-		/// <summary>
-		/// Property that represents a sorting criterion
-		/// </summary>
-		public Sorting Sorting { get; init; }
-
-		/// <summary>
-		/// Property that represents the number of the current page
-		/// </summary>
-		public int CurrentPage { get; init; }
-
-		/// <summary>
-		/// Property that represents total count of mice
-		/// </summary>
-		public int TotalMiceCount { get; set; }
 
 		/// <summary>
 		/// Property that represents a collecion of mice according to specified criteria

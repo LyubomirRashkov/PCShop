@@ -1,11 +1,12 @@
 ﻿using PCShop.Core.Constants;
+using PCShop.Core.Models.Product;
 
 namespace PCShop.Core.Models.Headphone
 {
 	/// <summary>
 	/// AllHeadphonesQueryModel model
 	/// </summary>
-	public class AllHeadphonesQueryModel
+	public class AllHeadphonesQueryModel : AllProductsQueryModel
 	{
 		/// <summary>
 		/// Constructor of AllHeadphonesQueryModel class
@@ -33,26 +34,6 @@ namespace PCShop.Core.Models.Headphone
 		/// Property that represents headphone connectivity
 		/// </summary>
 		public Wireless Wireless { get; init; }
-
-		/// <summary>
-		/// Property that represents a search keyword
-		/// </summary>
-		public string? Keyword { get; init; }
-
-		/// <summary>
-		/// Property that represents a sorting criterion
-		/// </summary>
-		public Sorting Sorting { get; init; }
-
-		/// <summary>
-		/// Property that represents the number of the current page
-		/// </summary>
-		public int CurrentPage { get; init; }
-
-		/// <summary>
-		/// Property that represents total count of headphones
-		/// </summary>
-		public int TotalHeadphonesCount { get; set; }
 
 		/// <summary>
 		/// Property that represents a collecion of headphones according to specified criteria

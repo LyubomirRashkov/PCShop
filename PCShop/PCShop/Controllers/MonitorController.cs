@@ -55,7 +55,7 @@ namespace PCShop.Controllers
 				query.Sorting,
 				query.CurrentPage);
 
-			query.TotalMonitorsCount = result.TotalMonitorsCount;
+			query.TotalProductsCount = result.TotalMonitorsCount;
 
 			query.Brands = await this.monitorService.GetAllBrandsNamesAsync();
 			query.DisplaySizes = await this.monitorService.GetAllDisplaysSizesValuesAsync();

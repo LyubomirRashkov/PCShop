@@ -54,7 +54,7 @@ namespace PCShop.Controllers
 				query.Sorting,
 				query.CurrentPage);
 
-			query.TotalKeyboardsCount = result.TotalKeyboardsCount;
+			query.TotalProductsCount = result.TotalKeyboardsCount;
 
 			query.Formats = await this.keyboardService.GetAllKeyboardsFormatsAsync();
 			query.Types = await this.keyboardService.GetAllKeyboardsTypesAsync();

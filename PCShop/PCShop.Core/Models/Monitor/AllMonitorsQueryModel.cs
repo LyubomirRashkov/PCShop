@@ -1,11 +1,12 @@
 ﻿using PCShop.Core.Constants;
+using PCShop.Core.Models.Product;
 
 namespace PCShop.Core.Models.Monitor
 {
 	/// <summary>
 	/// AllMonitorsQueryModel model
 	/// </summary>
-	public class AllMonitorsQueryModel
+	public class AllMonitorsQueryModel : AllProductsQueryModel
 	{
 		/// <summary>
 		/// Constructor of AllMonitorsQueryModel class
@@ -61,26 +62,6 @@ namespace PCShop.Core.Models.Monitor
 		/// Property that represents a collection of all possible monitor refresh rates
 		/// </summary>
 		public IEnumerable<int> RefreshRates { get; set; }
-
-		/// <summary>
-		/// Property that represent a search keyword
-		/// </summary>
-		public string? Keyword { get; init; }
-
-		/// <summary>
-		/// Property that represents a sorting criterion
-		/// </summary>
-		public Sorting Sorting { get; init; }
-
-		/// <summary>
-		/// Property that represents the number of the current page
-		/// </summary>
-		public int CurrentPage { get; init; }
-
-		/// <summary>
-		/// Property that represents total count of monitors
-		/// </summary>
-		public int TotalMonitorsCount { get; set; }
 
 		/// <summary>
 		/// Property that represents a collecion of monitors according to specified criteria

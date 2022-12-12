@@ -512,26 +512,6 @@
             Property that represents headphone connectivity
             </summary>
         </member>
-        <member name="P:PCShop.Core.Models.Headphone.AllHeadphonesQueryModel.Keyword">
-            <summary>
-            Property that represents a search keyword
-            </summary>
-        </member>
-        <member name="P:PCShop.Core.Models.Headphone.AllHeadphonesQueryModel.Sorting">
-            <summary>
-            Property that represents a sorting criterion
-            </summary>
-        </member>
-        <member name="P:PCShop.Core.Models.Headphone.AllHeadphonesQueryModel.CurrentPage">
-            <summary>
-            Property that represents the number of the current page
-            </summary>
-        </member>
-        <member name="P:PCShop.Core.Models.Headphone.AllHeadphonesQueryModel.TotalHeadphonesCount">
-            <summary>
-            Property that represents total count of headphones
-            </summary>
-        </member>
         <member name="P:PCShop.Core.Models.Headphone.AllHeadphonesQueryModel.Headphones">
             <summary>
             Property that represents a collecion of headphones according to specified criteria
@@ -702,26 +682,6 @@
             Property that represents keyboard connectivity
             </summary>
         </member>
-        <member name="P:PCShop.Core.Models.Keyboard.AllKeyboardsQueryModel.Keyword">
-            <summary>
-            Property that represents a search keyword
-            </summary>
-        </member>
-        <member name="P:PCShop.Core.Models.Keyboard.AllKeyboardsQueryModel.Sorting">
-            <summary>
-            Property that represents a sorting criterion
-            </summary>
-        </member>
-        <member name="P:PCShop.Core.Models.Keyboard.AllKeyboardsQueryModel.CurrentPage">
-            <summary>
-            Property that represents the number of the current page
-            </summary>
-        </member>
-        <member name="P:PCShop.Core.Models.Keyboard.AllKeyboardsQueryModel.TotalKeyboardsCount">
-            <summary>
-            Property that represents total count of keyboards
-            </summary>
-        </member>
         <member name="P:PCShop.Core.Models.Keyboard.AllKeyboardsQueryModel.Keyboards">
             <summary>
             Property that represents a collecion of keyboards according to specified criteria
@@ -890,26 +850,6 @@
         <member name="P:PCShop.Core.Models.Laptop.AllLaptopsQueryModel.VideoCards">
             <summary>
             Property that represents all possible laptop video card models
-            </summary>
-        </member>
-        <member name="P:PCShop.Core.Models.Laptop.AllLaptopsQueryModel.Keyword">
-            <summary>
-            Property that represent a search keyword
-            </summary>
-        </member>
-        <member name="P:PCShop.Core.Models.Laptop.AllLaptopsQueryModel.Sorting">
-            <summary>
-            Property that represents a sorting criterion
-            </summary>
-        </member>
-        <member name="P:PCShop.Core.Models.Laptop.AllLaptopsQueryModel.CurrentPage">
-            <summary>
-            Property that represents the number of the current page
-            </summary>
-        </member>
-        <member name="P:PCShop.Core.Models.Laptop.AllLaptopsQueryModel.TotalLaptopsCount">
-            <summary>
-            Property that represents total count of laptops
             </summary>
         </member>
         <member name="P:PCShop.Core.Models.Laptop.AllLaptopsQueryModel.Laptops">
@@ -1182,26 +1122,6 @@
             Property that represents a collection of all possible monitor refresh rates
             </summary>
         </member>
-        <member name="P:PCShop.Core.Models.Monitor.AllMonitorsQueryModel.Keyword">
-            <summary>
-            Property that represent a search keyword
-            </summary>
-        </member>
-        <member name="P:PCShop.Core.Models.Monitor.AllMonitorsQueryModel.Sorting">
-            <summary>
-            Property that represents a sorting criterion
-            </summary>
-        </member>
-        <member name="P:PCShop.Core.Models.Monitor.AllMonitorsQueryModel.CurrentPage">
-            <summary>
-            Property that represents the number of the current page
-            </summary>
-        </member>
-        <member name="P:PCShop.Core.Models.Monitor.AllMonitorsQueryModel.TotalMonitorsCount">
-            <summary>
-            Property that represents total count of monitors
-            </summary>
-        </member>
         <member name="P:PCShop.Core.Models.Monitor.AllMonitorsQueryModel.Monitors">
             <summary>
             Property that represents a collecion of monitors according to specified criteria
@@ -1385,26 +1305,6 @@
         <member name="P:PCShop.Core.Models.Mouse.AllMiceQueryModel.Wireless">
             <summary>
             Property that represents mouse connectivity
-            </summary>
-        </member>
-        <member name="P:PCShop.Core.Models.Mouse.AllMiceQueryModel.Keyword">
-            <summary>
-            Property that represents a search keyword
-            </summary>
-        </member>
-        <member name="P:PCShop.Core.Models.Mouse.AllMiceQueryModel.Sorting">
-            <summary>
-            Property that represents a sorting criterion
-            </summary>
-        </member>
-        <member name="P:PCShop.Core.Models.Mouse.AllMiceQueryModel.CurrentPage">
-            <summary>
-            Property that represents the number of the current page
-            </summary>
-        </member>
-        <member name="P:PCShop.Core.Models.Mouse.AllMiceQueryModel.TotalMiceCount">
-            <summary>
-            Property that represents total count of mice
             </summary>
         </member>
         <member name="P:PCShop.Core.Models.Mouse.AllMiceQueryModel.Mice">

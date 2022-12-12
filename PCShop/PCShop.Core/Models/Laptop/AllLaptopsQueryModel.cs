@@ -1,11 +1,12 @@
 ﻿using PCShop.Core.Constants;
+using PCShop.Core.Models.Product;
 
 namespace PCShop.Core.Models.Laptop
 {
 	/// <summary>
 	/// AllLaptopsQueryModel model
 	/// </summary>
-	public class AllLaptopsQueryModel
+	public class AllLaptopsQueryModel : AllProductsQueryModel
 	{
 		/// <summary>
 		/// Constructor of AllLaptopsQueryModel class
@@ -61,26 +62,6 @@ namespace PCShop.Core.Models.Laptop
 		/// Property that represents all possible laptop video card models
 		/// </summary>
 		public IEnumerable<string> VideoCards { get; set; }
-
-		/// <summary>
-		/// Property that represent a search keyword
-		/// </summary>
-		public string? Keyword { get; init; }
-
-		/// <summary>
-		/// Property that represents a sorting criterion
-		/// </summary>
-		public Sorting Sorting { get; init; }
-
-		/// <summary>
-		/// Property that represents the number of the current page
-		/// </summary>
-		public int CurrentPage { get; init; }
-
-		/// <summary>
-		/// Property that represents total count of laptops
-		/// </summary>
-		public int TotalLaptopsCount { get; set; }
 
 		/// <summary>
 		/// Property that represents a collecion of laptops according to specified criteria
