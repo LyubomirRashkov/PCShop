@@ -54,5 +54,12 @@ namespace PCShop.Core.Services.Interfaces
         /// <param name="model">Microphone input model</param>
         /// <returns>The unique identifier of the edited microphone</returns>
         Task<int> EditMicrophoneAsync(MicrophoneEditViewModel model);
+
+		/// <summary>
+		/// Method to retrieve all active microphones sales of the currently logged in user
+		/// </summary>
+		/// <param name="userId">User unique identifier</param>
+		/// <returns>Collection of MicrophoneDetailsExportViewModels</returns>
+		Task<IEnumerable<MicrophoneDetailsExportViewModel>> GetUserMicrophonesAsync(string userId);
 	}
 }

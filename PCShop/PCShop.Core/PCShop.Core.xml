@@ -2017,6 +2017,13 @@
             <param name="id">Microphone unique identifier</param>
             <returns>The microphone as MicrophoneEditViewModel</returns>
         </member>
+        <member name="M:PCShop.Core.Services.Implementations.MicrophoneService.GetUserMicrophonesAsync(System.String)">
+            <summary>
+            Method to retrieve all active microphones sales of the currently logged in user
+            </summary>
+            <param name="userId">User unique identifier</param>
+            <returns>Collection of MicrophoneDetailsExportViewModels</returns>
+        </member>
         <member name="T:PCShop.Core.Services.Implementations.MonitorService">
             <summary>
             Implementation of IMonitorService interface
@@ -2537,6 +2544,13 @@
             </summary>
             <param name="model">Microphone input model</param>
             <returns>The unique identifier of the edited microphone</returns>
+        </member>
+        <member name="M:PCShop.Core.Services.Interfaces.IMicrophoneService.GetUserMicrophonesAsync(System.String)">
+            <summary>
+            Method to retrieve all active microphones sales of the currently logged in user
+            </summary>
+            <param name="userId">User unique identifier</param>
+            <returns>Collection of MicrophoneDetailsExportViewModels</returns>
         </member>
         <member name="T:PCShop.Core.Services.Interfaces.IMonitorService">
             <summary>

@@ -408,6 +408,12 @@
             <param name="model">Microphone import model</param>
             <returns>Redirection to /Microphone/Details</returns>
         </member>
+        <member name="M:PCShop.Controllers.MicrophoneController.Mine">
+            <summary>
+            HttpGet action to retrieve all active microphone sales of the currently logged in user
+            </summary>
+            <returns>Collection of all active microphone sales of the currently logged in user</returns>
+        </member>
         <member name="T:PCShop.Controllers.MonitorController">
             <summary>
             Monitor controller class

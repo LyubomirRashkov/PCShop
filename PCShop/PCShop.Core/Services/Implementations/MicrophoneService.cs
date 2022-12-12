@@ -213,7 +213,23 @@ namespace PCShop.Core.Services.Implementations
 			return microphoneExport;
 		}
 
-		private async Task<IList<MicrophoneDetailsExportViewModel>> GetMicrophonesAsMicrophonesDetailsExportViewModelsAsync<T>(Expression<Func<Microphone, bool>> condition)
+		/// <summary>
+		/// Method to retrieve all active microphones sales of the currently logged in user
+		/// </summary>
+		/// <param name="userId">User unique identifier</param>
+		/// <returns>Collection of MicrophoneDetailsExportViewModels</returns>
+		public async Task<IEnumerable<MicrophoneDetailsExportViewModel>> GetUserMicrophonesAsync(string userId)
+        {
+			var client = await this.repository.GetByPropertyAsync<Client>(c => c.UserId == userId);
+
+			this.guard.AgainstInvalidUserId<Client>(client, ErrorMessageForInvalidUserId);
+
+			var userMicrophones = await this.GetMicrophonesAsMicrophonesDetailsExportViewModelsAsync<Microphone>(m => m.SellerId == client.Id);
+
+			return userMicrophones;
+        }
+
+        private async Task<IList<MicrophoneDetailsExportViewModel>> GetMicrophonesAsMicrophonesDetailsExportViewModelsAsync<T>(Expression<Func<Microphone, bool>> condition)
 		{
 			var microphonesAsMicrophoneDetailsExportViewModels = await this.repository
 				.AllAsReadOnly<Microphone>(m => !m.IsDeleted)

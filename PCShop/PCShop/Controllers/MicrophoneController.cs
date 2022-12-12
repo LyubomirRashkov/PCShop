@@ -244,5 +244,27 @@ namespace PCShop.Controllers
 				return NotFound();
 			}
 		}
+
+		/// <summary>
+		/// HttpGet action to retrieve all active microphone sales of the currently logged in user
+		/// </summary>
+		/// <returns>Collection of all active microphone sales of the currently logged in user</returns>
+		[HttpGet]
+		[Authorize(Roles = SuperUser)]
+		public async Task<IActionResult> Mine()
+		{
+			var userId = this.User.Id();
+
+			try
+			{
+				var userMicrophones = await this.microphoneService.GetUserMicrophonesAsync(userId);
+
+				return View(userMicrophones);
+			}
+			catch (PCShopException)
+			{
+				return View(ErrorCommonViewName);
+			}
+		}
     }
 }
