@@ -3,6 +3,10 @@ using Microsoft.AspNetCore.Mvc;
 using PCShop.Core.Models.Microphone;
 using PCShop.Core.Services.Interfaces;
 using PCShop.Extensions;
+using System.Security.Claims;
+using static PCShop.Core.Constants.Constant.GlobalConstants;
+using static PCShop.Core.Constants.Constant.ProductConstants;
+using static PCShop.Infrastructure.Constants.DataConstant.RoleConstants;
 
 namespace PCShop.Controllers
 {
@@ -62,6 +66,37 @@ namespace PCShop.Controllers
 				}
 
 				return View(microphone);
+			}
+			catch (ArgumentException)
+			{
+				return NotFound();
+			}
+		}
+
+		/// <summary>
+		/// Action to mark a specific microphone as deleted
+		/// </summary>
+		/// <param name="id">Microphone unique identifier</param>
+		/// <returns>Redirection to /Microphone/Index</returns>
+		[HttpGet]
+		[Authorize(Roles = $"{Administrator}, {SuperUser}")]
+		public async Task<IActionResult> Delete(int id)
+		{
+			try
+			{
+				var microphone = await this.microphoneService.GetMicrophoneByIdAsMicrohoneDetailsExportViewModelAsync(id);
+
+				if (this.User.IsInRole(SuperUser)
+					&& (microphone.Seller is null || this.User.Id() != microphone.Seller.UserId))
+				{
+					return Unauthorized();
+				}
+
+				await this.microphoneService.DeleteMicrophoneAsync(id);
+
+				TempData[TempDataMessage] = ProductSuccessfullyDeleted;
+
+				return RedirectToAction(nameof(Index));
 			}
 			catch (ArgumentException)
 			{

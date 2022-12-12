@@ -26,5 +26,11 @@ namespace PCShop.Core.Services.Interfaces
 		/// <param name="id">Microphone unique identifier</param>
 		/// <returns>The microphone as MicrophoneDetailsExportViewModel</returns>
 		Task<MicrophoneDetailsExportViewModel> GetMicrophoneByIdAsMicrohoneDetailsExportViewModelAsync(int id);
+
+		/// <summary>
+		/// Method to mark a specific microphone as deleted
+		/// </summary>
+		/// <param name="id">Microphone unique identifier</param>
+		Task DeleteMicrophoneAsync(int id);
 	}
 }

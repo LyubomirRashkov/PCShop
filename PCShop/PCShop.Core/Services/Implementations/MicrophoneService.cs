@@ -34,6 +34,23 @@ namespace PCShop.Core.Services.Implementations
 		}
 
 		/// <summary>
+		/// Method to mark a specific microphone as deleted
+		/// </summary>
+		/// <param name="id">Microphone unique identifier</param>
+		public async Task DeleteMicrophoneAsync(int id)
+		{
+			var microphone = await this.repository.GetByIdAsync<Microphone>(id);
+
+			this.guard.AgainstProductThatIsNull<Microphone>(microphone, ErrorMessageForInvalidProductId);
+
+			this.guard.AgainstProductThatIsDeleted(microphone.IsDeleted, ErrorMessageForDeletedProduct);
+
+			microphone.IsDeleted = true;
+
+			await this.repository.SaveChangesAsync();
+		}
+
+		/// <summary>
 		/// Method to retrieve all active microphones according to specified criteria
 		/// </summary>
 		/// <param name="keyword">The criterion for keyword</param>

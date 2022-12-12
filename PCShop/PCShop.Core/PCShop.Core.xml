@@ -1953,6 +1953,12 @@
             <param name="repository">The repository that will be used</param>
             <param name="guard">The guard that will be used</param>
         </member>
+        <member name="M:PCShop.Core.Services.Implementations.MicrophoneService.DeleteMicrophoneAsync(System.Int32)">
+            <summary>
+            Method to mark a specific microphone as deleted
+            </summary>
+            <param name="id">Microphone unique identifier</param>
+        </member>
         <member name="M:PCShop.Core.Services.Implementations.MicrophoneService.GetAllMicrophonesAsync(System.String,PCShop.Core.Constants.Sorting,System.Int32)">
             <summary>
             Method to retrieve all active microphones according to specified criteria
@@ -2461,6 +2467,12 @@
             </summary>
             <param name="id">Microphone unique identifier</param>
             <returns>The microphone as MicrophoneDetailsExportViewModel</returns>
+        </member>
+        <member name="M:PCShop.Core.Services.Interfaces.IMicrophoneService.DeleteMicrophoneAsync(System.Int32)">
+            <summary>
+            Method to mark a specific microphone as deleted
+            </summary>
+            <param name="id">Microphone unique identifier</param>
         </member>
         <member name="T:PCShop.Core.Services.Interfaces.IMonitorService">
             <summary>
