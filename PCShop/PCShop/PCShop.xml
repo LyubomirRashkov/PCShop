@@ -352,12 +352,13 @@
             Microphone controller class
             </summary>
         </member>
-        <member name="M:PCShop.Controllers.MicrophoneController.#ctor(PCShop.Core.Services.Interfaces.IMicrophoneService,PCShop.Core.Services.Interfaces.IClientService)">
+        <member name="M:PCShop.Controllers.MicrophoneController.#ctor(PCShop.Core.Services.Interfaces.IMicrophoneService,PCShop.Core.Services.Interfaces.IClientService,PCShop.Core.Services.Interfaces.IUserService)">
             <summary>
             Constructor of MicrophoneController class
             </summary>
             <param name="microphoneService">The IMicrophoneService needed for functionality</param>
             <param name="clientService">The IClientService needed for functionality</param>
+            <param name="userService">The IUserService needed for functionality</param>
         </member>
         <member name="M:PCShop.Controllers.MicrophoneController.Index(PCShop.Core.Models.Microphone.AllMicrophonesQueryModel)">
             <summary>
@@ -413,6 +414,13 @@
             HttpGet action to retrieve all active microphone sales of the currently logged in user
             </summary>
             <returns>Collection of all active microphone sales of the currently logged in user</returns>
+        </member>
+        <member name="M:PCShop.Controllers.MicrophoneController.Buy(System.Int32)">
+            <summary>
+            HttpGet action to buy a microphone
+            </summary>
+            <param name="id">Microphone unique identifier</param>
+            <returns>The corresponding view</returns>
         </member>
         <member name="T:PCShop.Controllers.MonitorController">
             <summary>

@@ -229,7 +229,26 @@ namespace PCShop.Core.Services.Implementations
 			return userMicrophones;
         }
 
-        private async Task<IList<MicrophoneDetailsExportViewModel>> GetMicrophonesAsMicrophonesDetailsExportViewModelsAsync<T>(Expression<Func<Microphone, bool>> condition)
+		/// <summary>
+		/// Method to mark the microphone with the given unique identifier as bought
+		/// </summary>
+		/// <param name="id">Microphone unique identifier</param>
+		public async Task MarkMicrophoneAsBought(int id)
+		{
+			var microphone = await this.repository.GetByIdAsync<Microphone>(id);
+
+			this.guard.AgainstProductThatIsNull<Microphone>(microphone, ErrorMessageForInvalidProductId);
+
+			this.guard.AgainstProductThatIsDeleted(microphone.IsDeleted, ErrorMessageForDeletedProduct);
+
+			this.guard.AgainstProductThatIsOutOfStock(microphone.Quantity, ErrorMessageForProductThatIsOutOfStock);
+
+			microphone.Quantity--;
+
+			await this.repository.SaveChangesAsync();
+		}
+
+		private async Task<IList<MicrophoneDetailsExportViewModel>> GetMicrophonesAsMicrophonesDetailsExportViewModelsAsync<T>(Expression<Func<Microphone, bool>> condition)
 		{
 			var microphonesAsMicrophoneDetailsExportViewModels = await this.repository
 				.AllAsReadOnly<Microphone>(m => !m.IsDeleted)
