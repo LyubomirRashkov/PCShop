@@ -4,6 +4,7 @@ using Microsoft.Extensions.Caching.Memory;
 using PCShop.Core.Exceptions;
 using PCShop.Core.Models.User;
 using PCShop.Core.Services.Interfaces;
+using PCShop.Core.Services.Interfaces.AdministrationArea;
 using static PCShop.Areas.Administration.Constant;
 using static PCShop.Infrastructure.Constants.DataConstant.RoleConstants;
 
@@ -15,22 +16,22 @@ namespace PCShop.Areas.Administration.Controllers
 	public class AccountController : BaseController
 	{
 		private readonly RoleManager<IdentityRole> roleManager;
-		private readonly IUserService userService;
+		private readonly IAdminUserService adminUserService;
 		private readonly IMemoryCache memoryCache;
 
 		/// <summary>
 		/// Constructor of AccountController class
 		/// </summary>
 		/// <param name="roleManager">The RoleManager<c>IdentityRole</c> needed for functionality</param>
-		/// <param name="userService">The IUserService needed for functionality</param>
+		/// <param name="adminUserService">The IAdminUserService needed for functionality</param>
 		/// <param name="memoryCache">The IMemoryCache needed for functionality</param>
 		public AccountController(
 			RoleManager<IdentityRole> roleManager,
-			IUserService userService,
+			IAdminUserService adminUserService,
 			IMemoryCache memoryCache)
 		{
 			this.roleManager = roleManager;
-			this.userService = userService;
+			this.adminUserService = adminUserService;
 			this.memoryCache = memoryCache;
 		}
 
@@ -47,7 +48,7 @@ namespace PCShop.Areas.Administration.Controllers
 			{
 				var role = this.roleManager.Roles.FirstOrDefault(r => r.Name == Administrator);
 
-				users = await this.userService.GetAllUsersThatAreNotInTheSpecifiedRole(role?.Id ?? null);
+				users = await this.adminUserService.GetAllUsersThatAreNotInTheSpecifiedRole(role?.Id ?? null);
 
 				var cacheOptions = new MemoryCacheEntryOptions().SetAbsoluteExpiration(TimeSpan.FromMinutes(3));
 
@@ -67,7 +68,7 @@ namespace PCShop.Areas.Administration.Controllers
 		{
 			try
 			{
-				var user = await this.userService.PromoteToAdminAsync(id);
+				var user = await this.adminUserService.PromoteToAdminAsync(id);
 
 				this.memoryCache.Remove(UsersCacheKey);
 

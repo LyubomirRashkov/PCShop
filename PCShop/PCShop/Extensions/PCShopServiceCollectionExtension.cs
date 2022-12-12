@@ -1,6 +1,8 @@
 ﻿using PCShop.Core.Exceptions;
 using PCShop.Core.Services.Implementations;
+using PCShop.Core.Services.Implementations.AdministrationArea;
 using PCShop.Core.Services.Interfaces;
+using PCShop.Core.Services.Interfaces.AdministrationArea;
 using PCShop.Infrastructure.Common;
 
 namespace Microsoft.Extensions.DependencyInjection
@@ -27,6 +29,8 @@ namespace Microsoft.Extensions.DependencyInjection
             services.AddScoped<IMouseService, MouseService>();
             services.AddScoped<IHeadphoneService, HeadphoneService>();
             services.AddScoped<IMicrophoneService, MicrophoneService>();
+
+            services.AddScoped<IAdminUserService, AdminUserService>();
 
             services.AddScoped<IGuard, Guard>();
 

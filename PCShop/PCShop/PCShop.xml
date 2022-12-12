@@ -19,12 +19,12 @@
             Account controller class
             </summary>
         </member>
-        <member name="M:PCShop.Areas.Administration.Controllers.AccountController.#ctor(Microsoft.AspNetCore.Identity.RoleManager{Microsoft.AspNetCore.Identity.IdentityRole},PCShop.Core.Services.Interfaces.IUserService,Microsoft.Extensions.Caching.Memory.IMemoryCache)">
+        <member name="M:PCShop.Areas.Administration.Controllers.AccountController.#ctor(Microsoft.AspNetCore.Identity.RoleManager{Microsoft.AspNetCore.Identity.IdentityRole},PCShop.Core.Services.Interfaces.AdministrationArea.IAdminUserService,Microsoft.Extensions.Caching.Memory.IMemoryCache)">
             <summary>
             Constructor of AccountController class
             </summary>
             <param name="roleManager">The RoleManager<c>IdentityRole</c> needed for functionality</param>
-            <param name="userService">The IUserService needed for functionality</param>
+            <param name="adminUserService">The IAdminUserService needed for functionality</param>
             <param name="memoryCache">The IMemoryCache needed for functionality</param>
         </member>
         <member name="M:PCShop.Areas.Administration.Controllers.AccountController.GetUsers">

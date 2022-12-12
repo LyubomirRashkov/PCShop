@@ -1677,6 +1677,33 @@
             Property that represents user roles
             </summary>
         </member>
+        <member name="T:PCShop.Core.Services.Implementations.AdministrationArea.AdminUserService">
+            <summary>
+            Implementation of IAdminUserService interface
+            </summary>
+        </member>
+        <member name="M:PCShop.Core.Services.Implementations.AdministrationArea.AdminUserService.#ctor(PCShop.Infrastructure.Common.IRepository,Microsoft.AspNetCore.Identity.UserManager{PCShop.Infrastructure.Data.Models.Account.User},PCShop.Core.Exceptions.IGuard)">
+            <summary>
+            Constructor of AdminUserService
+            </summary>
+            <param name="repository">The repository that will be used</param>
+            <param name="userManager">The UserManager<c>User</c></param>
+            <param name="guard">The guard that will be used</param>
+        </member>
+        <member name="M:PCShop.Core.Services.Implementations.AdministrationArea.AdminUserService.GetAllUsersThatAreNotInTheSpecifiedRole(System.String)">
+            <summary>
+            Method to retrieve all users that are not in the specified role
+            </summary>
+            <param name="roleId">Role unique identifier</param>
+            <returns>Ordered collection of UserExportViewModels</returns>
+        </member>
+        <member name="M:PCShop.Core.Services.Implementations.AdministrationArea.AdminUserService.PromoteToAdminAsync(System.String)">
+            <summary>
+            Method to add the user with the specified unique identifier to Administrator role
+            </summary>
+            <param name="id">User unique identifier</param>
+            <returns>The promoted to admin user</returns>
+        </member>
         <member name="T:PCShop.Core.Services.Implementations.ClientService">
             <summary>
             Implementation of IClientService interface
@@ -2216,28 +2243,12 @@
             Implementation of IUserService interface
             </summary>
         </member>
-        <member name="M:PCShop.Core.Services.Implementations.UserService.#ctor(PCShop.Infrastructure.Common.IRepository,Microsoft.AspNetCore.Identity.UserManager{PCShop.Infrastructure.Data.Models.Account.User},Microsoft.AspNetCore.Identity.SignInManager{PCShop.Infrastructure.Data.Models.Account.User},PCShop.Core.Exceptions.IGuard)">
+        <member name="M:PCShop.Core.Services.Implementations.UserService.#ctor(Microsoft.AspNetCore.Identity.UserManager{PCShop.Infrastructure.Data.Models.Account.User},Microsoft.AspNetCore.Identity.SignInManager{PCShop.Infrastructure.Data.Models.Account.User})">
             <summary>
             Constructor of UserService class
             </summary>
-            <param name="repository">The repository that will be used</param>
             <param name="userManager">The UserManager<c>User</c></param>
             <param name="signInManager">The SignInManager<c>User</c></param>
-            <param name="guard">The guard that will be used</param>
-        </member>
-        <member name="M:PCShop.Core.Services.Implementations.UserService.GetAllUsersThatAreNotInTheSpecifiedRole(System.String)">
-            <summary>
-            Method to retrieve all users that are not in the specified role
-            </summary>
-            <param name="roleId">Role unique identifier</param>
-            <returns>Ordered collection of UserExportViewModels</returns>
-        </member>
-        <member name="M:PCShop.Core.Services.Implementations.UserService.PromoteToAdminAsync(System.String)">
-            <summary>
-            Method to add the user with the specified unique identifier to Administrator role
-            </summary>
-            <param name="id">User unique identifier</param>
-            <returns>The promoted to admin user</returns>
         </member>
         <member name="M:PCShop.Core.Services.Implementations.UserService.ShouldBePromotedToSuperUser(PCShop.Infrastructure.Data.Models.Client)">
             <summary>
@@ -2245,6 +2256,25 @@
             </summary>
             <param name="client">The client who made the purchase</param>
             <returns>True when the count of client purchases is equal to required number of purchases to be SuperUser, else returns false</returns>
+        </member>
+        <member name="T:PCShop.Core.Services.Interfaces.AdministrationArea.IAdminUserService">
+            <summary>
+            Abstraction of AdminUserService
+            </summary>
+        </member>
+        <member name="M:PCShop.Core.Services.Interfaces.AdministrationArea.IAdminUserService.GetAllUsersThatAreNotInTheSpecifiedRole(System.String)">
+            <summary>
+            Method to retrieve all users that are not in the specified role
+            </summary>
+            <param name="roleId">Role unique identifier</param>
+            <returns>Ordered collection of UserExportViewModels</returns>
+        </member>
+        <member name="M:PCShop.Core.Services.Interfaces.AdministrationArea.IAdminUserService.PromoteToAdminAsync(System.String)">
+            <summary>
+            Method to add the user with the specified unique identifier to Administrator role
+            </summary>
+            <param name="id">User unique identifier</param>
+            <returns>The promoted to admin user</returns>
         </member>
         <member name="T:PCShop.Core.Services.Interfaces.IClientService">
             <summary>
@@ -2736,26 +2766,12 @@
             Abstraction of UserService
             </summary>
         </member>
-        <member name="M:PCShop.Core.Services.Interfaces.IUserService.GetAllUsersThatAreNotInTheSpecifiedRole(System.String)">
-            <summary>
-            Method to retrieve all users that are not in the specified role
-            </summary>
-            <param name="roleId">Role unique identifier</param>
-            <returns>Ordered collection of UserExportViewModels</returns>
-        </member>
         <member name="M:PCShop.Core.Services.Interfaces.IUserService.ShouldBePromotedToSuperUser(PCShop.Infrastructure.Data.Models.Client)">
             <summary>
             Method to add the user to SuperUser role
             </summary>
             <param name="client">The client who made the purchase</param>
             <returns>True when the count of client purchases is equal to required number of purchases to be SuperUser, else returns false</returns>
-        </member>
-        <member name="M:PCShop.Core.Services.Interfaces.IUserService.PromoteToAdminAsync(System.String)">
-            <summary>
-            Method to add the user with the specified unique identifier to Administrator role
-            </summary>
-            <param name="id">User unique identifier</param>
-            <returns>The promoted to admin user</returns>
         </member>
     </members>
 </doc>
