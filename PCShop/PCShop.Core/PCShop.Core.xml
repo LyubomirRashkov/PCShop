@@ -1092,6 +1092,11 @@
             MicrophoneExportViewModel model
             </summary>
         </member>
+        <member name="T:PCShop.Core.Models.Microphone.MicrophoneImportViewModel">
+            <summary>
+            MicrophoneImportViewModel model
+            </summary>
+        </member>
         <member name="T:PCShop.Core.Models.Microphone.MicrophonesQueryModel">
             <summary>
             MicrophonesQueryModel model
@@ -1953,6 +1958,14 @@
             <param name="repository">The repository that will be used</param>
             <param name="guard">The guard that will be used</param>
         </member>
+        <member name="M:PCShop.Core.Services.Implementations.MicrophoneService.AddMicrophoneAsync(PCShop.Core.Models.Microphone.MicrophoneImportViewModel,System.String)">
+            <summary>
+            Method to add a microphone
+            </summary>
+            <param name="model">Microphone input model</param>
+            <param name="userId">Microphone's owner unique identifier</param>
+            <returns>The unique identifier of the added microphone</returns>
+        </member>
         <member name="M:PCShop.Core.Services.Implementations.MicrophoneService.DeleteMicrophoneAsync(System.Int32)">
             <summary>
             Method to mark a specific microphone as deleted
@@ -2473,6 +2486,14 @@
             Method to mark a specific microphone as deleted
             </summary>
             <param name="id">Microphone unique identifier</param>
+        </member>
+        <member name="M:PCShop.Core.Services.Interfaces.IMicrophoneService.AddMicrophoneAsync(PCShop.Core.Models.Microphone.MicrophoneImportViewModel,System.String)">
+            <summary>
+            Method to add a microphone
+            </summary>
+            <param name="model">Microphone input model</param>
+            <param name="userId">Microphone's owner unique identifier</param>
+            <returns>The unique identifier of the added microphone</returns>
         </member>
         <member name="T:PCShop.Core.Services.Interfaces.IMonitorService">
             <summary>

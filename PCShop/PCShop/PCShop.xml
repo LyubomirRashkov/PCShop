@@ -352,11 +352,12 @@
             Microphone controller class
             </summary>
         </member>
-        <member name="M:PCShop.Controllers.MicrophoneController.#ctor(PCShop.Core.Services.Interfaces.IMicrophoneService)">
+        <member name="M:PCShop.Controllers.MicrophoneController.#ctor(PCShop.Core.Services.Interfaces.IMicrophoneService,PCShop.Core.Services.Interfaces.IClientService)">
             <summary>
             Constructor of MicrophoneController class
             </summary>
             <param name="microphoneService">The IMicrophoneService needed for functionality</param>
+            <param name="clientService">The IClientService needed for functionality</param>
         </member>
         <member name="M:PCShop.Controllers.MicrophoneController.Index(PCShop.Core.Models.Microphone.AllMicrophonesQueryModel)">
             <summary>
@@ -379,6 +380,19 @@
             </summary>
             <param name="id">Microphone unique identifier</param>
             <returns>Redirection to /Microphone/Index</returns>
+        </member>
+        <member name="M:PCShop.Controllers.MicrophoneController.Add">
+            <summary>
+            HttpGet action to return the form for adding a microphone
+            </summary>
+            <returns>The form for adding a microphone</returns>
+        </member>
+        <member name="M:PCShop.Controllers.MicrophoneController.Add(PCShop.Core.Models.Microphone.MicrophoneImportViewModel)">
+            <summary>
+            HttpPost action to add a microphone
+            </summary>
+            <param name="model">Microphone import model</param>
+            <returns>Redirection to /Microphone/Details</returns>
         </member>
         <member name="T:PCShop.Controllers.MonitorController">
             <summary>

@@ -1,9 +1,11 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using PCShop.Core.Exceptions;
 using PCShop.Core.Models.Microphone;
 using PCShop.Core.Services.Interfaces;
 using PCShop.Extensions;
 using System.Security.Claims;
+using static PCShop.Core.Constants.Constant.ClientConstants;
 using static PCShop.Core.Constants.Constant.GlobalConstants;
 using static PCShop.Core.Constants.Constant.ProductConstants;
 using static PCShop.Infrastructure.Constants.DataConstant.RoleConstants;
@@ -17,14 +19,19 @@ namespace PCShop.Controllers
 	public class MicrophoneController : Controller
 	{
 		private readonly IMicrophoneService microphoneService;
+		private readonly IClientService clientService;
 
 		/// <summary>
 		/// Constructor of MicrophoneController class
 		/// </summary>
 		/// <param name="microphoneService">The IMicrophoneService needed for functionality</param>
-		public MicrophoneController(IMicrophoneService microphoneService)
+		/// <param name="clientService">The IClientService needed for functionality</param>
+		public MicrophoneController(
+			IMicrophoneService microphoneService,
+			IClientService clientService)
 		{
 			this.microphoneService = microphoneService;
+			this.clientService = clientService;
 		}
 
 		/// <summary>
@@ -101,6 +108,77 @@ namespace PCShop.Controllers
 			catch (ArgumentException)
 			{
 				return NotFound();
+			}
+		}
+
+		/// <summary>
+		/// HttpGet action to return the form for adding a microphone
+		/// </summary>
+		/// <returns>The form for adding a microphone</returns>
+		[HttpGet]
+		[Authorize(Roles = $"{Administrator}, {SuperUser}")]
+		public async Task<IActionResult> Add()
+		{
+			if (this.User.IsInRole(SuperUser))
+			{
+				var userId = this.User.Id();
+
+				try
+				{
+					var numberOfActiveSales = await this.clientService.GetNumberOfActiveSales(userId);
+
+					if (numberOfActiveSales == MaxNumberOfAllowedSales)
+					{
+						ViewData["Title"] = "Add a microphone";
+
+						return View(AddNotAllowedViewName);
+					}
+				}
+				catch (PCShopException)
+				{
+					return View(ErrorCommonViewName);
+				}
+			}
+
+			return View();
+		}
+
+		/// <summary>
+		/// HttpPost action to add a microphone
+		/// </summary>
+		/// <param name="model">Microphone import model</param>
+		/// <returns>Redirection to /Microphone/Details</returns>
+		[HttpPost]
+		[Authorize(Roles = $"{Administrator}, {SuperUser}")]
+		public async Task<IActionResult> Add(MicrophoneImportViewModel model)
+		{
+			if (!this.ModelState.IsValid)
+			{
+				return View(model);
+			}
+
+			string? userId = null;
+
+			if (this.User.IsInRole(SuperUser))
+			{
+				userId = this.User.Id();
+			}
+
+			try
+			{
+				int id = await this.microphoneService.AddMicrophoneAsync(model, userId);
+
+				TempData[TempDataMessage] = ProductSuccessfullyAdded;
+
+				return RedirectToAction(nameof(Details), new { id, information = model.GetInformation() });
+			}
+			catch (PCShopException)
+			{
+				return View(ErrorCommonViewName);
+			}
+			catch (ArgumentException)
+			{
+				return View(ErrorCommonViewName);
 			}
 		}
 	}

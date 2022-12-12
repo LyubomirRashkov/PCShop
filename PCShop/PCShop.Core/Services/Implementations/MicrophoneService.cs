@@ -5,8 +5,10 @@ using PCShop.Core.Models.Microphone;
 using PCShop.Core.Services.Interfaces;
 using PCShop.Infrastructure.Common;
 using PCShop.Infrastructure.Data.Models;
+using PCShop.Infrastructure.Data.Models.GravitatingClasses;
 using System.Globalization;
 using System.Linq.Expressions;
+using static PCShop.Core.Constants.Constant.ClientConstants;
 using static PCShop.Core.Constants.Constant.GlobalConstants;
 using static PCShop.Core.Constants.Constant.ProductConstants;
 
@@ -31,6 +33,45 @@ namespace PCShop.Core.Services.Implementations
 		{
 			this.repository = repository;
 			this.guard = guard;
+		}
+
+		/// <summary>
+		/// Method to add a microphone
+		/// </summary>
+		/// <param name="model">Microphone input model</param>
+		/// <param name="userId">Microphone's owner unique identifier</param>
+		/// <returns>The unique identifier of the added microphone</returns>
+		public async Task<int> AddMicrophoneAsync(MicrophoneImportViewModel model, string? userId)
+		{
+			var microphone = new Microphone()
+			{
+				ImageUrl = model.ImageUrl,
+				Warranty = model.Warranty,
+				Price = model.Price != null ? model.Price.Value : default,
+				Quantity = model.Quantity != null ? model.Quantity.Value : default,
+
+				IsDeleted = false,
+				AddedOn = DateTime.UtcNow.Date,
+			};
+
+			Client? dbClient = null;
+
+			if (userId is not null)
+			{
+				dbClient = await this.repository.GetByPropertyAsync<Client>(c => c.UserId == userId);
+
+				this.guard.AgainstInvalidUserId<Client>(dbClient, ErrorMessageForInvalidUserId);
+			}
+
+			microphone.Seller = dbClient;
+
+			microphone = await this.SetNavigationPropertiesAsync(microphone, model.Brand, model.Color);
+
+			await this.repository.AddAsync<Microphone>(microphone);
+
+			await this.repository.SaveChangesAsync();
+
+			return microphone.Id;
 		}
 
 		/// <summary>
@@ -137,6 +178,28 @@ namespace PCShop.Core.Services.Implementations
 				.ToListAsync();
 
 			return microphonesAsMicrophoneDetailsExportViewModels;
+		}
+
+		private async Task<Microphone> SetNavigationPropertiesAsync(Microphone microphone, string brand, string? color)
+		{
+			var brandNormalized = brand.ToLower();
+			var dbBrand = await this.repository.GetByPropertyAsync<Brand>(b => EF.Functions.Like(b.Name.ToLower(), brandNormalized));
+			dbBrand ??= new Brand { Name = brand };
+			microphone.Brand = dbBrand;
+
+			if (String.IsNullOrWhiteSpace(color))
+			{
+				microphone.Color = null;
+			}
+			else
+			{
+				var colorNormalized = color.ToLower();
+				var dbColor = await this.repository.GetByPropertyAsync<Color>(c => EF.Functions.Like(c.Name.ToLower(), colorNormalized));
+				dbColor ??= new Color { Name = color };
+				microphone.Color = dbColor;
+			}
+
+			return microphone;
 		}
 	}
 }

@@ -32,5 +32,13 @@ namespace PCShop.Core.Services.Interfaces
 		/// </summary>
 		/// <param name="id">Microphone unique identifier</param>
 		Task DeleteMicrophoneAsync(int id);
+
+		/// <summary>
+		/// Method to add a microphone
+		/// </summary>
+		/// <param name="model">Microphone input model</param>
+		/// <param name="userId">Microphone's owner unique identifier</param>
+		/// <returns>The unique identifier of the added microphone</returns>
+		Task<int> AddMicrophoneAsync(MicrophoneImportViewModel model, string? userId);
 	}
 }
