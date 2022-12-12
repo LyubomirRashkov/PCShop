@@ -1092,6 +1092,46 @@
             Property that represents a collection of laptops
             </summary>
         </member>
+        <member name="T:PCShop.Core.Models.Microphone.AllMicrophonesQueryModel">
+            <summary>
+            AllMicrophonesQueryModel model
+            </summary>
+        </member>
+        <member name="M:PCShop.Core.Models.Microphone.AllMicrophonesQueryModel.#ctor">
+            <summary>
+            Constructor of AllMicrophonesQueryModel class
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Microphone.AllMicrophonesQueryModel.Microphones">
+            <summary>
+            Property that represents a collecion of microphones according to specified criteria
+            </summary>
+        </member>
+        <member name="T:PCShop.Core.Models.Microphone.MicrophoneExportViewModel">
+            <summary>
+            MicrophoneExportViewModel model
+            </summary>
+        </member>
+        <member name="T:PCShop.Core.Models.Microphone.MicrophonesQueryModel">
+            <summary>
+            MicrophonesQueryModel model
+            </summary>
+        </member>
+        <member name="M:PCShop.Core.Models.Microphone.MicrophonesQueryModel.#ctor">
+            <summary>
+            Constructor of MicrophonesQueryModel class
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Microphone.MicrophonesQueryModel.TotalMicrophonesCount">
+            <summary>
+            Property that represents total count of microphones
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Microphone.MicrophonesQueryModel.Microphones">
+            <summary>
+            Property that represents a collection of microphones
+            </summary>
+        </member>
         <member name="T:PCShop.Core.Models.Monitor.AllMonitorsQueryModel">
             <summary>
             AllMonitorsQueryModel model
@@ -1495,6 +1535,31 @@
         <member name="P:PCShop.Core.Models.Mouse.MouseImportViewModel.Sensitivities">
             <summary>
             Property that represents a collection of all mouse sensitivity ranges
+            </summary>
+        </member>
+        <member name="T:PCShop.Core.Models.Product.AllProductsQueryModel">
+            <summary>
+            AllProductsQueryModel model
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Product.AllProductsQueryModel.Keyword">
+            <summary>
+            Property that represents a search keyword
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Product.AllProductsQueryModel.Sorting">
+            <summary>
+            Property that represents a sorting criterion
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Product.AllProductsQueryModel.CurrentPage">
+            <summary>
+            Property that represents the number of the current page
+            </summary>
+        </member>
+        <member name="P:PCShop.Core.Models.Product.AllProductsQueryModel.TotalProductsCount">
+            <summary>
+            Property that represents total count of products
             </summary>
         </member>
         <member name="T:PCShop.Core.Models.Product.ProductExportViewModel">
@@ -1935,6 +2000,26 @@
             Method to retrieve all video card names
             </summary>
             <returns>Ordered collection of video card names</returns>
+        </member>
+        <member name="T:PCShop.Core.Services.Implementations.MicrophoneService">
+            <summary>
+            Implementation of IMicrophoneService interface
+            </summary>
+        </member>
+        <member name="M:PCShop.Core.Services.Implementations.MicrophoneService.#ctor(PCShop.Infrastructure.Common.IRepository)">
+            <summary>
+            Constructor of MicrophoneService class
+            </summary>
+            <param name="repository">The repository that will be used</param>
+        </member>
+        <member name="M:PCShop.Core.Services.Implementations.MicrophoneService.GetAllMicrophonesAsync(System.String,PCShop.Core.Constants.Sorting,System.Int32)">
+            <summary>
+            Method to retrieve all active microphones according to specified criteria
+            </summary>
+            <param name="keyword">The criterion for keyword</param>
+            <param name="sorting">The criterion for sorting</param>
+            <param name="currentPage">Current page number</param>
+            <returns>MicrophonesQueryModel object</returns>
         </member>
         <member name="T:PCShop.Core.Services.Implementations.MonitorService">
             <summary>
@@ -2407,6 +2492,20 @@
             Method to retrieve all video card names
             </summary>
             <returns>Ordered collection of video card names</returns>
+        </member>
+        <member name="T:PCShop.Core.Services.Interfaces.IMicrophoneService">
+            <summary>
+            Abstraction of MicrophoneService
+            </summary>
+        </member>
+        <member name="M:PCShop.Core.Services.Interfaces.IMicrophoneService.GetAllMicrophonesAsync(System.String,PCShop.Core.Constants.Sorting,System.Int32)">
+            <summary>
+            Method to retrieve all active microphones according to specified criteria
+            </summary>
+            <param name="keyword">The criterion for keyword</param>
+            <param name="sorting">The criterion for sorting</param>
+            <param name="currentPage">Current page number</param>
+            <returns>MicrophonesQueryModel object</returns>
         </member>
         <member name="T:PCShop.Core.Services.Interfaces.IMonitorService">
             <summary>

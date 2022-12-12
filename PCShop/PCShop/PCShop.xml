@@ -347,6 +347,24 @@
             <param name="id">Laptop unique identifier</param>
             <returns>The corresponding view</returns>
         </member>
+        <member name="T:PCShop.Controllers.MicrophoneController">
+            <summary>
+            Microphone controller class
+            </summary>
+        </member>
+        <member name="M:PCShop.Controllers.MicrophoneController.#ctor(PCShop.Core.Services.Interfaces.IMicrophoneService)">
+            <summary>
+            Constructor of MicrophoneController class
+            </summary>
+            <param name="microphoneService">The IMicrophoneService needed for functionality</param>
+        </member>
+        <member name="M:PCShop.Controllers.MicrophoneController.Index(PCShop.Core.Models.Microphone.AllMicrophonesQueryModel)">
+            <summary>
+            HttpGet action to retrieve all active microphones according to specified criteria
+            </summary>
+            <param name="query">The entity that holds the specified criteria</param>
+            <returns>Collection of all active microphones according to specified criteria</returns>
+        </member>
         <member name="T:PCShop.Controllers.MonitorController">
             <summary>
             Monitor controller class

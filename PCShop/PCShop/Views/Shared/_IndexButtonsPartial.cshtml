@@ -36,6 +36,12 @@ else if (Model is IEnumerable<HeadphoneExportViewModel>)
 	addButtonText = "Add a headphone";
 	mineButtonText = "My headphones";
 }
+else if (Model is IEnumerable<MicrophoneExportViewModel>)
+{
+	controllerName = "Microphone";
+	addButtonText = "Add a microphone";
+	mineButtonText = "My microphones";
+}
 
 @if ((this.User?.Identity?.IsAuthenticated ?? false) && (this.User.IsInRole(Administrator)))
 {

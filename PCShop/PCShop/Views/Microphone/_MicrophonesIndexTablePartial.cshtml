@@ -1,0 +1,34 @@
+﻿@model IEnumerable<MicrophoneExportViewModel>
+
+<table class="table table-striped table-hover mt-5">
+	<thead>
+		<tr class="table-primary">
+			<td>Brand</td>
+			<td>Warranty</td>
+			<td>Price</td>
+			<td>View</td>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var microphone in Model)
+		{
+			<tr>
+				<td>@microphone.Brand</td>
+				<td>
+					@if (microphone.Warranty > 0)
+					{
+						<p>@microphone.Warranty months</p>
+					}
+					else
+					{
+						<p>Second hand</p>
+					}
+				</td>
+				<td>@String.Format("{0:f2}", microphone.Price) EUR</td>
+				<td>
+					<a asp-controller="Microphone" asp-action="Details" asp-route-id="@microphone.Id" asp-route-information="@microphone.GetInformation()" class="btn btn-primary">Details</a>
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>

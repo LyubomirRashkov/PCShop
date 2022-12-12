@@ -26,6 +26,7 @@ namespace Microsoft.Extensions.DependencyInjection
             services.AddScoped<IKeyboardService, KeyboardService>();
             services.AddScoped<IMouseService, MouseService>();
             services.AddScoped<IHeadphoneService, HeadphoneService>();
+            services.AddScoped<IMicrophoneService, MicrophoneService>();
 
             services.AddScoped<IGuard, Guard>();
 
