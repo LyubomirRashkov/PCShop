@@ -1,6 +1,5 @@
 ﻿using PCShop.Core.Constants;
 using PCShop.Core.Exceptions;
-using PCShop.Core.Models.Laptop;
 using PCShop.Core.Models.Monitor;
 using PCShop.Core.Services.Implementations;
 using PCShop.Core.Services.Interfaces;

@@ -10,7 +10,7 @@ using static PCShop.Core.Constants.Constant.ProductConstants;
 namespace PCShop.Tests.IntegrationTests
 {
 	[TestFixture]
-	public class LaptopServiceTests : UnitTestsBase
+	public class LaptopServiceGuardTests : UnitTestsBase
 	{
 		private IRepository repository;
 		private IGuard guard;
