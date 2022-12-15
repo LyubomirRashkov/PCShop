@@ -250,11 +250,13 @@ namespace PCShop.Tests.UnitTests
 				Assert.That(result.SSDCapacity, Is.EqualTo(expected.SSDCapacity.Value));
 				Assert.That(result.VideoCard, Is.EqualTo(expected.VideoCard.Name));
 				Assert.That(result.Price, Is.EqualTo(expected.Price));
-				Assert.That(result.Type, Is.EqualTo(expected.Type.Name));
 				Assert.That(result.DisplaySize, Is.EqualTo(expected.DisplaySize.Value));
 				Assert.That(result.Warranty, Is.EqualTo(expected.Warranty));
-				Assert.That(result.Quantity, Is.EqualTo(expected.Quantity));
+				Assert.That(result.Type, Is.EqualTo(expected.Type.Name));
+				Assert.That(result.ImageUrl, Is.EqualTo(expected.ImageUrl));
 				Assert.That(result.AddedOn, Is.EqualTo(expected.AddedOn.ToString("MMMM, yyyy", CultureInfo.InvariantCulture)));
+				Assert.That(result.Quantity, Is.EqualTo(expected.Quantity));
+				Assert.That(result.Seller, Is.EqualTo(expected.Seller));
 			});
 		}
 
@@ -278,10 +280,12 @@ namespace PCShop.Tests.UnitTests
 				Assert.That(result.SSDCapacity, Is.EqualTo(expected.SSDCapacity.Value));
 				Assert.That(result.VideoCard, Is.EqualTo(expected.VideoCard.Name));
 				Assert.That(result.Price, Is.EqualTo(expected.Price));
-				Assert.That(result.Type, Is.EqualTo(expected.Type.Name));
 				Assert.That(result.DisplaySize, Is.EqualTo(expected.DisplaySize.Value));
 				Assert.That(result.Warranty, Is.EqualTo(expected.Warranty));
+				Assert.That(result.Type, Is.EqualTo(expected.Type.Name));
+				Assert.That(result.ImageUrl, Is.EqualTo(expected.ImageUrl));
 				Assert.That(result.Quantity, Is.EqualTo(expected.Quantity));
+				Assert.That(result.Seller, Is.EqualTo(expected.Seller));
 			});
 		}
 
@@ -311,14 +315,14 @@ namespace PCShop.Tests.UnitTests
 				Assert.That(resultFirst.CPU, Is.EqualTo(expectedFirst.CPU.Name));
 				Assert.That(resultFirst.RAM, Is.EqualTo(expectedFirst.RAM.Value));
 				Assert.That(resultFirst.SSDCapacity, Is.EqualTo(expectedFirst.SSDCapacity.Value));
-
 				Assert.That(resultFirst.VideoCard, Is.EqualTo(expectedFirst.VideoCard.Name));
 				Assert.That(resultFirst.Price, Is.EqualTo(expectedFirst.Price));
-				Assert.That(resultFirst.Type, Is.EqualTo(expectedFirst.Type.Name));
 				Assert.That(resultFirst.DisplaySize, Is.EqualTo(expectedFirst.DisplaySize.Value));
 				Assert.That(resultFirst.Warranty, Is.EqualTo(expectedFirst.Warranty));
-				Assert.That(resultFirst.Quantity, Is.EqualTo(expectedFirst.Quantity));
+				Assert.That(resultFirst.Type, Is.EqualTo(expectedFirst.Type.Name));
+				Assert.That(resultFirst.ImageUrl, Is.EqualTo(expectedFirst.ImageUrl));
 				Assert.That(resultFirst.AddedOn, Is.EqualTo(expectedFirst.AddedOn.ToString("MMMM, yyyy", CultureInfo.InvariantCulture)));
+				Assert.That(resultFirst.Quantity, Is.EqualTo(expectedFirst.Quantity));
 			});
 		}
 
