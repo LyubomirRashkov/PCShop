@@ -190,10 +190,10 @@ namespace PCShop.Tests.UnitTests
 		[Test]
 		public async Task GetAllLaptopsAsync_ShouldReturnCorrectLaptopsAccordingToTheSearchingParameters()
 		{
-			var cpuName = "CPU1";
-			var ramValue = 1;
-			var ssdCapacityValue = 1;
-			var videoCardName = "VideoCard1";
+			var cpuName = this.data.CPUs.First().Name;
+			var ramValue = this.data.RAMs.First().Value;
+			var ssdCapacityValue = this.data.SSDCapacities.First().Value;
+			var videoCardName = this.data.VideoCards.First().Name;
 			var keyword = "1";
 			var sorting = Sorting.PriceMaxToMin;
 
@@ -223,7 +223,7 @@ namespace PCShop.Tests.UnitTests
 		[Test]
 		public async Task GetAllLaptopsAsync_ShouldReturnEmptyCollectionWhenThereIsNoLaptopAccordingToTheSpecifiedCriteria()
 		{
-			var cpuName = "InvalidCPU";
+			var cpuName = "invalid";
 
 			var result = await this.laptopService.GetAllLaptopsAsync(cpuName);
 
