@@ -284,11 +284,12 @@
             ApplicationDbContext model
             </summary>
         </member>
-        <member name="M:PCShop.Infrastructure.Data.ApplicationDbContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{PCShop.Infrastructure.Data.ApplicationDbContext})">
+        <member name="M:PCShop.Infrastructure.Data.ApplicationDbContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{PCShop.Infrastructure.Data.ApplicationDbContext},System.Boolean)">
             <summary>
             Constructor of ApplicationDbContext
             </summary>
             <param name="options">The DbContextOptions<c>ApplicationDbContext</c></param>
+            <param name="seed">A flag indicating whether the seed methods should be invoked</param>
         </member>
         <member name="P:PCShop.Infrastructure.Data.ApplicationDbContext.Clients">
             <summary>

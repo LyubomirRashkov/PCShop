@@ -1,14 +1,8 @@
 ﻿using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
-using PCShop.Core.Exceptions;
-using PCShop.Core.Models.User;
 using PCShop.Core.Services.Interfaces;
-using PCShop.Infrastructure.Common;
 using PCShop.Infrastructure.Data.Models;
 using PCShop.Infrastructure.Data.Models.Account;
-using System.Data;
 using static PCShop.Core.Constants.Constant.ClientConstants;
-using static PCShop.Core.Constants.Constant.GlobalConstants;
 using static PCShop.Infrastructure.Constants.DataConstant.RoleConstants;
 
 namespace PCShop.Core.Services.Implementations

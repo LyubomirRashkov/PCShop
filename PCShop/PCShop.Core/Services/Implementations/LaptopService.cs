@@ -490,26 +490,26 @@ namespace PCShop.Core.Services.Implementations
 					SSDCapacity = l.SSDCapacity.Value,
 					VideoCard = l.VideoCard.Name,
 					Price = l.Price,
-					DisplaySize = l.DisplaySize.Value,
-					Warranty = l.Warranty,
-					Type = l.Type.Name,
-					DisplayCoverage = l.DisplayCoverage != null 
-                                      ? l.DisplayCoverage.Name 
+                    DisplaySize = l.DisplaySize.Value,
+                    Warranty = l.Warranty,
+                    Type = l.Type.Name,
+                    DisplayCoverage = l.DisplayCoverage != null
+                                      ? l.DisplayCoverage.Name
                                       : UnknownCharacteristic,
-					DisplayTechnology = l.DisplayTechnology != null 
-                                        ? l.DisplayTechnology.Name 
+                    DisplayTechnology = l.DisplayTechnology != null
+                                        ? l.DisplayTechnology.Name
                                         : UnknownCharacteristic,
-					Resolution = l.Resolution != null 
-                                 ? l.Resolution.Value 
+                    Resolution = l.Resolution != null
+                                 ? l.Resolution.Value
                                  : UnknownCharacteristic,
-					Color = l.Color != null ? l.Color.Name : UnknownCharacteristic,
-					ImageUrl = l.ImageUrl,
-					AddedOn = l.AddedOn.ToString("MMMM, yyyy", CultureInfo.InvariantCulture),
-					Quantity = l.Quantity,
-					Seller = l.Seller,
+                    Color = l.Color != null ? l.Color.Name : UnknownCharacteristic,
+                    ImageUrl = l.ImageUrl,
+                    AddedOn = l.AddedOn.ToString("MMMM, yyyy", CultureInfo.InvariantCulture),
+                    Quantity = l.Quantity,
+                    Seller = l.Seller,
                     SellerFirstName = l.Seller != null ? l.Seller.User.FirstName : null,
                     SellerLastName = l.Seller != null ? l.Seller.User.LastName : null,
-				})
+                })
 				.ToListAsync();
 
 			return laptopsAsLaptopDetailsExportViewModels;
