@@ -66,6 +66,6 @@ namespace PCShop.Core.Services.Interfaces
 		/// Method to mark the microphone with the given unique identifier as bought
 		/// </summary>
 		/// <param name="id">Microphone unique identifier</param>
-		Task MarkMicrophoneAsBought(int id);
+		Task MarkMicrophoneAsBoughtAsync(int id);
 	}
 }

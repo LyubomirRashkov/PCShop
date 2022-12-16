@@ -300,7 +300,7 @@ namespace PCShop.Controllers
 
 				ViewData["Title"] = "Buy a microphone";
 
-				await this.microphoneService.MarkMicrophoneAsBought(id);
+				await this.microphoneService.MarkMicrophoneAsBoughtAsync(id);
 
 				var client = await this.clientService.BuyProduct(userId);
 

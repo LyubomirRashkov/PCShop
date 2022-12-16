@@ -2051,7 +2051,7 @@
             <param name="userId">User unique identifier</param>
             <returns>Collection of MicrophoneDetailsExportViewModels</returns>
         </member>
-        <member name="M:PCShop.Core.Services.Implementations.MicrophoneService.MarkMicrophoneAsBought(System.Int32)">
+        <member name="M:PCShop.Core.Services.Implementations.MicrophoneService.MarkMicrophoneAsBoughtAsync(System.Int32)">
             <summary>
             Method to mark the microphone with the given unique identifier as bought
             </summary>
@@ -2588,7 +2588,7 @@
             <param name="userId">User unique identifier</param>
             <returns>Collection of MicrophoneDetailsExportViewModels</returns>
         </member>
-        <member name="M:PCShop.Core.Services.Interfaces.IMicrophoneService.MarkMicrophoneAsBought(System.Int32)">
+        <member name="M:PCShop.Core.Services.Interfaces.IMicrophoneService.MarkMicrophoneAsBoughtAsync(System.Int32)">
             <summary>
             Method to mark the microphone with the given unique identifier as bought
             </summary>

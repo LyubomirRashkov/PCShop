@@ -249,7 +249,7 @@ namespace PCShop.Tests.UnitTests
 
 			var microphoneQuantityBeforeBuying = microphone.Quantity;
 
-			await this.microphoneService.MarkMicrophoneAsBought(microphone.Id);
+			await this.microphoneService.MarkMicrophoneAsBoughtAsync(microphone.Id);
 
 			var microphoneQuantityAfterBuying = microphone.Quantity;
 

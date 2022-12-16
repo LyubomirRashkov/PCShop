@@ -233,7 +233,7 @@ namespace PCShop.Core.Services.Implementations
 		/// Method to mark the microphone with the given unique identifier as bought
 		/// </summary>
 		/// <param name="id">Microphone unique identifier</param>
-		public async Task MarkMicrophoneAsBought(int id)
+		public async Task MarkMicrophoneAsBoughtAsync(int id)
 		{
 			var microphone = await this.repository.GetByIdAsync<Microphone>(id);
 
