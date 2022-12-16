@@ -88,6 +88,10 @@ namespace PCShop.Tests.UnitTests
 
 			this.data.AddRange(headphones);
 
+			var microphones = this.CreateMicrophones();
+
+			this.data.AddRange(microphones);
+
 			var user = new User() { Id = "User1" };
 
 			this.data.Add(user);
@@ -97,6 +101,59 @@ namespace PCShop.Tests.UnitTests
 			this.data.Add(client);
 
 			this.data.SaveChanges();
+		}
+
+		private IEnumerable<Microphone> CreateMicrophones()
+		{
+			return new List<Microphone>()
+			{
+				new Microphone()
+				{
+					Id = 1,
+					BrandId = 1,
+					Price = 1000.00M,
+					Warranty = 1,
+					Quantity = 1,
+					AddedOn = DateTime.UtcNow.Date,
+				},
+				new Microphone()
+				{
+					Id = 2,
+					BrandId = 2,
+					Price = 2000.00M,
+					Warranty = 2,
+					Quantity = 2,
+					AddedOn = DateTime.UtcNow.Date,
+				},
+				new Microphone()
+				{
+					Id = 3,
+					BrandId = 3,
+					Price = 3000.00M,
+					Warranty = 3,
+					Quantity = 3,
+					AddedOn = DateTime.UtcNow.Date,
+				},
+				new Microphone()
+				{
+					Id = 4,
+					BrandId = 1,
+					Price = 4000.00M,
+					Warranty = 1,
+					Quantity = 1,
+					AddedOn = DateTime.UtcNow.Date,
+					SellerId = 1,
+				},
+				new Microphone()
+				{
+					Id = 5,
+					BrandId = 1,
+					Price = 5000.00M,
+					Warranty = 1,
+					Quantity = 1,
+					AddedOn = DateTime.UtcNow.Date,
+				},
+			};
 		}
 
 		private IEnumerable<Headphone> CreateHeadphones()
