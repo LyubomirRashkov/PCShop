@@ -92,15 +92,24 @@ namespace PCShop.Tests.UnitTests
 
 			this.data.AddRange(microphones);
 
-			var user = new User() { Id = "User1" };
+			var users = this.CreateUsers();
 
-			this.data.Add(user);
+			this.data.AddRange(users);
 
 			var client = new Client() { Id = 1, UserId = "User1" };
 
 			this.data.Add(client);
 
 			this.data.SaveChanges();
+		}
+
+		private IEnumerable<User> CreateUsers()
+		{
+			return new List<User>()
+			{
+				new User() { Id = "User1" },
+				new User() { Id = "User2" },
+			};
 		}
 
 		private IEnumerable<Microphone> CreateMicrophones()
