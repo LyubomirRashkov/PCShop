@@ -76,6 +76,14 @@ namespace PCShop.Tests.UnitTests
 
 			this.data.AddRange(keyboards);
 
+			var sensitivities = this.CreateSensitivities();
+
+			this.data.AddRange(sensitivities);
+
+			var mice = this.CreateMice();
+
+			this.data.AddRange(mice);
+
 			var user = new User() { Id = "User1" };
 
 			this.data.Add(user);
@@ -85,6 +93,84 @@ namespace PCShop.Tests.UnitTests
 			this.data.Add(client);
 
 			this.data.SaveChanges();
+		}
+
+		private IEnumerable<Mouse> CreateMice()
+		{
+			return new List<Mouse>()
+			{
+				new Mouse()
+				{
+					Id = 1,
+					BrandId = 1,
+					Price = 1000.00M,
+					IsWireless = true,
+					TypeId = 1,
+					SensitivityId = 1,
+					Warranty = 1,
+					Quantity = 1,
+					AddedOn = DateTime.UtcNow.Date,
+				},
+				new Mouse()
+				{
+					Id = 2,
+					BrandId = 2,
+					Price = 2000.00M,
+					IsWireless = false,
+					TypeId = 2,
+					SensitivityId = 2,
+					Warranty = 2,
+					Quantity = 2,
+					AddedOn = DateTime.UtcNow.Date,
+				},
+				new Mouse()
+				{
+					Id = 3,
+					BrandId = 3,
+					Price = 3000.00M,
+					IsWireless = true,
+					TypeId = 3,
+					SensitivityId = 3,
+					Warranty = 3,
+					Quantity = 3,
+					AddedOn = DateTime.UtcNow.Date,
+				},
+				new Mouse()
+				{
+					Id = 4,
+					BrandId = 1,
+					Price = 4000.00M,
+					IsWireless = false,
+					TypeId = 1,
+					SensitivityId = 1,
+					Warranty = 1,
+					Quantity = 1,
+					AddedOn = DateTime.UtcNow.Date,
+					SellerId = 1,
+				},
+				new Mouse()
+				{
+					Id = 5,
+					BrandId = 1,
+					Price = 5000.00M,
+					IsWireless = true,
+					TypeId = 1,
+					SensitivityId = 1,
+					Warranty = 1,
+					Quantity = 1,
+					AddedOn = DateTime.UtcNow.Date,
+				},
+			};
+		}
+
+		private IEnumerable<Sensitivity> CreateSensitivities()
+		{
+			return new List<Sensitivity>()
+			{
+				new Sensitivity() { Id = 1, Range = "0 - 100 DPI" },
+				new Sensitivity() { Id = 2, Range = "100 - 200 DPI" },
+				new Sensitivity() { Id = 3, Range = "200 - 300 DPI" },
+			};
 		}
 
 		private IEnumerable<Keyboard> CreateKeyboards()
