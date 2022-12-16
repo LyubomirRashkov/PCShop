@@ -173,7 +173,7 @@ namespace PCShop.Tests.UnitTests
 				.Where(k => k.Brand.Name.Contains(keyword)
 							|| k.Type.Name.Contains(keyword)
 							|| (k.Format != null && k.Format.Name.Contains(keyword)))
-				.OrderByDescending(m => m.Price)
+				.OrderByDescending(k => k.Price)
 				.ToList();
 
 			Assert.That(result.TotalKeyboardsCount, Is.EqualTo(expected.Count));

@@ -84,6 +84,10 @@ namespace PCShop.Tests.UnitTests
 
 			this.data.AddRange(mice);
 
+			var headphones = this.CreateHeadphones();
+
+			this.data.AddRange(headphones);
+
 			var user = new User() { Id = "User1" };
 
 			this.data.Add(user);
@@ -93,6 +97,74 @@ namespace PCShop.Tests.UnitTests
 			this.data.Add(client);
 
 			this.data.SaveChanges();
+		}
+
+		private IEnumerable<Headphone> CreateHeadphones()
+		{
+			return new List<Headphone>()
+			{
+				new Headphone()
+				{
+					Id = 1,
+					BrandId = 1,
+					Price = 1000.00M,
+					TypeId = 1,
+					IsWireless = true,
+					HasMicrophone = true,
+					Warranty = 1,
+					Quantity = 1,
+					AddedOn = DateTime.UtcNow.Date,
+				},
+				new Headphone()
+				{
+					Id = 2,
+					BrandId = 2,
+					Price = 2000.00M,
+					TypeId = 2,
+					IsWireless = false,
+					HasMicrophone = false,
+					Warranty = 2,
+					Quantity = 2,
+					AddedOn = DateTime.UtcNow.Date,
+				},
+				new Headphone()
+				{
+					Id = 3,
+					BrandId = 3,
+					Price = 3000.00M,
+					TypeId = 3,
+					IsWireless = true,
+					HasMicrophone = true,
+					Warranty = 3,
+					Quantity = 3,
+					AddedOn = DateTime.UtcNow.Date,
+				},
+				new Headphone()
+				{
+					Id = 4,
+					BrandId = 1,
+					Price = 4000.00M,
+					TypeId = 1,
+					IsWireless = false,
+					HasMicrophone = false,
+					Warranty = 1,
+					Quantity = 1,
+					AddedOn = DateTime.UtcNow.Date,
+					SellerId = 1,
+				},
+				new Headphone()
+				{
+					Id = 5,
+					BrandId = 1,
+					Price = 5000.00M,
+					TypeId = 1,
+					IsWireless = true,
+					HasMicrophone = true,
+					Warranty = 1,
+					Quantity = 1,
+					AddedOn = DateTime.UtcNow.Date,
+				},
+			};
 		}
 
 		private IEnumerable<Mouse> CreateMice()
