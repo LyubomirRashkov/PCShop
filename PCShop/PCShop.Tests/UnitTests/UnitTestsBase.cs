@@ -1,8 +1,10 @@
-﻿using PCShop.Infrastructure.Data;
+﻿using Microsoft.AspNetCore.Identity;
+using PCShop.Infrastructure.Data;
 using PCShop.Infrastructure.Data.Models;
 using PCShop.Infrastructure.Data.Models.Account;
 using PCShop.Infrastructure.Data.Models.GravitatingClasses;
 using PCShop.Tests.Mocks;
+using static PCShop.Infrastructure.Constants.DataConstant.RoleConstants;
 using Monitor = PCShop.Infrastructure.Data.Models.Monitor;
 using Type = PCShop.Infrastructure.Data.Models.GravitatingClasses.Type;
 
@@ -96,11 +98,28 @@ namespace PCShop.Tests.UnitTests
 
 			this.data.AddRange(users);
 
+			var roles = this.CreateRoles();
+
+			this.data.AddRange(roles);
+
+			var userRole = new IdentityUserRole<string>() { UserId = "User1", RoleId = "Role1" };
+
+			this.data.Add(userRole);
+
 			var client = new Client() { Id = 1, UserId = "User1" };
 
 			this.data.Add(client);
 
 			this.data.SaveChanges();
+		}
+
+		private IEnumerable<IdentityRole> CreateRoles()
+		{
+			return new List<IdentityRole>()
+			{
+				new IdentityRole() { Id = "Role1", Name = "Role1" },
+				new IdentityRole() { Id = "Administrator", Name = Administrator },
+			};
 		}
 
 		private IEnumerable<User> CreateUsers()
