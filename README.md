@@ -2,7 +2,7 @@
 
 PCShop is my defence project for [ASP.NET Advanced - октомври 2022](https://softuni.bg/trainings/3854/asp-net-advanced-october-2022) course at [SoftUni](https://softuni.bg/).
 
-It is deployed -> you can test it [here](https://pcshopwebproject.azurewebsites.net/)
+### :boom: Deployed -> you can test it [here](https://pcshopwebproject.azurewebsites.net/)
 
 ### :eyeglasses: Overview
 
