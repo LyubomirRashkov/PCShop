@@ -154,6 +154,5 @@ PCShop is an online store for laptops and peripherals (monitors, keyboards, mice
 ### :cowboy_hat_face: On The Road To
 
   + Implement and integrate more functionality;
-  +	Host the application;
   + Improve user interface and user experience...
   
