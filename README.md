@@ -2,8 +2,6 @@
 
 PCShop is my defence project for [ASP.NET Advanced - октомври 2022](https://softuni.bg/trainings/3854/asp-net-advanced-october-2022) course at [SoftUni](https://softuni.bg/).
 
-### :boom: Deployed -> you can test it [here](https://pcshopwebproject.azurewebsites.net/)
-
 ### :eyeglasses: Overview
 
 PCShop is an online store for laptops and peripherals (monitors, keyboards, mice, headphones and microphones). Every registered user has the opportunity to browse the products in the store, and in order to improve the user experience, he can use the search and sorting filters, then he can buy the products he chooses. According to the policy of the app, when a user makes his first purchase he becomes a client and when he makes the required number of purchases (5) he gets the opportunity to add his own products for sale. The maximum number of active products to sell for one user is 10. There is a logic implemented that prevents a user from buying his own products but it is possible for him to edit and delete them.
